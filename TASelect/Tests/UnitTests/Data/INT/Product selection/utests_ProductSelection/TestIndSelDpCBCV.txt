@@ -1,0 +1,568 @@
+#Start of test definition
+
+StartTechnicalParameters
+ApplicationType = 2
+AvailablePMPanels = 7
+BreakTankRequiredForWaterMakeUp = 1
+CVDefKvReynard = 1
+CVMaxDispDp = 200000
+CVMaxDpProp = 65000
+CVMinAuthCstFlow = 0.5
+CVMinAuthor = 0.25
+CVMinDpOnoff = 2000
+CVMinDpProp = 10000
+CVUseDpCPBand = 0
+CanChangePressureVolumeLimit = 0
+CurrencyID = CURRENCY_EUR
+DefaultCalculationNorm = PM_NORM_EN12828
+DefaultCoolingTps = 6
+DefaultFillTemperature = 15
+DefaultHeatingTps = 70
+DefaultISChangeOverCoolingSideAdditFamilyID = WATER_ADDIT
+DefaultISChangeOverCoolingSideAdditID = WATER
+DefaultISChangeOverCoolingSideDT = 6
+DefaultISChangeOverCoolingSidePcWeight = 0
+DefaultISChangeOverCoolingSideTps = 6
+DefaultISChangeOverHeatingSideAdditFamilyID = WATER_ADDIT
+DefaultISChangeOverHeatingSideAdditID = WATER
+DefaultISChangeOverHeatingSideDT = 20
+DefaultISChangeOverHeatingSidePcWeight = 0
+DefaultISChangeOverHeatingSideTps = 75
+DefaultISCoolingAdditFamilyID = WATER_ADDIT
+DefaultISCoolingAdditID = WATER
+DefaultISCoolingDT = 6
+DefaultISCoolingPcWeight = 0
+DefaultISCoolingTps = 6
+DefaultISHeatingAdditFamilyID = WATER_ADDIT
+DefaultISHeatingAdditID = WATER
+DefaultISHeatingDT = 20
+DefaultISHeatingPcWeight = 0
+DefaultISHeatingTps = 70
+DefaultISSolarAdditFamilyID = WATER_ADDIT
+DefaultISSolarAdditID = WATER
+DefaultISSolarDT = 20
+DefaultISSolarPcWeight = 0
+DefaultISSolarTps = 70
+DefaultMaxTempInCooling = 45
+DefaultMinTempInHeating = 5
+DefaultMinTempInSolar = 5
+DefaultPipeSerieID = 
+DefaultPrjCoolingAdditID = WATER
+DefaultPrjCoolingDT = 6
+DefaultPrjCoolingPcWeight = 0
+DefaultPrjHeatingAdditID = WATER
+DefaultPrjHeatingDT = 20
+DefaultPrjHeatingPcWeight = 0
+DefaultSafetyPressureResponseValve = 300000
+DefaultSecondaryPumpHMin = 25000
+DefaultSmartCVLocation = 1
+DefaultStaticPressureOfWaterNetwork = 400000
+DefaultTAZ = 90
+DefaultWaterHardness = 1.78324958
+DefaultWaterMakeUpTemp = 15
+DegassingWaterReserveForVessel = 0.002
+DpCBCVDpcmin = 5000
+DpCBCVDplmin = 5000
+DpCHide = 0
+DpCHminFullyOpenMv = 0
+DpCMinDp = 5000
+DpCMvLocation = 0
+DpCMvWithSameSizeOnly = 0
+DpRefForBest6Way = 3000
+FixedOrificeMaxDp = 6000
+FixedOrificeMinDp = 2000
+FlowDeviationMinus = -0.1
+FlowDeviationPlus = 0.1
+FluidTempLimitEN12953 = 105
+InitialPressureMargin = 30000
+MaxNumberOfAdditionalVesselsInParallel = 2
+MaxNumberOfVentoInParallel = 2
+MaxSafetyValveInParallel = 3
+MaxSizeShift = 4
+MinPressureMargin = 20000
+PICvHide = 1
+PICvMinDp = 1000
+PSetupCompresso = 10000
+PSetupTransfero = 20000
+PipeMaxDp = 200
+PipeMaxVelocity = 2
+PipeMinDp = 10
+PipeMinVelocity = 0.3
+PipeTargetDp = 150
+PipeTargetVelocity = 1
+PipeTargetVelosityUsed = 0
+PressureVolumeLimit = 300000
+ProjectType = 2
+SafetyTempLimiterLimitEN12953 = 110
+SizeShiftAbove = 0
+SizeShiftBelow = -2
+SmartValveDpMaxForBestSuggestion = 20000
+TrvDefDpTotal = 10000
+TrvDefRoomTemperature = 20
+TrvDefSupplyTemperature = 80
+TrvMaxDp = 30000
+TrvMinDpRatio = 0.25
+UseDefaultFreezingPointAsMinTemperature = 0
+UseSimplyPst = 0
+UseVesselPressureVolumeLimit = 0
+ValveMaxDp = 200000
+ValveMin2Dp = 6000
+ValveMinDp = 3000
+VenturiMaxDp = 10000
+VenturiMinDp = 2000
+VesselSelectionRangePercentage = 0
+EndTechnicalParameters
+
+Test number = 0
+
+SelectionMode = Individual
+ProductCategory = DpCBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 2.777777777e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCBCVTYPE_STD
+ComboFamilyID = FAM_COMPACT_DP
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpToStabilize = 5000
+WithSTSChecked = false
+EndInputs
+
+StartOutputs
+Result number = 0;COMPACT_DP_15A;TA-Compact-DP 15;Ametal(tm);Thread male;Standard;16;15 (1/2");false;false;1.40192;1.5 (0.25);>50;0.01;11901.4;[5000-13717.1];0.004;Linear;PushToClose;-20/120;10 (3/8");80.851;0.226354
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 1
+
+SelectionMode = Individual
+ProductCategory = DpCBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 2.777777777e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCBCVTYPE_STD
+ComboFamilyID = FAM_COMPACT_DP
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpToStabilize = 5000
+WithSTSChecked = true
+EndInputs
+
+StartOutputs
+Result number = 0;COMPACT_DP_15A;TA-Compact-DP 15;Ametal(tm);Thread male;Standard;16;15 (1/2");false;false;1.40192;1.5 (0.25);>50;0.01;11901.4;[5000-13717.1];0.004;Linear;PushToClose;-20/120;10 (3/8");80.851;0.226354
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 2
+
+SelectionMode = Individual
+ProductCategory = DpCBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 2.777777777e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCBCVTYPE_STD
+ComboFamilyID = FAM_COMPACT_DP
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpToStabilize = 10000
+WithSTSChecked = true
+EndInputs
+
+StartOutputs
+Result number = 0;COMPACT_DP_15A;TA-Compact-DP 15;Ametal(tm);Thread male;Standard;16;15 (1/2");false;false;2.02624;2 (0.25);>50;0.01;6901.39;[5000-13717.1];0.004;Linear;PushToClose;-20/120;10 (3/8");80.851;0.226354
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 3
+
+SelectionMode = Individual
+ProductCategory = DpCBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 2.777777777e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCBCVTYPE_STD
+ComboFamilyID = FAM_COMPACT_DP
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpToStabilize = 15000
+WithSTSChecked = true
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 4
+
+SelectionMode = Individual
+ProductCategory = DpCBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCBCVTYPE_STD
+ComboFamilyID = FAM_COMPACT_DP
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpToStabilize = 10000
+WithSTSChecked = true
+EndInputs
+
+StartOutputs
+Result number = 0;COMPACT_DP_15A;TA-Compact-DP 15;Ametal(tm);Thread male;Standard;16;15 (1/2");false;false;5.33853;5.25 (0.25);>50;0.01;6910.15;[5000-13173.1];0.004;Linear;PushToClose;-20/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 5
+
+SelectionMode = Individual
+ProductCategory = DpCBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 8.333333331e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCBCVTYPE_STD
+ComboFamilyID = FAM_COMPACT_DP
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpToStabilize = 10000
+WithSTSChecked = true
+EndInputs
+
+StartOutputs
+Result number = 0;COMPACT_DP_15A;TA-Compact-DP 15;Ametal(tm);Thread male;Standard;16;15 (1/2");false;false;9.97889;10* (0.25);>50;0.01;7432.12;[5000-10009.6];0.004;Linear;PushToClose;-20/120;15 (1/2");176.093;0.414466
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 6
+
+SelectionMode = Individual
+ProductCategory = DpCBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0001052777777483
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCBCVTYPE_STD
+ComboFamilyID = FAM_COMPACT_DP
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpToStabilize = 10000
+WithSTSChecked = true
+EndInputs
+
+StartOutputs
+Result number = 0;COMPACT_DP_20A;TA-Compact-DP 20;Ametal(tm);Thread male;Standard;16;20 (3/4");false;false;3.29493;3.25 (0.25);>50;0.01;10538.7;[5000-17099.4];0.004;Linear;PushToClose;-20/120;20 (3/4");61.1529;0.287302
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 7
+
+SelectionMode = Individual
+ProductCategory = DpCBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.000105555555526
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCBCVTYPE_STD
+ComboFamilyID = FAM_COMPACT_DP
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpToStabilize = 6000
+WithSTSChecked = true
+EndInputs
+
+StartOutputs
+Result number = 0;COMPACT_DP_20A;TA-Compact-DP 20;Ametal(tm);Thread male;Standard;16;20 (3/4");false;false;2.7071;2.75 (0.25);>50;0.01;14537.5;[5000-17095.9];0.004;Linear;PushToClose;-20/120;20 (3/4");61.4469;0.288061
+Result number = 1;COMPACT_DP_15A;TA-Compact-DP 15;Ametal(tm);Thread male;Standard;16;15 (1/2");false;false;9.83856;9.75* (0.25);>50;0.01;12032.4;[5000-6123.36];0.004;Linear;PushToClose;-20/120;20 (3/4");61.4469;0.288061
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 8
+
+SelectionMode = Individual
+ProductCategory = DpCBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00022222222216
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCBCVTYPE_STD
+ComboFamilyID = FAM_COMPACT_DP
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpToStabilize = 6000
+WithSTSChecked = true
+EndInputs
+
+StartOutputs
+Result number = 0;COMPACT_DP_25A;TA-Compact-DP 25;Ametal(tm);Thread male;Standard;16;25 (1");false;false;3.45542;3.5 (0.25);>50;0.01;14807.2;[5000-16221.8];0.004;Linear;PushToClose;-20/120;25 (1");76.8895;0.382437
+Result number = 1;COMPACT_DP_20A;TA-Compact-DP 20;Ametal(tm);Thread male;Standard;16;20 (3/4");false;false;7.11055;7 (0.25);>50;0.01;14590.1;[5000-11041.1];0.004;Linear;PushToClose;-20/120;25 (1");76.8895;0.382437
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 9
+
+SelectionMode = Individual
+ProductCategory = DpCBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCBCVTYPE_STD
+ComboFamilyID = FAM_COMPACT_DP
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpToStabilize = 6000
+WithSTSChecked = true
+EndInputs
+
+StartOutputs
+Result number = 0;COMPACT_DP_25A;TA-Compact-DP 25;Ametal(tm);Thread male;Standard;16;25 (1");false;false;4.46787;4.5 (0.25);>50;0.01;15168.3;[5000-15426.6];0.004;Linear;PushToClose;-20/120;25 (1");116.19;0.478046
+Result number = 1;COMPACT_DP_20A;TA-Compact-DP 20;Ametal(tm);Thread male;Standard;16;20 (3/4");false;false;9.84541;9.75* (0.25);>50;0.01;15133;[5000-6212.75];0.004;Linear;PushToClose;-20/120;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 10
+
+SelectionMode = Individual
+ProductCategory = DpCBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00038888888878
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCBCVTYPE_STD
+ComboFamilyID = FAM_COMPACT_DP
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpToStabilize = 6000
+WithSTSChecked = true
+EndInputs
+
+StartOutputs
+Result number = 0;COMPACT_DP_25A;TA-Compact-DP 25;Ametal(tm);Thread male;Standard;16;25 (1");false;false;6.58441;6.5 (0.25);>50;0.01;16671;[5000-11417.3];0.004;Linear;PushToClose;-20/120;32 (1 1/4");54.537;0.384191
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+

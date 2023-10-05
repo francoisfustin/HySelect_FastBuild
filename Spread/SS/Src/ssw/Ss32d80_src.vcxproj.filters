@@ -1,0 +1,613 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{392d7482-0abd-417d-8ca7-8d3fb0c6abb1}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;hpj;bat;for;f90</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{e2230629-7670-4c35-8f1a-3bf2b3e6ff0b}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;fi;fd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{3b2a77fc-4680-4ede-a809-fc62fbdd9e60}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Librairies">
+      <UniqueIdentifier>{91258f75-f064-44e5-882b-fbd5dae92935}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\SSSRC\ATOF.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CALC\CAL_CALC.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CALC\CAL_CELL.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CALC\CAL_COL.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CALC\CAL_CUST.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CALC\CAL_ERR.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CALC\CAL_EVAL.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CALC\CAL_EXPR.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\calc\cal_fina.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CALC\CAL_FUNC.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\calc\cal_look.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CALC\CAL_MATR.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CALC\CAL_MEM.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CALC\CAL_NAME.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CALC\CAL_OPER.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CALC\CAL_ROW.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CALC\CAL_TOK.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CALC\CAL_VECT.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITDATE\CALENDAR.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\CARET.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\CHAR.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CLASSES\CHECKBOX.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\ct_mem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\cust_celltype.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITDATE\DATEMGR.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\DATETIME.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITDATE\DYNAMIC1.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITDATE\EDITDATE.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITFLD.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITFLOA\EDITFLOA.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITGEN\EDITGEN.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITINT\EDITINT.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\edit\editnum\EditNum.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITPIC\EDITPIC.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITTIME\EDITTIME.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\FCVT.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\FIELDMGR.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITFLOA\FLOATMGR.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\FPLIBS\FPTOOLS\SRC\FPSHMALL.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\FSSTUB.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\ftdattim.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITGEN\GENMGR.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\HILIGHT.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITINT\INTMGR.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\KEYBOARD.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\MEM.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\edit\editnum\NumMgr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\OUTPUT1.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\OUTPUT2.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\OUTPUT3.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\OVERMODE.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITPIC\PICMGR.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ssprvw\Pvpaint.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ssprvw\Pvpinfo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ssprvw\Pvprops.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ssprvw\Pvscroll.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\QSORTH.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CLASSES\SPINBTN.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SPREAD.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_ALLOC.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\ss_book.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_BOOL.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_BORD.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_CALC.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_CELL.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_COL.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_COMBO.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_COPY.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_CURS.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_DATA.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_DOC.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_DRAG.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_DRAW.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_EDIT.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_EMODE.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\ss_excel.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_FONT.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_FORMU.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_FUNC.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\ss_gradient.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\SS_HTML.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_MAIN.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_MULTI.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_OVERF.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_PRINT.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_ROW.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_SAVE.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_SAVE4.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_SCBAR.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_SCROL.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_SORT.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\SS_SPAN.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_SPICT.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\SS_SRCH.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\ss_tab.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\ss_text.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\ss_theme.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_TYPE.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_USER.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_VIRT.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_WIN.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\ss_xl12.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\ss_xlload.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\ss_xlparse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\ss_xml.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Ssprvw\Ssprvw.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SSW.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITDATE\STATIC.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\STR1.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\STR2.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CLASSES\SUPERBTN.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CLASSES\TBDIB.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\TEXT.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\FPLibs\Fptools\Src\Texttip.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITTIME\TIMEMGR.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITDATE\USERDATE.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITFLOA\USERFLOA.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\USERFUNC.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITINT\USERINT.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\edit\editnum\UserNum.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITTIME\USERTIME.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\web\src\web.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\WIN.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CLASSES\WINTOOLS.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SSW.RC">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\SSSRC\CALC\cal_cell.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\CALC\cal_col.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\CALC\cal_cust.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\CALC\cal_err.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\CALC\cal_expr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\CALC\cal_func.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sssrc\calc\cal_matr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sssrc\calc\cal_mem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\CALC\cal_name.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\CALC\cal_oper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\CALC\cal_row.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\CALC\cal_tok.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sssrc\calc\cal_vect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\EDIT\EDITDATE\calendar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\CLASSES\checkbox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sssrc\spread\ct_mem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sssrc\spread\cust_celltype.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\EDIT\EDITDATE\editdate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\EDIT\editfld.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\EDIT\EDITFLOA\editfloa.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\EDIT\EDITGEN\editgen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\EDIT\EDITINT\editint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\EDIT\EDITPIC\editpic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\EDIT\EDITTIME\edittime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sssrc\spread\ftdattim.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\CLASSES\spinbtn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sssrc\spread\spread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\SPREAD\ss_alloc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\SPREAD\ss_bool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\SPREAD\ss_bord.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\SPREAD\ss_calc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\SPREAD\ss_cell.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\SPREAD\ss_col.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\SPREAD\ss_curs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\SPREAD\ss_data.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\SPREAD\ss_doc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\SPREAD\ss_drag.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\SPREAD\ss_draw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\SPREAD\ss_emode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sssrc\spread\ss_excel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\SPREAD\ss_font.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\SPREAD\ss_formu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\SPREAD\ss_func.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\SPREAD\ss_main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\SPREAD\ss_multi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\SPREAD\ss_row.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\SPREAD\ss_save.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\SPREAD\ss_save4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\SPREAD\ss_scbar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\SPREAD\ss_scrol.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\SPREAD\ss_spict.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sssrc\spread\ss_text.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\SPREAD\ss_type.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\SPREAD\ss_user.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\SPREAD\ss_virt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\SPREAD\ss_win.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sssrc\spread\ss_xml.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SSSRC\CLASSES\superbtn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\FPLibs\Fptools\Src\Texttip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\sssrc\classes\wintools.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SS_RWDE.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Ssw.dlg">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\ssprvw\zoomin.cur">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\ssprvw\zoomout.cur">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SS_RWDE.DLG">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SSW.RC2">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="SS_RWDE.BMP">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="LARGEINT.LIB">
+      <Filter>Librairies</Filter>
+    </Library>
+  </ItemGroup>
+</Project>

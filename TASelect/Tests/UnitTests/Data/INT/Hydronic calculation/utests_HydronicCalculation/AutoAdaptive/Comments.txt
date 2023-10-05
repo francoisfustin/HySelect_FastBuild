@@ -1,0 +1,427 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TESTS UNITAIRES
+
+	File name     : CircuitAlone.tsp
+	Description   : 
+		- A simple module straight pipe as parent (SP) (*A) and one terminal unit with auto-adaptive flow with 
+		  decoupling bypass (AutoAdaptive) (*A.1)
+	Primary side  :
+		- Hmin is the minimum pressure drop to allow the Dp controller to work (DpCDpmin) + the minimum stabilized 
+		  differential pressure (DpCDplmin) + pressure drop in the circuit pipe (PipeCDp)
+		- Available H (Havail) must be equal to Hmin because we have no sibling terminal unit.
+	Secondary side: 
+	    - Pressure drop accross the bypass (Hbypass or BvBypDp) + Hmin of the secondary pump - pressure drop accross
+		  the terminal unit (TuDp) - pressure drop accross the balancing valve at the secondary side (BvSecDp) = 0
+
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	File name     : CircuitAloneHUser.tsp
+	Description   : 
+		- A module SP (*A) and one terminal unit (*A.1)
+	Primary side  : 
+		- Hmin = DpCDpmin + DpCDplmin + PipeCDp.
+		- Havail = Hmin because we have no sibling terminal unit.
+	Secondary side: 
+		- BvBypDp + pump head input by user (Huser) - TuDp - BvSecDp = 0
+
+	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	
+	File name     : CircuitNotIndex.tsp
+	Description   : 
+		- A module SP (*A), one AutoAdaptive TU (*A.1) and one TU with simply 
+		  a balancing valve (DC) (*A.2).
+		- We set 20000 Pa in the TU of *A.2 to force *A.2 to be the index.
+	Primary side  :
+		- Hmin = DpCDpmin + DpCDplmin + PipeCDp.
+		- Havail != Hmin because the circuit is not the index
+		- Havail - Hmin = DpCDpl - DpCDplmin
+	Secondary side: 
+		- BvBypDp + Hmin - TuDp - BvSecDp = 0
+
+	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	
+	File name     : CircuitNotIndexHUser.tsp
+	Description   : 
+		- A module SP (*A), one AutoAdaptive TU (*A.1) and one TU DC (*A.2).
+		- We set 20000 Pa in the TU of *A.2 to force *A.2 to be the index.
+	Primary side  :
+		- Hmin = DpCDpmin + DpCDplmin + PipeCDp.
+		- Havail != Hmin because the circuit is not the index
+		- Havail - Hmin = DpCDpl - DpCDplmin
+	Secondary side: 
+		- BvBypDp + Huser - TuDp - BvSecDp = 0
+
+	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	
+	File name     : CircuitNotIndexDpCChange.tsp
+	Description   : 
+		- A module SP (*A), one AutoAdaptive TU (*A.1) and one TU DC (*A.2).
+		- We set 50000 Pa in the TU of *A.2 to force *A.2 to be the index AND to force DpC to be changed
+		  Remark: Because Havail at the primary side increases, the Dp to stabilize also increases and 
+		          becomes bigger than the DpC Dplmax.
+		          So the DpC must be changed.
+	Primary side  :
+		- DpC has changed -> Higher dpl range 
+		- Hmin = DpCDpmin + DpCDplmin + PipeCDp.
+		- Havail != Hmin because the circuit is not the index
+		- Havail - Hmin = DpCDpl - DpCDplmin
+	Secondary side: 
+		- BvBypDp + Hmin - TuDp - BvSecDp = 0
+		
+	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	
+	File name     : CircuitNotIndexDpCChangeHUser.tsp
+	Description   : 
+		- A module SP (*A), one AutoAdaptive TU (*A.1) and one TU DC (*A.2).
+		- We set 50000 Pa in the TU of *A.2 to force *A.2 to be the index AND to force DpC to be changed
+		  Remark: same as "CircuitNotIndexDpCChange.tsp"
+	Primary side  :
+		- DpC has changed -> Higher dpl range 
+		- Hmin = DpCDpmin + DpCDplmin + PipeCDp.
+		- Havail != Hmin because the circuit is not the index.
+		- Havail - Hmin = DpCDpl - DpCDplmin
+	Secondary side: 
+		- BvBypDp + Huser - TuDp - BvSecDp = 0
+
+	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	
+	File name     : CircuitNotIndexBigHavailHminTP.tsp
+	Description   : 
+		- A module SP (*A), one AutoAdaptive TU (*A.1) and one TU DC (*A.2).
+		- We set 80000 Pa in the TU of *A.2 to force *A.2 to be the index.
+		  Remark: the secondary side need a pump head of 90000 (TU) + BVsec (3000) = 93000 Pa (Hrequired)
+		          If Havail at the primary side increases, the Dp to stabilize also increases.
+		          The Dp accross the bypass helps the pump at the secondary side.
+		          If for example Hbypass = 80000 Pa we normally can set the Hmin of the pump to 13000 Pa (80000+130000=Hrequired)
+		          BUT we have a technical parameter (set to 25000 Pa by default) that limits the minimum.
+		          In this case we must set the Hmin to 25000 Pa and take the difference in the BVsec.
+	Primary side  :
+		- DpC has changed -> Higher dpl range 
+		- Hmin = DpCDpmin + DpCDplmin + PipeCDp.
+		- Havail != Hmin because the circuit is not the index.
+		- Havail - Hmin = DpCDpl - DpCDplmin
+	Secondary side: 
+		- Hmin = Hmin defined in the technical parameters
+		- BvBypDp + Hmin - TuDp - BvSecDp = 0
+		
+	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	
+	File name     : CircuitNotIndexBigHavailHminTPHUser.tsp
+	Description   : 
+		- A module SP (*A), one AutoAdaptive TU (*A.1) and one TU DC (*A.2).
+		- We set 80000 Pa in the TU of *A.2 to force *A.2 to be the index.
+		  Remark: Same as "CircuitNotIndexBigHavailHminTP.tsp"
+	Primary side  :
+		- DpC has changed -> Higher dpl range 
+		- Hmin = DpCDpmin + DpCDplmin + PipeCDp.
+		- Havail != Hmin because the circuit is not the index.
+		- Havail - Hmin = DpCDpl - DpCDplmin
+	Secondary side: 
+		- Hmin = Hmin defined in the technical parameters
+		- BvBypDp + Huser - TuDp - BvSecDp = 0
+
+	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	
+	File name     : CircuitNotIndexBigHavailHmin0.tsp
+	Description   : 
+		- A module SP (*A), one AutoAdaptive TU (*A.1) and one TU DC (*A.2).
+		- We set 100000 Pa in the TU of *A.2 to force *A.2 to be the index.
+		  Remark: the secondary side need a pump head of 90000 (TU) + BVsec (3000) = 93000 Pa (Hrequired)
+		          If Havail at the primary side increases, the Dp to stabilize also increases.
+		          The Dp accross the bypass helps the pump at the secondary side.
+		          Here the Hbypass is bigger than the Hrequired.
+		          The Hmin can be set to 0. No more need of the secondary pump.
+	Primary side  :
+		- DpC has changed -> Higher dpl range 
+		- Hmin = DpCDpmin + DpCDplmin + PipeCDp.
+		- Havail != Hmin because the circuit is not the index.
+		- Havail - Hmin = DpCDpl - DpCDplmin
+	Secondary side: 
+		- Hmin = 0
+		- BvBypDp + Hmin - TuDp - BvSecDp = 0
+
+	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	
+	File name     : CircuitNotIndexBigHavailHmin0Huser.tsp
+	Description   : 
+		- A module SP (*A), one AutoAdaptive TU (*A.1) and one TU DC (*A.2).
+		- We set 100000 Pa in the TU of *A.2 to force *A.2 to be the index.
+		  Remark: Same as "CircuitNotIndexBigHavailHmin0.tsp"
+	Primary side  :
+		- DpC has changed -> Higher dpl range 
+		- Hmin = DpCDpmin + DpCDplmin + PipeCDp.
+		- Havail != Hmin because the circuit is not the index.
+		- Havail - Hmin = DpCDpl - DpCDplmin
+	Secondary side: 
+		- Hmin = 0
+		- BvBypDp + Huser - TuDp - BvSecDp = 0
+		
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	File name     : CircuitIndex.tsp
+	Description   : 
+		- A module SP (*A) and 3 AutoAdaptive TU (*A.1, *A.2, *A.3) with same value.
+	Primary side  : 
+		- Hmin = DpCDpmin + DpCDplmin + PipeCDp.
+		- Havail = Hmin because this is the circuit index.
+	Secondary side: 
+		- BvBypDp + Hmin - TuDp - BvSecDp = 0
+
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	File name     : CircuitIndexHuser.tsp
+	Description   : 
+		- A module SP (*A) and 3 AutoAdaptive TU (*A.1, *A.2, *A.3) with same value.
+	Primary side  : 
+		- Hmin = DpCDpmin + DpCDplmin + PipeCDp.
+		- Havail = Hmin because this is the circuit index.
+	Secondary side: 
+		- BvBypDp + Huser - TuDp - BvSecDp = 0
+
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	File name     : ModuleAlone.tsp
+	Description   : 
+		- A module SP (*A), one module AutoAdaptive (*A.1) and one TU DC (*A.1.1).
+	Primary side  :
+		- Hmin = DpCDpmin + DpCDplmin + PipeCDp.
+		- Havail = Hmin because we have no sibling terminal unit.
+	Secondary side: 
+		- BvBypDp + Hmin - TuDp - BvSecDp = 0
+		
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	File name     : ModuleAloneHuser.tsp
+	Description   : 
+		- A module SP (*A), one module AutoAdaptive (*A.1) and one TU DC (*A.1.1).
+	Primary side  :
+		- Hmin = DpCDpmin + DpCDplmin + PipeCDp.
+		- Havail = Hmin because we have no sibling terminal unit.
+	Secondary side: 
+		- BvBypDp + Huser - TuDp - BvSecDp = 0
+
+	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	
+	File name     : ModuleNotIndex.tsp
+	Description   : 
+		- A module SP (*A), one AutoAdaptive TU (*A.1), one TU DC (*A.1.1) and one TU DC (*A.2)
+		- We set 20000 Pa in the TU of *A.2 to force *A.2 to be the index.
+	Primary side  :
+		- Hmin = DpCDpmin + DpCDplmin + PipeCDp.
+		- Havail != Hmin because the module is not the index
+		- Havail - Hmin = DpCDpl - DpCDplmin
+	Secondary side: 
+		- BvBypDp + Hmin - TuDp - BvSecDp = 0
+
+	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	
+	File name     : ModuleNotIndexHUser.tsp     
+	Description   : 
+		- A module SP (*A), one AutoAdaptive TU (*A.1), one TU DC (*A.1.1) and one TU DC (*A.2)
+		- We set 20000 Pa in the TU of *A.2 to force *A.2 to be the index.
+	Primary side  :
+		- Hmin = DpCDpmin + DpCDplmin + PipeCDp.
+		- Havail != Hmin because the module is not the index
+		- Havail - Hmin = DpCDpl - DpCDplmin
+	Secondary side: 
+		- BvBypDp + Huser - TuDp - BvSecDp = 0
+
+	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	
+	File name     : ModuleNotIndexDpCChange.tsp
+	Description   : 
+		- A module SP (*A), one AutoAdaptive TU (*A.1), one TU DC (*A.1.1) and one TU DC (*A.2)
+		- We set 50000 Pa in the TU of *A.2 to force *A.2 to be the index AND to force DpC to be changed
+		  Remark: Because Havail at the primary side increases, the Dp to stabilize also increases and 
+		          becomes bigger than the DpC Dplmax.
+		          So the DpC must be changed.
+	Primary side  :
+		- DpC has changed -> Higher dpl range 
+		- Hmin = DpCDpmin + DpCDplmin + PipeCDp.
+		- Havail != Hmin because the circuit is not the index
+		- Havail - Hmin = DpCDpl - DpCDplmin
+	Secondary side: 
+		- BvBypDp + Hmin - TuDp - BvSecDp = 0
+		
+	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	
+	File name     : ModuleNotIndexDpCChangeHUser.tsp
+	Description   : 
+		- A module SP (*A), one AutoAdaptive TU (*A.1), one TU DC (*A.1.1) and one TU DC (*A.2)
+		- We set 50000 Pa in the TU of *A.2 to force *A.2 to be the index AND to force DpC to be changed
+		  Remark: same as "ModuleNotIndexDpCChange.tsp"
+	Primary side  :
+		- DpC has changed -> Higher dpl range 
+		- Hmin = DpCDpmin + DpCDplmin + PipeCDp.
+		- Havail != Hmin because the circuit is not the index.
+		- Havail - Hmin = DpCDpl - DpCDplmin
+	Secondary side: 
+		- BvBypDp + Huser - TuDp - BvSecDp = 0
+
+	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	
+	File name     : ModuleNotIndexBigHavailHminTP.tsp
+	Description   : 
+		- A module SP (*A), one AutoAdaptive TU (*A.1), one TU DC (*A.1.1) and one TU DC (*A.2)
+		- We set 80000 Pa in the TU of *A.2 to force *A.2 to be the index.
+		  Remark: the secondary side need a pump head of 93359 (virtual TU) + BVsec (3000) = 96359 Pa (Hrequired)
+		          If Havail at the primary side increases, the Dp to stabilize also increases.
+		          The Dp accross the bypass helps the pump at the secondary side.
+		          If for example Hbypass = 80000 Pa we normally can set the Hmin of the pump to 16359 Pa (80000+16359=Hrequired)
+		          BUT we have a technical parameter (set to 25000 Pa by default) that limits the minimum.
+		          In this case we must set the Hmin to 25000 Pa and take the difference in the BVsec.
+	Primary side  :
+		- DpC has changed -> Higher dpl range 
+		- Hmin = DpCDpmin + DpCDplmin + PipeCDp.
+		- Havail != Hmin because the circuit is not the index.
+		- Havail - Hmin = DpCDpl - DpCDplmin
+	Secondary side: 
+		- Hmin = Hmin defined in the technical parameters
+		- BvBypDp + Hmin - TuDp - BvSecDp = 0
+		
+	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	
+	File name     : ModuleNotIndexBigHavailHminTPHUser.tsp
+	Description   : 
+		- A module SP (*A), one AutoAdaptive TU (*A.1), one TU DC (*A.1.1) and one TU DC (*A.2)
+		- We set 80000 Pa in the TU of *A.2 to force *A.2 to be the index.
+		  Remark: Same as "ModuleNotIndexBigHavailHminTP.tsp"
+	Primary side  :
+		- DpC has changed -> Higher dpl range 
+		- Hmin = DpCDpmin + DpCDplmin + PipeCDp.
+		- Havail != Hmin because the circuit is not the index.
+		- Havail - Hmin = DpCDpl - DpCDplmin
+	Secondary side: 
+		- Hmin = Hmin defined in the technical parameters
+		- BvBypDp + Huser - TuDp - BvSecDp = 0
+
+	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	
+	File name     : ModuleNotIndexBigHavailHmin0.tsp
+	Description   : 
+		- A module SP (*A), one AutoAdaptive TU (*A.1), one TU DC (*A.1.1) and one TU DC (*A.2)
+		- We set 100000 Pa in the TU of *A.2 to force *A.2 to be the index.
+		  Remark: the secondary side need a pump head of 93359 (virtual TU) + BVsec (3000) = 96359 Pa (Hrequired)
+		          If Havail at the primary side increases, the Dp to stabilize also increases.
+		          The Dp accross the bypass helps the pump at the secondary side.
+		          Here the Hbypass is bigger than the Hrequired.
+		          The Hmin can be set to 0. No more need of the secondary pump.
+	Primary side  :
+		- DpC has changed -> Higher dpl range 
+		- Hmin = DpCDpmin + DpCDplmin + PipeCDp.
+		- Havail != Hmin because the circuit is not the index.
+		- Havail - Hmin = DpCDpl - DpCDplmin
+	Secondary side: 
+		- Hmin = 0
+		- BvBypDp + Hmin - TuDp - BvSecDp = 0
+
+	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	
+	File name     : ModuleNotIndexBigHavailHmin0Huser.tsp
+	Description   : 
+		- A module SP (*A), one AutoAdaptive TU (*A.1), one TU DC (*A.1.1) and one TU DC (*A.2)
+		- We set 100000 Pa in the TU of *A.2 to force *A.2 to be the index.
+		  Remark: Same as "ModuleNotIndexBigHavailHmin0.tsp"
+	Primary side  :
+		- DpC has changed -> Higher dpl range 
+		- Hmin = DpCDpmin + DpCDplmin + PipeCDp.
+		- Havail != Hmin because the circuit is not the index.
+		- Havail - Hmin = DpCDpl - DpCDplmin
+	Secondary side: 
+		- Hmin = 0
+		- BvBypDp + Huser - TuDp - BvSecDp = 0
+		
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	File name     : ModuleIndex.tsp
+	Description   : 
+		- A module SP (*A) and 3 AutoAdaptive modules (*A.1, *A.2, *A.3) with same value. Each AutoAdaptive module has
+		  one child TU DC.
+	Primary side  : 
+		- Hmin = DpCDpmin + DpCDplmin + PipeCDp.
+		- Havail = Hmin because this is the circuit index.
+	Secondary side: 
+		- BvBypDp + Hmin - TuDp - BvSecDp = 0
+
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	File name     : ModuleIndexHuser.tsp
+	Description   : 
+		- A module SP (*A) and 3 AutoAdaptive modules (*A.1, *A.2, *A.3) with same value. Each AutoAdaptive module has
+		  one child TU DC.
+	Primary side  : 
+		- Hmin = DpCDpmin + DpCDplmin + PipeCDp.
+		- Havail = Hmin because this is the circuit index.
+	Secondary side: 
+		- BvBypDp + Huser - TuDp - BvSecDp = 0
+
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	File name     : Root.tsp
+	Description   : 
+		- A module AutoAdaptive (*A) and one TU DC (*A.1).
+	Primary side  : 
+		- Hmin = DpCDpmin + DpCDplmin.
+		- Havail = Hmin because this is the root module.
+	Secondary side: 
+		- BvBypDp + Hmin - TuDp - BvSecDp = 0
+
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+	File name     : RootHuser.tsp
+	Description   : 
+		- A module AutoAdaptive (*A) and one TU DC (*A.1).
+	Primary side  : 
+		- Hmin = DpCDpmin + DpCDplmin.
+		- Havail = Hmin because this is the root module.
+	Secondary side: 
+		- BvBypDp + Huser - TuDp - BvSecDp = 0
+
+	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	File name     : ModuleChildrenCVTAAuthOK.tsp
+	Description   : 
+		- A module SP (*A), one AutoAdaptive TU (*A.1) and 5 TU 2W (CV+BV) children.
+	Design authority *A.1.1 : DpCV / HAvail (22170/31132) = 0.71
+	Minimum authority *A.1.1: DpCV / Hmin of *A.1 + Hbypass of *A.1 (22170/25000+10000) = 0.63
+
+	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	File name     : ModuleChildrenCVTAAuthOKHuser.tsp
+	Description   : 
+		- A module SP (*A), one AutoAdaptive TU (*A.1) and 5 TU 2W (CV+BV) children.
+	Design authority *A.1.1 : DpCV / HAvail (22170/31132) = 0.71
+	Minimum authority *A.1.1: DpCV / Huser of *A.1 + Hbypass of *A.1 (22170/35000+10000) = 0.49
+
+	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	File name     : ModuleBigHavailChildrenCVTAAuthOK.tsp
+	Description   : 
+		- A module SP (*A), one AutoAdaptive TU (*A.1) and 5 TU 2W (CV+BV) children and one TU DC *A.2
+		- Set 100000 Pa in TU for *A.2 to get a big H available for *A.1 and to delete the secondary pump need.
+	Design authority *A.1.1 : DpCV / HAvail (22170/31132) = 0.71
+	Minimum authority *A.1.1: DpCV / Hbypass of *A.1 (22170/97865) = 0.23 -> CV Kvs 0.6 -> 0.4
+	Because authority change, the Pump Hmin must be adapted. We have TU  63975 that is always below the Hbypass.
+	No need of the pump at the secondary side, and the BVsec takes the difference.
+
+	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	File name     : ModuleBigHavailChildrenCVTAAuthOKHuser.tsp
+	Description   : 
+		- A module SP (*A), one AutoAdaptive TU (*A.1) and 5 TU 2W (CV+BV) children and one TU DC *A.2
+		- Set 100000 Pa in TU for *A.2 to get a big H available for *A.1 and to delete the secondary pump need.
+	Design authority *A.1.1 : DpCV / HAvail (22170/31132) = 0.71
+	Minimum authority *A.1.1: DpCV / Hbypass of *A.1 (22170/97865) = 0.23 -> CV Kvs 0.6 -> 0.4
+	Because authority change, the Pump Hmin must be adapted. We have TU  63975 that is always below the Hbypass.
+	No need of the pump at the secondary side, and the BVsec takes the difference + H pump user.
+
+	+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+	File name     : ModuleBigToLowHavailChildrenCVTAAuthOK.tsp
+	Description   : 
+		- A module SP (*A), one AutoAdaptive TU (*A.1) and 5 TU 2W (CV+BV) children and one TU DC *A.2
+		- Set 100000 Pa in TU for *A.2 to get a big H available for *A.1 and to delete the secondary pump need.
+		- Now we change TU for *A.2 to 20000 Pa.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

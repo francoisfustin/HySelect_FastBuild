@@ -1,0 +1,61 @@
+
+    [
+      odl,
+      uuid(716346AD-37FC-45b4-B3E8-60E49F102BBB),
+	  hidden,
+      dual,
+      oleautomation,
+	  nonextensible
+    ]
+/*    dispinterface ICTAppearance
+	{
+    properties:
+        [id(DISPID_BACKCOLOR),helpcontext(SpreadProp_CTAPPEARANCEBACKCOLOR), helpstring("Sets or returns the background color of the cell.")] OLE_COLOR BackColor;
+        [id(DISPID_FORECOLOR),helpcontext(SpreadProp_CTAPPEARANCEFORECOLOR), helpstring("Sets or returns the text color of the cell.")] OLE_COLOR ForeColor;
+        [id(DISPID_FONT),helpcontext(SpreadProp_CTAPPEARANCEFONT),helpstring("Sets or returns font characteristics of displayed text.")] IFontDisp* Font;
+        [id(1),helpcontext(SpreadProp_CTAPPEARANCESELBACKCOLOR), helpstring("Sets or returns the selected background color of the cell.")] OLE_COLOR SelBackColor;
+        [id(2),helpcontext(SpreadProp_CTAPPEARANCESELFORECOLOR), helpstring("Sets or returns the selected text color of the cell.")] OLE_COLOR SelForeColor;
+        [id(3),helpcontext(SpreadProp_CTAPPEARANCELOCKBACKCOLOR), helpstring("Sets or returns the locked background color of the cell.")] OLE_COLOR LockBackColor;
+        [id(4),helpcontext(SpreadProp_CTAPPEARANCELOCKFORECOLOR), helpstring("Sets or returns the locked text color of the cell.")] OLE_COLOR LockForeColor;
+		[id(5),helpcontext(SpreadProp_CTAPPEARANCEDRAWPRIMARYBUTTON), helpstring("Sets or returns whether the cell should draw primary buttons.")] VARIANT_BOOL DrawPrimaryButton;
+		[id(6),helpcontext(SpreadProp_CTAPPEARANCEDRAWSECONDARYBUTTON), helpstring("Sets or returns whether the cell should draw secondary buttons.")] VARIANT_BOOL DrawSecondaryButton;
+		[id(7),helpcontext(SpreadProp_CTAPPEARANCEDRAWCOLORS), helpstring("Sets or returns whether the cell should draw colors.")] VARIANT_BOOL DrawColors;
+		[id(8),helpcontext(SpreadProp_CTAPPEARANCESTYLE),helpstring("Sets or returns the style of the custom celltype.")] long Style;
+    methods:
+    };
+*/
+	interface ICTAppearance : IDispatch
+	{
+        [propget, id(DISPID_BACKCOLOR), helpcontext(SpreadProp_CTAPPEARANCEBACKCOLOR), helpstring("Sets or returns the background color of the cell.")] HRESULT BackColor([out, retval] OLE_COLOR *pVal);
+        [propput, id(DISPID_BACKCOLOR)] HRESULT BackColor([in] OLE_COLOR newVal);
+        [propget, id(DISPID_FORECOLOR), helpcontext(SpreadProp_CTAPPEARANCEFORECOLOR), helpstring("Sets or returns the text color of the cell.")] HRESULT ForeColor([out, retval] OLE_COLOR *pVal);
+        [propput, id(DISPID_FORECOLOR)] HRESULT ForeColor([in] OLE_COLOR newVal);
+        [propget, id(DISPID_FONT), helpcontext(SpreadProp_CTAPPEARANCEFONT), helpstring("Sets or returns font characteristics of displayed text.")] HRESULT Font([out, retval] IFontDisp **ppVal);
+        [propput, id(DISPID_FONT)] HRESULT Font(IFontDisp* newVal);
+        [propget, id(1), helpcontext(SpreadProp_CTAPPEARANCESELBACKCOLOR), helpstring("Sets or returns the selected background color of the cell.")] HRESULT SelBackColor([out, retval] OLE_COLOR *pVal);
+        [propput, id(1)] HRESULT SelBackColor([in] OLE_COLOR newVal);
+        [propget, id(2), helpcontext(SpreadProp_CTAPPEARANCESELFORECOLOR), helpstring("Sets or returns the selected text color of the cell.")] HRESULT SelForeColor([out, retval] OLE_COLOR *pVal);
+        [propput, id(2)] HRESULT SelForeColor([in] OLE_COLOR newVal);
+        [propget, id(3), helpcontext(SpreadProp_CTAPPEARANCELOCKBACKCOLOR), helpstring("Sets or returns the locked background color of the cell.")] HRESULT LockBackColor([out, retval] OLE_COLOR *pVal);
+        [propput, id(3)] HRESULT LockBackColor([in] OLE_COLOR newVal);
+        [propget, id(4), helpcontext(SpreadProp_CTAPPEARANCELOCKFORECOLOR), helpstring("Sets or returns the locked text color of the cell.")] HRESULT LockForeColor([out, retval] OLE_COLOR *pVal);
+        [propput, id(4)] HRESULT LockForeColor([in] OLE_COLOR newVal);
+		[propget, id(5), helpcontext(SpreadProp_CTAPPEARANCEDRAWPRIMARYBUTTON), helpstring("Sets or returns whether the cell should draw primary buttons.")] HRESULT DrawPrimaryButton([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(5)] HRESULT DrawPrimaryButton([in] VARIANT_BOOL newVal);
+		[propget, id(6), helpcontext(SpreadProp_CTAPPEARANCEDRAWSECONDARYBUTTON), helpstring("Sets or returns whether the cell should draw secondary buttons.")] HRESULT DrawSecondaryButton([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(6)] HRESULT DrawSecondaryButton([in] VARIANT_BOOL newVal);
+		[propget, id(7), helpcontext(SpreadProp_CTAPPEARANCEDRAWCOLORS), helpstring("Sets or returns whether the cell should draw colors.")] HRESULT DrawColors([out, retval] VARIANT_BOOL *pVal);
+		[propput, id(7)] HRESULT DrawColors([in] VARIANT_BOOL newVal);
+		[propget, id(8), helpcontext(SpreadProp_CTAPPEARANCESTYLE), helpstring("Sets or returns the style of the custom celltype.")] HRESULT Style([out, retval] long *pVal);
+		[propput, id(8)] HRESULT Style([in] long newVal);
+	}
+	
+    [
+      uuid(4596A3B9-F351-4685-9440-63287CA220DC), 
+      helpstring("Appearance settings for a custom celltype.")
+    ]
+    coclass CTAppearance
+	{
+        dispinterface ICTAppearance;
+    };
+

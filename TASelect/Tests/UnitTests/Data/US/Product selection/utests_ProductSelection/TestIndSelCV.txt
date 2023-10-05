@@ -1,0 +1,544 @@
+#Start of test definition
+
+StartTechnicalParameters
+ApplicationType = 1
+AvailablePMPanels = 7
+BreakTankRequiredForWaterMakeUp = 0
+CVDefKvReynard = 1
+CVMaxDispDp = 200000
+CVMaxDpProp = 65000
+CVMinAuthCstFlow = 0.5
+CVMinAuthor = 0.25
+CVMinDpOnoff = 3000
+CVMinDpProp = 10000
+CVUseDpCPBand = 0
+CanChangePressureVolumeLimit = 0
+CurrencyID = CURRENCY_EUR
+DefaultCalculationNorm = PM_NORM_NONE
+DefaultCoolingTps = 6
+DefaultFillTemperature = 10
+DefaultHeatingTps = 75
+DefaultISCoolingAdditID = WATER
+DefaultISCoolingDT = 6
+DefaultISCoolingPcWeight = 0
+DefaultISCoolingTps = 6
+DefaultISHeatingAdditID = WATER
+DefaultISHeatingDT = 20
+DefaultISHeatingPcWeight = 0
+DefaultISHeatingTps = 90
+DefaultISSolarAdditID = WATER
+DefaultISSolarDT = 20
+DefaultISSolarPcWeight = 0
+DefaultISSolarTps = 75
+DefaultMaxTempInCooling = 45
+DefaultMinTempInHeating = 5
+DefaultMinTempInSolar = 5
+DefaultPipeSerieID = STEEL_SC40
+DefaultPrjCoolingAdditID = WATER
+DefaultPrjCoolingDT = 6
+DefaultPrjCoolingPcWeight = 0
+DefaultPrjHeatingAdditID = WATER
+DefaultPrjHeatingDT = 20
+DefaultPrjHeatingPcWeight = 0
+DefaultSafetyPressureResponseValve = 300000
+DefaultStaticPressureOfWaterNetwork = 400000
+DefaultTAZ = 100
+DefaultWaterHardness = 1.78324958
+DefaultWaterMakeUpTemp = 10
+DegassingWaterReserveForVessel = 0.002
+DpCBCVDpcmin = 5000
+DpCBCVDplmin = 5000
+DpCHide = 0
+DpCHminFullyOpenMv = 0
+DpCMinDp = 5000
+DpCMvLocation = 0
+DpCMvWithSameSizeOnly = 0
+FixedOrificeMaxDp = 6000
+FixedOrificeMinDp = 2000
+FlowDeviationMinus = -0.1
+FlowDeviationPlus = 0.1
+FluidTempLimitEN12953 = 105
+InitialPressureMargin = 30000
+MaxNumberOfAdditionalVesselsInParallel = 2
+MaxNumberOfVentoInParallel = 2
+MaxSafetyValveInParallel = 3
+MaxSizeShift = 4
+MinPressureMargin = 20000
+PICvHide = 0
+PICvMinDp = 1000
+PSetupCompresso = 10000
+PSetupTransfero = 20000
+PipeMaxDp = 500
+PipeMaxVelocity = 4
+PipeMinDp = 10
+PipeMinVelocity = 0.3
+PipeTargetDp = 250
+PipeTargetVelocity = 1
+PipeTargetVelosityUsed = 0
+PressureVolumeLimit = 300000
+ProjectType = 1
+SafetyTempLimiterLimitEN12953 = 110
+SizeShiftAbove = 0
+SizeShiftBelow = -4
+TrvDefDpTotal = 10000
+TrvDefRoomTemperature = 20
+TrvDefSupplyTemperature = 80
+TrvMaxDp = 30000
+TrvMinDpRatio = 0.25
+UseDefaultFreezingPointAsMinTemperature = 1
+UseSimplyPst = 0
+UseVesselPressureVolumeLimit = 0
+ValveMaxDp = 200000
+ValveMin2Dp = 6000
+ValveMinDp = 3000
+VenturiMaxDp = 10000
+VenturiMinDp = 2000
+VesselSelectionRangePercentage = 0
+EndTechnicalParameters
+
+Test number = 0
+
+SelectionMode = Individual
+ProductCategory = CV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = CVTYPE_GLOBE
+ComboFamilyID = FAM_216RGA
+ComboMaterialID = BDY_BRONZE
+ComboConnectID = CONN_THREADN
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+GroupKvsOrDpChecked = false
+RadioKvsOrDp = Dp
+Kvs = 0
+EndInputs
+
+StartOutputs
+Result number = 0;216RGAUS_40B;CV 216 RGA 1 1/2";Bronze;NPT thread;Standard;250 psi;1 1/2" (40);false;false;25;15444.8;100;0;0.014;EqualPc;PullToClose;-15/150;2" (50);300.082;1.25909
+Result number = 1;216RGAUS_40A;CV 216 RGA 1 1/2";Bronze;NPT thread;Standard;250 psi;1 1/2" (40);false;false;20;24132.5;100;0;0.014;EqualPc;PullToClose;-15/150;2" (50);300.082;1.25909
+Result number = 2;216RGAUS_32B;CV 216 RGA 1 1/4";Bronze;NPT thread;Standard;250 psi;1 1/4" (32);false;false;16;37707;100;0;0.014;EqualPc;PullToClose;-15/150;2" (50);300.082;1.25909
+Result number = 3;216RGAUS_32A;CV 216 RGA 1 1/4";Bronze;NPT thread;Standard;250 psi;1 1/4" (32);false;false;12.5;61779.2;100;0;0.014;EqualPc;PullToClose;-15/150;2" (50);300.082;1.25909
+Result number = 4;216RGAUS_25B;CV 216 RGA 1";Bronze;NPT thread;Standard;250 psi;1" (25);false;false;10;96530;100;0;0.014;EqualPc;PullToClose;-15/150;2" (50);300.082;1.25909
+Result number = 5;216RGAUS_25A;CV 216 RGA 1";Bronze;NPT thread;Standard;250 psi;1" (25);false;false;8;150828;100;0;0.014;EqualPc;PullToClose;-15/150;2" (50);300.082;1.25909
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 1
+
+SelectionMode = Individual
+ProductCategory = CV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0005555555554
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = CVTYPE_GLOBE
+ComboFamilyID = FAM_216RGA
+ComboMaterialID = BDY_BRONZE
+ComboConnectID = CONN_THREADN
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+GroupKvsOrDpChecked = false
+RadioKvsOrDp = Dp
+Kvs = 0
+EndInputs
+
+StartOutputs
+Result number = 0;216RGAUS_20A;CV 216 RGA 3/4";Bronze;NPT thread;Standard;250 psi;3/4" (20);false;false;5;15444.8;100;0;0.012;EqualPc;PullToClose;-15/150;1 1/4" (32);99.4121;0.548844
+Result number = 1;216RGAUS_15E;CV 216 RGA 1/2";Bronze;NPT thread;Standard;250 psi;1/2" (15);false;false;4;24132.5;50.0;0;0.012;EqualPc;PullToClose;-15/150;1 1/4" (32);99.4121;0.548844
+Result number = 2;216RGAUS_15D;CV 216 RGA 1/2";Bronze;NPT thread;Standard;250 psi;1/2" (15);false;false;2.5;61779.2;50.0;0;0.012;EqualPc;PullToClose;-15/150;1 1/4" (32);99.4121;0.548844
+Result number = 3;216RGAUS_15C;CV 216 RGA 1/2";Bronze;NPT thread;Standard;250 psi;1/2" (15);false;false;1.6;150828;50.0;0;0.012;EqualPc;PullToClose;-15/150;1 1/4" (32);99.4121;0.548844
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 2
+
+SelectionMode = Individual
+ProductCategory = CV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0005555555554
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = CVTYPE_GLOBE
+ComboFamilyID = FAM_216RGA
+ComboMaterialID = BDY_BRONZE
+ComboConnectID = CONN_THREADN
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+GroupKvsOrDpChecked = false
+RadioKvsOrDp = Dp
+Kvs = 0
+EndInputs
+
+StartOutputs
+Result number = 0;216RGAUS_20A;CV 216 RGA 3/4";Bronze;NPT thread;Standard;250 psi;3/4" (20);false;false;5;15444.8;100;0;0.012;EqualPc;PullToClose;-15/150;1 1/4" (32);99.4121;0.548844
+Result number = 1;216RGAUS_15E;CV 216 RGA 1/2";Bronze;NPT thread;Standard;250 psi;1/2" (15);false;false;4;24132.5;50.0;0;0.012;EqualPc;PullToClose;-15/150;1 1/4" (32);99.4121;0.548844
+Result number = 2;216RGAUS_15D;CV 216 RGA 1/2";Bronze;NPT thread;Standard;250 psi;1/2" (15);false;false;2.5;61779.2;50.0;0;0.012;EqualPc;PullToClose;-15/150;1 1/4" (32);99.4121;0.548844
+Result number = 3;216RGAUS_15C;CV 216 RGA 1/2";Bronze;NPT thread;Standard;250 psi;1/2" (15);false;false;1.6;150828;50.0;0;0.012;EqualPc;PullToClose;-15/150;1 1/4" (32);99.4121;0.548844
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 3
+
+SelectionMode = Individual
+ProductCategory = CV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0005555555554
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = CVTYPE_GLOBE
+ComboFamilyID = FAM_316RGA
+ComboMaterialID = BDY_BRONZE
+ComboConnectID = CONN_THREADN
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV3w
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+GroupKvsOrDpChecked = false
+RadioKvsOrDp = Dp
+Kvs = 0
+EndInputs
+
+StartOutputs
+Result number = 0;316RGAUS_20A;CV 316 RGA 3/4";Bronze;NPT thread;Standard;250 psi;3/4" (20);false;false;5;15444.8;100;0;0.012;EqualPc;PullToClose;-15/150;1 1/4" (32);99.4121;0.548844
+Result number = 1;316RGAUS_15E;CV 316 RGA 1/2";Bronze;NPT thread;Standard;250 psi;1/2" (15);false;false;4;24132.5;50.0;0;0.012;EqualPc;PullToClose;-15/150;1 1/4" (32);99.4121;0.548844
+Result number = 2;316RGAUS_15D;CV 316 RGA 1/2";Bronze;NPT thread;Standard;250 psi;1/2" (15);false;false;2.5;61779.2;50.0;0;0.012;EqualPc;PullToClose;-15/150;1 1/4" (32);99.4121;0.548844
+Result number = 3;316RGAUS_15C;CV 316 RGA 1/2";Bronze;NPT thread;Standard;250 psi;1/2" (15);false;false;1.6;150828;50.0;0;0.012;EqualPc;PullToClose;-15/150;1 1/4" (32);99.4121;0.548844
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 4
+
+SelectionMode = Individual
+ProductCategory = CV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0005555555554
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = CVTYPE_GLOBE
+ComboFamilyID = FAM_316RGA
+ComboMaterialID = BDY_BRONZE
+ComboConnectID = CONN_THREADN
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV3w
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+GroupKvsOrDpChecked = false
+RadioKvsOrDp = Dp
+Kvs = 0
+EndInputs
+
+StartOutputs
+Result number = 0;316RGAUS_20A;CV 316 RGA 3/4";Bronze;NPT thread;Standard;250 psi;3/4" (20);false;false;5;15444.8;100;0;0.012;EqualPc;PullToClose;-15/150;1 1/4" (32);99.4121;0.548844
+Result number = 1;316RGAUS_15E;CV 316 RGA 1/2";Bronze;NPT thread;Standard;250 psi;1/2" (15);false;false;4;24132.5;50.0;0;0.012;EqualPc;PullToClose;-15/150;1 1/4" (32);99.4121;0.548844
+Result number = 2;316RGAUS_15D;CV 316 RGA 1/2";Bronze;NPT thread;Standard;250 psi;1/2" (15);false;false;2.5;61779.2;50.0;0;0.012;EqualPc;PullToClose;-15/150;1 1/4" (32);99.4121;0.548844
+Result number = 3;316RGAUS_15C;CV 316 RGA 1/2";Bronze;NPT thread;Standard;250 psi;1/2" (15);false;false;1.6;150828;50.0;0;0.012;EqualPc;PullToClose;-15/150;1 1/4" (32);99.4121;0.548844
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 5
+
+SelectionMode = Individual
+ProductCategory = CV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0005555555554
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = CVTYPE_GLOBE
+ComboFamilyID = FAM_316RGA
+ComboMaterialID = BDY_BRONZE
+ComboConnectID = CONN_THREADN
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV3w
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+GroupKvsOrDpChecked = false
+RadioKvsOrDp = Dp
+Kvs = 0
+EndInputs
+
+StartOutputs
+Result number = 0;316RGAUS_20A;CV 316 RGA 3/4";Bronze;NPT thread;Standard;250 psi;3/4" (20);false;false;5;15444.8;100;0;0.012;EqualPc;PullToClose;-15/150;1 1/4" (32);99.4121;0.548844
+Result number = 1;316RGAUS_15E;CV 316 RGA 1/2";Bronze;NPT thread;Standard;250 psi;1/2" (15);false;false;4;24132.5;50.0;0;0.012;EqualPc;PullToClose;-15/150;1 1/4" (32);99.4121;0.548844
+Result number = 2;316RGAUS_15D;CV 316 RGA 1/2";Bronze;NPT thread;Standard;250 psi;1/2" (15);false;false;2.5;61779.2;50.0;0;0.012;EqualPc;PullToClose;-15/150;1 1/4" (32);99.4121;0.548844
+Result number = 3;316RGAUS_15C;CV 316 RGA 1/2";Bronze;NPT thread;Standard;250 psi;1/2" (15);false;false;1.6;150828;50.0;0;0.012;EqualPc;PullToClose;-15/150;1 1/4" (32);99.4121;0.548844
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 6
+
+SelectionMode = Individual
+ProductCategory = CV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.005
+Power = 0
+DT = 0
+DpEnabled = true
+Dp = 7000
+ComboTypeID = CVTYPE_GLOBE
+ComboFamilyID = FAM_316RGA
+ComboMaterialID = BDY_BRONZE
+ComboConnectID = CONN_THREADN
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV3w
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+GroupKvsOrDpChecked = true
+RadioKvsOrDp = Dp
+Kvs = 0
+EndInputs
+
+StartOutputs
+Result number = 0;316RGAUS_50B;CV 316 RGA 2";Bronze;NPT thread;Standard;250 psi;2" (50);false;false;40;19547.3;100;0;0.014;EqualPc;PullToClose;-15/150;2 1/2" (65);246.85;1.34494
+Result number = 1;316RGAUS_40B;CV 316 RGA 1 1/2";Bronze;NPT thread;Standard;250 psi;1 1/2" (40);false;false;25;50041.2;100;0;0.014;EqualPc;PullToClose;-15/150;2 1/2" (65);246.85;1.34494
+Result number = 2;316RGAUS_32B;CV 316 RGA 1 1/4";Bronze;NPT thread;Standard;250 psi;1 1/4" (32);false;false;16;122171;100;0;0.014;EqualPc;PullToClose;-15/150;2 1/2" (65);246.85;1.34494
+Result number = 3;316RGAUS_25B;CV 316 RGA 1";Bronze;NPT thread;Standard;250 psi;1" (25);false;false;10;312757;100;0;0.014;EqualPc;PullToClose;-15/150;2 1/2" (65);246.85;1.34494
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 7
+
+SelectionMode = Individual
+ProductCategory = CV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.005
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = CVTYPE_GLOBE
+ComboFamilyID = FAM_216RGA
+ComboMaterialID = BDY_BRONZE
+ComboConnectID = CONN_THREADN
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+GroupKvsOrDpChecked = true
+RadioKvsOrDp = Kvs
+Kvs = 16
+EndInputs
+
+StartOutputs
+Result number = 0;216RGAUS_40A;CV 216 RGA 1 1/2";Bronze;NPT thread;Standard;250 psi;1 1/2" (40);false;false;20;78189.3;100;0;0.014;EqualPc;PullToClose;-15/150;2 1/2" (65);246.85;1.34494
+Result number = 1;216RGAUS_32B;CV 216 RGA 1 1/4";Bronze;NPT thread;Standard;250 psi;1 1/4" (32);false;false;16;122171;100;0;0.014;EqualPc;PullToClose;-15/150;2 1/2" (65);246.85;1.34494
+Result number = 2;216RGAUS_32A;CV 216 RGA 1 1/4";Bronze;NPT thread;Standard;250 psi;1 1/4" (32);false;false;12.5;200165;100;0;0.014;EqualPc;PullToClose;-15/150;2 1/2" (65);246.85;1.34494
+Result number = 3;216RGAUS_25B;CV 216 RGA 1";Bronze;NPT thread;Standard;250 psi;1" (25);false;false;10;312757;100;0;0.014;EqualPc;PullToClose;-15/150;2 1/2" (65);246.85;1.34494
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 8
+
+SelectionMode = Individual
+ProductCategory = CV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = PowerDTMode
+Flow = 2.217247649194e-05
+Power = 900
+DT = 10
+DpEnabled = false
+Dp = 0
+ComboTypeID = CVTYPE_GLOBE
+ComboFamilyID = FAM_216RGA
+ComboMaterialID = BDY_BRONZE
+ComboConnectID = CONN_THREADN
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+GroupKvsOrDpChecked = true
+RadioKvsOrDp = Kvs
+Kvs = 20
+EndInputs
+
+StartOutputs
+Result number = 0;216RGAUS_15E;CV 216 RGA 1/2";Bronze;NPT thread;Standard;250 psi;1/2" (15);false;false;4;38.4393;50.0;0;0.012;EqualPc;PullToClose;-15/150;3/8" (10);49.1406;0.180678
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 9
+
+SelectionMode = Individual
+ProductCategory = CV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = PowerDTMode
+Flow = 2.217247649194e-05
+Power = 900
+DT = 10
+DpEnabled = true
+Dp = 6000
+ComboTypeID = CVTYPE_GLOBE
+ComboFamilyID = FAM_216RGA
+ComboMaterialID = BDY_BRONZE
+ComboConnectID = CONN_THREADN
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+GroupKvsOrDpChecked = true
+RadioKvsOrDp = Dp
+Kvs = 0
+EndInputs
+
+StartOutputs
+Result number = 0;216RGAUS_15A;CV 216 RGA 1/2";Bronze;NPT thread;Standard;250 psi;1/2" (15);false;false;0.63;1549.58;50.0;0;0.012;EqualPc;PullToClose;-15/150;3/8" (10);49.1406;0.180678
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+

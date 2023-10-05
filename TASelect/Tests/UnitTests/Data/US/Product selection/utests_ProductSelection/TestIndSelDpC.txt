@@ -1,0 +1,836 @@
+#Start of test definition
+
+StartTechnicalParameters
+ApplicationType = 1
+AvailablePMPanels = 7
+BreakTankRequiredForWaterMakeUp = 0
+CVDefKvReynard = 1
+CVMaxDispDp = 200000
+CVMaxDpProp = 65000
+CVMinAuthCstFlow = 0.5
+CVMinAuthor = 0.25
+CVMinDpOnoff = 3000
+CVMinDpProp = 10000
+CVUseDpCPBand = 0
+CanChangePressureVolumeLimit = 0
+CurrencyID = CURRENCY_EUR
+DefaultCalculationNorm = PM_NORM_NONE
+DefaultCoolingTps = 6
+DefaultFillTemperature = 10
+DefaultHeatingTps = 75
+DefaultISCoolingAdditID = WATER
+DefaultISCoolingDT = 6
+DefaultISCoolingPcWeight = 0
+DefaultISCoolingTps = 6
+DefaultISHeatingAdditID = WATER
+DefaultISHeatingDT = 20
+DefaultISHeatingPcWeight = 0
+DefaultISHeatingTps = 90
+DefaultISSolarAdditID = WATER
+DefaultISSolarDT = 20
+DefaultISSolarPcWeight = 0
+DefaultISSolarTps = 75
+DefaultMaxTempInCooling = 45
+DefaultMinTempInHeating = 5
+DefaultMinTempInSolar = 5
+DefaultPipeSerieID = STEEL_SC40
+DefaultPrjCoolingAdditID = WATER
+DefaultPrjCoolingDT = 6
+DefaultPrjCoolingPcWeight = 0
+DefaultPrjHeatingAdditID = WATER
+DefaultPrjHeatingDT = 20
+DefaultPrjHeatingPcWeight = 0
+DefaultSafetyPressureResponseValve = 300000
+DefaultStaticPressureOfWaterNetwork = 400000
+DefaultTAZ = 100
+DefaultWaterHardness = 1.78324958
+DefaultWaterMakeUpTemp = 10
+DegassingWaterReserveForVessel = 0.002
+DpCBCVDpcmin = 5000
+DpCBCVDplmin = 5000
+DpCHide = 0
+DpCHminFullyOpenMv = 0
+DpCMinDp = 5000
+DpCMvLocation = 0
+DpCMvWithSameSizeOnly = 0
+FixedOrificeMaxDp = 6000
+FixedOrificeMinDp = 2000
+FlowDeviationMinus = -0.1
+FlowDeviationPlus = 0.1
+FluidTempLimitEN12953 = 105
+InitialPressureMargin = 30000
+MaxNumberOfAdditionalVesselsInParallel = 2
+MaxNumberOfVentoInParallel = 2
+MaxSafetyValveInParallel = 3
+MaxSizeShift = 4
+MinPressureMargin = 20000
+PICvHide = 0
+PICvMinDp = 1000
+PSetupCompresso = 10000
+PSetupTransfero = 20000
+PipeMaxDp = 500
+PipeMaxVelocity = 4
+PipeMinDp = 10
+PipeMinVelocity = 0.3
+PipeTargetDp = 250
+PipeTargetVelocity = 1
+PipeTargetVelosityUsed = 0
+PressureVolumeLimit = 300000
+ProjectType = 1
+SafetyTempLimiterLimitEN12953 = 110
+SizeShiftAbove = 0
+SizeShiftBelow = -4
+TrvDefDpTotal = 10000
+TrvDefRoomTemperature = 20
+TrvDefSupplyTemperature = 80
+TrvMaxDp = 30000
+TrvMinDpRatio = 0.25
+UseDefaultFreezingPointAsMinTemperature = 1
+UseSimplyPst = 0
+UseVesselPressureVolumeLimit = 0
+ValveMaxDp = 200000
+ValveMin2Dp = 6000
+ValveMinDp = 3000
+VenturiMaxDp = 10000
+VenturiMinDp = 2000
+VesselSelectionRangePercentage = 0
+EndTechnicalParameters
+
+Test number = 0
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00266666
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;STAP50B_20-80;STAP 2";Ametal(tm);NPT thread;Standard;250 psi;2" (50);false;false;14942.5;[20000-80000];false;250000;-20/120;2" (50);277.259;1.20872
+Result number = 1;DA516_40APTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);false;false;9884.62;[5000-30000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 2;DA516_40BPTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);false;false;9884.62;[10000-60000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 3;DA516_40CPTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);false;false;9884.62;[10000-100000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 4;DA516_40DPTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);false;false;9884.62;[60000-150000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 5;DA516_25APTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);false;false;61778.9;[5000-30000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 6;DA516_25BPTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);false;false;61778.9;[10000-60000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 7;DA516_25CPTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);false;false;61778.9;[10000-100000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 8;DA516_25DPTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);false;false;61778.9;[60000-150000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 9;DA516_25APTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);false;false;61778.9;[5000-30000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 10;DA516_25BPTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);false;false;61778.9;[10000-60000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 11;DA516_25CPTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);false;false;61778.9;[10000-100000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 12;DA516_25DPTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);false;false;61778.9;[60000-150000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 13;DA516_40APTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);false;false;9884.62;[5000-30000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 14;DA516_40BPTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);false;false;9884.62;[10000-60000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 15;DA516_40CPTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);false;false;9884.62;[10000-100000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 16;DA516_40DPTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);false;false;9884.62;[60000-150000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 1
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.02666666
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;PILOT-R_125A25US;TA-PILOT-R 5";Ductile iron;ANSI Flange;PT 90;350 psi;5" (125);false;false;12203.3;[10000-50000];false;1.2e+06;-20/120;5" (125);247.376;2.00906
+Result number = 1;PILOT-R_125B25US;TA-PILOT-R 5";Ductile iron;ANSI Flange;PT 90;350 psi;5" (125);false;false;12203.3;[30000-150000];false;1.2e+06;-20/120;5" (125);247.376;2.00906
+Result number = 2;PILOT-R_125C25US;TA-PILOT-R 5";Ductile iron;ANSI Flange;PT 90;350 psi;5" (125);false;false;12203.3;[80000-400000];false;1.2e+06;-20/120;5" (125);247.376;2.00906
+Result number = 3;PILOT-R_125A25USSF;TA-PILOT-R 5";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;350 psi;5" (125);false;false;12203.3;[10000-50000];false;1.2e+06;-20/120;5" (125);247.376;2.00906
+Result number = 4;PILOT-R_125B25USSF;TA-PILOT-R 5";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;350 psi;5" (125);false;false;12203.3;[30000-150000];false;1.2e+06;-20/120;5" (125);247.376;2.00906
+Result number = 5;PILOT-R_125C25USSF;TA-PILOT-R 5";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;350 psi;5" (125);false;false;12203.3;[80000-400000];false;1.2e+06;-20/120;5" (125);247.376;2.00906
+Result number = 6;PILOT-R_125A25USB;TA-PILOT-R 5";Ductile iron;ANSI Flange;PT 100;350 psi;5" (125);false;false;12203.3;[10000-50000];false;1.2e+06;-20/150;5" (125);247.376;2.00906
+Result number = 7;PILOT-R_125B25USB;TA-PILOT-R 5";Ductile iron;ANSI Flange;PT 100;350 psi;5" (125);false;false;12203.3;[30000-150000];false;1.2e+06;-20/150;5" (125);247.376;2.00906
+Result number = 8;PILOT-R_125C25USB;TA-PILOT-R 5";Ductile iron;ANSI Flange;PT 100;350 psi;5" (125);false;false;12203.3;[80000-400000];false;1.2e+06;-20/150;5" (125);247.376;2.00906
+Result number = 9;PILOT-R_100A25US;TA-PILOT-R 4";Ductile iron;ANSI Flange;PT 90;350 psi;4" (100);false;false;27457.4;[10000-50000];false;1.2e+06;-20/120;5" (125);247.376;2.00906
+Result number = 10;PILOT-R_100B25US;TA-PILOT-R 4";Ductile iron;ANSI Flange;PT 90;350 psi;4" (100);false;false;27457.4;[30000-150000];false;1.2e+06;-20/120;5" (125);247.376;2.00906
+Result number = 11;PILOT-R_100C25US;TA-PILOT-R 4";Ductile iron;ANSI Flange;PT 90;350 psi;4" (100);false;false;27457.4;[80000-400000];false;1.2e+06;-20/120;5" (125);247.376;2.00906
+Result number = 12;PILOT-R_100A25USSF;TA-PILOT-R 4";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;350 psi;4" (100);false;false;27457.4;[10000-50000];false;1.2e+06;-20/120;5" (125);247.376;2.00906
+Result number = 13;PILOT-R_100B25USSF;TA-PILOT-R 4";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;350 psi;4" (100);false;false;27457.4;[30000-150000];false;1.2e+06;-20/120;5" (125);247.376;2.00906
+Result number = 14;PILOT-R_100C25USSF;TA-PILOT-R 4";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;350 psi;4" (100);false;false;27457.4;[80000-400000];false;1.2e+06;-20/120;5" (125);247.376;2.00906
+Result number = 15;PILOT-R_100A25USB;TA-PILOT-R 4";Ductile iron;ANSI Flange;PT 100;350 psi;4" (100);false;false;27457.4;[10000-50000];false;1.2e+06;-20/150;5" (125);247.376;2.00906
+Result number = 16;PILOT-R_100B25USB;TA-PILOT-R 4";Ductile iron;ANSI Flange;PT 100;350 psi;4" (100);false;false;27457.4;[30000-150000];false;1.2e+06;-20/150;5" (125);247.376;2.00906
+Result number = 17;PILOT-R_100C25USB;TA-PILOT-R 4";Ductile iron;ANSI Flange;PT 100;350 psi;4" (100);false;false;27457.4;[80000-400000];false;1.2e+06;-20/150;5" (125);247.376;2.00906
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 2
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 2.666e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;STAP15B_10-60;STAP 1/2";Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);false;false;453.661;[10000-60000];false;250000;-20/120;3/8" (10);68.6153;0.217245
+Result number = 1;DA516_15APTAIAAOA;DA 516 DN15/20;Ductile iron;ANSI Flange;PT 90;350 psi;1/2" (15);false;false;55.5735;[5000-30000];false;1.6e+06;-10/120;3/8" (10);68.6153;0.217245
+Result number = 2;DA516_15BPTAIAAOA;DA 516 DN15/20;Ductile iron;ANSI Flange;PT 90;350 psi;1/2" (15);false;false;55.5735;[10000-60000];false;1.6e+06;-10/120;3/8" (10);68.6153;0.217245
+Result number = 3;DA516_15CPTAIAAOA;DA 516 DN15/20;Ductile iron;ANSI Flange;PT 90;350 psi;1/2" (15);false;false;55.5735;[10000-100000];false;1.6e+06;-10/120;3/8" (10);68.6153;0.217245
+Result number = 4;DA516_15DPTAIAAOA;DA 516 DN15/20;Ductile iron;ANSI Flange;PT 90;350 psi;1/2" (15);false;false;55.5735;[60000-150000];false;1.6e+06;-10/120;3/8" (10);68.6153;0.217245
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 3
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00266666
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_HIDP
+ComboFamilyID = 
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = UpStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;DAF516_40ATFTF;DAF 516 DN40/50;Ductile iron;Thread;Without meas. point;350 psi;2" (50);false;false;9884.62;[5000-30000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 1;DAF516_40BTFTF;DAF 516 DN40/50;Ductile iron;Thread;Without meas. point;350 psi;2" (50);false;false;9884.62;[10000-60000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 2;DAF516_40CTFTF;DAF 516 DN40/50;Ductile iron;Thread;Without meas. point;350 psi;2" (50);false;false;9884.62;[10000-100000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 3;DAF516_40DTFTF;DAF 516 DN40/50;Ductile iron;Thread;Without meas. point;350 psi;2" (50);false;false;9884.62;[60000-150000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 4;DAF516_40AMFMF;DAF 516 DN40/50;Ductile iron;Thread male;Without meas. point;350 psi;2" (50);false;false;9884.62;[5000-30000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 5;DAF516_40BMFMF;DAF 516 DN40/50;Ductile iron;Thread male;Without meas. point;350 psi;2" (50);false;false;9884.62;[10000-60000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 6;DAF516_40CMFMF;DAF 516 DN40/50;Ductile iron;Thread male;Without meas. point;350 psi;2" (50);false;false;9884.62;[10000-100000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 7;DAF516_40DMFMF;DAF 516 DN40/50;Ductile iron;Thread male;Without meas. point;350 psi;2" (50);false;false;9884.62;[60000-150000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 8;DAF50_50A;DAF 50 DN50;Ductile iron;Flange;Standard;250 psi/350 psi;2" (50);false;false;8687.66;[10000-60000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 9;DAF50_50C;DAF 50 DN50;Ductile iron;Flange;Standard;250 psi/350 psi;2" (50);false;false;8687.66;[50000-150000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 10;DAF50_50E;DAF 50 DN50;Ductile iron;Flange;Standard;250 psi/350 psi;2" (50);false;false;8687.66;[130000-250000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 11;DAF516_40AIFOF;DAF 516 DN40/50;Ductile iron;Flange;Without meas. point;350 psi;2" (50);false;false;9884.62;[5000-30000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 12;DAF516_40BIFOF;DAF 516 DN40/50;Ductile iron;Flange;Without meas. point;350 psi;2" (50);false;false;9884.62;[10000-60000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 13;DAF516_40CIFOF;DAF 516 DN40/50;Ductile iron;Flange;Without meas. point;350 psi;2" (50);false;false;9884.62;[10000-100000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 14;DAF516_40DIFOF;DAF 516 DN40/50;Ductile iron;Flange;Without meas. point;350 psi;2" (50);false;false;9884.62;[60000-150000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 15;DAF516_40AAIFAOF;DAF 516 DN40/50;Ductile iron;ANSI Flange;Without meas. point;350 psi;2" (50);false;false;9884.62;[5000-30000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 16;DAF516_40BAIFAOF;DAF 516 DN40/50;Ductile iron;ANSI Flange;Without meas. point;350 psi;2" (50);false;false;9884.62;[10000-60000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 17;DAF516_40CAIFAOF;DAF 516 DN40/50;Ductile iron;ANSI Flange;Without meas. point;350 psi;2" (50);false;false;9884.62;[10000-100000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 18;DAF516_40DAIFAOF;DAF 516 DN40/50;Ductile iron;ANSI Flange;Without meas. point;350 psi;2" (50);false;false;9884.62;[60000-150000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 19;DAF516_40AWFWF;DAF 516 DN40/50;Ductile iron;Welding;Without meas. point;350 psi;2" (50);false;false;9884.62;[5000-30000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 20;DAF516_40BWFWF;DAF 516 DN40/50;Ductile iron;Welding;Without meas. point;350 psi;2" (50);false;false;9884.62;[10000-60000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 21;DAF516_40CWFWF;DAF 516 DN40/50;Ductile iron;Welding;Without meas. point;350 psi;2" (50);false;false;9884.62;[10000-100000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 22;DAF516_40DWFWF;DAF 516 DN40/50;Ductile iron;Welding;Without meas. point;350 psi;2" (50);false;false;9884.62;[60000-150000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 23;DAF516_40ATETE;DAF 516 DN40/50;Ductile iron;Thread;Without meas. point;350 psi;1 1/2" (40);false;false;9884.62;[5000-30000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 24;DAF516_40BTETE;DAF 516 DN40/50;Ductile iron;Thread;Without meas. point;350 psi;1 1/2" (40);false;false;9884.62;[10000-60000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 25;DAF516_40CTETE;DAF 516 DN40/50;Ductile iron;Thread;Without meas. point;350 psi;1 1/2" (40);false;false;9884.62;[10000-100000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 26;DAF516_40DTETE;DAF 516 DN40/50;Ductile iron;Thread;Without meas. point;350 psi;1 1/2" (40);false;false;9884.62;[60000-150000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 27;DAF516_40AMEME;DAF 516 DN40/50;Ductile iron;Thread male;Without meas. point;350 psi;1 1/2" (40);false;false;9884.62;[5000-30000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 28;DAF516_40BMEME;DAF 516 DN40/50;Ductile iron;Thread male;Without meas. point;350 psi;1 1/2" (40);false;false;9884.62;[10000-60000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 29;DAF516_40CMEME;DAF 516 DN40/50;Ductile iron;Thread male;Without meas. point;350 psi;1 1/2" (40);false;false;9884.62;[10000-100000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 30;DAF516_40DMEME;DAF 516 DN40/50;Ductile iron;Thread male;Without meas. point;350 psi;1 1/2" (40);false;false;9884.62;[60000-150000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 31;DAF50_40A;DAF 50 DN40;Ductile iron;Flange;Standard;250 psi/350 psi;1 1/2" (40);false;false;14233.9;[10000-60000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 32;DAF50_40C;DAF 50 DN40;Ductile iron;Flange;Standard;250 psi/350 psi;1 1/2" (40);false;false;14233.9;[50000-150000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 33;DAF50_40E;DAF 50 DN40;Ductile iron;Flange;Standard;250 psi/350 psi;1 1/2" (40);false;false;14233.9;[130000-250000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 34;DAF516_40AIEFOE;DAF 516 DN40/50;Ductile iron;Flange;Without meas. point;350 psi;1 1/2" (40);false;false;9884.62;[5000-30000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 35;DAF516_40BIEFOE;DAF 516 DN40/50;Ductile iron;Flange;Without meas. point;350 psi;1 1/2" (40);false;false;9884.62;[10000-60000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 36;DAF516_40CIEFOE;DAF 516 DN40/50;Ductile iron;Flange;Without meas. point;350 psi;1 1/2" (40);false;false;9884.62;[10000-100000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 37;DAF516_40DIEFOE;DAF 516 DN40/50;Ductile iron;Flange;Without meas. point;350 psi;1 1/2" (40);false;false;9884.62;[60000-150000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 38;DAF516_40AAIEAOE;DAF 516 DN40/50;Ductile iron;ANSI Flange;Without meas. point;350 psi;1 1/2" (40);false;false;9884.62;[5000-30000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 39;DAF516_40BAIEAOE;DAF 516 DN40/50;Ductile iron;ANSI Flange;Without meas. point;350 psi;1 1/2" (40);false;false;9884.62;[10000-60000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 40;DAF516_40CAIEAOE;DAF 516 DN40/50;Ductile iron;ANSI Flange;Without meas. point;350 psi;1 1/2" (40);false;false;9884.62;[10000-100000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 41;DAF516_40DAIEAOE;DAF 516 DN40/50;Ductile iron;ANSI Flange;Without meas. point;350 psi;1 1/2" (40);false;false;9884.62;[60000-150000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 42;DAF516_40AWEWE;DAF 516 DN40/50;Ductile iron;Welding;Without meas. point;350 psi;1 1/2" (40);false;false;9884.62;[5000-30000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 43;DAF516_40BWEWE;DAF 516 DN40/50;Ductile iron;Welding;Without meas. point;350 psi;1 1/2" (40);false;false;9884.62;[10000-60000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 44;DAF516_40CWEWE;DAF 516 DN40/50;Ductile iron;Welding;Without meas. point;350 psi;1 1/2" (40);false;false;9884.62;[10000-100000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 45;DAF516_40DWEWE;DAF 516 DN40/50;Ductile iron;Welding;Without meas. point;350 psi;1 1/2" (40);false;false;9884.62;[60000-150000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 46;DAF516_25ATDTD;DAF 516 DN25/32;Ductile iron;Thread;Without meas. point;350 psi;1 1/4" (32);false;false;61778.9;[5000-30000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 47;DAF516_25BTDTD;DAF 516 DN25/32;Ductile iron;Thread;Without meas. point;350 psi;1 1/4" (32);false;false;61778.9;[10000-60000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 48;DAF516_25CTDTD;DAF 516 DN25/32;Ductile iron;Thread;Without meas. point;350 psi;1 1/4" (32);false;false;61778.9;[10000-100000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 49;DAF516_25DTDTD;DAF 516 DN25/32;Ductile iron;Thread;Without meas. point;350 psi;1 1/4" (32);false;false;61778.9;[60000-150000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 50;DAF516_25AMDMD;DAF 516 DN25/32;Ductile iron;Thread male;Without meas. point;350 psi;1 1/4" (32);false;false;61778.9;[5000-30000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 51;DAF516_25BMDMD;DAF 516 DN25/32;Ductile iron;Thread male;Without meas. point;350 psi;1 1/4" (32);false;false;61778.9;[10000-60000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 52;DAF516_25CMDMD;DAF 516 DN25/32;Ductile iron;Thread male;Without meas. point;350 psi;1 1/4" (32);false;false;61778.9;[10000-100000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 53;DAF516_25DMDMD;DAF 516 DN25/32;Ductile iron;Thread male;Without meas. point;350 psi;1 1/4" (32);false;false;61778.9;[60000-150000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 54;DAF50_32A;DAF 50 DN32;Ductile iron;Flange;Standard;250 psi/350 psi;1 1/4" (32);false;false;20172.7;[10000-60000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 55;DAF50_32C;DAF 50 DN32;Ductile iron;Flange;Standard;250 psi/350 psi;1 1/4" (32);false;false;20172.7;[50000-150000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 56;DAF50_32E;DAF 50 DN32;Ductile iron;Flange;Standard;250 psi/350 psi;1 1/4" (32);false;false;20172.7;[130000-250000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 57;DAF516_25AIDOD;DAF 516 DN25/32;Ductile iron;Flange;Without meas. point;350 psi;1 1/4" (32);false;false;61778.9;[5000-30000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 58;DAF516_25BIDOD;DAF 516 DN25/32;Ductile iron;Flange;Without meas. point;350 psi;1 1/4" (32);false;false;61778.9;[10000-60000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 59;DAF516_25CIDOD;DAF 516 DN25/32;Ductile iron;Flange;Without meas. point;350 psi;1 1/4" (32);false;false;61778.9;[10000-100000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 60;DAF516_25DIDOD;DAF 516 DN25/32;Ductile iron;Flange;Without meas. point;350 psi;1 1/4" (32);false;false;61778.9;[60000-150000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 61;DAF516_25AAIDAOD;DAF 516 DN25/32;Ductile iron;ANSI Flange;Without meas. point;350 psi;1 1/4" (32);false;false;61778.9;[5000-30000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 62;DAF516_25BAIDAOD;DAF 516 DN25/32;Ductile iron;ANSI Flange;Without meas. point;350 psi;1 1/4" (32);false;false;61778.9;[10000-60000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 63;DAF516_25CAIDAOD;DAF 516 DN25/32;Ductile iron;ANSI Flange;Without meas. point;350 psi;1 1/4" (32);false;false;61778.9;[10000-100000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 64;DAF516_25DAIDAOD;DAF 516 DN25/32;Ductile iron;ANSI Flange;Without meas. point;350 psi;1 1/4" (32);false;false;61778.9;[60000-150000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 65;DAF516_25AWDWD;DAF 516 DN25/32;Ductile iron;Welding;Without meas. point;350 psi;1 1/4" (32);false;false;61778.9;[5000-30000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 66;DAF516_25BWDWD;DAF 516 DN25/32;Ductile iron;Welding;Without meas. point;350 psi;1 1/4" (32);false;false;61778.9;[10000-60000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 67;DAF516_25CWDWD;DAF 516 DN25/32;Ductile iron;Welding;Without meas. point;350 psi;1 1/4" (32);false;false;61778.9;[10000-100000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 68;DAF516_25DWDWD;DAF 516 DN25/32;Ductile iron;Welding;Without meas. point;350 psi;1 1/4" (32);false;false;61778.9;[60000-150000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 69;DAF516_25ATCTC;DAF 516 DN25/32;Ductile iron;Thread;Without meas. point;350 psi;1" (25);false;false;61778.9;[5000-30000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 70;DAF516_25BTCTC;DAF 516 DN25/32;Ductile iron;Thread;Without meas. point;350 psi;1" (25);false;false;61778.9;[10000-60000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 71;DAF516_25CTCTC;DAF 516 DN25/32;Ductile iron;Thread;Without meas. point;350 psi;1" (25);false;false;61778.9;[10000-100000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 72;DAF516_25DTCTC;DAF 516 DN25/32;Ductile iron;Thread;Without meas. point;350 psi;1" (25);false;false;61778.9;[60000-150000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 73;DAF516_25AMCMC;DAF 516 DN25/32;Ductile iron;Thread male;Without meas. point;350 psi;1" (25);false;false;61778.9;[5000-30000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 74;DAF516_25BMCMC;DAF 516 DN25/32;Ductile iron;Thread male;Without meas. point;350 psi;1" (25);false;false;61778.9;[10000-60000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 75;DAF516_25CMCMC;DAF 516 DN25/32;Ductile iron;Thread male;Without meas. point;350 psi;1" (25);false;false;61778.9;[10000-100000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 76;DAF516_25DMCMC;DAF 516 DN25/32;Ductile iron;Thread male;Without meas. point;350 psi;1" (25);false;false;61778.9;[60000-150000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 77;DAF516_25AICOC;DAF 516 DN25/32;Ductile iron;Flange;Without meas. point;350 psi;1" (25);false;false;61778.9;[5000-30000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 78;DAF516_25BICOC;DAF 516 DN25/32;Ductile iron;Flange;Without meas. point;350 psi;1" (25);false;false;61778.9;[10000-60000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 79;DAF516_25CICOC;DAF 516 DN25/32;Ductile iron;Flange;Without meas. point;350 psi;1" (25);false;false;61778.9;[10000-100000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 80;DAF516_25DICOC;DAF 516 DN25/32;Ductile iron;Flange;Without meas. point;350 psi;1" (25);false;false;61778.9;[60000-150000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 81;DAF516_25AAICAOC;DAF 516 DN25/32;Ductile iron;ANSI Flange;Without meas. point;350 psi;1" (25);false;false;61778.9;[5000-30000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 82;DAF516_25BAICAOC;DAF 516 DN25/32;Ductile iron;ANSI Flange;Without meas. point;350 psi;1" (25);false;false;61778.9;[10000-60000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 83;DAF516_25CAICAOC;DAF 516 DN25/32;Ductile iron;ANSI Flange;Without meas. point;350 psi;1" (25);false;false;61778.9;[10000-100000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 84;DAF516_25DAICAOC;DAF 516 DN25/32;Ductile iron;ANSI Flange;Without meas. point;350 psi;1" (25);false;false;61778.9;[60000-150000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 85;DAF516_25AWCWC;DAF 516 DN25/32;Ductile iron;Welding;Without meas. point;350 psi;1" (25);false;false;61778.9;[5000-30000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 86;DAF516_25BWCWC;DAF 516 DN25/32;Ductile iron;Welding;Without meas. point;350 psi;1" (25);false;false;61778.9;[10000-60000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 87;DAF516_25CWCWC;DAF 516 DN25/32;Ductile iron;Welding;Without meas. point;350 psi;1" (25);false;false;61778.9;[10000-100000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+Result number = 88;DAF516_25DWCWC;DAF 516 DN25/32;Ductile iron;Welding;Without meas. point;350 psi;1" (25);false;false;61778.9;[60000-150000];false;1.6e+06;-10/150;2" (50);277.259;1.20872
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 4
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00266666
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Secondary
+EndInputs
+
+StartOutputs
+Result number = 0;STAP50B_20-80;STAP 2";Ametal(tm);NPT thread;Standard;250 psi;2" (50);false;false;14942.5;[20000-80000];false;250000;-20/120;2" (50);277.259;1.20872
+Result number = 1;DA516_40APTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);false;false;9884.62;[5000-30000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 2;DA516_40BPTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);false;false;9884.62;[10000-60000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 3;DA516_40CPTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);false;false;9884.62;[10000-100000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 4;DA516_40DPTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);false;false;9884.62;[60000-150000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 5;DA516_25APTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);false;false;61778.9;[5000-30000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 6;DA516_25BPTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);false;false;61778.9;[10000-60000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 7;DA516_25CPTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);false;false;61778.9;[10000-100000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 8;DA516_25DPTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);false;false;61778.9;[60000-150000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 9;DA516_25APTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);false;false;61778.9;[5000-30000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 10;DA516_25BPTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);false;false;61778.9;[10000-60000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 11;DA516_25CPTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);false;false;61778.9;[10000-100000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 12;DA516_25DPTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);false;false;61778.9;[60000-150000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 13;DA516_40APTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);false;false;9884.62;[5000-30000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 14;DA516_40BPTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);false;false;9884.62;[10000-60000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 15;DA516_40CPTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);false;false;9884.62;[10000-100000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 16;DA516_40DPTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);false;false;9884.62;[60000-150000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 5
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00266666
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = true
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;STAP50B_20-80;STAP 2";Ametal(tm);NPT thread;Standard;250 psi;2" (50);true;false;14942.5;[20000-80000];false;250000;-20/120;2" (50);277.259;1.20872
+Result number = 1;DA516_40APTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);true;false;9884.62;[5000-30000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 2;DA516_40BPTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);true;false;9884.62;[10000-60000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 3;DA516_40CPTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);true;false;9884.62;[10000-100000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 4;DA516_40DPTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);true;false;9884.62;[60000-150000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 5;DA516_25APTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);true;false;61778.9;[5000-30000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 6;DA516_25BPTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);true;false;61778.9;[10000-60000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 7;DA516_25CPTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);true;false;61778.9;[10000-100000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 8;DA516_25DPTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);true;false;61778.9;[60000-150000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 9;DA516_25APTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);true;false;61778.9;[5000-30000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 10;DA516_25BPTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);true;false;61778.9;[10000-60000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 11;DA516_25CPTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);true;false;61778.9;[10000-100000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 12;DA516_25DPTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);true;false;61778.9;[60000-150000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 13;DA516_40APTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);true;false;9884.62;[5000-30000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 14;DA516_40BPTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);true;false;9884.62;[10000-60000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 15;DA516_40CPTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);true;false;9884.62;[10000-100000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 16;DA516_40DPTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);true;false;9884.62;[60000-150000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 6
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00266666
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = true
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = ControlValve
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;STAP50B_20-80;STAP 2";Ametal(tm);NPT thread;Standard;250 psi;2" (50);true;false;14942.5;[20000-80000];false;250000;-20/120;2" (50);277.259;1.20872
+Result number = 1;DA516_40APTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);true;false;9884.62;[5000-30000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 2;DA516_40BPTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);true;false;9884.62;[10000-60000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 3;DA516_40CPTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);true;false;9884.62;[10000-100000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 4;DA516_40DPTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);true;false;9884.62;[60000-150000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 5;DA516_25APTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);true;false;61778.9;[5000-30000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 6;DA516_25BPTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);true;false;61778.9;[10000-60000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 7;DA516_25CPTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);true;false;61778.9;[10000-100000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 8;DA516_25DPTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);true;false;61778.9;[60000-150000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 9;DA516_25APTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);true;false;61778.9;[5000-30000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 10;DA516_25BPTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);true;false;61778.9;[10000-60000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 11;DA516_25CPTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);true;false;61778.9;[10000-100000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 12;DA516_25DPTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);true;false;61778.9;[60000-150000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 13;DA516_40APTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);true;false;9884.62;[5000-30000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 14;DA516_40BPTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);true;false;9884.62;[10000-60000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 15;DA516_40CPTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);true;false;9884.62;[10000-100000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 16;DA516_40DPTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);true;false;9884.62;[60000-150000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 7
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00266666
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+GroupDpBranchOrKvChecked = true
+DpMaxChecked = false
+DpBranch = 2241411015.125
+DpMax = 0
+Kv = 40
+DpStabilizedOn = ControlValve
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;STAP50B_20-80;STAP 2";Ametal(tm);NPT thread;Standard;250 psi;2" (50);false;false;14942.5;[20000-80000];false;250000;-20/120;2" (50);277.259;1.20872
+Result number = 1;DA516_40APTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);false;false;9884.62;[5000-30000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 2;DA516_40BPTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);false;false;9884.62;[10000-60000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 3;DA516_40CPTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);false;false;9884.62;[10000-100000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 4;DA516_40DPTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);false;false;9884.62;[60000-150000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 5;DA516_25APTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);false;false;61778.9;[5000-30000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 6;DA516_25BPTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);false;false;61778.9;[10000-60000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 7;DA516_25CPTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);false;false;61778.9;[10000-100000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 8;DA516_25DPTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);false;false;61778.9;[60000-150000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 9;DA516_25APTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);false;false;61778.9;[5000-30000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 10;DA516_25BPTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);false;false;61778.9;[10000-60000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 11;DA516_25CPTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);false;false;61778.9;[10000-100000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 12;DA516_25DPTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);false;false;61778.9;[60000-150000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 13;DA516_40APTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);false;false;9884.62;[5000-30000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 14;DA516_40BPTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);false;false;9884.62;[10000-60000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 15;DA516_40CPTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);false;false;9884.62;[10000-100000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 16;DA516_40DPTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);false;false;9884.62;[60000-150000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 8
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00266666
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+GroupDpBranchOrKvChecked = true
+DpMaxChecked = false
+DpBranch = 7000
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;STAP50B_20-80;STAP 2";Ametal(tm);NPT thread;Standard;250 psi;2" (50);false;false;14942.5;[20000-80000];false;250000;-20/120;2" (50);277.259;1.20872
+Result number = 1;DA516_40APTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);false;false;9884.62;[5000-30000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 2;DA516_40BPTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);false;false;9884.62;[10000-60000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 3;DA516_40CPTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);false;false;9884.62;[10000-100000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 4;DA516_40DPTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);false;false;9884.62;[60000-150000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 5;DA516_25APTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);false;false;61778.9;[5000-30000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 6;DA516_25BPTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);false;false;61778.9;[10000-60000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 7;DA516_25CPTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);false;false;61778.9;[10000-100000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 8;DA516_25DPTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);false;false;61778.9;[60000-150000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 9;DA516_25APTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);false;false;61778.9;[5000-30000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 10;DA516_25BPTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);false;false;61778.9;[10000-60000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 11;DA516_25CPTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);false;false;61778.9;[10000-100000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 12;DA516_25DPTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);false;false;61778.9;[60000-150000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 13;DA516_40APTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);false;false;9884.62;[5000-30000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 14;DA516_40BPTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);false;false;9884.62;[10000-60000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 15;DA516_40CPTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);false;false;9884.62;[10000-100000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 16;DA516_40DPTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);false;false;9884.62;[60000-150000];false;1.6e+06;-10/120;2" (50);277.259;1.20872
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 9
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00266666
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+GroupDpBranchOrKvChecked = true
+DpMaxChecked = true
+DpBranch = 7000
+DpMax = 10000
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;STAP50B_20-80;STAP 2";Ametal(tm);NPT thread;Standard;250 psi;2" (50);false;false;14942.5;[20000-80000];true;250000;-20/120;2" (50);277.259;1.20872
+Result number = 1;DA516_40APTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);false;false;9884.62;[5000-30000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 2;DA516_40BPTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);false;false;9884.62;[10000-60000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 3;DA516_40CPTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);false;false;9884.62;[10000-100000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 4;DA516_40DPTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);false;false;9884.62;[60000-150000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 5;DA516_25APTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);false;false;61778.9;[5000-30000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 6;DA516_25BPTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);false;false;61778.9;[10000-60000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 7;DA516_25CPTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);false;false;61778.9;[10000-100000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 8;DA516_25DPTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);false;false;61778.9;[60000-150000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 9;DA516_25APTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);false;false;61778.9;[5000-30000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 10;DA516_25BPTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);false;false;61778.9;[10000-60000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 11;DA516_25CPTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);false;false;61778.9;[10000-100000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 12;DA516_25DPTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);false;false;61778.9;[60000-150000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 13;DA516_40APTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);false;false;9884.62;[5000-30000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 14;DA516_40BPTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);false;false;9884.62;[10000-60000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 15;DA516_40CPTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);false;false;9884.62;[10000-100000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 16;DA516_40DPTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);false;false;9884.62;[60000-150000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 10
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00266666
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = true
+GroupDpBranchOrKvChecked = true
+DpMaxChecked = true
+DpBranch = 5000
+DpMax = 6000
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;STAP50B_20-80;STAP 2";Ametal(tm);NPT thread;Standard;250 psi;2" (50);true;false;14942.5;[20000-80000];true;250000;-20/120;2" (50);277.259;1.20872
+Result number = 1;DA516_40APTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);true;false;9884.62;[5000-30000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 2;DA516_40BPTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);true;false;9884.62;[10000-60000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 3;DA516_40CPTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);true;false;9884.62;[10000-100000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 4;DA516_40DPTAIEAOE;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);true;false;9884.62;[60000-150000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 5;DA516_25APTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);true;false;61778.9;[5000-30000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 6;DA516_25BPTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);true;false;61778.9;[10000-60000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 7;DA516_25CPTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);true;false;61778.9;[10000-100000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 8;DA516_25DPTAIDAOD;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);true;false;61778.9;[60000-150000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 9;DA516_25APTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);true;false;61778.9;[5000-30000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 10;DA516_25BPTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);true;false;61778.9;[10000-60000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 11;DA516_25CPTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);true;false;61778.9;[10000-100000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 12;DA516_25DPTAICAOC;DA 516 DN25/32;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);true;false;61778.9;[60000-150000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 13;DA516_40APTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);true;false;9884.62;[5000-30000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 14;DA516_40BPTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);true;false;9884.62;[10000-60000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 15;DA516_40CPTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);true;false;9884.62;[10000-100000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+Result number = 16;DA516_40DPTAIFAOF;DA 516 DN40/50;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);true;false;9884.62;[60000-150000];true;1.6e+06;-10/120;2" (50);277.259;1.20872
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 11
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00026666
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = true
+GroupDpBranchOrKvChecked = true
+DpMaxChecked = true
+DpBranch = 5000
+DpMax = 6000
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;STAP20B_10-60;STAP 3/4";Ametal(tm);NPT thread;Standard;250 psi;3/4" (20);true;false;9256.77;[10000-60000];true;250000;-20/120;3/4" (20);323.164;0.727714
+Result number = 1;STAP15B_10-60;STAP 1/2";Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);true;false;45386.5;[10000-60000];true;250000;-20/120;3/4" (20);323.164;0.727714
+Result number = 2;DA516_15APTAIBAOB;DA 516 DN15/20;Ductile iron;ANSI Flange;PT 90;350 psi;3/4" (20);true;false;5559.85;[5000-30000];true;1.6e+06;-10/120;3/4" (20);323.164;0.727714
+Result number = 3;DA516_15BPTAIBAOB;DA 516 DN15/20;Ductile iron;ANSI Flange;PT 90;350 psi;3/4" (20);true;false;5559.85;[10000-60000];true;1.6e+06;-10/120;3/4" (20);323.164;0.727714
+Result number = 4;DA516_15CPTAIBAOB;DA 516 DN15/20;Ductile iron;ANSI Flange;PT 90;350 psi;3/4" (20);true;false;5559.85;[10000-100000];true;1.6e+06;-10/120;3/4" (20);323.164;0.727714
+Result number = 5;DA516_15DPTAIBAOB;DA 516 DN15/20;Ductile iron;ANSI Flange;PT 90;350 psi;3/4" (20);true;false;5559.85;[60000-150000];true;1.6e+06;-10/120;3/4" (20);323.164;0.727714
+Result number = 6;DA516_15APTAIAAOA;DA 516 DN15/20;Ductile iron;ANSI Flange;PT 90;350 psi;1/2" (15);true;false;5559.85;[5000-30000];true;1.6e+06;-10/120;3/4" (20);323.164;0.727714
+Result number = 7;DA516_15BPTAIAAOA;DA 516 DN15/20;Ductile iron;ANSI Flange;PT 90;350 psi;1/2" (15);true;false;5559.85;[10000-60000];true;1.6e+06;-10/120;3/4" (20);323.164;0.727714
+Result number = 8;DA516_15CPTAIAAOA;DA 516 DN15/20;Ductile iron;ANSI Flange;PT 90;350 psi;1/2" (15);true;false;5559.85;[10000-100000];true;1.6e+06;-10/120;3/4" (20);323.164;0.727714
+Result number = 9;DA516_15DPTAIAAOA;DA 516 DN15/20;Ductile iron;ANSI Flange;PT 90;350 psi;1/2" (15);true;false;5559.85;[60000-150000];true;1.6e+06;-10/120;3/4" (20);323.164;0.727714
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+

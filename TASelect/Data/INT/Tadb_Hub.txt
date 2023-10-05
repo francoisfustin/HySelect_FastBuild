@@ -1,0 +1,1236 @@
+////////////////////////////////////////////////////////////////
+//
+//		TaHubdb.txt : Complement to Tadb.txt containing
+//					 TA-H.U.B. definitions
+//
+////////////////////////////////////////////////////////////////
+
+new:CTable(HUBTYPE_TAB\1) -> LIST_TAB
+{
+	"Hub partner types"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CTable(HUBCONNECT_TAB\1) -> LIST_TAB
+{
+	"Hub external connection"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CTable(HUBVALV_TAB\1) -> ROOT_TABLE
+{
+	"TA-HUB supply and return valves"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CTable(HUBSUPRET_TAB\1) -> ROOT_TABLE
+{
+	"TA-HUB supply-return pairs"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CTable(HUBSTAVALV_TAB\1) -> ROOT_TABLE
+{
+	"TA-HUB station supply/return valves"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CTable(STASUPRET_TAB\1) -> ROOT_TABLE
+{
+	"TA-HUB station supply-return pairs"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CTable(HUBACTUATOR_TAB\1) -> ROOT_TABLE
+{
+	"TA-HUB Actuator table"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+///////////////////////////////////////////////////////////////////
+//
+//		Table HUBTYPE_TAB : ordered enumeration of the Hub
+//
+///////////////////////////////////////////////////////////////////
+
+new:CDB_StringID(HUBRVTYPE_BV\1) ->HUBTYPE_TAB
+{
+	{
+		"IDS_HUBRVTYPE_BV"
+	}
+	1
+	RVTYPE_BV
+}
+
+new:CDB_StringID(HUBRVTYPE_VV\1) ->HUBTYPE_TAB
+{
+	{
+		"IDS_HUBRVTYPE_VV"
+	}
+	2
+	RVTYPE_VV
+}
+
+new:CDB_StringID(HUBDPCTYPE_STD\1) ->HUBTYPE_TAB
+{
+	{
+		"IDS_HUBDPCTYPE_STD"
+	}
+	3
+	DPCTYPE_STD
+}
+
+new:CDB_StringID(HUBSHUTOFFTYPE\1) ->HUBTYPE_TAB
+{
+	{
+		"IDS_HUBSHUTOFFONLY"
+	}
+	4
+	SHUTTYPE_BALL
+}
+
+///////////////////////////////////////////////////////////////////
+//
+//		Table HUBCONN_TAB : enumeration of Hub connection
+//
+//	new:CDB_MultiStringExt(HCON_X)->HUBCONN_TAB
+//	{
+//		#eHubPartner			"y"
+//		#eConnectName			"IDS_HUBSTATION_CONNECTEXTPIPE"
+//		#eTAISConnType			"TAIS_CONN_TYPE"
+//		#eConnOrder				"1"
+//	}
+///////////////////////////////////////////////////////////////////
+
+new:CDB_MultiStringExt(CONN_EXTPIPE)->HUBCONNECT_TAB
+{
+	#eHubPartner	"n"
+	#eConnectName	"IDS_CONN_EXTENSIONPIPE"
+	#eTAISConnType	"EXTENSION"
+	#eConnOrder		"1"
+}
+
+new:CDB_MultiStringExt(CONN_INTERTHRD)->HUBCONNECT_TAB
+{
+	#eHubPartner	"n"
+	#eConnectName	"IDS_CONN_INTERTHRD"
+	#eTAISConnType	"INTERNAL"
+	#eConnOrder		"2"
+}
+
+new:CDB_MultiStringExt(CONN_ISO7_114F)->HUBCONNECT_TAB
+{
+	#eHubPartner	"y"
+	#eConnectName	"IDS_CONN_ISO7_11/4F"
+	#eTAISConnType	"ISO7_1_1/4_F"
+	#eConnOrder		"1"
+}
+
+new:CDB_MultiStringExt(CONN_ISO7_1F)->HUBCONNECT_TAB
+{
+	#eHubPartner	"y"
+	#eConnectName	"IDS_CONN_ISO7_1F"
+	#eTAISConnType	"ISO7_1_F"
+	#eConnOrder		"2"
+}
+
+///////////////////////////////////////////////////////////////////
+//
+//		Addition to Table REGVALV_TAB with regulating valves
+//		used in TA-H.U.B.
+//
+///////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////
+//
+//		!!!!!!!!!!!!!!!!! Pay Attention !!!!!!!!!!!!!!!!!
+//		All Hub Balancing valves with bayonet connection have
+//		CAT_TA-HUB corresponding to the TA HUB doc file. It is used
+//		when right click on the TA HUB and choose Get Full Cat Sheet
+//		So don't use another CAT or find a new solution
+//		It is used on the "void CRightViewSelProd::OnSselpfltGetfullinfo()"
+//		function.
+//		!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//
+///////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////
+// *** HUB Balancing valves ***
+///////////////////////////////
+
+new:CDB_RegulatingValve(STAD15_HUBBV\1) -> REGVALV_TAB
+{
+	{
+		{
+			{
+				{
+					0
+					1
+					0
+					1
+					101			// HubStation
+					0
+					0               								// Sort integer (Allow to show a group of articles in the order defined with this variable).
+				}
+				2.0e+6 \ 2.0e+6
+				NO_ID
+				120.0
+				-20.0
+			}
+			""
+			"STAD 15/14"
+			RVTYPE_BV
+			FAM_STAD
+			VERS_NODRAIN
+			1
+			""
+			"PX_STAD25A_BV"
+			NO_ID
+			#ePartOfaSetNo
+			NO_ID												// Table ID where are sets if exist for the current product.
+			0.0
+			#eProduct                       			// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+			NO_ID                           			// Identifier of the series of the accessory (mainly used in DlgDirSel)
+			0                               			// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+			NO_ID                           			// Identifier of the accessory type if #eBoth 
+			NO_ID										// Identifier of the accessory family if #eBoth
+		}
+		BDY_AMETAL
+		DN_15
+		CONN_BAYONET
+		NO_ID
+		NO_ID
+		"STAD"
+		"15/14"
+		"1/2N"
+		1
+		"3A"
+		0.0
+		#eMeasPointInlet | #eMeasPointOutlet
+		#eMeasDataDp | #eMeasDataFlow | #eMeasDataDpAvail
+		NO_ID											// Identifier of the inlet size ID
+		NO_ID											// Identifier of the outlet size ID
+	}
+	C_STAD015
+}
+
+new:CDB_RegulatingValve(STAD20_HUBBV) -> REGVALV_TAB
+{	Inherited(STAD15_HUBBV)
+	{
+		CDB_Product::Name			=	"STAD 20"
+		CDB_TAProduct::SizeID		=	DN_20
+		CDB_TAProduct::CBISize		=	"20"
+		CDB_TAProduct::CBISizeInch	=	"3/4"
+		CDB_RegulatingValve::CharactID	=	C_STAD020
+	}
+}
+
+new:CDB_RegulatingValve(STAD25_HUBBV) -> REGVALV_TAB
+{	Inherited(STAD15_HUBBV)
+	{
+		CDB_Thing::FreeInt1			=	011			// Hub
+		CDB_Product::Name			=	"STAD 25"
+		CDB_TAProduct::SizeID		=	DN_25
+		CDB_TAProduct::CBISize		=	"25"
+		CDB_TAProduct::CBISizeInch	=	"1"
+		CDB_RegulatingValve::CharactID	=	C_STAD025
+	}
+}
+new:CDB_RegulatingValve(STAD32_HUBBV) -> REGVALV_TAB
+{	Inherited(STAD15_HUBBV)
+	{
+		CDB_Thing::FreeInt1			=	011		// Hub
+		CDB_Product::Name			=	"STAD 32"
+		CDB_TAProduct::SizeID		=	DN_32
+		CDB_TAProduct::CBISize		=	"32"
+		CDB_TAProduct::CBISizeInch	=	"1_1/4"
+		CDB_RegulatingValve::CharactID	=	C_STAD032
+	}
+}
+
+/////////////////////////////
+// *** HUB Venturi Valves ***
+/////////////////////////////
+
+new:CDB_VenturiValve(STAV15ULF_HUBVV\1) -> REGVALV_TAB
+{
+	{
+		{
+			{
+				{
+					0
+					1
+					0
+					1
+					101			// HubStation
+					0
+					0               								// Sort integer (Allow to show a group of articles in the order defined with this variable).
+				}
+				2.0e+6 \ 2.0e+6
+				NO_ID
+				120.0
+				-20.0
+			}
+			""
+			"STAV 15 ULF"
+			RVTYPE_VV
+			FAM_STAV
+			VERS_STD
+			1
+			""
+			"TA_VV"
+			NO_ID
+			#ePartOfaSetNo
+			NO_ID												// Table ID where are sets if exist for the current product.
+			0.0
+			#eProduct                       			// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+			NO_ID                           			// Identifier of the series of the accessory (mainly used in DlgDirSel)
+			0                               			// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+			NO_ID                           			// Identifier of the accessory type if #eBoth 
+			NO_ID										// Identifier of the accessory family if #eBoth
+		}
+		BDY_AMETAL
+		DN_15
+		CONN_BAYONET
+		NO_ID
+		NO_ID
+		"STAV"
+		"15ULF"
+		"1/2ULF"
+		1
+		"3D"
+		0.0
+		#eMeasPointInlet | #eMeasPointMeasStatOut
+		#eMeasDataDpSignal | #eMeasDataFlow
+		NO_ID											// Identifier of the inlet size ID
+		NO_ID											// Identifier of the outlet size ID
+	}
+	C_VTRI15ULF
+	C_STAV15ULF
+}
+
+new:CDB_VenturiValve(STAV15LF_HUBVV) -> REGVALV_TAB
+{	Inherited(STAV15ULF_HUBVV)
+	{
+		CDB_Product::Name			=	"STAV 15 LF"
+		CDB_TAProduct::CBISize		=	"15LF"
+		CDB_TAProduct::CBISizeInch	=	"1/2LF"
+		CDB_VenturiValve::VenturiCharID	=	C_VTRI15LF
+		CDB_VenturiValve::VvCurveID		=	C_STAV15LF
+	}
+}
+
+new:CDB_VenturiValve(STAV15_HUBVV) -> REGVALV_TAB
+{	Inherited(STAV15ULF_HUBVV)
+	{
+		CDB_Product::Name			=	"STAV 15"
+		CDB_TAProduct::CBISize		=	"15"
+		CDB_TAProduct::CBISizeInch	=	"1/2"
+		CDB_VenturiValve::VenturiCharID	=	C_VTRI15
+		CDB_VenturiValve::VvCurveID		=	C_STAV15
+	}
+}
+
+new:CDB_VenturiValve(STAV20_HUBVV) -> REGVALV_TAB
+{	Inherited(STAV15ULF_HUBVV)
+	{
+		CDB_Product::Name			=	"STAV 20"
+		CDB_TAProduct::SizeID		=	DN_20
+		CDB_TAProduct::CBISize		=	"20"
+		CDB_TAProduct::CBISizeInch	=	"3/4"
+		CDB_VenturiValve::VenturiCharID	=	C_VTRI20
+		CDB_VenturiValve::VvCurveID		=	C_STAV20
+	}
+}
+
+new:CDB_VenturiValve(STAV25_HUBVV) -> REGVALV_TAB
+{	Inherited(STAV15ULF_HUBVV)
+	{
+		CDB_Thing::FreeInt1			=	11
+		CDB_Product::Name			=	"STAV 25"
+		CDB_TAProduct::SizeID		=	DN_25
+		CDB_TAProduct::CBISize		=	"25"
+		CDB_TAProduct::CBISizeInch	=	"1"
+		CDB_VenturiValve::VenturiCharID	=	C_VTRI25
+		CDB_VenturiValve::VvCurveID		=	C_STAV25
+	}
+}
+
+new:CDB_VenturiValve(STAV32_HUBVV) -> REGVALV_TAB
+{	Inherited(STAV15ULF_HUBVV)
+	{
+		CDB_Thing::FreeInt1			=	11
+		CDB_Product::Name			=	"STAV 32"
+		CDB_TAProduct::SizeID		=	DN_32
+		CDB_TAProduct::CBISize		=	"32"
+		CDB_TAProduct::CBISizeInch	=	"1_1/4"
+		CDB_VenturiValve::VenturiCharID	=	C_VTRI32
+		CDB_VenturiValve::VvCurveID		=	C_STAV32
+	}
+}
+
+///////////////////
+// *** HUB TBV  ***
+///////////////////
+
+new:CDB_RegulatingValve(TBV15_HUBTV\1) -> REGVALV_TAB
+{
+	{
+		{
+			{
+				{
+					0
+					1
+					0
+					1
+					101			// HubStation
+					0
+					0               								// Sort integer (Allow to show a group of articles in the order defined with this variable).
+				}
+				1.6e+6 \ 1.6e+6
+				NO_ID
+				120.0
+				-20.0
+			}
+			""
+			"TBV 15"
+			RVTYPE_TBV
+			FAM_TBV
+			VERS_NODRAIN
+			1
+			""
+			"PX_TBV20NF_TBV"
+			NO_ID
+			#ePartOfaSetNo
+			NO_ID												// Table ID where are sets if exist for the current product.
+			0.0
+			#eProduct                       			// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+			NO_ID                           			// Identifier of the series of the accessory (mainly used in DlgDirSel)
+			0                               			// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+			NO_ID                           			// Identifier of the accessory type if #eBoth 
+			NO_ID										// Identifier of the accessory family if #eBoth
+		}
+		BDY_AMETAL
+		DN_15
+		CONN_BAYONET
+		NO_ID
+		NO_ID
+		"TBV"
+		"15"
+		"1/2"
+		1
+		"3A"
+		3.0e+4
+		#eMeasPointInlet | #eMeasPointOutlet
+		#eMeasDataDp | #eMeasDataFlow | #eMeasDataDpAvail
+		NO_ID											// Identifier of the inlet size ID
+		NO_ID											// Identifier of the outlet size ID
+	}
+	C_TBV15
+}
+
+new:CDB_RegulatingValve(TBV20_HUBTV) -> REGVALV_TAB
+{	Inherited(TBV15_HUBTV)
+	{
+		CDB_Product::Name			=	"TBV 20"
+		CDB_TAProduct::SizeID		=	DN_20
+		CDB_TAProduct::CBISize		=	"20"
+		CDB_TAProduct::CBISizeInch	=	"3/4"
+		CDB_RegulatingValve::CharactID	=	C_TBV20
+	}
+}
+
+/////////////////
+// *** TBV-C ****
+/////////////////
+
+new:CDB_ControlValve(TBV-C15LF_HUBTV) -> REGVALV_TAB
+{	Inherited(TBV-C15LFA_TV)
+	{
+		CDB_Thing::FreeInt1 = 101
+		CDB_Product::Reference	=	""
+		CDB_TAProduct::ConnectID	=	CONN_BAYONET
+		CDB_ControlValve::ActuatorGroupID = ACTGR_HUB_TSE
+	}
+}
+
+new:CDB_ControlValve(TBV-C15NF_HUBTV) -> REGVALV_TAB
+{	Inherited(TBV-C15NFA_TV)
+	{
+		CDB_Thing::FreeInt1 = 101
+		CDB_Product::Reference	=	""
+		CDB_TAProduct::ConnectID	=	CONN_BAYONET
+		CDB_ControlValve::ActuatorGroupID = ACTGR_HUB_TSE
+	}
+}
+
+new:CDB_ControlValve(TBV-C20NF_HUBTV) -> REGVALV_TAB
+{	Inherited(TBV-C20NFA_TV)
+	{
+		CDB_Thing::FreeInt1 = 101
+		CDB_Product::Reference	=	""
+		CDB_TAProduct::ConnectID	=	CONN_BAYONET
+		CDB_ControlValve::ActuatorGroupID = ACTGR_HUB_TSE
+	}
+}
+
+/////////////////
+// *** TBV-CM ****
+/////////////////
+
+new:CDB_ControlValve(TBV-CM15LF_HBTV) -> REGVALV_TAB
+{	Inherited(TBV-CM15LFB_TV)
+	{
+		CDB_Thing::FreeInt1 = 101
+		CDB_Product::Reference	=	""
+		CDB_TAProduct::ConnectID	=	CONN_BAYONET
+		CDB_ControlValve::ActuatorGroupID = ACTGR_HUB_TSE-M
+	}
+}
+
+new:CDB_ControlValve(TBV-CM15NF_HBTV) -> REGVALV_TAB
+{	Inherited(TBV-CM15NFB_TV)
+	{
+		CDB_Thing::FreeInt1 = 101
+		CDB_Product::Reference	=	""
+		CDB_TAProduct::ConnectID	=	CONN_BAYONET
+		CDB_ControlValve::ActuatorGroupID = ACTGR_HUB_TSE-M
+	}
+}
+
+new:CDB_ControlValve(TBV-CM20NF_HBTV) -> REGVALV_TAB
+{	Inherited(TBV-CM20NFB_TV)
+	{
+		CDB_Thing::FreeInt1 = 101
+		CDB_Product::Reference	=	""
+		CDB_TAProduct::ConnectID	=	CONN_BAYONET
+		CDB_ControlValve::ActuatorGroupID = ACTGR_HUB_TSE-M
+	}
+}
+
+///////////////////////////////////////////////////////////////////
+//
+//		Addition to Table DPCONTR_TAB with Dp controllers
+//		used in TA-H.U.B.
+//
+///////////////////////////////////////////////////////////////////
+
+/////////////////////////////
+// *** HUB Dp controllers ***
+/////////////////////////////
+
+new:CDB_DpController(STAP25_HUB10-60) -> DPCONTR_TAB
+{
+	{
+		{
+			{
+				{
+					0
+					1
+					0
+					1
+					10
+					0
+					0               								// Sort integer (Allow to show a group of articles in the order defined with this variable).
+				}
+				1.6e+6 \ 1.6e+6
+				NO_ID
+				120.0
+				-20.0
+			}
+			""
+			"STAP 25"
+			DPCTYPE_STD
+			FAM_STAP
+			VERS_STD
+			1
+			""
+			"PX_STAP25_10-60"
+			NO_ID
+			#ePartOfaSetNo
+			NO_ID												// Table ID where are sets if exist for the current product.
+			0.0
+			#eProduct                       			// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+			NO_ID                           			// Identifier of the series of the accessory (mainly used in DlgDirSel)
+			0                               			// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+			NO_ID                           			// Identifier of the accessory type if #eBoth 
+			NO_ID										// Identifier of the accessory family if #eBoth
+		}
+		BDY_AMETAL
+		DN_25
+		CONN_BAYONET
+		NO_ID
+		NO_ID
+		""
+		""
+		""
+		0
+		""
+		2.5e+5
+		#eMeasPointInlet | #eMeasPointP+
+		#eMeasDataDpStab
+		NO_ID											// Identifier of the inlet size ID
+		NO_ID											// Identifier of the outlet size ID
+	}
+	C_STAP25_10-60
+	#eDpCLoc_DownStream
+}
+
+/////////////////
+// *** 10-40 ****
+/////////////////
+new:CDB_DpController(STAP32_HUB10-40) -> DPCONTR_TAB
+{	Inherited(STAP25_HUB10-60)
+	{
+		CDB_Product::Name			=	"STAP 32"
+		CDB_TAProduct::SizeID		=	DN_32
+		CDB_DpController::CharactID	=	C_STAP32_10-40
+	}
+}
+
+/////////////////
+// *** 20-80 ****
+/////////////////
+new:CDB_DpController(STAP32_HUB20-80) -> DPCONTR_TAB
+{	Inherited(STAP25_HUB10-60)
+	{
+		CDB_Product::Name			=	"STAP 32"
+		CDB_TAProduct::SizeID		=	DN_32
+		CDB_DpController::CharactID	=	C_STAP32_20-80
+	}
+}
+
+///////////////////////////////////////////////////////////////////
+//
+//	Image constants link to the Dll
+//
+///////////////////////////////////////////////////////////////////
+
+##eImgInlet_ISI_ISI_25		 	=1000
+##eImgInlet_ISI_ISI_32		 	=1010
+##eImgInlet_ISI_STAD_25		 	=1020
+##eImgInlet_ISI_STAD_32		 	=1030
+##eImgInlet_ISI_STAV_25		 	=1040
+##eImgInlet_ISI_STAV_32		 	=1050
+##eImgInlet_STADprim_STAP_25	=1060
+##eImgInlet_STADsec_STAP_25	 	=1061
+##eImgInlet_STADprim_STAP_32	=1070
+##eImgInlet_STADsec_STAP_32	 	=1071
+##eImgStation_PLUG			 	=1100
+##eImgStation_STAD15			=1110
+##eImgStation_STAD15_Ext		=1111
+##eImgStation_STAD20			=1120
+##eImgStation_STAD20_Ext		=1121
+##eImgStation_STAV15			=1130
+##eImgStation_STAV15_Ext		=1131
+##eImgStation_STAV20			=1140
+##eImgStation_STAV20_Ext		=1141
+##eImgStation_TBVC15			=1150
+##eImgStation_TBVC15_Ext		=1151
+##eImgStation_TBVC15_TSE		=1152
+##eImgStation_TBVC15_TSE_Ext	=1153
+##eImgStation_TBVC15_TSEM		=1154
+##eImgStation_TBVC15_TSEM_Ext	=1155
+##eImgStation_TBVC20			=1160
+##eImgStation_TBVC20_Ext		=1161
+##eImgStation_TBVC20_TSE		=1162
+##eImgStation_TBVC20_TSE_Ext	=1163
+##eImgStation_TBVC20_TSEM		=1164
+##eImgStation_TBVC20_TSEM_Ext	=1165
+##eImgStation_TBV15			 	=1170
+##eImgStation_TBV15_Ext		 	=1171
+##eImgStation_TBV20			 	=1180
+##eImgStation_TBV20_Ext		 	=1181
+##eImgEnd						=1300
+
+///////////////////////////////////////////////////////////////////
+//
+//		Table HUBVALV_TAB : enumeration of Hub supply valves
+//
+//	new:CDB_HubValv(HSV_X)->HUBVALV_TAB
+//	{
+//		type supply/return
+//		"Name"
+//		ValveID		 								(TA900 == NO_ID)
+//		"TAIS_HUB_PARTNER_SUPPLY" or "..._RETURN"	(STAD, TA900...)
+//		"TAIS_HUB_PARTNER_SIZE"						(DN25, DN32...)
+//		"N/A"
+//		Image identificator
+//	}
+///////////////////////////////////////////////////////////////////
+## eHubSupply		=1
+## eHubReturn		=2
+
+////////////////
+// Supply Side
+////////////////
+
+new:CDB_HubValv(HSV_STAD_25)->HUBVALV_TAB
+{
+	#eHubSupply
+	"IDS_HUBVALVSTAD_25"
+	STAD25_HUBBV
+	"STAD"
+	"DN25"
+	"N/A"
+	#eImgInlet_ISI_STAD_25
+}
+
+new:CDB_HubValv(HSV_STAD_32)->HUBVALV_TAB
+{
+	#eHubSupply
+	"IDS_HUBVALVSTAD_32"
+	STAD32_HUBBV
+	"STAD"
+	"DN32"
+	"N/A"
+	#eImgInlet_ISI_STAD_32
+}
+
+new:CDB_HubValv(HSV_TA900_25)->HUBVALV_TAB
+{
+	#eHubSupply
+	"IDS_HUBVALVTA900_25"
+	TA900_25A
+	"TA900"
+	"DN25"
+	"N/A"
+	#eImgInlet_ISI_ISI_25
+}
+
+new:CDB_HubValv(HSV_TA900_32)->HUBVALV_TAB
+{
+	#eHubSupply
+	"IDS_HUBVALVTA900_32"
+	TA900_32A
+	"TA900"
+	"DN32"
+	"N/A"
+	#eImgInlet_ISI_ISI_32
+}
+
+////////////////
+// Return Side
+////////////////
+
+new:CDB_HubValv(HRV_TA900_25)->HUBVALV_TAB
+{
+	#eHubReturn
+	"IDS_HUBVALVTA900_25"
+	TA900_25A
+	"TA900"
+	"DN25"
+	"N/A"
+	#eImgInlet_ISI_ISI_25
+}
+
+new:CDB_HubValv(HRV_TA900_32)->HUBVALV_TAB
+{
+	#eHubReturn
+	"IDS_HUBVALVTA900_32"
+	TA900_32A
+	"TA900"
+	"DN32"
+	"N/A"
+	#eImgInlet_ISI_ISI_32
+}
+
+new:CDB_HubValv(HRV_STAD_25)->HUBVALV_TAB
+{
+	#eHubReturn
+	"IDS_HUBVALVSTAD_25"
+	STAD25_HUBBV
+	"STAD"
+	"DN25"
+	"N/A"
+	#eImgInlet_ISI_STAD_25
+}
+
+new:CDB_HubValv(HRV_STAD_32)->HUBVALV_TAB
+{
+	#eHubReturn
+	"IDS_HUBVALVSTAD_32"
+	STAD32_HUBBV
+	"STAD"
+	"DN32"
+	"N/A"
+	#eImgInlet_ISI_STAD_32
+}
+
+new:CDB_HubValv(HRV_STAV_25)->HUBVALV_TAB
+{
+	#eHubReturn
+	"IDS_HUBVALVSTAV_25"
+	STAV25_HUBVV
+	"STAV"
+	"DN25"
+	"N/A"
+	#eImgInlet_ISI_STAV_25
+}
+
+new:CDB_HubValv(HRV_STAV_32)->HUBVALV_TAB
+{
+	#eHubReturn
+	"IDS_HUBVALVSTAV_32"
+	STAV32_HUBVV
+	"STAV"
+	"DN32"
+	"N/A"
+	#eImgInlet_ISI_STAV_32
+}
+
+new:CDB_HubValv(HRVSTAP25_1060)->HUBVALV_TAB
+{
+	#eHubReturn
+	"IDS_HUBVALVSTAP_25"
+	STAP25_HUB10-60
+	"STAP"
+	"DN25"
+	"10-60"
+	#eImgInlet_STADprim_STAP_25					//Primary by default, Secondary #eImgInlet_STADsec_STAP_25
+}
+
+new:CDB_HubValv(HRVSTAP32_1040)->HUBVALV_TAB
+{
+	#eHubReturn
+	"IDS_HUBVALVSTAP_32"
+	STAP32_HUB10-40
+	"STAP"
+	"DN32"
+	"10-40"
+	#eImgInlet_STADprim_STAP_32					//Primary by default, Secondary #eImgInlet_STADsec_STAP_32
+}
+
+new:CDB_HubValv(HRVSTAP32_2080)->HUBVALV_TAB
+{
+	#eHubReturn
+	"IDS_HUBVALVSTAP_32"
+	STAP32_HUB20-80
+	"STAP"
+	"DN32"
+	"20-80"
+	#eImgInlet_STADprim_STAP_32					//Primary by default, Secondary #eImgInlet_STADsec_STAP_32
+}
+
+///////////////////////////////////////////////////////////////////
+//
+//		Table HUBSUPRET_TAB : enumeration of Hub supply return pairs
+//
+//	new:CDB_HubSupRetLnk(HSR_X)->HUBSUPRET_TAB
+//	{
+//		ID TA Hub partner valves type
+//		"TAIS_HUB_PARTNER_SUPPLY"		(STAD; TA900...)
+//		"TAIS_HUB_PARTNER_RETURN"		(STAD; STAP; STAV...)
+//	}
+///////////////////////////////////////////////////////////////////
+
+new:CDB_HubSupRetLnk(HSR_TA900-TA900)->HUBSUPRET_TAB
+{
+	SHUTTYPE_BALL
+	"TA900"
+	"TA900"
+}
+
+new:CDB_HubSupRetLnk(HSR_TA900-STAD)->HUBSUPRET_TAB
+{
+	RVTYPE_BV
+	"TA900"
+	"STAD"
+}
+
+new:CDB_HubSupRetLnk(HSR_TA900-STAV)->HUBSUPRET_TAB
+{
+	RVTYPE_VV
+	"TA900"
+	"STAV"
+}
+
+new:CDB_HubSupRetLnk(HSR_STAD-STAP)->HUBSUPRET_TAB
+{
+	DPCTYPE_STD
+	"STAD"
+	"STAP"
+}
+
+///////////////////////////////////////////////////////////////////
+//
+//		Table HUBSTAVALV_TAB : enumeration of Hub station supply valves
+//
+//	new:CDB_HubStaValv(HSV_X)->HUBSTAVALV_TAB
+//	{
+//		Supply/Return
+//		"Name"
+//		ID of valve 						(TA400==NO_ID)
+//		"TAIS_HUB_SUPPLY/RETURN"			(PLUG; TA400...)
+//		"TAIS_HUB_SIZE"						(DN15...)
+//		ID on Hub supply actuator (table?)	(can be NO_ID)
+//		Image identificator
+//	}
+///////////////////////////////////////////////////////////////////
+
+////////////////
+// Supply Side
+////////////////
+
+new:CDB_HubStaValv(SSV_PLUG)->HUBSTAVALV_TAB
+{
+	#eHubSupply
+	"IDS_PLUG"
+	NO_ID
+	"PLUG"
+	"-"
+	NO_ID
+	#eImgStation_PLUG
+}
+
+new:CDB_HubStaValv(SSV_TA400_15)->HUBSTAVALV_TAB
+{
+	#eHubSupply
+	"IDS_HUBVALVTA400"
+	TA400_15A
+	"TA400"
+	"DN15"
+	NO_ID
+	#eImgStation_PLUG
+}
+
+////////////////
+// Return Side
+////////////////
+
+new:CDB_HubStaValv(SRV_PLUG)->HUBSTAVALV_TAB
+{
+	#eHubReturn
+	"IDS_PLUG"
+	NO_ID
+	"PLUG"
+	"-"
+	NO_ID
+	#eImgStation_PLUG
+}
+
+new:CDB_HubStaValv(SRV_STAD_15)->HUBSTAVALV_TAB
+{
+	#eHubReturn
+	"IDS_HUBVALVSTAD_15"
+	STAD15_HUBBV
+	"STAD"
+	"DN15"
+	NO_ID
+	#eImgStation_STAD15		// Without extension, with extension #eImgStation_STAD15_Ext
+}
+
+new:CDB_HubStaValv(SRV_STAD_20)->HUBSTAVALV_TAB
+{
+	#eHubReturn
+	"IDS_HUBVALVSTAD_20"
+	STAD20_HUBBV
+	"STAD"
+	"DN20"
+	NO_ID
+	#eImgStation_STAD20		// Without extension, with extension #eImgStation_STAD20_Ext
+}
+
+new:CDB_HubStaValv(SRV_STAV_15ULF)->HUBSTAVALV_TAB
+{
+	#eHubReturn
+	"IDS_HUBVALVSTAV_15ULF"
+	STAV15ULF_HUBVV
+	"STAV_ULF"
+	"DN15"
+	NO_ID
+	#eImgStation_STAV15		// Without extension, with extension #eImgStation_STAV15_Ext
+}
+
+new:CDB_HubStaValv(SRV_STAV_15LF)->HUBSTAVALV_TAB
+{
+	#eHubReturn
+	"IDS_HUBVALVSTAV_15LF"
+	STAV15LF_HUBVV
+	"STAV_LF"
+	"DN15"
+	NO_ID
+	#eImgStation_STAV15		// Without extension, with extension #eImgStation_STAV15_Ext
+}
+
+new:CDB_HubStaValv(SRV_STAV_15)->HUBSTAVALV_TAB
+{
+	#eHubReturn
+	"IDS_HUBVALVSTAV_15"
+	STAV15_HUBVV
+	"STAV"
+	"DN15"
+	NO_ID
+	#eImgStation_STAV15		// Without extension, with extension #eImgStation_STAV15_Ext
+}
+
+new:CDB_HubStaValv(SRV_STAV_20)->HUBSTAVALV_TAB
+{
+	#eHubReturn
+	"IDS_HUBVALVSTAV_20"
+	STAV20_HUBVV
+	"STAV"
+	"DN20"
+	NO_ID
+	#eImgStation_STAV20		// Without extension, with extension #eImgStation_STAV20_Ext
+}
+
+*new:CDB_HubStaValv(SRV_TBV_15)->HUBSTAVALV_TAB
+{
+	#eHubReturn
+	"IDS_HUBVALVTBV_15"
+	TBV15_HUBTV
+	"TBV"
+	"DN15"
+	NO_ID
+	#eImgStation_TBV15		// Without extension, with extension #eImgStation_TBV15_Ext
+}
+
+*new:CDB_HubStaValv(SRV_TBV_20)->HUBSTAVALV_TAB
+{
+	#eHubReturn
+	"IDS_HUBVALVTBV_20"
+	TBV20_HUBTV
+	"TBV"
+	"DN20"
+	NO_ID
+	#eImgStation_TBV20		// Without extension, with extension #eImgStation_TBV20_Ext
+}
+
+new:CDB_HubStaValv(SRV_TBVC_15LF)->HUBSTAVALV_TAB
+{
+	#eHubReturn
+	"IDS_HUBVALVTBVC_15LF"
+	TBV-C15LF_HUBTV
+	"TBV-C_LF"
+	"DN15"
+	NO_ID
+	#eImgStation_TBVC15		// Without extension, and actuator with extension #eImgStation_TBVC15_Ext, with actuator #eImgStation_TBVC15_TSE(M), with both #eImgStation_TBVC15_TSE(M)_Ext
+}
+
+new:CDB_HubStaValv(SRV_TBVC_15)->HUBSTAVALV_TAB
+{
+	#eHubReturn
+	"IDS_HUBVALVTBVC_15"
+	TBV-C15NF_HUBTV
+	"TBV-C"
+	"DN15"
+	NO_ID
+	#eImgStation_TBVC15		// Without extension, and actuator with extension #eImgStation_TBVC15_Ext, with actuator #eImgStation_TBVC15_TSE(M), with both #eImgStation_TBVC15_TSE(M)_Ext
+}
+
+new:CDB_HubStaValv(SRV_TBVC_20)->HUBSTAVALV_TAB
+{
+	#eHubReturn
+	"IDS_HUBVALVTBVC_20"
+	TBV-C20NF_HUBTV
+	"TBV-C"
+	"DN20"
+	NO_ID
+	#eImgStation_TBVC20		// Without extension, and actuator with extension #eImgStation_TBVC20_Ext, with actuator #eImgStation_TBVC20_TSE(M), with both #eImgStation_TBVC20_TSE(M)_Ext
+}
+
+new:CDB_HubStaValv(SRV_TBVCM_15LF)->HUBSTAVALV_TAB
+{
+	#eHubReturn
+	"IDS_HUBVALVTBVCM_15LF"
+	TBV-CM15LF_HBTV
+	"TBV-CM_LF"
+	"DN15"
+	NO_ID
+	#eImgStation_TBVC15		// Without extension, and actuator with extension #eImgStation_TBVC15_Ext, with actuator #eImgStation_TBVC15_TSE(M), with both #eImgStation_TBVC15_TSE(M)_Ext
+}
+
+new:CDB_HubStaValv(SRV_TBVCM_15)->HUBSTAVALV_TAB
+{
+	#eHubReturn
+	"IDS_HUBVALVTBVCM_15"
+	TBV-CM15NF_HBTV
+	"TBV-CM"
+	"DN15"
+	NO_ID
+	#eImgStation_TBVC15		// Without extension, and actuator with extension #eImgStation_TBVC15_Ext, with actuator #eImgStation_TBVC15_TSE(M), with both #eImgStation_TBVC15_TSE(M)_Ext
+}
+
+new:CDB_HubStaValv(SRV_TBVCM_20)->HUBSTAVALV_TAB
+{
+	#eHubReturn
+	"IDS_HUBVALVTBVCM_20"
+	TBV-CM20NF_HBTV
+	"TBV-CM"
+	"DN20"
+	NO_ID
+	#eImgStation_TBVC20		// Without extension, and actuator with extension #eImgStation_TBVC20_Ext, with actuator #eImgStation_TBVC20_TSE(M), with both #eImgStation_TBVC20_TSE(M)_Ext
+}
+
+///////////////////////////////////////////////////////////////////
+//
+//		Table STASUPRET_TAB : enumeration of Hub station supply return pairs
+//
+//	new:CDB_HubSupRetLnk(SSR_X)->STASUPRET_TAB
+//	{
+//		ID TA Hub station valves type
+//		"TAIS_SUPPLY_TYPE"		(STAD; TA900...)
+//		"TAIS_RETURN_TYPE"		(STAD; STAP; STAV...)
+//	}
+///////////////////////////////////////////////////////////////////
+
+new:CDB_HubSupRetLnk(TA400-STAD)->STASUPRET_TAB
+{
+	RVTYPE_BV
+	"TA400"
+	"STAD"
+}
+
+new:CDB_HubSupRetLnk(TA400-STAVULF)->STASUPRET_TAB
+{
+	RVTYPE_VV
+	"TA400"
+	"STAV_ULF"
+}
+
+new:CDB_HubSupRetLnk(TA400-STAVLF)->STASUPRET_TAB
+{
+	RVTYPE_VV
+	"TA400"
+	"STAV_LF"
+}
+
+new:CDB_HubSupRetLnk(TA400-STAV)->STASUPRET_TAB
+{
+	RVTYPE_VV
+	"TA400"
+	"STAV"
+}
+
+new:CDB_HubSupRetLnk(TA400-TBVC)->STASUPRET_TAB
+{
+	RVTYPE_BVC
+	"TA400"
+	"TBV-C"
+}
+
+new:CDB_HubSupRetLnk(TA400-TBVCM)->STASUPRET_TAB
+{
+	RVTYPE_BVC
+	"TA400"
+	"TBV-CM"
+}
+
+new:CDB_HubSupRetLnk(TA400-TBVCLF)->STASUPRET_TAB
+{
+	RVTYPE_BVC
+	"TA400"
+	"TBV-C_LF"
+}
+
+new:CDB_HubSupRetLnk(TA400-TBVCMLF)->STASUPRET_TAB
+{
+	RVTYPE_BVC
+	"TA400"
+	"TBV-CM_LF"
+}
+
+new:CDB_HubSupRetLnk(TA400-TBV)->STASUPRET_TAB
+{
+	RVTYPE_TBV
+	"TA400"
+	"TBV"
+}
+
+///////////////////////////////////////////////////////////////////
+//
+//	Table HUBACTUATOR_TAB :
+//
+//	new:CDB_StringID(ACTR_)->HUBACTUATOR_TAB
+//	{
+//		{
+//			""
+//		}
+//		1
+//		""
+//	}
+///////////////////////////////////////////////////////////////////
+
+new:CDB_StringID(ACTUATOR_NONE)->HUBACTUATOR_TAB
+{
+	{
+		""
+	}
+	0//NO_ACTUATOR
+	""
+}
+
+new:CDB_StringID(TSE_NC)->HUBACTUATOR_TAB
+{
+	{
+		"IDS_TSE_NC"
+	}
+	1//TSE_NC_24V_2m
+	ACTGR_HUB_TSE-NC
+}
+
+new:CDB_StringID(TSE_NO)->HUBACTUATOR_TAB
+{
+	{
+		"IDS_TSE_NO"
+	}
+	2//TSE_NO_24V_2m
+	ACTGR_HUB_TSE-NO
+}
+
+new:CDB_StringID(TSE_M)->HUBACTUATOR_TAB
+{
+	{
+		"IDS_TSE_M"
+	}
+	3//TSE-M_24V_2m
+	ACTGR_HUB_TSE-M
+}
+
+////////////////////////////////////////////////////////////////
+//
+//		Table ACTGROUP_TAB : Actuator groups
+//
+////////////////////////////////////////////////////////////////
+
+//!
+//!	WARNING in case of modification check function CDS_HmHubStation::PatchActr()
+//!
+new:CTable(ACTGR_HUB_TSE-NO) -> ACTGROUP_TAB	// WARNING: This ACTGROUP is reserved to TA-HUB.
+{												// DO NOT use it for anything else than TA-HUB.
+	"TSE-NO"
+	0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	TSE-NO-24-2
+}
+
+new:CTable(ACTGR_HUB_TSE-NC) -> ACTGROUP_TAB	// WARNING: This ACTGROUP is reserved to TA-HUB.
+{												// DO NOT use it for anything else than TA-HUB.
+	"TSE-NC"
+	0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	TSE-NC-24-2
+}
+
+new:CTable(ACTGR_HUB_TSE) -> ACTGROUP_TAB	// WARNING: This ACTGROUP is reserved to TA-HUB.
+{											// DO NOT use it for anything else than TA-HUB.
+	"TSE"
+	0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	TSE-NO-24-2
+	TSE-NC-24-2
+}
+
+new:CTable(ACTGR_HUB_TSE-M) -> ACTGROUP_TAB		// WARNING: This ACTGROUP is reserved to TA-HUB.
+{												// DO NOT use it for anything else than TA-HUB.
+	"TSE-M"
+	0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	TSE-M-24-2
+}
+
+////////////////////////////////////////////////////////////////
+//
+//		ROOT TABLE identification
+//
+////////////////////////////////////////////////////////////////
+
+ROOT_TABLE(ROOT_TABLE)

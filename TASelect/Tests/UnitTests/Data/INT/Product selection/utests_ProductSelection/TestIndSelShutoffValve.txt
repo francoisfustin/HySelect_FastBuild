@@ -1,0 +1,3694 @@
+#Start of test definition
+
+StartTechnicalParameters
+ApplicationType = 2
+AvailablePMPanels = 7
+BreakTankRequiredForWaterMakeUp = 1
+CVDefKvReynard = 1
+CVMaxDispDp = 200000
+CVMaxDpProp = 65000
+CVMinAuthCstFlow = 0.5
+CVMinAuthor = 0.25
+CVMinDpOnoff = 3000
+CVMinDpProp = 10000
+CVUseDpCPBand = 0
+CanChangePressureVolumeLimit = 0
+CurrencyID = CURRENCY_EUR
+DefaultCalculationNorm = PM_NORM_EN12828
+DefaultCoolingTps = 7
+DefaultFillTemperature = 15
+DefaultHeatingTps = 50
+DefaultISChangeOverCoolingSideAdditFamilyID = WATER_ADDIT
+DefaultISChangeOverCoolingSideAdditID = WATER
+DefaultISChangeOverCoolingSideDT = 6
+DefaultISChangeOverCoolingSidePcWeight = 0
+DefaultISChangeOverCoolingSideTps = 6
+DefaultISChangeOverHeatingSideAdditFamilyID = WATER_ADDIT
+DefaultISChangeOverHeatingSideAdditID = WATER
+DefaultISChangeOverHeatingSideDT = 20
+DefaultISChangeOverHeatingSidePcWeight = 0
+DefaultISChangeOverHeatingSideTps = 75
+DefaultISCoolingAdditFamilyID = WATER_ADDIT
+DefaultISCoolingAdditID = WATER
+DefaultISCoolingDT = 20
+DefaultISCoolingPcWeight = 0
+DefaultISCoolingTps = 60
+DefaultISHeatingAdditFamilyID = WATER_ADDIT
+DefaultISHeatingAdditID = WATER
+DefaultISHeatingDT = 5
+DefaultISHeatingPcWeight = 0
+DefaultISHeatingTps = 80
+DefaultISSolarAdditFamilyID = WATER_ADDIT
+DefaultISSolarAdditID = WATER
+DefaultISSolarDT = 20
+DefaultISSolarPcWeight = 0
+DefaultISSolarTps = 70
+DefaultMaxTempInCooling = 45
+DefaultMinTempInHeating = 5
+DefaultMinTempInSolar = 5
+DefaultPipeSerieID = STEEL_DIN2440
+DefaultPrjCoolingAdditID = WATER
+DefaultPrjCoolingDT = 5
+DefaultPrjCoolingPcWeight = 0
+DefaultPrjHeatingAdditID = WATER
+DefaultPrjHeatingDT = 5
+DefaultPrjHeatingPcWeight = 0
+DefaultSafetyPressureResponseValve = 300000
+DefaultSecondaryPumpHMin = 25000
+DefaultSmartCVLocation = 1
+DefaultStaticPressureOfWaterNetwork = 400000
+DefaultTAZ = 100
+DefaultWaterHardness = 1.78324958
+DefaultWaterMakeUpTemp = 15
+DegassingWaterReserveForVessel = 0.002
+DpCBCVDpcmin = 5000
+DpCBCVDplmin = 5000
+DpCHide = 0
+DpCHminFullyOpenMv = 0
+DpCMinDp = 5000
+DpCMvLocation = 0
+DpCMvWithSameSizeOnly = 0
+DpRefForBest6Way = 3000
+FixedOrificeMaxDp = 6000
+FixedOrificeMinDp = 2000
+FlowDeviationMinus = -0.1
+FlowDeviationPlus = 0.1
+FluidTempLimitEN12953 = 105
+InitialPressureMargin = 30000
+MaxNumberOfAdditionalVesselsInParallel = 4
+MaxNumberOfVentoInParallel = 2
+MaxSafetyValveInParallel = 3
+MaxSizeShift = 4
+MinPressureMargin = 20000
+PICvHide = 0
+PICvMinDp = 1000
+PSetupCompresso = 10000
+PSetupTransfero = 20000
+PipeMaxDp = 200
+PipeMaxVelocity = 2
+PipeMinDp = 10
+PipeMinVelocity = 0.3
+PipeTargetDp = 150
+PipeTargetVelocity = 1
+PipeTargetVelosityUsed = 0
+PressureVolumeLimit = 300000
+ProjectType = 1
+SafetyTempLimiterLimitEN12953 = 110
+SizeShiftAbove = 0
+SizeShiftBelow = -2
+SmartValveDpMaxForBestSuggestion = 20000
+TrvDefDpTotal = 10000
+TrvDefRoomTemperature = 20
+TrvDefSupplyTemperature = 80
+TrvMaxDp = 30000
+TrvMinDpRatio = 0.25
+UseDefaultFreezingPointAsMinTemperature = 1
+UseSimplyPst = 0
+UseVesselPressureVolumeLimit = 0
+ValveMaxDp = 200000
+ValveMin2Dp = 6000
+ValveMinDp = 3000
+VenturiMaxDp = 10000
+VenturiMinDp = 2000
+VesselSelectionRangePercentage = 0
+EndTechnicalParameters
+
+Test number = 0
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TABAV_25A;TA-BAV DN25;Dezincification resistant brass;Thread;With lever;25;25 (1");20.0653;-10/120;25 (1");116.19;0.478046
+Result number = 1;TA900_25C;TA 900 iSi DN25;Ametal(tm);Thread;With blue handle;16;25 (1");23.271;-20/90;25 (1");116.19;0.478046
+Result number = 2;TA900_25A;TA 900 iSi DN25;Ametal(tm);Thread;With red handle;16;25 (1");23.271;-20/120;25 (1");116.19;0.478046
+Result number = 3;TA500_25I;TA 500 Globo DN25;Gun metal;Thread;With lever;10;25 (1");27.3111;-10/120;25 (1");116.19;0.478046
+Result number = 4;GLOBOH_25AA;Globo H DN25;Gun metal;Thread;With drain 3/4";10;25 (1");157.312;-10/110;25 (1");116.19;0.478046
+Result number = 5;GLOBOH_25A;Globo H DN25;Gun metal;Thread;Standard;10;25 (1");157.312;-10/120;25 (1");116.19;0.478046
+Result number = 6;GLOBOS_25A;Globo S DN25;Gun metal;Thread;Standard;10;25 (1");157.312;0/150;25 (1");116.19;0.478046
+Result number = 7;GLOBOD_25A;Globo D DN25;Gun metal;Thread;Standard;10;25 (1");157.312;-10/120;25 (1");116.19;0.478046
+Result number = 8;GLOBOH_25B;Globo H DN25;Gun metal;Thread male/Thread;Standard;10;25 (1");157.312;-10/120;25 (1");116.19;0.478046
+Result number = 9;GLOBOH_25C;Globo H DN25;Gun metal;Viega press;Standard;10;25 (1");157.312;-10/110;25 (1");116.19;0.478046
+Result number = 10;GLOBOD_25B;Globo D DN25;Gun metal;Viega press;Standard;10;25 (1");157.312;-10/110;25 (1");116.19;0.478046
+Result number = 11;GLOBOP_25A;Globo P DN25;Gun metal;Thread/Flange;Standard;10;25 (1");157.312;-10/120;25 (1");116.19;0.478046
+Result number = 12;GLOBOP_25C;Globo P DN25;Gun metal;Viega press/Flange;Standard;10;25 (1");157.312;-10/110;25 (1");116.19;0.478046
+Result number = 13;GLOBOD_25D;Globo D DN25;Gun metal;Thread/Thread male;With drain-off;10;25 (1");157.312;-10/95;25 (1");116.19;0.478046
+Result number = 14;GLOBOD_25E;Globo D DN25;Gun metal;Viega press/Thread male;With drain-off;10;25 (1");157.312;-10/95;25 (1");116.19;0.478046
+Result number = 15;GLOBOP_25B;Globo P-S DN25;Gun metal;Thread/Flange;With gravity break;10;25 (1");1536.25;-10/90;25 (1");116.19;0.478046
+Result number = 16;GLOBOP_25D;Globo P-S DN25;Gun metal;Viega press/Flange;With gravity break;10;25 (1");1536.25;-10/90;25 (1");116.19;0.478046
+Result number = 17;TABAV_20A;TA-BAV DN20;Dezincification resistant brass;Thread;With lever;25;20 (3/4");58.489;-10/120;25 (1");116.19;0.478046
+Result number = 18;TA500_20I;TA 500 Globo DN20;Gun metal;Thread;With lever;10;20 (3/4");61.45;-10/120;25 (1");116.19;0.478046
+Result number = 19;TA900_20C;TA 900 iSi DN20;Ametal(tm);Thread;With blue handle;16;20 (3/4");109.244;-20/90;25 (1");116.19;0.478046
+Result number = 20;TA900_20A;TA 900 iSi DN20;Ametal(tm);Thread;With red handle;16;20 (3/4");109.244;-20/120;25 (1");116.19;0.478046
+Result number = 21;GLOBOH_20AA;Globo H DN20;Gun metal;Thread;With drain 3/4";10;20 (3/4");501.633;-10/110;25 (1");116.19;0.478046
+Result number = 22;GLOBOH_20A;Globo H DN20;Gun metal;Thread;Standard;10;20 (3/4");501.633;-10/120;25 (1");116.19;0.478046
+Result number = 23;GLOBOS_20A;Globo S DN20;Gun metal;Thread;Standard;10;20 (3/4");501.633;0/150;25 (1");116.19;0.478046
+Result number = 24;GLOBOD_20A;Globo D DN20;Gun metal;Thread;Standard;10;20 (3/4");501.633;-10/120;25 (1");116.19;0.478046
+Result number = 25;GLOBOH_20B;Globo H DN20;Gun metal;Thread male/Thread;Standard;10;20 (3/4");501.633;-10/120;25 (1");116.19;0.478046
+Result number = 26;GLOBOH_20C;Globo H DN20;Gun metal;Viega press;Standard;10;20 (3/4");501.633;-10/110;25 (1");116.19;0.478046
+Result number = 27;GLOBOD_20B;Globo D DN20;Gun metal;Viega press;Standard;10;20 (3/4");501.633;-10/110;25 (1");116.19;0.478046
+Result number = 28;GLOBOD_20E;Globo D DN20 (22mm);Gun metal;Thread/Thread male;With drain-off;10;20 (3/4");501.633;-10/95;25 (1");116.19;0.478046
+Result number = 29;GLOBOD_20F;Globo D DN20;Gun metal;Viega press/Thread male;With drain-off;10;20 (3/4");501.633;-10/95;25 (1");116.19;0.478046
+Result number = 30;TABAV_15A;TA-BAV DN15;Dezincification resistant brass;Thread;With lever;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 31;TABAV_15B;TA-BAV DN15;Dezincification resistant brass;Thread;With spindle extension;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 32;TABAV_20B;TA-BAV DN20;Dezincification resistant brass;Thread;With spindle extension;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 33;TABAV_25B;TA-BAV DN25;Dezincification resistant brass;Thread;With spindle extension;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 34;TABAV_32B;TA-BAV DN32;Dezincification resistant brass;Thread;With spindle extension;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 35;TABAV_40B;TA-BAV DN40;Dezincification resistant brass;Thread;With spindle extension;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 36;TABAV_50B;TA-BAV DN50;Dezincification resistant brass;Thread;With spindle extension;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 37;TABAV_15C;TA-BAV DN15;Dezincification resistant brass;Thread;With lockshield;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 38;TABAV_20C;TA-BAV DN20;Dezincification resistant brass;Thread;With lockshield;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 39;TABAV_25C;TA-BAV DN25;Dezincification resistant brass;Thread;With lockshield;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 40;TABAV_32C;TA-BAV DN32;Dezincification resistant brass;Thread;With lockshield;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 41;TABAV_40C;TA-BAV DN40;Dezincification resistant brass;Thread;With lockshield;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 42;TABAV_50C;TA-BAV DN50;Dezincification resistant brass;Thread;With lockshield;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 43;TABAV_15D;TA-BAV DN15;Dezincification resistant brass;Compression fitting;With lever;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 44;TABAV_20D;TA-BAV DN20;Dezincification resistant brass;Compression fitting;With lever;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 45;TABAV_25D;TA-BAV DN25;Dezincification resistant brass;Compression fitting;With lever;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 46;TABAV_32D;TA-BAV DN32;Dezincification resistant brass;Compression fitting;With lever;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 47;TABAV_40D;TA-BAV DN40;Dezincification resistant brass;Compression fitting;With lever;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 48;TABAV_50D;TA-BAV DN50;Dezincification resistant brass;Compression fitting;With lever;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 49;TABAV_15E;TA-BAV DN15;Dezincification resistant brass;Compression fitting;With spindle extension;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 50;TABAV_20E;TA-BAV DN20;Dezincification resistant brass;Compression fitting;With spindle extension;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 51;TABAV_25E;TA-BAV DN25;Dezincification resistant brass;Compression fitting;With spindle extension;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 52;TABAV_32E;TA-BAV DN32;Dezincification resistant brass;Compression fitting;With spindle extension;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 53;TABAV_40E;TA-BAV DN40;Dezincification resistant brass;Compression fitting;With spindle extension;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 54;TABAV_50E;TA-BAV DN50;Dezincification resistant brass;Compression fitting;With spindle extension;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 55;TABAV_15F;TA-BAV DN15;Dezincification resistant brass;Compression fitting;With lockshield;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 56;TABAV_20F;TA-BAV DN20;Dezincification resistant brass;Compression fitting;With lockshield;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 57;TABAV_25F;TA-BAV DN25;Dezincification resistant brass;Compression fitting;With lockshield;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 58;TABAV_32F;TA-BAV DN32;Dezincification resistant brass;Compression fitting;With lockshield;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 59;TABAV_40F;TA-BAV DN40;Dezincification resistant brass;Compression fitting;With lockshield;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 60;TABAV_50F;TA-BAV DN50;Dezincification resistant brass;Compression fitting;With lockshield;25;15 (1/2");340.208;-10/120;25 (1");116.19;0.478046
+Result number = 61;TA500_15I;TA 500 Globo DN15;Gun metal;Thread;With lever;10;15 (1/2");581.775;-10/120;25 (1");116.19;0.478046
+Result number = 62;TA900_15C;TA 900 iSi DN15;Ametal(tm);Thread;With blue handle;16;15 (1/2");682.778;-20/90;25 (1");116.19;0.478046
+Result number = 63;TA900_15A;TA 900 iSi DN15;Ametal(tm);Thread;With red handle;16;15 (1/2");682.778;-20/120;25 (1");116.19;0.478046
+Result number = 64;GLOBOH_15AA;Globo H DN15;Gun metal;Thread;With drain 3/4";10;15 (1/2");2731.11;-10/110;25 (1");116.19;0.478046
+Result number = 65;GLOBOH_15A;Globo H DN15;Gun metal;Thread;Standard;10;15 (1/2");2731.11;-10/120;25 (1");116.19;0.478046
+Result number = 66;GLOBOS_15A;Globo S DN15;Gun metal;Thread;Standard;10;15 (1/2");2731.11;0/150;25 (1");116.19;0.478046
+Result number = 67;GLOBOD_15A;Globo D DN15;Gun metal;Thread;Standard;10;15 (1/2");2731.11;-10/120;25 (1");116.19;0.478046
+Result number = 68;GLOBOH_15B;Globo H DN15;Gun metal;Thread male/Thread;Standard;10;15 (1/2");2731.11;-10/120;25 (1");116.19;0.478046
+Result number = 69;GLOBOH_15C;Globo H DN15;Gun metal;Viega press;Standard;10;15 (1/2");2731.11;-10/110;25 (1");116.19;0.478046
+Result number = 70;GLOBOD_15B;Globo D DN15;Gun metal;Viega press;Standard;10;15 (1/2");2731.11;-10/110;25 (1");116.19;0.478046
+Result number = 71;GLOBOD_15D;Globo D DN15;Gun metal;Thread/Thread male;With drain-off;10;15 (1/2");2731.11;-10/95;25 (1");116.19;0.478046
+Result number = 72;GLOBOD_15E;Globo D DN15;Gun metal;Viega press/Thread male;With drain-off;10;15 (1/2");2731.11;-10/95;25 (1");116.19;0.478046
+Result number = 73;TA400_15D;TA 400 DN15;Ametal(tm);Thread;Without handle;10;15 (1/2");4855.31;-20/95;25 (1");116.19;0.478046
+Result number = 74;TA400_15E;TA 400 DN15;Ametal(tm);Thread;With blue handle;10;15 (1/2");4855.31;-20/95;25 (1");116.19;0.478046
+Result number = 75;TA400_15H;TA 400 DN15;Ametal(tm);Thread male;Without handle;10;15 (1/2");4855.31;-20/95;25 (1");116.19;0.478046
+Result number = 76;TA400_15I;TA 400 DN15;Ametal(tm);Thread male;With blue handle;10;15 (1/2");4855.31;-20/95;25 (1");116.19;0.478046
+Result number = 77;TA400_15A;TA 400 DN15;Ametal(tm);Thread/Thread male;Without handle;10;15 (1/2");4855.31;-20/95;25 (1");116.19;0.478046
+Result number = 78;TA400_15B;TA 400 DN15;Ametal(tm);Thread/Thread male;With blue handle;10;15 (1/2");4855.31;-20/95;25 (1");116.19;0.478046
+Result number = 79;TA400_15C;TA 400 DN15;Ametal(tm);Thread/Thread male R (Plane nipple end);With black handle;10;15 (1/2");4855.31;-20/95;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 1
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_GLOBOH
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;GLOBOH_25AA;Globo H DN25;Gun metal;Thread;With drain 3/4";10;25 (1");157.312;-10/110;25 (1");116.19;0.478046
+Result number = 1;GLOBOH_25A;Globo H DN25;Gun metal;Thread;Standard;10;25 (1");157.312;-10/120;25 (1");116.19;0.478046
+Result number = 2;GLOBOH_25B;Globo H DN25;Gun metal;Thread male/Thread;Standard;10;25 (1");157.312;-10/120;25 (1");116.19;0.478046
+Result number = 3;GLOBOH_25C;Globo H DN25;Gun metal;Viega press;Standard;10;25 (1");157.312;-10/110;25 (1");116.19;0.478046
+Result number = 4;GLOBOH_20AA;Globo H DN20;Gun metal;Thread;With drain 3/4";10;20 (3/4");501.633;-10/110;25 (1");116.19;0.478046
+Result number = 5;GLOBOH_20A;Globo H DN20;Gun metal;Thread;Standard;10;20 (3/4");501.633;-10/120;25 (1");116.19;0.478046
+Result number = 6;GLOBOH_20B;Globo H DN20;Gun metal;Thread male/Thread;Standard;10;20 (3/4");501.633;-10/120;25 (1");116.19;0.478046
+Result number = 7;GLOBOH_20C;Globo H DN20;Gun metal;Viega press;Standard;10;20 (3/4");501.633;-10/110;25 (1");116.19;0.478046
+Result number = 8;GLOBOH_15AA;Globo H DN15;Gun metal;Thread;With drain 3/4";10;15 (1/2");2731.11;-10/110;25 (1");116.19;0.478046
+Result number = 9;GLOBOH_15A;Globo H DN15;Gun metal;Thread;Standard;10;15 (1/2");2731.11;-10/120;25 (1");116.19;0.478046
+Result number = 10;GLOBOH_15B;Globo H DN15;Gun metal;Thread male/Thread;Standard;10;15 (1/2");2731.11;-10/120;25 (1");116.19;0.478046
+Result number = 11;GLOBOH_15C;Globo H DN15;Gun metal;Viega press;Standard;10;15 (1/2");2731.11;-10/110;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 2
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_GLOBOH
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = 
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;GLOBOH_25AA;Globo H DN25;Gun metal;Thread;With drain 3/4";10;25 (1");157.312;-10/110;25 (1");116.19;0.478046
+Result number = 1;GLOBOH_25A;Globo H DN25;Gun metal;Thread;Standard;10;25 (1");157.312;-10/120;25 (1");116.19;0.478046
+Result number = 2;GLOBOH_20AA;Globo H DN20;Gun metal;Thread;With drain 3/4";10;20 (3/4");501.633;-10/110;25 (1");116.19;0.478046
+Result number = 3;GLOBOH_20A;Globo H DN20;Gun metal;Thread;Standard;10;20 (3/4");501.633;-10/120;25 (1");116.19;0.478046
+Result number = 4;GLOBOH_15AA;Globo H DN15;Gun metal;Thread;With drain 3/4";10;15 (1/2");2731.11;-10/110;25 (1");116.19;0.478046
+Result number = 5;GLOBOH_15A;Globo H DN15;Gun metal;Thread;Standard;10;15 (1/2");2731.11;-10/120;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 3
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_GLOBOH
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_DRAIN34
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;GLOBOH_25AA;Globo H DN25;Gun metal;Thread;With drain 3/4";10;25 (1");157.312;-10/110;25 (1");116.19;0.478046
+Result number = 1;GLOBOH_20AA;Globo H DN20;Gun metal;Thread;With drain 3/4";10;20 (3/4");501.633;-10/110;25 (1");116.19;0.478046
+Result number = 2;GLOBOH_15AA;Globo H DN15;Gun metal;Thread;With drain 3/4";10;15 (1/2");2731.11;-10/110;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 4
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_GLOBOH
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;GLOBOH_25A;Globo H DN25;Gun metal;Thread;Standard;10;25 (1");157.312;-10/120;25 (1");116.19;0.478046
+Result number = 1;GLOBOH_20A;Globo H DN20;Gun metal;Thread;Standard;10;20 (3/4");501.633;-10/120;25 (1");116.19;0.478046
+Result number = 2;GLOBOH_15A;Globo H DN15;Gun metal;Thread;Standard;10;15 (1/2");2731.11;-10/120;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 5
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_GLOBOH
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_THRM_THR
+ComboVersionID = VERS_STD
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;GLOBOH_25B;Globo H DN25;Gun metal;Thread male/Thread;Standard;10;25 (1");157.312;-10/120;25 (1");116.19;0.478046
+Result number = 1;GLOBOH_20B;Globo H DN20;Gun metal;Thread male/Thread;Standard;10;20 (3/4");501.633;-10/120;25 (1");116.19;0.478046
+Result number = 2;GLOBOH_15B;Globo H DN15;Gun metal;Thread male/Thread;Standard;10;15 (1/2");2731.11;-10/120;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 6
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_GLOBOH
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_VIEGAPRESS
+ComboVersionID = VERS_STD
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;GLOBOH_25C;Globo H DN25;Gun metal;Viega press;Standard;10;25 (1");157.312;-10/110;25 (1");116.19;0.478046
+Result number = 1;GLOBOH_20C;Globo H DN20;Gun metal;Viega press;Standard;10;20 (3/4");501.633;-10/110;25 (1");116.19;0.478046
+Result number = 2;GLOBOH_15C;Globo H DN15;Gun metal;Viega press;Standard;10;15 (1/2");2731.11;-10/110;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 7
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_GLOBOH
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_MAPRESS
+ComboVersionID = VERS_STD
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 8
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_GLOBOP
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;GLOBOP_25A;Globo P DN25;Gun metal;Thread/Flange;Standard;10;25 (1");157.312;-10/120;25 (1");116.19;0.478046
+Result number = 1;GLOBOP_25C;Globo P DN25;Gun metal;Viega press/Flange;Standard;10;25 (1");157.312;-10/110;25 (1");116.19;0.478046
+Result number = 2;GLOBOP_25B;Globo P-S DN25;Gun metal;Thread/Flange;With gravity break;10;25 (1");1536.25;-10/90;25 (1");116.19;0.478046
+Result number = 3;GLOBOP_25D;Globo P-S DN25;Gun metal;Viega press/Flange;With gravity break;10;25 (1");1536.25;-10/90;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 9
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_GLOBOP
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_THREAD_FLANGE
+ComboVersionID = 
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;GLOBOP_25A;Globo P DN25;Gun metal;Thread/Flange;Standard;10;25 (1");157.312;-10/120;25 (1");116.19;0.478046
+Result number = 1;GLOBOP_25B;Globo P-S DN25;Gun metal;Thread/Flange;With gravity break;10;25 (1");1536.25;-10/90;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 10
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_GLOBOP
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_THREAD_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;GLOBOP_25A;Globo P DN25;Gun metal;Thread/Flange;Standard;10;25 (1");157.312;-10/120;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 11
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_GLOBOP
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_THREAD_FLANGE
+ComboVersionID = VERS_GRAVITYBREAK
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;GLOBOP_25B;Globo P-S DN25;Gun metal;Thread/Flange;With gravity break;10;25 (1");1536.25;-10/90;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 12
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_GLOBOP
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_VIEGA_FLANGE
+ComboVersionID = 
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;GLOBOP_25C;Globo P DN25;Gun metal;Viega press/Flange;Standard;10;25 (1");157.312;-10/110;25 (1");116.19;0.478046
+Result number = 1;GLOBOP_25D;Globo P-S DN25;Gun metal;Viega press/Flange;With gravity break;10;25 (1");1536.25;-10/90;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 13
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_GLOBOP
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_VIEGA_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;GLOBOP_25C;Globo P DN25;Gun metal;Viega press/Flange;Standard;10;25 (1");157.312;-10/110;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 14
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_GLOBOP
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_VIEGA_FLANGE
+ComboVersionID = VERS_GRAVITYBREAK
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;GLOBOP_25D;Globo P-S DN25;Gun metal;Viega press/Flange;With gravity break;10;25 (1");1536.25;-10/90;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 15
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_GLOBOP
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_MAPRESS_FLANGE
+ComboVersionID = 
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 16
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_GLOBOP
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_MAPRESS_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 17
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_GLOBOP
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_MAPRESS_FLANGE
+ComboVersionID = VERS_GRAVITYBREAK
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 18
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_GLOBOS
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;GLOBOS_25A;Globo S DN25;Gun metal;Thread;Standard;10;25 (1");157.312;0/150;25 (1");116.19;0.478046
+Result number = 1;GLOBOS_20A;Globo S DN20;Gun metal;Thread;Standard;10;20 (3/4");501.633;0/150;25 (1");116.19;0.478046
+Result number = 2;GLOBOS_15A;Globo S DN15;Gun metal;Thread;Standard;10;15 (1/2");2731.11;0/150;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 19
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_GLOBOS
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;GLOBOS_25A;Globo S DN25;Gun metal;Thread;Standard;10;25 (1");157.312;0/150;25 (1");116.19;0.478046
+Result number = 1;GLOBOS_20A;Globo S DN20;Gun metal;Thread;Standard;10;20 (3/4");501.633;0/150;25 (1");116.19;0.478046
+Result number = 2;GLOBOS_15A;Globo S DN15;Gun metal;Thread;Standard;10;15 (1/2");2731.11;0/150;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 20
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_GLOBOS
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_THREAD_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 21
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_GLOBOD
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;GLOBOD_25A;Globo D DN25;Gun metal;Thread;Standard;10;25 (1");157.312;-10/120;25 (1");116.19;0.478046
+Result number = 1;GLOBOD_25B;Globo D DN25;Gun metal;Viega press;Standard;10;25 (1");157.312;-10/110;25 (1");116.19;0.478046
+Result number = 2;GLOBOD_25D;Globo D DN25;Gun metal;Thread/Thread male;With drain-off;10;25 (1");157.312;-10/95;25 (1");116.19;0.478046
+Result number = 3;GLOBOD_25E;Globo D DN25;Gun metal;Viega press/Thread male;With drain-off;10;25 (1");157.312;-10/95;25 (1");116.19;0.478046
+Result number = 4;GLOBOD_20A;Globo D DN20;Gun metal;Thread;Standard;10;20 (3/4");501.633;-10/120;25 (1");116.19;0.478046
+Result number = 5;GLOBOD_20B;Globo D DN20;Gun metal;Viega press;Standard;10;20 (3/4");501.633;-10/110;25 (1");116.19;0.478046
+Result number = 6;GLOBOD_20E;Globo D DN20 (22mm);Gun metal;Thread/Thread male;With drain-off;10;20 (3/4");501.633;-10/95;25 (1");116.19;0.478046
+Result number = 7;GLOBOD_20F;Globo D DN20;Gun metal;Viega press/Thread male;With drain-off;10;20 (3/4");501.633;-10/95;25 (1");116.19;0.478046
+Result number = 8;GLOBOD_15A;Globo D DN15;Gun metal;Thread;Standard;10;15 (1/2");2731.11;-10/120;25 (1");116.19;0.478046
+Result number = 9;GLOBOD_15B;Globo D DN15;Gun metal;Viega press;Standard;10;15 (1/2");2731.11;-10/110;25 (1");116.19;0.478046
+Result number = 10;GLOBOD_15D;Globo D DN15;Gun metal;Thread/Thread male;With drain-off;10;15 (1/2");2731.11;-10/95;25 (1");116.19;0.478046
+Result number = 11;GLOBOD_15E;Globo D DN15;Gun metal;Viega press/Thread male;With drain-off;10;15 (1/2");2731.11;-10/95;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 22
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_GLOBOD
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;GLOBOD_25A;Globo D DN25;Gun metal;Thread;Standard;10;25 (1");157.312;-10/120;25 (1");116.19;0.478046
+Result number = 1;GLOBOD_20A;Globo D DN20;Gun metal;Thread;Standard;10;20 (3/4");501.633;-10/120;25 (1");116.19;0.478046
+Result number = 2;GLOBOD_15A;Globo D DN15;Gun metal;Thread;Standard;10;15 (1/2");2731.11;-10/120;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 23
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_GLOBOD
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_VIEGAPRESS
+ComboVersionID = VERS_STD
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;GLOBOD_25B;Globo D DN25;Gun metal;Viega press;Standard;10;25 (1");157.312;-10/110;25 (1");116.19;0.478046
+Result number = 1;GLOBOD_20B;Globo D DN20;Gun metal;Viega press;Standard;10;20 (3/4");501.633;-10/110;25 (1");116.19;0.478046
+Result number = 2;GLOBOD_15B;Globo D DN15;Gun metal;Viega press;Standard;10;15 (1/2");2731.11;-10/110;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 24
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_GLOBOD
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_MAPRESS
+ComboVersionID = VERS_STD
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 25
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_GLOBOD
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_THR_THRM
+ComboVersionID = VERS_DRAINOFF
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;GLOBOD_25D;Globo D DN25;Gun metal;Thread/Thread male;With drain-off;10;25 (1");157.312;-10/95;25 (1");116.19;0.478046
+Result number = 1;GLOBOD_20E;Globo D DN20 (22mm);Gun metal;Thread/Thread male;With drain-off;10;20 (3/4");501.633;-10/95;25 (1");116.19;0.478046
+Result number = 2;GLOBOD_15D;Globo D DN15;Gun metal;Thread/Thread male;With drain-off;10;15 (1/2");2731.11;-10/95;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 26
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_GLOBOD
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_VIEGA_THRM
+ComboVersionID = VERS_DRAINOFF
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;GLOBOD_25E;Globo D DN25;Gun metal;Viega press/Thread male;With drain-off;10;25 (1");157.312;-10/95;25 (1");116.19;0.478046
+Result number = 1;GLOBOD_20F;Globo D DN20;Gun metal;Viega press/Thread male;With drain-off;10;20 (3/4");501.633;-10/95;25 (1");116.19;0.478046
+Result number = 2;GLOBOD_15E;Globo D DN15;Gun metal;Viega press/Thread male;With drain-off;10;15 (1/2");2731.11;-10/95;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 27
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TA400
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA400_15D;TA 400 DN15;Ametal(tm);Thread;Without handle;10;15 (1/2");4855.31;-20/95;25 (1");116.19;0.478046
+Result number = 1;TA400_15E;TA 400 DN15;Ametal(tm);Thread;With blue handle;10;15 (1/2");4855.31;-20/95;25 (1");116.19;0.478046
+Result number = 2;TA400_15A;TA 400 DN15;Ametal(tm);Thread/Thread male;Without handle;10;15 (1/2");4855.31;-20/95;25 (1");116.19;0.478046
+Result number = 3;TA400_15B;TA 400 DN15;Ametal(tm);Thread/Thread male;With blue handle;10;15 (1/2");4855.31;-20/95;25 (1");116.19;0.478046
+Result number = 4;TA400_15C;TA 400 DN15;Ametal(tm);Thread/Thread male R (Plane nipple end);With black handle;10;15 (1/2");4855.31;-20/95;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 28
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TA400
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = 
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA400_15D;TA 400 DN15;Ametal(tm);Thread;Without handle;10;15 (1/2");4855.31;-20/95;25 (1");116.19;0.478046
+Result number = 1;TA400_15E;TA 400 DN15;Ametal(tm);Thread;With blue handle;10;15 (1/2");4855.31;-20/95;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 29
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TA400
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_WOHANDLE
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA400_15D;TA 400 DN15;Ametal(tm);Thread;Without handle;10;15 (1/2");4855.31;-20/95;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 30
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TA400
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_BLUEHANDLE
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA400_15E;TA 400 DN15;Ametal(tm);Thread;With blue handle;10;15 (1/2");4855.31;-20/95;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 31
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TA400
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = 
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 32
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TA400
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_WOHANDLE
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 33
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TA400
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_BLUEHANDLE
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 34
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TA400
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THR_THRM
+ComboVersionID = 
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA400_15A;TA 400 DN15;Ametal(tm);Thread/Thread male;Without handle;10;15 (1/2");4855.31;-20/95;25 (1");116.19;0.478046
+Result number = 1;TA400_15B;TA 400 DN15;Ametal(tm);Thread/Thread male;With blue handle;10;15 (1/2");4855.31;-20/95;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 35
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TA400
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THR_THRM
+ComboVersionID = VERS_WOHANDLE
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA400_15A;TA 400 DN15;Ametal(tm);Thread/Thread male;Without handle;10;15 (1/2");4855.31;-20/95;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 36
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TA400
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THR_THRM
+ComboVersionID = VERS_BLUEHANDLE
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA400_15B;TA 400 DN15;Ametal(tm);Thread/Thread male;With blue handle;10;15 (1/2");4855.31;-20/95;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 37
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TA400
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THR_THRMRPE
+ComboVersionID = VERS_BLACKHANDLE
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA400_15C;TA 400 DN15;Ametal(tm);Thread/Thread male R (Plane nipple end);With black handle;10;15 (1/2");4855.31;-20/95;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 38
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TA400A
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = 
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA400_15H;TA 400 DN15;Ametal(tm);Thread male;Without handle;10;15 (1/2");4855.31;-20/95;25 (1");116.19;0.478046
+Result number = 1;TA400_15I;TA 400 DN15;Ametal(tm);Thread male;With blue handle;10;15 (1/2");4855.31;-20/95;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 39
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TA400A
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_WOHANDLE
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA400_15H;TA 400 DN15;Ametal(tm);Thread male;Without handle;10;15 (1/2");4855.31;-20/95;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 40
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TA400A
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_BLUEHANDLE
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA400_15I;TA 400 DN15;Ametal(tm);Thread male;With blue handle;10;15 (1/2");4855.31;-20/95;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 41
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TA500
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA500_25I;TA 500 Globo DN25;Gun metal;Thread;With lever;10;25 (1");27.3111;-10/120;25 (1");116.19;0.478046
+Result number = 1;TA500_20I;TA 500 Globo DN20;Gun metal;Thread;With lever;10;20 (3/4");61.45;-10/120;25 (1");116.19;0.478046
+Result number = 2;TA500_15I;TA 500 Globo DN15;Gun metal;Thread;With lever;10;15 (1/2");581.775;-10/120;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 42
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TA500
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = 
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA500_25I;TA 500 Globo DN25;Gun metal;Thread;With lever;10;25 (1");27.3111;-10/120;25 (1");116.19;0.478046
+Result number = 1;TA500_20I;TA 500 Globo DN20;Gun metal;Thread;With lever;10;20 (3/4");61.45;-10/120;25 (1");116.19;0.478046
+Result number = 2;TA500_15I;TA 500 Globo DN15;Gun metal;Thread;With lever;10;15 (1/2");581.775;-10/120;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 43
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TA500
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_WITHLEVER
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA500_25I;TA 500 Globo DN25;Gun metal;Thread;With lever;10;25 (1");27.3111;-10/120;25 (1");116.19;0.478046
+Result number = 1;TA500_20I;TA 500 Globo DN20;Gun metal;Thread;With lever;10;20 (3/4");61.45;-10/120;25 (1");116.19;0.478046
+Result number = 2;TA500_15I;TA 500 Globo DN15;Gun metal;Thread;With lever;10;15 (1/2");581.775;-10/120;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 44
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TA500
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_WITHSPINDLEEXT
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 45
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TA500
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_WITHREDUCUNIT
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 46
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TA500
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_FITREDHREDUNIT
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 47
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TA500
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_FITBLUEHREDUNIT
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 48
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TA500
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = 
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 49
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TA500
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_WITHLEVER
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 50
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TA500
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_WITHSPINDLEEXT
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 51
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TA500S
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_WITHLEVER
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 52
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TA900
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_REDHANDLE
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA900_15A;TA 900 iSi DN15;Ametal(tm);Thread;With red handle;16;15 (1/2");27.3111;-20/120;15 (1/2");83.9387;0.276311
+Result number = 1;TA900_10A;TA 900 iSi DN10;Ametal(tm);Thread;With red handle;16;10 (3/8");109.244;-20/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 53
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TA900U
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_BLUEHANDLE
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA900_15C;TA 900 iSi DN15;Ametal(tm);Thread;With blue handle;16;15 (1/2");27.3111;-20/90;15 (1/2");83.9387;0.276311
+Result number = 1;TA900_10C;TA 900 iSi DN10;Ametal(tm);Thread;With blue handle;16;10 (3/8");109.244;-20/90;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 54
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TABAV
+ComboMaterialID = BDY_DZR
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TABAV_15A;TA-BAV DN15;Dezincification resistant brass;Thread;With lever;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;TABAV_15B;TA-BAV DN15;Dezincification resistant brass;Thread;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 2;TABAV_20B;TA-BAV DN20;Dezincification resistant brass;Thread;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 3;TABAV_25B;TA-BAV DN25;Dezincification resistant brass;Thread;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 4;TABAV_32B;TA-BAV DN32;Dezincification resistant brass;Thread;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 5;TABAV_40B;TA-BAV DN40;Dezincification resistant brass;Thread;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 6;TABAV_50B;TA-BAV DN50;Dezincification resistant brass;Thread;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 7;TABAV_15C;TA-BAV DN15;Dezincification resistant brass;Thread;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 8;TABAV_20C;TA-BAV DN20;Dezincification resistant brass;Thread;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 9;TABAV_25C;TA-BAV DN25;Dezincification resistant brass;Thread;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 10;TABAV_32C;TA-BAV DN32;Dezincification resistant brass;Thread;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 11;TABAV_40C;TA-BAV DN40;Dezincification resistant brass;Thread;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 12;TABAV_50C;TA-BAV DN50;Dezincification resistant brass;Thread;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 13;TABAV_15D;TA-BAV DN15;Dezincification resistant brass;Compression fitting;With lever;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 14;TABAV_20D;TA-BAV DN20;Dezincification resistant brass;Compression fitting;With lever;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 15;TABAV_25D;TA-BAV DN25;Dezincification resistant brass;Compression fitting;With lever;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 16;TABAV_32D;TA-BAV DN32;Dezincification resistant brass;Compression fitting;With lever;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 17;TABAV_40D;TA-BAV DN40;Dezincification resistant brass;Compression fitting;With lever;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 18;TABAV_50D;TA-BAV DN50;Dezincification resistant brass;Compression fitting;With lever;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 19;TABAV_15E;TA-BAV DN15;Dezincification resistant brass;Compression fitting;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 20;TABAV_20E;TA-BAV DN20;Dezincification resistant brass;Compression fitting;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 21;TABAV_25E;TA-BAV DN25;Dezincification resistant brass;Compression fitting;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 22;TABAV_32E;TA-BAV DN32;Dezincification resistant brass;Compression fitting;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 23;TABAV_40E;TA-BAV DN40;Dezincification resistant brass;Compression fitting;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 24;TABAV_50E;TA-BAV DN50;Dezincification resistant brass;Compression fitting;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 25;TABAV_15F;TA-BAV DN15;Dezincification resistant brass;Compression fitting;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 26;TABAV_20F;TA-BAV DN20;Dezincification resistant brass;Compression fitting;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 27;TABAV_25F;TA-BAV DN25;Dezincification resistant brass;Compression fitting;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 28;TABAV_32F;TA-BAV DN32;Dezincification resistant brass;Compression fitting;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 29;TABAV_40F;TA-BAV DN40;Dezincification resistant brass;Compression fitting;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 30;TABAV_50F;TA-BAV DN50;Dezincification resistant brass;Compression fitting;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 55
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TABAV
+ComboMaterialID = BDY_DZR
+ComboConnectID = CONN_THREAD
+ComboVersionID = 
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TABAV_15A;TA-BAV DN15;Dezincification resistant brass;Thread;With lever;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;TABAV_15B;TA-BAV DN15;Dezincification resistant brass;Thread;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 2;TABAV_20B;TA-BAV DN20;Dezincification resistant brass;Thread;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 3;TABAV_25B;TA-BAV DN25;Dezincification resistant brass;Thread;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 4;TABAV_32B;TA-BAV DN32;Dezincification resistant brass;Thread;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 5;TABAV_40B;TA-BAV DN40;Dezincification resistant brass;Thread;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 6;TABAV_50B;TA-BAV DN50;Dezincification resistant brass;Thread;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 7;TABAV_15C;TA-BAV DN15;Dezincification resistant brass;Thread;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 8;TABAV_20C;TA-BAV DN20;Dezincification resistant brass;Thread;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 9;TABAV_25C;TA-BAV DN25;Dezincification resistant brass;Thread;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 10;TABAV_32C;TA-BAV DN32;Dezincification resistant brass;Thread;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 11;TABAV_40C;TA-BAV DN40;Dezincification resistant brass;Thread;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 12;TABAV_50C;TA-BAV DN50;Dezincification resistant brass;Thread;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 56
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TABAV
+ComboMaterialID = BDY_DZR
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_WITHLEVER
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TABAV_15A;TA-BAV DN15;Dezincification resistant brass;Thread;With lever;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 57
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TABAV
+ComboMaterialID = BDY_DZR
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_WITHSPINDLEEXT
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TABAV_15B;TA-BAV DN15;Dezincification resistant brass;Thread;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;TABAV_20B;TA-BAV DN20;Dezincification resistant brass;Thread;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 2;TABAV_25B;TA-BAV DN25;Dezincification resistant brass;Thread;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 3;TABAV_32B;TA-BAV DN32;Dezincification resistant brass;Thread;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 4;TABAV_40B;TA-BAV DN40;Dezincification resistant brass;Thread;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 5;TABAV_50B;TA-BAV DN50;Dezincification resistant brass;Thread;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 58
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TABAV
+ComboMaterialID = BDY_DZR
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_LOCKSHIELD
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TABAV_15C;TA-BAV DN15;Dezincification resistant brass;Thread;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;TABAV_20C;TA-BAV DN20;Dezincification resistant brass;Thread;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 2;TABAV_25C;TA-BAV DN25;Dezincification resistant brass;Thread;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 3;TABAV_32C;TA-BAV DN32;Dezincification resistant brass;Thread;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 4;TABAV_40C;TA-BAV DN40;Dezincification resistant brass;Thread;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 5;TABAV_50C;TA-BAV DN50;Dezincification resistant brass;Thread;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 59
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TABAV
+ComboMaterialID = BDY_DZR
+ComboConnectID = CONN_COMPRFIT
+ComboVersionID = 
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TABAV_15D;TA-BAV DN15;Dezincification resistant brass;Compression fitting;With lever;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;TABAV_20D;TA-BAV DN20;Dezincification resistant brass;Compression fitting;With lever;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 2;TABAV_25D;TA-BAV DN25;Dezincification resistant brass;Compression fitting;With lever;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 3;TABAV_32D;TA-BAV DN32;Dezincification resistant brass;Compression fitting;With lever;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 4;TABAV_40D;TA-BAV DN40;Dezincification resistant brass;Compression fitting;With lever;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 5;TABAV_50D;TA-BAV DN50;Dezincification resistant brass;Compression fitting;With lever;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 6;TABAV_15E;TA-BAV DN15;Dezincification resistant brass;Compression fitting;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 7;TABAV_20E;TA-BAV DN20;Dezincification resistant brass;Compression fitting;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 8;TABAV_25E;TA-BAV DN25;Dezincification resistant brass;Compression fitting;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 9;TABAV_32E;TA-BAV DN32;Dezincification resistant brass;Compression fitting;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 10;TABAV_40E;TA-BAV DN40;Dezincification resistant brass;Compression fitting;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 11;TABAV_50E;TA-BAV DN50;Dezincification resistant brass;Compression fitting;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 12;TABAV_15F;TA-BAV DN15;Dezincification resistant brass;Compression fitting;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 13;TABAV_20F;TA-BAV DN20;Dezincification resistant brass;Compression fitting;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 14;TABAV_25F;TA-BAV DN25;Dezincification resistant brass;Compression fitting;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 15;TABAV_32F;TA-BAV DN32;Dezincification resistant brass;Compression fitting;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 16;TABAV_40F;TA-BAV DN40;Dezincification resistant brass;Compression fitting;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 17;TABAV_50F;TA-BAV DN50;Dezincification resistant brass;Compression fitting;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 60
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TABAV
+ComboMaterialID = BDY_DZR
+ComboConnectID = CONN_COMPRFIT
+ComboVersionID = VERS_WITHLEVER
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TABAV_15D;TA-BAV DN15;Dezincification resistant brass;Compression fitting;With lever;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;TABAV_20D;TA-BAV DN20;Dezincification resistant brass;Compression fitting;With lever;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 2;TABAV_25D;TA-BAV DN25;Dezincification resistant brass;Compression fitting;With lever;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 3;TABAV_32D;TA-BAV DN32;Dezincification resistant brass;Compression fitting;With lever;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 4;TABAV_40D;TA-BAV DN40;Dezincification resistant brass;Compression fitting;With lever;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 5;TABAV_50D;TA-BAV DN50;Dezincification resistant brass;Compression fitting;With lever;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 61
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TABAV
+ComboMaterialID = BDY_DZR
+ComboConnectID = CONN_COMPRFIT
+ComboVersionID = VERS_WITHSPINDLEEXT
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TABAV_15E;TA-BAV DN15;Dezincification resistant brass;Compression fitting;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;TABAV_20E;TA-BAV DN20;Dezincification resistant brass;Compression fitting;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 2;TABAV_25E;TA-BAV DN25;Dezincification resistant brass;Compression fitting;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 3;TABAV_32E;TA-BAV DN32;Dezincification resistant brass;Compression fitting;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 4;TABAV_40E;TA-BAV DN40;Dezincification resistant brass;Compression fitting;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 5;TABAV_50E;TA-BAV DN50;Dezincification resistant brass;Compression fitting;With spindle extension;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 62
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BALL
+ComboFamilyID = FAM_TABAV
+ComboMaterialID = BDY_DZR
+ComboConnectID = CONN_COMPRFIT
+ComboVersionID = VERS_LOCKSHIELD
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TABAV_15F;TA-BAV DN15;Dezincification resistant brass;Compression fitting;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;TABAV_20F;TA-BAV DN20;Dezincification resistant brass;Compression fitting;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 2;TABAV_25F;TA-BAV DN25;Dezincification resistant brass;Compression fitting;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 3;TABAV_32F;TA-BAV DN32;Dezincification resistant brass;Compression fitting;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 4;TABAV_40F;TA-BAV DN40;Dezincification resistant brass;Compression fitting;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+Result number = 5;TABAV_50F;TA-BAV DN50;Dezincification resistant brass;Compression fitting;With lockshield;25;15 (1/2");13.6083;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 63
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_GATE
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA60_25A;TA 60 DN25;Ametal(tm);Thread;Standard;16;25 (1");48.5531;0/170;25 (1");116.19;0.478046
+Result number = 1;TA60_25B;TA 60 DN25;Ametal(tm);Thread ISO 7/1;Standard;16;25 (1");48.5531;0/170;25 (1");116.19;0.478046
+Result number = 2;TA60_20A;TA 60 DN20;Ametal(tm);Thread;Standard;16;20 (3/4");157.312;0/170;25 (1");116.19;0.478046
+Result number = 3;TA60_20B;TA 60 DN20;Ametal(tm);Thread ISO 7/1;Standard;16;20 (3/4");157.312;0/170;25 (1");116.19;0.478046
+Result number = 4;TA60_15A;TA 60 DN15;Ametal(tm);Thread;Standard;16;15 (1/2");1213.83;0/170;25 (1");116.19;0.478046
+Result number = 5;TA60_15B;TA 60 DN15;Ametal(tm);Thread ISO 7/1;Standard;16;15 (1/2");1213.83;0/170;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 64
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_GATE
+ComboFamilyID = FAM_TA60
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA60_25A;TA 60 DN25;Ametal(tm);Thread;Standard;16;25 (1");48.5531;0/170;25 (1");116.19;0.478046
+Result number = 1;TA60_25B;TA 60 DN25;Ametal(tm);Thread ISO 7/1;Standard;16;25 (1");48.5531;0/170;25 (1");116.19;0.478046
+Result number = 2;TA60_20A;TA 60 DN20;Ametal(tm);Thread;Standard;16;20 (3/4");157.312;0/170;25 (1");116.19;0.478046
+Result number = 3;TA60_20B;TA 60 DN20;Ametal(tm);Thread ISO 7/1;Standard;16;20 (3/4");157.312;0/170;25 (1");116.19;0.478046
+Result number = 4;TA60_15A;TA 60 DN15;Ametal(tm);Thread;Standard;16;15 (1/2");1213.83;0/170;25 (1");116.19;0.478046
+Result number = 5;TA60_15B;TA 60 DN15;Ametal(tm);Thread ISO 7/1;Standard;16;15 (1/2");1213.83;0/170;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 65
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_GATE
+ComboFamilyID = FAM_TA60
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA60_25A;TA 60 DN25;Ametal(tm);Thread;Standard;16;25 (1");48.5531;0/170;25 (1");116.19;0.478046
+Result number = 1;TA60_25B;TA 60 DN25;Ametal(tm);Thread ISO 7/1;Standard;16;25 (1");48.5531;0/170;25 (1");116.19;0.478046
+Result number = 2;TA60_20A;TA 60 DN20;Ametal(tm);Thread;Standard;16;20 (3/4");157.312;0/170;25 (1");116.19;0.478046
+Result number = 3;TA60_20B;TA 60 DN20;Ametal(tm);Thread ISO 7/1;Standard;16;20 (3/4");157.312;0/170;25 (1");116.19;0.478046
+Result number = 4;TA60_15A;TA 60 DN15;Ametal(tm);Thread;Standard;16;15 (1/2");1213.83;0/170;25 (1");116.19;0.478046
+Result number = 5;TA60_15B;TA 60 DN15;Ametal(tm);Thread ISO 7/1;Standard;16;15 (1/2");1213.83;0/170;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 66
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_GATE
+ComboFamilyID = FAM_TA60
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA60_25A;TA 60 DN25;Ametal(tm);Thread;Standard;16;25 (1");48.5531;0/170;25 (1");116.19;0.478046
+Result number = 1;TA60_20A;TA 60 DN20;Ametal(tm);Thread;Standard;16;20 (3/4");157.312;0/170;25 (1");116.19;0.478046
+Result number = 2;TA60_15A;TA 60 DN15;Ametal(tm);Thread;Standard;16;15 (1/2");1213.83;0/170;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 67
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_GATE
+ComboFamilyID = FAM_TA60
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 68
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_GATE
+ComboFamilyID = FAM_TA60
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADISO7
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA60_25B;TA 60 DN25;Ametal(tm);Thread ISO 7/1;Standard;16;25 (1");48.5531;0/170;25 (1");116.19;0.478046
+Result number = 1;TA60_20B;TA 60 DN20;Ametal(tm);Thread ISO 7/1;Standard;16;20 (3/4");157.312;0/170;25 (1");116.19;0.478046
+Result number = 2;TA60_15B;TA 60 DN15;Ametal(tm);Thread ISO 7/1;Standard;16;15 (1/2");1213.83;0/170;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 69
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_GATE
+ComboFamilyID = FAM_TA60
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 70
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_GATE
+ComboFamilyID = FAM_TAGAV
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TAGAV_50A;TA-GAV DN50;Ductile iron;Flange;Handwheel;16;50 (2");1483.86;-20/120;50 (2");83.9692;0.629544
+Result number = 1;TAGAV_50B;TA-GAV DN50;Ductile iron;Flange;Handwheel;25;50 (2");1483.86;-20/120;50 (2");83.9692;0.629544
+Result number = 2;TAGAV_50D;TA-GAV DN50;Ductile iron;Groove;Handwheel;16;50 (2");1483.86;-20/120;50 (2");83.9692;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 71
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_GATE
+ComboFamilyID = FAM_TAGAV
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TAGAV_50A;TA-GAV DN50;Ductile iron;Flange;Handwheel;16;50 (2");1483.86;-20/120;50 (2");83.9692;0.629544
+Result number = 1;TAGAV_50B;TA-GAV DN50;Ductile iron;Flange;Handwheel;25;50 (2");1483.86;-20/120;50 (2");83.9692;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 72
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_GATE
+ComboFamilyID = FAM_TAGAV
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_HANDWHEEL
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TAGAV_50A;TA-GAV DN50;Ductile iron;Flange;Handwheel;16;50 (2");1483.86;-20/120;50 (2");83.9692;0.629544
+Result number = 1;TAGAV_50B;TA-GAV DN50;Ductile iron;Flange;Handwheel;25;50 (2");1483.86;-20/120;50 (2");83.9692;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 73
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_GATE
+ComboFamilyID = FAM_TAGAV
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_HANDWHEEL
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TAGAV_50A;TA-GAV DN50;Ductile iron;Flange;Handwheel;16;50 (2");1483.86;-20/120;50 (2");83.9692;0.629544
+Result number = 1;TAGAV_50B;TA-GAV DN50;Ductile iron;Flange;Handwheel;25;50 (2");1483.86;-20/120;50 (2");83.9692;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 74
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_GATE
+ComboFamilyID = FAM_TAGAV
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_HANDWHEEL
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TAGAV_50A;TA-GAV DN50;Ductile iron;Flange;Handwheel;16;50 (2");1483.86;-20/120;50 (2");83.9692;0.629544
+Result number = 1;TAGAV_50B;TA-GAV DN50;Ductile iron;Flange;Handwheel;25;50 (2");1483.86;-20/120;50 (2");83.9692;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 75
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.36333333
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_GATE
+ComboFamilyID = FAM_TAGAV
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_GEARBOX
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TAGAV_500C;TA-GAV DN500;Ductile iron;Flange;Gearbox;16;500 (20");11193.8;-20/120;500 (20");48.325;1.93463
+Result number = 1;TAGAV_450C;TA-GAV DN450;Ductile iron;Flange;Gearbox;16;450 (18");17249.2;-20/120;500 (20");48.325;1.93463
+Result number = 2;TAGAV_400C;TA-GAV DN400;Ductile iron;Flange;Gearbox;16;400 (16");28302.6;-20/120;500 (20");48.325;1.93463
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 76
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.08333333331
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_GATE
+ComboFamilyID = FAM_TAGAV
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_GROOVE
+ComboVersionID = VERS_HANDWHEEL
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TAGAV_250D;TA-GAV DN250;Ductile iron;Groove;Handwheel;16;250 (10");8548.72;-20/120;250 (10");68.6319;1.56958
+Result number = 1;TAGAV_200D;TA-GAV DN200;Ductile iron;Groove;Handwheel;16;200 (8");20873.2;-20/120;250 (10");68.6319;1.56958
+Result number = 2;TAGAV_150D;TA-GAV DN150;Ductile iron;Groove;Handwheel;16;150 (6");65949.4;-20/120;250 (10");68.6319;1.56958
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 77
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_GLOBE
+ComboFamilyID = FAM_STS*
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STS*25C;STS* 25;Ametal(tm);Thread;Without drain;25;25 (1");1023.74;-20/120;25 (1");116.19;0.478046
+Result number = 1;STS*25D;STS* 25;Ametal(tm);Thread;With drain 3/4";25;25 (1");1023.74;-20/120;25 (1");116.19;0.478046
+Result number = 2;STS*20C;STS* 20;Ametal(tm);Thread;Without drain;25;20 (3/4");2126.3;-20/120;25 (1");116.19;0.478046
+Result number = 3;STS*20D;STS* 20;Ametal(tm);Thread;With drain 3/4";25;20 (3/4");2126.3;-20/120;25 (1");116.19;0.478046
+Result number = 4;STS*15C;STS* 15;Ametal(tm);Thread;Without drain;25;15 (1/2");8026.12;-20/120;25 (1");116.19;0.478046
+Result number = 5;STS*15D;STS* 15;Ametal(tm);Thread;With drain 3/4";25;15 (1/2");8026.12;-20/120;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 78
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_GLOBE
+ComboFamilyID = FAM_STS*
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = 
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STS*25C;STS* 25;Ametal(tm);Thread;Without drain;25;25 (1");1023.74;-20/120;25 (1");116.19;0.478046
+Result number = 1;STS*25D;STS* 25;Ametal(tm);Thread;With drain 3/4";25;25 (1");1023.74;-20/120;25 (1");116.19;0.478046
+Result number = 2;STS*20C;STS* 20;Ametal(tm);Thread;Without drain;25;20 (3/4");2126.3;-20/120;25 (1");116.19;0.478046
+Result number = 3;STS*20D;STS* 20;Ametal(tm);Thread;With drain 3/4";25;20 (3/4");2126.3;-20/120;25 (1");116.19;0.478046
+Result number = 4;STS*15C;STS* 15;Ametal(tm);Thread;Without drain;25;15 (1/2");8026.12;-20/120;25 (1");116.19;0.478046
+Result number = 5;STS*15D;STS* 15;Ametal(tm);Thread;With drain 3/4";25;15 (1/2");8026.12;-20/120;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 79
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_GLOBE
+ComboFamilyID = FAM_STS*
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_NODRAIN
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STS*25C;STS* 25;Ametal(tm);Thread;Without drain;25;25 (1");1023.74;-20/120;25 (1");116.19;0.478046
+Result number = 1;STS*20C;STS* 20;Ametal(tm);Thread;Without drain;25;20 (3/4");2126.3;-20/120;25 (1");116.19;0.478046
+Result number = 2;STS*15C;STS* 15;Ametal(tm);Thread;Without drain;25;15 (1/2");8026.12;-20/120;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 80
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_GLOBE
+ComboFamilyID = FAM_STS*
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_DRAIN34
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STS*25D;STS* 25;Ametal(tm);Thread;With drain 3/4";25;25 (1");1023.74;-20/120;25 (1");116.19;0.478046
+Result number = 1;STS*20D;STS* 20;Ametal(tm);Thread;With drain 3/4";25;20 (3/4");2126.3;-20/120;25 (1");116.19;0.478046
+Result number = 2;STS*15D;STS* 15;Ametal(tm);Thread;With drain 3/4";25;15 (1/2");8026.12;-20/120;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 81
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BUTTERFLY
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA-BTV_50A;TA-BTV DN50;Cast iron;Flange;Wafer;16;50 (2");176.53;-10/120;50 (2");83.9692;0.629544
+Result number = 1;TA-BTV_50E;TA-BTV DN50;Cast iron;Flange;Wafer;16;50 (2");176.53;-10/120;50 (2");83.9692;0.629544
+Result number = 2;TA-BTV_50C;TA-BTV DN50;Cast iron;Flange;Fully lugged;16;50 (2");176.53;-10/120;50 (2");83.9692;0.629544
+Result number = 3;TA-BTV_50G;TA-BTV DN50;Cast iron;Flange;Fully lugged;16;50 (2");176.53;-10/120;50 (2");83.9692;0.629544
+Result number = 4;TA-BTV_50B;TA-BTV DN50;Ductile iron;Flange;Wafer;25;50 (2");176.53;-20/120;50 (2");83.9692;0.629544
+Result number = 5;TA-BTV_50F;TA-BTV DN50;Ductile iron;Flange;Wafer;25;50 (2");176.53;-20/120;50 (2");83.9692;0.629544
+Result number = 6;TA-BTV_50D;TA-BTV DN50;Ductile iron;Flange;Fully lugged;25;50 (2");176.53;-20/120;50 (2");83.9692;0.629544
+Result number = 7;TA-BTV_50H;TA-BTV DN50;Ductile iron;Flange;Fully lugged;25;50 (2");176.53;-20/120;50 (2");83.9692;0.629544
+Result number = 8;TA-BTV_50I;TA-BTV DN50;Cast iron;Groove;Standard;16;50 (2");176.53;-20/120;50 (2");83.9692;0.629544
+Result number = 9;TA-BTV_50J;TA-BTV DN50;Cast iron;Groove;Standard;16;50 (2");176.53;-20/120;50 (2");83.9692;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 82
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BUTTERFLY
+ComboFamilyID = FAM_TABTV_LEVER
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA-BTV_50A;TA-BTV DN50;Cast iron;Flange;Wafer;16;50 (2");176.53;-10/120;50 (2");83.9692;0.629544
+Result number = 1;TA-BTV_50C;TA-BTV DN50;Cast iron;Flange;Fully lugged;16;50 (2");176.53;-10/120;50 (2");83.9692;0.629544
+Result number = 2;TA-BTV_50B;TA-BTV DN50;Ductile iron;Flange;Wafer;25;50 (2");176.53;-20/120;50 (2");83.9692;0.629544
+Result number = 3;TA-BTV_50D;TA-BTV DN50;Ductile iron;Flange;Fully lugged;25;50 (2");176.53;-20/120;50 (2");83.9692;0.629544
+Result number = 4;TA-BTV_50I;TA-BTV DN50;Cast iron;Groove;Standard;16;50 (2");176.53;-20/120;50 (2");83.9692;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 83
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BUTTERFLY
+ComboFamilyID = FAM_TABTV_LEVER
+ComboMaterialID = BDY_CASTIRON
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA-BTV_50A;TA-BTV DN50;Cast iron;Flange;Wafer;16;50 (2");176.53;-10/120;50 (2");83.9692;0.629544
+Result number = 1;TA-BTV_50C;TA-BTV DN50;Cast iron;Flange;Fully lugged;16;50 (2");176.53;-10/120;50 (2");83.9692;0.629544
+Result number = 2;TA-BTV_50I;TA-BTV DN50;Cast iron;Groove;Standard;16;50 (2");176.53;-20/120;50 (2");83.9692;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 84
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BUTTERFLY
+ComboFamilyID = FAM_TABTV_LEVER
+ComboMaterialID = BDY_CASTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = 
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA-BTV_50A;TA-BTV DN50;Cast iron;Flange;Wafer;16;50 (2");176.53;-10/120;50 (2");83.9692;0.629544
+Result number = 1;TA-BTV_50C;TA-BTV DN50;Cast iron;Flange;Fully lugged;16;50 (2");176.53;-10/120;50 (2");83.9692;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 85
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BUTTERFLY
+ComboFamilyID = FAM_TABTV_LEVER
+ComboMaterialID = BDY_CASTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_WAFER
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA-BTV_50A;TA-BTV DN50;Cast iron;Flange;Wafer;16;50 (2");176.53;-10/120;50 (2");83.9692;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 86
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BUTTERFLY
+ComboFamilyID = FAM_TABTV_LEVER
+ComboMaterialID = BDY_CASTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_FULLYLUGGED
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA-BTV_50C;TA-BTV DN50;Cast iron;Flange;Fully lugged;16;50 (2");176.53;-10/120;50 (2");83.9692;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 87
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BUTTERFLY
+ComboFamilyID = FAM_TABTV_LEVER
+ComboMaterialID = BDY_CASTIRON
+ComboConnectID = CONN_GROOVE
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA-BTV_50I;TA-BTV DN50;Cast iron;Groove;Standard;16;50 (2");176.53;-20/120;50 (2");83.9692;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 88
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BUTTERFLY
+ComboFamilyID = FAM_TABTV_LEVER
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = 
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA-BTV_50B;TA-BTV DN50;Ductile iron;Flange;Wafer;25;50 (2");176.53;-20/120;50 (2");83.9692;0.629544
+Result number = 1;TA-BTV_50D;TA-BTV DN50;Ductile iron;Flange;Fully lugged;25;50 (2");176.53;-20/120;50 (2");83.9692;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 89
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BUTTERFLY
+ComboFamilyID = FAM_TABTV_LEVER
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_WAFER
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA-BTV_50B;TA-BTV DN50;Ductile iron;Flange;Wafer;25;50 (2");176.53;-20/120;50 (2");83.9692;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 90
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BUTTERFLY
+ComboFamilyID = FAM_TABTV_LEVER
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_FULLYLUGGED
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA-BTV_50D;TA-BTV DN50;Ductile iron;Flange;Fully lugged;25;50 (2");176.53;-20/120;50 (2");83.9692;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 91
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BUTTERFLY
+ComboFamilyID = FAM_TABTV_GEARB
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA-BTV_50E;TA-BTV DN50;Cast iron;Flange;Wafer;16;50 (2");176.53;-10/120;50 (2");83.9692;0.629544
+Result number = 1;TA-BTV_50G;TA-BTV DN50;Cast iron;Flange;Fully lugged;16;50 (2");176.53;-10/120;50 (2");83.9692;0.629544
+Result number = 2;TA-BTV_50F;TA-BTV DN50;Ductile iron;Flange;Wafer;25;50 (2");176.53;-20/120;50 (2");83.9692;0.629544
+Result number = 3;TA-BTV_50H;TA-BTV DN50;Ductile iron;Flange;Fully lugged;25;50 (2");176.53;-20/120;50 (2");83.9692;0.629544
+Result number = 4;TA-BTV_50J;TA-BTV DN50;Cast iron;Groove;Standard;16;50 (2");176.53;-20/120;50 (2");83.9692;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 92
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BUTTERFLY
+ComboFamilyID = FAM_TABTV_GEARB
+ComboMaterialID = BDY_CASTIRON
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA-BTV_50E;TA-BTV DN50;Cast iron;Flange;Wafer;16;50 (2");176.53;-10/120;50 (2");83.9692;0.629544
+Result number = 1;TA-BTV_50G;TA-BTV DN50;Cast iron;Flange;Fully lugged;16;50 (2");176.53;-10/120;50 (2");83.9692;0.629544
+Result number = 2;TA-BTV_50J;TA-BTV DN50;Cast iron;Groove;Standard;16;50 (2");176.53;-20/120;50 (2");83.9692;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 93
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BUTTERFLY
+ComboFamilyID = FAM_TABTV_GEARB
+ComboMaterialID = BDY_CASTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = 
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA-BTV_50E;TA-BTV DN50;Cast iron;Flange;Wafer;16;50 (2");176.53;-10/120;50 (2");83.9692;0.629544
+Result number = 1;TA-BTV_50G;TA-BTV DN50;Cast iron;Flange;Fully lugged;16;50 (2");176.53;-10/120;50 (2");83.9692;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 94
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BUTTERFLY
+ComboFamilyID = FAM_TABTV_GEARB
+ComboMaterialID = BDY_CASTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_WAFER
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA-BTV_50E;TA-BTV DN50;Cast iron;Flange;Wafer;16;50 (2");176.53;-10/120;50 (2");83.9692;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 95
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BUTTERFLY
+ComboFamilyID = FAM_TABTV_GEARB
+ComboMaterialID = BDY_CASTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_FULLYLUGGED
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA-BTV_50G;TA-BTV DN50;Cast iron;Flange;Fully lugged;16;50 (2");176.53;-10/120;50 (2");83.9692;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 96
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BUTTERFLY
+ComboFamilyID = FAM_TABTV_GEARB
+ComboMaterialID = BDY_CASTIRON
+ComboConnectID = CONN_GROOVE
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA-BTV_50J;TA-BTV DN50;Cast iron;Groove;Standard;16;50 (2");176.53;-20/120;50 (2");83.9692;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 97
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BUTTERFLY
+ComboFamilyID = FAM_TABTV_GEARB
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = 
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA-BTV_50F;TA-BTV DN50;Ductile iron;Flange;Wafer;25;50 (2");176.53;-20/120;50 (2");83.9692;0.629544
+Result number = 1;TA-BTV_50H;TA-BTV DN50;Ductile iron;Flange;Fully lugged;25;50 (2");176.53;-20/120;50 (2");83.9692;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 98
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BUTTERFLY
+ComboFamilyID = FAM_TABTV_GEARB
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_WAFER
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA-BTV_50F;TA-BTV DN50;Ductile iron;Flange;Wafer;25;50 (2");176.53;-20/120;50 (2");83.9692;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 99
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_BUTTERFLY
+ComboFamilyID = FAM_TABTV_GEARB
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_FULLYLUGGED
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA-BTV_50H;TA-BTV DN50;Ductile iron;Flange;Fully lugged;25;50 (2");176.53;-20/120;50 (2");83.9692;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+

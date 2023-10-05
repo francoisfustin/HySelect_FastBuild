@@ -1,0 +1,902 @@
+
+////////////////////////////////////////////////////////////////
+//
+//		Table VALVE_CHAR_TAB : Table of regulating valve characteristics
+//
+//	new:CDB_ValveCharacteristic(ID\1) -> VALVE_CHAR_TAB
+//	{
+//		{
+//			Discrete/Continuous: 				#eDISCRETE_True, #eDISCRETE_False or #eDISCRETE_Undefined
+//			Single/Multi/Electronic-turn: 		#eTURN_Single, #eTURN_Multi, #eTURN_Electronic or #eTURN_Undefined
+//			SettingRounding						Allows to know how to round the result of a computing setting.
+//		}
+//		Min measurable setting (for TA-Scope)
+//		Min recommended setting (for selection)
+//		Number of curves
+//		opening 1 \ Kv 1
+//		opening 2 \ Kv 2
+//		...
+//	}
+//
+
+
+// STAF
+////////////////////////////////////////////////////////////////
+new:CDB_ValveCharacteristic(C_STAF*065\1) -> VALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Multi
+		0.05									// Allows to know how to round the result of a computing setting.
+	}
+	0.5										// Min measurable setting (for TA-Scope)
+	2.0                                     // Min recommended setting (for selection)
+	1
+	0.0 \ 0.00
+	0.5 \ 1.02
+	1.0 \ 2.39
+	1.5 \ 3.77
+	2.0 \ 5.18
+	2.5 \ 6.52
+	3.0 \ 8.18
+	3.5 \ 11.6
+	4.0 \ 18.6
+	4.5 \ 29.9
+	5.0 \ 39.6
+	5.5 \ 47.9
+	6.0 \ 57.5
+	6.5 \ 66.3
+	7.0 \ 74.2
+	7.5 \ 80.0
+	8.0 \ 85.0
+}
+
+new:CDB_ValveCharacteristic(C_STAF*080\1) -> VALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Multi
+		0.05									// Allows to know how to round the result of a computing setting.
+	}
+	0.5										// Min measurable setting (for TA-Scope)
+	2.0                                     // Min recommended setting (for selection)
+	1
+	0.0 \ 0.00
+	0.5 \ 2.33
+	1.0 \ 4.25
+	1.5 \ 6.20
+	2.0 \ 8.47
+	2.5 \ 11.4
+	3.0 \ 15.0
+	3.5 \ 20.8
+	4.0 \ 29.9
+	4.5 \ 43.3
+	5.0 \ 57.5
+	5.5 \ 69.6
+	6.0 \ 81.2
+	6.5 \ 92.8
+	7.0 \ 104.0
+	7.5 \ 114.0
+	8.0 \ 123.0
+}
+
+new:CDB_ValveCharacteristic(C_STAF*100\1) -> VALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Multi
+		0.05									// Allows to know how to round the result of a computing setting.
+	}
+	0.5										// Min measurable setting (for TA-Scope)
+	2.0                                     // Min recommended setting (for selection)
+	1
+	0.0 \ 0.0
+	0.5 \ 2.54
+	1.0 \ 5.59
+	1.5 \ 8.64
+	2.0 \ 11.5
+	2.5 \ 15.5
+	3.0 \ 26.2
+	3.5 \ 42.8
+	4.0 \ 66.0
+	4.5 \ 91.7
+	5.0 \ 108.0
+	5.5 \ 119.0
+	6.0 \ 136.0
+	6.5 \ 151.0
+	7.0 \ 164.0
+	7.5 \ 174.0
+	8.0 \ 185.0
+}
+
+new:CDB_ValveCharacteristic(C_STAF*125\1) -> VALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Multi
+		0.05									// Allows to know how to round the result of a computing setting.
+	}
+	0.5										// Min measurable setting (for TA-Scope)
+	2.0                                     // Min recommended setting (for selection)
+	1
+	0.0 \ 0.0
+	0.5 \ 5.99
+	1.0 \ 10.9
+	1.5 \ 15.7
+	2.0 \ 21.5
+	2.5 \ 29.1
+	3.0 \ 37.5
+	3.5 \ 54.2
+	4.0 \ 85.2
+	4.5 \ 118.0
+	5.0 \ 148.0
+	5.5 \ 168.0
+	6.0 \ 198.0
+	6.5 \ 232.0
+	7.0 \ 255.0
+	7.5 \ 275.0
+	8.0 \ 294.0
+}
+
+new:CDB_ValveCharacteristic(C_STAF*150\1) -> VALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Multi
+		0.05									// Allows to know how to round the result of a computing setting.
+	}
+	0.5										// Min measurable setting (for TA-Scope)
+	2.0                                     // Min recommended setting (for selection)
+	1
+	0.0 \ 0.0
+	0.5 \ 5.39
+	1.0 \ 13.3
+	1.5 \ 22.8
+	2.0 \ 41.0
+	2.5 \ 65.7
+	3.0 \ 92.6
+	3.5 \ 127.0
+	4.0 \ 176.0
+	4.5 \ 214.0
+	5.0 \ 249.0
+	5.5 \ 281.0
+	6.0 \ 307.0
+	6.5 \ 332.0
+	7.0 \ 353.0
+	7.5 \ 374.0
+	8.0 \ 400.0
+}
+
+
+/////////////////
+// *** STAF star ****
+/////////////////
+
+new:CDB_RegulatingValve(STAF*65\1) -> REGVALV_TAB
+{
+	{
+		{
+			{
+				{
+					0															// isDeleted
+					1                                                           // isAvailable
+					0                                                           // isHidden
+					1                                                           // isFix
+					1                                                           // Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+					0                                                           // Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+					0               											// Sort integer (Allow to show a group of articles in the order defined with this variable).
+				}
+				0.6e+6 \ 1.6e+6                                 			// Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+				NO_ID                                                       // PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+				120.0                                                       // Tmax in °C
+				-10.0                                                       // Tmin in °C
+			}
+			"52186-065"                                         		// Reference to the TA Product
+			"STAF* 65"                                                  // Name of the product
+			RVTYPE_BV                                                   // Identifier of the valve type
+			FAM_STAF*                                                   // Identifier of the family of the product
+			VERS_STD                                                    // Identifier of the version of the product
+			1                                                           // Level of priority for selection [1,10]
+			""                                                          // Product comment
+			"PX_STAF-SG080A_BV"                                         // Product image ID
+			ACCSTAF*65                                                  // Identifier of the accessory group
+			#ePartOfaSetNo                                              // Boolean indicating if product is part of a set. Can be #ePartOfaSetNo, #ePartOfaSetYes, #ePartOfaSetYesBreakOk or #ePartOfaSetYesBreakOnMsg.
+			NO_ID														// Table ID where are sets if exist for the current product.
+			0.0                                                         // Price of the product
+			#eProduct                              	                	// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+			NO_ID                                                   	// Identifier of the series of the accessory (mainly used in DlgDirSel)
+			0                                                       	// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+			NO_ID                                      	            	// Identifier of the accessory type if #eBoth 
+			NO_ID										            	// Identifier of the accessory family if #eBoth	
+		}
+		BDY_CASTIRON                                            	// Identifier of the body material
+		DN_65                                                       // Identifier of the corresp. valve size
+		CONN_FLANGE                                                 // Identifier of the (inlet/pipe side) connection
+		NO_ID                                                       // Identifier of the connection table, can be NO_ID
+		NO_ID                                                       // Identifier of the outlet/body side connection, can be NO_ID
+		""                                                          // Type of the valve as used in the CBI II
+		""                                                          // Size of the valve as used in the CBI II
+		""                                                          // Size of the valve in inch as used in the CBI II
+		1                                                           // CBI compatibility Index
+		""                                                          // CBI Version
+		0.0                                                         // Maximum Dp of the valve
+		#eMeasPointInlet | #eMeasPointOutlet                        // Measuring points
+		#eMeasDataDp | #eMeasDataFlow | #eMeasDataDpAvail           // Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+		NO_ID														// Identifier of the inlet size ID
+		NO_ID														// Identifier of the outlet size ID
+	}
+	C_STAF*065                                                   // Identifier of the valve characteristic
+}
+
+new:CDB_RegulatingValve(STAF*80) -> REGVALV_TAB
+{ Inherited(STAF*65)
+	{
+		CDB_Product::Reference	=	"52186-080"
+		CDB_Product::Name			=	"STAF* 80"
+		CDB_Product::AccessGroupID  = ACCSTAF*80
+		CDB_TAProduct::SizeID		=	DN_80
+		CDB_RegulatingValve::CharactID	=	C_STAF*080
+	}
+}
+
+new:CDB_RegulatingValve(STAF*100) -> REGVALV_TAB
+{ Inherited(STAF*65)
+	{
+		CDB_Product::Reference	=	"52186-090"
+		CDB_Product::Name			=	"STAF* 100"
+		CDB_Product::AccessGroupID  = ACCSTAF*100
+		CDB_TAProduct::SizeID		=	DN_100
+		CDB_RegulatingValve::CharactID	=	C_STAF*100
+	}
+}
+
+new:CDB_RegulatingValve(STAF*125) -> REGVALV_TAB
+{ Inherited(STAF*65)
+	{
+		CDB_Product::Reference	=	"52186-091"
+		CDB_Product::Name			=	"STAF* 125"
+		CDB_Product::AccessGroupID  = ACCSTAF*125
+		CDB_TAProduct::SizeID		=	DN_125
+		CDB_RegulatingValve::CharactID	=	C_STAF*125
+	}
+}
+
+new:CDB_RegulatingValve(STAF*150) -> REGVALV_TAB
+{ Inherited(STAF*65)
+	{
+		CDB_Product::Reference	=	"52186-092"
+		CDB_Product::Name			=	"STAF* 150"
+		CDB_Product::AccessGroupID  = ACCSTAF*150
+		CDB_TAProduct::SizeID		=	DN_150
+		CDB_RegulatingValve::CharactID	=	C_STAF*150
+	}
+}
+
+////////////////////////
+// *** STAF-SG star ****
+////////////////////////
+
+new:CDB_RegulatingValve(STAF-SG*065A\1) -> REGVALV_TAB
+{
+	{
+		{
+			{
+				{
+					0															// isDeleted
+					1                                                           // isAvailable
+					0                                                           // isHidden
+					1                                                           // isFix
+					1                                                           // Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+					0                                                           // Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+					0               											// Sort integer (Allow to show a group of articles in the order defined with this variable).
+				}
+				0.6e+6 \ 2.5e+6                                 			// Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+				NO_ID                                                       // PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+				120.0                                                       // Tmax in °C
+				-10.0                                                       // Tmin in °C
+			}
+			"52187-065"                                         		// Reference to the TA Product
+			"STAF-SG* 65"                                               // Name of the product
+			RVTYPE_BV                                                   // Identifier of the valve type
+			FAM_STAF-SG*_SG                                             // Identifier of the family of the product
+			VERS_STD                                                    // Identifier of the version of the product
+			1                                                           // Level of priority for selection [1,10]
+			""                                                          // Product comment
+			"PX_STAF-SG080A_BV"                                         // Product image ID
+			ACCSTAF*65                                                  // Identifier of the accessory group
+			#ePartOfaSetNo                                              // Boolean indicating if product is part of a set. Can be #ePartOfaSetNo, #ePartOfaSetYes, #ePartOfaSetYesBreakOk or #ePartOfaSetYesBreakOnMsg.
+			NO_ID														// Table ID where are sets if exist for the current product.
+			0.0                                                         // Price of the product
+			#eProduct                              	                	// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+			NO_ID                                                   	// Identifier of the series of the accessory (mainly used in DlgDirSel)
+			0                                                       	// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+			NO_ID                                      	            	// Identifier of the accessory type if #eBoth 
+			NO_ID										            	// Identifier of the accessory family if #eBoth	
+		}
+		BDY_DUCTIRON                                            	// Identifier of the body material
+		DN_65                                                       // Identifier of the corresp. valve size
+		CONN_FLANGE                                                 // Identifier of the (inlet/pipe side) connection
+		NO_ID                                                       // Identifier of the connection table, can be NO_ID
+		NO_ID                                                       // Identifier of the outlet/body side connection, can be NO_ID
+		""                                                          // Type of the valve as used in the CBI II
+		""                                                          // Size of the valve as used in the CBI II
+		""                                                          // Size of the valve in inch as used in the CBI II
+		1                                                           // CBI compatibility Index
+		""                                                          // CBI Version
+		0.0                                                         // Maximum Dp of the valve
+		#eMeasPointInlet | #eMeasPointOutlet                        // Measuring points
+		#eMeasDataDp | #eMeasDataFlow | #eMeasDataDpAvail           // Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+		NO_ID														// Identifier of the inlet size ID
+		NO_ID														// Identifier of the outlet size ID
+	}
+	C_STAF*065                                                   // Identifier of the valve characteristic
+}
+
+new:CDB_RegulatingValve(STAF-SG*080A) -> REGVALV_TAB
+{ Inherited(STAF-SG*065A)
+	{
+		CDB_Product::Reference	=	"52187-080"
+		CDB_Product::Name			=	"STAF-SG* 80"
+		CDB_Product::AccessGroupID  = ACCSTAF*80
+		CDB_TAProduct::SizeID		=	DN_80
+		CDB_RegulatingValve::CharactID	=	C_STAF*080
+	}
+}
+
+new:CDB_RegulatingValve(STAF-SG*100A) -> REGVALV_TAB
+{ Inherited(STAF-SG*065A)
+	{
+		CDB_Product::Reference	=	"52187-090"
+		CDB_Product::Name			=	"STAF-SG* 100"
+		CDB_Product::ProdImgID	=	"PX_STAF-SG080A_BV"
+		CDB_Product::AccessGroupID  = ACCSTAF*100
+		CDB_TAProduct::SizeID		=	DN_100
+		CDB_RegulatingValve::CharactID	=	C_STAF*100
+	}
+}
+
+new:CDB_RegulatingValve(STAF-SG*125A) -> REGVALV_TAB
+{ Inherited(STAF-SG*065A)
+	{
+		CDB_Product::Reference	=	"52187-091"
+		CDB_Product::Name			=	"STAF-SG* 125"
+		CDB_Product::ProdImgID	=	"PX_STAF-SG080A_BV"
+		CDB_Product::AccessGroupID  = ACCSTAF*125
+		CDB_TAProduct::SizeID		=	DN_125
+		CDB_RegulatingValve::CharactID	=	C_STAF*125
+	}
+}
+
+new:CDB_RegulatingValve(STAF-SG*150A) -> REGVALV_TAB
+{ Inherited(STAF-SG*065A)
+	{
+		CDB_Product::Reference	=	"52187-092"
+		CDB_Product::Name			=	"STAF-SG* 150"
+		CDB_Product::ProdImgID	=	"PX_STAF-SG080A_BV"
+		CDB_Product::AccessGroupID  = ACCSTAF*150
+		CDB_TAProduct::SizeID		=	DN_150
+		CDB_RegulatingValve::CharactID	=	C_STAF*150
+	}
+}
+
+///////////////////////////
+// ANSI FLANGE CLASS 150
+///////////////////////////
+
+new:CDB_RegulatingValve(STAF-SG*065B) -> REGVALV_TAB
+{ Inherited(STAF-SG*065A)
+	{
+		CDB_HydroThing::Pmax 		=	0.6e+6 \ 2.0e+6
+		CDB_Product::Reference	=	"52187-965"
+		CDB_Product::Name			=	"STAF-SG* 2 1/2""
+		CDB_TAProduct::ConnectID	=	CONN_ANSIFL
+	}
+}
+
+new:CDB_RegulatingValve(STAF-SG*080B) -> REGVALV_TAB
+{ Inherited(STAF-SG*080A)
+	{
+		CDB_HydroThing::Pmax 		=	0.6e+6 \ 2.0e+6
+		CDB_Product::Reference	=	"52187-980"
+		CDB_Product::Name			=	"STAF-SG* 3""
+		CDB_TAProduct::ConnectID	=	CONN_ANSIFL
+	}
+}
+
+new:CDB_RegulatingValve(STAF-SG*100B) -> REGVALV_TAB
+{ Inherited(STAF-SG*100A)
+	{
+		CDB_HydroThing::Pmax 		=	0.6e+6 \ 2.0e+6
+		CDB_Product::Reference	=	"52187-990"
+		CDB_Product::Name			=	"STAF-SG* 4""
+		CDB_TAProduct::ConnectID	=	CONN_ANSIFL
+	}
+}
+
+new:CDB_RegulatingValve(STAF-SG*125B) -> REGVALV_TAB
+{ Inherited(STAF-SG*125A)
+	{
+		CDB_HydroThing::Pmax 		=	0.6e+6 \ 2.0e+6
+		CDB_Product::Reference	=	"52187-991"
+		CDB_Product::Name			=	"STAF-SG* 5""
+		CDB_TAProduct::ConnectID	=	CONN_ANSIFL
+	}
+}
+
+new:CDB_RegulatingValve(STAF-SG*150B) -> REGVALV_TAB
+{ Inherited(STAF-SG*150A)
+	{
+		CDB_HydroThing::Pmax 		=	0.6e+6 \ 2.0e+6
+		CDB_Product::Reference	=	"52187-992"
+		CDB_Product::Name			=	"STAF-SG* 6""
+		CDB_TAProduct::ConnectID	=	CONN_ANSIFL
+	}
+}
+
+/////////////////////////////////////////////////// 
+// ANSI FLANGE CLASS 150 US Version  
+/////////////////////////////////////////////////// 
+ 
+new:CDB_RegulatingValve(STAF-SG*065C) -> REGVALV_TAB
+{ Inherited(STAF-SG*065B)
+	{
+		CDB_Product::Reference	=	"52172-965"
+		CDB_Product::Name			=	"STAF-SG* 2 1/2""
+		CDB_Product::VersionID	=	VERS_US
+	}
+}
+
+new:CDB_RegulatingValve(STAF-SG*080C) -> REGVALV_TAB
+{ Inherited(STAF-SG*080B)
+	{
+		CDB_Product::Reference	=	"52172-980"
+		CDB_Product::Name			=	"STAF-SG* 3""
+		CDB_Product::VersionID	=	VERS_US
+	}
+}
+
+new:CDB_RegulatingValve(STAF-SG*100C) -> REGVALV_TAB
+{ Inherited(STAF-SG*100B)
+	{
+		CDB_Product::Reference	=	"52172-990"
+		CDB_Product::Name			=	"STAF-SG* 4""
+		CDB_Product::VersionID	=	VERS_US
+	}
+}
+
+new:CDB_RegulatingValve(STAF-SG*125C) -> REGVALV_TAB
+{ Inherited(STAF-SG*125B)
+	{
+		CDB_Product::Reference	=	"52172-991"
+		CDB_Product::Name			=	"STAF-SG* 5""
+		CDB_Product::VersionID	=	VERS_US
+	}
+}
+
+new:CDB_RegulatingValve(STAF-SG*150C) -> REGVALV_TAB
+{ Inherited(STAF-SG*150B)
+	{
+		CDB_Product::Reference	=	"52172-992"
+		CDB_Product::Name			=	"STAF-SG* 6""
+		CDB_Product::VersionID	=	VERS_US
+	}
+}
+ 
+ 
+////////////////////////
+// *** STAF-R star ****
+////////////////////////
+
+new:CDB_RegulatingValve(STAF-R*65\1) -> REGVALV_TAB
+{
+	{
+		{
+			{
+				{
+					0															// isDeleted
+					1                                                           // isAvailable
+					0                                                           // isHidden
+					1                                                           // isFix
+					1                                                           // Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+					0                                                           // Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+					0               											// Sort integer (Allow to show a group of articles in the order defined with this variable).
+				}
+				0.6e+6 \ 1.6e+6                                 			// Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+				NO_ID                                                       // PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+				120.0                                                       // Tmax in °C
+				-10.0                                                       // Tmin in °C
+			}
+			"52186-765"                                         		// Reference to the TA Product
+			"STAF-R* 65"                                                // Name of the product
+			RVTYPE_BV                                                   // Identifier of the valve type
+			FAM_STAF-R*                                                 // Identifier of the family of the product
+			VERS_STD                                                    // Identifier of the version of the product
+			1                                                           // Level of priority for selection [1,10]
+			""                                                          // Product comment
+			"PX_STAF-R80_BV"                                            // Product image ID
+			ACCSTAF*65                                                  // Identifier of the accessory group
+			#ePartOfaSetNo                                              // Boolean indicating if product is part of a set. Can be #ePartOfaSetNo, #ePartOfaSetYes, #ePartOfaSetYesBreakOk or #ePartOfaSetYesBreakOnMsg.
+			NO_ID														// Table ID where are sets if exist for the current product.
+			0.0                                                         // Price of the product
+			#eProduct                              	                	// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+			NO_ID                                                   	// Identifier of the series of the accessory (mainly used in DlgDirSel)
+			0                                                       	// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+			NO_ID                                      	            	// Identifier of the accessory type if #eBoth 
+			NO_ID										            	// Identifier of the accessory family if #eBoth	
+		}
+		BDY_BRONZE                                              	// Identifier of the body material
+		DN_65                                                       // Identifier of the corresp. valve size
+		CONN_FLANGE                                                 // Identifier of the (inlet/pipe side) connection
+		NO_ID                                                       // Identifier of the connection table, can be NO_ID
+		NO_ID                                                       // Identifier of the outlet/body side connection, can be NO_ID
+		""                                                          // Type of the valve as used in the CBI II
+		""                                                          // Size of the valve as used in the CBI II
+		""                                                          // Size of the valve in inch as used in the CBI II
+		1                                                           // CBI compatibility Index
+		""                                                          // CBI Version
+		0.0                                                         // Maximum Dp of the valve
+		#eMeasPointInlet | #eMeasPointOutlet                        // Measuring points
+		#eMeasDataDp | #eMeasDataFlow | #eMeasDataDpAvail           // Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+		NO_ID														// Identifier of the inlet size ID
+		NO_ID														// Identifier of the outlet size ID
+	}
+	C_STAF*065                                                   // Identifier of the valve characteristic
+}
+
+new:CDB_RegulatingValve(STAF-R*80) -> REGVALV_TAB
+{ Inherited(STAF-R*65)
+	{
+		CDB_Product::Reference	=	"52186-780"
+		CDB_Product::Name			=	"STAF-R* 80"
+		CDB_Product::AccessGroupID  = ACCSTAF*80
+		CDB_TAProduct::SizeID		=	DN_80
+		CDB_RegulatingValve::CharactID	=	C_STAF*080
+	}
+}
+
+new:CDB_RegulatingValve(STAF-R*100) -> REGVALV_TAB
+{ Inherited(STAF-R*65)
+	{
+		CDB_Product::Reference	=	"52186-790"
+		CDB_Product::Name			=	"STAF-R* 100"
+		CDB_Product::AccessGroupID  = ACCSTAF*100
+		CDB_TAProduct::SizeID		=	DN_100
+		CDB_RegulatingValve::CharactID	=	C_STAF*100
+	}
+}
+
+new:CDB_RegulatingValve(STAF-R*125) -> REGVALV_TAB
+{ Inherited(STAF-R*65)
+	{
+		CDB_Product::Reference	=	"52186-791"
+		CDB_Product::Name			=	"STAF-R* 125"
+		CDB_Product::AccessGroupID  = ACCSTAF*125
+		CDB_TAProduct::SizeID		=	DN_125
+		CDB_RegulatingValve::CharactID	=	C_STAF*125
+	}
+}
+
+new:CDB_RegulatingValve(STAF-R*150) -> REGVALV_TAB
+{ Inherited(STAF-R*65)
+	{
+		CDB_Product::Reference	=	"52186-792"
+		CDB_Product::Name			=	"STAF-R* 150"
+		CDB_Product::AccessGroupID  = ACCSTAF*150
+		CDB_TAProduct::SizeID		=	DN_150
+		CDB_RegulatingValve::CharactID	=	C_STAF*150
+	}
+}
+
+//////////////////////////////
+// *** STAG star Class 150 ***
+//////////////////////////////
+
+////////////////////////
+// Standard version
+////////////////////////
+
+// ** Available in Global version only ** //
+
+new:CDB_RegulatingValve(STAG*65A\1) -> REGVALV_TAB
+{
+	{
+		{
+			{
+				{
+					0															// isDeleted
+					1                                                           // isAvailable
+					0                                                           // isHidden
+					1                                                           // isFix
+					1                                                           // Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+					0                                                           // Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+					0               											// Sort integer (Allow to show a group of articles in the order defined with this variable).
+				}
+				0.6e+6 \ 2.0e+6                                 			// Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+				NO_ID                                                       // PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+				120.0                                                       // Tmax in °C
+				-10.0                                                       // Tmin in °C
+			}
+			"52188-073"                                         		// Reference to the TA Product
+			"STAG* 65"                                                  // Name of the product
+			RVTYPE_BV                                                   // Identifier of the valve type
+			FAM_STAG*_G                                                 // Identifier of the family of the product
+			VERS_STD                                                    // Identifier of the version of the product
+			1                                                           // Level of priority for selection [1,10]
+			""                                                          // Product comment
+			"PX_STAG80_BV"                                              // Product image ID
+			ACCSTAG*65_150                                              // Identifier of the accessory group
+			#ePartOfaSetNo                                              // Boolean indicating if product is part of a set. Can be #ePartOfaSetNo, #ePartOfaSetYes, #ePartOfaSetYesBreakOk or #ePartOfaSetYesBreakOnMsg.
+			NO_ID														// Table ID where are sets if exist for the current product.
+			0.0                                                         // Price of the product
+			#eProduct                              	                	// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+			NO_ID                                                   	// Identifier of the series of the accessory (mainly used in DlgDirSel)
+			0                                                       	// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+			NO_ID                                      	            	// Identifier of the accessory type if #eBoth 
+			NO_ID										            	// Identifier of the accessory family if #eBoth	
+		}
+		BDY_DUCTIRON                                            	// Identifier of the body material
+		DN_65                                                       // Identifier of the corresp. valve size
+		CONN_GROOVE                                                 // Identifier of the (inlet/pipe side) connection
+		NO_ID                                                       // Identifier of the connection table, can be NO_ID
+		NO_ID                                                       // Identifier of the outlet/body side connection, can be NO_ID
+		""                                                          // Type of the valve as used in the CBI II
+		""                                                          // Size of the valve as used in the CBI II
+		""                                                          // Size of the valve in inch as used in the CBI II
+		1                                                           // CBI compatibility Index
+		""                                                          // CBI Version
+		0.0                                                         // Maximum Dp of the valve
+		#eMeasPointInlet | #eMeasPointOutlet                        // Measuring points
+		#eMeasDataDp | #eMeasDataFlow | #eMeasDataDpAvail           // Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+		NO_ID														// Identifier of the inlet size ID
+		NO_ID														// Identifier of the outlet size ID
+	}
+	C_STAF*065                                                   // Identifier of the valve characteristic
+}
+
+new:CDB_RegulatingValve(STAG*80A) -> REGVALV_TAB
+{ Inherited(STAG*65A)
+	{
+		CDB_Product::Reference	=	"52188-089"
+		CDB_Product::Name			=	"STAG* 80"
+		CDB_TAProduct::SizeID		=	DN_80
+		CDB_RegulatingValve::CharactID	=	C_STAF*080
+	}
+}
+
+new:CDB_RegulatingValve(STAG*100A) -> REGVALV_TAB
+{ Inherited(STAG*65A)
+	{
+		CDB_Product::Reference	=	"52188-114"
+		CDB_Product::Name			=	"STAG* 100"
+		CDB_TAProduct::SizeID		=	DN_100
+		CDB_RegulatingValve::CharactID	=	C_STAF*100
+	}
+}
+
+new:CDB_RegulatingValve(STAG*125A) -> REGVALV_TAB
+{ Inherited(STAG*65A)
+	{
+		CDB_Product::Reference	=	"52188-141"
+		CDB_Product::Name			=	"STAG* 125"
+		CDB_TAProduct::SizeID		=	DN_125
+		CDB_RegulatingValve::CharactID	=	C_STAF*125
+	}
+}
+
+new:CDB_RegulatingValve(STAG*150A) -> REGVALV_TAB
+{ Inherited(STAG*65A)
+	{
+		CDB_Product::Reference	=	"52188-168"
+		CDB_Product::Name			=	"STAG* 150"
+		CDB_TAProduct::SizeID		=	DN_150
+		CDB_RegulatingValve::CharactID	=	C_STAF*150
+	}
+}
+
+// ** Available in Global and US version ** //
+
+new:CDB_RegulatingValve(STAG*65B) -> REGVALV_TAB
+{ Inherited(STAG*65A)
+	{
+		CDB_Product::Reference	=	"52188-076"
+		CDB_Product::Name			=	"IDS_NAME_STAG*65B"    // STAG* 65 or 2 1/2 "
+	}
+}
+
+new:CDB_RegulatingValve(STAG*125B) -> REGVALV_TAB
+{ Inherited(STAG*65A)
+	{
+		CDB_Product::Reference	=	"52188-140"
+		CDB_Product::Name			=	"IDS_NAME_STAG*125B"   // STAG* 125 or 5"
+		CDB_TAProduct::SizeID		=	DN_125
+		CDB_RegulatingValve::CharactID	=	C_STAF*125
+	}
+}
+
+new:CDB_RegulatingValve(STAG*150B) -> REGVALV_TAB
+{ Inherited(STAG*65A)
+	{
+		CDB_Product::Reference	=	"52188-165"
+		CDB_Product::Name			=	"IDS_NAME_STAG*150B "  // STAG* 150 or 6"
+		CDB_TAProduct::SizeID		=	DN_150
+		CDB_RegulatingValve::CharactID	=	C_STAF*150
+	}
+}
+
+//////////////// 
+// US Version  
+////////////////
+ 
+new:CDB_RegulatingValve(STAG*65C) -> REGVALV_TAB 
+{ Inherited(STAG*65A) 
+	{ 
+		CDB_Product::Reference	=	"52172-073"
+		CDB_Product::Name			=	"STAG* 2 1/2"" 
+		CDB_Product::VersionID	=	VERS_US 
+	} 
+}
+
+new:CDB_RegulatingValve(STAG*80C) -> REGVALV_TAB 
+{ Inherited(STAG*80A) 
+	{ 
+		CDB_Product::Reference	=	"52172-089"
+		CDB_Product::Name			=	"STAG* 3"" 
+		CDB_Product::VersionID	=	VERS_US 
+	} 
+} 
+
+new:CDB_RegulatingValve(STAG*100C) -> REGVALV_TAB 
+{ Inherited(STAG*100A) 
+	{ 
+		CDB_Product::Reference	=	"52172-114"
+		CDB_Product::Name			=	"STAG* 4"" 
+		CDB_Product::VersionID	=	VERS_US 
+	} 
+} 
+
+new:CDB_RegulatingValve(STAG*125C) -> REGVALV_TAB 
+{ Inherited(STAG*125A) 
+	{ 
+		CDB_Product::Reference	=	"52172-141"
+		CDB_Product::Name			=	"STAG* 5"" 
+		CDB_Product::VersionID	=	VERS_US 
+	} 
+} 
+
+new:CDB_RegulatingValve(STAG*150C) -> REGVALV_TAB 
+{ Inherited(STAG*150A) 
+	{ 
+		CDB_Product::Reference	=	"52172-168"
+		CDB_Product::Name			=	"STAG* 6"" 
+		CDB_Product::VersionID	=	VERS_US 
+	} 
+}
+
+////////////////////////////////////////////////////////////////
+//
+//		Table ACCREGVGR_STAD : Regulating valve accessory groups
+//
+//		Rules:
+//			ACXXXID \ &ACYYYID	// ACXXXID implies ACYYYID
+//			ACXXXID \ !ACYYYID	// ACXXXID excludes ACYYYID
+//			>ACXXXID			// ACXXXID is built-in
+//			^ACXXXID			// ACXXXID excludes all others
+//		  	*ACXXXID			// ACXXXID two pieces should be included
+//			#ACXXXID			// ACXXXID is distributed on each parent item (3 vessels (1 primary + 2 secondary) => 3 times the accessory).
+//			+ACXXXID 			// ACXXXID is an intersection between this group and an other. For this group accessory is NOT displayed
+//			++ACXXXID			// ACXXXID is an intersection between this group and an other. For this group accessory is displayed
+////////////////////////////////////////////////////////////////
+
+new:CDB_RuledTable(ACCSTAF*65) -> REGVACCGROUP_TAB
+{
+	{
+		"STAF*, STAF-SG*/SG and STAF-R* DN65"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	*ACSTAF3 \ !ACSTAF4 \ !ACSTAF8 \ !ACSTAF9			// 52179-008: Self-sealing measuring point. Length 45mm for DN65-400. With AMETAL/EPDM.
+	*ACSTAF4 \ !ACSTAF3 \ !ACSTAF8 \ !ACSTAF9			// 52179-608: Self-sealing measuring point. Length 101mm for DN65-400. With AMETAL/EPDM.
+	*ACRV2											    // 52179-006: Self-sealing measuring point extension. Length 60 mm. Can be installed without draining of the system.
+	*ACSTAF8 \ !ACSTAF3 \ !ACSTAF4 \ !ACSTAF9			// 52179-007: Self-sealing measuring point. Length 30mm for older STAD and STAF DN65-400. Max 150°C.
+	*ACSTAF9 \ !ACSTAF3 \ !ACSTAF4 \ !ACSTAF8			// 52179-607: Self-sealing measuring point. Length 90mm for older STAD and STAF DN65-400. Max 150°C.
+	ACVALVE1											// 52161-990: Identification tag. To write down information like reference, setting, flow and so on.
+	ACVALVE9 											// 52186-010: Handwheel. For STAF* DN65-150.
+	ACVALVE5         									// 52187-103: Allen key. 3mm for locking of setting (For DN20-150).
+	ACSTAF11											// 52189-865: Insulation. For heating/cooling. CFC-free polyurethane. Covered with grey PVC.
+	ACVALVE10											// 52186-015: Spindle extension kit. For STAF* DN65-150.
+}
+
+new:CDB_RuledTable(ACCSTAF*80) -> REGVACCGROUP_TAB
+{
+	{
+		"STAF*, STAF-SG*/SG and STAF-R* DN80"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	*ACSTAF3 \ !ACSTAF4 \ !ACSTAF8 \ !ACSTAF9			// 52179-008: Self-sealing measuring point. Length 45mm for DN65-400. With AMETAL/EPDM.
+	*ACSTAF4 \ !ACSTAF3 \ !ACSTAF8 \ !ACSTAF9			// 52179-608: Self-sealing measuring point. Length 101mm for DN65-400. With AMETAL/EPDM.
+	*ACRV2											    // 52179-006: Self-sealing measuring point extension. Length 60 mm. Can be installed without draining of the system.
+	*ACSTAF8 \ !ACSTAF3 \ !ACSTAF4 \ !ACSTAF9			// 52179-007: Self-sealing measuring point. Length 30mm for older STAD and STAF DN65-400. Max 150°C.
+	*ACSTAF9 \ !ACSTAF3 \ !ACSTAF4 \ !ACSTAF8			// 52179-607: Self-sealing measuring point. Length 90mm for older STAD and STAF DN65-400. Max 150°C.
+	ACVALVE1											// 52161-990: Identification tag. To write down information like reference, setting, flow and so on.
+	ACVALVE9 											// 52186-010: Handwheel. For STAF* DN65-150.
+	ACVALVE5         									// 52187-103: Allen key. 3mm for locking of setting (For DN20-150).
+	ACSTAF12											// 52189-880: Insulation. For heating/cooling. CFC-free polyurethane. Covered with grey PVC.
+	ACVALVE10											// 52186-015: Spindle extension kit. For STAF* DN65-150.
+}
+
+new:CDB_RuledTable(ACCSTAF*100) -> REGVACCGROUP_TAB
+{
+	{
+		"STAF*, STAF-SG*/SG and STAF-R* DN100"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	*ACSTAF3 \ !ACSTAF4 \ !ACSTAF8 \ !ACSTAF9			// 52179-008: Self-sealing measuring point. Length 45mm for DN65-400. With AMETAL/EPDM.
+	*ACSTAF4 \ !ACSTAF3 \ !ACSTAF8 \ !ACSTAF9			// 52179-608: Self-sealing measuring point. Length 101mm for DN65-400. With AMETAL/EPDM.
+	*ACRV2											    // 52179-006: Self-sealing measuring point extension. Length 60 mm. Can be installed without draining of the system.
+	*ACSTAF8 \ !ACSTAF3 \ !ACSTAF4 \ !ACSTAF9			// 52179-007: Self-sealing measuring point. Length 30mm for older STAD and STAF DN65-400. Max 150°C.
+	*ACSTAF9 \ !ACSTAF3 \ !ACSTAF4 \ !ACSTAF8			// 52179-607: Self-sealing measuring point. Length 90mm for older STAD and STAF DN65-400. Max 150°C.
+	ACVALVE1											// 52161-990: Identification tag. To write down information like reference, setting, flow and so on.
+	ACVALVE9 											// 52186-010: Handwheel. For STAF* DN65-150.
+	ACVALVE5         									// 52187-103: Allen key. 3mm for locking of setting (For DN20-150).
+	ACSTAF13											// 52189-890: Insulation. For heating/cooling. CFC-free polyurethane. Covered with grey PVC.
+	ACVALVE10											// 52186-015: Spindle extension kit. For STAF* DN65-150.
+}
+
+new:CDB_RuledTable(ACCSTAF*125) -> REGVACCGROUP_TAB
+{
+	{
+		"STAF*, STAF-SG*/SG and STAF-R* DN125"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	*ACSTAF3 \ !ACSTAF4 \ !ACSTAF8 \ !ACSTAF9			// 52179-008: Self-sealing measuring point. Length 45mm for DN65-400. With AMETAL/EPDM.
+	*ACSTAF4 \ !ACSTAF3 \ !ACSTAF8 \ !ACSTAF9			// 52179-608: Self-sealing measuring point. Length 101mm for DN65-400. With AMETAL/EPDM.
+	*ACRV2											    // 52179-006: Self-sealing measuring point extension. Length 60 mm. Can be installed without draining of the system.
+	*ACSTAF8 \ !ACSTAF3 \ !ACSTAF4 \ !ACSTAF9			// 52179-007: Self-sealing measuring point. Length 30mm for older STAD and STAF DN65-400. Max 150°C.
+	*ACSTAF9 \ !ACSTAF3 \ !ACSTAF4 \ !ACSTAF8			// 52179-607: Self-sealing measuring point. Length 90mm for older STAD and STAF DN65-400. Max 150°C.
+	ACVALVE1											// 52161-990: Identification tag. To write down information like reference, setting, flow and so on.
+	ACVALVE9 											// 52186-010: Handwheel. For STAF* DN65-150.
+	ACVALVE5         									// 52187-103: Allen key. 3mm for locking of setting (For DN20-150).
+	ACSTAF14											// 52189-891: Insulation. For heating/cooling. CFC-free polyurethane. Covered with grey PVC.
+	ACVALVE10											// 52186-015: Spindle extension kit. For STAF* DN65-150.
+}
+
+new:CDB_RuledTable(ACCSTAF*150) -> REGVACCGROUP_TAB
+{
+	{
+		"STAF*, STAF-SG*/SG and STAF-R* DN150"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	*ACSTAF3 \ !ACSTAF4 \ !ACSTAF8 \ !ACSTAF9			// 52179-008: Self-sealing measuring point. Length 45mm for DN65-400. With AMETAL/EPDM.
+	*ACSTAF4 \ !ACSTAF3 \ !ACSTAF8 \ !ACSTAF9			// 52179-608: Self-sealing measuring point. Length 101mm for DN65-400. With AMETAL/EPDM.
+	*ACRV2											    // 52179-006: Self-sealing measuring point extension. Length 60 mm. Can be installed without draining of the system.
+	*ACSTAF8 \ !ACSTAF3 \ !ACSTAF4 \ !ACSTAF9			// 52179-007: Self-sealing measuring point. Length 30mm for older STAD and STAF DN65-400. Max 150°C.
+	*ACSTAF9 \ !ACSTAF3 \ !ACSTAF4 \ !ACSTAF8			// 52179-607: Self-sealing measuring point. Length 90mm for older STAD and STAF DN65-400. Max 150°C.
+	ACVALVE1											// 52161-990: Identification tag. To write down information like reference, setting, flow and so on.
+	ACVALVE9 											// 52186-010: Handwheel. For STAF* DN65-150.
+	ACVALVE5         									// 52187-103: Allen key. 3mm for locking of setting (For DN20-150).
+	ACSTAF15											// 52189-892: Insulation. For heating/cooling. CFC-free polyurethane. Covered with grey PVC.		
+	ACVALVE10											// 52186-015: Spindle extension kit. For STAF* DN65-150.
+}
+
+new:CDB_RuledTable(ACCSTAG*65_150) -> REGVACCGROUP_TAB
+{
+	{
+		"STAG*/G DN65-150"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	*ACSTAF3 \ !ACSTAF4 								// 52179-008: Self-sealing measuring point. Length 45mm for DN65-400. With AMETAL/EPDM.
+	*ACSTAF4 \ !ACSTAF3 								// 52179-608: Self-sealing measuring point. Length 101mm for DN65-400. With AMETAL/EPDM.
+	*ACRV2											    // 52179-006: Self-sealing measuring point extension. Length 60 mm. Can be installed without draining of the system.
+	ACVALVE1											// 52161-990: Identification tag. To write down information like reference, setting, flow and so on.
+	ACVALVE9											// 52186-010: Handwheel. For STAF* DN65-150
+	ACVALVE5         									// 52187-103: Allen key. 3mm for locking of setting (For DN20-150).
+	ACVALVE10											// 52186-015: Spindle extension kit. For STAF* DN65-150.
+}
+
+
+////////////////////////////////////////////////////////////////
+//
+//		ROOT TABLE identification
+//
+////////////////////////////////////////////////////////////////
+
+ROOT_TABLE(ROOT_TABLE)

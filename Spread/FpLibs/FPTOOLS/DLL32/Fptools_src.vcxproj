@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>FPTOOLS</ProjectName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <ProjectGuid>{72559BF1-4E58-54D0-DEBE-4687847DBD24}</ProjectGuid>
+    <SccProvider>
+    </SccProvider>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\obju32\</OutDir>
+    <IntDir>.\obju32\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\objud32\</OutDir>
+    <IntDir>.\objud32\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>.\objud64\</OutDir>
+    <IntDir>.\objud64\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <PreprocessorDefinitions>_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;NDEBUG;UNICODE;VC60;WIN32;_WINDOWS;FP_DLL;VC50;TT_V2;NO_SMARTHEAP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\obju32\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\obju32\Fptools_src.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\obju32\</ObjectFileName>
+      <ProgramDataBaseFileName>.\obju32\</ProgramDataBaseFileName>
+      <DisableSpecificWarnings>4995</DisableSpecificWarnings>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MinimalRebuild>false</MinimalRebuild>
+      <FloatingPointExceptions>true</FloatingPointExceptions>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>
+      </OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <PreprocessorDefinitions>_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;NDEBUG;UNICODE;VC60;WIN32;_WINDOWS;FP_DLL;VC50;TT_V2;NO_SMARTHEAP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\obju32\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\obju32\Fptools_src.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\obju32\</ObjectFileName>
+      <ProgramDataBaseFileName>.\obju32\</ProgramDataBaseFileName>
+      <DisableSpecificWarnings>4995</DisableSpecificWarnings>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <OmitFramePointers>false</OmitFramePointers>
+      <FloatingPointExceptions>true</FloatingPointExceptions>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\obju32\Fptools_src.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions>_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;_UNICODE;_DEBUG;UNICODE;VC60;WIN32;_WINDOWS;FP_DLL;VC50;TT_V2;NO_SMARTHEAP</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\objud32\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\objud32\Fptools_src.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\objud32\</ObjectFileName>
+      <ProgramDataBaseFileName>.\objud32\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <UseUnicodeForAssemblerListing>true</UseUnicodeForAssemblerListing>
+      <StringPooling>false</StringPooling>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4995</DisableSpecificWarnings>
+      <MinimalRebuild />
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>
+      </OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\objud32\fptools.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PreprocessorDefinitions>_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;_UNICODE;_DEBUG;UNICODE;VC60;WIN32;_WINDOWS;FP_DLL;VC50;TT_V2;NO_SMARTHEAP</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\objud64\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\objud64\Fptools_src.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\objud64\</ObjectFileName>
+      <ProgramDataBaseFileName>.\objud64\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <UseUnicodeForAssemblerListing>true</UseUnicodeForAssemblerListing>
+      <StringPooling>false</StringPooling>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4995</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\objud32\Fptools_src.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\objud64\fptools.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\SRC\FPASSERT.C" />
+    <ClCompile Include="..\SRC\FPCONV3.CPP" />
+    <ClCompile Include="..\SRC\FPDATE.C" />
+    <ClCompile Include="..\SRC\FPDIB.C" />
+    <ClCompile Include="..\SRC\FPDT.C" />
+    <ClCompile Include="..\SRC\FPFILE.C" />
+    <ClCompile Include="..\SRC\FPGRAPHC.C" />
+    <ClCompile Include="..\SRC\FPHELP.C" />
+    <ClCompile Include="..\SRC\FPHUGE.C" />
+    <ClCompile Include="..\Src\fpload.c" />
+    <ClCompile Include="..\SRC\FPMEMMGR.C" />
+    <ClCompile Include="..\SRC\FPNCPNT.C" />
+    <ClCompile Include="..\SRC\FPNCPROP.C" />
+    <ClCompile Include="..\Src\Fppict.c" />
+    <ClCompile Include="..\Src\fpsave.c" />
+    <ClCompile Include="..\SRC\FPSTDPRP.C" />
+    <ClCompile Include="..\SRC\fpstrtod.c" />
+    <ClCompile Include="..\SRC\FPTIME.C" />
+    <ClCompile Include="..\SRC\FPTOOL01.C" />
+    <ClCompile Include="..\SRC\FPTOOL02.C" />
+    <ClCompile Include="..\SRC\FPTOOL03.C" />
+    <ClCompile Include="..\SRC\FPTOOL04.C" />
+    <ClCompile Include="..\SRC\FPTOOL05.C" />
+    <ClCompile Include="..\SRC\FPTOOL06.C" />
+    <ClCompile Include="..\SRC\FPTOOL07.C" />
+    <ClCompile Include="..\SRC\FPTOOL08.C" />
+    <ClCompile Include="..\SRC\FPTOOL09.C" />
+    <ClCompile Include="..\SRC\FPTOOL10.C" />
+    <ClCompile Include="..\SRC\FPTOOL11.C" />
+    <ClCompile Include="..\SRC\FPTOOL12.C" />
+    <ClCompile Include="..\SRC\FPTOOL14.C" />
+    <ClCompile Include="..\SRC\FPTOOL15.C" />
+    <ClCompile Include="..\SRC\FPTOOL16.C" />
+    <ClCompile Include="..\SRC\FPTOOL17.C" />
+    <ClCompile Include="..\SRC\FPTOOL19.C" />
+    <ClCompile Include="..\SRC\FPTOOL20.C" />
+    <ClCompile Include="..\SRC\FPTOOL21.C" />
+    <ClCompile Include="..\SRC\FPTOOL22.C" />
+    <ClCompile Include="..\SRC\FPTOOL25.C" />
+    <ClCompile Include="..\SRC\FPTOOL27.C" />
+    <ClCompile Include="..\SRC\FPTOOL29.C" />
+    <ClCompile Include="..\SRC\FPTOOL30.C" />
+    <ClCompile Include="..\SRC\FPTOOL31.C" />
+    <ClCompile Include="..\SRC\FPTOOL32.C" />
+    <ClCompile Include="..\SRC\FPTOOL40.C" />
+    <ClCompile Include="..\SRC\FPTOOL41.C" />
+    <ClCompile Include="..\SRC\FPTOOL42.C" />
+    <ClCompile Include="..\SRC\FPTOOL43.C" />
+    <ClCompile Include="..\SRC\FPTOOL44.C" />
+    <ClCompile Include="..\SRC\FPTOOL45.C" />
+    <ClCompile Include="..\SRC\FPTOOL46.C" />
+    <ClCompile Include="..\SRC\FPTOOL47.C" />
+    <ClCompile Include="..\SRC\FPTOOL50.C" />
+    <ClCompile Include="..\SRC\FPTOOL51.C" />
+    <ClCompile Include="..\SRC\FPTOOL52.C" />
+    <ClCompile Include="..\SRC\FPTOOL53.C" />
+    <ClCompile Include="..\SRC\FPTOOL54.C" />
+    <ClCompile Include="..\SRC\FPTOOL55.C" />
+    <ClCompile Include="..\SRC\FPTOOL56.C" />
+    <ClCompile Include="..\SRC\FPTOOL57.C" />
+    <ClCompile Include="..\SRC\FPTOOL58.C" />
+    <ClCompile Include="..\SRC\FPTOOL59.C" />
+    <ClCompile Include="..\SRC\FPTOOL60.C" />
+    <ClCompile Include="..\SRC\FPTOOL62.C" />
+    <ClCompile Include="..\SRC\FPVBX2.C" />
+    <ClCompile Include="..\SRC\FPWAPI1.CPP" />
+    <ClCompile Include="..\SRC\FPWAPI2.CPP" />
+    <ClCompile Include="..\SRC\FPWAPI3.CPP" />
+    <ClCompile Include="..\SRC\FPWAPI4.CPP" />
+    <ClCompile Include="..\SRC\FPWAPI5.CPP" />
+    <ClCompile Include="..\SRC\fpwapi6.cpp" />
+    <ClCompile Include="..\SRC\VBDATETM.C" />
+    <ClCompile Include="..\SRC\VBNCPNT.C" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\SRC\fphuge.h" />
+    <ClInclude Include="..\SRC\FPMEMMGR.H" />
+    <ClInclude Include="..\SRC\FPNCPNT.H" />
+    <ClInclude Include="..\SRC\FPNCPROP.H" />
+    <ClInclude Include="..\Src\fpsave.h" />
+    <ClInclude Include="..\SRC\FPSTDPRP.H" />
+    <ClInclude Include="..\SRC\LARGEINT.H" />
+    <ClInclude Include="..\SRC\VBDATETM.H" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

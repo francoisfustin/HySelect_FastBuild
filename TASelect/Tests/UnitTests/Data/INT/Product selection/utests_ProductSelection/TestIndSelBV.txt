@@ -1,0 +1,1635 @@
+#Start of test definition
+
+StartTechnicalParameters
+ApplicationType = 2
+AvailablePMPanels = 7
+BreakTankRequiredForWaterMakeUp = 1
+CVDefKvReynard = 1
+CVMaxDispDp = 200000
+CVMaxDpProp = 65000
+CVMinAuthCstFlow = 0.5
+CVMinAuthor = 0.25
+CVMinDpOnoff = 3000
+CVMinDpProp = 10000
+CVUseDpCPBand = 0
+CanChangePressureVolumeLimit = 0
+CurrencyID = CURRENCY_EUR
+DefaultCalculationNorm = PM_NORM_EN12828
+DefaultCoolingTps = 7
+DefaultFillTemperature = 15
+DefaultHeatingTps = 50
+DefaultISChangeOverCoolingSideAdditFamilyID = WATER_ADDIT
+DefaultISChangeOverCoolingSideAdditID = WATER
+DefaultISChangeOverCoolingSideDT = 6
+DefaultISChangeOverCoolingSidePcWeight = 0
+DefaultISChangeOverCoolingSideTps = 6
+DefaultISChangeOverHeatingSideAdditFamilyID = WATER_ADDIT
+DefaultISChangeOverHeatingSideAdditID = WATER
+DefaultISChangeOverHeatingSideDT = 20
+DefaultISChangeOverHeatingSidePcWeight = 0
+DefaultISChangeOverHeatingSideTps = 75
+DefaultISCoolingAdditFamilyID = WATER_ADDIT
+DefaultISCoolingAdditID = WATER
+DefaultISCoolingDT = 20
+DefaultISCoolingPcWeight = 0
+DefaultISCoolingTps = 60
+DefaultISHeatingAdditFamilyID = WATER_ADDIT
+DefaultISHeatingAdditID = WATER
+DefaultISHeatingDT = 5
+DefaultISHeatingPcWeight = 0
+DefaultISHeatingTps = 80
+DefaultISSolarAdditFamilyID = WATER_ADDIT
+DefaultISSolarAdditID = WATER
+DefaultISSolarDT = 20
+DefaultISSolarPcWeight = 0
+DefaultISSolarTps = 70
+DefaultMaxTempInCooling = 45
+DefaultMinTempInHeating = 5
+DefaultMinTempInSolar = 5
+DefaultPipeSerieID = STEEL_DIN2440
+DefaultPrjCoolingAdditID = WATER
+DefaultPrjCoolingDT = 5
+DefaultPrjCoolingPcWeight = 0
+DefaultPrjHeatingAdditID = WATER
+DefaultPrjHeatingDT = 5
+DefaultPrjHeatingPcWeight = 0
+DefaultSafetyPressureResponseValve = 300000
+DefaultSecondaryPumpHMin = 25000
+DefaultSmartCVLocation = 1
+DefaultStaticPressureOfWaterNetwork = 400000
+DefaultTAZ = 100
+DefaultWaterHardness = 1.78324958
+DefaultWaterMakeUpTemp = 15
+DegassingWaterReserveForVessel = 0.002
+DpCBCVDpcmin = 5000
+DpCBCVDplmin = 5000
+DpCHide = 0
+DpCHminFullyOpenMv = 0
+DpCMinDp = 5000
+DpCMvLocation = 0
+DpCMvWithSameSizeOnly = 0
+DpRefForBest6Way = 3000
+FixedOrificeMaxDp = 6000
+FixedOrificeMinDp = 2000
+FlowDeviationMinus = -0.1
+FlowDeviationPlus = 0.1
+FluidTempLimitEN12953 = 105
+InitialPressureMargin = 30000
+MaxNumberOfAdditionalVesselsInParallel = 4
+MaxNumberOfVentoInParallel = 2
+MaxSafetyValveInParallel = 3
+MaxSizeShift = 4
+MinPressureMargin = 20000
+PICvHide = 0
+PICvMinDp = 1000
+PSetupCompresso = 10000
+PSetupTransfero = 20000
+PipeMaxDp = 200
+PipeMaxVelocity = 2
+PipeMinDp = 10
+PipeMinVelocity = 0.3
+PipeTargetDp = 150
+PipeTargetVelocity = 1
+PipeTargetVelosityUsed = 0
+PressureVolumeLimit = 300000
+ProjectType = 1
+SafetyTempLimiterLimitEN12953 = 110
+SizeShiftAbove = 0
+SizeShiftBelow = -2
+SmartValveDpMaxForBestSuggestion = 20000
+TrvDefDpTotal = 10000
+TrvDefRoomTemperature = 20
+TrvDefSupplyTemperature = 80
+TrvMaxDp = 30000
+TrvMinDpRatio = 0.25
+UseDefaultFreezingPointAsMinTemperature = 1
+UseSimplyPst = 0
+UseVesselPressureVolumeLimit = 0
+ValveMaxDp = 200000
+ValveMin2Dp = 6000
+ValveMinDp = 3000
+VenturiMaxDp = 10000
+VenturiMinDp = 2000
+VesselSelectionRangePercentage = 0
+EndTechnicalParameters
+
+Test number = 0
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.011111111108
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_BV
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAF*100;STAF* 100;Cast iron;Flange;Standard;16;100 (4");8;8* (0.05);4596.41; ;4596.41;36113.9;-10/120;100 (4");139.908;1.28318
+Result number = 1;STAF*80;STAF* 80;Cast iron;Flange;Standard;16;80 (3");8;8* (0.05);10398; ;10398;175962;-10/120;100 (4");139.908;1.28318
+Result number = 2;STAF*65;STAF* 65;Cast iron;Flange;Standard;16;65 (2 1/2");8;8* (0.05);21773.3; ;21773.3;454712;-10/120;100 (4");139.908;1.28318
+Result number = 3;STAF-R*100;STAF-R* 100;Bronze;Flange;Standard;16;100 (4");8;8* (0.05);4596.41; ;4596.41;36113.9;-10/120;100 (4");139.908;1.28318
+Result number = 4;STAF-SG*100A;STAF-SG* 100;Ductile iron;Flange;Standard;25;100 (4");8;8* (0.05);4596.41; ;4596.41;36113.9;-10/120;100 (4");139.908;1.28318
+Result number = 5;STAF-SG*100B;STAF-SG* 4";Ductile iron;ANSI Flange;Standard;20;100 (4");8;8* (0.05);4596.41; ;4596.41;36113.9;-10/120;100 (4");139.908;1.28318
+Result number = 6;STAG*100A;STAG* 100;Ductile iron;Groove;Standard;20;100 (4");8;8* (0.05);4596.41; ;4596.41;36113.9;-10/120;100 (4");139.908;1.28318
+Result number = 7;STAF-R*80;STAF-R* 80;Bronze;Flange;Standard;16;80 (3");8;8* (0.05);10398; ;10398;175962;-10/120;100 (4");139.908;1.28318
+Result number = 8;STAF-SG*080A;STAF-SG* 80;Ductile iron;Flange;Standard;25;80 (3");8;8* (0.05);10398; ;10398;175962;-10/120;100 (4");139.908;1.28318
+Result number = 9;STAF-SG*080B;STAF-SG* 3";Ductile iron;ANSI Flange;Standard;20;80 (3");8;8* (0.05);10398; ;10398;175962;-10/120;100 (4");139.908;1.28318
+Result number = 10;STAG*80A;STAG* 80;Ductile iron;Groove;Standard;20;80 (3");8;8* (0.05);10398; ;10398;175962;-10/120;100 (4");139.908;1.28318
+Result number = 11;STAF-R*65;STAF-R* 65;Bronze;Flange;Standard;16;65 (2 1/2");8;8* (0.05);21773.3; ;21773.3;454712;-10/120;100 (4");139.908;1.28318
+Result number = 12;STAF-SG*065A;STAF-SG* 65;Ductile iron;Flange;Standard;25;65 (2 1/2");8;8* (0.05);21773.3; ;21773.3;454712;-10/120;100 (4");139.908;1.28318
+Result number = 13;STAF-SG*065B;STAF-SG* 2 1/2";Ductile iron;ANSI Flange;Standard;20;65 (2 1/2");8;8* (0.05);21773.3; ;21773.3;454712;-10/120;100 (4");139.908;1.28318
+Result number = 14;STAG*65A;STAG* 65;Ductile iron;Groove;Standard;20;65 (2 1/2");8;8* (0.05);21773.3; ;21773.3;454712;-10/120;100 (4");139.908;1.28318
+Result number = 15;STAG*65B;STAG* 65;Ductile iron;Groove;Standard;20;65 (2 1/2");8;8* (0.05);21773.3; ;21773.3;454712;-10/120;100 (4");139.908;1.28318
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 1
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0005555555554
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_BV
+ComboFamilyID = FAM_STAD-R*
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_DRAIN34
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STADR*25A_BV;STADR* 25;Ametal(tm);Thread;With drain 3/4";25;25 (1");4;4* (0.01);16313.2; ;16313.2;247720;-20/120;32 (1 1/4");105.791;0.548844
+Result number = 1;STADR*20A_BV;STADR* 20;Ametal(tm);Thread;With drain 3/4";25;20 (3/4");4;4* (0.01);56857.8; ;56857.8;782365;-20/120;32 (1 1/4");105.791;0.548844
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 2
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0005555555554
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_BV
+ComboFamilyID = FAM_STAS
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_SOLDER
+ComboVersionID = VERS_NODRAIN
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAS32_BV;STAS 1 1/4";Ametal(tm);Solder;Without drain;20;32 (1 1/4");3.42432;3.42 (0.01);3000; ;1950.75;18059.1;-20/120;32 (1 1/4");105.791;0.548844
+Result number = 1;STAS25_BV;STAS 1";Ametal(tm);Solder;Without drain;20;25 (1");4;4* (0.01);5192.9; ;5192.9;29948.8;-20/120;32 (1 1/4");105.791;0.548844
+Result number = 2;STAS20_BV;STAS 3/4";Ametal(tm);Solder;Without drain;20;20 (3/4");4;4* (0.01);12090.2; ;12090.2;108329;-20/120;32 (1 1/4");105.791;0.548844
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 3
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.016666666662
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_BV
+ComboFamilyID = FAM_STAF-SG
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 4
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.016666666662
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_BV
+ComboFamilyID = FAM_STAG
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_GROOVE
+ComboVersionID = VERS_US
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 5
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.016666666662
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_BV
+ComboFamilyID = FAM_STAF-R
+ComboMaterialID = BDY_BRONZE
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 6
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.016666666662
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_BVS
+ComboFamilyID = 
+ComboMaterialID = BDY_STEEL
+ComboConnectID = 
+ComboVersionID = VERS_FPM
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA143-125A_BVS;TA-BVS 143 DN125;Steel;Flange;FPM o-rings;16;125 (5");9;9* (0.5);4100.54; ;4100.54;115910;-20/200;125 (5");103.357;1.25566
+Result number = 1;TA140-125A_BVS;TA-BVS 140 DN125;Steel;Welding;FPM o-rings;25;125 (5");9;9* (0.5);4100.54; ;4100.54;115910;-20/200;125 (5");103.357;1.25566
+Result number = 2;TA143-100A_BVS;TA-BVS 143 DN100;Steel;Flange;FPM o-rings;16;100 (4");9;9* (0.5);7586.42; ;7586.42;275863;-20/200;125 (5");103.357;1.25566
+Result number = 3;TA140-100A_BVS;TA-BVS 140 DN100;Steel;Welding;FPM o-rings;25;100 (4");9;9* (0.5);7586.42; ;7586.42;275863;-20/200;125 (5");103.357;1.25566
+Result number = 4;TA143-80A_BVS;TA-BVS 143 DN80;Steel;Flange;FPM o-rings;16;80 (3");9;9* (0.5);30345.7; ;30345.7;651418;-20/200;125 (5");103.357;1.25566
+Result number = 5;TA140-80A_BVS;TA-BVS 140 DN80;Steel;Welding;FPM o-rings;25;80 (3");9;9* (0.5);30345.7; ;30345.7;651418;-20/200;125 (5");103.357;1.25566
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 7
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_BVS
+ComboFamilyID = FAM_TA140
+ComboMaterialID = BDY_STEEL
+ComboConnectID = CONN_WELDING
+ComboVersionID = VERS_FPM
+ComboPNID = PN_6
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 8
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.005555555554
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_BVS
+ComboFamilyID = FAM_TA143
+ComboMaterialID = BDY_STEEL
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_FPM
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA143-80A_BVS;TA-BVS 143 DN80;Steel;Flange;FPM o-rings;16;80 (3");9;9* (0.5);3371.74; ;3371.74;72379.8;-20/200;80 (3");139.525;1.08347
+Result number = 1;TA143-65A_BVS;TA-BVS 143 DN65;Steel;Flange;FPM o-rings;16;65 (2 1/2");9;9* (0.5);10500.2; ;10500.2;196421;-20/200;80 (3");139.525;1.08347
+Result number = 2;TA143*-50A_BVS;TA-BVS* 143 DN50;Steel;Flange;FPM o-rings;25;50 (2");9;9* (0.5);24952.9; ;24952.9;584890;-20/120;80 (3");139.525;1.08347
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 9
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.005555555554
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_BVSS
+ComboFamilyID = 
+ComboMaterialID = BDY_STSTEEL
+ComboConnectID = 
+ComboVersionID = VERS_FPM
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA243-80A_BVS;TA-BVS 243 DN80;Stainless steel;Flange;FPM o-rings;16;80 (3");9;9* (0.5);3371.74; ;3371.74;72379.8;-20/200;80 (3");139.525;1.08347
+Result number = 1;TA240-80A_BVS;TA-BVS 240 DN80;Stainless steel;Welding;FPM o-rings;25;80 (3");9;9* (0.5);3371.74; ;3371.74;72379.8;-20/200;80 (3");139.525;1.08347
+Result number = 2;TA243-65A_BVS;TA-BVS 243 DN65;Stainless steel;Flange;FPM o-rings;16;65 (2 1/2");9;9* (0.5);10500.2; ;10500.2;196421;-20/200;80 (3");139.525;1.08347
+Result number = 3;TA240-65A_BVS;TA-BVS 240 DN65;Stainless steel;Welding;FPM o-rings;25;65 (2 1/2");9;9* (0.5);10500.2; ;10500.2;196421;-20/200;80 (3");139.525;1.08347
+Result number = 4;TA243*-50A_BVS;TA-BVS* 243 DN50;Stainless steel;Flange;FPM o-rings;25;50 (2");9;9* (0.5);24952.9; ;24952.9;584890;-20/120;80 (3");139.525;1.08347
+Result number = 5;TA240*-50A_BVS;TA-BVS* 240 DN50;Stainless steel;Welding;FPM o-rings;25;50 (2");9;9* (0.5);24952.9; ;24952.9;584890;-20/120;80 (3");139.525;1.08347
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 10
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.005555555554
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_BVSS
+ComboFamilyID = FAM_TA240
+ComboMaterialID = BDY_STSTEEL
+ComboConnectID = CONN_WELDING
+ComboVersionID = VERS_FPM
+ComboPNID = PN_6
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 11
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.005555555554
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_BVSS
+ComboFamilyID = FAM_TA243
+ComboMaterialID = BDY_STSTEEL
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_FPM
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA243-80A_BVS;TA-BVS 243 DN80;Stainless steel;Flange;FPM o-rings;16;80 (3");9;9* (0.5);3371.74; ;3371.74;72379.8;-20/200;80 (3");139.525;1.08347
+Result number = 1;TA243-65A_BVS;TA-BVS 243 DN65;Stainless steel;Flange;FPM o-rings;16;65 (2 1/2");9;9* (0.5);10500.2; ;10500.2;196421;-20/200;80 (3");139.525;1.08347
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 12
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.005555555554
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_DRV
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;MDF2DN80_DRV;MD F2 DN80;Cast iron;Flange;Standard;16;80 (3");7.59092;7.6 (0.05);3000; ;2731.11;46763.4;-10/120;80 (3");139.525;1.08347
+Result number = 1;MDF2DN65_DRV;MD F2 DN65-2;Cast iron;Flange;Standard;16;65 (2 1/2");8;8* (0.05);5443.32; ;5443.32;31561.1;-10/120;80 (3");139.525;1.08347
+Result number = 2;STA*50A_BV;STA* 50;Ametal(tm);Thread;With drain 1/2";25;50 (2");4;4* (0.01);37645.2; ;37645.2;301826;-20/120;80 (3");139.525;1.08347
+Result number = 3;MDF2SGDN80_DRV;MD F2 SG DN80;Ductile iron;Flange;Standard;25;80 (3");7.59092;7.6 (0.05);3000; ;2731.11;46763.4;-20/120;80 (3");139.525;1.08347
+Result number = 4;MDF2GE80_BV;MD F2 GE DN80;Ductile iron;Groove;Standard;25;80 (3");7.59092;7.6 (0.05);3000; ;2731.11;46763.4;-20/120;80 (3");139.525;1.08347
+Result number = 5;MDF2SGDN65_DRV;MD F2 SG DN65-2;Ductile iron;Flange;Standard;25;65 (2 1/2");8;8* (0.05);5443.32; ;5443.32;31561.1;-20/120;80 (3");139.525;1.08347
+Result number = 6;MDF2GE65-2_BV;MD F2 GE DN65-2;Ductile iron;Groove;Standard;25;65 (2 1/2");8;8* (0.05);5443.32; ;5443.32;31561.1;-20/120;80 (3");139.525;1.08347
+Result number = 7;MDF2SGDN50_DRV;MD F2 SG DN50;Ductile iron;Flange;Standard;16/25;50 (2");4;4* (0.01);36065.4; ;36065.4;286548;-20/120;80 (3");139.525;1.08347
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 13
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.005555555554
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_DRV
+ComboFamilyID = FAM_MDF2SG
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;MDF2SGDN80_DRV;MD F2 SG DN80;Ductile iron;Flange;Standard;25;80 (3");7.59092;7.6 (0.05);3000; ;2731.11;46763.4;-20/120;80 (3");139.525;1.08347
+Result number = 1;MDF2SGDN65_DRV;MD F2 SG DN65-2;Ductile iron;Flange;Standard;25;65 (2 1/2");8;8* (0.05);5443.32; ;5443.32;31561.1;-20/120;80 (3");139.525;1.08347
+Result number = 2;MDF2SGDN50_DRV;MD F2 SG DN50;Ductile iron;Flange;Standard;16/25;50 (2");4;4* (0.01);36065.4; ;36065.4;286548;-20/120;80 (3");139.525;1.08347
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 14
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.005555555554
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_DRV
+ComboFamilyID = FAM_MDF2
+ComboMaterialID = BDY_CASTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;MDF2DN80_DRV;MD F2 DN80;Cast iron;Flange;Standard;16;80 (3");7.59092;7.6 (0.05);3000; ;2731.11;46763.4;-10/120;80 (3");139.525;1.08347
+Result number = 1;MDF2DN65_DRV;MD F2 DN65-2;Cast iron;Flange;Standard;16;65 (2 1/2");8;8* (0.05);5443.32; ;5443.32;31561.1;-10/120;80 (3");139.525;1.08347
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 15
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.005555555554
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_DRV
+ComboFamilyID = FAM_MDF2GE
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_GROOVE
+ComboVersionID = VERS_STD
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;MDF2GE80_BV;MD F2 GE DN80;Ductile iron;Groove;Standard;25;80 (3");7.59092;7.6 (0.05);3000; ;2731.11;46763.4;-20/120;80 (3");139.525;1.08347
+Result number = 1;MDF2GE65-2_BV;MD F2 GE DN65-2;Ductile iron;Groove;Standard;25;65 (2 1/2");8;8* (0.05);5443.32; ;5443.32;31561.1;-20/120;80 (3");139.525;1.08347
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 16
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.005555555554
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_DRV
+ComboFamilyID = FAM_STA*
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_DRAIN12
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STA*50A_BV;STA* 50;Ametal(tm);Thread;With drain 1/2";25;50 (2");4;4* (0.01);37645.2; ;37645.2;301826;-20/120;80 (3");139.525;1.08347
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 17
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.005555555554
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_FO
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;MDF0DN80A_FO;MD F0 DN80;Stainless steel;Flange;PT 90;16;80 (3");0;-;812.562;2731.11;0;0;-10/120;80 (3");139.525;1.08347
+Result number = 1;MDF0DN80C_FO;MD F0 DN80;Stainless steel;Flange;PT 90;25;80 (3");0;-;812.562;2731.11;0;0;-10/120;80 (3");139.525;1.08347
+Result number = 2;MDF0DN80D_FO;MD F0 DN80;Stainless steel;Flange;PT 90;40;80 (3");0;-;812.562;2731.11;0;0;-10/120;80 (3");139.525;1.08347
+Result number = 3;MDF0DN65A_FO;MD F0 DN65;Stainless steel;Flange;PT 90;16;65 (2 1/2");0;-;1658.29;4855.31;0;0;-10/120;80 (3");139.525;1.08347
+Result number = 4;MDF0DN65C_FO;MD F0 DN65;Stainless steel;Flange;PT 90;25;65 (2 1/2");0;-;1658.29;4855.31;0;0;-10/120;80 (3");139.525;1.08347
+Result number = 5;MDF0DN65D_FO;MD F0 DN65;Stainless steel;Flange;PT 90;40;65 (2 1/2");0;-;1658.29;4855.31;0;0;-10/120;80 (3");139.525;1.08347
+Result number = 6;MD01DN50A_FO;MD 01 DN50;Ametal(tm);Thread;PT 90;20;50 (2");0;-;7671.42;18505.5;0;0;-10/120;80 (3");139.525;1.08347
+Result number = 7;MD11DN50A_FO;MD 11 DN50;Ametal(tm);Thread;PT 90;20;50 (2");0;-;7671.42;18505.5;0;0;-10/120;80 (3");139.525;1.08347
+Result number = 8;MDF0DN50A_FO;MD F0 DN50;Stainless steel;Flange;PT 90;16;50 (2");0;-;7586.42;18505.5;0;0;-10/120;80 (3");139.525;1.08347
+Result number = 9;MDF0DN50C_FO;MD F0 DN50;Stainless steel;Flange;PT 90;25;50 (2");0;-;7586.42;18505.5;0;0;-10/120;80 (3");139.525;1.08347
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 18
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.005555555554
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_FO
+ComboFamilyID = FAM_MD01
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_PT90
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;MD01DN50A_FO;MD 01 DN50;Ametal(tm);Thread;PT 90;20;50 (2");0;-;7671.42;18505.5;0;0;-10/120;80 (3");139.525;1.08347
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 19
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.005555555554
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_FO
+ComboFamilyID = FAM_MD11
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_PT90
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;MD11DN50A_FO;MD 11 DN50;Ametal(tm);Thread;PT 90;20;50 (2");0;-;7671.42;18505.5;0;0;-10/120;80 (3");139.525;1.08347
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 20
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_FO
+ComboFamilyID = FAM_MD12
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_PT90
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;MD12DN15A_FO;MD 12 DN15;Ametal(tm);Thread;PT 90;20;15 (1/2");0;-;68277.8;84293.6;0;0;-10/120;20 (3/4");101.525;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 21
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_FO
+ComboFamilyID = FAM_MD13
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_PT90
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;MD13DN15A_FO;MD 13 DN15;Ametal(tm);Thread;PT 90;20;15 (1/2");0;-;15482.5;20314;0;0;-10/120;20 (3/4");101.525;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 22
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_FO
+ComboFamilyID = FAM_MDF0
+ComboMaterialID = BDY_STSTEEL
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_PT90
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;MDF0DN20A_FO;MD F0 DN20;Stainless steel;Flange;PT 90;16;20 (3/4");0;-;682.778;1122.25;0;0;-10/120;20 (3/4");101.525;0.379027
+Result number = 1;MDF0DN20C_FO;MD F0 DN20;Stainless steel;Flange;PT 90;25;20 (3/4");0;-;682.778;1122.25;0;0;-10/120;20 (3/4");101.525;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 23
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_RV
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TRIMA20E_RV;TRIM A 20;Ametal(tm);Thread;Straight;16;20 (3/4");3.73537;3.75 (0.25);3000; ;1214.39;12912.3;-10/120;20 (3/4");101.525;0.379027
+Result number = 1;TRIMA20A_RV;TRIM A 20;Ametal(tm);Thread male/Thread;Straight;16;20 (3/4");3.73537;3.75 (0.25);3000; ;1214.39;12912.3;-10/120;20 (3/4");101.525;0.379027
+Result number = 2;TRIMA20B_RV;TRIM A 20;Ametal(tm);Thread male/Thread;Angle;16;20 (3/4");3.73537;3.75 (0.25);3000; ;1214.39;12912.3;-10/120;20 (3/4");101.525;0.379027
+Result number = 3;TRIMA20C_RV;TRIM A 20;Ametal(tm);Rad. union/Thread;Straight;16;20 (3/4");3.73537;3.75 (0.25);3000; ;1214.39;12912.3;-10/120;20 (3/4");101.525;0.379027
+Result number = 4;TRIMA20D_RV;TRIM A 20;Ametal(tm);Rad. union/Thread;Angle;16;20 (3/4");3.73537;3.75 (0.25);3000; ;1214.39;12912.3;-10/120;20 (3/4");101.525;0.379027
+Result number = 5;RGTC_20D_RV;Regutec 20 (3/4");Gunmetal nickel-plated;Rad. union/Thread;Straight;10;20 (3/4");4;4* (0.5);6598.83; ;6598.83;15239.6;-10/120;20 (3/4");101.525;0.379027
+Result number = 6;RGTC_20A_RV;Regutec 20 (3/4");Gunmetal nickel-plated;Rad. union/Thread;Angle;10;20 (3/4");4;4* (0.5);6598.83; ;6598.83;15239.6;-10/120;20 (3/4");101.525;0.379027
+Result number = 7;TRIMA15E_RV;TRIM A 15;Ametal(tm);Thread;Straight;16;15 (1/2");5.25;5.25* (0.25);6800.23; ;6800.23;60207.1;-10/120;20 (3/4");101.525;0.379027
+Result number = 8;TRIMA15A_RV;TRIM A 15;Ametal(tm);Thread male/Thread;Straight;16;15 (1/2");5.25;5.25* (0.25);6800.23; ;6800.23;60207.1;-10/120;20 (3/4");101.525;0.379027
+Result number = 9;TRIMA15B_RV;TRIM A 15;Ametal(tm);Thread male/Thread;Angle;16;15 (1/2");5.25;5.25* (0.25);6800.23; ;6800.23;60207.1;-10/120;20 (3/4");101.525;0.379027
+Result number = 10;TRIMA15C_RV;TRIM A 15;Ametal(tm);Rad. union/Thread;Straight;16;15 (1/2");5.25;5.25* (0.25);6800.23; ;6800.23;60207.1;-10/120;20 (3/4");101.525;0.379027
+Result number = 11;TRIMA15D_RV;TRIM A 15;Ametal(tm);Rad. union/Thread;Angle;16;15 (1/2");5.25;5.25* (0.25);6800.23; ;6800.23;60207.1;-10/120;20 (3/4");101.525;0.379027
+Result number = 12;RGTC_15D_RV;Regutec 15 (1/2");Gunmetal nickel-plated;Rad. union/Thread;Straight;10;15 (1/2");4;4* (0.5);8118.64; ;8118.64;16514.4;-10/120;20 (3/4");101.525;0.379027
+Result number = 13;RGTC_15A_RV;Regutec 15 (1/2");Gunmetal nickel-plated;Rad. union/Thread;Angle;10;15 (1/2");4;4* (0.5);8118.64; ;8118.64;16514.4;-10/120;20 (3/4");101.525;0.379027
+Result number = 14;RGTC_15F_RV;Regutec 15 (1/2");Gunmetal nickel-plated;Rad. union/Thread male;Straight;10;15 (1/2");4;4* (0.5);8118.64; ;8118.64;16514.4;-10/120;20 (3/4");101.525;0.379027
+Result number = 15;RGTC_15H_RV;Regutec F 15 (1/2");Gunmetal nickel-plated;Rad. union/Thread male;Straight;10;15 (1/2");4;4* (0.5);8118.64; ;8118.64;16514.4;-10/120;20 (3/4");101.525;0.379027
+Result number = 16;RGTC_15C_RV;Regutec 15 (1/2");Gunmetal nickel-plated;Rad. union/Thread male;Angle;10;15 (1/2");4;4* (0.5);8118.64; ;8118.64;16514.4;-10/120;20 (3/4");101.525;0.379027
+Result number = 17;RGTC_15G_RV;Regutec F 15 (1/2");Gunmetal nickel-plated;Rad. union/Thread male;Angle;10;15 (1/2");4;4* (0.5);8118.64; ;8118.64;16514.4;-10/120;20 (3/4");101.525;0.379027
+Result number = 18;RGTC_10D_RV;Regutec 10 (3/8");Gunmetal nickel-plated;Rad. union/Thread;Straight;10;10 (3/8");4;4* (0.5);8708.9; ;8708.9;17357.5;-10/120;20 (3/4");101.525;0.379027
+Result number = 19;RGTC_10A_RV;Regutec 10(3/8");Gunmetal nickel-plated;Rad. union/Thread;Angle;10;10 (3/8");4;4* (0.5);8708.9; ;8708.9;17357.5;-10/120;20 (3/4");101.525;0.379027
+Result number = 20;TRIMA10E_RV;TRIM A 10;Ametal(tm);Thread;Straight;16;10 (3/8");5;5* (0.25);12517.5; ;12517.5;205229;-10/120;20 (3/4");101.525;0.379027
+Result number = 21;TRIMA10A_RV;TRIM A 10;Ametal(tm);Thread male/Thread;Straight;16;10 (3/8");5;5* (0.25);12517.5; ;12517.5;205229;-10/120;20 (3/4");101.525;0.379027
+Result number = 22;TRIMA10B_RV;TRIM A 10;Ametal(tm);Thread male/Thread;Angle;16;10 (3/8");5;5* (0.25);12517.5; ;12517.5;205229;-10/120;20 (3/4");101.525;0.379027
+Result number = 23;TRIMA10C_RV;TRIM A 10;Ametal(tm);Rad. union/Thread;Straight;16;10 (3/8");5;5* (0.25);12517.5; ;12517.5;205229;-10/120;20 (3/4");101.525;0.379027
+Result number = 24;TRIMA10D_RV;TRIM A 10;Ametal(tm);Rad. union/Thread;Angle;16;10 (3/8");5;5* (0.25);12517.5; ;12517.5;205229;-10/120;20 (3/4");101.525;0.379027
+Result number = 25;TRIM10_RV;TRIM 10;Ametal(tm);Swiv. nut/Thread male;Straight;16;10 (3/8");4.5;4.5* (0.25);30246; ;30246;289566;-10/120;20 (3/4");101.525;0.379027
+Result number = 26;STK20_RV;STK 20;Ametal(tm);Thread;Straight;16;20 (3/4");2.8619;2.9 (0.1);3000; ;1214.71;4850.14;-10/120;20 (3/4");101.525;0.379027
+Result number = 27;RGLX_20D_RV;Regulux 20 (3/4");Gunmetal nickel-plated;Rad. union/Thread;Straight;10;20 (3/4");4;4* (0.5);14323.2; ;14323.2;58177.5;-10/120;20 (3/4");101.525;0.379027
+Result number = 28;RGLX_20A_RV;Regulux 20 (3/4");Gunmetal nickel-plated;Rad. union/Thread;Angle;10;20 (3/4");4;4* (0.5);14323.2; ;14323.2;58177.5;-10/120;20 (3/4");101.525;0.379027
+Result number = 29;STK15_RV;STK 15;Ametal(tm);Thread;Straight;16;15 (1/2");1.8;1.8* (0.1);7573.58; ;7573.58;30226.3;-10/120;20 (3/4");101.525;0.379027
+Result number = 30;RGLX_15D_RV;Regulux 15 (1/2");Gunmetal nickel-plated;Rad. union/Thread;Straight;10;15 (1/2");4;4* (0.5);14323.2; ;14323.2;58177.5;-10/120;20 (3/4");101.525;0.379027
+Result number = 31;RGLX_15A_RV;Regulux 15 (1/2");Gunmetal nickel-plated;Rad. union/Thread;Angle;10;15 (1/2");4;4* (0.5);14323.2; ;14323.2;58177.5;-10/120;20 (3/4");101.525;0.379027
+Result number = 32;RGLX_15F_RV;Regulux 15 (1/2");Gunmetal nickel-plated;Rad. union/Thread male;Straight;10;15 (1/2");4;4* (0.5);14323.2; ;14323.2;58177.5;-10/120;20 (3/4");101.525;0.379027
+Result number = 33;RGLX_15C_RV;Regulux 15 (1/2");Gunmetal nickel-plated;Rad. union/Thread male;Angle;10;15 (1/2");4;4* (0.5);14323.2; ;14323.2;58177.5;-10/120;20 (3/4");101.525;0.379027
+Result number = 34;RGLX_15E_RV;Regulux 15 (1/2");Gunmetal nickel-plated;Rad. union/PressFit;Straight;10;15 (1/2");4;4* (0.5);14323.2; ;14323.2;58177.5;-10/120;20 (3/4");101.525;0.379027
+Result number = 35;RGLX_15B_RV;Regulux 15 (1/2");Gunmetal nickel-plated;Rad. union/PressFit;Angle;10;15 (1/2");4;4* (0.5);14323.2; ;14323.2;58177.5;-10/120;20 (3/4");101.525;0.379027
+Result number = 36;RGLX_10D_RV;Regulux 10 (3/8");Gunmetal nickel-plated;Rad. union/Thread;Straight;10;10 (3/8");4;4* (0.5);14323.2; ;14323.2;58177.5;-10/120;20 (3/4");101.525;0.379027
+Result number = 37;RGLX_10A_RV;Regulux 10 (3/8");Gunmetal nickel-plated;Rad. union/Thread;Angle;10;10 (3/8");4;4* (0.5);14323.2; ;14323.2;58177.5;-10/120;20 (3/4");101.525;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 24
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_RV
+ComboFamilyID = FAM_TRIM
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_SWNUT_THRM
+ComboVersionID = VERS_STRAIGHT
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TRIM10_RV;TRIM 10;Ametal(tm);Swiv. nut/Thread male;Straight;16;10 (3/8");4.5;4.5* (0.25);30246; ;30246;289566;-10/120;20 (3/4");101.525;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 25
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_RV
+ComboFamilyID = FAM_TRIMA
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TRIMA20E_RV;TRIM A 20;Ametal(tm);Thread;Straight;16;20 (3/4");3.73537;3.75 (0.25);3000; ;1214.39;12912.3;-10/120;20 (3/4");101.525;0.379027
+Result number = 1;TRIMA20A_RV;TRIM A 20;Ametal(tm);Thread male/Thread;Straight;16;20 (3/4");3.73537;3.75 (0.25);3000; ;1214.39;12912.3;-10/120;20 (3/4");101.525;0.379027
+Result number = 2;TRIMA20B_RV;TRIM A 20;Ametal(tm);Thread male/Thread;Angle;16;20 (3/4");3.73537;3.75 (0.25);3000; ;1214.39;12912.3;-10/120;20 (3/4");101.525;0.379027
+Result number = 3;TRIMA20C_RV;TRIM A 20;Ametal(tm);Rad. union/Thread;Straight;16;20 (3/4");3.73537;3.75 (0.25);3000; ;1214.39;12912.3;-10/120;20 (3/4");101.525;0.379027
+Result number = 4;TRIMA20D_RV;TRIM A 20;Ametal(tm);Rad. union/Thread;Angle;16;20 (3/4");3.73537;3.75 (0.25);3000; ;1214.39;12912.3;-10/120;20 (3/4");101.525;0.379027
+Result number = 5;TRIMA15E_RV;TRIM A 15;Ametal(tm);Thread;Straight;16;15 (1/2");5.25;5.25* (0.25);6800.23; ;6800.23;60207.1;-10/120;20 (3/4");101.525;0.379027
+Result number = 6;TRIMA15A_RV;TRIM A 15;Ametal(tm);Thread male/Thread;Straight;16;15 (1/2");5.25;5.25* (0.25);6800.23; ;6800.23;60207.1;-10/120;20 (3/4");101.525;0.379027
+Result number = 7;TRIMA15B_RV;TRIM A 15;Ametal(tm);Thread male/Thread;Angle;16;15 (1/2");5.25;5.25* (0.25);6800.23; ;6800.23;60207.1;-10/120;20 (3/4");101.525;0.379027
+Result number = 8;TRIMA15C_RV;TRIM A 15;Ametal(tm);Rad. union/Thread;Straight;16;15 (1/2");5.25;5.25* (0.25);6800.23; ;6800.23;60207.1;-10/120;20 (3/4");101.525;0.379027
+Result number = 9;TRIMA15D_RV;TRIM A 15;Ametal(tm);Rad. union/Thread;Angle;16;15 (1/2");5.25;5.25* (0.25);6800.23; ;6800.23;60207.1;-10/120;20 (3/4");101.525;0.379027
+Result number = 10;TRIMA10E_RV;TRIM A 10;Ametal(tm);Thread;Straight;16;10 (3/8");5;5* (0.25);12517.5; ;12517.5;205229;-10/120;20 (3/4");101.525;0.379027
+Result number = 11;TRIMA10A_RV;TRIM A 10;Ametal(tm);Thread male/Thread;Straight;16;10 (3/8");5;5* (0.25);12517.5; ;12517.5;205229;-10/120;20 (3/4");101.525;0.379027
+Result number = 12;TRIMA10B_RV;TRIM A 10;Ametal(tm);Thread male/Thread;Angle;16;10 (3/8");5;5* (0.25);12517.5; ;12517.5;205229;-10/120;20 (3/4");101.525;0.379027
+Result number = 13;TRIMA10C_RV;TRIM A 10;Ametal(tm);Rad. union/Thread;Straight;16;10 (3/8");5;5* (0.25);12517.5; ;12517.5;205229;-10/120;20 (3/4");101.525;0.379027
+Result number = 14;TRIMA10D_RV;TRIM A 10;Ametal(tm);Rad. union/Thread;Angle;16;10 (3/8");5;5* (0.25);12517.5; ;12517.5;205229;-10/120;20 (3/4");101.525;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 26
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_RV
+ComboFamilyID = FAM_TRIMA
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THRM_THR
+ComboVersionID = VERS_ANGLE
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TRIMA20B_RV;TRIM A 20;Ametal(tm);Thread male/Thread;Angle;16;20 (3/4");3.73537;3.75 (0.25);3000; ;1214.39;12912.3;-10/120;20 (3/4");101.525;0.379027
+Result number = 1;TRIMA15B_RV;TRIM A 15;Ametal(tm);Thread male/Thread;Angle;16;15 (1/2");5.25;5.25* (0.25);6800.23; ;6800.23;60207.1;-10/120;20 (3/4");101.525;0.379027
+Result number = 2;TRIMA10B_RV;TRIM A 10;Ametal(tm);Thread male/Thread;Angle;16;10 (3/8");5;5* (0.25);12517.5; ;12517.5;205229;-10/120;20 (3/4");101.525;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 27
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_RV
+ComboFamilyID = FAM_RADITRIMA
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 28
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_RV
+ComboFamilyID = FAM_STK
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STRAIGHT
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STK20_RV;STK 20;Ametal(tm);Thread;Straight;16;20 (3/4");2.8619;2.9 (0.1);3000; ;1214.71;4850.14;-10/120;20 (3/4");101.525;0.379027
+Result number = 1;STK15_RV;STK 15;Ametal(tm);Thread;Straight;16;15 (1/2");1.8;1.8* (0.1);7573.58; ;7573.58;30226.3;-10/120;20 (3/4");101.525;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 29
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_RV
+ComboFamilyID = FAM_REGUTEC
+ComboMaterialID = BDY_GUNMETALNIKPLT
+ComboConnectID = CONN_RADUN_THRM
+ComboVersionID = VERS_STRAIGHT
+ComboPNID = PN_2
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;RGTC_15F_RV;Regutec 15 (1/2");Gunmetal nickel-plated;Rad. union/Thread male;Straight;10;15 (1/2");4;4* (0.5);8118.64; ;8118.64;16514.4;-10/120;20 (3/4");101.525;0.379027
+Result number = 1;RGTC_15H_RV;Regutec F 15 (1/2");Gunmetal nickel-plated;Rad. union/Thread male;Straight;10;15 (1/2");4;4* (0.5);8118.64; ;8118.64;16514.4;-10/120;20 (3/4");101.525;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 30
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_RV
+ComboFamilyID = FAM_REGULUX
+ComboMaterialID = BDY_GUNMETALNIKPLT
+ComboConnectID = CONN_RADUN_PFIT
+ComboVersionID = VERS_ANGLE
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 31
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_TBV
+ComboFamilyID = FAM_TBV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = 
+ComboVersionID = VERS_NODRAIN
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TBV20NF_TBV;TBV 20NF;Ametal(tm);Thread;Without drain;16;20 (3/4");8.80852;8.75 (0.25);3000; ;2126.41;23111;-20/120;20 (3/4");101.525;0.379027
+Result number = 1;TBV15NF_TBV;TBV 15NF;Ametal(tm);Thread;Without drain;16;15 (1/2");10;10* (0.25);7573.49; ;7573.49;68011.6;-20/120;20 (3/4");101.525;0.379027
+Result number = 2;TBV15LF_TBV;TBV 15LF;Ametal(tm);Thread;Without drain;16;15 (1/2");10;10* (0.25);30294.3; ;30294.3;252276;-20/120;20 (3/4");101.525;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 32
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_TBV
+ComboFamilyID = FAM_TBV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADN
+ComboVersionID = VERS_NODRAIN
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 33
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = PowerDTMode
+Flow = 1.215157780947e-05
+Power = 1000
+DT = 20
+DpEnabled = true
+Dp = 50000
+ComboTypeID = RVTYPE_BV
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAD*15A_BV;STAD* 15;Ametal(tm);Thread;Without drain;25;15 (1/2");0.187089;0.19 (0.01);50000; ;29.1602; ;-20/120;10 (3/8");12.7185;0.09902
+Result number = 1;STAD*15D_BV;STAD* 15;Ametal(tm);Thread;With drain 3/4";25;15 (1/2");0.187089;0.19 (0.01);50000; ;29.1602; ;-20/120;10 (3/8");12.7185;0.09902
+Result number = 2;STAD*10A_BV;STAD* 10;Ametal(tm);Thread;Without drain;25;10 (3/8");0.427183;0.43 (0.01);50000; ;103.402; ;-20/120;10 (3/8");12.7185;0.09902
+Result number = 3;STAD*10D_BV;STAD* 10;Ametal(tm);Thread;With drain 3/4";25;10 (3/8");0.427183;0.43 (0.01);50000; ;103.402; ;-20/120;10 (3/8");12.7185;0.09902
+Result number = 4;STAD-D*15A_BV;STAD-D* 15;Ametal(tm);Thread;With drain 3/4";25;15 (1/2");0.187089;0.19 (0.01);50000; ;29.1602; ;-20/120;10 (3/8");12.7185;0.09902
+Result number = 5;STADA*15A_BV;STADA* 15;Ametal(tm);Thread;With drain 3/4";25;15 (1/2");0.187089;0.19 (0.01);50000; ;29.1602; ;-20/120;10 (3/8");12.7185;0.09902
+Result number = 6;STADC15A_BV;STAD-C 15/14;Ametal(tm);Thread male;Without drain;20;15 (1/2");0.203119;0.2 (0.01);50000; ;30.0848; ;-20/150;10 (3/8");12.7185;0.09902
+Result number = 7;STAD*15G_BV;STAD* 1/2";Ametal(tm);Thread NPT;Without drain;25;15 (1/2");0.187089;0.19 (0.01);50000; ;29.1602; ;-20/120;10 (3/8");12.7185;0.09902
+Result number = 8;STAD*15H_BV;STAD* 1/2";Ametal(tm);Thread NPT;With drain UNS 1 1/6" x 11,5";25;15 (1/2");0.187089;0.19 (0.01);50000; ;29.1602; ;-20/120;10 (3/8");12.7185;0.09902
+Result number = 9;STADC15B_BV;STAD-C 15/14;Ametal(tm);Solder;Without drain;20;15 (1/2");0.203119;0.2 (0.01);50000; ;30.0848; ;-20/150;10 (3/8");12.7185;0.09902
+Result number = 10;STAS15_BV;STAS 1/2";Ametal(tm);Solder;Without drain;20;15 (1/2");0.203119;0.2 (0.01);50000; ;30.0848; ;-20/120;10 (3/8");12.7185;0.09902
+Result number = 11;STAD-B*15A_BV;STAD-B* 15;Ametal(tm);Thread;With drain 3/4";25;15 (1/2");0.615997;0.62 (0.01);50000; ;34.9572; ;-20/120;10 (3/8");12.7185;0.09902
+Result number = 12;STADR*15A_BV;STADR* 15;Ametal(tm);Thread;With drain 3/4";25;15 (1/2");0.639809;0.64 (0.01);50000; ;116.655; ;-20/120;10 (3/8");12.7185;0.09902
+Result number = 13;STAD-D*10A_BV;STAD-D* 10;Ametal(tm);Thread;With drain 3/4";25;10 (3/8");0.427183;0.43 (0.01);50000; ;103.402; ;-20/120;10 (3/8");12.7185;0.09902
+Result number = 14;STAD-B*10A_BV;STAD-B* 10;Ametal(tm);Thread;With drain 3/4";25;10 (3/8");1.36876;1.37 (0.01);50000; ;106.367; ;-20/120;10 (3/8");12.7185;0.09902
+Result number = 15;STADA*10A_BV;STADA* 10;Ametal(tm);Thread;With drain 3/4";25;10 (3/8");0.427183;0.43 (0.01);50000; ;103.402; ;-20/120;10 (3/8");12.7185;0.09902
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 34
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = PowerDTMode
+Flow = 1.215157780947e-05
+Power = 1000
+DT = 20
+DpEnabled = true
+Dp = 50000
+ComboTypeID = RVTYPE_BVS
+ComboFamilyID = 
+ComboMaterialID = BDY_STEEL
+ComboConnectID = 
+ComboVersionID = VERS_FPM
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA143*-15A_BVS;TA-BVS* 143 DN15;Steel;Flange;FPM o-rings;25;15 (1/2");2.0188;2 (0.5);50000; ;27.6205; ;-20/120;10 (3/8");12.7185;0.09902
+Result number = 1;TA140*-15A_BVS;TA-BVS* 140 DN15;Steel;Welding;FPM o-rings;25;15 (1/2");2.0188;2 (0.5);50000; ;27.6205; ;-20/120;10 (3/8");12.7185;0.09902
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 35
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = PowerDTMode
+Flow = 1.215157780947e-05
+Power = 1000
+DT = 20
+DpEnabled = true
+Dp = 50000
+ComboTypeID = RVTYPE_BVSS
+ComboFamilyID = 
+ComboMaterialID = BDY_STSTEEL
+ComboConnectID = 
+ComboVersionID = VERS_FPM
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA243*-15A_BVS;TA-BVS* 243 DN15;Stainless steel;Flange;FPM o-rings;25;15 (1/2");2.0188;2 (0.5);50000; ;27.6205; ;-20/120;10 (3/8");12.7185;0.09902
+Result number = 1;TA240*-15A_BVS;TA-BVS* 240 DN15;Stainless steel;Welding;FPM o-rings;25;15 (1/2");2.0188;2 (0.5);50000; ;27.6205; ;-20/120;10 (3/8");12.7185;0.09902
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 36
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = PowerDTMode
+Flow = 1.215157780947e-05
+Power = 1000
+DT = 20
+DpEnabled = true
+Dp = 50000
+ComboTypeID = RVTYPE_DRV
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STA*15A_BV;STA* 15;Ametal(tm);Thread;With drain 1/2";25;15 (1/2");0.187089;0.19 (0.01);50000; ;29.1602; ;-20/120;10 (3/8");12.7185;0.09902
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 37
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = PowerDTMode
+Flow = 1.215157780947e-05
+Power = 1000
+DT = 20
+DpEnabled = true
+Dp = 50000
+ComboTypeID = RVTYPE_RV
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;RGTC_10D_RV;Regutec 10 (3/8");Gunmetal nickel-plated;Rad. union/Thread;Straight;10;10 (3/8");0.0622699;0 (0.5);50000; ;66.6644; ;-10/120;10 (3/8");12.7185;0.09902
+Result number = 1;RGTC_10A_RV;Regutec 10(3/8");Gunmetal nickel-plated;Rad. union/Thread;Angle;10;10 (3/8");0.0622699;0 (0.5);50000; ;66.6644; ;-10/120;10 (3/8");12.7185;0.09902
+Result number = 2;TRIMA10E_RV;TRIM A 10;Ametal(tm);Thread;Straight;16;10 (3/8");0.564103;0.5 (0.25);50000; ;97.1856; ;-10/120;10 (3/8");12.7185;0.09902
+Result number = 3;TRIMA10A_RV;TRIM A 10;Ametal(tm);Thread male/Thread;Straight;16;10 (3/8");0.564103;0.5 (0.25);50000; ;97.1856; ;-10/120;10 (3/8");12.7185;0.09902
+Result number = 4;TRIMA10B_RV;TRIM A 10;Ametal(tm);Thread male/Thread;Angle;16;10 (3/8");0.564103;0.5 (0.25);50000; ;97.1856; ;-10/120;10 (3/8");12.7185;0.09902
+Result number = 5;TRIMA10C_RV;TRIM A 10;Ametal(tm);Rad. union/Thread;Straight;16;10 (3/8");0.564103;0.5 (0.25);50000; ;97.1856; ;-10/120;10 (3/8");12.7185;0.09902
+Result number = 6;TRIMA10D_RV;TRIM A 10;Ametal(tm);Rad. union/Thread;Angle;16;10 (3/8");0.564103;0.5 (0.25);50000; ;97.1856; ;-10/120;10 (3/8");12.7185;0.09902
+Result number = 7;TRIM10_RV;TRIM 10;Ametal(tm);Swiv. nut/Thread male;Straight;16;10 (3/8");0.384029;0.5 (0.25);50000; ;234.508; ;-10/120;10 (3/8");12.7185;0.09902
+Result number = 8;RGLX_10D_RV;Regulux 10 (3/8");Gunmetal nickel-plated;Rad. union/Thread;Straight;10;10 (3/8");1;1 (0.5);2090.59; ;109.64; ;-10/120;10 (3/8");12.7185;0.09902
+Result number = 9;RGLX_10A_RV;Regulux 10 (3/8");Gunmetal nickel-plated;Rad. union/Thread;Angle;10;10 (3/8");1;1 (0.5);2090.59; ;109.64; ;-10/120;10 (3/8");12.7185;0.09902
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 38
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = PowerDTMode
+Flow = 1.215157780947e-05
+Power = 1000
+DT = 20
+DpEnabled = true
+Dp = 50000
+ComboTypeID = RVTYPE_TBV
+ComboFamilyID = FAM_TBV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = 
+ComboVersionID = VERS_NODRAIN
+ComboPNID = PN_3
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TBV15NF_TBV;TBV 15NF;Ametal(tm);Thread;Without drain;16;15 (1/2");0.229719;0.25 (0.25);50000; ;58.9938; ;-20/120;10 (3/8");12.7185;0.09902
+Result number = 1;TBV15LF_TBV;TBV 15LF;Ametal(tm);Thread;Without drain;16;15 (1/2");1.11399;1 (0.25);50000; ;233.295; ;-20/120;10 (3/8");12.7185;0.09902
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 39
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 12
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0001
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_BV
+ComboFamilyID = FAM_STADA*
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_DRAIN34
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STADA*20A_BV;STADA* 20;Ametal(tm);Thread;With drain 3/4";25;20 (3/4");2.0928;2.09 (0.01);3000; ;450.517;3432.24;-20/120;20 (3/4");69.5126;0.272899
+Result number = 1;STADA*15A_BV;STADA* 15;Ametal(tm);Thread;With drain 3/4";25;15 (1/2");3.50983;3.51 (0.01);3000; ;1983.39;33760.7;-20/120;20 (3/4");69.5126;0.272899
+Result number = 2;STADA*10A_BV;STADA* 10;Ametal(tm);Thread;With drain 3/4";25;10 (3/8");4;4* (0.01);7017.61; ;7017.61;182108;-20/120;20 (3/4");69.5126;0.272899
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 40
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 12
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0001
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_BV
+ComboFamilyID = FAM_STAD-D*
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_DRAIN34
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAD-D*20A_BV;STAD-D* 20;Ametal(tm);Thread;With drain 3/4";25;20 (3/4");2.0928;2.09 (0.01);3000; ;450.517;3432.24;-20/120;20 (3/4");69.5126;0.272899
+Result number = 1;STAD-D*15A_BV;STAD-D* 15;Ametal(tm);Thread;With drain 3/4";25;15 (1/2");3.50983;3.51 (0.01);3000; ;1983.39;33760.7;-20/120;20 (3/4");69.5126;0.272899
+Result number = 2;STAD-D*10A_BV;STAD-D* 10;Ametal(tm);Thread;With drain 3/4";25;10 (3/8");4;4* (0.01);7017.61; ;7017.61;182108;-20/120;20 (3/4");69.5126;0.272899
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 41
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 12
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0001
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_BV
+ComboFamilyID = FAM_STAD-B*
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_DRAIN34
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAD-B*20A_BV;STAD-B* 20;Ametal(tm);Thread;With drain 3/4";25;20 (3/4");2.14009;2.14 (0.01);3000; ;452.561;3997.97;-20/120;20 (3/4");69.5126;0.272899
+Result number = 1;STAD-B*15A_BV;STAD-B* 15;Ametal(tm);Thread;With drain 3/4";25;15 (1/2");3.66685;3.67 (0.01);3000; ;2406.63;48275.3;-20/120;20 (3/4");69.5126;0.272899
+Result number = 2;STAD-B*10A_BV;STAD-B* 10;Ametal(tm);Thread;With drain 3/4";25;10 (3/8");4;4* (0.01);7322.87; ;7322.87;228681;-20/120;20 (3/4");69.5126;0.272899
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+

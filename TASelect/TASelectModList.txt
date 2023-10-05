@@ -1,0 +1,603 @@
+Issue fix: previewing panel of projects in TAScope will be no more empty while there are really projects in it.
+Issue fix: combo contains refreshing correction in CDlgPrint::InitCB
+Issue fix: do not duplicate anymore a project uploaded in TAScope when this one already exist
+New feature: when user pipe series don't exist in TA Select when importing a project from TAScope, compute the closest one in default pipe series
+Printing improvement in regards to ppi
+Review image loading for Windows XP user, in some case transparent background was displayed black
+In PICV selection gray uncompatible actuator.
+In circuit wizard step 2, keep name, description, comment when changing circuit type.
+In individual selection allow more than 3 decimals for entering flow (usefull when the flow is entered in l/s).
+Issue fic in HMCalc, Clean BV fields when nothing is available (flow exceed max flow for instance).
+Print out, linear Dp added into pipe description. 
+Print out, setting for bypass valve added.
+
+************************
+ New in version 4.0.2.9
+************************
+Hmin displayed in the printout corrected to take into account real Cv Dp.
+New translations added – Languages: SV, CSY, DK have been updated.
+Circuit wizard step 2 issue fix – changing Cv type has been re-enabled.
+Importing circuit issue fix – Importing hydraulic circuit with locked valve is now correctly proceeded.
+Temperature measurement issue fix – Measured temperature with TA-SCOPE are now correctly displayed.
+Project structure printout issue fix – Hmin for hydraulic circuit containing a control valve is now correctly refreshed.
+
+************************
+ New in version 4.0.2.8
+************************
+Issue fix: In HMCalc renaming a module will not reset the hydraulic network anymore. 
+In HMCalc renaming circuit, description improved.
+In HMCalc description can now be modified in the summary sheet.
+Application version 4 digits are stored into tsp file.
+Issue fix: TAScope communication improved.
+Add tooltip for btns in DlgImportHM and DlgSearchReplace.
+In SSheetSSelPiCv, do not display Fc for "TBV-CMP" family. Always display Fc in all other cases.
+Allow the possiblity to edit/modify flow on valves define in Kv mode (in NoHMCalc mode).
+In SSheetQuickMeas and SSheetHMCalcMeas, correct bugs when displaying valves in Kv mode.
+If TA Select will be displayed on a screen that is currently desactivated, the application will be centered to the active monitor.
+Define correctly pipes when recuperate an installation from a TA-SCOPE.
+In SSheetSelProd, allow to draw a DpC scheme only for valves selected in single selection.
+Issue fix: In selected product sheet, correct presetting value for thermostatic valve selected hydronic calculation mode
+Translation added NO, PT, FR
+New Korean version.
+Improve TA-SCOPE backup files when an TA-SCOPE update is requested.
+Issue fix in hydraulic calculation mode, Dpmin of locked DpC  is now correctly updated in the product selection list
+Copper US Type M series added.
+
+************************
+ New in version 4.0.2.5
+************************
+4.0.2.5 Change all imagelist to be 32bits with alpha blend.
+4.0.2.5 Do not allow to use project tools in the ribbon bar, if we are not in HMCalc mode and unfreezed.
+4.0.2.5 Dialog search and replace re-enforced when pipes are not defined.
+
+************************
+ New in version 4.0.2.4
+************************
+4.0.2.4 Rename a terminal unit in SSheetHMCalc doesn't loose the focus anymore in the Left tree panel.
+4.0.2.4 Create the Import hydronic circuits dialog box.
+4.0.2.4 Create the search and replace dialog box for pipes.
+
+************************
+ New in version 4.0.2.3
+************************
+4.0.2.3 In hydronic circuit calculation, CV based on KVS, design authorithy below 0.25 is now displayed in red.
+4.0.2.3 Logging data/graph, issue fix for TA-SCOPE logging on a valve defined by his Kv.
+
+************************
+ New in version 4.0.2.2
+************************
+4.0.2.2	In HMCalc, correct authority for DpC on CV with MV located in secondary.
+4.0.2.2	DT issue with °F unit fixed.
+4.0.2.2	DB 4.0.0.9 Push to close/open corrected for CV.
+4.0.2.2 DB 4.0.0.9 Rangeability for RGA and GG contrl valve corrected.
+4.0.2.2 Unit for Max Dp for proportionnal CV in tech param dialog corrected.
+4.0.2.2	Correct DpC schemas for individual selection.
+4.0.2.2 Smooth the print of dynamic schemes.
+4.0.2.2 Correct the view of locked Cv valves in the SSheetSelProd.
+4.0.2.2 Update the references (Ref1 & Ref2) on the valves even they are locked.
+4.0.2.2 Add the TA-SCOPE version in the dialog box.
+4.0.2.2 Init of Hub with DpC will not crash anymore (problem of Scheme ID name solved).
+4.0.2.2 Allow the user to download only docs that fit the current tree structure (linked to the TADB, see US,UK,AU)
+4.0.2.2 Add accelerators to spread sheet to be able to jump between tabs using CTRL+PAGE NEXT or CTRL+PAGE PREV (like in Excel).
+4.0.2.2 Avoid to delete the selection in SSel (Bv, DpC, Cv, etc.) when the user press a not visible key (alphabetical key, "{", etc) on the keyboard in the edit flow box.
+4.0.2.2 Allow the possibility to input Kvs value (using keyboard) in TabCDialogSSelCv.
+4.0.2.2 Remove DpCScheme and CircuitScheme DLLs.
+
+************************
+ New in version 4.0.2.0
+************************
+4.0.2.0 Hydronic schemes are now dynamically computed.
+4.0.2.0 PICV added in hydronic circuit calculation.
+4.0.2.0 Control valve design authorithy column added into the Circuits sheet.
+4.0.2.0 Into individual Dp controller selection, issue fix for DpC on control valve selection.
+4.0.2.0 TSE actuators added for on-off control with TBV-CMP;
+4.0.2.0 In SSheetHMCalc, Flow and PiCv valves are colored in red if the current flow is above the QMax of PiCv (Calculate of PiCv'Dp is not taken into account)
+4.0.2.0 Dp values in the logged chart and in the logged data list is not shown if measurements are coming from CBI (Unexistant Dp for Flow and Flow-Temp log).
+
+************************
+ New in version 4.0.1.5
+************************
+4.0.1.5 TA-HUB Bug correction: available TSE
+
+************************
+ New in version 4.0.1.4
+************************
+4.0.1.4 Improve UserDB reading, test added on version number.
+4.0.1.4 KTMI size below 65 are now available in single and in direct selection.
+4.0.1.4 In SSheetHMCalc, save the scroll bar position and restore it each time the sheet needs to be updated.
+4.0.1.4 Issue fix: in DlgPrint avoid a TA Select crash when the user click on cancel button when the printpreview is displayed.
+4.0.1.4 In Print tree view, pipes name is displayed instead of pipe size (ex: "pipe 14x1" instead of "pipe 15")
+4.0.1.4 Add the possibility to select old deleted valves in a project.
+4.0.1.4 Issue fix: Lock all valves and pipes in a module will no more frozen the flow (power, Dp, ...)in terminal units. The same is true for pipe lenght.
+4.0.1.4 Issue fix: CV 306 GG DN 15 displayed "316" instead "306".
+4.0.1.4 Improve calculation process into the CSelectCtrlList objet (2 times faster).
+4.0.1.4 Add in the popup menu of the HMCalc tree the possibility to lock/unlock all in a module(recursivelly).
+4.0.1.4 In the results list, do not show a popup menu if the user right click on the tabs.
+4.0.1.4 Refresh the results list only if a modification has been performed.
+4.0.1.4 Add DA516 DpControllers valves with PT90.
+4.0.1.4 View DpC "Version" information in SSelDpC, DlgDirSel, DlgConfSel, SSheetSSelProd, HMCalc (DlgComboBoxHM).
+4.0.1.4 Issue fix: In the XGroupBox class, correct bckgnd color for the text to be transparent.
+4.0.1.4 Convert all group boxes into XGroupBox controls.
+
+************************
+ New in version 4.0.1.3
+************************
+4.0.1.3 Issue fix: Add the correct reference for pressure independant control valves in the SSheetSelProd when recuperate modules from the TA-SCOPE.
+4.0.1.3 Issue fix: In HMDirSel, do not allow to open the dialog box with pressure independant control valves (dialog not ready for that kind of valves).
+4.0.1.3 Issue fix: In HMProj, PICv were not recognized. Problem when counting the number of valves and a wrong image was displayed on the module (with a "?").
+4.0.1.3 Issue fix: Verify that each table is created in the TADS when opening a *.tsp file.
+#TTP193: Do not show the possibility to select DpC in Panel Circ 1 if no DpC is available. 
+#TTP210: In DlgDirSel, use the default function CDB_TAProduct::GetSortingKey() to sort the products.
+#TTP237: In SSelDpC, Refresh values incorporated in the draw when modifying the fluid caracteristics
+#TTP242: In SSelCv, refresh correctly the combox for Kvs value input depending on the radio buttons selected.
+4.0.1.3 Issue fix: In the Ribbon bar, modifying the temperature unit to °F will not forbit anymore to input numerical values in CEdit boxes.
+4.0.1.3 Issue fix: In TabCDialogInfo, the tree does not reset itself when the user try to view a doc that do not exist.
+4.0.1.3 Issue fix: opening a *.tsp file that countain actuators selected alone in the dialog direct selection do not close TA Select anymore.
+4.0.1.3 In Project info and user references dialog boxes, limit each edit box to 250 characters and the multilines edit boxes to 2500 characters.
+#TTP162: In SSelProd, reposition correctly the scrollbar after cutting or deleting an element.
+4.0.1.3 Avoid to hidde the Ribbon bar by double clicking on the Ribbon tabs.
+4.0.1.3 Refresh Combo box for pipe series in the Ribbon bar when the user import pipes from the Ribbon menu.
+4.0.1.3 Add the Sub menu for Export in the Ribbon bar.
+4.0.1.3 Show ToolTip on the Status Bar, Add Num lock statement, etc.
+4.0.1.3 Add accelerator for Single Selection
+4.0.1.3 TA Scope update panel order categories to update application first
+4.0.1.3 TA Scope update panel correct detection of DPS, it's detected only whe it's connected by cable.
+4.0.1.3 TA Scope update panel add a delay between each file (500ms), to avoid flash writing problem into HH.
+
+************************
+ New in version 4.0.1.2
+************************
+4.0.1.2 Issue fix: downloading installation from TA-SCOPE preserve selected hydronic scheme when no modification has been performed.
+4.0.1.2 Issue fix: sending a module without PV to the TA-CBI is now possible.
+4.0.1.2 Issue fix: in individual Cv and PICv selection, pressing enter on the suggest button doesn't launch two times the selection.
+4.0.1.2 Enlarge all columns in Individual selection.
+
+************************
+ New in version 4.0.1.1
+************************
+4.0.1.1 Correct the view of accessories for Cv (Inheritance problems).
+4.0.1.1 Correct selection of Adapters for PiCv when select an actuator.
+4.0.1.1 Correct bug when changing the style if a language DLL was loaded.
+4.0.1.1 Correct TA logo view when resizing the Ribbon Bar.
+4.0.1.1 Correct bug of tab sheets in Windows 7 (vertical lines appearing on the left and right arrows).
+4.0.1.1 Correct the link for the User's guide and hide the button for displaying it (until User's guide is updated).
+4.0.1.1 MC 65, MC 161 and MC 100 FSE/FSR added to product database
+4.0.1.1 Review layout of TA-Scope communication panel (Maintenance, Update, Start).
+4.0.1.1 Add MoveFile application with administration right for moving taupdate.new to taupdate.exe.
+
+************************
+ New in version 4.0.1.0
+************************
+4.0.1.0 New Office 2007-like UI.
+4.0.1.0 Communication with TA-SCOPE.
+4.0.1.0 CV 216/316 Z and MC25 actuator deleted from product range.
+4.0.1.0 CV 216/316 MZ and MC15 actuator added to product range.
+4.0.1.0 PiCv individual selection added.
+4.0.1.0 TBV-CMP DN 15LF, 15NF and 20NF added to product range.
+4.0.1.0 KT 512, KTCM 512, KTH 512, KTM 512, KTMI 512, KTM 50 valves added to product range.
+4.0.1.0 TA-R-25, TA-NV24 and EMO range actuators added to product range.
+
+************************
+ New in version 3.2.9
+************************
+3.2.9.8 Improve loading of Database string table.
+3.2.9.8 Water characteristics dialog box is initialise has it should with current parameters.
+3.2.9.6 In ENA version, hidden flag for TBV change from 1 to 0.
+3.2.9.6 Integrate new Docs.
+3.2.9.6 Integrate new Danish translations.
+3.2.9.6 Correct bug that do not display TBV-C in the Hub.
+3.2.9.5 In panel Circ 1, check the type of valve when you click on a scheme (2-way, 3-way, ...) and find only valves that match the selection.
+3.2.9.5 Correct mistake (add test case) in HydroMod::CCv::SavePipeWaterInfos(). Pipes are not always defined when we are in the Compute all to the pump.
+3.2.9.4 Issue fixed when unfrozen the TSP file.
+3.2.9.4 In SSelProd, refresh pipes info when valves are locked.
+3.2.9.4 In Hub Selection, interpret names that comes from the StringTabXML. (for DpC as partner valve).
+3.2.9.3 In Panel Circ 2, the root module will have the same pipes as the first next module to calculate the right Dp on the elbow.
+3.2.9.3 Add new docs for DAN, DEA, ESN, FIN, FRA, INT, NLD, NOR, PTB, SVE versions.
+3.2.9.3 Remove Cv-Act sets that doesn't exist (DR125+M135II, DR150+M135II, DR200+M135II,DPR125+M135II, DRP150+M135II, DRP200+M135II,EVS80+M135II,EVS100+M135II,EVS80+M180I,EVS80+M180II).
+3.2.9.3 In SSelProd, fix bug that crash TA Select if it wants to show products that doesn't exists in the DataBase(refer to the Cv-Act sets deletion).
+3.2.9.3 In Panel Circ 2, correct wrong calculation made for Dp with locked valves.
+3.2.9.3 In Panel Circ 2 and in Printing, correct drawings that were not refreshed with locked valves.
+3.2.9.3 In SSelCtrl, add informations with drawings (Push to close, Push to open a control valve and its characteristic).
+3.2.9.3 In SSelCtrl, only actuators that fit the control type will be shown in the suggestion list.
+3.2.9.3 In SSelCtrl, add a dialog box to make an alternative choise if no valve was found with the parameters specified.
+3.2.9.3 In SSelCtrl, allow the possibility to change the type, family, connection, version and PN in re-edition mode.
+3.2.9.3 In TabCDialogSSelCv, Save in the registry user default choice for the pipes.
+3.2.9.3 In SSelCtrl, Add a comment for valves that are fully open.
+3.2.9.3 In SSelProd, standardize info on the minimum Dp.
+3.2.9.3 Add the exact size info for each Dp Controller.
+3.2.9.3 In SSelCtrl, specify when the suggestion list is empty due to user modifications in the technical parameters dialog box(Size-shift problem).
+3.2.9.3 In SSelProd, issue fixed when right click on a product.
+3.2.9.3 In DlgConfirmSel, correct the number of line needed to show information about the selected product.
+3.2.9.3 In SSelProd, refresh the water characteristic info when valves are locked.
+3.2.9.3 In DlgTechnicalParameter box, improved the box's creation speed.
+3.2.9.3 In SSela, SSelb and SSeld, enlarge the "Setting" column.
+3.2.9.3 In SSeld, standardize the column position for the "Connection" and the "Version".
+3.2.9 Update P-band and setting characteristics for DA 516 (5-30 kPa) and DA 50 (10-60 kPa, 50-150 kPa, 130-250 kPa).
+3.2.9 Complete DpC characteristics for DA 50 DN 32-200 (100-400 kPa).
+3.2.9 Add new connection types: Smooth ends, eurocone/smooth ends, thread/smooth ends.
+3.2.9 Delete families from the TA Range: STAM, MD22, MD30, MD32.
+3.2.9 Remove unused functions: ScanDocFileAvaibility, ScanDocforEmptyTab, ResetDocFileflag and LocalizeDoc.
+3.2.9 Add new derived objects: CDB_MultiStringOrdered and CDB_Doc.
+3.2.9 New function in CDB_TAProduct to verify if a Cat or a Qrs exists in the target directory (...\Doc\Cat\).
+3.2.9 Remarks added in the database to some products (regarding the ordering process) are automatically handled and displayed in the selected product sheet and DialogConfSel.
+3.2.9 Correct to know exactly where DialogConfSel is called from. Ex: Comes from SSelHub or SSelHub in re-edition mode.
+3.2.9 New catalogue sheets replace the old ones for 11 languages: English, Danish, Dutch, Finnish, French, German, Italian, Norwegian, Portuguese, Spanish, Swedish.
+3.2.9 Improved the TabCDialogInfo tree to support any type of doc (old and new ones). Doc key sorting function added.
+3.2.9 Improved the warning messages displayed when wrong values are inserted in the edit boxes of the technical parameter dialog box.
+3.2.9 New MDF0 with PT 90 measuring points in PN40 (DN 350-450) added to the product database.
+3.2.9 New STAD with smooth ends connections added to the product database.
+3.2.9 New DA50 DN32-200 100-400 kPa (flange and ansi flange connections) added to the product database.
+3.2.9 New STAP with smooth ends connections (DN25 5-25 kPa, DN 15-25 10-60 kPa, DN 32-40 10-40 kPa, DN 32-50 20-80) added to the product database.
+3.2.9 New TRV-2S DN 15-20 angle version with different connections (thread male/thread, rad union/thread) added to the product database.
+3.2.9 New TBV and TBV-C with smooth ends, thread/smooth ends, eurocone/smooth ends connections added to the product database.
+3.2.9 TA-BVS 240 and 243 with Nitrile o-rings added to the product database, and defined with a commercial priority.
+3.2.9 Translation corrections for connection names in all versions (outlet/inlet becomes inlet/outlet) .
+3.2.9 Default pipes series used in the "circuit" and in the "distribution" parts of Panel Circ 2 are now selectable in the technical parameter dialog box.
+3.2.9 PrjParams for BV, DpC, Cv are now saved in the registry from projects to projects.
+3.2.9 Swap "Autosave recovery file" and "Pipes..." in the Customize menu.
+3.2.9 Bug in TA-H.U.B. re-edition mode fixed (could not cancel a modification anylonger).
+3.2.9 Minimum authority is now displayed with enough significant digits in Technical Parameter dialog box.
+3.2.9 In the individual selection of Dp controllers, selection of a measuring valve alone is no longer allowed.
+3.2.9 Integration of translations (DAN, NLD, UCHS, UCSY, FIN, PTB, ESN, SVE) for the Technical Parameter dialog box.
+3.2.9 Improved CExtComBox to take into account the width of the dropdown list.
+3.2.8.9 Trv selection available after password input.
+3.2.8.9 Check box added to size thermostatic valves based on Kvs or on Kv DT2K.
+3.2.8.8 Authority of TBV-CM can be computed based on full Dp (provided an dummy file TBVCMAuth.bin is placed in the execution directory) rather than based on the Dp at full opening (as it should be).
+3.2.8.7 Control valve Kvs added into the Project Structure output.
+3.2.8.7 Blue screen crash (BSOD) with some printer driver in CEnBitmap corrected.
+3.2.8.7 Review management of Min/Max value in Technical Parameter dialog box.	
+3.2.8.7 Max Dp for control valves added in Technical Parameter dialog box.
+3.2.8.4 Take into account CBI database modification for PR5A.
+3.2.8.4 Handling of multiple PN values for valves.
+3.2.8.4 Ordering issue with the copy/paste of multiple hydronic modules fixed.
+3.2.8.4 In hydronic circuit calculation, TBV-CM authority issue corrected.
+3.2.8.3 Copy/paste hydronic circuit with TBV-CM, Issue fixed.
+TAUpdate 2.1.7	Use 4 digits for version number.
+TAUpdate 2.1.7	TA Update does not use anylonger internet cache.
+3.2.8.2 First refresh of spread sheet lock moved to application start up. 
+3.2.8.2 General Parameter view is no longer reset to white right screen when New File is requested.
+3.2.8.2 Reading issue fixed for tsp files containing selected DpC.
+3.2.8.1 In hydronic circuit calculation, selected TA control valve Kvs optimized to follow requested minimum authority.
+3.2.8.1 In selected product sheet, local article number column enlarged. 
+
+************************
+ New in version 3.2.8
+************************
+TADB 3.20
+In hydronic circuit calculation, selection of control valves from the full TA product database can now be performed (database content depends on localized version).
+In Hydronic Circuit wizard step 2, access to distribution pipe accessories added.
+Option for inputing accessories as equivalent pipe length has been added in the accessory dialog.
+Default parameters for hydronic circuit calculation are now available in the technical parameter dialog.
+Maximum flow allowed for TA-HUB updated to 4500 l/h (1,25 l/s).
+In TA-HUB selection, pictures now reflects the exact look of TSE and TSEM actuators.
+Control valves are now categorized as Globe (HVAC) and Globe (Industrial); selection should be done accordingly.
+Issue fixed in the sizing of modulating presettable control valve (TBV-CM).
+DA516 Dp controllers in PN 16 version added to the product database.
+STAF 350/400 with ANSI flanges added to the product database (for US, South America and Japan).
+STAM became unavailable for new selections to all localized versions.
+Specific heat interpolation issue, happening for some particular additive concentrations and temperatures, fixed.
+#TTP223: In Overview sheet, issue with changing a circuit name as first operation after file opening, fixed.
+
+************************
+ New in version 3.2.7
+************************
+TADB 3.19
+In direct selection dialog, TBV-C and TBV-CM selection issue fixed.
+In print dialog, circuit tables and detailed circuit view printing issue fixed.
+In Dp controller selection tab, rounding of measuring valve setting issue fixed.
+#TTP219: In Selected product sheet, all control valves accessories are now displayed into the article list.
+#TTP220: In 2W-3W sheet, changing one parameter will not switch anylonger to the overview sheet.
+
+************************
+ New in version 3.2.5
+************************
+TBV-C DN 25 NF added to the product database. 
+STAP with NPT thread and ISO 7Rc thread added to the product database (for US, South America and Japan). 
+STAP with ANSI flanges added to the product database (for US, South America and Japan). 
+DA 516 DN 125 and DA 50 with ANSI flanges (on request) added to the product database (for US, South America and Japan). 
+Excel export of hydronic circuit calculation sheets added. 
+In Dp controller selection tab, the suggestion list of measuring valves is further filtered when a Dp controller is selected. 
+In Dp controller selection tab, the suggestion list of Dp controllers is further filtered when a measuring valve is selected. 
+In Hydronic Circuit wizard step 2, manual input of Kvs is now available. 
+In Control Valve selection, issue with dialog water characteristic is fixed. 
+In TA H.U.B. selection, drag and drop accessories functionnality is added. 
+#TTP194: Printing of full hydronic network project structure is now possible, when more than one root module exist. 
+#TTP196: Issue with sending valve in Kv-mode to the TA-CBI fixed. 
+#TTP197: Issue with printing old logged data fixed. 
+#TTP199: Japanese character set issue fixed. 
+#TTP202: In Control valve selection tab, TA H.U.B. selection tab and 2W-3W sheet, quick reference sheets and catalogue sheets are directly available from right click menu. 
+#TTP203: In direct selection, arrow and enter keys are now usable to navigate through the product list. 
+#TTP208: In Control valve selection tab and in Result tab, right click works only at the position of a selected product. 
+#TTP211: In SheetHMCalc, drag and drop functionnality is improved. 
+
+************************
+ New in version 3.2.4
+************************
+Try-Catch added for UserDB reading.
+TADB 3.16
+In 2w-3w sheet, review Dp column hiding. 
+Updating ActiveX grid control. 
+#TTP190: Missing DpC schemes for STAP-STAF SGT added.
+
+************************
+ New in version 3.2.3
+************************
+Copy/paste are now available for directly selected products.
+Quick reference sheets and catalogue sheets are directly available from right click menu in the Single Selection view and in the Selected products view. 
+#TTP115: In 2w-3w sheet, existing Dp Signal is displayed.
+#TTP116: In Hydronic Circuit wizard step 2, existing Dp Signal is displayed.
+#TTP141: In Result tab, formatted columns are available for Control Valves.
+#TTP169: Removing one station for a TA H.U.B. changes correctly the numbers of other stations.
+#TTP170: In TA H.U.B. selection, for station without any flow, changing return valve type issue fixed.
+#TTP171: In TA H.U.B. selection, in loop detail selection mode, selection of a non TA product control valve issue fixed.
+
+************************
+ New in version 3.2.2
+************************
+For Vista compatibility, user database moved to Personal\Documents\TA Select 3\-xxx Data.
+Translation correction for Polish and Hungarian version.
+Brazilian control products available for Ptb and Esa versions.
+
+************************
+ New in version 3.2.1
+************************
+Individual selection of control valves, actuators and accessories.
+Direct selection of control valves, actuators and accessories.
+Products selected with the direct selection dialog box are no longer displayed in a separate sheet but are listed within the other sheets in the Selected products view.
+New installation system - It is highly recommended to uninstall and re-install TA Select 3 with a new CD.
+Default directory for file saving and autosave created in "My Documents\TA Select 3" for new TA Select 3 installations.
+Update issue fixed: automatic update and TA Update call from TA Select 3 did not run with Windows Vista.
+Steel DIN 2448/1629 pipe series added.
+BS 2871 pipe series updated to European standard EN 1057.
++GF+ ABS, +GF+ PE and +GF+ PE 100 pipe series added to Nordic Europe versions.
+Climatherm Faser and Fusiotherm Faser pipe series added to Dutch version.
+#TTP152: In Selected product sheet copy of radiator valve fixed.
+#TTP153: In Hydronic Circuit wizard step 2, changing Version, connection, PN of main partner valve is now allowed
+#TTP155: Selected product sheet is now directly refreshed when a direct selection is done.
+#TTP156: In Hydronic Circuit wizard step 1 and 2, unused cells are now read only.
+#TTP158: Editing of empty circuit created in hydronic circuit doens't crash TA Select 3 anymore.
+#TTP159: Into dialog water characteristic: focus is set on the temperature. Enter key could be used to validate new temperature.
+
+************************
+ New in version 3.1.8
+************************
+Access speed to database file improved.
+ToolTips strings are now correctly translated.
+#TTP150: Specifying connection version of a collected TA-CBI plant issue fixed. 
+#TTP149: Pipe exportation issue fixed.
+#TTP144: Print out of selected thermostatic valves corrected.
+#TTP143: User pipe serie name can be now modified.
+#TTP142: In Hydronic Circuit wizard step 2, improve process to keep selected connection as default value.
+
+************************
+ New in version 3.1.7
+************************
+TBV-CM range of terminal balancing and control valves for proportional control added to the product database.
+Additional physical types and units defined for unit conversion.
+The Hydronic Circuit wizard now re-opens itself without shift with respect to its last position on screen.
+TTP#138: Improve proportional Cv sizing, avoiding authority below 0.25. 
+Flashing windows issue on some Windows Xp version fixed.
+In selection tab, suggestion can be launched by pressing enter key.
+In confirmation dialog box, pressing Enter Key confirm the selection.
+Excel export of Selected products is done in a writable Excel sheet with visible grid. 
+Fluid volume added in Selected products pipe sheet.
+
+************************
+ New in version 3.1.6
+************************
+In dialog box "Customize | Pipes...", pipe series that are never used by a user can now be hidden. 
+In the list of selected pipes, pipe size name is displayed rather than pipe DN. 
+TTP#129 : TA-HUB station's balancing valve setting corrected. 
+TTP#130 : TA-HUB partner valve combo box is now correctly filled. 
+In TA-HUB selection, partner valve flow column header 'Edition icon' removed. 
+TTP#131 : In project structure for CBI, measuring valve is displayed rather than Dp Controller for TA-HUBs stabilized in Dp. 
+TTP#132 : Re-editing of selected TA-HUB recalls TA-HUB edition page in all cases. 
+TTP#133 : Changing balancing type of a re-edited selected TA-HUB does not cancel re-edition anymore. 
+TTP#134 : TA-HUB details cannot be inadvertently overwritten anylonger in the selected product view. 
+The article list is now ordered by article number. 
+
+************************
+ New in version 3.1.5
+************************
+Pipe Recapitulative list added in the Selected Product page.
+Slowing down Acrobat Reader starting at TA Select 3 launch removed.
+CV sizing optimized when the Kvs max is close to the Kvs value from Reynard series.
+Displayed overflow for closing 3 way control valve with unbalanced bypass reformulated for better clarity.
+In Hydronic Circuit wizard step 2, refresh issue fixed.
+Valves directly selected added into the article list.
+ 
+************************
+ New in version 3.1.4
+************************
+STAF-SGT valves added to the product database.
+In article list, formatting of article quantity reviewed. 
+In the Selected Product page, copied item can now be pasted at a specific position.
+Line height of header in Selected Product page increased.
+Edit on double-click enabled in Selected product page.
+Optimized printing area for PC configured with large fonts.
+In Hydronic Circuit wizard step 2, size and position of combobox 'Position' corrected in large font.  
+Spanish and Italian translation added
+
+************************
+ New in version 3.1.1
+************************
+TA-H.U.B. selection added.
+Henco multilayer pipe series added.
+TA-CBI communication issue under Windows Vista fixed.
+TTP#109 : STAV balancing valve selection for a known Dp issue fixed.
+TTP#113 : Calculation of 3-way control valve authority in constant flow systems fixed.
+TTP#117 : Pipe locking function corrected for pipes with zero length.
+TTP#120 : Changing back a 3w circuit to a 2w circuit does not crash TA Select 3 anylonger.
+TTP#121 : In Hydronic Circuit wizard step 2, circuit position changing issue fixed.
+TTP#122 : Indicated index position is now correctly displayed in all cases.
+RVT valves are now accessible.
+
+************************
+ New in version 3.0.9
+************************
+Copyright updated to 2007 in About Box.
+TTP#101 : Pipe cannot be locked when the length is 0.
+TTP#102	: Copy/paste in TAS2 mode does not crash the application anylonger.
+TTP#104 : Module/Circuit name is editable in Unicode version.
+Close serial communication port if PortSetting fails.
+
+************************
+ New in version 3.0.8
+************************
+Italian and Japanese version added.                                         
+Localized quick references sheets added (Chs,Dea,Dan,Esn,Fin,Ita,Nor,Ptb).
+TTP#101	: Circuit and distribution pipes cannot be locked any longer when the pipe length is 0.
+TTP#102	: Copy/Paste issue fixed for valves in Project view.
+TTP#103	: Old TBV-C are now available for inclusion in the hydraulic network.
+TTP#104	: Module/Circuit names are now editables with Unicode version of TA Select 3.
+TTP#106 : Communication issue on PC with Bluetooth communications port activated fixed.
+
+************************
+ New in version 3.0.7
+************************
+TTP#20	: Copy/Paste accessories added.
+TTP#70	: Empty header cells in overview sheet cannot be edited any longer.
+Issue fixed: Previously chosen BV version is not taken into account when BV is used as a measuring valve.
+TTP#74	: TA-CBI communication issue (detected on Plk) fixed. CommX communication ActiveX replaced by a home-made library to solve a Com port detection problem.
+Review of some communication behaviours.
+TTP#80	: In 2w-3w sheet, column header Dp min of Dp controllers is now collapsed by default.
+TTP#89	: Issue fixed: Collected installations from TA-CBI can now be sent back again to TA-CBI.
+TTP#91	: Lines between circuits in dynamic tree view are now visible.
+TTP#64	: Issue fixed: Changing position number of a newly added circuit in the hydronic circuit wizard does not create any longer a gap in the circuit numbering.
+In the hydronic circuit wizard, the position spin button has been replaced by a ComboBox.
+TTP#92	: Linear pipe Dp correctly updated after changing pipe series in the hydronic circuit wizard.
+TTP#94	: Selected Dp controllers with a DpL range that does not cover the Dp to be stabilized are marked in red (in overview sheet, 2w-3w sheet and in the 2nd panel of the hydronic circuit wizard).
+TTP#95	: Issue fixed: Some installations were incorrectly tagged as not valid for being sent to TA-CBI.
+TTP#69	: In overview sheet and in hydronic circuit wizard, a zero pipe length is now displayed as 0.0 and not as an empty cell.
+TTP#72	: Distribution and circuit pipe lengths are now reset when a circuit is copied into the Hydraulic Network.
+TTP#81	: First circuit is now correctly printed when performing a detailed circuit printing with project references printed on a separate first page.
+TTP#82	: Radio buttons reorganised in Print Dialog.
+TTP#84	: Text for 'condensed project structure' radio button is now translated in Print Dialog.
+TTP#62	: Issue fixed: default general parameters from one localized version could be incompatible with another localized version
+TTP#65	: Cosmetic review of header alignment in overview and 2w-3w sheets. Some column widths increased.
+TTP#21	: Issue fixed: Refresh overview sheet with scroll bar displayed can close the application. Issue appearing when adding more than 10 circuits in one operation on some computers.
+TTP#76	: Text formatting corrected for text file export of q/Dt and Dp/Dt logged data.
+TTP#97	: Copy of 3 way circuit now keeps the correct state for the bypass balancing device (automatic, not allowed, forced).
+TTP#98	: Filling of combo pipe size now takes into account that some pipe series can contain different pipes with the same DN size (CU NF for instance).
+TTP#99	: Scroll bars in overview sheet are now correctly displayed
+
+************************
+ New in version 3.0.6
+************************
+TTP#56	: Autosave functionality corrected
+TTP#60	: Copy accessories by hand (drag and drop) in SheetHmcal does not copy anymore pipe lengths.
+In SheetHMCalc, button return to parent module works
+In Chinese version text displayed in print preview control is corrected
+TTP#53	: In PC1 Kv or Cv strings loaded in function of Kv/Cv unit choosen
+TTP#55	: Correct accessory Dp for an entered Cv value 
+Swedish, Finish, Chinese translation updated
+
+************************
+ New in version 3.0.5
+************************
+TTP#56	: Autosave functionality doesn't work well, disactivated
+
+************************
+ New in version 3.0.4
+************************
+TTP#35	: Refreshing of “Direct selection” product list corrected to enable immediate printing.
+TTP#47	: Character size issue in TA Select fixed when printing towards a pdf printer.
+TTP#50	: Bug fixed regarding the opening of tsp files containing empty modules.
+
+************************
+ New in version 3.0.3
+************************
+
+TASelect 3 and TAUpdate VS2005 migration and static link of MFC.
+TTP#7	: Keep selection ordering as it was done in TA Select II.
+TTP#8	: Changing Safety factor now launches a computeAll() (RightViewGenParam.cpp & TabCDialogProj.h).
+TTP#9	: Tooltip in PC2 and in SheetHMCalc are now displayed for Unicode version.
+Solution found for Spread SetFocus issue; now in PC1 and in PC2 spreadsheet receives focus.
+TTP#1	: Multiple selection in SheetHMCalc available for copy,delete,lock,unlock functions.
+TTP#6	: Space available for circuit description in PC1 extended to two lines.
+TTP#12	: Opening file with a non-existing user pipe series is blocked.
+TTP#17	: Autosave functionality added; if allowed, copy the project data under an alternative name (tsp file name appended with '-autosave') every 10 minutes.
+TTP#11	: TA Select 3 runs now with Windows 98, Me and NT
+TTP#15	: When the installation is freezed the circuit type can no longer be changed.
+TTP#14	: For 3 way dividing circuits, bypass valve presetting value is correctly displayed in 2/3way sheet.
+Edition of a circuit keeps selected type, version, connection and PN.
+Maximum bypass overflow for 3-way dividing circuit set to 120% in place of 125% (see RP book p206 ed.3).
+TTP#19	: Option for printing project information on a separate first page added.
+The connection Dp during Module computation was counted two times.
+TTP#22	: Larger Accessory tooltips are now completely displayed.
+TTP#23	: Accessories are displayed (Print Project structure & Right view HMCalc) also when pipe length is set to 0m.
+TTP#26	: Renaming of circuits with a name bigger than 10 chars (CBI limitation) has been corrected.
+TTP#25	: Control valve Kvs can be now displayed as Cv depending on Cv/Kv technical parameters default unit.
+TTP#28	: Minimum authority is correctly computed when the user selects a Kvs below the proposed value. 
+TTP#29	: Silent Mode added for TA Update.  TA Update does a hidden check for update components on TA server every time TA Select is launched.
+TTP#31	: Re-editing a 3-way circuit without bypass valve brings directly to wizard step 2 without a stop in wizard step 1.
+TTP#32	: Changing pipe series of a circuit with Dp controller crash fixed.
+TTP#33	: Managing user pipe series has been improved
+DpCSchemes contains now gif images in place of bitmap images. 
+
+
+************************
+ New in version 3.0.2
+************************
+
+Edition of editable cells in circuit tables now accessed through double click.
+Display behaviour of hand icon for drag and drop in circuit tables improved after an edition or combo box selection.
+Drag and drop fixed for the Accessories column in circuit tables.
+Tooltip corrected for accessories on distribution pipe of last circuit of a branch.
+Technical parameters for pipe selection (accessible from the Customize menu) modified to better fit with practice. Target and max linear pressure drops as well as target and max velocities are now used. Target velocity is an optional parameter.
+Terminal unit Dp and Dp of circuit pipes and accessories added to the Detailed Project Structure printing output.
+Missing control valves data now correctly filled in the Hydronic Circuit Details printing output.
+In the Chinese version, ‘?’ character in the size column of selection tables now correctly replaced by ½, ¼ or ¾.
+Flow and Dp values are now kept in edit boxes when coming back from the alternative qref/Dpref input mode in the 2nd panel of the hydronic circuit wizard.
+Recalculation issue when changing Technical Parameters for pipes fixed.
+In hydronic circuit calculation mode, incorrect “Create module” string replaced by “Add circuit” in the context menu of the Hydraulic Network tree.
+Previously selected pipe series now correctly kept for the next circuit.
+Fixed the issue linked to abnormal termination after edition of customized pipe series for a project in hydronic circuit calculation mode.
+Dp of terminal units can now be reset to zero in the 2nd panel of the hydronic circuit wizard.
+When a selected pipe is smaller than the smallest available valve size (based on selected connection, version, …), this valve size is selected by default even if the Pipe size shift set in the Technical Parameters dialog box does not allow to select a valve larger than the pipe size.
+Behaviour of Paste operation improved for circuits.
+Displayed Dp control connection schemes in the 2nd panel of the hydronic circuit wizard now correctly follows the MV size.
+Useless accessory box removed in the 2nd panel of the hydronic circuit wizard for circuits without terminal unit.
+Fixed the issue linked to abnormal termination when displaying detected plant structure modifications after a Collect Saved Data.
+Fixed the issue linked to the collection of a modified plant from TA-CBI, where a valve has been replaced by a TBV-C LF or NF.
+Changing the valve type in the 2nd panel of the hydronic circuit wizard does not affect any longer valves in other circuits.
+Empty combo boxes in DialogDirHMSel when selecting TBV or Terminal valves (3-way) are now correctly filled.
+Detection and execution of service packs removed (performed in TA Update starting with v2.0.1).
+TA 240 and 243 stainless steel balancing valve article numbers updated to the newly attributed numbers in Ljung.
+In the UK version, TA 240 and 243 stainless steel balancing valves added to the product database.
+
+In DialogAccessory, Edit1 & Edit2 are cleaned when the user changes the entry mode.
+In RightViewHmCalc, dialog accessory is available only if the related pipe exists.
+In RightViewHmCalc, drag and drop of one accessory can be done only where related pipe exists.
+In PC2, changing level of a straight pipe circuit did not show distribution pipe and related box, fixed
+In PC2, modified circuit description is kept when the user goes back to PC1 and returns to PC2.
+In Project Structure printout, terminal unit Dp added.
+In Localdb_Nlb.txt and Localdb_Frb.txt, activation code is now machine dependent.
+
+
+************************
+ New in version 3.0.1
+************************
+
+Circuit pipe length value corrected in the Detailed Project Structure printing output.
+Fixed the issue linked to abnormal termination when editing a Kvs value in the circuit tables.
+Fixed the issue linked to abnormal termination when selecting a valve to be added to a module (in standard selection mode) or when starting the Viscosity Correction dialog box.
+Ensure a full recalculation of a project in hydronic circuit calculation mode when unfreezing it.
+Description of circuit schemes made read-only in 1st panel of the hydronic circuit wizard.
+Inactive Print and Print Recursive options removed from the context menu of the Hydraulic Network tree. All printing functions are available from the Print dialog box.
+
+
+*********************************
+ Major upgrade - version 3.0.0
+*********************************
+
+Hydronic circuit calculation mode includes:
+	A straight-forward graphical input wizard allowing to choose the type of hydronic circuits to add to the project.
+	Only 3 required data: flows, pipe lengths and terminal unit resistances.
+	Optimal sizing of pipes, control valves, balancing valves and Dp controllers all together, minimizing pumping energy and providing good controllability.
+	Hydronic structure sent in a key-press to balancing instrument. Balancing report produced automatically after collecting data from instrument.
+New TBV-C range added to the product database.
+TBV re-categorized as RVTYPE_TBV.
+In the Danish version, stainless steel balancing valves added to the product database and consequently CBI database version changed to EU.
+Numerous technical documentation sheets updated.
+

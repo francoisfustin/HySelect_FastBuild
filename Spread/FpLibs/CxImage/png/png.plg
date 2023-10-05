@@ -1,0 +1,78 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: png - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\RICK~1.WOR\LOCALS~1\Temp\RSP11B.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I "..\zlib" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_AFXDLL" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\FPLIBS\CxImage\png\png.c"
+"D:\FPLIBS\CxImage\png\pngerror.c"
+"D:\FPLIBS\CxImage\png\pngget.c"
+"D:\FPLIBS\CxImage\png\pngmem.c"
+"D:\FPLIBS\CxImage\png\pngpread.c"
+"D:\FPLIBS\CxImage\png\pngread.c"
+"D:\FPLIBS\CxImage\png\pngrio.c"
+"D:\FPLIBS\CxImage\png\pngrtran.c"
+"D:\FPLIBS\CxImage\png\pngrutil.c"
+"D:\FPLIBS\CxImage\png\pngset.c"
+"D:\FPLIBS\CxImage\png\pngtrans.c"
+"D:\FPLIBS\CxImage\png\pngvcrd.c"
+"D:\FPLIBS\CxImage\png\pngwio.c"
+"D:\FPLIBS\CxImage\png\pngwrite.c"
+"D:\FPLIBS\CxImage\png\pngwtran.c"
+"D:\FPLIBS\CxImage\png\pngwutil.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\RICK~1.WOR\LOCALS~1\Temp\RSP11B.tmp" 
+Creating temporary file "C:\DOCUME~1\RICK~1.WOR\LOCALS~1\Temp\RSP11C.tmp" with contents
+[
+/nologo /out:"Release\png.lib" 
+.\Release\png.obj
+.\Release\pngerror.obj
+.\Release\pngget.obj
+.\Release\pngmem.obj
+.\Release\pngpread.obj
+.\Release\pngread.obj
+.\Release\pngrio.obj
+.\Release\pngrtran.obj
+.\Release\pngrutil.obj
+.\Release\pngset.obj
+.\Release\pngtrans.obj
+.\Release\pngvcrd.obj
+.\Release\pngwio.obj
+.\Release\pngwrite.obj
+.\Release\pngwtran.obj
+.\Release\pngwutil.obj
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\RICK~1.WOR\LOCALS~1\Temp\RSP11C.tmp"
+<h3>Output Window</h3>
+Compiling...
+png.c
+pngerror.c
+pngget.c
+pngmem.c
+pngpread.c
+pngread.c
+pngrio.c
+pngrtran.c
+pngrutil.c
+pngset.c
+pngtrans.c
+pngvcrd.c
+pngwio.c
+pngwrite.c
+pngwtran.c
+pngwutil.c
+Generating Code...
+Creating library...
+
+
+
+<h3>Results</h3>
+png.lib - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

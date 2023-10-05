@@ -1,0 +1,50 @@
+// PPPage.h : Declaration of the CPPPage
+
+#ifndef __PPPAGE_H_
+#define __PPPAGE_H_
+
+#include "resource.h"       // main symbols
+#include "fpatlpp.h"
+
+EXTERN_C const CLSID CLSID_PPPage;
+
+/////////////////////////////////////////////////////////////////////////////
+// CPPPage
+class ATL_NO_VTABLE CPPPage :
+	public CfpAtlPropPage<CPPPage, &CLSID_PPPage>
+{
+public:
+	CPPPage(); 
+
+	enum {IDD = IDD_PPPAGE};
+
+DECLARE_REGISTRY_RESOURCEID(IDR_PPPAGE)
+
+BEGIN_COM_MAP(CPPPage) 
+	COM_INTERFACE_ENTRY_IMPL(IPropertyPage)
+END_COM_MAP()
+
+BEGIN_MSG_MAP(CPPPage)
+	MESSAGE_HANDLER(WM_INITDIALOG, OnInitDialog)
+	MESSAGE_HANDLER(WM_HELP, OnWmHelp)
+	COMMAND_HANDLER(IDC_PAGEVIEWTYPE, CBN_SELCHANGE, OnPageViewTypeChange)
+	COMMAND_HANDLER(IDC_PAGEVIEWPERCENTAGE, EN_CHANGE, EnableApply)
+	COMMAND_HANDLER(IDC_PAGEBORDERWIDTH, EN_CHANGE, EnableApply)
+	COMMAND_HANDLER(IDC_PAGESHADOWWIDTH, EN_CHANGE, EnableApply)
+	COMMAND_HANDLER(IDC_PAGEGUTTERH, EN_CHANGE, EnableApply)
+	COMMAND_HANDLER(IDC_PAGEGUTTERV, EN_CHANGE, EnableApply)
+	COMMAND_HANDLER(IDC_PAGEMULTICNTH, EN_CHANGE, EnableApply)
+	COMMAND_HANDLER(IDC_PAGEMULTICNTV, EN_CHANGE, EnableApply)
+	COMMAND_HANDLER(IDC_GRAYAREAMARGINTYPE, CBN_SELCHANGE, EnableApply)
+	COMMAND_HANDLER(IDC_GRAYAREAMARGINH, EN_CHANGE, EnableApply)
+	COMMAND_HANDLER(IDC_GRAYAREAMARGINV, EN_CHANGE, EnableApply)
+	CHAIN_MSG_MAP(IPropertyPageImpl<CPPPage>)
+END_MSG_MAP()
+
+	STDMETHOD(Apply)(void);
+	void InitControls();
+	void LoadComboStrings(void);
+	LRESULT OnPageViewTypeChange(WORD wNotify, WORD wID, HWND hWnd, BOOL& bHandled);
+};
+
+#endif //__PPPAGE_H_

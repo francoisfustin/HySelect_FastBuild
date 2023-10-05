@@ -1,0 +1,16 @@
+LIBRARY         FPIMAGE
+
+DESCRIPTION     'FarPoint Image DLL 7.0'
+
+;EXETYPE         WINDOWS
+
+HEAPSIZE        4096
+
+EXPORTS
+      FPLoadImage		@1900
+      FPLoadImageBuffer @1901
+      FPLoadResImage	@1902
+      FPSaveImage		@1904
+      FPSaveImageBuffer @1905
+      IsBitmap			@1906
+	  IsIcon			@1907

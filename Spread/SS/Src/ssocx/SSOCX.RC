@@ -1,0 +1,1036 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "..\..\..\fplibs\fptools\src\fpabout.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU) || defined(AFX_TARG_JPN)
+
+#ifdef SPREAD_JPN
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+#else
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+#endif
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""\\fplibs\\fptools\\src\\fpabout.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.rc""\r\n"
+    "#include ""ssocx.rc2""  // non-App Studio edited resources\r\n"
+    "#include ""..\\splash.rc""\r\n"
+    "#ifndef CS_OFF\r\n"
+    "#include ""\\fplibs\\codesent\\src\\codesent.rc""\r\n"
+    "#endif\r\n"
+    "#include ""\\fplibs\\fptools\\src\\fpabout.rc""\r\n"
+    "#if 0\r\n"
+    "#include "".\\tlb16\\ssocx.tlb""  // 16-bit: force dependency on .TLB file\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+//IDI_ABOUTDLL            ICON    DISCARDABLE     "SSOCX.ICO"
+//IDI_ICON1               ICON    DISCARDABLE     "ICON1.ICO"
+#ifdef SS_V80
+#ifdef _UNICODE
+  #ifdef FP_ADB
+    SPR_ICON                ICON    DISCARDABLE     "sprado8u.ico"
+  #else
+    SPR_ICON                ICON    DISCARDABLE     "spread8u.ico"
+  #endif    
+#else //not Unicode
+  #ifdef FP_ADB
+    SPR_ICON                ICON    DISCARDABLE     "sprado8.ico"
+  #else
+    SPR_ICON                ICON    DISCARDABLE     "spread8.ico"
+  #endif    
+#endif  //end Unicode
+#elif SS_V70
+#ifdef _UNICODE
+  #ifdef FP_ADB
+    SPR_ICON                ICON    DISCARDABLE     "sprado7u.ico"
+  #else
+    SPR_ICON                ICON    DISCARDABLE     "spread7u.ico"
+  #endif    
+#else //not Unicode
+  #ifdef FP_ADB
+    SPR_ICON                ICON    DISCARDABLE     "sprado7.ico"
+  #else
+    SPR_ICON                ICON    DISCARDABLE     "spread7.ico"
+  #endif    
+#endif  //end Unicode
+#else
+  #ifdef FP_ADB
+    SPR_ICON                ICON    DISCARDABLE     "sprado.ico"
+  #else
+    SPR_ICON                ICON    DISCARDABLE     "..\\vbx\\spread.ico"
+  #endif    
+#endif
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+#if SS_V80
+#ifdef _UNICODE
+  #ifdef FP_ADB
+      IDB_SSOCX               BITMAP  DISCARDABLE     "SSOCXCTL8u.BMP"
+      IDB_PVOCX               BITMAP  DISCARDABLE     "..\\ssprvw\\PVCTL8u.BMP"
+    #else
+      IDB_SSOCX               BITMAP  DISCARDABLE     "SSOCXD8u.BMP"
+      IDB_PVOCX               BITMAP  DISCARDABLE     "..\\ssprvw\\PVCTLD8u.BMP"
+  #endif    
+#else //not Unicode
+  #ifdef FP_ADB
+      IDB_SSOCX               BITMAP  DISCARDABLE     "SSOCXCTL8.BMP"
+      IDB_PVOCX               BITMAP  DISCARDABLE     "..\\ssprvw\\PVCTL8.BMP"
+    #else
+      IDB_SSOCX               BITMAP  DISCARDABLE     "SSOCXD8.BMP"
+      IDB_PVOCX               BITMAP  DISCARDABLE     "..\\ssprvw\\PVCTLD8.BMP"
+  #endif    
+#endif  // end Unicode
+#elif SS_V70
+#ifdef _UNICODE
+  #ifdef FP_ADB
+      IDB_SSOCX               BITMAP  DISCARDABLE     "SSOCXCTL7u.BMP"
+      IDB_PVOCX               BITMAP  DISCARDABLE     "..\\ssprvw\\PVCTL7u.BMP"
+    #else
+      IDB_SSOCX               BITMAP  DISCARDABLE     "SSOCXD7u.BMP"
+      IDB_PVOCX               BITMAP  DISCARDABLE     "..\\ssprvw\\PVCTLD7u.BMP"
+  #endif    
+#else //not Unicode
+  #ifdef FP_ADB
+      IDB_SSOCX               BITMAP  DISCARDABLE     "SSOCXCTL7.BMP"
+      IDB_PVOCX               BITMAP  DISCARDABLE     "..\\ssprvw\\PVCTL7.BMP"
+    #else
+      IDB_SSOCX               BITMAP  DISCARDABLE     "SSOCXD7.BMP"
+      IDB_PVOCX               BITMAP  DISCARDABLE     "..\\ssprvw\\PVCTLD7.BMP"
+  #endif    
+#endif  // end Unicode
+#else
+  #ifdef FP_ADB
+    IDB_SSOCX               BITMAP  DISCARDABLE     "SSOCXCTL.BMP"
+    IDB_PVOCX               BITMAP  DISCARDABLE     "..\\ssprvw\\PVCTL.BMP"
+  #else
+    IDB_SSOCX               BITMAP  DISCARDABLE     "SSOCXD.BMP"
+    IDB_PVOCX               BITMAP  DISCARDABLE     "..\\ssprvw\\PVCTLD.BMP"
+  #endif    
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+SSPREVIEWZOOMINCURSOR   CURSOR  DISCARDABLE     "..\\ssprvw\\zoomin.cur"
+SSPREVIEWZOOMOUTCURSOR  CURSOR  DISCARDABLE     "..\\ssprvw\\zoomout.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+// these about boxes are not used -scl
+/*
+IDD_ABOUTBOX_SSOCX DIALOG DISCARDABLE  0, 32, 184, 116
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Spread 3.0"
+FONT 8, "MS Sans Serif"
+BEGIN
+//VERSION_NUMBER
+    CTEXT           "Spread 3.0.41 for Visual Programming",-1,30,4,123,8
+    CTEXT           "Copyright ?1991-2000, FarPoint Technologies",-1,16,14,
+                    151,8
+    CONTROL         "",-1,"Static",SS_BLACKRECT | WS_GROUP,8,27,167,3
+    CTEXT           "The market leader in spreadsheet controls",-1,3,36,177,
+                    8
+    CTEXT           "FarPoint Technologies",-1,44,60,95,8
+    CTEXT           "175 Southport Drive, Suite 900",-1,10,68,164,8
+    CTEXT           "Morrisville, NC 27560",-1,10,76,164,8
+    CTEXT           "Phone (919) 460-4551    Fax (919) 460-7606",-1,10,84,
+                    164,8
+    DEFPUSHBUTTON   "OK",IDOK,73,97,36,14,WS_GROUP
+    PUSHBUTTON      "Set Properties",IDC_SETPROPS,10,97,50,14
+END
+
+ABOUTBOX DIALOG DISCARDABLE  34, 22, 260, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Ssocx Control"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDI_ABOUTDLL,IDC_STATIC,10,10,20,20
+//VERSION_NUMBER
+    LTEXT           "Spread Control, Version 3.0.41",IDC_STATIC,40,10,170,8
+    LTEXT           "Copyright ?1991-2000, FarPoint",IDC_STATIC,40,25,170,8
+    DEFPUSHBUTTON   "OK",IDOK,220,10,32,14,WS_GROUP
+END
+*/
+
+#ifndef SS_V30
+IDD_GENERAL DIALOG DISCARDABLE  0, 0, 301, 110
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Cell &Overflow",IDC_ALLOW_CELL_OVERFLOW,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,6,17,92,14
+    CONTROL         "&Drag and Drop",IDC_ALLOW_DRAG_DROP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,6,40,92,14
+    CONTROL         "&Multiple Block Selections",IDC_ALLOW_MULTIBLOCKS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,63,95,14
+    CONTROL         "Users to Enter &Formulas",IDC_ALLOW_FORMULAS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,6,86,92,14
+    CONTROL         "Automatic &Calculations",IDC_AUTOCALC,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,110,14,88,14
+    CONTROL         "S&ynchronize Formulas",IDC_FORMULASYNC,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,110,35,90,14
+    CONTROL         "Handle Cli&pboard Keys",IDC_AUTOCLIPBOARD,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,105,68,97,15
+    CONTROL         "On Focu&s Set Cell to Cursor",IDC_MOVE_ON_FOCUS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,105,91,104,15
+    GROUPBOX        "Allow",IDC_STATIC,2,0,100,110
+    GROUPBOX        "Calculations",IDC_STATIC,105,0,98,62
+END
+
+IDD_HEADERS DIALOG DISCARDABLE  0, 0, 301, 110
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Row Headers",IDC_STATIC,0,1,130,109
+    LTEXT           "St&yle",IDC_STATIC,8,14,18,10
+    COMBOBOX        IDC_ROW_HEADER_DISPLAY,31,13,50,42,CBS_DROPDOWNLIST | 
+                    WS_TABSTOP
+    CONTROL         "S&how",IDC_DISPLAY_ROW_HEADERS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,94,13,33,12
+    CONTROL         "&Restrict Data Entry ",IDC_RESTRICT_ROWS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,27,121,9
+    LTEXT           "&Max Number of Rows",IDC_STATIC,1,40,72,10
+    EDITTEXT        IDC_MAXROWS,85,39,43,13,ES_AUTOHSCROLL
+    LTEXT           "Starting Row &Number",IDC_STATIC,1,58,82,10
+    EDITTEXT        IDC_STARTING_ROW,95,56,33,13,ES_AUTOHSCROLL
+    LTEXT           "Rows &Frozen for Scrolling",IDC_STATIC,1,75,85,10
+    EDITTEXT        IDC_FROZEN_ROWS,95,74,33,13,ES_AUTOHSCROLL
+    LTEXT           "Number of &Visible Rows",IDC_STATIC,1,94,84,10
+    EDITTEXT        IDC_VISIBLE_ROWS,95,93,33,13,ES_AUTOHSCROLL
+    GROUPBOX        "Col Headers",IDC_STATIC,146,1,130,109
+    LTEXT           "Styl&e",IDC_STATIC,156,14,18,10
+    COMBOBOX        IDC_COL_HEADER_DISPLAY,178,13,50,40,CBS_DROPDOWNLIST | 
+                    WS_TABSTOP
+    CONTROL         "Sho&w",IDC_DISPLAY_COL_HEADERS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,241,13,33,12
+    CONTROL         "Restri&ct Data Entry",IDC_RESTRICT_COLS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,151,27,91,9
+    LTEXT           "Max Number of C&olumns",IDC_STATIC,148,40,80,10
+    EDITTEXT        IDC_MAXCOLS,231,39,43,13,ES_AUTOHSCROLL
+    LTEXT           "Starting Column N&umber",IDC_STATIC,148,58,81,10
+    EDITTEXT        IDC_STARTING_COL,241,56,33,13,ES_AUTOHSCROLL
+    LTEXT           "Columns Fro&zen for Scrolling",IDC_STATIC,148,75,93,10
+    EDITTEXT        IDC_FROZEN_COLS,241,74,33,13,ES_AUTOHSCROLL
+    LTEXT           "Number of Visi&ble Columns",IDC_STATIC,148,94,86,10
+    EDITTEXT        IDC_VISIBLE_COLS,241,93,33,13,ES_AUTOHSCROLL
+END
+
+IDD_OP_MODE DIALOG DISCARDABLE  0, 0, 301, 110
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&Normal",IDC_NORMAL,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,11,14,66,10
+    CONTROL         "Read &Only",IDC_OPMODE_READONLY,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,11,28,68,10
+    CONTROL         "Row Mo&de",IDC_OPMODE_ROW,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,11,42,69,10
+    CONTROL         "&Single Selection",IDC_OPMODE_SINGLE,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,11,56,67,10
+    CONTROL         "Multiple S&election",IDC_OPMODE_MULTI,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,11,70,73,10
+    CONTROL         "E&xtended Selection",IDC_OPMODE_EXTEND,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,11,84,81,10
+    CONTROL         "Col&umns",IDC_SELBLKS_COLS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,103,14,51,10
+    CONTROL         "Ro&ws",IDC_SELBLKS_ROWS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,103,28,51,10
+    CONTROL         "Bloc&ks",IDC_SELBLKS_BLKS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,103,42,51,10
+    CONTROL         "A&ll",IDC_SELBLKS_ALL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,103,56,25,10
+    CONTROL         "Reta&in Selected Block",IDC_RETAINSEL_BLK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,98,78,85,10
+    CONTROL         "&Protect Locked Cells",IDC_PROTECT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,98,92,81,10
+    CONTROL         "Nor&mal",IDC_UNIT_TYPE_NORM,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,191,14,36,10
+    CONTROL         "&VGA",IDC_UNIT_TYPE_VGA,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,191,33,36,10
+    CONTROL         "&Twips",IDC_UNIT_TYPE_TWIPS,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,191,52,36,10
+    CONTROL         "Turn &Beep Off",IDC_NO_BEEP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,185,78,58,10
+    CONTROL         "&Hide Border ",IDC_NO_BORDER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,185,92,116,10
+    CONTROL         "&Columns",IDC_USER_RESIZE_COLS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,254,14,44,10
+    CONTROL         "&Rows",IDC_USER_RESIZE_ROWS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,254,33,39,10
+    CONTROL         "Auto Si&ze",IDC_AUTO_SIZE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,249,78,42,10
+    GROUPBOX        "Operation Mode",IDC_STATIC,6,0,88,109
+    GROUPBOX        "Select Block Options",IDC_STATIC,98,0,81,73
+    GROUPBOX        "User Resize",IDC_STATIC,249,0,50,73
+    GROUPBOX        "Unit Type",IDC_STATIC,185,0,58,73
+    EDITTEXT        IDC_SEL_BLK_OPTS,152,54,20,16,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_VISIBLE | NOT WS_TABSTOP
+    EDITTEXT        IDC_USER_RESIZE,262,57,19,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_VISIBLE | NOT WS_TABSTOP
+END
+
+IDD_EDIT_MODE DIALOG DISCARDABLE  0, 0, 301, 110
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&None",IDC_EEA_NONE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,6,11,38,13
+    CONTROL         "&Up",IDC_EEA_UP,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,6,30,38,13
+    CONTROL         "&Down",IDC_EEA_DOWN,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,50,30,38,13
+    CONTROL         "&Left",IDC_EEA_LEFT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,6,49,38,13
+    CONTROL         "&Right",IDC_EEA_RIGHT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,50,49,38,13
+    CONTROL         "Ne&xt",IDC_EEA_NEXT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,6,68,38,13
+    CONTROL         "&Previous",IDC_EEA_PREVIOS,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,50,68,40,13
+    CONTROL         "&Same",IDC_EEA_SAME,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,6,87,38,13
+    CONTROL         "Next Ro&w",IDC_EEA_NEXTROW,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,50,87,43,13
+    CONTROL         "Per&manent",IDC_EM_PERMANENT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,111,15,57,11
+    CONTROL         "Repla&ce Existing Text",IDC_EM_REPLACE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,111,32,97,10
+    CONTROL         "Arrow &Keys Exit",IDC_EM_ARROWS_EXIT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,111,49,86,11
+    CONTROL         "Process Ta&b Key",IDC_PROCESS_TAB,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,103,78,70,13
+    GROUPBOX        "Enter Key Action",IDC_STATIC,0,0,96,109
+    GROUPBOX        "Edit Mode",IDC_STATIC,103,0,115,66
+END
+
+IDD_DISPLAY DIALOG DISCARDABLE  0, 0, 301, 110
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Button Draw Mode",IDC_STATIC,3,0,84,107
+    CONTROL         "Al&ways",IDC_BDM_ALWAYS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,14,71,16
+    CONTROL         "Current &Cell",IDC_BDM_CURRENT_CELL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,36,71,16
+    CONTROL         "Current Co&lumn",IDC_BDM_CURRENT_COL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,58,71,16
+    CONTROL         "Current &Row",IDC_BDM_CURRENT_ROW,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,80,53,16
+    EDITTEXT        IDC_BDM,66,81,13,16,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_VISIBLE | NOT WS_TABSTOP
+    GROUPBOX        "Grid Lines",IDC_STATIC,91,0,93,90
+    CONTROL         "Show &Vertical Lines",IDC_GRIDSHOWVERT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,96,15,81,9
+    CONTROL         "Show &Horizontal Lines",IDC_GRIDSHOWHORIZ,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,96,31,85,9
+    CONTROL         "Make Grid Lines &Solid",IDC_GRIDSOLID,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,96,48,83,9
+    LTEXT           "Bac&k Color Displays",IDC_STATIC,96,62,86,9
+    COMBOBOX        IDC_BKCOLORSTYLE,101,74,79,37,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Re&draw",IDC_REDRAW,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,96,92,82,14
+    GROUPBOX        "Scroll Bars",IDC_STATIC,188,0,113,107
+    LTEXT           "&Display",IDC_STATIC,191,14,25,10
+    COMBOBOX        IDC_SCROLLBARS,221,14,76,48,CBS_DROPDOWNLIST | 
+                    WS_TABSTOP
+    CONTROL         "Show &Only if Needed",IDC_SCROLLBAREXTMODE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,192,33,82,15
+    CONTROL         "Ali&gn at Last Row and Column",IDC_SCROLLBARMAXALIGN,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,192,58,108,15
+    CONTROL         "&Box Reflects Max Rows",IDC_SCROLLBARSHOWMAX,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,192,83,99,15
+END
+
+IDD_VIRTUAL_MODE DIALOG DISCARDABLE  0, 0, 301, 110
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&Virtual Mode",IDC_VIRTUAL_MODE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,8,62,15
+    EDITTEXT        IDC_VMAXROWS,72,30,59,18,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VOVERLAP,72,55,59,18,ES_AUTOHSCROLL
+    EDITTEXT        IDC_VROWS,72,80,59,18,ES_AUTOHSCROLL
+    CONTROL         "Use &Special Scroll Bar",IDC_VSCROLLSPEC,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,147,17,91,18
+    CONTROL         "No &Home/End",IDC_VSSTYPE_HOMEEND,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,158,38,73,9
+    CONTROL         "No &Page Up/Page Down",IDC_VSSTYPE_PAGEUPDWN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,158,52,93,9
+    CONTROL         "No &Line Up/Line Down",IDC_VSSTYPE_LINEUPDWN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,158,66,87,9
+    CONTROL         "Box Reflects Rows in &Buffer",IDC_VSCROLLBUFF,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,147,82,111,13
+    GROUPBOX        "",IDC_STATIC,3,0,131,107
+    LTEXT           "Virtual &Max Rows (-1 if unknown)",IDC_STATIC,6,30,62,
+                    17
+    LTEXT           "Viewed Records to &Keep in Memory",IDC_STATIC,6,54,61,
+                    20
+    LTEXT           "&Rows Requested Each Time",IDC_STATIC,6,80,61,19
+    GROUPBOX        "Vertical Scroll Bar",IDC_STATIC,139,0,127,107
+    EDITTEXT        IDC_VSCROLL_SPEC_TYPE,248,66,15,11,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_VISIBLE | NOT WS_TABSTOP
+END
+
+IDD_DISPLAY_JPN DIALOG DISCARDABLE  0, 0, 285, 144
+STYLE WS_CHILD
+FONT 9, "ＭＳ ゴシック"
+BEGIN
+    GROUPBOX        "??ン?コン??\示",IDC_STATIC,2,2,89,78
+    CONTROL         "常に?\示",IDC_BDM_ALWAYS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,11,18,74,9
+    CONTROL         "アクティブセル",IDC_BDM_CURRENT_CELL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,33,74,9
+    CONTROL         "アクティブ列",IDC_BDM_CURRENT_COL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,48,74,9
+    CONTROL         "アクティブ行",IDC_BDM_CURRENT_ROW,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,63,74,9
+    EDITTEXT        IDC_BDM,66,13,13,16,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_VISIBLE | NOT WS_TABSTOP
+    GROUPBOX        "スクロ?ルバ?情報",IDC_STATIC,97,2,138,78
+    LTEXT           "ス?イル：",IDC_STATIC,107,18,40,8
+    COMBOBOX        IDC_SCROLLBARS,149,16,73,48,CBS_DROPDOWNLIST | 
+                    WS_TABSTOP
+    CONTROL         "スクロ?ルバ?の自動?\示",IDC_SCROLLBAREXTMODE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,107,33,110,9
+    CONTROL         "最終セルがシ?ト右下に吸着",IDC_SCROLLBARMAXALIGN,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,107,48,118,9
+    CONTROL         "最終セルまでスクロ?ル",IDC_SCROLLBARSHOWMAX,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,107,63,101,9
+    GROUPBOX        "グリッド情報",IDC_STATIC,2,83,233,33
+    CONTROL         "縦グリッド",IDC_GRIDSHOWVERT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,11,98,54,9
+    CONTROL         "横グリッド",IDC_GRIDSHOWHORIZ,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,86,98,54,9
+    CONTROL         "実線で?\示",IDC_GRIDSOLID,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,163,98,54,9
+    CONTROL         "再?画",IDC_REDRAW,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,2,123,48,9
+END
+
+IDD_EDIT_MODE_JPN DIALOG DISCARDABLE  0, 0, 285, 144
+STYLE WS_CHILD
+FONT 9, "ＭＳ ゴシック"
+BEGIN
+    CONTROL         "動作なし",IDC_EEA_NONE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,11,18,46,9
+    CONTROL         "上のセル",IDC_EEA_UP,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,11,31,46,9
+    CONTROL         "下のセル",IDC_EEA_DOWN,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,11,44,46,9
+    CONTROL         "左のセル",IDC_EEA_LEFT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,11,57,46,9
+    CONTROL         "右のセル",IDC_EEA_RIGHT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,11,70,46,9
+    CONTROL         "次のセル",IDC_EEA_NEXT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,11,83,46,9
+    CONTROL         "前のセル",IDC_EEA_PREVIOS,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,11,96,46,9
+    CONTROL         "同セル(移動なし)",IDC_EEA_SAME,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,11,109,75,9
+    CONTROL         "次行の最初セル",IDC_EEA_NEXTROW,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,11,122,72,9
+    CONTROL         "常時入力モ?ド",IDC_EM_PERMANENT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,122,18,73,9
+    CONTROL         "上書モ?ド",IDC_EM_REPLACE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,122,33,54,9
+    CONTROL         "矢印をセル間で使用",IDC_EM_ARROWS_EXIT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,122,48,89,9
+    CONTROL         "?ブによるセル間の移動",IDC_PROCESS_TAB,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,111,73,103,9
+    GROUPBOX        "改行キ?",IDC_STATIC,3,2,102,137
+    GROUPBOX        "編集モ?ド",IDC_STATIC,111,2,109,63
+END
+
+IDD_HEADERS_JPN DIALOG DISCARDABLE  0, 0, 285, 148
+STYLE WS_CHILD
+FONT 9, "ＭＳ ゴシック"
+BEGIN
+    GROUPBOX        "行?イトル",IDC_STATIC,3,2,136,142
+    LTEXT           "ス?イル：",IDC_STATIC,11,20,40,8
+    COMBOBOX        IDC_ROW_HEADER_DISPLAY,57,18,71,42,CBS_DROPDOWNLIST | 
+                    WS_TABSTOP
+    CONTROL         "行?イトルを?\示",IDC_DISPLAY_ROW_HEADERS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,36,76,9
+    CONTROL         "行のサイズ変更不可",IDC_RESTRICT_ROWS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,50,88,9
+    LTEXT           "最大行数：",IDC_STATIC,11,68,42,8
+    EDITTEXT        IDC_MAXROWS,56,66,43,12,ES_AUTOHSCROLL
+    LTEXT           "最上行：",IDC_STATIC,11,86,42,8
+    EDITTEXT        IDC_STARTING_ROW,56,84,43,12,ES_AUTOHSCROLL
+    LTEXT           "固定行数：",IDC_STATIC,11,104,42,8
+    EDITTEXT        IDC_FROZEN_ROWS,56,102,43,12,ES_AUTOHSCROLL
+    LTEXT           "?\示行数：",IDC_STATIC,11,122,42,8
+    EDITTEXT        IDC_VISIBLE_ROWS,56,120,43,12,ES_AUTOHSCROLL
+    GROUPBOX        "列?イトル",IDC_STATIC,146,2,137,142
+    LTEXT           "ス?イル：",IDC_STATIC,156,20,40,8
+    COMBOBOX        IDC_COL_HEADER_DISPLAY,202,18,71,40,CBS_DROPDOWNLIST | 
+                    WS_TABSTOP
+    CONTROL         "列?イトルを?\示",IDC_DISPLAY_COL_HEADERS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,156,36,77,9
+    CONTROL         "列のサイズ変更不可",IDC_RESTRICT_COLS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,156,50,91,10
+    LTEXT           "最大列数：",IDC_STATIC,159,68,42,8
+    EDITTEXT        IDC_MAXCOLS,209,66,43,12,ES_AUTOHSCROLL
+    LTEXT           "最左列：",IDC_STATIC,159,86,42,8
+    EDITTEXT        IDC_STARTING_COL,209,84,43,12,ES_AUTOHSCROLL
+    LTEXT           "固定列数：",IDC_STATIC,159,104,42,8
+    EDITTEXT        IDC_FROZEN_COLS,209,102,43,12,ES_AUTOHSCROLL
+    LTEXT           "?\示列数：",IDC_STATIC,159,122,42,8
+    EDITTEXT        IDC_VISIBLE_COLS,209,120,43,12,ES_AUTOHSCROLL
+END
+
+IDD_OP_MODE_JPN DIALOG DISCARDABLE  0, 0, 285, 144
+STYLE WS_CHILD
+FONT 9, "ＭＳ ゴシック"
+BEGIN
+    GROUPBOX        "シ?トモ?ド",IDC_STATIC,2,2,82,95
+    CONTROL         "標?",IDC_NORMAL,"Button",BS_AUTORADIOBUTTON | WS_GROUP | 
+                    WS_TABSTOP,11,16,37,9
+    CONTROL         "読出専用",IDC_OPMODE_READONLY,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,11,29,47,9
+    CONTROL         "行モ?ド",IDC_OPMODE_ROW,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,11,42,45,9
+    CONTROL         "単一選択",IDC_OPMODE_SINGLE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,11,55,47,9
+    CONTROL         "複数選択",IDC_OPMODE_MULTI,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,11,68,45,9
+    CONTROL         "拡張複数選択",IDC_OPMODE_EXTEND,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,11,81,62,9
+    GROUPBOX        "セルブロック選択",IDC_STATIC,90,2,81,95
+    CONTROL         "列全体",IDC_SELBLKS_COLS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,100,16,39,9
+    CONTROL         "行全体",IDC_SELBLKS_ROWS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,100,31,37,9
+    CONTROL         "セルブロック",IDC_SELBLKS_BLKS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,100,46,60,9
+    CONTROL         "シ?ト全体",IDC_SELBLKS_ALL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,100,61,53,9
+    EDITTEXT        IDC_SEL_BLK_OPTS,143,19,20,16,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_VISIBLE | NOT WS_TABSTOP
+    GROUPBOX        "その他",IDC_STATIC,177,2,105,95
+    CONTROL         "選択ブロックを保持",IDC_RETAINSEL_BLK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,187,16,86,9
+    CONTROL         "保護モ?ド",IDC_PROTECT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,187,29,55,9
+    CONTROL         "ビ?プ音なし",IDC_NO_BEEP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,187,42,62,9
+    CONTROL         "サイズの自動調整",IDC_AUTO_SIZE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,187,55,87,9
+    CONTROL         "????非?\示",IDC_NO_BORDER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,187,68,69,9
+    GROUPBOX        "単位設定",IDC_STATIC,2,100,135,34
+    CONTROL         "標?",IDC_UNIT_TYPE_NORM,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,11,116,31,9
+    CONTROL         "&VGA",IDC_UNIT_TYPE_VGA,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,52,116,28,9
+    CONTROL         "&Twips",IDC_UNIT_TYPE_TWIPS,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,95,116,32,9
+    GROUPBOX        "列の幅?行の高さの変更",IDC_STATIC,143,100,139,34
+    CONTROL         "列変更可",IDC_USER_RESIZE_ROWS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,156,116,52,9
+    CONTROL         "行変更可",IDC_USER_RESIZE_COLS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,222,116,52,9
+    EDITTEXT        IDC_USER_RESIZE,251,114,19,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_VISIBLE | NOT WS_TABSTOP
+END
+
+IDD_VIRTUAL_MODE_JPN DIALOG DISCARDABLE  0, 0, 285, 144
+STYLE WS_CHILD
+FONT 9, "ＭＳ ゴシック"
+BEGIN
+    GROUPBOX        "設定内容",IDC_STATIC,2,2,137,89
+    CONTROL         "仮想モ?ドを使用",IDC_VIRTUAL_MODE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,18,78,9
+    LTEXT           "仮想モ?ド行数：",IDC_STATIC,11,36,67,8
+    EDITTEXT        IDC_VMAXROWS,87,34,40,12,ES_AUTOHSCROLL
+    LTEXT           "メモリ内保存行数：",IDC_STATIC,11,54,73,8
+    EDITTEXT        IDC_VOVERLAP,87,52,40,12,ES_AUTOHSCROLL
+    LTEXT           "１ペ?ジの行数：",IDC_STATIC,11,72,66,8
+    EDITTEXT        IDC_VROWS,87,70,40,12,ES_AUTOHSCROLL
+    GROUPBOX        "拡張スクロ?ルバ?",IDC_STATIC,145,2,132,89
+    CONTROL         "拡張スクロ?ルバ?を使用",IDC_VSCROLLSPEC,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,156,18,112,9
+    CONTROL         "先頭?最後を非使用",IDC_VSSTYPE_HOMEEND,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,167,33,85,9
+    CONTROL         "前頁?次頁を非使用",IDC_VSSTYPE_PAGEUPDWN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,167,45,85,9
+    CONTROL         "前行?次行を非使用",IDC_VSSTYPE_LINEUPDWN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,167,57,84,9
+    CONTROL         "仮想バッフ?でスクロ?ル",IDC_VSCROLLBUFF,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,156,74,112,9
+    EDITTEXT        IDC_VSCROLL_SPEC_TYPE,256,54,15,11,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_VISIBLE | NOT WS_TABSTOP
+END
+
+IDD_COLORPPG DIALOG FIXED IMPURE  0, 0, 250, 62
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Property &Name:",-1,3,3,100,8
+    COMBOBOX        1116,3,13,100,54,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "System &Color:",-1,3,29,100,8
+    COMBOBOX        1117,3,39,100,54,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",1100,"Button",BS_OWNERDRAW | WS_GROUP | WS_TABSTOP,
+                    118,4,15,11
+    CONTROL         "",1104,"Button",BS_OWNERDRAW,138,4,15,11
+    CONTROL         "",1107,"Button",BS_OWNERDRAW,158,4,15,11
+    CONTROL         "",1112,"Button",BS_OWNERDRAW,178,4,15,11
+    CONTROL         "",1115,"Button",BS_OWNERDRAW,118,18,15,11
+    CONTROL         "",1111,"Button",BS_OWNERDRAW,138,18,15,11
+    CONTROL         "",1114,"Button",BS_OWNERDRAW,158,18,15,11
+    CONTROL         "",1108,"Button",BS_OWNERDRAW,178,18,15,11
+    CONTROL         "",1110,"Button",BS_OWNERDRAW,118,32,15,11
+    CONTROL         "",1103,"Button",BS_OWNERDRAW,138,32,15,11
+    CONTROL         "",1113,"Button",BS_OWNERDRAW,158,32,15,11
+    CONTROL         "",1109,"Button",BS_OWNERDRAW,178,32,15,11
+    CONTROL         "",1106,"Button",BS_OWNERDRAW,118,46,15,11
+    CONTROL         "",1102,"Button",BS_OWNERDRAW,138,46,15,11
+    CONTROL         "",1101,"Button",BS_OWNERDRAW,158,46,15,11
+    CONTROL         "",1105,"Button",BS_OWNERDRAW,178,46,15,11
+END
+
+IDD_GENERAL_JPN DIALOG DISCARDABLE  0, 0, 285, 144
+STYLE WS_CHILD
+FONT 9, "ＭＳ ゴシック"
+BEGIN
+    CONTROL         "セルオ?バ?フロ?",IDC_ALLOW_CELL_OVERFLOW,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,18,85,9
+    CONTROL         "ドラック＆ドロップ??\",IDC_ALLOW_DRAG_DROP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,33,103,9
+    CONTROL         "複数ブロックの選択",IDC_ALLOW_MULTIBLOCKS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,48,85,9
+    CONTROL         "ユ?ザ数式入力を許可",IDC_ALLOW_FORMULAS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,63,100,9
+    CONTROL         "自動計算",IDC_AUTOCALC,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,136,18,48,9
+    CONTROL         "",IDC_FORMULASYNC,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    136,33,86,9
+    CONTROL         "クリップ??ド?作の許可",IDC_AUTOCLIPBOARD,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,2,88,109,9
+    CONTROL         "フォ?カス取得でクリックしたセルをアクティブ化",
+                    IDC_MOVE_ON_FOCUS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    2,102,199,9
+    GROUPBOX        "基?設定",IDC_STATIC,2,2,118,79
+    GROUPBOX        "計算処理",IDC_STATIC,126,2,124,47
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_HEADERS DLGINIT
+BEGIN
+    IDC_ROW_HEADER_DISPLAY, 0x403, 6, 0
+0x6c42, 0x6e61, 0x006b, 
+    IDC_ROW_HEADER_DISPLAY, 0x403, 8, 0
+0x754e, 0x626d, 0x7265, 0x0073, 
+    IDC_ROW_HEADER_DISPLAY, 0x403, 8, 0
+0x654c, 0x7474, 0x7265, 0x0073, 
+    IDC_COL_HEADER_DISPLAY, 0x403, 6, 0
+0x6c42, 0x6e61, 0x006b, 
+    IDC_COL_HEADER_DISPLAY, 0x403, 8, 0
+0x754e, 0x626d, 0x7265, 0x0073, 
+    IDC_COL_HEADER_DISPLAY, 0x403, 8, 0
+0x654c, 0x7474, 0x7265, 0x0073, 
+    0
+END
+
+IDD_DISPLAY DLGINIT
+BEGIN
+    IDC_BKCOLORSTYLE, 0x403, 10, 0
+0x764f, 0x7265, 0x4720, 0x6972, 0x0064, 
+    IDC_BKCOLORSTYLE, 0x403, 11, 0
+0x6e55, 0x6564, 0x2072, 0x7247, 0x6469, "\000" 
+    IDC_BKCOLORSTYLE, 0x403, 20, 0
+0x764f, 0x7265, 0x4820, 0x726f, 0x207a, 0x7247, 0x6469, 0x4f20, 0x6c6e, 
+0x0079, 
+    IDC_BKCOLORSTYLE, 0x403, 20, 0
+0x764f, 0x7265, 0x5620, 0x7265, 0x2074, 0x7247, 0x6469, 0x4f20, 0x6c6e, 
+0x0079, 
+    IDC_SCROLLBARS, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    IDC_SCROLLBARS, 0x403, 11, 0
+0x6f48, 0x6972, 0x6f7a, 0x746e, 0x6c61, "\000" 
+    IDC_SCROLLBARS, 0x403, 9, 0
+0x6556, 0x7472, 0x6369, 0x6c61, "\000" 
+    IDC_SCROLLBARS, 0x403, 5, 0
+0x6f42, 0x6874, "\000" 
+    0
+END
+
+IDD_DISPLAY2 DLGINIT
+BEGIN
+    IDC_SCROLLBARS, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    IDC_SCROLLBARS, 0x403, 11, 0
+0x6f48, 0x6972, 0x6f7a, 0x746e, 0x6c61, "\000" 
+    IDC_SCROLLBARS, 0x403, 9, 0
+0x6556, 0x7472, 0x6369, 0x6c61, "\000" 
+    IDC_SCROLLBARS, 0x403, 5, 0
+0x6f42, 0x6874, "\000" 
+    0
+END
+
+IDD_DISPLAY_JPN DLGINIT
+BEGIN
+    IDC_SCROLLBARS, 0x403, 5, 0
+0xc882, 0xb582, "\000" 
+    IDC_SCROLLBARS, 0x403, 5, 0
+0x8590, 0xbd95, "\000" 
+    IDC_SCROLLBARS, 0x403, 5, 0
+0x8290, 0xbc92, "\000" 
+    IDC_SCROLLBARS, 0x403, 5, 0
+0xbc97, 0xfb95, "\000" 
+    0
+END
+
+IDD_HEADERS_JPN DLGINIT
+BEGIN
+    IDC_ROW_HEADER_DISPLAY, 0x403, 5, 0
+0xf38b, 0x9294, "\000" 
+    IDC_ROW_HEADER_DISPLAY, 0x403, 5, 0
+0x9490, 0x9a8e, "\000" 
+    IDC_ROW_HEADER_DISPLAY, 0x403, 15, 0
+0x4183, 0x8b83, 0x7483, 0x4083, 0x7883, 0x6283, 0x6783, "\000" 
+    IDC_COL_HEADER_DISPLAY, 0x403, 5, 0
+0xf38b, 0x9294, "\000" 
+    IDC_COL_HEADER_DISPLAY, 0x403, 5, 0
+0x9490, 0x9a8e, "\000" 
+    IDC_COL_HEADER_DISPLAY, 0x403, 15, 0
+0x4183, 0x8b83, 0x7483, 0x4083, 0x7883, 0x6283, 0x6783, "\000" 
+    0
+END
+#endif // !SS_V30
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PRODUCT_ICON        "SPR_ICON"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+
+#if defined SS_V80
+
+#ifdef FP_UNICODE_TEST  //GAB Added for FP Unicode test time out
+
+    IDS_ABOUT_PRODUCT       "About Spread ADO Unicode Test"
+//VERSION_NUMBER_TEST
+    IDS_PRODUCT             "Spread ADO 8.0 (OLEDB) Unicode Test\n(Expires March 31, 2004)"
+
+#else // !defined(FP_UNICODE_TEST)
+    IDS_COPYRIGHT           "Copyright (C) 1994-2010 FarPoint Technologies, Inc."
+
+#ifdef _UNICODE
+#ifdef FP_ADB
+    IDS_ABOUT_PRODUCT       "About Unicode Spread ADO"
+//VERSION_NUMBER_8
+    IDS_PRODUCT             "Unicode Spread ADO 8.0.13 (OLEDB)"
+#else 
+    IDS_ABOUT_PRODUCT       "About Unicode Spread"
+//VERSION_NUMBER_8
+    IDS_PRODUCT             "Unicode Spread 8.0.13"
+#endif
+#else //!_UNICODE
+#ifdef FP_ADB
+    IDS_ABOUT_PRODUCT       "About Spread ADO"
+//VERSION_NUMBER_7
+    IDS_PRODUCT             "Spread ADO 8.0.13 (OLEDB)"
+#else 
+    IDS_ABOUT_PRODUCT       "About Spread"
+//VERSION_NUMBER_8
+    IDS_PRODUCT             "Spread 8.0.13"
+#endif
+#endif // _UNICODE
+#endif // !defined(FP_UNICODE_TEST)
+
+#elif defined SS_V70
+
+#ifdef FP_UNICODE_TEST  //GAB Added for FP Unicode test time out
+
+    IDS_ABOUT_PRODUCT       "About Spread ADO Unicode Test"
+//VERSION_NUMBER_TEST
+    IDS_PRODUCT             "Spread ADO 7.0 (OLEDB) Unicode Test\n(Expires March 31, 2004)"
+
+#else // !defined(FP_UNICODE_TEST)
+    IDS_COPYRIGHT           "Copyright (C) 1994-2010 FarPoint Technologies, Inc."
+
+#ifdef _UNICODE
+#ifdef FP_ADB
+    IDS_ABOUT_PRODUCT       "About Unicode Spread ADO"
+//VERSION_NUMBER_7
+    IDS_PRODUCT             "Unicode Spread ADO 7.0.55 (OLEDB)"
+#else 
+    IDS_ABOUT_PRODUCT       "About Unicode Spread"
+//VERSION_NUMBER_7
+    IDS_PRODUCT             "Unicode Spread 7.0.55"
+#endif
+#else //!_UNICODE
+#ifdef FP_ADB
+    IDS_ABOUT_PRODUCT       "About Spread ADO"
+//VERSION_NUMBER_7
+    IDS_PRODUCT             "Spread ADO 7.0.55 (OLEDB)"
+#else 
+    IDS_ABOUT_PRODUCT       "About Spread"
+//VERSION_NUMBER_7
+    IDS_PRODUCT             "Spread 7.0.55"
+#endif
+#endif // _UNICODE
+#endif // !defined(FP_UNICODE_TEST)
+
+#elif defined SS_V40
+
+#ifdef SYNERGEX_TRIAL
+
+#ifdef FP_ADB
+    IDS_ABOUT_PRODUCT       "About Spread ADO Synergex trial"
+//VERSION_NUMBER_SYNERGEX
+    IDS_PRODUCT             "Spread ADO 4.0.00 (OLEDB) Synergex trial\n(Expires May 12, 2002)"
+#else
+    IDS_ABOUT_PRODUCT       "About Spread Synergex trial"
+//VERSION_NUMBER_SYNERGEX
+    IDS_PRODUCT             "Spread 4.0.00 Synergex trial\n(Expires May 12, 2002)"
+#endif
+
+#elif defined (FP_UNICODE_TEST) //GAB Added for FP Unicode Test
+
+#ifdef FP_ADB
+    IDS_ABOUT_PRODUCT       "About Spread ADO Unicode Test"
+//VERSION_NUMBER_TEST
+    IDS_PRODUCT             "Spread ADO 6.0 (OLEDB) Unicode Test\n(Expires May 30, 2002)"
+#else
+    IDS_ABOUT_PRODUCT       "About Spread Unicode Test"
+//VERSION_NUMBER_6
+    IDS_PRODUCT             "Spread 6.0 Unicode Test\n(Expires May 30, 2002)"
+#endif
+
+#else // !defined(SYNERGEX_TRIAL) && !defined(FP_UNICODE_TEST)
+
+#ifdef _UNICODE
+#ifdef FP_ADB
+    IDS_ABOUT_PRODUCT       "About Unicode Spread ADO"
+//VERSION_NUMBER_6
+    IDS_PRODUCT             "Unicode Spread ADO 6.0.57 (OLEDB)"
+#else 
+    IDS_ABOUT_PRODUCT       "About Unicode Spread"
+//VERSION_NUMBER_6
+    IDS_PRODUCT             "Unicode Spread 6.0.57"
+#endif
+#else //!_UNICODE
+#ifdef FP_ADB
+    IDS_ABOUT_PRODUCT       "About Spread ADO"
+//VERSION_NUMBER_6
+    IDS_PRODUCT             "Spread ADO 6.0.57 (OLEDB)"
+#else 
+    IDS_ABOUT_PRODUCT       "About Spread"
+//VERSION_NUMBER_6
+    IDS_PRODUCT             "Spread 6.0.57"
+#endif
+#endif // _UNICODE
+
+#endif // !defined(SYNERGEX_TRIAL)
+    IDS_COPYRIGHT           "Copyright (? 1994-2008 FarPoint Technologies, Inc."
+
+#elif defined(SS_V35)
+
+#ifdef SYNERGEX_TRIAL
+
+#ifdef FP_ADB
+    IDS_ABOUT_PRODUCT       "About Spread ADO Synergex trial"
+//VERSION_NUMBER_SYNERGEX
+    IDS_PRODUCT             "Spread ADO 3.5.10 (OLEDB) Synergex trial\n(Expires May 12, 2002)"
+#else
+    IDS_ABOUT_PRODUCT       "About Spread Synergex trial"
+//VERSION_NUMBER_SYNERGEX
+    IDS_PRODUCT             "Spread 3.5.10 Synergex trial\n(Expires May 12, 2002)"
+#endif
+
+#else // !defined(SYNERGEX_TRIAL)
+
+#ifdef FP_ADB
+    IDS_ABOUT_PRODUCT       "About Spread ADO"
+//VERSION_NUMBER_35
+    IDS_PRODUCT             "Spread ADO 3.5.10 (OLEDB)"
+#else
+    IDS_ABOUT_PRODUCT       "About Spread"
+//VERSION_NUMBER_35
+    IDS_PRODUCT             "Spread 3.5.10"
+#endif
+
+#endif // !defined(SYNERGEX_TRIAL)
+    IDS_COPYRIGHT           "Copyright (? 1994-2004 FarPoint Technologies, Inc."
+
+#else // Spread 3.0:
+
+#ifdef FP_ADB
+    IDS_ABOUT_PRODUCT       "About Spread ADO"
+//VERSION_NUMBER_30
+    IDS_PRODUCT             "Spread ADO 3.0.55 (OLEDB)"
+#else
+    IDS_ABOUT_PRODUCT       "About Spread"
+//VERSION_NUMBER_30
+    IDS_PRODUCT             "Spread 3.0.55"
+#endif
+    IDS_COPYRIGHT           "Copyright (? 1994-2004 FarPoint Technologies, Inc."
+
+#endif
+//    IDS_WEBSITE             "Web Site: http://www.fpoint.com"
+//    IDS_EMAIL               "email: fpsupport@fpoint.com"
+//    IDS_SALES               "Sales: (800) 645-5913"
+//    IDS_MAIN                "Main:  (919) 460-4551"
+//    IDS_FAX                 "Fax:   (919) 460-7606"
+//    IDS_TECHSUPPORT         "Technical Support:  (919) 460-1887"
+END
+
+// fix for bug #9055 -scl
+STRINGTABLE DISCARDABLE 
+BEGIN
+#include "strings.rc2"
+//END
+
+//STRINGTABLE DISCARDABLE 
+//BEGIN
+//#if defined(SS_SPREADOCX)
+//    IDS_SSOCX               "FarPoint Spreadsheet Control"
+//    IDS_PVOCX               "FarPoint Preview Control"
+//#elif defined(SS_RSOCX)
+//    IDS_SSOCX               "Rockwell Spreadsheet Control"
+//    IDS_PVOCX               "Rockwell Preview Control"
+//#endif
+    IDS_SPREAD_DESIGNER     "Spread Designer..."
+END
+
+#ifndef SS_V30
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SSOCX_PPG           "Spread Preview Control"
+    IDS_SSOCX_PPG_CAPTION   "General"
+    IDS_VMODE_PPG           "Ssocx Virtual Mode Property Page"
+    IDS_VMODE_PPG_CAPTION   "Virtual Mode"
+    IDS_OPMODE_PPG          "Ssocx Operation Mode Property Page"
+    IDS_OPMODE_PPG_CAPTION  "Op Mode"
+    IDS_DISPLAY_PPG         "Ssocx Display Property Page"
+    IDS_DISPLAY_PPG_CAPTION "Display"
+    IDS_EDITMODE_PPG        "SsocxEdit Mode Property Page"
+    IDS_EDITMODE_PPG_CAPTION "Edit Mode"
+    IDS_HEADERS_PPG         "Ssocx Headers Property Page"
+    IDS_HEADERS_PPG_CAPTION "Headers"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SSOCX_PPG_CAPTION_JPN "基?"
+    IDS_VMODE_PPG_CAPTION_JPN "仮想"
+    IDS_OPMODE_PPG_CAPTION_JPN "ｵﾍﾟﾟﾚｰｼｮ?
+    IDS_DISPLAY_PPG_CAPTION_JPN "?\示"
+    IDS_EDITMODE_PPG_CAPTION_JPN "編集"
+    IDS_HEADERS_PPG_CAPTION_JPN "ﾀｲﾄﾙ"
+END
+#endif
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SSOCX_JPN           "FarPoint Spreadsheet ｺﾝﾄﾛｰﾙ"
+//    IDS_SPREAD_DESIGNER_JPN "SPREADﾃﾞｻﾞｲﾅ"
+    IDS_SPREAD_DESIGNER_JPN "Spread Designer..."
+
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+#ifndef APSTUDIO_INVOKED
+	/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "afxres.rc"
+#include "ssocx.rc2"  // non-App Studio edited resources
+#include "..\vbx\splash.rc"
+#include "..\..\..\fplibs\fptools\src\fpabout.rc"
+
+#ifndef SPREAD_JPN
+#include "..\excel\src\xl.rc"
+#include "..\web\src\web.rc"
+#ifndef CS_OFF
+#include "..\..\..\fplibs\codesent\src\codesent.rc"
+#endif
+#else
+#include "..\excel\src\xlj.rc"
+#include "..\web\src\webj.rc"
+#include "codesentj.rc"
+#endif
+
+//#ifdef SS_V40
+//MANIFEST_RESOURCE_ID RT_MANIFEST "ssocx.manifest"
+//#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

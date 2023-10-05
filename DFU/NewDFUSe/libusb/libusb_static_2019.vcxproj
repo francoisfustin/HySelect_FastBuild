@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>libusb-1.0 (static)</ProjectName>
+    <ProjectGuid>{349EE8F9-7D25-4909-AAF5-FF3FADE72187}</ProjectGuid>
+    <RootNamespace>libusb</RootNamespace>
+    <WindowsSDKDesktopARMSupport>true</WindowsSDKDesktopARMSupport>
+    <WindowsSDKDesktopARM64Support>true</WindowsSDKDesktopARM64Support>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization Condition="'$(Configuration)'=='Release'">
+    </WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <IntDir>$(ProjectDir)$(Configuration)\</IntDir>
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+    <TargetName>libusb-1.0</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>.\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WIN32_WINNT=_WIN32_WINNT_VISTA;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <ClCompile Condition="'$(Configuration)'=='Debug'">
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</PreprocessToFile>
+    </ClCompile>
+    <ClCompile Condition="'$(Configuration)'=='Release'">
+      <PreprocessorDefinitions>_WIN32_WINNT=_WIN32_WINNT_VISTA;_LIB;_CRT_SECURE_NO_WARNINGS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Disabled</Optimization>
+      <FunctionLevelLinking Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</FunctionLevelLinking>
+      <FloatingPointExceptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</FloatingPointExceptions>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)libusb-1.0.lib</OutputFile>
+    </Lib>
+    <Bscmake>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    </Bscmake>
+    <Bscmake>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\core.cpp" />
+    <ClCompile Include="src\descriptor.cpp" />
+    <ClCompile Include="src\os\events_windows.cpp" />
+    <ClCompile Include="src\hotplug.cpp" />
+    <ClCompile Include="src\io.cpp" />
+    <ClCompile Include="src\strerror.cpp" />
+    <ClCompile Include="src\sync.cpp" />
+    <ClCompile Include="src\os\threads_windows.cpp" />
+    <ClCompile Include="src\os\windows_common.cpp" />
+    <ClCompile Include="src\os\windows_usbdk.cpp" />
+    <ClCompile Include="src\os\windows_winusb.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include=".\src\config.h" />
+    <ClInclude Include=".\src\os\events_windows.h" />
+    <ClInclude Include=".\src\libusb.h" />
+    <ClInclude Include=".\src\libusbi.h" />
+    <ClInclude Include=".\src\os\threads_windows.h" />
+    <ClInclude Include=".\src\version.h" />
+    <ClInclude Include=".\src\version_nano.h" />
+    <ClInclude Include=".\src\os\windows_common.h" />
+    <ClInclude Include=".\src\os\windows_usbdk.h" />
+    <ClInclude Include=".\src\os\windows_winusb.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

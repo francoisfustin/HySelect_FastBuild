@@ -1,0 +1,8 @@
+OPENTSPFILE;Hotel In Cuba with Reinard.tsp
+DROPHMCONTENT;Hotel In Cuba with Reinard.txt;CREATE
+OPENTSPFILE;Hotel In Cuba without Reinard.tsp
+DROPHMCONTENT;Hotel In Cuba without Reinard.txt;CREATE
+OPENTSPFILE;test with Kvs from reynard.tsp
+DROPHMCONTENT;test with Kvs from reynard.txt;CREATE
+OPENTSPFILE;UGent Coupure 812.009 CV-JBaan.tsp
+DROPHMCONTENT;UGent Coupure 812.txt;CREATE

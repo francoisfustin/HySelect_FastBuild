@@ -1,0 +1,1202 @@
+#Start of test definition
+
+StartTechnicalParameters
+ApplicationType = 2
+AvailablePMPanels = 7
+BreakTankRequiredForWaterMakeUp = 1
+CVDefKvReynard = 1
+CVMaxDispDp = 200000
+CVMaxDpProp = 65000
+CVMinAuthCstFlow = 0.5
+CVMinAuthor = 0.25
+CVMinDpOnoff = 3000
+CVMinDpProp = 10000
+CVUseDpCPBand = 0
+CanChangePressureVolumeLimit = 0
+CurrencyID = CURRENCY_CNY
+DefaultCalculationNorm = PM_NORM_EN12828
+DefaultCoolingTps = 6
+DefaultFillTemperature = 15
+DefaultHeatingTps = 75
+DefaultISCoolingAdditID = WATER
+DefaultISCoolingDT = 6
+DefaultISCoolingPcWeight = 0
+DefaultISCoolingTps = 12
+DefaultISHeatingAdditID = WATER
+DefaultISHeatingDT = 20
+DefaultISHeatingPcWeight = 0
+DefaultISHeatingTps = 70
+DefaultISSolarAdditID = WATER
+DefaultISSolarDT = 20
+DefaultISSolarPcWeight = 0
+DefaultISSolarTps = 70
+DefaultMaxTempInCooling = 45
+DefaultMinTempInHeating = 5
+DefaultMinTempInSolar = 5
+DefaultPipeSerieID = STEEL_DIN2440
+DefaultPrjCoolingAdditID = WATER
+DefaultPrjCoolingDT = 6
+DefaultPrjCoolingPcWeight = 0
+DefaultPrjHeatingAdditID = WATER
+DefaultPrjHeatingDT = 20
+DefaultPrjHeatingPcWeight = 0
+DefaultSafetyPressureResponseValve = 300000
+DefaultStaticPressureOfWaterNetwork = 400000
+DefaultTAZ = 100
+DefaultWaterHardness = 1.78324958
+DefaultWaterMakeUpTemp = 15
+DegassingWaterReserveForVessel = 0.002
+DpCBCVDpcmin = 3000
+DpCBCVDplmin = 5000
+DpCHide = 0
+DpCHminFullyOpenMv = 0
+DpCMinDp = 5000
+DpCMvLocation = 0
+DpCMvWithSameSizeOnly = 0
+FixedOrificeMaxDp = 6000
+FixedOrificeMinDp = 2000
+FlowDeviationMinus = -0.1
+FlowDeviationPlus = 0.1
+FluidTempLimitEN12953 = 105
+InitialPressureMargin = 30000
+MaxNumberOfAdditionalVesselsInParallel = 2
+MaxNumberOfVentoInParallel = 2
+MaxSafetyValveInParallel = 3
+MaxSizeShift = 4
+MinPressureMargin = 20000
+PICvHide = 0
+PICvMinDp = 1000
+PSetupCompresso = 10000
+PSetupTransfero = 20000
+PipeMaxDp = 200
+PipeMaxVelocity = 2
+PipeMinDp = 10
+PipeMinVelocity = 0.3
+PipeTargetDp = 150
+PipeTargetVelocity = 1
+PipeTargetVelosityUsed = 0
+PressureVolumeLimit = 300000
+ProjectType = 1
+SafetyTempLimiterLimitEN12953 = 110
+SizeShiftAbove = 0
+SizeShiftBelow = -2
+TrvDefDpTotal = 10000
+TrvDefRoomTemperature = 20
+TrvDefSupplyTemperature = 80
+TrvMaxDp = 30000
+TrvMinDpRatio = 0.25
+UseDefaultFreezingPointAsMinTemperature = 1
+UseSimplyPst = 0
+UseVesselPressureVolumeLimit = 0
+ValveMaxDp = 200000
+ValveMin2Dp = 6000
+ValveMinDp = 3000
+VenturiMaxDp = 10000
+VenturiMinDp = 2000
+VesselSelectionRangePercentage = 0
+EndTechnicalParameters
+
+Test number = 0
+
+SelectionMode = Batch
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = DPCTYPE_STD
+ComboFamilyBelow65ID = FAM_STAP
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADN
+ComboVersionBelow65ID = VERS_STD
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = DPCTYPE_STD
+ComboFamilyAbove50ID = FAM_STAP
+ComboMaterialAbove50ID = BDY_CASTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_4
+GroupDpBranchChecked = false
+GroupKvsChecked = false
+DpMaxChecked = false
+DpMax = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+BVComboTypeBelow65ID = RVTYPE_BV
+BVComboFamilyBelow65ID = FAM_STAD*
+BVComboMaterialBelow65ID = BDY_AMETAL
+BVComboConnectBelow65ID = CONN_THREADN
+BVComboVersionBelow65ID = VERS_NODRAIN
+BVComboPNBelow65ID = PN_5
+BVComboTypeAbove50ID = RVTYPE_BV
+BVComboFamilyAbove50ID = FAM_STAF-SG
+BVComboMaterialAbove50ID = BDY_DUCTIRON
+BVComboConnectAbove50ID = CONN_ANSIFL
+BVComboVersionAbove50ID = VERS_STD
+BVComboPNAbove50ID = PN_4
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 1;5.555555554e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 2;8.333333331e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 3;0.00013888888885; ; ; ; ;FindOneSolution;STAP15B_10-60;STAP 1/2";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);12395.4;[10000-60000];250000;-20/120;3/4" (20);96.5521;0.379027;STAD*15G_BV;STAD* 1/2";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1/2" (15);4; ;3704.25;3704.25;62865;-20/120;3/4" (20);96.5521;0.379027
+Result number = 4;0.00022222222216; ; ; ; ;FindOneSolution;STAP20B_10-60;STAP 3/4";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;3/4" (20);6471.93;[10000-60000];250000;-20/120;1" (25);73.1796;0.382437;STAD*20G_BV;STAD* 3/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;3/4" (20);3.5246; ;3000;2139.87;16279.4;-20/120;1" (25);73.1796;0.382437
+Result number = 5;0.00036111111101; ; ; ; ;FindOneSolution;STAP25B_10-60;STAP 1";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1" (25);5429.23;[10000-60000];250000;-20/120;1" (25);181.946;0.62146;STAD*20G_BV;STAD* 3/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;3/4" (20);4; ;5647.02;5647.02;42957;-20/120;1" (25);181.946;0.62146
+Result number = 6;0.00058333333317; ; ; ; ;FindOneSolution;STAP32B_20-80;STAP 1 1/4";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1 1/4" (32);5931.68;[20000-80000];250000;-20/120;1 1/4" (32);111.135;0.576286;STAD*25G_BV;STAD* 1";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1" (25);4; ;5802.89;5802.89;32271.6;-20/120;1 1/4" (32);111.135;0.576286
+Result number = 7;0.00094444444418; ; ; ; ;FindOneSolution;STAP40B_20-80;STAP 1 1/2";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1 1/2" (40);6856.69;[20000-80000];250000;-20/120;1 1/2" (40);128.52;0.688231;STAD*32G_BV;STAD* 1 1/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1 1/4" (32);4; ;5564.21;5564.21;41080.3;-20/120;1 1/2" (40);128.52;0.688231
+Result number = 8;0.00152777777735; ; ; ; ;FindOneSolution;STAP40B_20-80;STAP 1 1/2";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1 1/2" (40);17942.5;[20000-80000];250000;-20/120;2" (50);96.6832;0.692498;STAD*50G_BV;STAD* 2";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;2" (50);3.90361; ;3000;2816.14;22571;-20/120;2" (50);96.6832;0.692498
+Result number = 9;0.00247222222153; ; ; ; ;FindOneSolution;STAP65B_20-80;STAP 2 1/2";DpC-Std HVAC;Cast iron;ANSI Flange;Standard;300 psi;2 1/2" (65);5939.53;[20000-80000];350000;-10/120;2 1/2" (65);64.7506;0.664999;STAF-SG0652B_BV;STAF-SG 2 1/2";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);4.91284; ;3000;1065.42;6177.43;-20/120;2 1/2" (65);64.7506;0.664999
+Result number = 10;0.00399999999888; ; ; ; ;FindOneSolution;STAP65B_20-80;STAP 2 1/2";DpC-Std HVAC;Cast iron;ANSI Flange;Standard;300 psi;2 1/2" (65);15548.8;[20000-80000];350000;-10/120;2 1/2" (65);162.614;1.07595;STAF-SG0652B_BV;STAF-SG 2 1/2";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);7.6746; ;3000;2789.1;16171.6;-20/120;2 1/2" (65);162.614;1.07595
+Result number = 11;0.00647222222041; ; ; ; ;FindOneSolution;STAP80B_20-80;STAP 3";DpC-Std HVAC;Cast iron;ANSI Flange;Standard;300 psi;3" (80);17440.7;[20000-80000];350000;-10/120;3" (80);181.506;1.26224;STAF-SG080B_BV;STAF-SG 3";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);8; ;3663.75;3663.75;62732.5;-20/120;3" (80);181.506;1.26224
+Result number = 12;0.01047222221929; ; ; ; ;FindOneSolution;STAP100B_20-80;STAP 4";DpC-Std HVAC;Cast iron;ANSI Flange;Standard;300 psi;4" (100);11415;[20000-80000];350000;-10/120;4" (100);121.137;1.2094;STAF-SG100B_BV;STAF-SG 4";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);8; ;3826.07;3826.07;34799.9;-20/120;4" (100);121.137;1.2094
+Result number = 13;0.0169444444397; ; ; ; ;FindOneSolution;STAP100B_20-80;STAP 4";DpC-Std HVAC;Cast iron;ANSI Flange;Standard;300 psi;4" (100);29884.9;[20000-80000];350000;-10/120;5" (125);103.599;1.27659;STAF-SG125B_BV;STAF-SG 5";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);8; ;4017.85;4017.85;52490.5;-20/120;5" (125);103.599;1.27659
+Result number = 14;0.02741666665899; ; ; ; ;FindOneSolutionWithAlternative;PILOT-R_150A25US;TA-PILOT-R 6";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;6" (150);5916.86;[10000-50000];1.2e+06;-20/120;6" (150);107.49;1.45299;STAF-SG150B_BV;STAF-SG 6";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);8; ;5366.77;5366.77;33146.5;-20/120;6" (150);107.49;1.45299
+Result number = 15;0.04436111109869; ; ; ; ;FindOneSolutionWithAlternative;PILOT-R_200A25US;TA-PILOT-R 8";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;8" (200);6884.69;[10000-50000];1.2e+06;-20/120;8" (200);62.6734;1.31817;STAF-SG200C_BV;STAF-SG 8";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;8" (200);12; ;4235.1;4235.1;21440.2;-20/120;8" (200);62.6734;1.31817
+Result number = 16;0.07177777775768; ; ; ; ;FindOneSolutionWithAlternative;PILOT-R_200A25US;TA-PILOT-R 8";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;8" (200);18024.3;[10000-50000];1.2e+06;-20/120;10" (250);49.9982;1.35193;STAF-SG250C_BV;STAF-SG 10";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;10" (250);12; ;4620.89;4620.89;25955.1;-20/120;10" (250);49.9982;1.35193
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 1
+
+SelectionMode = Batch
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = DPCTYPE_HIDP
+ComboFamilyBelow65ID = FAM_DA516
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_ANSIFL
+ComboVersionBelow65ID = VERS_PT90
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = DPCTYPE_STD
+ComboFamilyAbove50ID = FAM_STAP
+ComboMaterialAbove50ID = BDY_CASTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_4
+GroupDpBranchChecked = false
+GroupKvsChecked = false
+DpMaxChecked = false
+DpMax = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+BVComboTypeBelow65ID = RVTYPE_BV
+BVComboFamilyBelow65ID = FAM_STAD*
+BVComboMaterialBelow65ID = BDY_AMETAL
+BVComboConnectBelow65ID = CONN_THREADN
+BVComboVersionBelow65ID = VERS_NODRAIN
+BVComboPNBelow65ID = PN_5
+BVComboTypeAbove50ID = RVTYPE_BV
+BVComboFamilyAbove50ID = FAM_STAF-SG
+BVComboMaterialAbove50ID = BDY_DUCTIRON
+BVComboConnectAbove50ID = CONN_ANSIFL
+BVComboVersionAbove50ID = VERS_STD
+BVComboPNAbove50ID = PN_4
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 1;5.555555554e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 2;8.333333331e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 3;0.00013888888885; ; ; ; ;FindOneSolutionWithAlternative;STAP15B_10-60;STAP 1/2";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);12395.4;[10000-60000];250000;-20/120;3/4" (20);96.5521;0.379027;STAD*15G_BV;STAD* 1/2";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1/2" (15);4; ;3704.25;3704.25;62865;-20/120;3/4" (20);96.5521;0.379027
+Result number = 4;0.00022222222216; ; ; ; ;FindOneSolutionWithAlternative;STAP20B_10-60;STAP 3/4";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;3/4" (20);6471.93;[10000-60000];250000;-20/120;1" (25);73.1796;0.382437;STAD*20G_BV;STAD* 3/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;3/4" (20);3.5246; ;3000;2139.87;16279.4;-20/120;1" (25);73.1796;0.382437
+Result number = 5;0.00036111111101; ; ; ; ;FindOneSolution;DA516_15APTAIAAOA;DA 516 DN15/20;DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;1/2" (15);10264.6;[5000-30000];1.6e+06;-10/120;1" (25);181.946;0.62146;STAD*20G_BV;STAD* 3/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;3/4" (20);4; ;5647.02;5647.02;42957;-20/120;1" (25);181.946;0.62146
+Result number = 6;0.00058333333317; ; ; ; ;FindOneSolution;DA516_15APTAIBAOB;DA 516 DN15/20;DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;3/4" (20);26785.2;[5000-30000];1.6e+06;-10/120;1 1/4" (32);111.135;0.576286;STAD*25G_BV;STAD* 1";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1" (25);4; ;5802.89;5802.89;32271.6;-20/120;1 1/4" (32);111.135;0.576286
+Result number = 7;0.00094444444418; ; ; ; ;FindOneSolution;DA516_25APTAICAOC;DA 516 DN25/32;DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);7801.39;[5000-30000];1.6e+06;-10/120;1 1/2" (40);128.52;0.688231;STAD*32G_BV;STAD* 1 1/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1 1/4" (32);4; ;5564.21;5564.21;41080.3;-20/120;1 1/2" (40);128.52;0.688231
+Result number = 8;0.00152777777735; ; ; ; ;FindOneSolution;DA516_25APTAIDAOD;DA 516 DN25/32;DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);20414.5;[5000-30000];1.6e+06;-10/120;2" (50);96.6832;0.692498;STAD*50G_BV;STAD* 2";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;2" (50);3.90361; ;3000;2816.14;22571;-20/120;2" (50);96.6832;0.692498
+Result number = 9;0.00247222222153; ; ; ; ;FindOneSolution;STAP65B_20-80;STAP 2 1/2";DpC-Std HVAC;Cast iron;ANSI Flange;Standard;300 psi;2 1/2" (65);5939.53;[20000-80000];350000;-10/120;2 1/2" (65);64.7506;0.664999;STAF-SG0652B_BV;STAF-SG 2 1/2";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);4.91284; ;3000;1065.42;6177.43;-20/120;2 1/2" (65);64.7506;0.664999
+Result number = 10;0.00399999999888; ; ; ; ;FindOneSolution;STAP65B_20-80;STAP 2 1/2";DpC-Std HVAC;Cast iron;ANSI Flange;Standard;300 psi;2 1/2" (65);15548.8;[20000-80000];350000;-10/120;2 1/2" (65);162.614;1.07595;STAF-SG0652B_BV;STAF-SG 2 1/2";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);7.6746; ;3000;2789.1;16171.6;-20/120;2 1/2" (65);162.614;1.07595
+Result number = 11;0.00647222222041; ; ; ; ;FindOneSolution;STAP80B_20-80;STAP 3";DpC-Std HVAC;Cast iron;ANSI Flange;Standard;300 psi;3" (80);17440.7;[20000-80000];350000;-10/120;3" (80);181.506;1.26224;STAF-SG080B_BV;STAF-SG 3";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);8; ;3663.75;3663.75;62732.5;-20/120;3" (80);181.506;1.26224
+Result number = 12;0.01047222221929; ; ; ; ;FindOneSolution;STAP100B_20-80;STAP 4";DpC-Std HVAC;Cast iron;ANSI Flange;Standard;300 psi;4" (100);11415;[20000-80000];350000;-10/120;4" (100);121.137;1.2094;STAF-SG100B_BV;STAF-SG 4";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);8; ;3826.07;3826.07;34799.9;-20/120;4" (100);121.137;1.2094
+Result number = 13;0.0169444444397; ; ; ; ;FindOneSolution;STAP100B_20-80;STAP 4";DpC-Std HVAC;Cast iron;ANSI Flange;Standard;300 psi;4" (100);29884.9;[20000-80000];350000;-10/120;5" (125);103.599;1.27659;STAF-SG125B_BV;STAF-SG 5";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);8; ;4017.85;4017.85;52490.5;-20/120;5" (125);103.599;1.27659
+Result number = 14;0.02741666665899; ; ; ; ;FindOneSolutionWithAlternative;PILOT-R_150A25US;TA-PILOT-R 6";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;6" (150);5916.86;[10000-50000];1.2e+06;-20/120;6" (150);107.49;1.45299;STAF-SG150B_BV;STAF-SG 6";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);8; ;5366.77;5366.77;33146.5;-20/120;6" (150);107.49;1.45299
+Result number = 15;0.04436111109869; ; ; ; ;FindOneSolutionWithAlternative;PILOT-R_200A25US;TA-PILOT-R 8";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;8" (200);6884.69;[10000-50000];1.2e+06;-20/120;8" (200);62.6734;1.31817;STAF-SG200C_BV;STAF-SG 8";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;8" (200);12; ;4235.1;4235.1;21440.2;-20/120;8" (200);62.6734;1.31817
+Result number = 16;0.07177777775768; ; ; ; ;FindOneSolutionWithAlternative;PILOT-R_200A25US;TA-PILOT-R 8";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;8" (200);18024.3;[10000-50000];1.2e+06;-20/120;10" (250);49.9982;1.35193;STAF-SG250C_BV;STAF-SG 10";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;10" (250);12; ;4620.89;4620.89;25955.1;-20/120;10" (250);49.9982;1.35193
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 2
+
+SelectionMode = Batch
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = DPCTYPE_HIDP
+ComboFamilyBelow65ID = FAM_DA516
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_ANSIFL
+ComboVersionBelow65ID = VERS_PT90
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = DPCTYPE_HIDP
+ComboFamilyAbove50ID = FAM_PILOT_R
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_PT90
+ComboPNAbove50ID = PN_5
+GroupDpBranchChecked = false
+GroupKvsChecked = false
+DpMaxChecked = false
+DpMax = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+BVComboTypeBelow65ID = RVTYPE_BV
+BVComboFamilyBelow65ID = FAM_STAD*
+BVComboMaterialBelow65ID = BDY_AMETAL
+BVComboConnectBelow65ID = CONN_THREADN
+BVComboVersionBelow65ID = VERS_NODRAIN
+BVComboPNBelow65ID = PN_5
+BVComboTypeAbove50ID = RVTYPE_BV
+BVComboFamilyAbove50ID = FAM_STAF-SG
+BVComboMaterialAbove50ID = BDY_DUCTIRON
+BVComboConnectAbove50ID = CONN_ANSIFL
+BVComboVersionAbove50ID = VERS_STD
+BVComboPNAbove50ID = PN_4
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 1;5.555555554e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 2;8.333333331e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 3;0.00013888888885; ; ; ; ;FindOneSolutionWithAlternative;STAP15B_10-60;STAP 1/2";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);12395.4;[10000-60000];250000;-20/120;3/4" (20);96.5521;0.379027;STAD*15G_BV;STAD* 1/2";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1/2" (15);4; ;3704.25;3704.25;62865;-20/120;3/4" (20);96.5521;0.379027
+Result number = 4;0.00022222222216; ; ; ; ;FindOneSolutionWithAlternative;STAP20B_10-60;STAP 3/4";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;3/4" (20);6471.93;[10000-60000];250000;-20/120;1" (25);73.1796;0.382437;STAD*20G_BV;STAD* 3/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;3/4" (20);3.5246; ;3000;2139.87;16279.4;-20/120;1" (25);73.1796;0.382437
+Result number = 5;0.00036111111101; ; ; ; ;FindOneSolution;DA516_15APTAIAAOA;DA 516 DN15/20;DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;1/2" (15);10264.6;[5000-30000];1.6e+06;-10/120;1" (25);181.946;0.62146;STAD*20G_BV;STAD* 3/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;3/4" (20);4; ;5647.02;5647.02;42957;-20/120;1" (25);181.946;0.62146
+Result number = 6;0.00058333333317; ; ; ; ;FindOneSolution;DA516_15APTAIBAOB;DA 516 DN15/20;DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;3/4" (20);26785.2;[5000-30000];1.6e+06;-10/120;1 1/4" (32);111.135;0.576286;STAD*25G_BV;STAD* 1";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1" (25);4; ;5802.89;5802.89;32271.6;-20/120;1 1/4" (32);111.135;0.576286
+Result number = 7;0.00094444444418; ; ; ; ;FindOneSolution;DA516_25APTAICAOC;DA 516 DN25/32;DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);7801.39;[5000-30000];1.6e+06;-10/120;1 1/2" (40);128.52;0.688231;STAD*32G_BV;STAD* 1 1/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1 1/4" (32);4; ;5564.21;5564.21;41080.3;-20/120;1 1/2" (40);128.52;0.688231
+Result number = 8;0.00152777777735; ; ; ; ;FindOneSolution;DA516_25APTAIDAOD;DA 516 DN25/32;DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);20414.5;[5000-30000];1.6e+06;-10/120;2" (50);96.6832;0.692498;STAD*50G_BV;STAD* 2";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;2" (50);3.90361; ;3000;2816.14;22571;-20/120;2" (50);96.6832;0.692498
+Result number = 9;0.00247222222153; ; ; ; ;FindOneSolution;DA516_40APTAIEAOE;DA 516 DN40/50;DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);8552.92;[5000-30000];1.6e+06;-10/120;2 1/2" (65);64.7506;0.664999;STAF-SG0652B_BV;STAF-SG 2 1/2";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);4.91284; ;3000;1065.42;6177.43;-20/120;2 1/2" (65);64.7506;0.664999
+Result number = 10;0.00399999999888; ; ; ; ;FindOneSolution;DA516_40APTAIEAOE;DA 516 DN40/50;DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);22390.3;[5000-30000];1.6e+06;-10/120;2 1/2" (65);162.614;1.07595;STAF-SG0652B_BV;STAF-SG 2 1/2";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);7.6746; ;3000;2789.1;16171.6;-20/120;2 1/2" (65);162.614;1.07595
+Result number = 11;0.00647222222041; ; ; ; ;FindOneSolution;PILOT-R_65A25US;TA-PILOT-R 2 1/2";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;2 1/2" (65);9379.21;[10000-50000];1.2e+06;-20/120;3" (80);181.506;1.26224;STAF-SG080B_BV;STAF-SG 3";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);8; ;3663.75;3663.75;62732.5;-20/120;3" (80);181.506;1.26224
+Result number = 12;0.01047222221929; ; ; ; ;FindOneSolution;PILOT-R_80A25US;TA-PILOT-R 3";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;3" (80);11415;[10000-50000];1.2e+06;-20/120;4" (100);121.137;1.2094;STAF-SG100B_BV;STAF-SG 4";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);8; ;3826.07;3826.07;34799.9;-20/120;4" (100);121.137;1.2094
+Result number = 13;0.0169444444397; ; ; ; ;FindOneSolution;PILOT-R_100A25US;TA-PILOT-R 4";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;4" (100);11160.7;[10000-50000];1.2e+06;-20/120;5" (125);103.599;1.27659;STAF-SG125B_BV;STAF-SG 5";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);8; ;4017.85;4017.85;52490.5;-20/120;5" (125);103.599;1.27659
+Result number = 14;0.02741666665899; ; ; ; ;FindOneSolution;PILOT-R_150A25US;TA-PILOT-R 6";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;6" (150);5916.86;[10000-50000];1.2e+06;-20/120;6" (150);107.49;1.45299;STAF-SG150B_BV;STAF-SG 6";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);8; ;5366.77;5366.77;33146.5;-20/120;6" (150);107.49;1.45299
+Result number = 15;0.04436111109869; ; ; ; ;FindOneSolution;PILOT-R_200A25US;TA-PILOT-R 8";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;8" (200);6884.69;[10000-50000];1.2e+06;-20/120;8" (200);62.6734;1.31817;STAF-SG200C_BV;STAF-SG 8";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;8" (200);12; ;4235.1;4235.1;21440.2;-20/120;8" (200);62.6734;1.31817
+Result number = 16;0.07177777775768; ; ; ; ;FindOneSolution;PILOT-R_200A25US;TA-PILOT-R 8";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;8" (200);18024.3;[10000-50000];1.2e+06;-20/120;10" (250);49.9982;1.35193;STAF-SG250C_BV;STAF-SG 10";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;10" (250);12; ;4620.89;4620.89;25955.1;-20/120;10" (250);49.9982;1.35193
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 3
+
+SelectionMode = Batch
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = DPCTYPE_HIDP
+ComboFamilyBelow65ID = FAM_DA516
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_ANSIFL
+ComboVersionBelow65ID = VERS_PT90
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = DPCTYPE_HIDP
+ComboFamilyAbove50ID = FAM_DA50
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_4
+GroupDpBranchChecked = false
+GroupKvsChecked = false
+DpMaxChecked = false
+DpMax = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+BVComboTypeBelow65ID = RVTYPE_BV
+BVComboFamilyBelow65ID = FAM_STAD*
+BVComboMaterialBelow65ID = BDY_AMETAL
+BVComboConnectBelow65ID = CONN_THREADN
+BVComboVersionBelow65ID = VERS_NODRAIN
+BVComboPNBelow65ID = PN_5
+BVComboTypeAbove50ID = RVTYPE_BV
+BVComboFamilyAbove50ID = FAM_STAF-SG
+BVComboMaterialAbove50ID = BDY_DUCTIRON
+BVComboConnectAbove50ID = CONN_ANSIFL
+BVComboVersionAbove50ID = VERS_STD
+BVComboPNAbove50ID = PN_4
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 1;5.555555554e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 2;8.333333331e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 3;0.00013888888885; ; ; ; ;FindOneSolutionWithAlternative;STAP15B_10-60;STAP 1/2";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);12395.4;[10000-60000];250000;-20/120;3/4" (20);96.5521;0.379027;STAD*15G_BV;STAD* 1/2";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1/2" (15);4; ;3704.25;3704.25;62865;-20/120;3/4" (20);96.5521;0.379027
+Result number = 4;0.00022222222216; ; ; ; ;FindOneSolutionWithAlternative;STAP20B_10-60;STAP 3/4";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;3/4" (20);6471.93;[10000-60000];250000;-20/120;1" (25);73.1796;0.382437;STAD*20G_BV;STAD* 3/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;3/4" (20);3.5246; ;3000;2139.87;16279.4;-20/120;1" (25);73.1796;0.382437
+Result number = 5;0.00036111111101; ; ; ; ;FindOneSolution;DA516_15APTAIAAOA;DA 516 DN15/20;DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;1/2" (15);10264.6;[5000-30000];1.6e+06;-10/120;1" (25);181.946;0.62146;STAD*20G_BV;STAD* 3/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;3/4" (20);4; ;5647.02;5647.02;42957;-20/120;1" (25);181.946;0.62146
+Result number = 6;0.00058333333317; ; ; ; ;FindOneSolution;DA516_15APTAIBAOB;DA 516 DN15/20;DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;3/4" (20);26785.2;[5000-30000];1.6e+06;-10/120;1 1/4" (32);111.135;0.576286;STAD*25G_BV;STAD* 1";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1" (25);4; ;5802.89;5802.89;32271.6;-20/120;1 1/4" (32);111.135;0.576286
+Result number = 7;0.00094444444418; ; ; ; ;FindOneSolution;DA516_25APTAICAOC;DA 516 DN25/32;DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;1" (25);7801.39;[5000-30000];1.6e+06;-10/120;1 1/2" (40);128.52;0.688231;STAD*32G_BV;STAD* 1 1/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1 1/4" (32);4; ;5564.21;5564.21;41080.3;-20/120;1 1/2" (40);128.52;0.688231
+Result number = 8;0.00152777777735; ; ; ; ;FindOneSolution;DA516_25APTAIDAOD;DA 516 DN25/32;DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/4" (32);20414.5;[5000-30000];1.6e+06;-10/120;2" (50);96.6832;0.692498;STAD*50G_BV;STAD* 2";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;2" (50);3.90361; ;3000;2816.14;22571;-20/120;2" (50);96.6832;0.692498
+Result number = 9;0.00247222222153; ; ; ; ;FindOneSolution;DA516_40APTAIEAOE;DA 516 DN40/50;DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);8552.92;[5000-30000];1.6e+06;-10/120;2 1/2" (65);64.7506;0.664999;STAF-SG0652B_BV;STAF-SG 2 1/2";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);4.91284; ;3000;1065.42;6177.43;-20/120;2 1/2" (65);64.7506;0.664999
+Result number = 10;0.00399999999888; ; ; ; ;FindOneSolution;DA516_40APTAIEAOE;DA 516 DN40/50;DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;1 1/2" (40);22390.3;[5000-30000];1.6e+06;-10/120;2 1/2" (65);162.614;1.07595;STAF-SG0652B_BV;STAF-SG 2 1/2";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);7.6746; ;3000;2789.1;16171.6;-20/120;2 1/2" (65);162.614;1.07595
+Result number = 11;0.00647222222041; ; ; ; ;FindOneSolution;DA516_40APTAIFAOF;DA 516 DN40/50;DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;2" (50);58620.1;[5000-30000];1.6e+06;-10/120;3" (80);181.506;1.26224;STAF-SG080B_BV;STAF-SG 3";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);8; ;3663.75;3663.75;62732.5;-20/120;3" (80);181.506;1.26224
+Result number = 12;0.01047222221929; ; ; ; ;FindOneSolutionWithAlternative;STAP100B_20-80;STAP 4";DpC-Std HVAC;Cast iron;ANSI Flange;Standard;300 psi;4" (100);11415;[20000-80000];350000;-10/120;4" (100);121.137;1.2094;STAF-SG100B_BV;STAF-SG 4";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);8; ;3826.07;3826.07;34799.9;-20/120;4" (100);121.137;1.2094
+Result number = 13;0.0169444444397; ; ; ; ;FindOneSolutionWithAlternative;STAP100B_20-80;STAP 4";DpC-Std HVAC;Cast iron;ANSI Flange;Standard;300 psi;4" (100);29884.9;[20000-80000];350000;-10/120;5" (125);103.599;1.27659;STAF-SG125B_BV;STAF-SG 5";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);8; ;4017.85;4017.85;52490.5;-20/120;5" (125);103.599;1.27659
+Result number = 14;0.02741666665899; ; ; ; ;FindOneSolutionWithAlternative;PILOT-R_150A25US;TA-PILOT-R 6";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;6" (150);5916.86;[10000-50000];1.2e+06;-20/120;6" (150);107.49;1.45299;STAF-SG150B_BV;STAF-SG 6";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);8; ;5366.77;5366.77;33146.5;-20/120;6" (150);107.49;1.45299
+Result number = 15;0.04436111109869; ; ; ; ;FindOneSolutionWithAlternative;PILOT-R_200A25US;TA-PILOT-R 8";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;8" (200);6884.69;[10000-50000];1.2e+06;-20/120;8" (200);62.6734;1.31817;STAF-SG200C_BV;STAF-SG 8";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;8" (200);12; ;4235.1;4235.1;21440.2;-20/120;8" (200);62.6734;1.31817
+Result number = 16;0.07177777775768; ; ; ; ;FindOneSolutionWithAlternative;PILOT-R_200A25US;TA-PILOT-R 8";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;8" (200);18024.3;[10000-50000];1.2e+06;-20/120;10" (250);49.9982;1.35193;STAF-SG250C_BV;STAF-SG 10";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;10" (250);12; ;4620.89;4620.89;25955.1;-20/120;10" (250);49.9982;1.35193
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 4
+
+SelectionMode = Batch
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = DPCTYPE_STD
+ComboFamilyBelow65ID = FAM_STAP
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADN
+ComboVersionBelow65ID = VERS_STD
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = DPCTYPE_HIDP
+ComboFamilyAbove50ID = FAM_DA50
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_4
+GroupDpBranchChecked = false
+GroupKvsChecked = false
+DpMaxChecked = false
+DpMax = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+BVComboTypeBelow65ID = RVTYPE_BV
+BVComboFamilyBelow65ID = FAM_STAD*
+BVComboMaterialBelow65ID = BDY_AMETAL
+BVComboConnectBelow65ID = CONN_THREADN
+BVComboVersionBelow65ID = VERS_NODRAIN
+BVComboPNBelow65ID = PN_5
+BVComboTypeAbove50ID = RVTYPE_BV
+BVComboFamilyAbove50ID = FAM_STAF-SG
+BVComboMaterialAbove50ID = BDY_DUCTIRON
+BVComboConnectAbove50ID = CONN_ANSIFL
+BVComboVersionAbove50ID = VERS_STD
+BVComboPNAbove50ID = PN_4
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 1;5.555555554e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 2;8.333333331e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 3;0.00013888888885; ; ; ; ;FindOneSolution;STAP15B_10-60;STAP 1/2";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);12395.4;[10000-60000];250000;-20/120;3/4" (20);96.5521;0.379027;STAD*15G_BV;STAD* 1/2";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1/2" (15);4; ;3704.25;3704.25;62865;-20/120;3/4" (20);96.5521;0.379027
+Result number = 4;0.00022222222216; ; ; ; ;FindOneSolution;STAP20B_10-60;STAP 3/4";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;3/4" (20);6471.93;[10000-60000];250000;-20/120;1" (25);73.1796;0.382437;STAD*20G_BV;STAD* 3/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;3/4" (20);3.5246; ;3000;2139.87;16279.4;-20/120;1" (25);73.1796;0.382437
+Result number = 5;0.00036111111101; ; ; ; ;FindOneSolution;STAP25B_10-60;STAP 1";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1" (25);5429.23;[10000-60000];250000;-20/120;1" (25);181.946;0.62146;STAD*20G_BV;STAD* 3/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;3/4" (20);4; ;5647.02;5647.02;42957;-20/120;1" (25);181.946;0.62146
+Result number = 6;0.00058333333317; ; ; ; ;FindOneSolution;STAP32B_20-80;STAP 1 1/4";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1 1/4" (32);5931.68;[20000-80000];250000;-20/120;1 1/4" (32);111.135;0.576286;STAD*25G_BV;STAD* 1";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1" (25);4; ;5802.89;5802.89;32271.6;-20/120;1 1/4" (32);111.135;0.576286
+Result number = 7;0.00094444444418; ; ; ; ;FindOneSolution;STAP40B_20-80;STAP 1 1/2";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1 1/2" (40);6856.69;[20000-80000];250000;-20/120;1 1/2" (40);128.52;0.688231;STAD*32G_BV;STAD* 1 1/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1 1/4" (32);4; ;5564.21;5564.21;41080.3;-20/120;1 1/2" (40);128.52;0.688231
+Result number = 8;0.00152777777735; ; ; ; ;FindOneSolution;STAP40B_20-80;STAP 1 1/2";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1 1/2" (40);17942.5;[20000-80000];250000;-20/120;2" (50);96.6832;0.692498;STAD*50G_BV;STAD* 2";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;2" (50);3.90361; ;3000;2816.14;22571;-20/120;2" (50);96.6832;0.692498
+Result number = 9;0.00247222222153; ; ; ; ;FindOneSolution;STAP50B_20-80;STAP 2";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;2" (50);12929.4;[20000-80000];250000;-20/120;2 1/2" (65);64.7506;0.664999;STAF-SG0652B_BV;STAF-SG 2 1/2";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);4.91284; ;3000;1065.42;6177.43;-20/120;2 1/2" (65);64.7506;0.664999
+Result number = 10;0.00399999999888; ; ; ; ;FindOneSolution;STAP50B_20-80;STAP 2";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;2" (50);33847.2;[20000-80000];250000;-20/120;2 1/2" (65);162.614;1.07595;STAF-SG0652B_BV;STAF-SG 2 1/2";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);7.6746; ;3000;2789.1;16171.6;-20/120;2 1/2" (65);162.614;1.07595
+Result number = 11;0.00647222222041; ; ; ; ;FindOneSolutionWithAlternative;STAP80B_20-80;STAP 3";DpC-Std HVAC;Cast iron;ANSI Flange;Standard;300 psi;3" (80);17440.7;[20000-80000];350000;-10/120;3" (80);181.506;1.26224;STAF-SG080B_BV;STAF-SG 3";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);8; ;3663.75;3663.75;62732.5;-20/120;3" (80);181.506;1.26224
+Result number = 12;0.01047222221929; ; ; ; ;FindOneSolutionWithAlternative;STAP100B_20-80;STAP 4";DpC-Std HVAC;Cast iron;ANSI Flange;Standard;300 psi;4" (100);11415;[20000-80000];350000;-10/120;4" (100);121.137;1.2094;STAF-SG100B_BV;STAF-SG 4";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);8; ;3826.07;3826.07;34799.9;-20/120;4" (100);121.137;1.2094
+Result number = 13;0.0169444444397; ; ; ; ;FindOneSolutionWithAlternative;STAP100B_20-80;STAP 4";DpC-Std HVAC;Cast iron;ANSI Flange;Standard;300 psi;4" (100);29884.9;[20000-80000];350000;-10/120;5" (125);103.599;1.27659;STAF-SG125B_BV;STAF-SG 5";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);8; ;4017.85;4017.85;52490.5;-20/120;5" (125);103.599;1.27659
+Result number = 14;0.02741666665899; ; ; ; ;FindOneSolutionWithAlternative;PILOT-R_150A25US;TA-PILOT-R 6";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;6" (150);5916.86;[10000-50000];1.2e+06;-20/120;6" (150);107.49;1.45299;STAF-SG150B_BV;STAF-SG 6";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);8; ;5366.77;5366.77;33146.5;-20/120;6" (150);107.49;1.45299
+Result number = 15;0.04436111109869; ; ; ; ;FindOneSolutionWithAlternative;PILOT-R_200A25US;TA-PILOT-R 8";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;8" (200);6884.69;[10000-50000];1.2e+06;-20/120;8" (200);62.6734;1.31817;STAF-SG200C_BV;STAF-SG 8";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;8" (200);12; ;4235.1;4235.1;21440.2;-20/120;8" (200);62.6734;1.31817
+Result number = 16;0.07177777775768; ; ; ; ;FindOneSolutionWithAlternative;PILOT-R_200A25US;TA-PILOT-R 8";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;8" (200);18024.3;[10000-50000];1.2e+06;-20/120;10" (250);49.9982;1.35193;STAF-SG250C_BV;STAF-SG 10";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;10" (250);12; ;4620.89;4620.89;25955.1;-20/120;10" (250);49.9982;1.35193
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 5
+
+SelectionMode = Batch
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = DPCTYPE_STD
+ComboFamilyBelow65ID = FAM_STAP
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADN
+ComboVersionBelow65ID = VERS_STD
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = DPCTYPE_STD
+ComboFamilyAbove50ID = FAM_STAP
+ComboMaterialAbove50ID = BDY_CASTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_4
+GroupDpBranchChecked = false
+GroupKvsChecked = false
+DpMaxChecked = false
+DpMax = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+BVComboTypeBelow65ID = RVTYPE_BV
+BVComboFamilyBelow65ID = FAM_STAD*
+BVComboMaterialBelow65ID = BDY_AMETAL
+BVComboConnectBelow65ID = CONN_THREADN
+BVComboVersionBelow65ID = VERS_NODRAIN
+BVComboPNBelow65ID = PN_5
+BVComboTypeAbove50ID = RVTYPE_BV
+BVComboFamilyAbove50ID = FAM_STAF-SG
+BVComboMaterialAbove50ID = BDY_DUCTIRON
+BVComboConnectAbove50ID = CONN_ANSIFL
+BVComboVersionAbove50ID = VERS_STD
+BVComboPNAbove50ID = PN_4
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 1;5.555555554e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 2;8.333333331e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 3;0.00013888888885; ; ; ; ;FindOneSolution;STAP15B_10-60;STAP 1/2";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);12395.4;[10000-60000];250000;-20/120;3/4" (20);96.5521;0.379027;STAD*15G_BV;STAD* 1/2";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1/2" (15);4; ;3704.25;3704.25;62865;-20/120;3/4" (20);96.5521;0.379027
+Result number = 4;0.00022222222216; ; ; ; ;FindOneSolution;STAP20B_10-60;STAP 3/4";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;3/4" (20);6471.93;[10000-60000];250000;-20/120;1" (25);73.1796;0.382437;STAD*20G_BV;STAD* 3/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;3/4" (20);3.5246; ;3000;2139.87;16279.4;-20/120;1" (25);73.1796;0.382437
+Result number = 5;0.00036111111101; ; ; ; ;FindOneSolution;STAP25B_10-60;STAP 1";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1" (25);5429.23;[10000-60000];250000;-20/120;1" (25);181.946;0.62146;STAD*20G_BV;STAD* 3/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;3/4" (20);4; ;5647.02;5647.02;42957;-20/120;1" (25);181.946;0.62146
+Result number = 6;0.00058333333317; ; ; ; ;FindOneSolution;STAP32B_20-80;STAP 1 1/4";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1 1/4" (32);5931.68;[20000-80000];250000;-20/120;1 1/4" (32);111.135;0.576286;STAD*25G_BV;STAD* 1";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1" (25);4; ;5802.89;5802.89;32271.6;-20/120;1 1/4" (32);111.135;0.576286
+Result number = 7;0.00094444444418; ; ; ; ;FindOneSolution;STAP40B_20-80;STAP 1 1/2";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1 1/2" (40);6856.69;[20000-80000];250000;-20/120;1 1/2" (40);128.52;0.688231;STAD*32G_BV;STAD* 1 1/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1 1/4" (32);4; ;5564.21;5564.21;41080.3;-20/120;1 1/2" (40);128.52;0.688231
+Result number = 8;0.00152777777735; ; ; ; ;FindOneSolution;STAP40B_20-80;STAP 1 1/2";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1 1/2" (40);17942.5;[20000-80000];250000;-20/120;2" (50);96.6832;0.692498;STAD*50G_BV;STAD* 2";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;2" (50);3.90361; ;3000;2816.14;22571;-20/120;2" (50);96.6832;0.692498
+Result number = 9;0.00247222222153; ; ; ; ;FindOneSolution;STAP65B_20-80;STAP 2 1/2";DpC-Std HVAC;Cast iron;ANSI Flange;Standard;300 psi;2 1/2" (65);5939.53;[20000-80000];350000;-10/120;2 1/2" (65);64.7506;0.664999;STAF-SG0652B_BV;STAF-SG 2 1/2";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);4.91284; ;3000;1065.42;6177.43;-20/120;2 1/2" (65);64.7506;0.664999
+Result number = 10;0.00399999999888; ; ; ; ;FindOneSolution;STAP65B_20-80;STAP 2 1/2";DpC-Std HVAC;Cast iron;ANSI Flange;Standard;300 psi;2 1/2" (65);15548.8;[20000-80000];350000;-10/120;2 1/2" (65);162.614;1.07595;STAF-SG0652B_BV;STAF-SG 2 1/2";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);7.6746; ;3000;2789.1;16171.6;-20/120;2 1/2" (65);162.614;1.07595
+Result number = 11;0.00647222222041; ; ; ; ;FindOneSolution;STAP80B_20-80;STAP 3";DpC-Std HVAC;Cast iron;ANSI Flange;Standard;300 psi;3" (80);17440.7;[20000-80000];350000;-10/120;3" (80);181.506;1.26224;STAF-SG080B_BV;STAF-SG 3";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);8; ;3663.75;3663.75;62732.5;-20/120;3" (80);181.506;1.26224
+Result number = 12;0.01047222221929; ; ; ; ;FindOneSolution;STAP100B_20-80;STAP 4";DpC-Std HVAC;Cast iron;ANSI Flange;Standard;300 psi;4" (100);11415;[20000-80000];350000;-10/120;4" (100);121.137;1.2094;STAF-SG100B_BV;STAF-SG 4";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);8; ;3826.07;3826.07;34799.9;-20/120;4" (100);121.137;1.2094
+Result number = 13;0.0169444444397; ; ; ; ;FindOneSolution;STAP100B_20-80;STAP 4";DpC-Std HVAC;Cast iron;ANSI Flange;Standard;300 psi;4" (100);29884.9;[20000-80000];350000;-10/120;5" (125);103.599;1.27659;STAF-SG125B_BV;STAF-SG 5";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);8; ;4017.85;4017.85;52490.5;-20/120;5" (125);103.599;1.27659
+Result number = 14;0.02741666665899; ; ; ; ;FindOneSolutionWithAlternative;PILOT-R_150A25US;TA-PILOT-R 6";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;6" (150);5916.86;[10000-50000];1.2e+06;-20/120;6" (150);107.49;1.45299;STAF-SG150B_BV;STAF-SG 6";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);8; ;5366.77;5366.77;33146.5;-20/120;6" (150);107.49;1.45299
+Result number = 15;0.04436111109869; ; ; ; ;FindOneSolutionWithAlternative;PILOT-R_200A25US;TA-PILOT-R 8";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;8" (200);6884.69;[10000-50000];1.2e+06;-20/120;8" (200);62.6734;1.31817;STAF-SG200C_BV;STAF-SG 8";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;8" (200);12; ;4235.1;4235.1;21440.2;-20/120;8" (200);62.6734;1.31817
+Result number = 16;0.07177777775768; ; ; ; ;FindOneSolutionWithAlternative;PILOT-R_200A25US;TA-PILOT-R 8";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;8" (200);18024.3;[10000-50000];1.2e+06;-20/120;10" (250);49.9982;1.35193;STAF-SG250C_BV;STAF-SG 10";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;10" (250);12; ;4620.89;4620.89;25955.1;-20/120;10" (250);49.9982;1.35193
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 6
+
+SelectionMode = Batch
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = DPCTYPE_STD
+ComboFamilyBelow65ID = FAM_STAP
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADN
+ComboVersionBelow65ID = VERS_STD
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = DPCTYPE_HIDP
+ComboFamilyAbove50ID = FAM_PILOT_R
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_PT90
+ComboPNAbove50ID = PN_5
+GroupDpBranchChecked = false
+GroupKvsChecked = false
+DpMaxChecked = false
+DpMax = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+BVComboTypeBelow65ID = RVTYPE_BV
+BVComboFamilyBelow65ID = FAM_STAD*
+BVComboMaterialBelow65ID = BDY_AMETAL
+BVComboConnectBelow65ID = CONN_THREADN
+BVComboVersionBelow65ID = VERS_NODRAIN
+BVComboPNBelow65ID = PN_5
+BVComboTypeAbove50ID = RVTYPE_BV
+BVComboFamilyAbove50ID = FAM_STAF-SG
+BVComboMaterialAbove50ID = BDY_DUCTIRON
+BVComboConnectAbove50ID = CONN_ANSIFL
+BVComboVersionAbove50ID = VERS_STD
+BVComboPNAbove50ID = PN_4
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 1;5.555555554e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 2;8.333333331e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 3;0.00013888888885; ; ; ; ;FindOneSolution;STAP15B_10-60;STAP 1/2";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);12395.4;[10000-60000];250000;-20/120;3/4" (20);96.5521;0.379027;STAD*15G_BV;STAD* 1/2";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1/2" (15);4; ;3704.25;3704.25;62865;-20/120;3/4" (20);96.5521;0.379027
+Result number = 4;0.00022222222216; ; ; ; ;FindOneSolution;STAP20B_10-60;STAP 3/4";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;3/4" (20);6471.93;[10000-60000];250000;-20/120;1" (25);73.1796;0.382437;STAD*20G_BV;STAD* 3/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;3/4" (20);3.5246; ;3000;2139.87;16279.4;-20/120;1" (25);73.1796;0.382437
+Result number = 5;0.00036111111101; ; ; ; ;FindOneSolution;STAP25B_10-60;STAP 1";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1" (25);5429.23;[10000-60000];250000;-20/120;1" (25);181.946;0.62146;STAD*20G_BV;STAD* 3/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;3/4" (20);4; ;5647.02;5647.02;42957;-20/120;1" (25);181.946;0.62146
+Result number = 6;0.00058333333317; ; ; ; ;FindOneSolution;STAP32B_20-80;STAP 1 1/4";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1 1/4" (32);5931.68;[20000-80000];250000;-20/120;1 1/4" (32);111.135;0.576286;STAD*25G_BV;STAD* 1";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1" (25);4; ;5802.89;5802.89;32271.6;-20/120;1 1/4" (32);111.135;0.576286
+Result number = 7;0.00094444444418; ; ; ; ;FindOneSolution;STAP40B_20-80;STAP 1 1/2";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1 1/2" (40);6856.69;[20000-80000];250000;-20/120;1 1/2" (40);128.52;0.688231;STAD*32G_BV;STAD* 1 1/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1 1/4" (32);4; ;5564.21;5564.21;41080.3;-20/120;1 1/2" (40);128.52;0.688231
+Result number = 8;0.00152777777735; ; ; ; ;FindOneSolution;STAP40B_20-80;STAP 1 1/2";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1 1/2" (40);17942.5;[20000-80000];250000;-20/120;2" (50);96.6832;0.692498;STAD*50G_BV;STAD* 2";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;2" (50);3.90361; ;3000;2816.14;22571;-20/120;2" (50);96.6832;0.692498
+Result number = 9;0.00247222222153; ; ; ; ;FindOneSolution;STAP50B_20-80;STAP 2";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;2" (50);12929.4;[20000-80000];250000;-20/120;2 1/2" (65);64.7506;0.664999;STAF-SG0652B_BV;STAF-SG 2 1/2";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);4.91284; ;3000;1065.42;6177.43;-20/120;2 1/2" (65);64.7506;0.664999
+Result number = 10;0.00399999999888; ; ; ; ;FindOneSolution;STAP50B_20-80;STAP 2";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;2" (50);33847.2;[20000-80000];250000;-20/120;2 1/2" (65);162.614;1.07595;STAF-SG0652B_BV;STAF-SG 2 1/2";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);7.6746; ;3000;2789.1;16171.6;-20/120;2 1/2" (65);162.614;1.07595
+Result number = 11;0.00647222222041; ; ; ; ;FindOneSolution;PILOT-R_65A25US;TA-PILOT-R 2 1/2";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;2 1/2" (65);9379.21;[10000-50000];1.2e+06;-20/120;3" (80);181.506;1.26224;STAF-SG080B_BV;STAF-SG 3";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);8; ;3663.75;3663.75;62732.5;-20/120;3" (80);181.506;1.26224
+Result number = 12;0.01047222221929; ; ; ; ;FindOneSolution;PILOT-R_80A25US;TA-PILOT-R 3";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;3" (80);11415;[10000-50000];1.2e+06;-20/120;4" (100);121.137;1.2094;STAF-SG100B_BV;STAF-SG 4";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);8; ;3826.07;3826.07;34799.9;-20/120;4" (100);121.137;1.2094
+Result number = 13;0.0169444444397; ; ; ; ;FindOneSolution;PILOT-R_100A25US;TA-PILOT-R 4";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;4" (100);11160.7;[10000-50000];1.2e+06;-20/120;5" (125);103.599;1.27659;STAF-SG125B_BV;STAF-SG 5";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);8; ;4017.85;4017.85;52490.5;-20/120;5" (125);103.599;1.27659
+Result number = 14;0.02741666665899; ; ; ; ;FindOneSolution;PILOT-R_150A25US;TA-PILOT-R 6";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;6" (150);5916.86;[10000-50000];1.2e+06;-20/120;6" (150);107.49;1.45299;STAF-SG150B_BV;STAF-SG 6";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);8; ;5366.77;5366.77;33146.5;-20/120;6" (150);107.49;1.45299
+Result number = 15;0.04436111109869; ; ; ; ;FindOneSolution;PILOT-R_200A25US;TA-PILOT-R 8";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;8" (200);6884.69;[10000-50000];1.2e+06;-20/120;8" (200);62.6734;1.31817;STAF-SG200C_BV;STAF-SG 8";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;8" (200);12; ;4235.1;4235.1;21440.2;-20/120;8" (200);62.6734;1.31817
+Result number = 16;0.07177777775768; ; ; ; ;FindOneSolution;PILOT-R_200A25US;TA-PILOT-R 8";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;8" (200);18024.3;[10000-50000];1.2e+06;-20/120;10" (250);49.9982;1.35193;STAF-SG250C_BV;STAF-SG 10";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;10" (250);12; ;4620.89;4620.89;25955.1;-20/120;10" (250);49.9982;1.35193
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 7
+
+SelectionMode = Batch
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = DPCTYPE_STD
+ComboFamilyBelow65ID = FAM_STAP
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_SMTHEND
+ComboVersionBelow65ID = VERS_STD
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = DPCTYPE_HIDP
+ComboFamilyAbove50ID = FAM_PILOT_R
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_PT90
+ComboPNAbove50ID = PN_5
+GroupDpBranchChecked = false
+GroupKvsChecked = false
+DpMaxChecked = false
+DpMax = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+BVComboTypeBelow65ID = RVTYPE_BV
+BVComboFamilyBelow65ID = FAM_STAD*
+BVComboMaterialBelow65ID = BDY_AMETAL
+BVComboConnectBelow65ID = CONN_THREADN
+BVComboVersionBelow65ID = VERS_NODRAIN
+BVComboPNBelow65ID = PN_5
+BVComboTypeAbove50ID = RVTYPE_BV
+BVComboFamilyAbove50ID = FAM_STAF-SG
+BVComboMaterialAbove50ID = BDY_DUCTIRON
+BVComboConnectAbove50ID = CONN_ANSIFL
+BVComboVersionAbove50ID = VERS_STD
+BVComboPNAbove50ID = PN_4
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 1;5.555555554e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 2;8.333333331e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 3;0.00013888888885; ; ; ; ;FindOneSolutionWithAlternative;STAP15B_10-60;STAP 1/2";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);12395.4;[10000-60000];250000;-20/120;3/4" (20);96.5521;0.379027;STAD*15G_BV;STAD* 1/2";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1/2" (15);4; ;3704.25;3704.25;62865;-20/120;3/4" (20);96.5521;0.379027
+Result number = 4;0.00022222222216; ; ; ; ;FindOneSolutionWithAlternative;STAP20B_10-60;STAP 3/4";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;3/4" (20);6471.93;[10000-60000];250000;-20/120;1" (25);73.1796;0.382437;STAD*20G_BV;STAD* 3/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;3/4" (20);3.5246; ;3000;2139.87;16279.4;-20/120;1" (25);73.1796;0.382437
+Result number = 5;0.00036111111101; ; ; ; ;FindOneSolutionWithAlternative;STAP25B_10-60;STAP 1";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1" (25);5429.23;[10000-60000];250000;-20/120;1" (25);181.946;0.62146;STAD*20G_BV;STAD* 3/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;3/4" (20);4; ;5647.02;5647.02;42957;-20/120;1" (25);181.946;0.62146
+Result number = 6;0.00058333333317; ; ; ; ;FindOneSolutionWithAlternative;STAP32B_20-80;STAP 1 1/4";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1 1/4" (32);5931.68;[20000-80000];250000;-20/120;1 1/4" (32);111.135;0.576286;STAD*25G_BV;STAD* 1";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1" (25);4; ;5802.89;5802.89;32271.6;-20/120;1 1/4" (32);111.135;0.576286
+Result number = 7;0.00094444444418; ; ; ; ;FindOneSolutionWithAlternative;STAP40B_20-80;STAP 1 1/2";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1 1/2" (40);6856.69;[20000-80000];250000;-20/120;1 1/2" (40);128.52;0.688231;STAD*32G_BV;STAD* 1 1/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1 1/4" (32);4; ;5564.21;5564.21;41080.3;-20/120;1 1/2" (40);128.52;0.688231
+Result number = 8;0.00152777777735; ; ; ; ;FindOneSolutionWithAlternative;STAP40B_20-80;STAP 1 1/2";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1 1/2" (40);17942.5;[20000-80000];250000;-20/120;2" (50);96.6832;0.692498;STAD*50G_BV;STAD* 2";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;2" (50);3.90361; ;3000;2816.14;22571;-20/120;2" (50);96.6832;0.692498
+Result number = 9;0.00247222222153; ; ; ; ;FindOneSolutionWithAlternative;STAP50B_20-80;STAP 2";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;2" (50);12929.4;[20000-80000];250000;-20/120;2 1/2" (65);64.7506;0.664999;STAF-SG0652B_BV;STAF-SG 2 1/2";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);4.91284; ;3000;1065.42;6177.43;-20/120;2 1/2" (65);64.7506;0.664999
+Result number = 10;0.00399999999888; ; ; ; ;FindOneSolutionWithAlternative;STAP50B_20-80;STAP 2";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;2" (50);33847.2;[20000-80000];250000;-20/120;2 1/2" (65);162.614;1.07595;STAF-SG0652B_BV;STAF-SG 2 1/2";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);7.6746; ;3000;2789.1;16171.6;-20/120;2 1/2" (65);162.614;1.07595
+Result number = 11;0.00647222222041; ; ; ; ;FindOneSolution;PILOT-R_65A25US;TA-PILOT-R 2 1/2";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;2 1/2" (65);9379.21;[10000-50000];1.2e+06;-20/120;3" (80);181.506;1.26224;STAF-SG080B_BV;STAF-SG 3";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);8; ;3663.75;3663.75;62732.5;-20/120;3" (80);181.506;1.26224
+Result number = 12;0.01047222221929; ; ; ; ;FindOneSolution;PILOT-R_80A25US;TA-PILOT-R 3";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;3" (80);11415;[10000-50000];1.2e+06;-20/120;4" (100);121.137;1.2094;STAF-SG100B_BV;STAF-SG 4";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);8; ;3826.07;3826.07;34799.9;-20/120;4" (100);121.137;1.2094
+Result number = 13;0.0169444444397; ; ; ; ;FindOneSolution;PILOT-R_100A25US;TA-PILOT-R 4";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;4" (100);11160.7;[10000-50000];1.2e+06;-20/120;5" (125);103.599;1.27659;STAF-SG125B_BV;STAF-SG 5";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);8; ;4017.85;4017.85;52490.5;-20/120;5" (125);103.599;1.27659
+Result number = 14;0.02741666665899; ; ; ; ;FindOneSolution;PILOT-R_150A25US;TA-PILOT-R 6";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;6" (150);5916.86;[10000-50000];1.2e+06;-20/120;6" (150);107.49;1.45299;STAF-SG150B_BV;STAF-SG 6";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);8; ;5366.77;5366.77;33146.5;-20/120;6" (150);107.49;1.45299
+Result number = 15;0.04436111109869; ; ; ; ;FindOneSolution;PILOT-R_200A25US;TA-PILOT-R 8";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;8" (200);6884.69;[10000-50000];1.2e+06;-20/120;8" (200);62.6734;1.31817;STAF-SG200C_BV;STAF-SG 8";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;8" (200);12; ;4235.1;4235.1;21440.2;-20/120;8" (200);62.6734;1.31817
+Result number = 16;0.07177777775768; ; ; ; ;FindOneSolution;PILOT-R_200A25US;TA-PILOT-R 8";DpC-High Dp;Ductile iron;ANSI Flange;PT 90;350 psi;8" (200);18024.3;[10000-50000];1.2e+06;-20/120;10" (250);49.9982;1.35193;STAF-SG250C_BV;STAF-SG 10";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;10" (250);12; ;4620.89;4620.89;25955.1;-20/120;10" (250);49.9982;1.35193
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 8
+
+SelectionMode = Batch
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = DPCTYPE_STD
+ComboFamilyBelow65ID = FAM_STAP
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_SMTHEND
+ComboVersionBelow65ID = VERS_STD
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = DPCTYPE_HIDP
+ComboFamilyAbove50ID = FAM_PILOT_R
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_PT90SF
+ComboPNAbove50ID = PN_5
+GroupDpBranchChecked = false
+GroupKvsChecked = false
+DpMaxChecked = false
+DpMax = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+BVComboTypeBelow65ID = RVTYPE_BV
+BVComboFamilyBelow65ID = FAM_STAD*
+BVComboMaterialBelow65ID = BDY_AMETAL
+BVComboConnectBelow65ID = CONN_THREADN
+BVComboVersionBelow65ID = VERS_NODRAIN
+BVComboPNBelow65ID = PN_5
+BVComboTypeAbove50ID = RVTYPE_BV
+BVComboFamilyAbove50ID = FAM_STAF-SG
+BVComboMaterialAbove50ID = BDY_DUCTIRON
+BVComboConnectAbove50ID = CONN_ANSIFL
+BVComboVersionAbove50ID = VERS_STD
+BVComboPNAbove50ID = PN_4
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 1;5.555555554e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 2;8.333333331e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 3;0.00013888888885; ; ; ; ;FindOneSolutionWithAlternative;STAP15B_10-60;STAP 1/2";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);12395.4;[10000-60000];250000;-20/120;3/4" (20);96.5521;0.379027;STAD*15G_BV;STAD* 1/2";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1/2" (15);4; ;3704.25;3704.25;62865;-20/120;3/4" (20);96.5521;0.379027
+Result number = 4;0.00022222222216; ; ; ; ;FindOneSolutionWithAlternative;STAP20B_10-60;STAP 3/4";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;3/4" (20);6471.93;[10000-60000];250000;-20/120;1" (25);73.1796;0.382437;STAD*20G_BV;STAD* 3/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;3/4" (20);3.5246; ;3000;2139.87;16279.4;-20/120;1" (25);73.1796;0.382437
+Result number = 5;0.00036111111101; ; ; ; ;FindOneSolutionWithAlternative;STAP25B_10-60;STAP 1";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1" (25);5429.23;[10000-60000];250000;-20/120;1" (25);181.946;0.62146;STAD*20G_BV;STAD* 3/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;3/4" (20);4; ;5647.02;5647.02;42957;-20/120;1" (25);181.946;0.62146
+Result number = 6;0.00058333333317; ; ; ; ;FindOneSolutionWithAlternative;STAP32B_20-80;STAP 1 1/4";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1 1/4" (32);5931.68;[20000-80000];250000;-20/120;1 1/4" (32);111.135;0.576286;STAD*25G_BV;STAD* 1";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1" (25);4; ;5802.89;5802.89;32271.6;-20/120;1 1/4" (32);111.135;0.576286
+Result number = 7;0.00094444444418; ; ; ; ;FindOneSolutionWithAlternative;STAP40B_20-80;STAP 1 1/2";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1 1/2" (40);6856.69;[20000-80000];250000;-20/120;1 1/2" (40);128.52;0.688231;STAD*32G_BV;STAD* 1 1/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1 1/4" (32);4; ;5564.21;5564.21;41080.3;-20/120;1 1/2" (40);128.52;0.688231
+Result number = 8;0.00152777777735; ; ; ; ;FindOneSolutionWithAlternative;STAP40B_20-80;STAP 1 1/2";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;1 1/2" (40);17942.5;[20000-80000];250000;-20/120;2" (50);96.6832;0.692498;STAD*50G_BV;STAD* 2";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;2" (50);3.90361; ;3000;2816.14;22571;-20/120;2" (50);96.6832;0.692498
+Result number = 9;0.00247222222153; ; ; ; ;FindOneSolutionWithAlternative;STAP50B_20-80;STAP 2";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;2" (50);12929.4;[20000-80000];250000;-20/120;2 1/2" (65);64.7506;0.664999;STAF-SG0652B_BV;STAF-SG 2 1/2";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);4.91284; ;3000;1065.42;6177.43;-20/120;2 1/2" (65);64.7506;0.664999
+Result number = 10;0.00399999999888; ; ; ; ;FindOneSolutionWithAlternative;STAP50B_20-80;STAP 2";DpC-Std HVAC;Ametal(tm);NPT thread;Standard;250 psi;2" (50);33847.2;[20000-80000];250000;-20/120;2 1/2" (65);162.614;1.07595;STAF-SG0652B_BV;STAF-SG 2 1/2";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);7.6746; ;3000;2789.1;16171.6;-20/120;2 1/2" (65);162.614;1.07595
+Result number = 11;0.00647222222041; ; ; ; ;FindOneSolution;PILOT-R_150A25USSF;TA-PILOT-R 2 1/2";DpC-High Dp;Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;350 psi;2 1/2" (65);9379.21;[10000-50000];1.2e+06;-20/120;3" (80);181.506;1.26224;STAF-SG080B_BV;STAF-SG 3";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);8; ;3663.75;3663.75;62732.5;-20/120;3" (80);181.506;1.26224
+Result number = 12;0.01047222221929; ; ; ; ;FindOneSolution;PILOT-R_80A25USSF;TA-PILOT-R 3";DpC-High Dp;Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;350 psi;3" (80);11415;[10000-50000];1.2e+06;-20/120;4" (100);121.137;1.2094;STAF-SG100B_BV;STAF-SG 4";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);8; ;3826.07;3826.07;34799.9;-20/120;4" (100);121.137;1.2094
+Result number = 13;0.0169444444397; ; ; ; ;FindOneSolution;PILOT-R_100A25USSF;TA-PILOT-R 4";DpC-High Dp;Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;350 psi;4" (100);11160.7;[10000-50000];1.2e+06;-20/120;5" (125);103.599;1.27659;STAF-SG125B_BV;STAF-SG 5";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);8; ;4017.85;4017.85;52490.5;-20/120;5" (125);103.599;1.27659
+Result number = 14;0.02741666665899; ; ; ; ;FindOneSolution;PILOT-R_150B25USSF;TA-PILOT-R 6";DpC-High Dp;Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;350 psi;6" (150);5916.86;[10000-50000];1.2e+06;-20/120;6" (150);107.49;1.45299;STAF-SG150B_BV;STAF-SG 6";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);8; ;5366.77;5366.77;33146.5;-20/120;6" (150);107.49;1.45299
+Result number = 15;0.04436111109869; ; ; ; ;FindOneSolution;PILOT-R_200B25USSF;TA-PILOT-R 8";DpC-High Dp;Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;350 psi;8" (200);6884.69;[10000-50000];1.2e+06;-20/120;8" (200);62.6734;1.31817;STAF-SG200C_BV;STAF-SG 8";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;8" (200);12; ;4235.1;4235.1;21440.2;-20/120;8" (200);62.6734;1.31817
+Result number = 16;0.07177777775768; ; ; ; ;FindOneSolution;PILOT-R_200B25USSF;TA-PILOT-R 8";DpC-High Dp;Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;350 psi;8" (200);18024.3;[10000-50000];1.2e+06;-20/120;10" (250);49.9982;1.35193;STAF-SG250C_BV;STAF-SG 10";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;10" (250);12; ;4620.89;4620.89;25955.1;-20/120;10" (250);49.9982;1.35193
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 9
+
+SelectionMode = Batch
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = DPCTYPE_HIDP
+ComboFamilyBelow65ID = FAM_DAF516
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_THREAD
+ComboVersionBelow65ID = VERS_NOPT
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = DPCTYPE_HIDP
+ComboFamilyAbove50ID = FAM_DAF516
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_FLANGE
+ComboVersionAbove50ID = VERS_NOPT
+ComboPNAbove50ID = PN_3
+GroupDpBranchChecked = false
+GroupKvsChecked = false
+DpMaxChecked = false
+DpMax = 0
+DpStabilizedOn = Branch
+DpCLocalization = UpStream
+MvLocalization = Primary
+BVComboTypeBelow65ID = RVTYPE_BV
+BVComboFamilyBelow65ID = FAM_STAD*
+BVComboMaterialBelow65ID = BDY_AMETAL
+BVComboConnectBelow65ID = CONN_THREADN
+BVComboVersionBelow65ID = VERS_NODRAIN
+BVComboPNBelow65ID = PN_5
+BVComboTypeAbove50ID = RVTYPE_BV
+BVComboFamilyAbove50ID = FAM_STAF-SG
+BVComboMaterialAbove50ID = BDY_DUCTIRON
+BVComboConnectAbove50ID = CONN_ANSIFL
+BVComboVersionAbove50ID = VERS_STD
+BVComboPNAbove50ID = PN_4
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 1;5.555555554e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 2;8.333333331e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 3;0.00013888888885; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 4;0.00022222222216; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 5;0.00036111111101; ; ; ; ;FindOneSolution;DAF516_15ATATA;DAF 516 DN15/20;DpC-High Dp;Ductile iron;Thread;Without meas. point;350 psi;1/2" (15);10264.6;[5000-30000];1.6e+06;-10/150;1" (25);181.946;0.62146;STAD*20G_BV;STAD* 3/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;3/4" (20);4; ;5647.02;5647.02;42957;-20/120;1" (25);181.946;0.62146
+Result number = 6;0.00058333333317; ; ; ; ;FindOneSolution;DAF516_15ATBTB;DAF 516 DN15/20;DpC-High Dp;Ductile iron;Thread;Without meas. point;350 psi;3/4" (20);26785.2;[5000-30000];1.6e+06;-10/150;1 1/4" (32);111.135;0.576286;STAD*25G_BV;STAD* 1";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1" (25);4; ;5802.89;5802.89;32271.6;-20/120;1 1/4" (32);111.135;0.576286
+Result number = 7;0.00094444444418; ; ; ; ;FindOneSolution;DAF516_25ATCTC;DAF 516 DN25/32;DpC-High Dp;Ductile iron;Thread;Without meas. point;350 psi;1" (25);7801.39;[5000-30000];1.6e+06;-10/150;1 1/2" (40);128.52;0.688231;STAD*32G_BV;STAD* 1 1/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1 1/4" (32);4; ;5564.21;5564.21;41080.3;-20/120;1 1/2" (40);128.52;0.688231
+Result number = 8;0.00152777777735; ; ; ; ;FindOneSolution;DAF516_25ATDTD;DAF 516 DN25/32;DpC-High Dp;Ductile iron;Thread;Without meas. point;350 psi;1 1/4" (32);20414.5;[5000-30000];1.6e+06;-10/150;2" (50);96.6832;0.692498;STAD*50G_BV;STAD* 2";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;2" (50);3.90361; ;3000;2816.14;22571;-20/120;2" (50);96.6832;0.692498
+Result number = 9;0.00247222222153; ; ; ; ;FindOneSolution;DAF516_40ATETE;DAF 516 DN40/50;DpC-High Dp;Ductile iron;Thread;Without meas. point;350 psi;1 1/2" (40);8552.92;[5000-30000];1.6e+06;-10/150;2 1/2" (65);64.7506;0.664999;STAF-SG0652B_BV;STAF-SG 2 1/2";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);4.91284; ;3000;1065.42;6177.43;-20/120;2 1/2" (65);64.7506;0.664999
+Result number = 10;0.00399999999888; ; ; ; ;FindOneSolution;DAF516_40ATETE;DAF 516 DN40/50;DpC-High Dp;Ductile iron;Thread;Without meas. point;350 psi;1 1/2" (40);22390.3;[5000-30000];1.6e+06;-10/150;2 1/2" (65);162.614;1.07595;STAF-SG0652B_BV;STAF-SG 2 1/2";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);7.6746; ;3000;2789.1;16171.6;-20/120;2 1/2" (65);162.614;1.07595
+Result number = 11;0.00647222222041; ; ; ; ;FindOneSolution;DAF516_40ATFTF;DAF 516 DN40/50;DpC-High Dp;Ductile iron;Thread;Without meas. point;350 psi;2" (50);58620.1;[5000-30000];1.6e+06;-10/150;3" (80);181.506;1.26224;STAF-SG080B_BV;STAF-SG 3";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);8; ;3663.75;3663.75;62732.5;-20/120;3" (80);181.506;1.26224
+Result number = 12;0.01047222221929; ; ; ; ;FindOneSolution;DAF516_100A16;DAF 516 DN100(PN16);DpC-High Dp;Ductile iron;Flange;Without meas. point;250 psi;4" (100);6138.71;[5000-30000];1.6e+06;-10/150;4" (100);121.137;1.2094;STAF-SG100B_BV;STAF-SG 4";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);8; ;3826.07;3826.07;34799.9;-20/120;4" (100);121.137;1.2094
+Result number = 13;0.0169444444397; ; ; ; ;FindOneSolution;DAF516_100A16;DAF 516 DN100(PN16);DpC-High Dp;Ductile iron;Flange;Without meas. point;250 psi;4" (100);16071.4;[5000-30000];1.6e+06;-10/150;5" (125);103.599;1.27659;STAF-SG125B_BV;STAF-SG 5";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);8; ;4017.85;4017.85;52490.5;-20/120;5" (125);103.599;1.27659
+Result number = 14;0.02741666665899; ; ; ; ;FindOneSolution;DAF516_100A16;DAF 516 DN100(PN16);DpC-High Dp;Ductile iron;Flange;Without meas. point;250 psi;4" (100);42075.4;[5000-30000];1.6e+06;-10/150;6" (150);107.49;1.45299;STAF-SG150B_BV;STAF-SG 6";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);8; ;5366.77;5366.77;33146.5;-20/120;6" (150);107.49;1.45299
+Result number = 15;0.04436111109869; ; ; ; ;FindOneSolutionWithAlternative;DAF50_200A;DAF 50 DN200;DpC-High Dp;Ductile iron;Flange;Standard;250 psi;6" (150);19124.1;[10000-60000];1.6e+06;-10/150;8" (200);62.6734;1.31817;STAF-SG200C_BV;STAF-SG 8";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;8" (200);12; ;4235.1;4235.1;21440.2;-20/120;8" (200);62.6734;1.31817
+Result number = 16;0.07177777775768; ; ; ; ;FindOneSolutionWithAlternative;DAF50_200A;DAF 50 DN200;DpC-High Dp;Ductile iron;Flange;Standard;250 psi;6" (150);50067.6;[10000-60000];1.6e+06;-10/150;10" (250);49.9982;1.35193;STAF-SG250C_BV;STAF-SG 10";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;10" (250);12; ;4620.89;4620.89;25955.1;-20/120;10" (250);49.9982;1.35193
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 10
+
+SelectionMode = Batch
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = DPCTYPE_HIDP
+ComboFamilyBelow65ID = FAM_DAF516
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_FLANGE
+ComboVersionBelow65ID = VERS_NOPT
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = DPCTYPE_HIDP
+ComboFamilyAbove50ID = FAM_DAF516
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_FLANGE
+ComboVersionAbove50ID = VERS_NOPT
+ComboPNAbove50ID = PN_3
+GroupDpBranchChecked = false
+GroupKvsChecked = false
+DpMaxChecked = false
+DpMax = 0
+DpStabilizedOn = Branch
+DpCLocalization = UpStream
+MvLocalization = Primary
+BVComboTypeBelow65ID = RVTYPE_BV
+BVComboFamilyBelow65ID = FAM_STAD*
+BVComboMaterialBelow65ID = BDY_AMETAL
+BVComboConnectBelow65ID = CONN_THREADN
+BVComboVersionBelow65ID = VERS_NODRAIN
+BVComboPNBelow65ID = PN_5
+BVComboTypeAbove50ID = RVTYPE_BV
+BVComboFamilyAbove50ID = FAM_STAF-SG
+BVComboMaterialAbove50ID = BDY_DUCTIRON
+BVComboConnectAbove50ID = CONN_ANSIFL
+BVComboVersionAbove50ID = VERS_STD
+BVComboPNAbove50ID = PN_4
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 1;5.555555554e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 2;8.333333331e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 3;0.00013888888885; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 4;0.00022222222216; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 5;0.00036111111101; ; ; ; ;FindOneSolutionWithAlternative;DAF516_15AIAOA;DAF 516 DN15/20;DpC-High Dp;Ductile iron;Flange;Without meas. point;350 psi;1/2" (15);10264.6;[5000-30000];1.6e+06;-10/150;1" (25);181.946;0.62146;STAD*20G_BV;STAD* 3/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;3/4" (20);4; ;5647.02;5647.02;42957;-20/120;1" (25);181.946;0.62146
+Result number = 6;0.00058333333317; ; ; ; ;FindOneSolutionWithAlternative;DAF516_15AIBFOB;DAF 516 DN15/20;DpC-High Dp;Ductile iron;Flange;Without meas. point;350 psi;3/4" (20);26785.2;[5000-30000];1.6e+06;-10/150;1 1/4" (32);111.135;0.576286;STAD*25G_BV;STAD* 1";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1" (25);4; ;5802.89;5802.89;32271.6;-20/120;1 1/4" (32);111.135;0.576286
+Result number = 7;0.00094444444418; ; ; ; ;FindOneSolutionWithAlternative;DAF516_25AICOC;DAF 516 DN25/32;DpC-High Dp;Ductile iron;Flange;Without meas. point;350 psi;1" (25);7801.39;[5000-30000];1.6e+06;-10/150;1 1/2" (40);128.52;0.688231;STAD*32G_BV;STAD* 1 1/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1 1/4" (32);4; ;5564.21;5564.21;41080.3;-20/120;1 1/2" (40);128.52;0.688231
+Result number = 8;0.00152777777735; ; ; ; ;FindOneSolutionWithAlternative;DAF516_25AIDOD;DAF 516 DN25/32;DpC-High Dp;Ductile iron;Flange;Without meas. point;350 psi;1 1/4" (32);20414.5;[5000-30000];1.6e+06;-10/150;2" (50);96.6832;0.692498;STAD*50G_BV;STAD* 2";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;2" (50);3.90361; ;3000;2816.14;22571;-20/120;2" (50);96.6832;0.692498
+Result number = 9;0.00247222222153; ; ; ; ;FindOneSolutionWithAlternative;DAF516_40AIEFOE;DAF 516 DN40/50;DpC-High Dp;Ductile iron;Flange;Without meas. point;350 psi;1 1/2" (40);8552.92;[5000-30000];1.6e+06;-10/150;2 1/2" (65);64.7506;0.664999;STAF-SG0652B_BV;STAF-SG 2 1/2";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);4.91284; ;3000;1065.42;6177.43;-20/120;2 1/2" (65);64.7506;0.664999
+Result number = 10;0.00399999999888; ; ; ; ;FindOneSolutionWithAlternative;DAF516_65A;DAF 516 DN65;DpC-High Dp;Ductile iron;Flange;Without meas. point;250 psi/350 psi;2 1/2" (65);5597.57;[5000-30000];1.6e+06;-10/150;2 1/2" (65);162.614;1.07595;STAF-SG0652B_BV;STAF-SG 2 1/2";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);7.6746; ;3000;2789.1;16171.6;-20/120;2 1/2" (65);162.614;1.07595
+Result number = 11;0.00647222222041; ; ; ; ;FindOneSolutionWithAlternative;DAF516_65A;DAF 516 DN65;DpC-High Dp;Ductile iron;Flange;Without meas. point;250 psi/350 psi;2 1/2" (65);14655;[5000-30000];1.6e+06;-10/150;3" (80);181.506;1.26224;STAF-SG080B_BV;STAF-SG 3";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);8; ;3663.75;3663.75;62732.5;-20/120;3" (80);181.506;1.26224
+Result number = 12;0.01047222221929; ; ; ; ;FindOneSolution;DAF516_100A16;DAF 516 DN100(PN16);DpC-High Dp;Ductile iron;Flange;Without meas. point;250 psi;4" (100);6138.71;[5000-30000];1.6e+06;-10/150;4" (100);121.137;1.2094;STAF-SG100B_BV;STAF-SG 4";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);8; ;3826.07;3826.07;34799.9;-20/120;4" (100);121.137;1.2094
+Result number = 13;0.0169444444397; ; ; ; ;FindOneSolution;DAF516_100A16;DAF 516 DN100(PN16);DpC-High Dp;Ductile iron;Flange;Without meas. point;250 psi;4" (100);16071.4;[5000-30000];1.6e+06;-10/150;5" (125);103.599;1.27659;STAF-SG125B_BV;STAF-SG 5";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);8; ;4017.85;4017.85;52490.5;-20/120;5" (125);103.599;1.27659
+Result number = 14;0.02741666665899; ; ; ; ;FindOneSolution;DAF516_100A16;DAF 516 DN100(PN16);DpC-High Dp;Ductile iron;Flange;Without meas. point;250 psi;4" (100);42075.4;[5000-30000];1.6e+06;-10/150;6" (150);107.49;1.45299;STAF-SG150B_BV;STAF-SG 6";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);8; ;5366.77;5366.77;33146.5;-20/120;6" (150);107.49;1.45299
+Result number = 15;0.04436111109869; ; ; ; ;FindOneSolutionWithAlternative;DAF50_200A;DAF 50 DN200;DpC-High Dp;Ductile iron;Flange;Standard;250 psi;6" (150);19124.1;[10000-60000];1.6e+06;-10/150;8" (200);62.6734;1.31817;STAF-SG200C_BV;STAF-SG 8";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;8" (200);12; ;4235.1;4235.1;21440.2;-20/120;8" (200);62.6734;1.31817
+Result number = 16;0.07177777775768; ; ; ; ;FindOneSolutionWithAlternative;DAF50_200A;DAF 50 DN200;DpC-High Dp;Ductile iron;Flange;Standard;250 psi;6" (150);50067.6;[10000-60000];1.6e+06;-10/150;10" (250);49.9982;1.35193;STAF-SG250C_BV;STAF-SG 10";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;10" (250);12; ;4620.89;4620.89;25955.1;-20/120;10" (250);49.9982;1.35193
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 11
+
+SelectionMode = Batch
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = DPCTYPE_HIDP
+ComboFamilyBelow65ID = FAM_DAF516
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_FLANGE
+ComboVersionBelow65ID = VERS_NOPT
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = DPCTYPE_HIDP
+ComboFamilyAbove50ID = FAM_DAF50
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_FLANGE
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_5
+GroupDpBranchChecked = false
+GroupKvsChecked = false
+DpMaxChecked = false
+DpMax = 0
+DpStabilizedOn = Branch
+DpCLocalization = UpStream
+MvLocalization = Primary
+BVComboTypeBelow65ID = RVTYPE_BV
+BVComboFamilyBelow65ID = FAM_STAD*
+BVComboMaterialBelow65ID = BDY_AMETAL
+BVComboConnectBelow65ID = CONN_THREADN
+BVComboVersionBelow65ID = VERS_NODRAIN
+BVComboPNBelow65ID = PN_5
+BVComboTypeAbove50ID = RVTYPE_BV
+BVComboFamilyAbove50ID = FAM_STAF-SG
+BVComboMaterialAbove50ID = BDY_DUCTIRON
+BVComboConnectAbove50ID = CONN_ANSIFL
+BVComboVersionAbove50ID = VERS_STD
+BVComboPNAbove50ID = PN_4
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 1;5.555555554e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 2;8.333333331e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 3;0.00013888888885; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 4;0.00022222222216; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 5;0.00036111111101; ; ; ; ;FindOneSolutionWithAlternative;DAF516_15AIAOA;DAF 516 DN15/20;DpC-High Dp;Ductile iron;Flange;Without meas. point;350 psi;1/2" (15);10264.6;[5000-30000];1.6e+06;-10/150;1" (25);181.946;0.62146;STAD*20G_BV;STAD* 3/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;3/4" (20);4; ;5647.02;5647.02;42957;-20/120;1" (25);181.946;0.62146
+Result number = 6;0.00058333333317; ; ; ; ;FindOneSolutionWithAlternative;DAF516_15AIBFOB;DAF 516 DN15/20;DpC-High Dp;Ductile iron;Flange;Without meas. point;350 psi;3/4" (20);26785.2;[5000-30000];1.6e+06;-10/150;1 1/4" (32);111.135;0.576286;STAD*25G_BV;STAD* 1";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1" (25);4; ;5802.89;5802.89;32271.6;-20/120;1 1/4" (32);111.135;0.576286
+Result number = 7;0.00094444444418; ; ; ; ;FindOneSolutionWithAlternative;DAF516_25AICOC;DAF 516 DN25/32;DpC-High Dp;Ductile iron;Flange;Without meas. point;350 psi;1" (25);7801.39;[5000-30000];1.6e+06;-10/150;1 1/2" (40);128.52;0.688231;STAD*32G_BV;STAD* 1 1/4";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1 1/4" (32);4; ;5564.21;5564.21;41080.3;-20/120;1 1/2" (40);128.52;0.688231
+Result number = 8;0.00152777777735; ; ; ; ;FindOneSolutionWithAlternative;DAF516_25AIDOD;DAF 516 DN25/32;DpC-High Dp;Ductile iron;Flange;Without meas. point;350 psi;1 1/4" (32);20414.5;[5000-30000];1.6e+06;-10/150;2" (50);96.6832;0.692498;STAD*50G_BV;STAD* 2";Primary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;2" (50);3.90361; ;3000;2816.14;22571;-20/120;2" (50);96.6832;0.692498
+Result number = 9;0.00247222222153; ; ; ; ;FindOneSolutionWithAlternative;DAF516_40AIEFOE;DAF 516 DN40/50;DpC-High Dp;Ductile iron;Flange;Without meas. point;350 psi;1 1/2" (40);8552.92;[5000-30000];1.6e+06;-10/150;2 1/2" (65);64.7506;0.664999;STAF-SG0652B_BV;STAF-SG 2 1/2";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);4.91284; ;3000;1065.42;6177.43;-20/120;2 1/2" (65);64.7506;0.664999
+Result number = 10;0.00399999999888; ; ; ; ;FindOneSolution;DAF50_65B;DAF 50 DN65;DpC-High Dp;Ductile iron;Flange;Standard;350 psi;2 1/2" (65);6661.57;[10000-60000];1.6e+06;-10/150;2 1/2" (65);162.614;1.07595;STAF-SG0652B_BV;STAF-SG 2 1/2";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);7.6746; ;3000;2789.1;16171.6;-20/120;2 1/2" (65);162.614;1.07595
+Result number = 11;0.00647222222041; ; ; ; ;FindOneSolution;DAF50_80A;DAF 50 DN80;DpC-High Dp;Ductile iron;Flange;Standard;250 psi/350 psi;3" (80);10766.9;[10000-60000];1.6e+06;-10/150;3" (80);181.506;1.26224;STAF-SG080B_BV;STAF-SG 3";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);8; ;3663.75;3663.75;62732.5;-20/120;3" (80);181.506;1.26224
+Result number = 12;0.01047222221929; ; ; ; ;FindOneSolution;DAF50_100B;DAF 50 DN100;DpC-High Dp;Ductile iron;Flange;Standard;350 psi;4" (100);9591.73;[10000-60000];1.6e+06;-10/150;4" (100);121.137;1.2094;STAF-SG100B_BV;STAF-SG 4";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);8; ;3826.07;3826.07;34799.9;-20/120;4" (100);121.137;1.2094
+Result number = 13;0.0169444444397; ; ; ; ;FindOneSolution;DAF50_125B;DAF 50 DN125;DpC-High Dp;Ductile iron;Flange;Standard;350 psi;5" (125);17198.9;[10000-60000];1.6e+06;-10/150;5" (125);103.599;1.27659;STAF-SG125B_BV;STAF-SG 5";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);8; ;4017.85;4017.85;52490.5;-20/120;5" (125);103.599;1.27659
+Result number = 14;0.02741666665899; ; ; ; ;FindOneSolution;DAF50_200B;DAF 50 DN200;DpC-High Dp;Ductile iron;Flange;Standard;350 psi;6" (150);7304.76;[10000-60000];1.6e+06;-10/150;6" (150);107.49;1.45299;STAF-SG150B_BV;STAF-SG 6";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);8; ;5366.77;5366.77;33146.5;-20/120;6" (150);107.49;1.45299
+Result number = 15;0.04436111109869; ; ; ; ;FindOneSolution;DAF50_200B;DAF 50 DN200;DpC-High Dp;Ductile iron;Flange;Standard;350 psi;6" (150);19124.1;[10000-60000];1.6e+06;-10/150;8" (200);62.6734;1.31817;STAF-SG200C_BV;STAF-SG 8";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;8" (200);12; ;4235.1;4235.1;21440.2;-20/120;8" (200);62.6734;1.31817
+Result number = 16;0.07177777775768; ; ; ; ;FindOneSolution;DAF50_200B;DAF 50 DN200;DpC-High Dp;Ductile iron;Flange;Standard;350 psi;6" (150);50067.6;[10000-60000];1.6e+06;-10/150;10" (250);49.9982;1.35193;STAF-SG250C_BV;STAF-SG 10";Primary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;10" (250);12; ;4620.89;4620.89;25955.1;-20/120;10" (250);49.9982;1.35193
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 12
+
+SelectionMode = Batch
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = DPCTYPE_HIDP
+ComboFamilyBelow65ID = FAM_DAF516
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_FLANGE
+ComboVersionBelow65ID = VERS_NOPT
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = DPCTYPE_HIDP
+ComboFamilyAbove50ID = FAM_DAF50
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_FLANGE
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_5
+GroupDpBranchChecked = false
+GroupKvsChecked = false
+DpMaxChecked = false
+DpMax = 0
+DpStabilizedOn = Branch
+DpCLocalization = UpStream
+MvLocalization = Secondary
+BVComboTypeBelow65ID = RVTYPE_BV
+BVComboFamilyBelow65ID = FAM_STAD*
+BVComboMaterialBelow65ID = BDY_AMETAL
+BVComboConnectBelow65ID = CONN_THREADN
+BVComboVersionBelow65ID = VERS_NODRAIN
+BVComboPNBelow65ID = PN_5
+BVComboTypeAbove50ID = RVTYPE_BV
+BVComboFamilyAbove50ID = FAM_STAF-SG
+BVComboMaterialAbove50ID = BDY_DUCTIRON
+BVComboConnectAbove50ID = CONN_ANSIFL
+BVComboVersionAbove50ID = VERS_STD
+BVComboPNAbove50ID = PN_4
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 1;5.555555554e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 2;8.333333331e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 3;0.00013888888885; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 4;0.00022222222216; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 5;0.00036111111101; ; ; ; ;FindOneSolutionWithAlternative;DAF516_15AIAOA;DAF 516 DN15/20;DpC-High Dp;Ductile iron;Flange;Without meas. point;350 psi;1/2" (15);10264.6;[5000-30000];1.6e+06;-10/150;1" (25);181.946;0.62146;STAD*25G_BV;STAD* 1";Secondary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1" (25);2.6592; ;5000;2224.9;12371.5;-20/120;1" (25);181.946;0.62146
+Result number = 6;0.00058333333317; ; ; ; ;FindOneSolutionWithAlternative;DAF516_15AIBFOB;DAF 516 DN15/20;DpC-High Dp;Ductile iron;Flange;Without meas. point;350 psi;3/4" (20);26785.2;[5000-30000];1.6e+06;-10/150;1 1/4" (32);111.135;0.576286;STAD*32G_BV;STAD* 1 1/4";Secondary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1 1/4" (32);2.85825; ;5000;2124.28;15679.3;-20/120;1 1/4" (32);111.135;0.576286
+Result number = 7;0.00094444444418; ; ; ; ;FindOneSolutionWithAlternative;DAF516_25AICOC;DAF 516 DN25/32;DpC-High Dp;Ductile iron;Flange;Without meas. point;350 psi;1" (25);7801.39;[5000-30000];1.6e+06;-10/150;1 1/2" (40);128.52;0.688231;STAD*40G_BV;STAD* 1 1/2";Secondary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1 1/2" (40);3.31534; ;5000;3012.81;28636;-20/120;1 1/2" (40);128.52;0.688231
+Result number = 8;0.00152777777735; ; ; ; ;FindOneSolutionWithAlternative;DAF516_25AIDOD;DAF 516 DN25/32;DpC-High Dp;Ductile iron;Flange;Without meas. point;350 psi;1 1/4" (32);20414.5;[5000-30000];1.6e+06;-10/150;2" (50);96.6832;0.692498;STAD*50G_BV;STAD* 2";Secondary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;2" (50);3.24638; ;5000;2816.14;22571;-20/120;2" (50);96.6832;0.692498
+Result number = 9;0.00247222222153; ; ; ; ;FindOneSolutionWithAlternative;DAF516_40AIEFOE;DAF 516 DN40/50;DpC-High Dp;Ductile iron;Flange;Without meas. point;350 psi;1 1/2" (40);8552.92;[5000-30000];1.6e+06;-10/150;2 1/2" (65);64.7506;0.664999;STAF-SG0652B_BV;STAF-SG 2 1/2";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);4.20738; ;5000;1065.42;6177.43;-20/120;2 1/2" (65);64.7506;0.664999
+Result number = 10;0.00399999999888; ; ; ; ;FindOneSolution;DAF50_65B;DAF 50 DN65;DpC-High Dp;Ductile iron;Flange;Standard;350 psi;2 1/2" (65);6661.57;[10000-60000];1.6e+06;-10/150;2 1/2" (65);162.614;1.07595;STAF-SG0652B_BV;STAF-SG 2 1/2";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);4.52365; ;10000;2789.1;16171.6;-20/120;2 1/2" (65);162.614;1.07595
+Result number = 11;0.00647222222041; ; ; ; ;FindOneSolution;DAF50_80A;DAF 50 DN80;DpC-High Dp;Ductile iron;Flange;Standard;250 psi/350 psi;3" (80);10766.9;[10000-60000];1.6e+06;-10/150;3" (80);181.506;1.26224;STAF-SG080B_BV;STAF-SG 3";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);5.69007; ;10000;3663.75;62732.5;-20/120;3" (80);181.506;1.26224
+Result number = 12;0.01047222221929; ; ; ; ;FindOneSolution;DAF50_100B;DAF 50 DN100;DpC-High Dp;Ductile iron;Flange;Standard;350 psi;4" (100);9591.73;[10000-60000];1.6e+06;-10/150;4" (100);121.137;1.2094;STAF-SG100B_BV;STAF-SG 4";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);5.57319; ;10000;3826.07;34799.9;-20/120;4" (100);121.137;1.2094
+Result number = 13;0.0169444444397; ; ; ; ;FindOneSolution;DAF50_125B;DAF 50 DN125;DpC-High Dp;Ductile iron;Flange;Standard;350 psi;5" (125);17198.9;[10000-60000];1.6e+06;-10/150;5" (125);103.599;1.27659;STAF-SG125B_BV;STAF-SG 5";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);5.87936; ;10000;4017.85;52490.5;-20/120;5" (125);103.599;1.27659
+Result number = 14;0.02741666665899; ; ; ; ;FindOneSolution;DAF50_200B;DAF 50 DN200;DpC-High Dp;Ductile iron;Flange;Standard;350 psi;6" (150);7304.76;[10000-60000];1.6e+06;-10/150;6" (150);107.49;1.45299;STAF-SG150B_BV;STAF-SG 6";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);5.93019; ;10000;5366.77;33146.5;-20/120;6" (150);107.49;1.45299
+Result number = 15;0.04436111109869; ; ; ; ;FindOneSolution;DAF50_200B;DAF 50 DN200;DpC-High Dp;Ductile iron;Flange;Standard;350 psi;6" (150);19124.1;[10000-60000];1.6e+06;-10/150;8" (200);62.6734;1.31817;STAF-SG200C_BV;STAF-SG 8";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;8" (200);7.81159; ;10000;4235.1;21440.2;-20/120;8" (200);62.6734;1.31817
+Result number = 16;0.07177777775768; ; ; ; ;FindOneSolution;DAF50_200B;DAF 50 DN200;DpC-High Dp;Ductile iron;Flange;Standard;350 psi;6" (150);50067.6;[10000-60000];1.6e+06;-10/150;10" (250);49.9982;1.35193;STAF-SG250C_BV;STAF-SG 10";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;10" (250);8.85718; ;10000;4620.89;25955.1;-20/120;10" (250);49.9982;1.35193
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 13
+
+SelectionMode = Batch
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = DPCTYPE_HIDP
+ComboFamilyBelow65ID = FAM_DAF516
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_WELDING
+ComboVersionBelow65ID = VERS_NOPT
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = DPCTYPE_HIDP
+ComboFamilyAbove50ID = FAM_DAF50
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_FLANGE
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_5
+GroupDpBranchChecked = false
+GroupKvsChecked = false
+DpMaxChecked = false
+DpMax = 0
+DpStabilizedOn = Branch
+DpCLocalization = UpStream
+MvLocalization = Secondary
+BVComboTypeBelow65ID = RVTYPE_BV
+BVComboFamilyBelow65ID = FAM_STAD*
+BVComboMaterialBelow65ID = BDY_AMETAL
+BVComboConnectBelow65ID = CONN_THREADN
+BVComboVersionBelow65ID = VERS_NODRAIN
+BVComboPNBelow65ID = PN_5
+BVComboTypeAbove50ID = RVTYPE_BV
+BVComboFamilyAbove50ID = FAM_STAF-SG
+BVComboMaterialAbove50ID = BDY_DUCTIRON
+BVComboConnectAbove50ID = CONN_ANSIFL
+BVComboVersionAbove50ID = VERS_STD
+BVComboPNAbove50ID = PN_4
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 1;5.555555554e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 2;8.333333331e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 3;0.00013888888885; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 4;0.00022222222216; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 5;0.00036111111101; ; ; ; ;FindOneSolution;DAF516_15AWAWA;DAF 516 DN15/20;DpC-High Dp;Ductile iron;Welding;Without meas. point;350 psi;1/2" (15);10264.6;[5000-30000];1.6e+06;-10/150;1" (25);181.946;0.62146;STAD*25G_BV;STAD* 1";Secondary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1" (25);2.6592; ;5000;2224.9;12371.5;-20/120;1" (25);181.946;0.62146
+Result number = 6;0.00058333333317; ; ; ; ;FindOneSolution;DAF516_15AWBWB;DAF 516 DN15/20;DpC-High Dp;Ductile iron;Welding;Without meas. point;350 psi;3/4" (20);26785.2;[5000-30000];1.6e+06;-10/150;1 1/4" (32);111.135;0.576286;STAD*32G_BV;STAD* 1 1/4";Secondary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1 1/4" (32);2.85825; ;5000;2124.28;15679.3;-20/120;1 1/4" (32);111.135;0.576286
+Result number = 7;0.00094444444418; ; ; ; ;FindOneSolution;DAF516_25AWCWC;DAF 516 DN25/32;DpC-High Dp;Ductile iron;Welding;Without meas. point;350 psi;1" (25);7801.39;[5000-30000];1.6e+06;-10/150;1 1/2" (40);128.52;0.688231;STAD*40G_BV;STAD* 1 1/2";Secondary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1 1/2" (40);3.31534; ;5000;3012.81;28636;-20/120;1 1/2" (40);128.52;0.688231
+Result number = 8;0.00152777777735; ; ; ; ;FindOneSolution;DAF516_25AWDWD;DAF 516 DN25/32;DpC-High Dp;Ductile iron;Welding;Without meas. point;350 psi;1 1/4" (32);20414.5;[5000-30000];1.6e+06;-10/150;2" (50);96.6832;0.692498;STAD*50G_BV;STAD* 2";Secondary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;2" (50);3.24638; ;5000;2816.14;22571;-20/120;2" (50);96.6832;0.692498
+Result number = 9;0.00247222222153; ; ; ; ;FindOneSolution;DAF516_40AWEWE;DAF 516 DN40/50;DpC-High Dp;Ductile iron;Welding;Without meas. point;350 psi;1 1/2" (40);8552.92;[5000-30000];1.6e+06;-10/150;2 1/2" (65);64.7506;0.664999;STAF-SG0652B_BV;STAF-SG 2 1/2";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);4.20738; ;5000;1065.42;6177.43;-20/120;2 1/2" (65);64.7506;0.664999
+Result number = 10;0.00399999999888; ; ; ; ;FindOneSolution;DAF50_65B;DAF 50 DN65;DpC-High Dp;Ductile iron;Flange;Standard;350 psi;2 1/2" (65);6661.57;[10000-60000];1.6e+06;-10/150;2 1/2" (65);162.614;1.07595;STAF-SG0652B_BV;STAF-SG 2 1/2";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);4.52365; ;10000;2789.1;16171.6;-20/120;2 1/2" (65);162.614;1.07595
+Result number = 11;0.00647222222041; ; ; ; ;FindOneSolution;DAF50_80A;DAF 50 DN80;DpC-High Dp;Ductile iron;Flange;Standard;250 psi/350 psi;3" (80);10766.9;[10000-60000];1.6e+06;-10/150;3" (80);181.506;1.26224;STAF-SG080B_BV;STAF-SG 3";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);5.69007; ;10000;3663.75;62732.5;-20/120;3" (80);181.506;1.26224
+Result number = 12;0.01047222221929; ; ; ; ;FindOneSolution;DAF50_100B;DAF 50 DN100;DpC-High Dp;Ductile iron;Flange;Standard;350 psi;4" (100);9591.73;[10000-60000];1.6e+06;-10/150;4" (100);121.137;1.2094;STAF-SG100B_BV;STAF-SG 4";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);5.57319; ;10000;3826.07;34799.9;-20/120;4" (100);121.137;1.2094
+Result number = 13;0.0169444444397; ; ; ; ;FindOneSolution;DAF50_125B;DAF 50 DN125;DpC-High Dp;Ductile iron;Flange;Standard;350 psi;5" (125);17198.9;[10000-60000];1.6e+06;-10/150;5" (125);103.599;1.27659;STAF-SG125B_BV;STAF-SG 5";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);5.87936; ;10000;4017.85;52490.5;-20/120;5" (125);103.599;1.27659
+Result number = 14;0.02741666665899; ; ; ; ;FindOneSolution;DAF50_200B;DAF 50 DN200;DpC-High Dp;Ductile iron;Flange;Standard;350 psi;6" (150);7304.76;[10000-60000];1.6e+06;-10/150;6" (150);107.49;1.45299;STAF-SG150B_BV;STAF-SG 6";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);5.93019; ;10000;5366.77;33146.5;-20/120;6" (150);107.49;1.45299
+Result number = 15;0.04436111109869; ; ; ; ;FindOneSolution;DAF50_200B;DAF 50 DN200;DpC-High Dp;Ductile iron;Flange;Standard;350 psi;6" (150);19124.1;[10000-60000];1.6e+06;-10/150;8" (200);62.6734;1.31817;STAF-SG200C_BV;STAF-SG 8";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;8" (200);7.81159; ;10000;4235.1;21440.2;-20/120;8" (200);62.6734;1.31817
+Result number = 16;0.07177777775768; ; ; ; ;FindOneSolution;DAF50_200B;DAF 50 DN200;DpC-High Dp;Ductile iron;Flange;Standard;350 psi;6" (150);50067.6;[10000-60000];1.6e+06;-10/150;10" (250);49.9982;1.35193;STAF-SG250C_BV;STAF-SG 10";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;10" (250);8.85718; ;10000;4620.89;25955.1;-20/120;10" (250);49.9982;1.35193
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 14
+
+SelectionMode = Batch
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = DPCTYPE_HIDP
+ComboFamilyBelow65ID = FAM_DAF516
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_WELDING
+ComboVersionBelow65ID = VERS_NOPT
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = DPCTYPE_HIDP
+ComboFamilyAbove50ID = FAM_DAF50
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_FLANGE
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_5
+GroupDpBranchChecked = false
+GroupKvsChecked = false
+DpMaxChecked = false
+DpMax = 0
+DpStabilizedOn = ControlValve
+DpCLocalization = UpStream
+MvLocalization = Secondary
+BVComboTypeBelow65ID = RVTYPE_BV
+BVComboFamilyBelow65ID = FAM_STAD*
+BVComboMaterialBelow65ID = BDY_AMETAL
+BVComboConnectBelow65ID = CONN_THREADN
+BVComboVersionBelow65ID = VERS_NODRAIN
+BVComboPNBelow65ID = PN_5
+BVComboTypeAbove50ID = RVTYPE_BV
+BVComboFamilyAbove50ID = FAM_STAF-SG
+BVComboMaterialAbove50ID = BDY_DUCTIRON
+BVComboConnectAbove50ID = CONN_ANSIFL
+BVComboVersionAbove50ID = VERS_STD
+BVComboPNAbove50ID = PN_4
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 1;5.555555554e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 2;8.333333331e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 3;0.00013888888885; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 4;0.00022222222216; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 5;0.00036111111101; ; ; ; ;FindOneSolution;DAF516_15AWAWA;DAF 516 DN15/20;DpC-High Dp;Ductile iron;Welding;Without meas. point;350 psi;1/2" (15);10264.6;[5000-30000];1.6e+06;-10/150;1" (25);181.946;0.62146;STAD*25G_BV;STAD* 1";Secondary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1" (25);2.6592; ;5000;2224.9;12371.5;-20/120;1" (25);181.946;0.62146
+Result number = 6;0.00058333333317; ; ; ; ;FindOneSolution;DAF516_15AWBWB;DAF 516 DN15/20;DpC-High Dp;Ductile iron;Welding;Without meas. point;350 psi;3/4" (20);26785.2;[5000-30000];1.6e+06;-10/150;1 1/4" (32);111.135;0.576286;STAD*32G_BV;STAD* 1 1/4";Secondary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1 1/4" (32);2.85825; ;5000;2124.28;15679.3;-20/120;1 1/4" (32);111.135;0.576286
+Result number = 7;0.00094444444418; ; ; ; ;FindOneSolution;DAF516_25AWCWC;DAF 516 DN25/32;DpC-High Dp;Ductile iron;Welding;Without meas. point;350 psi;1" (25);7801.39;[5000-30000];1.6e+06;-10/150;1 1/2" (40);128.52;0.688231;STAD*40G_BV;STAD* 1 1/2";Secondary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;1 1/2" (40);3.31534; ;5000;3012.81;28636;-20/120;1 1/2" (40);128.52;0.688231
+Result number = 8;0.00152777777735; ; ; ; ;FindOneSolution;DAF516_25AWDWD;DAF 516 DN25/32;DpC-High Dp;Ductile iron;Welding;Without meas. point;350 psi;1 1/4" (32);20414.5;[5000-30000];1.6e+06;-10/150;2" (50);96.6832;0.692498;STAD*50G_BV;STAD* 2";Secondary;Balancing Valve;Ametal(tm);NPT thread;Without drain;350 psi;2" (50);3.24638; ;5000;2816.14;22571;-20/120;2" (50);96.6832;0.692498
+Result number = 9;0.00247222222153; ; ; ; ;FindOneSolution;DAF516_40AWEWE;DAF 516 DN40/50;DpC-High Dp;Ductile iron;Welding;Without meas. point;350 psi;1 1/2" (40);8552.92;[5000-30000];1.6e+06;-10/150;2 1/2" (65);64.7506;0.664999;STAF-SG0652B_BV;STAF-SG 2 1/2";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);4.20738; ;5000;1065.42;6177.43;-20/120;2 1/2" (65);64.7506;0.664999
+Result number = 10;0.00399999999888; ; ; ; ;FindOneSolution;DAF50_65B;DAF 50 DN65;DpC-High Dp;Ductile iron;Flange;Standard;350 psi;2 1/2" (65);6661.57;[10000-60000];1.6e+06;-10/150;2 1/2" (65);162.614;1.07595;STAF-SG0652B_BV;STAF-SG 2 1/2";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);4.52365; ;10000;2789.1;16171.6;-20/120;2 1/2" (65);162.614;1.07595
+Result number = 11;0.00647222222041; ; ; ; ;FindOneSolution;DAF50_80A;DAF 50 DN80;DpC-High Dp;Ductile iron;Flange;Standard;250 psi/350 psi;3" (80);10766.9;[10000-60000];1.6e+06;-10/150;3" (80);181.506;1.26224;STAF-SG080B_BV;STAF-SG 3";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);5.69007; ;10000;3663.75;62732.5;-20/120;3" (80);181.506;1.26224
+Result number = 12;0.01047222221929; ; ; ; ;FindOneSolution;DAF50_100B;DAF 50 DN100;DpC-High Dp;Ductile iron;Flange;Standard;350 psi;4" (100);9591.73;[10000-60000];1.6e+06;-10/150;4" (100);121.137;1.2094;STAF-SG100B_BV;STAF-SG 4";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);5.57319; ;10000;3826.07;34799.9;-20/120;4" (100);121.137;1.2094
+Result number = 13;0.0169444444397; ; ; ; ;FindOneSolution;DAF50_125B;DAF 50 DN125;DpC-High Dp;Ductile iron;Flange;Standard;350 psi;5" (125);17198.9;[10000-60000];1.6e+06;-10/150;5" (125);103.599;1.27659;STAF-SG125B_BV;STAF-SG 5";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);5.87936; ;10000;4017.85;52490.5;-20/120;5" (125);103.599;1.27659
+Result number = 14;0.02741666665899; ; ; ; ;FindOneSolution;DAF50_200B;DAF 50 DN200;DpC-High Dp;Ductile iron;Flange;Standard;350 psi;6" (150);7304.76;[10000-60000];1.6e+06;-10/150;6" (150);107.49;1.45299;STAF-SG150B_BV;STAF-SG 6";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);5.93019; ;10000;5366.77;33146.5;-20/120;6" (150);107.49;1.45299
+Result number = 15;0.04436111109869; ; ; ; ;FindOneSolution;DAF50_200B;DAF 50 DN200;DpC-High Dp;Ductile iron;Flange;Standard;350 psi;6" (150);19124.1;[10000-60000];1.6e+06;-10/150;8" (200);62.6734;1.31817;STAF-SG200C_BV;STAF-SG 8";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;8" (200);7.81159; ;10000;4235.1;21440.2;-20/120;8" (200);62.6734;1.31817
+Result number = 16;0.07177777775768; ; ; ; ;FindOneSolution;DAF50_200B;DAF 50 DN200;DpC-High Dp;Ductile iron;Flange;Standard;350 psi;6" (150);50067.6;[10000-60000];1.6e+06;-10/150;10" (250);49.9982;1.35193;STAF-SG250C_BV;STAF-SG 10";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;10" (250);8.85718; ;10000;4620.89;25955.1;-20/120;10" (250);49.9982;1.35193
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 15
+
+SelectionMode = Batch
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = DPCTYPE_HIDP
+ComboFamilyBelow65ID = FAM_DAF516
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_WELDING
+ComboVersionBelow65ID = VERS_NOPT
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = DPCTYPE_HIDP
+ComboFamilyAbove50ID = FAM_DAF50
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_FLANGE
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_5
+GroupDpBranchChecked = false
+GroupKvsChecked = false
+DpMaxChecked = false
+DpMax = 0
+DpStabilizedOn = ControlValve
+DpCLocalization = UpStream
+MvLocalization = Secondary
+BVComboTypeBelow65ID = RVTYPE_BV
+BVComboFamilyBelow65ID = FAM_STAF-SG
+BVComboMaterialBelow65ID = BDY_DUCTIRON
+BVComboConnectBelow65ID = CONN_ANSIFL
+BVComboVersionBelow65ID = VERS_STD
+BVComboPNBelow65ID = PN_5
+BVComboTypeAbove50ID = RVTYPE_BV
+BVComboFamilyAbove50ID = FAM_STAF-SG
+BVComboMaterialAbove50ID = BDY_DUCTIRON
+BVComboConnectAbove50ID = CONN_ANSIFL
+BVComboVersionAbove50ID = VERS_STD
+BVComboPNAbove50ID = PN_4
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 1;5.555555554e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 2;8.333333331e-05; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 3;0.00013888888885; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 4;0.00022222222216; ; ; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 5;0.00036111111101; ; ; ; ;FindOneSolution;DAF516_15AWAWA;DAF 516 DN15/20;DpC-High Dp;Ductile iron;Welding;Without meas. point;350 psi;1/2" (15);10264.6;[5000-30000];1.6e+06;-10/150;1" (25);181.946;0.62146;STAF-SG025B_BV;STAF-SG 1";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;250 psi/350 psi;1" (25);2.62822; ;5000;2169.03;12508.5;-20/120;1" (25);181.946;0.62146
+Result number = 6;0.00058333333317; ; ; ; ;FindOneSolution;DAF516_15AWBWB;DAF 516 DN15/20;DpC-High Dp;Ductile iron;Welding;Without meas. point;350 psi;3/4" (20);26785.2;[5000-30000];1.6e+06;-10/150;1 1/4" (32);111.135;0.576286;STAF-SG032B_BV;STAF-SG 1 1/4";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;250 psi/350 psi;1 1/4" (32);2.94725; ;5000;2124.28;19671.4;-20/120;1 1/4" (32);111.135;0.576286
+Result number = 7;0.00094444444418; ; ; ; ;FindOneSolution;DAF516_25AWCWC;DAF 516 DN25/32;DpC-High Dp;Ductile iron;Welding;Without meas. point;350 psi;1" (25);7801.39;[5000-30000];1.6e+06;-10/150;1 1/2" (40);128.52;0.688231;STAF-SG040B_BV;STAF-SG 1 1/2";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;250 psi/350 psi;1 1/2" (40);3.34541; ;5000;3044.25;30060.8;-20/120;1 1/2" (40);128.52;0.688231
+Result number = 8;0.00152777777735; ; ; ; ;FindOneSolution;DAF516_25AWDWD;DAF 516 DN25/32;DpC-High Dp;Ductile iron;Welding;Without meas. point;350 psi;1 1/4" (32);20414.5;[5000-30000];1.6e+06;-10/150;2" (50);96.6832;0.692498;STAF-SG050B_BV;STAF-SG 2";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;250 psi/350 psi;2" (50);3.28223; ;5000;2698.01;21428.8;-20/120;2" (50);96.6832;0.692498
+Result number = 9;0.00247222222153; ; ; ; ;FindOneSolution;DAF516_40AWEWE;DAF 516 DN40/50;DpC-High Dp;Ductile iron;Welding;Without meas. point;350 psi;1 1/2" (40);8552.92;[5000-30000];1.6e+06;-10/150;2 1/2" (65);64.7506;0.664999;STAF-SG0652B_BV;STAF-SG 2 1/2";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);4.20738; ;5000;1065.42;6177.43;-20/120;2 1/2" (65);64.7506;0.664999
+Result number = 10;0.00399999999888; ; ; ; ;FindOneSolution;DAF50_65B;DAF 50 DN65;DpC-High Dp;Ductile iron;Flange;Standard;350 psi;2 1/2" (65);6661.57;[10000-60000];1.6e+06;-10/150;2 1/2" (65);162.614;1.07595;STAF-SG0652B_BV;STAF-SG 2 1/2";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);4.52365; ;10000;2789.1;16171.6;-20/120;2 1/2" (65);162.614;1.07595
+Result number = 11;0.00647222222041; ; ; ; ;FindOneSolution;DAF50_80A;DAF 50 DN80;DpC-High Dp;Ductile iron;Flange;Standard;250 psi/350 psi;3" (80);10766.9;[10000-60000];1.6e+06;-10/150;3" (80);181.506;1.26224;STAF-SG080B_BV;STAF-SG 3";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);5.69007; ;10000;3663.75;62732.5;-20/120;3" (80);181.506;1.26224
+Result number = 12;0.01047222221929; ; ; ; ;FindOneSolution;DAF50_100B;DAF 50 DN100;DpC-High Dp;Ductile iron;Flange;Standard;350 psi;4" (100);9591.73;[10000-60000];1.6e+06;-10/150;4" (100);121.137;1.2094;STAF-SG100B_BV;STAF-SG 4";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);5.57319; ;10000;3826.07;34799.9;-20/120;4" (100);121.137;1.2094
+Result number = 13;0.0169444444397; ; ; ; ;FindOneSolution;DAF50_125B;DAF 50 DN125;DpC-High Dp;Ductile iron;Flange;Standard;350 psi;5" (125);17198.9;[10000-60000];1.6e+06;-10/150;5" (125);103.599;1.27659;STAF-SG125B_BV;STAF-SG 5";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);5.87936; ;10000;4017.85;52490.5;-20/120;5" (125);103.599;1.27659
+Result number = 14;0.02741666665899; ; ; ; ;FindOneSolution;DAF50_200B;DAF 50 DN200;DpC-High Dp;Ductile iron;Flange;Standard;350 psi;6" (150);7304.76;[10000-60000];1.6e+06;-10/150;6" (150);107.49;1.45299;STAF-SG150B_BV;STAF-SG 6";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);5.93019; ;10000;5366.77;33146.5;-20/120;6" (150);107.49;1.45299
+Result number = 15;0.04436111109869; ; ; ; ;FindOneSolution;DAF50_200B;DAF 50 DN200;DpC-High Dp;Ductile iron;Flange;Standard;350 psi;6" (150);19124.1;[10000-60000];1.6e+06;-10/150;8" (200);62.6734;1.31817;STAF-SG200C_BV;STAF-SG 8";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;8" (200);7.81159; ;10000;4235.1;21440.2;-20/120;8" (200);62.6734;1.31817
+Result number = 16;0.07177777775768; ; ; ; ;FindOneSolution;DAF50_200B;DAF 50 DN200;DpC-High Dp;Ductile iron;Flange;Standard;350 psi;6" (150);50067.6;[10000-60000];1.6e+06;-10/150;10" (250);49.9982;1.35193;STAF-SG250C_BV;STAF-SG 10";Secondary;Balancing Valve;Ductile iron;ANSI Flange;Standard;300 psi;10" (250);8.85718; ;10000;4620.89;25955.1;-20/120;10" (250);49.9982;1.35193
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+

@@ -1,0 +1,13 @@
+; ss32x40.def : Declares the module parameters.
+;LIBRARY      SS32X60.OCX
+;jb
+LIBRARY		SPR32X60.OCX
+
+EXPORTS
+	DllCanUnloadNow     @1 PRIVATE
+	DllGetClassObject   @2 PRIVATE
+	DllRegisterServer   @3 PRIVATE
+	DllUnregisterServer @4 PRIVATE
+
+SECTIONS
+;   .SHARDATA   Read Write Shared

@@ -1,0 +1,910 @@
+#Start of test definition
+
+StartTechnicalParameters
+ApplicationType = 1
+AvailablePMPanels = 7
+BreakTankRequiredForWaterMakeUp = 1
+CVDefKvReynard = 1
+CVMaxDispDp = 200000
+CVMaxDpProp = 65000
+CVMinAuthCstFlow = 0.5
+CVMinAuthor = 0.25
+CVMinDpOnoff = 3000
+CVMinDpProp = 10000
+CVUseDpCPBand = 0
+CanChangePressureVolumeLimit = 0
+CurrencyID = CURRENCY_EUR
+DefaultCalculationNorm = PM_NORM_EN12828
+DefaultCoolingTps = 7
+DefaultFillTemperature = 15
+DefaultHeatingTps = 50
+DefaultISCoolingAdditID = WATER
+DefaultISCoolingDT = 2
+DefaultISCoolingPcWeight = 0
+DefaultISCoolingTps = 10
+DefaultISHeatingAdditID = WATER
+DefaultISHeatingDT = 5
+DefaultISHeatingPcWeight = 0
+DefaultISHeatingTps = 90
+DefaultISSolarAdditID = WATER
+DefaultISSolarDT = 20
+DefaultISSolarPcWeight = 0
+DefaultISSolarTps = 70
+DefaultMaxTempInCooling = 45
+DefaultMinTempInHeating = 5
+DefaultMinTempInSolar = 5
+DefaultPipeSerieID = STEEL_DIN2440
+DefaultPrjCoolingAdditID = WATER
+DefaultPrjCoolingDT = 5
+DefaultPrjCoolingPcWeight = 0
+DefaultPrjHeatingAdditID = WATER
+DefaultPrjHeatingDT = 5
+DefaultPrjHeatingPcWeight = 0
+DefaultSafetyPressureResponseValve = 300000
+DefaultStaticPressureOfWaterNetwork = 400000
+DefaultTAZ = 100
+DefaultWaterHardness = 1.78324958
+DefaultWaterMakeUpTemp = 15
+DegassingWaterReserveForVessel = 0.002
+DpCBCVDpcmin = 3000
+DpCBCVDplmin = 5000
+DpCHide = 0
+DpCHminFullyOpenMv = 0
+DpCMinDp = 5000
+DpCMvLocation = 0
+DpCMvWithSameSizeOnly = 0
+FixedOrificeMaxDp = 6000
+FixedOrificeMinDp = 2000
+FlowDeviationMinus = -0.1
+FlowDeviationPlus = 0.1
+FluidTempLimitEN12953 = 105
+InitialPressureMargin = 30000
+MaxNumberOfAdditionalVesselsInParallel = 4
+MaxNumberOfVentoInParallel = 2
+MaxSafetyValveInParallel = 3
+MaxSizeShift = 4
+MinPressureMargin = 20000
+PICvHide = 0
+PICvMinDp = 1000
+PSetupCompresso = 10000
+PSetupTransfero = 20000
+PipeMaxDp = 200
+PipeMaxVelocity = 2
+PipeMinDp = 10
+PipeMinVelocity = 0.3
+PipeTargetDp = 150
+PipeTargetVelocity = 1
+PipeTargetVelosityUsed = 0
+PressureVolumeLimit = 300000
+ProjectType = 1
+SafetyTempLimiterLimitEN12953 = 110
+SizeShiftAbove = 0
+SizeShiftBelow = -2
+TrvDefDpTotal = 10000
+TrvDefRoomTemperature = 20
+TrvDefSupplyTemperature = 80
+TrvMaxDp = 30000
+TrvMinDpRatio = 0.25
+UseDefaultFreezingPointAsMinTemperature = 1
+UseSimplyPst = 0
+UseVesselPressureVolumeLimit = 0
+ValveMaxDp = 200000
+ValveMin2Dp = 6000
+ValveMinDp = 3000
+VenturiMaxDp = 10000
+VenturiMinDp = 2000
+VesselSelectionRangePercentage = 0
+EndTechnicalParameters
+
+Test number = 0
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_STD
+ComboFamilyBelow65ID = FAM_MODULATOR_P
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADM
+ComboVersionBelow65ID = VERS_US
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = PICVTYPE_STD
+ComboFamilyAbove50ID = FAM_FUSION_P
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_US
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = Yes
+ComboActuatorDefaultReturnPos = Closing
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;TA_MODULATOR_15B;TA-Modulator 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1/2" (15);>50;0.0001;0.00402;EqualPc;PushToClose;1.1759;13701.2;-10/90;3/8" (10);76.0132;0.226354;TAACT_M_NC_24_3;TA-ACTM 24/NC;400000;-;8,93;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;TA_MODULATOR_15B;TA-Modulator 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1/2" (15);>50;0.0001;0.00402;EqualPc;PushToClose;4.77983;14063.6;-10/90;1/2" (15);79.2937;0.276311;TAACT_M_NC_24_3;TA-ACTM 24/NC;400000;-;8,93;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;TA_MODULATOR_15B;TA-Modulator 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1/2" (15);>50;0.0001;0.00402;EqualPc;PushToClose;6.59339;14480.3;-10/90;1/2" (15);167.605;0.414466;TAACT_M_NC_24_3;TA-ACTM 24/NC;400000;-;8,93;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 3;0.00013888888885; ; ;FindOneSolution;TA_MODULATOR_20B;TA-Modulator 3/4";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;3/4" (20);>50;0.0001;0.00404;EqualPc;PushToClose;4.38442;13944.9;-10/90;3/4" (20);96.5521;0.379027;TAACT_M_NC_24_3;TA-ACTM 24/NC;400000;-;8,98;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 4;0.00022222222216; ; ;FindOneSolution;TA_MODULATOR_20B;TA-Modulator 3/4";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;3/4" (20);>50;0.0001;0.00404;EqualPc;PushToClose;7.35151;14644.5;-10/90;1" (25);73.1796;0.382437;TAACT_M_NC_24_3;TA-ACTM 24/NC;400000;-;8,98;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 5;0.00036111111101; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_25B;TA-Modulator 1";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1" (25);>50;0.0001;0.00651;EqualPc;PushToClose;6.66667;18588.5;-10/90;1" (25);181.946;0.62146;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;65,1;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_32B;TA-Modulator 1 1/4";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1 1/4" (32);>50;0.0001;0.00656;EqualPc;PushToClose;4.87257;19535.2;-20/120;1 1/4" (32);111.135;0.576286;SLIDER160-STD1M;TA-Slider 160 (1m);600000;-;65,6;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 7;0.00094444444418; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_32B;TA-Modulator 1 1/4";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1 1/4" (32);>50;0.0001;0.00656;EqualPc;PushToClose;9.08557;22357.8;-20/120;1 1/2" (40);128.52;0.688231;SLIDER160-STD1M;TA-Slider 160 (1m);600000;-;65,6;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 8;0.00152777777735; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_40B;TA-Modulator 1 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1 1/2" (40);>50;0.0001;0.015;EqualPc;PushToClose;1.84698;23830.5;-10/90;2" (50);96.6832;0.692498;SLIDER500-STD1M;TA-Slider 500 (1m);400000;-;150/300*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_50B;TA-Modulator 2";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;2" (50);>50;0.0001;0.015;EqualPc;PushToClose;1.71076;24084.1;-10/90;2 1/2" (65);64.7506;0.664999;SLIDER500-STD1M;TA-Slider 500 (1m);400000;-;150/300*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65C;TA-Modulator 2 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Flange;US specific;350 psi;2 1/2" (65);>50;0.0001;0.02;EqualPc;PushToClose;4.08752;24792.5;-20/120;2 1/2" (65);162.614;1.07595;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65C;TA-Modulator 2 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Flange;US specific;350 psi;2 1/2" (65);>50;0.0001;0.02;EqualPc;PushToClose;4.91904;27731.5;-20/120;3" (80);181.506;1.26224;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 12;0.01047222221929; ; ;FindOneSolutionWithAlternative;FUSION_P100C;TA-Fusion-P 4";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;8.42063;24472.5;-20/120;4" (100);121.137;1.2094;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 13;0.0169444444397; ; ;FindOneSolutionWithAlternative;FUSION_P100C;TA-Fusion-P 4";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;9.72238;28555.6;-20/120;5" (125);103.599;1.27659;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 14;0.02741666665899; ; ;FindOneSolutionWithAlternative;FUSION_P125C;TA-Fusion-P 5";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;5" (125);>100;0;0.02;EqualPc;PushToClose;9.4978;27189.5;-20/120;6" (150);107.49;1.45299;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 15;0.04436111109869; ; ;FindOneSolutionWithAlternative;FUSION_P150C;TA-Fusion-P 6"NF;-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.36231;35074.1;-20/120;8" (200);62.6734;1.31817;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 16;0.07177777775768; ; ;FindOneSolutionWithAlternative;FUSION_P150F;TA-Fusion-P 6"HF;-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;350 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.97453;59721.8;-20/120;10" (250);49.9982;1.35193;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 1
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_STD
+ComboFamilyBelow65ID = FAM_MODULATOR_P
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADM
+ComboVersionBelow65ID = VERS_US
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = PICVTYPE_STD
+ComboFamilyAbove50ID = FAM_FUSION_P
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_US
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = Yes
+ComboActuatorDefaultReturnPos = Opening
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;TA_MODULATOR_15B;TA-Modulator 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1/2" (15);>50;0.0001;0.00402;EqualPc;PushToClose;1.1759;13701.2;-10/90;3/8" (10);76.0132;0.226354;TAACT_M_NO_24_3;TA-ACTM 24/NO;400000;-;8,93;20;24 VAC;0-10 V;-;Yes;Retracting
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;TA_MODULATOR_15B;TA-Modulator 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1/2" (15);>50;0.0001;0.00402;EqualPc;PushToClose;4.77983;14063.6;-10/90;1/2" (15);79.2937;0.276311;TAACT_M_NO_24_3;TA-ACTM 24/NO;400000;-;8,93;20;24 VAC;0-10 V;-;Yes;Retracting
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;TA_MODULATOR_15B;TA-Modulator 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1/2" (15);>50;0.0001;0.00402;EqualPc;PushToClose;6.59339;14480.3;-10/90;1/2" (15);167.605;0.414466;TAACT_M_NO_24_3;TA-ACTM 24/NO;400000;-;8,93;20;24 VAC;0-10 V;-;Yes;Retracting
+Result number = 3;0.00013888888885; ; ;FindOneSolution;TA_MODULATOR_20B;TA-Modulator 3/4";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;3/4" (20);>50;0.0001;0.00404;EqualPc;PushToClose;4.38442;13944.9;-10/90;3/4" (20);96.5521;0.379027;TAACT_M_NO_24_3;TA-ACTM 24/NO;400000;-;8,98;20;24 VAC;0-10 V;-;Yes;Retracting
+Result number = 4;0.00022222222216; ; ;FindOneSolution;TA_MODULATOR_20B;TA-Modulator 3/4";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;3/4" (20);>50;0.0001;0.00404;EqualPc;PushToClose;7.35151;14644.5;-10/90;1" (25);73.1796;0.382437;TAACT_M_NO_24_3;TA-ACTM 24/NO;400000;-;8,98;20;24 VAC;0-10 V;-;Yes;Retracting
+Result number = 5;0.00036111111101; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_25B;TA-Modulator 1";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1" (25);>50;0.0001;0.00651;EqualPc;PushToClose;6.66667;18588.5;-10/90;1" (25);181.946;0.62146;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;65,1;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_32B;TA-Modulator 1 1/4";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1 1/4" (32);>50;0.0001;0.00656;EqualPc;PushToClose;4.87257;19535.2;-20/120;1 1/4" (32);111.135;0.576286;SLIDER160-STD1M;TA-Slider 160 (1m);600000;-;65,6;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 7;0.00094444444418; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_32B;TA-Modulator 1 1/4";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1 1/4" (32);>50;0.0001;0.00656;EqualPc;PushToClose;9.08557;22357.8;-20/120;1 1/2" (40);128.52;0.688231;SLIDER160-STD1M;TA-Slider 160 (1m);600000;-;65,6;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 8;0.00152777777735; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_40B;TA-Modulator 1 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1 1/2" (40);>50;0.0001;0.015;EqualPc;PushToClose;1.84698;23830.5;-10/90;2" (50);96.6832;0.692498;SLIDER500-STD1M;TA-Slider 500 (1m);400000;-;150/300*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_50B;TA-Modulator 2";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;2" (50);>50;0.0001;0.015;EqualPc;PushToClose;1.71076;24084.1;-10/90;2 1/2" (65);64.7506;0.664999;SLIDER500-STD1M;TA-Slider 500 (1m);400000;-;150/300*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65C;TA-Modulator 2 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Flange;US specific;350 psi;2 1/2" (65);>50;0.0001;0.02;EqualPc;PushToClose;4.08752;24792.5;-20/120;2 1/2" (65);162.614;1.07595;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65C;TA-Modulator 2 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Flange;US specific;350 psi;2 1/2" (65);>50;0.0001;0.02;EqualPc;PushToClose;4.91904;27731.5;-20/120;3" (80);181.506;1.26224;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 12;0.01047222221929; ; ;FindOneSolutionWithAlternative;FUSION_P100C;TA-Fusion-P 4";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;8.42063;24472.5;-20/120;4" (100);121.137;1.2094;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 13;0.0169444444397; ; ;FindOneSolutionWithAlternative;FUSION_P100C;TA-Fusion-P 4";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;9.72238;28555.6;-20/120;5" (125);103.599;1.27659;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 14;0.02741666665899; ; ;FindOneSolutionWithAlternative;FUSION_P125C;TA-Fusion-P 5";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;5" (125);>100;0;0.02;EqualPc;PushToClose;9.4978;27189.5;-20/120;6" (150);107.49;1.45299;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 15;0.04436111109869; ; ;FindOneSolutionWithAlternative;FUSION_P150C;TA-Fusion-P 6"NF;-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.36231;35074.1;-20/120;8" (200);62.6734;1.31817;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 16;0.07177777775768; ; ;FindOneSolutionWithAlternative;FUSION_P150F;TA-Fusion-P 6"HF;-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;350 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.97453;59721.8;-20/120;10" (250);49.9982;1.35193;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 2
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_HIDP
+ComboFamilyBelow65ID = FAM_KTCM512
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_THREAD
+ComboVersionBelow65ID = VERS_PT90
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = PICVTYPE_STD
+ComboFamilyAbove50ID = FAM_FUSION_P
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_US
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = Yes
+ComboActuatorDefaultReturnPos = Closing
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolutionWithAlternative;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1/2" (15);-;0;0.01;EqualPc;PushToClose;0.321535;12181.8;-10/120;3/8" (10);76.0132;0.226354;MC100FSE-24;TA-MC 100FSE/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 1;5.555555554e-05; ; ;FindOneSolutionWithAlternative;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1/2" (15);-;0;0.01;EqualPc;PushToClose;0.690239;12784.7;-10/120;1/2" (15);79.2937;0.276311;MC100FSE-24;TA-MC 100FSE/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 2;8.333333331e-05; ; ;FindOneSolutionWithAlternative;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1/2" (15);-;0;0.01;EqualPc;PushToClose;1.02181;13659.6;-10/120;1/2" (15);167.605;0.414466;MC100FSE-24;TA-MC 100FSE/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 3;0.00013888888885; ; ;FindOneSolutionWithAlternative;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1/2" (15);-;0;0.01;EqualPc;PushToClose;2.08847;16593.6;-10/120;3/4" (20);96.5521;0.379027;MC100FSE-24;TA-MC 100FSE/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 4;0.00022222222216; ; ;FindOneSolutionWithAlternative;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1/2" (15);-;0;0.01;EqualPc;PushToClose;4.85161;23723.5;-10/120;1" (25);73.1796;0.382437;MC100FSE-24;TA-MC 100FSE/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 5;0.00036111111101; ; ;FindOneSolutionWithAlternative;KTM512_25GTCTC;KTM 512 DN25/32 LF;-1;PIBCV-High Dp;Ductile iron;Thread;Without meas. point;350 psi;1" (25);-;0;0.01;EqualPc;PushToClose;2.2389;14082.1;-10/150;1" (25);181.946;0.62146;MC100FSE-24;TA-MC 100FSE/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 6;0.00058333333317; ; ;FindOneSolutionWithAlternative;KTM512_25ATCTC;KTM 512 DN25/32 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1" (25);-;0;0.01;EqualPc;PushToClose;3.13926;17509.5;-10/120;1 1/4" (32);111.135;0.576286;MC100FSE-24;TA-MC 100FSE/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 7;0.00094444444418; ; ;FindOneSolutionWithAlternative;KTM512_40GTETE;KTM 512 DN40/50 LF;-1;PIBCV-High Dp;Ductile iron;Thread;Without meas. point;350 psi;1 1/2" (40);-;0;0.01;EqualPc;PushToClose;4.92221;14401.8;-10/150;1 1/2" (40);128.52;0.688231;MC100FSE-24;TA-MC 100FSE/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 8;0.00152777777735; ; ;FindOneSolutionWithAlternative;KTM512_40ATETE;KTM 512 DN40/50 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1 1/2" (40);-;0;0.01;EqualPc;PushToClose;6.07873;18450;-10/120;2" (50);96.6832;0.692498;MC100FSE-24;TA-MC 100FSE/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 9;0.00247222222153; ; ;FindOneSolutionWithAlternative;KTM512_40HTETE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Thread;Without meas. point;350 psi;1 1/2" (40);-;0;0.01;EqualPc;PushToClose;7.74669;37375.5;-10/150;2 1/2" (65);64.7506;0.664999;MC100FSE-24;TA-MC 100FSE/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65C;TA-Modulator 2 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Flange;US specific;350 psi;2 1/2" (65);>50;0.0001;0.02;EqualPc;PushToClose;4.08752;24792.5;-20/120;2 1/2" (65);162.614;1.07595;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65C;TA-Modulator 2 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Flange;US specific;350 psi;2 1/2" (65);>50;0.0001;0.02;EqualPc;PushToClose;4.91904;27731.5;-20/120;3" (80);181.506;1.26224;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 12;0.01047222221929; ; ;FindOneSolutionWithAlternative;FUSION_P100C;TA-Fusion-P 4";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;8.42063;24472.5;-20/120;4" (100);121.137;1.2094;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 13;0.0169444444397; ; ;FindOneSolutionWithAlternative;FUSION_P100C;TA-Fusion-P 4";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;9.72238;28555.6;-20/120;5" (125);103.599;1.27659;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 14;0.02741666665899; ; ;FindOneSolutionWithAlternative;FUSION_P125C;TA-Fusion-P 5";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;5" (125);>100;0;0.02;EqualPc;PushToClose;9.4978;27189.5;-20/120;6" (150);107.49;1.45299;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 15;0.04436111109869; ; ;FindOneSolutionWithAlternative;FUSION_P150C;TA-Fusion-P 6"NF;-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.36231;35074.1;-20/120;8" (200);62.6734;1.31817;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 16;0.07177777775768; ; ;FindOneSolutionWithAlternative;FUSION_P150F;TA-Fusion-P 6"HF;-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;350 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.97453;59721.8;-20/120;10" (250);49.9982;1.35193;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 3
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_HIDP
+ComboFamilyBelow65ID = FAM_KTCM512
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_THREAD
+ComboVersionBelow65ID = VERS_PT90
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = PICVTYPE_STD
+ComboFamilyAbove50ID = FAM_FUSION_P
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_US
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = Yes
+ComboActuatorDefaultReturnPos = Opening
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolutionWithAlternative;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1/2" (15);-;0;0.01;EqualPc;PushToClose;0.321535;12181.8;-10/120;3/8" (10);76.0132;0.226354;MC100FSR-24;TA-MC 100FSR/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 1;5.555555554e-05; ; ;FindOneSolutionWithAlternative;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1/2" (15);-;0;0.01;EqualPc;PushToClose;0.690239;12784.7;-10/120;1/2" (15);79.2937;0.276311;MC100FSR-24;TA-MC 100FSR/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 2;8.333333331e-05; ; ;FindOneSolutionWithAlternative;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1/2" (15);-;0;0.01;EqualPc;PushToClose;1.02181;13659.6;-10/120;1/2" (15);167.605;0.414466;MC100FSR-24;TA-MC 100FSR/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 3;0.00013888888885; ; ;FindOneSolutionWithAlternative;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1/2" (15);-;0;0.01;EqualPc;PushToClose;2.08847;16593.6;-10/120;3/4" (20);96.5521;0.379027;MC100FSR-24;TA-MC 100FSR/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 4;0.00022222222216; ; ;FindOneSolutionWithAlternative;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1/2" (15);-;0;0.01;EqualPc;PushToClose;4.85161;23723.5;-10/120;1" (25);73.1796;0.382437;MC100FSR-24;TA-MC 100FSR/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 5;0.00036111111101; ; ;FindOneSolutionWithAlternative;KTM512_25GTCTC;KTM 512 DN25/32 LF;-1;PIBCV-High Dp;Ductile iron;Thread;Without meas. point;350 psi;1" (25);-;0;0.01;EqualPc;PushToClose;2.2389;14082.1;-10/150;1" (25);181.946;0.62146;MC100FSR-24;TA-MC 100FSR/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 6;0.00058333333317; ; ;FindOneSolutionWithAlternative;KTM512_25ATCTC;KTM 512 DN25/32 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1" (25);-;0;0.01;EqualPc;PushToClose;3.13926;17509.5;-10/120;1 1/4" (32);111.135;0.576286;MC100FSR-24;TA-MC 100FSR/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 7;0.00094444444418; ; ;FindOneSolutionWithAlternative;KTM512_40GTETE;KTM 512 DN40/50 LF;-1;PIBCV-High Dp;Ductile iron;Thread;Without meas. point;350 psi;1 1/2" (40);-;0;0.01;EqualPc;PushToClose;4.92221;14401.8;-10/150;1 1/2" (40);128.52;0.688231;MC100FSR-24;TA-MC 100FSR/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 8;0.00152777777735; ; ;FindOneSolutionWithAlternative;KTM512_40ATETE;KTM 512 DN40/50 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1 1/2" (40);-;0;0.01;EqualPc;PushToClose;6.07873;18450;-10/120;2" (50);96.6832;0.692498;MC100FSR-24;TA-MC 100FSR/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 9;0.00247222222153; ; ;FindOneSolutionWithAlternative;KTM512_40HTETE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Thread;Without meas. point;350 psi;1 1/2" (40);-;0;0.01;EqualPc;PushToClose;7.74669;37375.5;-10/150;2 1/2" (65);64.7506;0.664999;MC100FSR-24;TA-MC 100FSR/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65C;TA-Modulator 2 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Flange;US specific;350 psi;2 1/2" (65);>50;0.0001;0.02;EqualPc;PushToClose;4.08752;24792.5;-20/120;2 1/2" (65);162.614;1.07595;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65C;TA-Modulator 2 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Flange;US specific;350 psi;2 1/2" (65);>50;0.0001;0.02;EqualPc;PushToClose;4.91904;27731.5;-20/120;3" (80);181.506;1.26224;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 12;0.01047222221929; ; ;FindOneSolutionWithAlternative;FUSION_P100C;TA-Fusion-P 4";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;8.42063;24472.5;-20/120;4" (100);121.137;1.2094;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 13;0.0169444444397; ; ;FindOneSolutionWithAlternative;FUSION_P100C;TA-Fusion-P 4";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;9.72238;28555.6;-20/120;5" (125);103.599;1.27659;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 14;0.02741666665899; ; ;FindOneSolutionWithAlternative;FUSION_P125C;TA-Fusion-P 5";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;5" (125);>100;0;0.02;EqualPc;PushToClose;9.4978;27189.5;-20/120;6" (150);107.49;1.45299;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 15;0.04436111109869; ; ;FindOneSolutionWithAlternative;FUSION_P150C;TA-Fusion-P 6"NF;-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.36231;35074.1;-20/120;8" (200);62.6734;1.31817;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 16;0.07177777775768; ; ;FindOneSolutionWithAlternative;FUSION_P150F;TA-Fusion-P 6"HF;-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;350 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.97453;59721.8;-20/120;10" (250);49.9982;1.35193;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 4
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_HIDP
+ComboFamilyBelow65ID = FAM_KTM512
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_THREAD
+ComboVersionBelow65ID = VERS_PT90
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = PICVTYPE_STD
+ComboFamilyAbove50ID = FAM_FUSION_P
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_US
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = Yes
+ComboActuatorDefaultReturnPos = Closing
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1/2" (15);-;0;0.01;EqualPc;PushToClose;0.321535;12181.8;-10/120;3/8" (10);76.0132;0.226354;MC100FSE-24;TA-MC 100FSE/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1/2" (15);-;0;0.01;EqualPc;PushToClose;0.690239;12784.7;-10/120;1/2" (15);79.2937;0.276311;MC100FSE-24;TA-MC 100FSE/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1/2" (15);-;0;0.01;EqualPc;PushToClose;1.02181;13659.6;-10/120;1/2" (15);167.605;0.414466;MC100FSE-24;TA-MC 100FSE/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 3;0.00013888888885; ; ;FindOneSolution;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1/2" (15);-;0;0.01;EqualPc;PushToClose;2.08847;16593.6;-10/120;3/4" (20);96.5521;0.379027;MC100FSE-24;TA-MC 100FSE/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 4;0.00022222222216; ; ;FindOneSolution;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1/2" (15);-;0;0.01;EqualPc;PushToClose;4.85161;23723.5;-10/120;1" (25);73.1796;0.382437;MC100FSE-24;TA-MC 100FSE/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 5;0.00036111111101; ; ;FindOneSolution;KTM512_25CTCTC;KTM 512 DN25/32 NF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1" (25);-;0;0.01;EqualPc;PushToClose;1.74879;22321.1;-10/120;1" (25);181.946;0.62146;MC100FSE-24;TA-MC 100FSE/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 6;0.00058333333317; ; ;FindOneSolution;KTM512_25ATCTC;KTM 512 DN25/32 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1" (25);-;0;0.01;EqualPc;PushToClose;3.13926;17509.5;-10/120;1 1/4" (32);111.135;0.576286;MC100FSE-24;TA-MC 100FSE/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 7;0.00094444444418; ; ;FindOneSolution;KTM512_40CTETE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1 1/2" (40);-;0;0.01;EqualPc;PushToClose;4.6654;22500.2;-10/120;1 1/2" (40);128.52;0.688231;MC100FSE-24;TA-MC 100FSE/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 8;0.00152777777735; ; ;FindOneSolution;KTM512_40ATETE;KTM 512 DN40/50 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1 1/2" (40);-;0;0.01;EqualPc;PushToClose;6.07873;18450;-10/120;2" (50);96.6832;0.692498;MC100FSE-24;TA-MC 100FSE/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 9;0.00247222222153; ; ;FindOneSolution;KTM512_40CTETE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1 1/2" (40);-;0;0.01;EqualPc;PushToClose;7.74669;37375.5;-10/120;2 1/2" (65);64.7506;0.664999;MC100FSE-24;TA-MC 100FSE/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65C;TA-Modulator 2 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Flange;US specific;350 psi;2 1/2" (65);>50;0.0001;0.02;EqualPc;PushToClose;4.08752;24792.5;-20/120;2 1/2" (65);162.614;1.07595;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65C;TA-Modulator 2 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Flange;US specific;350 psi;2 1/2" (65);>50;0.0001;0.02;EqualPc;PushToClose;4.91904;27731.5;-20/120;3" (80);181.506;1.26224;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 12;0.01047222221929; ; ;FindOneSolutionWithAlternative;FUSION_P100C;TA-Fusion-P 4";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;8.42063;24472.5;-20/120;4" (100);121.137;1.2094;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 13;0.0169444444397; ; ;FindOneSolutionWithAlternative;FUSION_P100C;TA-Fusion-P 4";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;9.72238;28555.6;-20/120;5" (125);103.599;1.27659;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 14;0.02741666665899; ; ;FindOneSolutionWithAlternative;FUSION_P125C;TA-Fusion-P 5";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;5" (125);>100;0;0.02;EqualPc;PushToClose;9.4978;27189.5;-20/120;6" (150);107.49;1.45299;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 15;0.04436111109869; ; ;FindOneSolutionWithAlternative;FUSION_P150C;TA-Fusion-P 6"NF;-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.36231;35074.1;-20/120;8" (200);62.6734;1.31817;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 16;0.07177777775768; ; ;FindOneSolutionWithAlternative;FUSION_P150F;TA-Fusion-P 6"HF;-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;350 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.97453;59721.8;-20/120;10" (250);49.9982;1.35193;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 5
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_HIDP
+ComboFamilyBelow65ID = FAM_KTM512
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_THREAD
+ComboVersionBelow65ID = VERS_PT90
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = PICVTYPE_STD
+ComboFamilyAbove50ID = FAM_FUSION_P
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_US
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = Yes
+ComboActuatorDefaultReturnPos = Opening
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1/2" (15);-;0;0.01;EqualPc;PushToClose;0.321535;12181.8;-10/120;3/8" (10);76.0132;0.226354;MC100FSR-24;TA-MC 100FSR/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1/2" (15);-;0;0.01;EqualPc;PushToClose;0.690239;12784.7;-10/120;1/2" (15);79.2937;0.276311;MC100FSR-24;TA-MC 100FSR/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1/2" (15);-;0;0.01;EqualPc;PushToClose;1.02181;13659.6;-10/120;1/2" (15);167.605;0.414466;MC100FSR-24;TA-MC 100FSR/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 3;0.00013888888885; ; ;FindOneSolution;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1/2" (15);-;0;0.01;EqualPc;PushToClose;2.08847;16593.6;-10/120;3/4" (20);96.5521;0.379027;MC100FSR-24;TA-MC 100FSR/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 4;0.00022222222216; ; ;FindOneSolution;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1/2" (15);-;0;0.01;EqualPc;PushToClose;4.85161;23723.5;-10/120;1" (25);73.1796;0.382437;MC100FSR-24;TA-MC 100FSR/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 5;0.00036111111101; ; ;FindOneSolution;KTM512_25CTCTC;KTM 512 DN25/32 NF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1" (25);-;0;0.01;EqualPc;PushToClose;1.74879;22321.1;-10/120;1" (25);181.946;0.62146;MC100FSR-24;TA-MC 100FSR/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 6;0.00058333333317; ; ;FindOneSolution;KTM512_25ATCTC;KTM 512 DN25/32 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1" (25);-;0;0.01;EqualPc;PushToClose;3.13926;17509.5;-10/120;1 1/4" (32);111.135;0.576286;MC100FSR-24;TA-MC 100FSR/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 7;0.00094444444418; ; ;FindOneSolution;KTM512_40CTETE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1 1/2" (40);-;0;0.01;EqualPc;PushToClose;4.6654;22500.2;-10/120;1 1/2" (40);128.52;0.688231;MC100FSR-24;TA-MC 100FSR/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 8;0.00152777777735; ; ;FindOneSolution;KTM512_40ATETE;KTM 512 DN40/50 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1 1/2" (40);-;0;0.01;EqualPc;PushToClose;6.07873;18450;-10/120;2" (50);96.6832;0.692498;MC100FSR-24;TA-MC 100FSR/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 9;0.00247222222153; ; ;FindOneSolution;KTM512_40CTETE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;350 psi;1 1/2" (40);-;0;0.01;EqualPc;PushToClose;7.74669;37375.5;-10/120;2 1/2" (65);64.7506;0.664999;MC100FSR-24;TA-MC 100FSR/24;-;2.5e+06;20;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65C;TA-Modulator 2 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Flange;US specific;350 psi;2 1/2" (65);>50;0.0001;0.02;EqualPc;PushToClose;4.08752;24792.5;-20/120;2 1/2" (65);162.614;1.07595;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65C;TA-Modulator 2 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Flange;US specific;350 psi;2 1/2" (65);>50;0.0001;0.02;EqualPc;PushToClose;4.91904;27731.5;-20/120;3" (80);181.506;1.26224;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 12;0.01047222221929; ; ;FindOneSolutionWithAlternative;FUSION_P100C;TA-Fusion-P 4";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;8.42063;24472.5;-20/120;4" (100);121.137;1.2094;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 13;0.0169444444397; ; ;FindOneSolutionWithAlternative;FUSION_P100C;TA-Fusion-P 4";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;9.72238;28555.6;-20/120;5" (125);103.599;1.27659;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 14;0.02741666665899; ; ;FindOneSolutionWithAlternative;FUSION_P125C;TA-Fusion-P 5";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;5" (125);>100;0;0.02;EqualPc;PushToClose;9.4978;27189.5;-20/120;6" (150);107.49;1.45299;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 15;0.04436111109869; ; ;FindOneSolutionWithAlternative;FUSION_P150C;TA-Fusion-P 6"NF;-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.36231;35074.1;-20/120;8" (200);62.6734;1.31817;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 16;0.07177777775768; ; ;FindOneSolutionWithAlternative;FUSION_P150F;TA-Fusion-P 6"HF;-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;350 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.97453;59721.8;-20/120;10" (250);49.9982;1.35193;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 6
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_STD
+ComboFamilyBelow65ID = FAM_COMPACT_P
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADM
+ComboVersionBelow65ID = VERS_US
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = PICVTYPE_STD
+ComboFamilyAbove50ID = FAM_FUSION_P
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_US
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = Yes
+ComboActuatorDefaultReturnPos = Closing
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;COMPACT_P_10B;TA-Compact-P 3/8";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;3/8" (10);>50;0.0001;0.004;Linear;PushToClose;7.12333;13550;-10/90;3/8" (10);76.0132;0.226354;TAACT_M_NC_24_3;TA-ACTM 24/NC;400000;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;COMPACT_P_15LFB;TA-Compact-P 1/2"LF;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1/2" (15);>50;0.0001;0.004;Linear;PushToClose;7.4908;13931.6;-10/90;1/2" (15);79.2937;0.276311;TAACT_M_NC_24_3;TA-ACTM 24/NC;400000;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;COMPACT_P_15B;TA-Compact-P 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1/2" (15);>50;0.0001;0.004;Linear;PushToClose;5.10861;14119;-10/90;1/2" (15);167.605;0.414466;TAACT_M_NC_24_3;TA-ACTM 24/NC;400000;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 3;0.00013888888885; ; ;FindOneSolution;COMPACT_P_20B;TA-Compact-P 3/4";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;3/4" (20);>50;0.0001;0.004;Linear;PushToClose;3.3381;13380.9;-10/90;3/4" (20);96.5521;0.379027;TAACT_M_NC_24_3;TA-ACTM 24/NC;400000;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 4;0.00022222222216; ; ;FindOneSolution;COMPACT_P_20B;TA-Compact-P 3/4";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;3/4" (20);>50;0.0001;0.004;Linear;PushToClose;6.18614;14554.1;-10/90;1" (25);73.1796;0.382437;TAACT_M_NC_24_3;TA-ACTM 24/NC;400000;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 5;0.00036111111101; ; ;FindOneSolution;COMPACT_P_25B;TA-Compact-P 1";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1" (25);>50;0.0001;0.004;Linear;PushToClose;5.13673;18136.7;-10/90;1" (25);181.946;0.62146;TAACT_M_NC_24_3;TA-ACTM 24/NC;400000;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 6;0.00058333333317; ; ;FindOneSolution;COMPACT_P_25B;TA-Compact-P 1";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1" (25);>50;0.0001;0.004;Linear;PushToClose;9.40371;22403.7;-10/90;1 1/4" (32);111.135;0.576286;TAACT_M_NC_24_3;TA-ACTM 24/NC;400000;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 7;0.00094444444418; ; ;FindOneSolution;COMPACT_P_32B;TA-Compact-P 1 1/4";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1 1/4" (32);>50;0.0001;0.004;Linear;PushToClose;8.22172;22110.9;-10/90;1 1/2" (40);128.52;0.688231;TAACT_M_NC_24_3;TA-ACTM 24/NC;400000;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 8;0.00152777777735; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_40B;TA-Modulator 1 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1 1/2" (40);>50;0.0001;0.015;EqualPc;PushToClose;1.84698;23830.5;-10/90;2" (50);96.6832;0.692498;SLIDER500-STD1M;TA-Slider 500 (1m);400000;-;150/300*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_50B;TA-Modulator 2";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;2" (50);>50;0.0001;0.015;EqualPc;PushToClose;1.71076;24084.1;-10/90;2 1/2" (65);64.7506;0.664999;SLIDER500-STD1M;TA-Slider 500 (1m);400000;-;150/300*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65C;TA-Modulator 2 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Flange;US specific;350 psi;2 1/2" (65);>50;0.0001;0.02;EqualPc;PushToClose;4.08752;24792.5;-20/120;2 1/2" (65);162.614;1.07595;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65C;TA-Modulator 2 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Flange;US specific;350 psi;2 1/2" (65);>50;0.0001;0.02;EqualPc;PushToClose;4.91904;27731.5;-20/120;3" (80);181.506;1.26224;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 12;0.01047222221929; ; ;FindOneSolutionWithAlternative;FUSION_P100C;TA-Fusion-P 4";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;8.42063;24472.5;-20/120;4" (100);121.137;1.2094;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 13;0.0169444444397; ; ;FindOneSolutionWithAlternative;FUSION_P100C;TA-Fusion-P 4";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;9.72238;28555.6;-20/120;5" (125);103.599;1.27659;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 14;0.02741666665899; ; ;FindOneSolutionWithAlternative;FUSION_P125C;TA-Fusion-P 5";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;5" (125);>100;0;0.02;EqualPc;PushToClose;9.4978;27189.5;-20/120;6" (150);107.49;1.45299;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 15;0.04436111109869; ; ;FindOneSolutionWithAlternative;FUSION_P150C;TA-Fusion-P 6"NF;-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.36231;35074.1;-20/120;8" (200);62.6734;1.31817;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 16;0.07177777775768; ; ;FindOneSolutionWithAlternative;FUSION_P150F;TA-Fusion-P 6"HF;-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;350 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.97453;59721.8;-20/120;10" (250);49.9982;1.35193;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 7
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_STD
+ComboFamilyBelow65ID = FAM_COMPACT_P
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADM
+ComboVersionBelow65ID = VERS_US
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = PICVTYPE_STD
+ComboFamilyAbove50ID = FAM_FUSION_P
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_US
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = Yes
+ComboActuatorDefaultReturnPos = Opening
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;COMPACT_P_10B;TA-Compact-P 3/8";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;3/8" (10);>50;0.0001;0.004;Linear;PushToClose;7.12333;13550;-10/90;3/8" (10);76.0132;0.226354;TAACT_M_NO_24_3;TA-ACTM 24/NO;400000;-;8,89;20;24 VAC;0-10 V;-;Yes;Retracting
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;COMPACT_P_15LFB;TA-Compact-P 1/2"LF;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1/2" (15);>50;0.0001;0.004;Linear;PushToClose;7.4908;13931.6;-10/90;1/2" (15);79.2937;0.276311;TAACT_M_NO_24_3;TA-ACTM 24/NO;400000;-;8,89;20;24 VAC;0-10 V;-;Yes;Retracting
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;COMPACT_P_15B;TA-Compact-P 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1/2" (15);>50;0.0001;0.004;Linear;PushToClose;5.10861;14119;-10/90;1/2" (15);167.605;0.414466;TAACT_M_NO_24_3;TA-ACTM 24/NO;400000;-;8,89;20;24 VAC;0-10 V;-;Yes;Retracting
+Result number = 3;0.00013888888885; ; ;FindOneSolution;COMPACT_P_20B;TA-Compact-P 3/4";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;3/4" (20);>50;0.0001;0.004;Linear;PushToClose;3.3381;13380.9;-10/90;3/4" (20);96.5521;0.379027;TAACT_M_NO_24_3;TA-ACTM 24/NO;400000;-;8,89;20;24 VAC;0-10 V;-;Yes;Retracting
+Result number = 4;0.00022222222216; ; ;FindOneSolution;COMPACT_P_20B;TA-Compact-P 3/4";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;3/4" (20);>50;0.0001;0.004;Linear;PushToClose;6.18614;14554.1;-10/90;1" (25);73.1796;0.382437;TAACT_M_NO_24_3;TA-ACTM 24/NO;400000;-;8,89;20;24 VAC;0-10 V;-;Yes;Retracting
+Result number = 5;0.00036111111101; ; ;FindOneSolution;COMPACT_P_25B;TA-Compact-P 1";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1" (25);>50;0.0001;0.004;Linear;PushToClose;5.13673;18136.7;-10/90;1" (25);181.946;0.62146;TAACT_M_NO_24_3;TA-ACTM 24/NO;400000;-;8,89;20;24 VAC;0-10 V;-;Yes;Retracting
+Result number = 6;0.00058333333317; ; ;FindOneSolution;COMPACT_P_25B;TA-Compact-P 1";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1" (25);>50;0.0001;0.004;Linear;PushToClose;9.40371;22403.7;-10/90;1 1/4" (32);111.135;0.576286;TAACT_M_NO_24_3;TA-ACTM 24/NO;400000;-;8,89;20;24 VAC;0-10 V;-;Yes;Retracting
+Result number = 7;0.00094444444418; ; ;FindOneSolution;COMPACT_P_32B;TA-Compact-P 1 1/4";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1 1/4" (32);>50;0.0001;0.004;Linear;PushToClose;8.22172;22110.9;-10/90;1 1/2" (40);128.52;0.688231;TAACT_M_NO_24_3;TA-ACTM 24/NO;400000;-;8,89;20;24 VAC;0-10 V;-;Yes;Retracting
+Result number = 8;0.00152777777735; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_40B;TA-Modulator 1 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1 1/2" (40);>50;0.0001;0.015;EqualPc;PushToClose;1.84698;23830.5;-10/90;2" (50);96.6832;0.692498;SLIDER500-STD1M;TA-Slider 500 (1m);400000;-;150/300*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_50B;TA-Modulator 2";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;2" (50);>50;0.0001;0.015;EqualPc;PushToClose;1.71076;24084.1;-10/90;2 1/2" (65);64.7506;0.664999;SLIDER500-STD1M;TA-Slider 500 (1m);400000;-;150/300*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65C;TA-Modulator 2 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Flange;US specific;350 psi;2 1/2" (65);>50;0.0001;0.02;EqualPc;PushToClose;4.08752;24792.5;-20/120;2 1/2" (65);162.614;1.07595;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65C;TA-Modulator 2 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Flange;US specific;350 psi;2 1/2" (65);>50;0.0001;0.02;EqualPc;PushToClose;4.91904;27731.5;-20/120;3" (80);181.506;1.26224;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 12;0.01047222221929; ; ;FindOneSolutionWithAlternative;FUSION_P100C;TA-Fusion-P 4";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;8.42063;24472.5;-20/120;4" (100);121.137;1.2094;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 13;0.0169444444397; ; ;FindOneSolutionWithAlternative;FUSION_P100C;TA-Fusion-P 4";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;9.72238;28555.6;-20/120;5" (125);103.599;1.27659;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 14;0.02741666665899; ; ;FindOneSolutionWithAlternative;FUSION_P125C;TA-Fusion-P 5";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;5" (125);>100;0;0.02;EqualPc;PushToClose;9.4978;27189.5;-20/120;6" (150);107.49;1.45299;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 15;0.04436111109869; ; ;FindOneSolutionWithAlternative;FUSION_P150C;TA-Fusion-P 6"NF;-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.36231;35074.1;-20/120;8" (200);62.6734;1.31817;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 16;0.07177777775768; ; ;FindOneSolutionWithAlternative;FUSION_P150F;TA-Fusion-P 6"HF;-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;350 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.97453;59721.8;-20/120;10" (250);49.9982;1.35193;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 8
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_STD
+ComboFamilyBelow65ID = FAM_COMPACT_P
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADM
+ComboVersionBelow65ID = VERS_US
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = PICVTYPE_STD
+ComboFamilyAbove50ID = FAM_FUSION_P
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_US
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-20mA
+ActuatorFailSafeFunction = Yes
+ComboActuatorDefaultReturnPos = Closing
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolutionWithAlternative;COMPACT_P_10B;TA-Compact-P 3/8";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;3/8" (10);>50;0.0001;0.004;Linear;PushToClose;7.12333;13550;-10/90;3/8" (10);76.0132;0.226354;TAACT_NC_24;TA-ACT 24/NC (36");400000;-;17,8;20;24 VAC;On-off;-;Yes;Extending
+Result number = 1;5.555555554e-05; ; ;FindOneSolutionWithAlternative;COMPACT_P_15LFB;TA-Compact-P 1/2"LF;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1/2" (15);>50;0.0001;0.004;Linear;PushToClose;7.4908;13931.6;-10/90;1/2" (15);79.2937;0.276311;TAACT_NC_24;TA-ACT 24/NC (36");400000;-;17,8;20;24 VAC;On-off;-;Yes;Extending
+Result number = 2;8.333333331e-05; ; ;FindOneSolutionWithAlternative;COMPACT_P_15B;TA-Compact-P 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1/2" (15);>50;0.0001;0.004;Linear;PushToClose;5.10861;14119;-10/90;1/2" (15);167.605;0.414466;TAACT_NC_24;TA-ACT 24/NC (36");400000;-;17,8;20;24 VAC;On-off;-;Yes;Extending
+Result number = 3;0.00013888888885; ; ;FindOneSolutionWithAlternative;COMPACT_P_20B;TA-Compact-P 3/4";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;3/4" (20);>50;0.0001;0.004;Linear;PushToClose;3.3381;13380.9;-10/90;3/4" (20);96.5521;0.379027;TAACT_NC_24;TA-ACT 24/NC (36");400000;-;17,8;20;24 VAC;On-off;-;Yes;Extending
+Result number = 4;0.00022222222216; ; ;FindOneSolutionWithAlternative;COMPACT_P_20B;TA-Compact-P 3/4";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;3/4" (20);>50;0.0001;0.004;Linear;PushToClose;6.18614;14554.1;-10/90;1" (25);73.1796;0.382437;TAACT_NC_24;TA-ACT 24/NC (36");400000;-;17,8;20;24 VAC;On-off;-;Yes;Extending
+Result number = 5;0.00036111111101; ; ;FindOneSolutionWithAlternative;COMPACT_P_25B;TA-Compact-P 1";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1" (25);>50;0.0001;0.004;Linear;PushToClose;5.13673;18136.7;-10/90;1" (25);181.946;0.62146;TAACT_NC_24;TA-ACT 24/NC (36");400000;-;17,8;20;24 VAC;On-off;-;Yes;Extending
+Result number = 6;0.00058333333317; ; ;FindOneSolutionWithAlternative;COMPACT_P_25B;TA-Compact-P 1";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1" (25);>50;0.0001;0.004;Linear;PushToClose;9.40371;22403.7;-10/90;1 1/4" (32);111.135;0.576286;TAACT_NC_24;TA-ACT 24/NC (36");400000;-;17,8;20;24 VAC;On-off;-;Yes;Extending
+Result number = 7;0.00094444444418; ; ;FindOneSolutionWithAlternative;COMPACT_P_32B;TA-Compact-P 1 1/4";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1 1/4" (32);>50;0.0001;0.004;Linear;PushToClose;8.22172;22110.9;-10/90;1 1/2" (40);128.52;0.688231;TAACT_NC_24;TA-ACT 24/NC (36");400000;-;17,8;20;24 VAC;On-off;-;Yes;Extending
+Result number = 8;0.00152777777735; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_40B;TA-Modulator 1 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1 1/2" (40);>50;0.0001;0.015;EqualPc;PushToClose;1.84698;23830.5;-10/90;2" (50);96.6832;0.692498;SLIDER750-STD-24;TA-Slider 750 (24V);400000;-;45/60/90/120/180/240*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_50B;TA-Modulator 2";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;2" (50);>50;0.0001;0.015;EqualPc;PushToClose;1.71076;24084.1;-10/90;2 1/2" (65);64.7506;0.664999;SLIDER750-STD-24;TA-Slider 750 (24V);400000;-;45/60/90/120/180/240*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65C;TA-Modulator 2 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Flange;US specific;350 psi;2 1/2" (65);>50;0.0001;0.02;EqualPc;PushToClose;4.08752;24792.5;-20/120;2 1/2" (65);162.614;1.07595;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65C;TA-Modulator 2 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Flange;US specific;350 psi;2 1/2" (65);>50;0.0001;0.02;EqualPc;PushToClose;4.91904;27731.5;-20/120;3" (80);181.506;1.26224;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 12;0.01047222221929; ; ;FindOneSolutionWithAlternative;FUSION_P100C;TA-Fusion-P 4";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;8.42063;24472.5;-20/120;4" (100);121.137;1.2094;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 13;0.0169444444397; ; ;FindOneSolutionWithAlternative;FUSION_P100C;TA-Fusion-P 4";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;9.72238;28555.6;-20/120;5" (125);103.599;1.27659;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 14;0.02741666665899; ; ;FindOneSolutionWithAlternative;FUSION_P125C;TA-Fusion-P 5";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;5" (125);>100;0;0.02;EqualPc;PushToClose;9.4978;27189.5;-20/120;6" (150);107.49;1.45299;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 15;0.04436111109869; ; ;FindOneSolutionWithAlternative;FUSION_P150C;TA-Fusion-P 6"NF;-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.36231;35074.1;-20/120;8" (200);62.6734;1.31817;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 16;0.07177777775768; ; ;FindOneSolutionWithAlternative;FUSION_P150F;TA-Fusion-P 6"HF;-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;350 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.97453;59721.8;-20/120;10" (250);49.9982;1.35193;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 9
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_STD
+ComboFamilyBelow65ID = FAM_COMPACT_P
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADM
+ComboVersionBelow65ID = VERS_US
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = PICVTYPE_STD
+ComboFamilyAbove50ID = FAM_FUSION_P
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_US
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-20mA
+ActuatorFailSafeFunction = Yes
+ComboActuatorDefaultReturnPos = Opening
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolutionWithAlternative;COMPACT_P_10B;TA-Compact-P 3/8";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;3/8" (10);>50;0.0001;0.004;Linear;PushToClose;7.12333;13550;-10/90;3/8" (10);76.0132;0.226354;TAACT_NC_24;TA-ACT 24/NC (36");400000;-;17,8;20;24 VAC;On-off;-;Yes;Extending
+Result number = 1;5.555555554e-05; ; ;FindOneSolutionWithAlternative;COMPACT_P_15LFB;TA-Compact-P 1/2"LF;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1/2" (15);>50;0.0001;0.004;Linear;PushToClose;7.4908;13931.6;-10/90;1/2" (15);79.2937;0.276311;TAACT_NC_24;TA-ACT 24/NC (36");400000;-;17,8;20;24 VAC;On-off;-;Yes;Extending
+Result number = 2;8.333333331e-05; ; ;FindOneSolutionWithAlternative;COMPACT_P_15B;TA-Compact-P 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1/2" (15);>50;0.0001;0.004;Linear;PushToClose;5.10861;14119;-10/90;1/2" (15);167.605;0.414466;TAACT_NC_24;TA-ACT 24/NC (36");400000;-;17,8;20;24 VAC;On-off;-;Yes;Extending
+Result number = 3;0.00013888888885; ; ;FindOneSolutionWithAlternative;COMPACT_P_20B;TA-Compact-P 3/4";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;3/4" (20);>50;0.0001;0.004;Linear;PushToClose;3.3381;13380.9;-10/90;3/4" (20);96.5521;0.379027;TAACT_NC_24;TA-ACT 24/NC (36");400000;-;17,8;20;24 VAC;On-off;-;Yes;Extending
+Result number = 4;0.00022222222216; ; ;FindOneSolutionWithAlternative;COMPACT_P_20B;TA-Compact-P 3/4";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;3/4" (20);>50;0.0001;0.004;Linear;PushToClose;6.18614;14554.1;-10/90;1" (25);73.1796;0.382437;TAACT_NC_24;TA-ACT 24/NC (36");400000;-;17,8;20;24 VAC;On-off;-;Yes;Extending
+Result number = 5;0.00036111111101; ; ;FindOneSolutionWithAlternative;COMPACT_P_25B;TA-Compact-P 1";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1" (25);>50;0.0001;0.004;Linear;PushToClose;5.13673;18136.7;-10/90;1" (25);181.946;0.62146;TAACT_NC_24;TA-ACT 24/NC (36");400000;-;17,8;20;24 VAC;On-off;-;Yes;Extending
+Result number = 6;0.00058333333317; ; ;FindOneSolutionWithAlternative;COMPACT_P_25B;TA-Compact-P 1";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1" (25);>50;0.0001;0.004;Linear;PushToClose;9.40371;22403.7;-10/90;1 1/4" (32);111.135;0.576286;TAACT_NC_24;TA-ACT 24/NC (36");400000;-;17,8;20;24 VAC;On-off;-;Yes;Extending
+Result number = 7;0.00094444444418; ; ;FindOneSolutionWithAlternative;COMPACT_P_32B;TA-Compact-P 1 1/4";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1 1/4" (32);>50;0.0001;0.004;Linear;PushToClose;8.22172;22110.9;-10/90;1 1/2" (40);128.52;0.688231;TAACT_NC_24;TA-ACT 24/NC (36");400000;-;17,8;20;24 VAC;On-off;-;Yes;Extending
+Result number = 8;0.00152777777735; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_40B;TA-Modulator 1 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1 1/2" (40);>50;0.0001;0.015;EqualPc;PushToClose;1.84698;23830.5;-10/90;2" (50);96.6832;0.692498;SLIDER750-STD-24;TA-Slider 750 (24V);400000;-;45/60/90/120/180/240*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_50B;TA-Modulator 2";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;2" (50);>50;0.0001;0.015;EqualPc;PushToClose;1.71076;24084.1;-10/90;2 1/2" (65);64.7506;0.664999;SLIDER750-STD-24;TA-Slider 750 (24V);400000;-;45/60/90/120/180/240*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65C;TA-Modulator 2 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Flange;US specific;350 psi;2 1/2" (65);>50;0.0001;0.02;EqualPc;PushToClose;4.08752;24792.5;-20/120;2 1/2" (65);162.614;1.07595;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65C;TA-Modulator 2 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Flange;US specific;350 psi;2 1/2" (65);>50;0.0001;0.02;EqualPc;PushToClose;4.91904;27731.5;-20/120;3" (80);181.506;1.26224;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 12;0.01047222221929; ; ;FindOneSolutionWithAlternative;FUSION_P100C;TA-Fusion-P 4";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;8.42063;24472.5;-20/120;4" (100);121.137;1.2094;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 13;0.0169444444397; ; ;FindOneSolutionWithAlternative;FUSION_P100C;TA-Fusion-P 4";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;9.72238;28555.6;-20/120;5" (125);103.599;1.27659;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 14;0.02741666665899; ; ;FindOneSolutionWithAlternative;FUSION_P125C;TA-Fusion-P 5";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;5" (125);>100;0;0.02;EqualPc;PushToClose;9.4978;27189.5;-20/120;6" (150);107.49;1.45299;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 15;0.04436111109869; ; ;FindOneSolutionWithAlternative;FUSION_P150C;TA-Fusion-P 6"NF;-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.36231;35074.1;-20/120;8" (200);62.6734;1.31817;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 16;0.07177777775768; ; ;FindOneSolutionWithAlternative;FUSION_P150F;TA-Fusion-P 6"HF;-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;350 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.97453;59721.8;-20/120;10" (250);49.9982;1.35193;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 10
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_STD
+ComboFamilyBelow65ID = FAM_COMPACT_P
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADM
+ComboVersionBelow65ID = VERS_US
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = PICVTYPE_STD
+ComboFamilyAbove50ID = FAM_FUSION_P
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_US
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_115VAC
+ComboActuatorInputSignalID = SIG_2-10V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolutionWithAlternative;COMPACT_P_10B;TA-Compact-P 3/8";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;3/8" (10);>50;0.0001;0.004;Linear;PushToClose;7.12333;13550;-10/90;3/8" (10);76.0132;0.226354;TAACT_NC_110;TA-ACT 110/NC (36");400000;-;17,8;20;115 VAC;On-off;-;Yes;Extending
+Result number = 1;5.555555554e-05; ; ;FindOneSolutionWithAlternative;COMPACT_P_15LFB;TA-Compact-P 1/2"LF;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1/2" (15);>50;0.0001;0.004;Linear;PushToClose;7.4908;13931.6;-10/90;1/2" (15);79.2937;0.276311;TAACT_NC_110;TA-ACT 110/NC (36");400000;-;17,8;20;115 VAC;On-off;-;Yes;Extending
+Result number = 2;8.333333331e-05; ; ;FindOneSolutionWithAlternative;COMPACT_P_15B;TA-Compact-P 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1/2" (15);>50;0.0001;0.004;Linear;PushToClose;5.10861;14119;-10/90;1/2" (15);167.605;0.414466;TAACT_NC_110;TA-ACT 110/NC (36");400000;-;17,8;20;115 VAC;On-off;-;Yes;Extending
+Result number = 3;0.00013888888885; ; ;FindOneSolutionWithAlternative;COMPACT_P_20B;TA-Compact-P 3/4";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;3/4" (20);>50;0.0001;0.004;Linear;PushToClose;3.3381;13380.9;-10/90;3/4" (20);96.5521;0.379027;TAACT_NC_110;TA-ACT 110/NC (36");400000;-;17,8;20;115 VAC;On-off;-;Yes;Extending
+Result number = 4;0.00022222222216; ; ;FindOneSolutionWithAlternative;COMPACT_P_20B;TA-Compact-P 3/4";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;3/4" (20);>50;0.0001;0.004;Linear;PushToClose;6.18614;14554.1;-10/90;1" (25);73.1796;0.382437;TAACT_NC_110;TA-ACT 110/NC (36");400000;-;17,8;20;115 VAC;On-off;-;Yes;Extending
+Result number = 5;0.00036111111101; ; ;FindOneSolutionWithAlternative;COMPACT_P_25B;TA-Compact-P 1";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1" (25);>50;0.0001;0.004;Linear;PushToClose;5.13673;18136.7;-10/90;1" (25);181.946;0.62146;TAACT_NC_110;TA-ACT 110/NC (36");400000;-;17,8;20;115 VAC;On-off;-;Yes;Extending
+Result number = 6;0.00058333333317; ; ;FindOneSolutionWithAlternative;COMPACT_P_25B;TA-Compact-P 1";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1" (25);>50;0.0001;0.004;Linear;PushToClose;9.40371;22403.7;-10/90;1 1/4" (32);111.135;0.576286;TAACT_NC_110;TA-ACT 110/NC (36");400000;-;17,8;20;115 VAC;On-off;-;Yes;Extending
+Result number = 7;0.00094444444418; ; ;FindOneSolutionWithAlternative;COMPACT_P_32B;TA-Compact-P 1 1/4";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1 1/4" (32);>50;0.0001;0.004;Linear;PushToClose;8.22172;22110.9;-10/90;1 1/2" (40);128.52;0.688231;TAACT_NC_110;TA-ACT 110/NC (36");400000;-;17,8;20;115 VAC;On-off;-;Yes;Extending
+Result number = 8;0.00152777777735; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_40B;TA-Modulator 1 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1 1/2" (40);>50;0.0001;0.015;EqualPc;PushToClose;1.84698;23830.5;-10/90;2" (50);96.6832;0.692498;SLIDER750-STD-HV;TA-Slider 750 (HV);400000;-;45/60/90/120/180/240*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_50B;TA-Modulator 2";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;2" (50);>50;0.0001;0.015;EqualPc;PushToClose;1.71076;24084.1;-10/90;2 1/2" (65);64.7506;0.664999;SLIDER750-STD-HV;TA-Slider 750 (HV);400000;-;45/60/90/120/180/240*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65C;TA-Modulator 2 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Flange;US specific;350 psi;2 1/2" (65);>50;0.0001;0.02;EqualPc;PushToClose;4.08752;24792.5;-20/120;2 1/2" (65);162.614;1.07595;SLIDER750-STD-HV;TA-Slider 750 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65C;TA-Modulator 2 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Flange;US specific;350 psi;2 1/2" (65);>50;0.0001;0.02;EqualPc;PushToClose;4.91904;27731.5;-20/120;3" (80);181.506;1.26224;SLIDER750-STD-HV;TA-Slider 750 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ;FindOneSolutionWithAlternative;FUSION_P100C;TA-Fusion-P 4";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;8.42063;24472.5;-20/120;4" (100);121.137;1.2094;SLIDER750-STD-HV;TA-Slider 750 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ;FindOneSolutionWithAlternative;FUSION_P100C;TA-Fusion-P 4";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;9.72238;28555.6;-20/120;5" (125);103.599;1.27659;SLIDER750-STD-HV;TA-Slider 750 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ;FindOneSolutionWithAlternative;FUSION_P125C;TA-Fusion-P 5";-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;5" (125);>100;0;0.02;EqualPc;PushToClose;9.4978;27189.5;-20/120;6" (150);107.49;1.45299;SLIDER750-STD-HV;TA-Slider 750 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ;FindOneSolutionWithAlternative;FUSION_P150C;TA-Fusion-P 6"NF;-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;250 psi-350 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.36231;35074.1;-20/120;8" (200);62.6734;1.31817;SLIDER750-STD-HV;TA-Slider 750 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ;FindOneSolutionWithAlternative;FUSION_P150F;TA-Fusion-P 6"HF;-1;PIBCV-Std HVAC;Ductile iron;ANSI Flange;US specific;350 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.97453;59721.8;-20/120;10" (250);49.9982;1.35193;SLIDER1250-STD-HV;TA-Slider 1250 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 11
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_STD
+ComboFamilyBelow65ID = FAM_COMPACT_P
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADM
+ComboVersionBelow65ID = VERS_US
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = PICVTYPE_CLASSICAL
+ComboFamilyAbove50ID = FAM_KTM50
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_FLANGE
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;COMPACT_P_10B;TA-Compact-P 3/8";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;3/8" (10);>50;0.0001;0.004;Linear;PushToClose;7.12333;13550;-10/90;3/8" (10);76.0132;0.226354;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;COMPACT_P_15LFB;TA-Compact-P 1/2"LF;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1/2" (15);>50;0.0001;0.004;Linear;PushToClose;7.4908;13931.6;-10/90;1/2" (15);79.2937;0.276311;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;COMPACT_P_15B;TA-Compact-P 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1/2" (15);>50;0.0001;0.004;Linear;PushToClose;5.10861;14119;-10/90;1/2" (15);167.605;0.414466;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 3;0.00013888888885; ; ;FindOneSolution;COMPACT_P_20B;TA-Compact-P 3/4";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;3/4" (20);>50;0.0001;0.004;Linear;PushToClose;3.3381;13380.9;-10/90;3/4" (20);96.5521;0.379027;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 4;0.00022222222216; ; ;FindOneSolution;COMPACT_P_20B;TA-Compact-P 3/4";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;3/4" (20);>50;0.0001;0.004;Linear;PushToClose;6.18614;14554.1;-10/90;1" (25);73.1796;0.382437;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 5;0.00036111111101; ; ;FindOneSolution;COMPACT_P_25B;TA-Compact-P 1";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1" (25);>50;0.0001;0.004;Linear;PushToClose;5.13673;18136.7;-10/90;1" (25);181.946;0.62146;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ;FindOneSolution;COMPACT_P_25B;TA-Compact-P 1";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1" (25);>50;0.0001;0.004;Linear;PushToClose;9.40371;22403.7;-10/90;1 1/4" (32);111.135;0.576286;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 7;0.00094444444418; ; ;FindOneSolution;COMPACT_P_32B;TA-Compact-P 1 1/4";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1 1/4" (32);>50;0.0001;0.004;Linear;PushToClose;8.22172;22110.9;-10/90;1 1/2" (40);128.52;0.688231;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 8;0.00152777777735; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_40B;TA-Modulator 1 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1 1/2" (40);>50;0.0001;0.015;EqualPc;PushToClose;1.84698;23830.5;-10/90;2" (50);96.6832;0.692498;SLIDER500-STD1M;TA-Slider 500 (1m);400000;-;150/300*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_50B;TA-Modulator 2";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;2" (50);>50;0.0001;0.015;EqualPc;PushToClose;1.71076;24084.1;-10/90;2 1/2" (65);64.7506;0.664999;SLIDER500-STD1M;TA-Slider 500 (1m);400000;-;150/300*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 10;0.00399999999888; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 11;0.00647222222041; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 12;0.01047222221929; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 13;0.0169444444397; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 14;0.02741666665899; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 15;0.04436111109869; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 16;0.07177777775768; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 12
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_STD
+ComboFamilyBelow65ID = FAM_FUSION_P
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADNVIC
+ComboVersionBelow65ID = VERS_US
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = PICVTYPE_HIDP
+ComboFamilyAbove50ID = FAM_KTM512
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_FLANGE
+ComboVersionAbove50ID = VERS_PT90
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = Yes
+ComboActuatorDefaultReturnPos = Closing
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolutionWithAlternative;COMPACT_P_10B;TA-Compact-P 3/8";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;3/8" (10);>50;0.0001;0.004;Linear;PushToClose;7.12333;13550;-10/90;3/8" (10);76.0132;0.226354;TAACT_M_NC_24_3;TA-ACTM 24/NC;400000;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 1;5.555555554e-05; ; ;FindOneSolutionWithAlternative;COMPACT_P_15LFB;TA-Compact-P 1/2"LF;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1/2" (15);>50;0.0001;0.004;Linear;PushToClose;7.4908;13931.6;-10/90;1/2" (15);79.2937;0.276311;TAACT_M_NC_24_3;TA-ACTM 24/NC;400000;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 2;8.333333331e-05; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_15B;TA-Modulator 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1/2" (15);>50;0.0001;0.00402;EqualPc;PushToClose;6.59339;14480.3;-10/90;1/2" (15);167.605;0.414466;TAACT_M_NC_24_3;TA-ACTM 24/NC;400000;-;8,93;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 3;0.00013888888885; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_20B;TA-Modulator 3/4";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;3/4" (20);>50;0.0001;0.00404;EqualPc;PushToClose;4.38442;13944.9;-10/90;3/4" (20);96.5521;0.379027;TAACT_M_NC_24_3;TA-ACTM 24/NC;400000;-;8,98;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 4;0.00022222222216; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_20B;TA-Modulator 3/4";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;3/4" (20);>50;0.0001;0.00404;EqualPc;PushToClose;7.35151;14644.5;-10/90;1" (25);73.1796;0.382437;TAACT_M_NC_24_3;TA-ACTM 24/NC;400000;-;8,98;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 5;0.00036111111101; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_25B;TA-Modulator 1";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1" (25);>50;0.0001;0.00651;EqualPc;PushToClose;6.66667;18588.5;-10/90;1" (25);181.946;0.62146;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;65,1;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ;FindOneSolution;FUSION_P32C;TA-Fusion-P 1 1/4";-1;PIBCV-Std HVAC;Ametal(tm);NPT thread;US specific;250 psi;1 1/4" (32);>100;0;0.02;EqualPc;PushToClose;5.82152;14466.9;-20/120;1 1/4" (32);111.135;0.576286;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 7;0.00094444444418; ; ;FindOneSolution;FUSION_P32C;TA-Fusion-P 1 1/4";-1;PIBCV-Std HVAC;Ametal(tm);NPT thread;US specific;250 psi;1 1/4" (32);>100;0;0.02;EqualPc;PushToClose;8.40126;14957;-20/120;1 1/2" (40);128.52;0.688231;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 8;0.00152777777735; ; ;FindOneSolution;FUSION_P40C;TA-Fusion-P 1 1/2";-1;PIBCV-Std HVAC;Ametal(tm);NPT thread;US specific;250 psi;1 1/2" (40);>100;0;0.02;EqualPc;PushToClose;9.11409;15000;-20/120;2" (50);96.6832;0.692498;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 9;0.00247222222153; ; ;FindOneSolution;FUSION_P50C;TA-Fusion-P 2";-1;PIBCV-Std HVAC;Ametal(tm);NPT thread;US specific;250 psi;2" (50);>100;0;0.02;EqualPc;PushToClose;7.99148;14898.7;-20/120;2 1/2" (65);64.7506;0.664999;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;KTM512_65A;KTM 512 DN65 LF;-1;PIBCV-High Dp;Ductile iron;Flange;PT 90;350 psi;2 1/2" (65);-;0;0.02;EqualPc;PushToClose;9.04237;22279.8;-10/120;2 1/2" (65);162.614;1.07595;MC100FSE-24;TA-MC 100FSE/24;-;2.5e+06;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;KTM512_65E;KTM 512 DN65 HF;-1;PIBCV-High Dp;Ductile iron;Flange;PT 90;350 psi;2 1/2" (65);-;0;0.02;EqualPc;PushToClose;7.79689;64736.1;-10/120;3" (80);181.506;1.26224;MC100FSE-24;TA-MC 100FSE/24;-;2.5e+06;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 12;0.01047222221929; ; ;FindOneSolution;KTM512_100G;KTM 512 DN100 NF;-1;PIBCV-High Dp;Ductile iron;Flange;PT 90;250 psi;4" (100);-;0;0.02;EqualPc;PushToClose;9.33389;36635.9;-10/120;4" (100);121.137;1.2094;MC100FSE-24;TA-MC 100FSE/24;-;2.5e+06;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 13;0.0169444444397; ; ;FindOneSolution;KTM512_125K;KTM 512 DN125 HF;-1;PIBCV-High Dp;Ductile iron;Flange;PT 90;250 psi;5" (125);-;0;0.02;EqualPc;PushToClose;8.53072;73265.2;-10/120;5" (125);103.599;1.27659;MC100FSE-24;TA-MC 100FSE/24;-;990652;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 14;0.02741666665899; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 15;0.04436111109869; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 16;0.07177777775768; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 13
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_STD
+ComboFamilyBelow65ID = FAM_FUSION_P
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADNVIC
+ComboVersionBelow65ID = VERS_US
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = PICVTYPE_HIDP
+ComboFamilyAbove50ID = FAM_KTM512
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_FLANGE
+ComboVersionAbove50ID = VERS_PT90
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = Yes
+ComboActuatorDefaultReturnPos = Opening
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolutionWithAlternative;COMPACT_P_10B;TA-Compact-P 3/8";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;3/8" (10);>50;0.0001;0.004;Linear;PushToClose;7.12333;13550;-10/90;3/8" (10);76.0132;0.226354;TAACT_M_NO_24_3;TA-ACTM 24/NO;400000;-;8,89;20;24 VAC;0-10 V;-;Yes;Retracting
+Result number = 1;5.555555554e-05; ; ;FindOneSolutionWithAlternative;COMPACT_P_15LFB;TA-Compact-P 1/2"LF;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1/2" (15);>50;0.0001;0.004;Linear;PushToClose;7.4908;13931.6;-10/90;1/2" (15);79.2937;0.276311;TAACT_M_NO_24_3;TA-ACTM 24/NO;400000;-;8,89;20;24 VAC;0-10 V;-;Yes;Retracting
+Result number = 2;8.333333331e-05; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_15B;TA-Modulator 1/2";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1/2" (15);>50;0.0001;0.00402;EqualPc;PushToClose;6.59339;14480.3;-10/90;1/2" (15);167.605;0.414466;TAACT_M_NO_24_3;TA-ACTM 24/NO;400000;-;8,93;20;24 VAC;0-10 V;-;Yes;Retracting
+Result number = 3;0.00013888888885; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_20B;TA-Modulator 3/4";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;3/4" (20);>50;0.0001;0.00404;EqualPc;PushToClose;4.38442;13944.9;-10/90;3/4" (20);96.5521;0.379027;TAACT_M_NO_24_3;TA-ACTM 24/NO;400000;-;8,98;20;24 VAC;0-10 V;-;Yes;Retracting
+Result number = 4;0.00022222222216; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_20B;TA-Modulator 3/4";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;3/4" (20);>50;0.0001;0.00404;EqualPc;PushToClose;7.35151;14644.5;-10/90;1" (25);73.1796;0.382437;TAACT_M_NO_24_3;TA-ACTM 24/NO;400000;-;8,98;20;24 VAC;0-10 V;-;Yes;Retracting
+Result number = 5;0.00036111111101; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_25B;TA-Modulator 1";-1;PIBCV-Std HVAC;Ametal(tm);Thread male;US specific;250 psi;1" (25);>50;0.0001;0.00651;EqualPc;PushToClose;6.66667;18588.5;-10/90;1" (25);181.946;0.62146;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;65,1;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ;FindOneSolution;FUSION_P32C;TA-Fusion-P 1 1/4";-1;PIBCV-Std HVAC;Ametal(tm);NPT thread;US specific;250 psi;1 1/4" (32);>100;0;0.02;EqualPc;PushToClose;5.82152;14466.9;-20/120;1 1/4" (32);111.135;0.576286;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 7;0.00094444444418; ; ;FindOneSolution;FUSION_P32C;TA-Fusion-P 1 1/4";-1;PIBCV-Std HVAC;Ametal(tm);NPT thread;US specific;250 psi;1 1/4" (32);>100;0;0.02;EqualPc;PushToClose;8.40126;14957;-20/120;1 1/2" (40);128.52;0.688231;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 8;0.00152777777735; ; ;FindOneSolution;FUSION_P40C;TA-Fusion-P 1 1/2";-1;PIBCV-Std HVAC;Ametal(tm);NPT thread;US specific;250 psi;1 1/2" (40);>100;0;0.02;EqualPc;PushToClose;9.11409;15000;-20/120;2" (50);96.6832;0.692498;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 9;0.00247222222153; ; ;FindOneSolution;FUSION_P50C;TA-Fusion-P 2";-1;PIBCV-Std HVAC;Ametal(tm);NPT thread;US specific;250 psi;2" (50);>100;0;0.02;EqualPc;PushToClose;7.99148;14898.7;-20/120;2 1/2" (65);64.7506;0.664999;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;KTM512_65A;KTM 512 DN65 LF;-1;PIBCV-High Dp;Ductile iron;Flange;PT 90;350 psi;2 1/2" (65);-;0;0.02;EqualPc;PushToClose;9.04237;22279.8;-10/120;2 1/2" (65);162.614;1.07595;MC100FSR-24;TA-MC 100FSR/24;-;2.5e+06;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;KTM512_65E;KTM 512 DN65 HF;-1;PIBCV-High Dp;Ductile iron;Flange;PT 90;350 psi;2 1/2" (65);-;0;0.02;EqualPc;PushToClose;7.79689;64736.1;-10/120;3" (80);181.506;1.26224;MC100FSR-24;TA-MC 100FSR/24;-;2.5e+06;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 12;0.01047222221929; ; ;FindOneSolution;KTM512_100G;KTM 512 DN100 NF;-1;PIBCV-High Dp;Ductile iron;Flange;PT 90;250 psi;4" (100);-;0;0.02;EqualPc;PushToClose;9.33389;36635.9;-10/120;4" (100);121.137;1.2094;MC100FSR-24;TA-MC 100FSR/24;-;2.5e+06;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 13;0.0169444444397; ; ;FindOneSolution;KTM512_125K;KTM 512 DN125 HF;-1;PIBCV-High Dp;Ductile iron;Flange;PT 90;250 psi;5" (125);-;0;0.02;EqualPc;PushToClose;8.53072;73265.2;-10/120;5" (125);103.599;1.27659;MC100FSR-24;TA-MC 100FSR/24;-;990652;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 14;0.02741666665899; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 15;0.04436111109869; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 16;0.07177777775768; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+

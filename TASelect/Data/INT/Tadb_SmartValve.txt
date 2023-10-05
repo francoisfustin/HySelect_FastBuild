@@ -1,0 +1,1498 @@
+////////////////////////////////////////////////////////////////
+//
+//        tadb_smartvalve.txt : Complement to Tadb.txt containing
+//                     smart control valve and smart differential pressure controller definitions
+//
+////////////////////////////////////////////////////////////////
+
+new:CTable(SMARTCONTROLVALVE_TAB) -> ROOT_TABLE
+{
+    "Smart control valves"
+    1                        // 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CTable(SMARTDIFFPRESS_TAB) -> ROOT_TABLE
+{
+    "Smart differential pressure controllers"
+    1                        // 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+// HYS-1959: we made two separates tables for the type of smart control valves and smart differential pressure controllers.
+new:CTable(SMARTCTRLVALVETYPE_TAB) -> LIST_TAB
+{
+    "Smart control valve types"
+    1                        // 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+// HYS-1959: we made two separates tables for the type of smart control valves and smart differential pressure controllers.
+new:CTable(SMARTDPCTYPE_TAB) -> LIST_TAB
+{
+    "Smart differential pressure controller types"
+    1                        // 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CTable(SMARVALVE_CHAR_TAB) -> MISC_TAB
+{
+	"Smart valve characteristics"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+// For Dp sensor with TA-Link.
+new:CTable(DPSENSORGROUP_TAB) -> ROOT_TABLE
+{
+	"Dp sensor groups"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CTableSet(SMARTDPCSET_TAB) -> ROOT_TABLE
+{
+    "TA-Smart-Dp/Dp sensor sets"
+    1                        // 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CTable(SMARTACCGROUP_TAB) -> ROOT_TABLE
+{
+    "Smart valves accessory groups"
+    1                        // 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+///////////////////////////////////////////////////////////////////////
+//
+//        Table SMARTCTRLVALVETYPE_TAB : ordered enumeration of the types of
+//                             smart control valve types.
+//
+///////////////////////////////////////////////////////////////////
+
+new:CDB_StringID(SMARTCTRLVALVETYPE)->SMARTCTRLVALVETYPE_TAB
+{
+    {
+        "IDS_SMARTCONTROLVALVETYPE"
+    }
+    ++
+    SMARTCONTROLVALVE_TAB
+}
+
+///////////////////////////////////////////////////////////////////////
+//
+//        Table SMARTDPCTYPE_TAB : ordered enumeration of the types of
+//                             smart differential pressure controller types.
+//
+///////////////////////////////////////////////////////////////////
+
+new:CDB_StringID(SMARTDPCTYPE)->SMARTDPCTYPE_TAB
+{
+    {
+        "IDS_SMARTDPCTYPE"
+    }
+    ++
+    SMARTDIFFPRESS_TAB
+}
+
+////////////////////////////////////////////////////////////////
+//
+//        Table CTRL_PROP_TAB : Control properties
+//
+//    new:CDB_ControlProperties(ID) -> CTRL_PROP_TAB
+//    {
+//        Number of ports of the control valve. Can be #eCV2W3W_CVNU, eCV2W3W_CV2W, eCV2W3W_CV3W, eCV2W3W_CV4W or eCV2W3W_CV6W.
+//        Control valve type. Can be #eCVFUNC_NoControl, #eCVFUNC_ControlOnly, #eCVFUNC_Presettable, #eCVFUNC_PresetPT or #eCVFUNC_Electronic.
+//        Control characteristic. Can be #eCTRLCHAR_NotChar, #eCTRLCHAR_Linear or #eCTRLCHAR_EqualPc.
+//        Mixing or dividing mode. Can be #eMIXDIV_None, #eMIXDIV_Mixing or #eMIXDIV_Dividing.
+//        Push or pull to close. Can be #ePUSHCLOSE_Undef, #ePUSHCLOSE_False or #ePUSHCLOSE_True.
+//        BCV type. Can be #eBcvType_None, #eBcvType_KvSeries, #eBcvType_LiftLimit or #eBcvType_CharIndep.
+//    }
+//
+////////////////////////////////////////////////////////////////
+
+new:CDB_ControlProperties(CP_TASMART) -> CTRL_PROP_TAB
+{
+    #eCV2W3W_CV2W                            // Number of ports of the control valve. Can be #eCV2W3W_CVNU, eCV2W3W_CV2W, eCV2W3W_CV3W or eCV2W3W_CV4W.
+    #eCVFUNC_Electronic                      // Control valve type. Can be #eCVFUNC_NoControl, #eCVFUNC_ControlOnly, #eCVFUNC_Presettable, #eCVFUNC_PresetPT or #eCVFUNC_Electronic.
+    #eCTRLCHAR_EqualPc                       // Control characteristic. Can be #eCTRLCHAR_NotChar, #eCTRLCHAR_Linear or #eCTRLCHAR_EqualPc.
+    #eMIXDIV_None                            // Mixing or dividing mode. Can be #eMIXDIV_None, #eMIXDIV_Mixing or #eMIXDIV_Dividing.
+    #ePUSHCLOSE_True                         // Push or pull to close. Can be #ePUSHCLOSE_Undef, #ePUSHCLOSE_False or #ePUSHCLOSE_True.
+    #eBcvType_Electronic                     // BCV type. Can be #eBcvType_None, #eBcvType_KvSeries, #eBcvType_LiftLimit, #eBcvType_CharIndep or #eBcvType_Electronic.
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+//
+//								CDB_SmartValveCharacteristic
+//
+//	CDB_SmartValveCharacteristic is characteristic defined for selection of smart valves.
+//
+//	new:CDB_SmartValveCharacteristic(ID\1) -> SMARVALVE_CHAR_TAB
+//	{
+//		{
+//			Discrete/Continuous enum				Discrete set of data or continuous characteristic (#eDISCRETE_True, #eDISCRETE_False or #eDISCRETE_Undefined).
+//			Single/Multi/Electronic-turn			Number of turns of the valve (#eTURN_Single, #eTURN_Multi, #eTURN_Electronic or #eTURN_Undefined).
+//			SettingRounding							Allows to know how to round the result of a computing setting.
+//		}
+//		Kvs
+//  	Minimum adjustable max flow
+//   	Nominal flow
+//      Minimum adjustable max power
+//      Nominal power
+//	}
+//
+///////////////////////////////////////////////////////////////////////////////////
+
+// HYS-1775: Add TA-smart DN 20-25, see file "qnom def TA-Smart 210115.xlsx" tab "For input in TA-Smart"
+new:CDB_SmartValveCharacteristic(C_TASMART_20) -> SMARVALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_False				// Discrete set of data or continuous characteristic (#eDISCRETE_True, #eDISCRETE_False or #eDISCRETE_Undefined).
+		#eTURN_Electronic				// Number of turns of the valve (#eTURN_Single, #eTURN_Multi, #eTURN_Electronic or #eTURN_Undefined).
+		0.0								// Allows to know how to round the result of a computing setting.
+	}
+	3.15
+	1.05552777778E-04				// 380 l/h   -> we set for 379,99 l/h for m3/s to resolve hyselect rounding problem.
+	5.27780555556E-04			    // 1900 l/h	 -> we set for 1900,01 l/h for m3/s to resolve hyselect rounding problem.
+	0.881E+03						// 0,881 kW
+	1.10E+05						// 110 kW
+}
+
+new:CDB_SmartValveCharacteristic(C_TASMART_25) -> SMARVALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_False				// Discrete set of data or continuous characteristic (#eDISCRETE_True, #eDISCRETE_False or #eDISCRETE_Undefined).
+		#eTURN_Electronic				// Number of turns of the valve (#eTURN_Single, #eTURN_Multi, #eTURN_Electronic or #eTURN_Undefined).
+		0.0								// Allows to know how to round the result of a computing setting.
+	}
+	4.35
+	1.49997222222E-04				// 540 l/h   -> we set for 539,99 l/h for m3/s to resolve hyselect rounding problem.
+	7.50002777778E-04			    // 2700 l/h	 -> we set for 2700,01 l/h for m3/s to resolve hyselect rounding problem.
+	1.252E+03						// 1,252 kW
+	1.57E+05						// 157 kW
+}
+
+new:CDB_SmartValveCharacteristic(C_TASMART_32) -> SMARVALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_False				// Discrete set of data or continuous characteristic (#eDISCRETE_True, #eDISCRETE_False or #eDISCRETE_Undefined).
+		#eTURN_Electronic				// Number of turns of the valve (#eTURN_Single, #eTURN_Multi, #eTURN_Electronic or #eTURN_Undefined).
+		0.0								// Allows to know how to round the result of a computing setting.
+	}
+	7.28
+	2.5555277778E-04				// 920 l/h   -> we set for 919,99 l/h for m3/s to resolve rounding problem.
+	1.2777805556E-03				// 4600 l/h	 -> we set for 4600,01 l/h for m3/s to resolve rounding problem.
+	2.134E+03						// 2,134 kW
+	2.67E+05						// 267 kW
+}
+
+new:CDB_SmartValveCharacteristic(C_TASMART_40) -> SMARVALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_Undefined			// Discrete set of data or continuous characteristic (#eDISCRETE_True, #eDISCRETE_False or #eDISCRETE_Undefined).
+		#eTURN_Undefined				// Number of turns of the valve (#eTURN_Single, #eTURN_Multi, #eTURN_Electronic or #eTURN_Undefined).
+		0.0								// Allows to know how to round the result of a computing setting.
+	}
+	12.3
+	4.3333055556E-04				// 1560 l/h	 -> we set for 1559,999999 l/h for m3/s to resolve rounding problem.
+	2.1666694444E-03				// 7800 l/h  -> we set for 7800,000001 l/h for m3/s to resolve rounding problem.
+	3.618E+03						// 3,618 kW
+	4.52E+05						// 452 kW
+}
+
+new:CDB_SmartValveCharacteristic(C_TASMART_50) -> SMARVALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_Undefined			// Discrete set of data or continuous characteristic (#eDISCRETE_True, #eDISCRETE_False or #eDISCRETE_Undefined).
+		#eTURN_Undefined				// Number of turns of the valve (#eTURN_Single, #eTURN_Multi, #eTURN_Electronic or #eTURN_Undefined).
+		0.0								// Allows to know how to round the result of a computing setting.
+	}
+	21.2
+	7.4444166667E-04				// 2680 l/h  -> we set for 2679,999999 l/h for m3/s to resolve rounding problem.
+	3.7222250000E-03				// 13400 l/h -> we set for 13400,000001 l/h for m3/s to resolve rounding problem.
+	6.215E+03						// 6,215 kW
+	7.77E+05						// 777 kW
+}
+
+new:CDB_SmartValveCharacteristic(C_TASMART_65) -> SMARVALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_Undefined			// Discrete set of data or continuous characteristic (#eDISCRETE_True, #eDISCRETE_False or #eDISCRETE_Undefined).
+		#eTURN_Undefined				// Number of turns of the valve (#eTURN_Single, #eTURN_Multi, #eTURN_Electronic or #eTURN_Undefined).
+		0.0								// Allows to know how to round the result of a computing setting.
+	}
+	49.0
+	1.6111083333E-03				// 5800 l/h  -> we set for 5799,999999 l/h for m3/s to resolve rounding problem.
+	8.0555583333E-03				// 29000 l/h -> we set for 29000,000001 l/h for m3/s to resolve rounding problem.
+	1.3451E+04						// 13,451 kW
+	1.681E+06						// 1681 kW
+}
+
+new:CDB_SmartValveCharacteristic(C_TASMART_80) -> SMARVALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_Undefined			// Discrete set of data or continuous characteristic (#eDISCRETE_True, #eDISCRETE_False or #eDISCRETE_Undefined).
+		#eTURN_Undefined				// Number of turns of the valve (#eTURN_Single, #eTURN_Multi, #eTURN_Electronic or #eTURN_Undefined).
+		0.0								// Allows to know how to round the result of a computing setting.
+	}
+	73.0
+	2.3999972222E-03				// 8640 l/h  -> we set for 8639,999999 l/h for m3/s to resolve rounding problem.
+	1.2000002778E-02				// 43200 l/h -> we set for 43200,000001 l/h for m3/s to resolve rounding problem.
+	2.0037E+04						// 20,037 kW
+	2.505E+06						// 2505 kW
+}
+
+new:CDB_SmartValveCharacteristic(C_TASMART_100) -> SMARVALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_Undefined			// Discrete set of data or continuous characteristic (#eDISCRETE_True, #eDISCRETE_False or #eDISCRETE_Undefined).
+		#eTURN_Undefined				// Number of turns of the valve (#eTURN_Single, #eTURN_Multi, #eTURN_Electronic or #eTURN_Undefined).
+		0.0								// Allows to know how to round the result of a computing setting.
+	}
+	120.0
+	3.9444444442E-03				// 14200 l/h  -> we set for 14199,999999 l/h for m3/s to resolve rounding problem.
+	1.9722222222E-02				// 71000 l/h -> we set for 71000,000001 l/h for m3/s to resolve rounding problem.
+	3.293E+04						// 32,93 kW
+	4.116E+06						// 4116 kW
+}
+
+new:CDB_SmartValveCharacteristic(C_TASMART_125) -> SMARVALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_Undefined			// Discrete set of data or continuous characteristic (#eDISCRETE_True, #eDISCRETE_False or #eDISCRETE_Undefined).
+		#eTURN_Undefined				// Number of turns of the valve (#eTURN_Single, #eTURN_Multi, #eTURN_Electronic or #eTURN_Undefined).
+		0.0								// Allows to know how to round the result of a computing setting.
+	}
+	190.0
+	6.2222222222E-03				// 22400 l/h -> we set for 22400 l/h for m3/s to resolve rounding problem.
+	3.1111111111E-02				// 112000 l/h -> we set for 112000,000001 l/h for m3/s to resolve rounding problem.
+	5.195E+04						// 51,95 kW
+	6.494E+06						// 6494 kW
+}
+
+
+// HYS-1660: Add Input / Ouput signal and power supply for TA-Smart
+////////////////////////////////////////////////////////////////
+//
+//        Table SMARTCONTROLVALVE_TAB : Smart control valves
+//
+////////////////////////////////////////////////////////////////
+//
+//	new:CDB_SmartControlValve(ID)->SMARTCONTROLVALVE_TAB
+//	{
+//		{
+//			{
+//				{
+//					{
+//						{
+//							{
+//								0							isDeleted
+//								1							isAvailable
+//								0							isHidden
+//								1							isFix
+//								0							Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation )
+//								0							Free integer (bit 0: NotForIndSel, bit 1: NotForDirSel, bit 2: NotForHMCalc)
+//								0               			Sort integer (Allow to show a group of articles in the order defined with this variable).
+//							}
+//							Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+//							PNRangeID					Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+//							Tmax in �C
+//							Tmin in �C
+//						}
+//					"Reference"						Reference to the TA Product
+//					"Name"							Name of the product
+//					TypeID							Identifier of the valve type 
+//					FamilyID						Identifier of the family of the product
+//					VersionID						Identifier of the version of the product
+//					PriorityLevel					Level of priority for selection [1,10]
+//					Comment							Product comment
+//					ProdImgID						Product image ID
+//					AccessGroupID					Identifier of the accessory group
+//					PartOfaSet						Boolean indicating if the valve is part of a ActSet
+//					Price							Price of the product
+//				}
+//				BodyMaterialID					Identifier of the body material
+//				SizeID							Identifier of the corresp. valve size
+//				ConnectID						Identifier of the (inlet/pipe side) connection
+//				ConnTabID						Identifier of the connection table, can be NO_ID
+//				Conn2ID							Identifier of the outlet/body side connection, can be NO_ID
+//				CBIType							Type of the valve as used in the CBI II
+//				CBISize							Size of the valve as used in the CBI II
+//				CBISizeInch						Size of the valve in inch as used in the CBI II
+//				CBICompatibilityIndex			CBI compatibility Index
+//				CBIVersion						CBI Version
+//				Dpmax							Maximum Dp of the valve
+//				MeasPt							Measuring points
+//				MeasurableData					Measurable data
+//				InletSizeID						Identifier of the inlet size ID
+//				OutletSizeID					Identifier of the outlet size ID
+//			}
+//			CharactID						Identifier of the valve characteristic
+//		}
+//		Stroke							Stroke of the smart control valve
+//		Rangeability					Rangeability of the smart control valve, introduce as a double or as a string ">100" only '>' is supported
+//		LeakageRate						Leakage rate of the smart control valve as a fraction of Kvs
+//		CtrlPropID      				Identifier of the control properties
+//		InternalActuatorName			Identifier of internal actuator
+//		CharactID						Identifier of the smart control valve characteristic
+//		RemoteTempSensorCableLength		Define the remote temperature sensor cable length
+//		Power supply			        List of accepted Power supplies separated by \
+//		Input signals			        List of accepted input control signals separated by \
+//		Output signals			        List of accepted output control signals separated by \
+//		DpSensorGroupID					Identifier of the Dp sensor group.
+//	}
+//
+// Inherited Fields
+//    CDB_Thing::Deleted
+//    CDB_Thing::Available
+//    CDB_Thing::Hidden
+//    CDB_Thing::Fixed
+//    CDB_Thing::FreeInt1
+//    CDB_Thing::FreeInt2
+//    CDB_Thing::SortInt
+//    CDB_HydroThing::Pmax
+//    CDB_HydroThing::PNRange
+//    CDB_HydroThing::Tmax
+//    CDB_HydroThing::Tmin
+//    CDB_Product::Reference
+//    CDB_Product::Name
+//    CDB_Product::TypeID
+//    CDB_Product::FamilyID
+//    CDB_Product::VersionID
+//    CDB_Product::PriorityLevel
+//    CDB_Product::Comment
+//    CDB_Product::ProdImgID
+//    CDB_Product::AccessGroupID
+//    CDB_Product::PartOfaSet
+//    CDB_Product::TableSetID
+//    CDB_Product::Price
+//    CDB_Product::ProductUseFlag
+//    CDB_Product::AccessorySeriesID
+//    CDB_Product::isAttached
+//    CDB_Product::AccTypeID
+//    CDB_Product::AccFamilyID
+//    CDB_TAProduct::BodyMaterialID
+//    CDB_TAProduct::SizeID
+//    CDB_TAProduct::ConnectID
+//    CDB_TAProduct::ConnTabID
+//    CDB_TAProduct::Conn2ID
+//    CDB_TAProduct::CBIType
+//    CDB_TAProduct::CBISize
+//    CDB_TAProduct::CBISizeInch
+//    CDB_TAProduct::CBICompatibilityIndex
+//    CDB_TAProduct::CBIVersion
+//    CDB_TAProduct::Dpmax
+//    CDB_TAProduct::MeasPt
+//    CDB_TAProduct::MeasurableData
+//    CDB_TAProduct::InletSizeID
+//    CDB_TAProduct::OutletSizeID
+//    CDB_RegulatingValve::CharactID
+//    CDB_SmartControlValve::Stroke
+//    CDB_SmartControlValve::Rangeability
+//    CDB_SmartControlValve::LeakageRate
+//    CDB_SmartControlValve::CtrlPropID
+//	  CDB_SmartControlValve::InternalActuatorName
+//	  CDB_SmartControlValve::CharactID
+//	  CDB_SmartControlValve::RemoteTempSensorCableLength
+//	  CDB_SmartControlValve::PowerSupplyIDs
+//	  CDB_SmartControlValve::InputSignalIDs
+//	  CDB_SmartControlValve::OutputSignalIDs
+//	  CDB_SmartControlValve::DpSensorGroupID
+//
+////////////////////////////////////////////////////////////////
+
+///////////////////////
+// *** TA-Smart  ***
+///////////////////////
+new:CDB_SmartControlValve(TASMART_20A) -> SMARTCONTROLVALVE_TAB
+{
+    {
+        {
+            {
+                {
+                    {
+                        0                                           				// isDeleted
+                        1                                           				// isAvailable
+                        0                                           				// isHidden
+                        1                                           				// isFix
+                        0                                           				// Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation )
+                        0                                           				// Free integer (bit 0: NotForIndSel, bit 1: NotForDirSel, bit 2: NotForHMCalc)
+                        0                                           				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+                    }					
+                    0.6e+6 \ 2.5e+6                             				// Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+                    NO_ID                                       				// PNRangeID            Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+                    110.0                                       				// Tmax in �C
+                    -10.0                                       				// Tmin in �C
+                }
+                "322231-00020"                                  			// Reference to the TA Product
+                "TA-Smart 20"                              					// Name of the product
+                SMARTCTRLVALVETYPE                             				// Identifier of the valve type
+                FAM_TASMART_VALVE                          					// Identifier of the family of the product
+                VERS_STD                                   					// Identifier of the version of the product
+                1                                          					// Level of priority for selection [1,10]
+                ""                                         					// Product comment
+                "PX_TASMART_20_50"                         					// Product image ID
+                ACCGR_TASMART20                        						// Identifier of the accessory group
+                #ePartOfaSetNo                             					// Boolean indicating if product is part of a set. Can be #ePartOfaSetNo, #ePartOfaSetYes, #ePartOfaSetYesBreakOk or #ePartOfaSetYesBreakOnMsg.
+                NO_ID                                               		// Table ID where are sets if exist for the current product.
+                0.0                                        					// Price of the product
+                #eProduct                                  					// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+                NO_ID                                      					// Identifier of the series of the accessory (mainly used in DlgDirSel)
+                0                                          					// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+                NO_ID                                      					// Identifier of the accessory type if #eBoth 
+                NO_ID                                      					// Identifier of the accessory family if #eBoth    
+            }
+            BDY_AMETAL                                					// Identifier of the body material
+            DN_20                                       				// Identifier of the corresp. valve size
+            CONN_THREADM                                 				// Identifier of the (inlet/pipe side) connection
+            NO_ID                                       				// Identifier of the connection table, can be NO_ID
+            NO_ID                                       				// Identifier of the outlet/body side connection, can be NO_ID
+            ""                                          				// Type of the valve as used in the CBI II
+            ""                                          				// Size of the valve as used in the CBI II
+            ""                                          				// Size of the valve in inch as used in the CBI II
+            1                                           				// CBI compatibility Index
+            ""                                          				// CBI Version
+            4.0e+5                                      				// Maximum Dp of the valve
+            #eMeasPointNone              								// Measuring points
+            #eMeasDataNone                     							// Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+            NO_ID                                       				// Identifier of the inlet size ID
+            NO_ID                                       				// Identifier of the outlet size ID
+        }
+        NO_ID														// Identifier of the valve characteristic
+    }
+    1.37e-2                                          			// Stroke of the CV
+    125.0                                           			// Rangeability of the CV, introduce as a double or as a string ">100" only '>' is supported
+    0.0002                                          			// Leakage rate of the CV as a fraction of Kvs
+    CP_TASMART                                      			// Identifier of the control properties
+    "TA-Slider 500 SV"											// Internal actuator name
+    C_TASMART_20												// Identifier of the smart control valve characteristic
+   	3.0															// Define the remote temperature sensor cable length
+	POW_24VAC \ POW_24VDC                           			// List of accepted Power supplies separated by \
+	SIG_BACNET_MSTP \ SIG_BACNET_IP \ SIG_MODBUS_RTU \ SIG_MODBUS_TCP \ SIG_0-10V \ SIG_2-10V \ SIG_0-20mA \ SIG_4-20mA     // List of accepted input control signals separated by \
+	SIG_BACNET_MSTP \ SIG_BACNET_IP \ SIG_MODBUS_RTU \ SIG_MODBUS_TCP \ SIG_0-10V \ SIG_2-10V                               // List of accepted output control signals separated by \
+	NO_ID														// DpSensorGroupID: Identifier of the Dp sensor group.
+}
+
+new:CDB_SmartControlValve(TASMART_25A) -> SMARTCONTROLVALVE_TAB
+{    Inherited(TASMART_20A)
+    {
+        CDB_Product::Reference    =    "322231-00025"
+        CDB_Product::Name    =    "TA-Smart 25"
+        CDB_Product::AccessGroupID    =    ACCGR_TASMART25
+		CDB_TAProduct::SizeID        =    DN_25
+		CDB_SmartControlValve::CharactID = C_TASMART_25
+    }
+}
+
+new:CDB_SmartControlValve(TASMART_32A) -> SMARTCONTROLVALVE_TAB
+{    Inherited(TASMART_20A)
+    {
+        CDB_Product::Reference    =    "322231-00032"
+        CDB_Product::Name    =    "TA-Smart 32"
+        CDB_Product::AccessGroupID    =    ACCGR_TASMART32
+		CDB_TAProduct::SizeID        =    DN_32
+		CDB_SmartControlValve::CharactID = C_TASMART_32
+    }
+}
+
+new:CDB_SmartControlValve(TASMART_40A) -> SMARTCONTROLVALVE_TAB
+{    Inherited(TASMART_32A)
+    {
+        CDB_Product::Reference    =    "322231-00040"
+        CDB_Product::Name            =    "TA-Smart 40"
+        CDB_Product::AccessGroupID    =    ACCGR_TASMART40
+        CDB_TAProduct::SizeID        =    DN_40
+        CDB_SmartControlValve::Stroke =  1.57e-2 
+        CDB_SmartControlValve::CharactID = C_TASMART_40
+    }
+}
+
+new:CDB_SmartControlValve(TASMART_50A) -> SMARTCONTROLVALVE_TAB
+{    Inherited(TASMART_32A)
+    {
+        CDB_Product::Reference    =    "322231-00050"
+        CDB_Product::Name            =    "TA-Smart 50"
+        CDB_Product::AccessGroupID    =    ACCGR_TASMART50
+        CDB_TAProduct::SizeID        =    DN_50
+        CDB_SmartControlValve::Stroke =  1.57e-2 
+        CDB_SmartControlValve::CharactID = C_TASMART_50
+    }
+}
+
+// Version NPT thread.
+new:CDB_SmartControlValve(TASMART_20B) -> SMARTCONTROLVALVE_TAB
+{    Inherited(TASMART_20A)
+    {
+        CDB_Product::Reference    =    "322231-00120"
+        CDB_Product::Name    =    "TA-Smart 3/4""
+        CDB_Product::AccessGroupID    =    ACCGR_TASMARTNPT20
+        CDB_TAProduct::ConnectID	= CONN_THREADN
+    }
+}
+
+// Version NPT thread.
+new:CDB_SmartControlValve(TASMART_25B) -> SMARTCONTROLVALVE_TAB
+{    Inherited(TASMART_25A)
+    {
+        CDB_Product::Reference    =    "322231-00125"
+        CDB_Product::Name    =    "TA-Smart 1""
+        CDB_Product::AccessGroupID    =    ACCGR_TASMARTNPT25
+        CDB_TAProduct::ConnectID	= CONN_THREADN
+    }
+}
+
+// Version NPT thread.
+new:CDB_SmartControlValve(TASMART_32B) -> SMARTCONTROLVALVE_TAB
+{    Inherited(TASMART_32A)
+    {
+        CDB_Product::Reference    =    "322231-00132"
+        CDB_Product::Name    =    "TA-Smart 1 1/4""
+        CDB_Product::AccessGroupID    =    ACCGR_TASMARTNPT32
+        CDB_TAProduct::ConnectID	= CONN_THREADN
+    }
+}
+
+// Version NPT thread.
+new:CDB_SmartControlValve(TASMART_40B) -> SMARTCONTROLVALVE_TAB
+{    Inherited(TASMART_40A)
+    {
+        CDB_Product::Reference    =    "322231-00140"
+        CDB_Product::Name    =    "TA-Smart 1 1/2""
+        CDB_Product::AccessGroupID    =    ACCGR_TASMARTNPT40
+        CDB_TAProduct::ConnectID	= CONN_THREADN
+    }
+}
+
+// Version NPT thread.
+new:CDB_SmartControlValve(TASMART_50B) -> SMARTCONTROLVALVE_TAB
+{    Inherited(TASMART_50A)
+    {
+        CDB_Product::Reference    =    "322231-00150"
+        CDB_Product::Name    =    "TA-Smart 2""
+        CDB_Product::AccessGroupID    =    ACCGR_TASMARTNPT50
+        CDB_TAProduct::ConnectID	= CONN_THREADN
+    }
+}
+
+// PN 16
+new:CDB_SmartControlValve(TASMART_65A) -> SMARTCONTROLVALVE_TAB
+{ 	Inherited(TASMART_50A)
+    {
+    	CDB_HydroThing::Pmax	= 0.6e+6 \ 1.6e+6
+        CDB_Product::Reference    =    "322231-01265"
+        CDB_Product::Name            =    "TA-Smart 65"
+        CDB_Product::ProdImgID	= "PX_TASMART_65_150"
+        CDB_Product::AccessGroupID    =    ACCGR_TASMART6580
+        CDB_TAProduct::BodyMaterialID	= BDY_DUCTIRON
+        CDB_TAProduct::SizeID        =    DN_65
+        CDB_TAProduct::ConnectID	= CONN_FLANGE
+		CDB_SmartControlValve::LeakageRate = 0.0
+        CDB_SmartControlValve::InternalActuatorName = "TA-Slider 750 SV"
+        CDB_SmartControlValve::Stroke =  2.3e-2 
+        CDB_SmartControlValve::CharactID = C_TASMART_65
+        CDB_SmartControlValve::RemoteTempSensorCableLength = 5.0
+    }
+}
+
+// PN 16
+new:CDB_SmartControlValve(TASMART_80A) -> SMARTCONTROLVALVE_TAB
+{ 	Inherited(TASMART_65A)
+    {
+        CDB_Product::Reference    =    "322231-01280"
+        CDB_Product::Name            =    "TA-Smart 80"
+        CDB_TAProduct::SizeID        =    DN_80
+        CDB_SmartControlValve::Stroke =  2.35e-2 
+        CDB_SmartControlValve::CharactID = C_TASMART_80
+    }
+}
+
+// PN 16
+new:CDB_SmartControlValve(TASMART_100C) -> SMARTCONTROLVALVE_TAB
+{ 	Inherited(TASMART_80A)
+    {
+        CDB_Product::Reference    =    "322231-01290"
+        CDB_Product::Name            =    "TA-Smart 100"
+        CDB_Product::AccessGroupID    =    ACCGR_TASMART100125
+		CDB_TAProduct::SizeID        =    DN_100
+        CDB_SmartControlValve::Stroke =  2.85e-2 
+        CDB_SmartControlValve::CharactID = C_TASMART_100
+    }
+}
+
+// PN 16
+new:CDB_SmartControlValve(TASMART_125C) -> SMARTCONTROLVALVE_TAB
+{ 	Inherited(TASMART_100C)
+    {
+        CDB_Product::Reference    =    "322231-01291"
+        CDB_Product::Name            =    "TA-Smart 125"
+        CDB_TAProduct::SizeID        =    DN_125
+        CDB_SmartControlValve::Stroke =  3.15e-2 
+        CDB_SmartControlValve::CharactID = C_TASMART_125
+    }
+}
+
+// PN 25
+new:CDB_SmartControlValve(TASMART_65C) -> SMARTCONTROLVALVE_TAB
+{ 	Inherited(TASMART_65A)
+    {
+    	CDB_HydroThing::Pmax	= 0.6e+6 \ 2.5e+6
+        CDB_Product::Reference    =    "322231-01365"
+    }
+}
+
+new:CDB_SmartControlValve(TASMART_80C) -> SMARTCONTROLVALVE_TAB
+{ 	Inherited(TASMART_80A)
+    {
+    	CDB_HydroThing::Pmax	= 0.6e+6 \ 2.5e+6
+        CDB_Product::Reference    =    "322231-01380"
+    }
+}
+
+// PN 25
+new:CDB_SmartControlValve(TASMART_100A) -> SMARTCONTROLVALVE_TAB
+{ 	Inherited(TASMART_80A)
+    {
+		CDB_HydroThing::Pmax	= 0.6e+6 \ 2.5e+6
+        CDB_Product::Reference    =    "322231-01390"
+        CDB_Product::Name            =    "TA-Smart 100"
+        CDB_Product::AccessGroupID    =    ACCGR_TASMART100125
+		CDB_TAProduct::SizeID        =    DN_100
+        CDB_SmartControlValve::Stroke =  2.85e-2 
+        CDB_SmartControlValve::CharactID = C_TASMART_100
+    }
+}
+
+// PN 25
+new:CDB_SmartControlValve(TASMART_125A) -> SMARTCONTROLVALVE_TAB
+{ 	Inherited(TASMART_100A)
+    {
+        CDB_Product::Reference    =    "322231-01391"
+        CDB_Product::Name            =    "TA-Smart 125"
+        CDB_TAProduct::SizeID        =    DN_125
+        CDB_SmartControlValve::Stroke =  3.15e-2 
+        CDB_SmartControlValve::CharactID = C_TASMART_125
+    }
+}
+
+// Version Ansi flange Class 150.
+new:CDB_SmartControlValve(TASMART_65B) -> SMARTCONTROLVALVE_TAB
+{    Inherited(TASMART_65A)
+    {
+		CDB_HydroThing::Pmax	= 0.6e+6 \ 2.5e+6
+        CDB_Product::Reference    =    "322231-01465"
+        CDB_Product::Name    =    "TA-Smart 2 1/2""
+        CDB_Product::AccessGroupID    =    ACCGR_TASMARTAF6580
+        CDB_TAProduct::ConnectID	= CONN_ANSIFL
+    }
+}
+
+// Version Ansi flange Class 150.
+new:CDB_SmartControlValve(TASMART_80B) -> SMARTCONTROLVALVE_TAB
+{    Inherited(TASMART_80A)
+    {
+		CDB_HydroThing::Pmax	= 0.6e+6 \ 2.5e+6
+        CDB_Product::Reference    =    "322231-01480"
+        CDB_Product::Name    =    "TA-Smart 3""
+        CDB_Product::AccessGroupID    =    ACCGR_TASMARTAF6580
+        CDB_TAProduct::ConnectID	= CONN_ANSIFL
+    }
+}
+
+// Version Ansi flange Class 150.
+new:CDB_SmartControlValve(TASMART_100B) -> SMARTCONTROLVALVE_TAB
+{    Inherited(TASMART_100A)
+    {
+        CDB_Product::Reference    =    "322231-01490"
+        CDB_Product::Name    =    "TA-Smart 4""
+        CDB_Product::AccessGroupID    =    NO_ID
+        CDB_TAProduct::ConnectID	= CONN_ANSIFL
+    }
+}
+
+// Version Ansi flange Class 150.
+new:CDB_SmartControlValve(TASMART_125B) -> SMARTCONTROLVALVE_TAB
+{    Inherited(TASMART_125A)
+    {
+        CDB_Product::Reference    =    "322231-01491"
+        CDB_Product::Name    =    "TA-Smart 5""
+        CDB_Product::AccessGroupID    =    NO_ID
+        CDB_TAProduct::ConnectID	= CONN_ANSIFL
+    }
+}
+
+
+////////////////////////////////////////////////////////////////
+//
+// Smart differential pressure controller.
+//
+////////////////////////////////////////////////////////////////
+// HYS-1992: Remove the TA Smart Dp from set to single product. Keep DpSensor Set and Connection Set
+//    - Add article number for Smart Dp and "fictif" Set DpSensor and connection set.
+new:CDB_SmartControlValve(TASMARTDP_20A) -> SMARTDIFFPRESS_TAB
+{
+    {
+        {
+            {
+                {
+                    {
+                        0                                           				// isDeleted
+                        1                                           				// isAvailable
+                        0                                           				// isHidden
+                        1                                           				// isFix
+                        0                                           				// Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation )
+                        0                                           				// Free integer (bit 0: NotForIndSel, bit 1: NotForDirSel, bit 2: NotForHMCalc)
+                        0                                           				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+                    }					
+                    0.6e+6 \ 2.5e+6                             				// Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+                    NO_ID                                       				// PNRangeID            Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+                    110.0                                       				// Tmax in �C
+                    -10.0                                       				// Tmin in �C
+                }
+                "322232-00020"                                  						// Reference to the TA Product
+                "TA-Smart Dp 20"                              				// Name of the product
+                SMARTDPCTYPE                             					// Identifier of the valve type
+                FAM_TASMARTDP_VALVE                        					// Identifier of the family of the product
+                VERS_STD                                   					// Identifier of the version of the product
+                1                                          					// Level of priority for selection [1,10]
+                ""                                         					// Product comment
+                "PX_TASMARTDP_20_50"                         				// Product image ID
+                ACCGR_TASMARTDP20                      						// Identifier of the accessory group
+                #ePartOfaSetNo                            					// Boolean indicating if product is part of a set. Can be #ePartOfaSetNo, #ePartOfaSetYes, #ePartOfaSetYesBreakOk or #ePartOfaSetYesBreakOnMsg.
+                NO_ID                                       				// Table ID where are sets if exist for the current product.
+                0.0                                        					// Price of the product
+                #eProduct                                  					// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+                NO_ID                                      					// Identifier of the series of the accessory (mainly used in DlgDirSel)
+                0                                          					// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+                NO_ID                                      					// Identifier of the accessory type if #eBoth 
+                NO_ID                                      					// Identifier of the accessory family if #eBoth    
+            }
+            BDY_AMETAL                                					// Identifier of the body material
+            DN_20                                       				// Identifier of the corresp. valve size
+            CONN_THREADM                                 				// Identifier of the (inlet/pipe side) connection
+            NO_ID                                       				// Identifier of the connection table, can be NO_ID
+            NO_ID                                       				// Identifier of the outlet/body side connection, can be NO_ID
+            ""                                          				// Type of the valve as used in the CBI II
+            ""                                          				// Size of the valve as used in the CBI II
+            ""                                          				// Size of the valve in inch as used in the CBI II
+            1                                           				// CBI compatibility Index
+            ""                                          				// CBI Version
+            4.0e+5                                      				// Maximum Dp of the valve
+            #eMeasPointNone              								// Measuring points
+            #eMeasDataNone                     							// Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+            NO_ID                                       				// Identifier of the inlet size ID
+            NO_ID                                       				// Identifier of the outlet size ID
+        }
+        NO_ID														// Identifier of the valve characteristic
+    }
+    1.37e-2                                          			// Stroke of the CV
+    125.0                                           			// Rangeability of the CV, introduce as a double or as a string ">100" only '>' is supported
+    0.0002                                          			// Leakage rate of the CV as a fraction of Kvs
+    CP_TASMART                                      			// Identifier of the control properties
+    "TA-Slider 500 SV"											// Internal actuator name
+    C_TASMART_20												// Identifier of the smart control valve characteristic
+   	3.0															// Define the remote temperature sensor cable length
+	POW_24VAC \ POW_24VDC                           			// List of accepted Power supplies separated by \
+	SIG_BACNET_MSTP \ SIG_BACNET_IP \ SIG_MODBUS_RTU \ SIG_MODBUS_TCP \ SIG_0-10V \ SIG_2-10V \ SIG_0-20mA \ SIG_4-20mA     // List of accepted input control signals separated by \
+	SIG_BACNET_MSTP \ SIG_BACNET_IP \ SIG_MODBUS_RTU \ SIG_MODBUS_TCP \ SIG_0-10V \ SIG_2-10V                               // List of accepted output control signals separated by \
+	SMARTDP_DPSENSORGR											// DpSensorGroupID: Identifier of the Dp sensor group.
+}
+
+new:CDB_SmartControlValve(TASMARTDP_25A) -> SMARTDIFFPRESS_TAB
+{    Inherited(TASMARTDP_20A)
+    {
+        CDB_Product::Reference    =    "322232-00025"
+        CDB_Product::Name    =    "TA-Smart Dp 25"
+        CDB_Product::AccessGroupID    =    ACCGR_TASMARTDP25
+        CDB_TAProduct::SizeID = DN_25
+        CDB_SmartControlValve::CharactID = C_TASMART_25
+    }
+}
+
+new:CDB_SmartControlValve(TASMARTDP_32A) -> SMARTDIFFPRESS_TAB
+{    Inherited(TASMARTDP_20A)
+    {
+        CDB_Product::Reference    =    "322232-00032"
+        CDB_Product::Name    =    "TA-Smart Dp 32"
+        CDB_Product::AccessGroupID    =    ACCGR_TASMARTDP32
+        CDB_TAProduct::SizeID = DN_32
+        CDB_SmartControlValve::CharactID = C_TASMART_32
+    }
+}
+
+new:CDB_SmartControlValve(TASMARTDP_40A) -> SMARTDIFFPRESS_TAB
+{    Inherited(TASMARTDP_20A)
+    {
+        CDB_Product::Reference    =    "322232-00040"
+		CDB_Product::Name    =    "TA-Smart Dp 40"
+        CDB_Product::AccessGroupID    =    ACCGR_TASMARTDP40
+		CDB_TAProduct::SizeID = DN_40
+		CDB_SmartControlValve::CharactID = C_TASMART_40
+    }
+}
+
+new:CDB_SmartControlValve(TASMARTDP_50A) -> SMARTDIFFPRESS_TAB
+{    Inherited(TASMARTDP_20A)
+    {
+        CDB_Product::Reference    =    "322232-00050"
+		CDB_Product::Name    =    "TA-Smart Dp 50"
+        CDB_Product::AccessGroupID    =    ACCGR_TASMARTDP50
+        CDB_TAProduct::SizeID = DN_50
+        CDB_SmartControlValve::CharactID = C_TASMART_50
+    }
+}
+
+// PN 16
+new:CDB_SmartControlValve(TASMARTDP_65A) -> SMARTDIFFPRESS_TAB
+{    Inherited(TASMARTDP_20A)
+    {
+    	CDB_HydroThing::Pmax	= 0.6e+6 \ 1.6e+6
+		CDB_Product::Reference    =    "322232-01265"
+        CDB_Product::Name    =    "TA-Smart Dp 65"
+        CDB_Product::ProdImgID	= "PX_TASMARTDP_65_150"
+        CDB_Product::AccessGroupID    =    ACCGR_TASMARTDP6580
+        CDB_TAProduct::BodyMaterialID	= BDY_DUCTIRON
+		CDB_TAProduct::SizeID = DN_65
+		CDB_TAProduct::ConnectID	= CONN_FLANGE
+		CDB_SmartControlValve::LeakageRate = 0.0
+        CDB_SmartControlValve::InternalActuatorName = "TA-Slider 750 SV"
+        CDB_SmartControlValve::Stroke =  2.3e-2 
+        CDB_SmartControlValve::CharactID = C_TASMART_65
+        CDB_SmartControlValve::RemoteTempSensorCableLength = 5.0
+    }
+}
+
+new:CDB_SmartControlValve(TASMARTDP_80A) -> SMARTDIFFPRESS_TAB
+{    Inherited(TASMARTDP_65A)
+    {
+        CDB_Product::Reference    =    "322232-01280"
+		CDB_Product::Name    =    "TA-Smart Dp 80"
+		CDB_TAProduct::SizeID        =    DN_80
+        CDB_SmartControlValve::Stroke =  2.35e-2 
+        CDB_SmartControlValve::CharactID = C_TASMART_80
+    }
+}
+
+new:CDB_SmartControlValve(TASMARTDP_100A) -> SMARTDIFFPRESS_TAB
+{    Inherited(TASMARTDP_65A)
+    {
+		CDB_Product::Reference    =    "322232-01290"
+        CDB_Product::Name    =    "TA-Smart Dp 100"
+		CDB_Product::AccessGroupID    =    ACCGR_TASMARTDP100
+		CDB_TAProduct::SizeID        =    DN_100
+        CDB_SmartControlValve::Stroke =  2.85e-2
+        CDB_SmartControlValve::CharactID = C_TASMART_100
+    }
+}
+
+new:CDB_SmartControlValve(TASMARTDP_125A) -> SMARTDIFFPRESS_TAB
+{    Inherited(TASMARTDP_65A)
+    {
+		CDB_Product::Reference    =    "322232-01291"
+        CDB_Product::Name    =    "TA-Smart Dp 125"
+		CDB_Product::AccessGroupID    =    ACCGR_TASMARTDP100
+		CDB_TAProduct::SizeID        =    DN_125
+        CDB_SmartControlValve::Stroke =  3.15e-2 
+        CDB_SmartControlValve::CharactID = C_TASMART_125
+    }
+}
+
+// PN 25
+new:CDB_SmartControlValve(TASMARTDP_65B) -> SMARTDIFFPRESS_TAB
+{    Inherited(TASMARTDP_65A)
+    {
+        CDB_HydroThing::Pmax	= 0.6e+6 \ 2.5e+6
+		CDB_Product::Reference    =    "322232-01365"
+    }
+}
+
+new:CDB_SmartControlValve(TASMARTDP_80B) -> SMARTDIFFPRESS_TAB
+{    Inherited(TASMARTDP_80A)
+    {
+        CDB_HydroThing::Pmax	= 0.6e+6 \ 2.5e+6
+		CDB_Product::Reference    =    "322232-01380"
+    }
+}
+
+new:CDB_SmartControlValve(TASMARTDP_100B) -> SMARTDIFFPRESS_TAB
+{    Inherited(TASMARTDP_100A)
+    {
+		CDB_HydroThing::Pmax	= 0.6e+6 \ 2.5e+6
+		CDB_Product::Reference    =    "322232-01390"
+    }
+}
+
+new:CDB_SmartControlValve(TASMARTDP_125B) -> SMARTDIFFPRESS_TAB
+{    Inherited(TASMARTDP_125A)
+    {
+		CDB_HydroThing::Pmax	= 0.6e+6 \ 2.5e+6
+		CDB_Product::Reference    =    "322232-01391"
+    }
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////
+//
+//								CDB_DpSensor
+//
+//	new:CDB_DpSensor(ID)->tableID	Common CData syntax
+//	{
+//		{
+//			{
+//				{
+//					0				isDeleted
+//					1				isAvailable
+//					0				isHidden
+//					1				isFix
+//					0				Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation )
+//					0				Free integer (bit 0: NotForIndSel, bit 1: NotForDirSel, bit 2: NotForHMCalc)
+//					0               Sort integer (Allow to show a group of articles in the order defined with this variable).
+//				}
+//				Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+//				PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+//				Tmax in °C
+//				Tmin in °C
+//			}
+//			"Reference"				Reference to the product.
+//			"Name"					Name of the product
+//			TypeID					Identifier of the valve type 
+//			FamilyID				Identifier of the family of the product
+//			VersionID				Identifier of the version of the product
+//			PriorityLevel			Level of priority for selection [1,10]
+//			Comment					Product comment
+//			ProdImgID				Product image ID
+//			AccessGroupID			Identifier of the accessory group
+//			PartOfaSet				Boolean indicating if the valve is part of a ActSet
+//			TableSetID				ID of the table containing the set
+//			Price					Price of the product
+//			ProductUseFlag			#eProduct, #eAccessory, #eBoth Integer to indicate if the product is only a product, only accessory or both
+//			AccessorySeriesID		Identifier of the series of the accessory (mainly used in DlgDirSel)
+//			isAttached				0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+//			AccTypeID				Identifier of the accessory type if #eBoth 
+//			AccFamilyID				Identifier of the accessory family if #eBoth
+//		}
+//		MinMeasurableDp			Minimum differential pressure that the instrument can read.
+//		MaxMeasurableDp			Maximum differential pressure that the instrument can read.
+//      BurstPressure			Max. differential pressure.
+//		OutputSignals			List of accepted output control signals separated by "\".
+//	}
+//
+//////////////////////////////////////////////////////////////
+// Dp sensor 0-10 V 10-100 kPa / 40-400 kPa with TA-Smart-Dp set
+//////////////////////////////////////////////////////////////
+
+// Dp sensor 0-10 V [10-100 kPa].
+new:CDB_DpSensor(DPSENSOR_0_10V_10_100) -> MEASTOOLS_TAB
+{
+	{
+		{
+			{
+				0											// isDeleted
+				1                                       	// isAvailable
+				0                                       	// isHidden
+				1                                       	// isFix
+				0                                       	// Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation )
+				0                                       	// Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+				0               							// Sort integer (Allow to show a group of articles in the order defined with this variable).
+			}
+			0.0 \ 2.5e+6                 			        // Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+			NO_ID                                   	// PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+			80.0                                    	// Tmax in �C
+			-15.0                                      	// Tmin in �C
+		}
+		"-"			                       			// Reference to the TA Product
+		"TA-Link"  									// Name of the product
+		DPSENSORTYPE                      			// Identifier of the valve type
+		FAM_TALINK	                				// Identifier of the family of the product
+		NO_ID                                  		// Identifier of the version of the product
+		1                                      		// Level of priority for selection [1,10]
+		"IDS_TALINK_COMMENT"						// Product comment
+		"PX_TALINK"                                	// Product image ID
+		NO_ID                                   	// Identifier of the accessory group
+		#ePartOfaSetYes                          	// Boolean indicating if product is part of a set. Can be #ePartOfaSetNo, #ePartOfaSetYes, #ePartOfaSetYesBreakOk or #ePartOfaSetYesBreakOnMsg.
+		SMARTDPCSET_TAB								// Table ID where are sets if exist for the current product.
+		0.0                                     	// Price of the product
+		#eBoth                       			    // #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+		NO_ID                           			// Identifier of the series of the accessory (mainly used in DlgDirSel)
+		0                               			// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+		NO_ID                           			// Identifier of the accessory type if #eBoth 
+		NO_ID										// Identifier of the accessory family if #eBoth	
+	}
+	1.0e+4										// Minimum differential pressure that the instrument can read.
+	1.0e+5										// Maximum differential pressure that the instrument can read.
+	5.0e+5										// Max. differential pressure.
+	SIG_0-10V									// List of accepted output control signals separated by "\".
+}
+
+// Dp sensor 0-10 V [40-400 kPa].
+new:CDB_DpSensor(DPSENSOR_0_10V_40_400) -> MEASTOOLS_TAB
+{ Inherited(DPSENSOR_0_10V_10_100)
+	{
+		CDB_DpSensor::MinMeasurableDp = 4.0e+4
+		CDB_DpSensor::MaxMeasurableDp = 4.0e+5
+	}
+}
+
+// For the sets
+// Dp sensor set [10-100 kPa].
+new:CDB_DpSensor(DPSENSOR_10_100SET) -> MEASTOOLS_TAB
+{ Inherited(DPSENSOR_0_10V_10_100)
+	{
+		CDB_Product::Reference = "325020-10008"
+		CDB_Product::Name = "IDS_DPSENSORSET_NAME"
+		CDB_Product::Comment = ""
+		CDB_Product::AccessGroupID = ACCGR_SMARTDPDPSSET1
+		CDB_DpSensor::BurstPressure = 0.0
+	}
+}
+
+// Dp sensor set [40-400 kPa].
+new:CDB_DpSensor(DPSENSOR_40_400SET) -> MEASTOOLS_TAB
+{ Inherited(DPSENSOR_0_10V_40_400)
+	{
+		CDB_Product::Reference = "325020-10009"
+		CDB_Product::Name = "IDS_DPSENSORSET_NAME"
+		CDB_Product::Comment = ""
+		CDB_Product::AccessGroupID = ACCGR_SMARTDPDPSSET2
+		CDB_DpSensor::BurstPressure = 0.0
+	}
+}
+
+
+//////////////////////////////////////////////////////////////
+// Connection set fictive object just to show as choice in the 
+// same group as the Dp sensor.
+//////////////////////////////////////////////////////////////
+
+//	new:CDB_Product(ID)->tableID	Common CData syntax
+//	{
+//		{
+//			{
+//				0				isDeleted
+//				1				isAvailable
+//				0				isHidden
+//				1				isFix
+//				0				Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation )
+//				0				Free integer (bit 0: NotForIndSel, bit 1: NotForDirSel, bit 2: NotForHMCalc)
+//				0               Sort integer (Allow to show a group of articles in the order defined with this variable).
+//			}
+//			Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+//			PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+//			Tmax in �C
+//			Tmin in �C
+//		}
+//		"Reference"				Reference to the product.
+//		"Name"					Name of the product
+//		TypeID					Identifier of the valve type 
+//		FamilyID				Identifier of the family of the product
+//		VersionID				Identifier of the version of the product
+//		PriorityLevel			Level of priority for selection [1,10]
+//		Comment					Product comment
+//		ProdImgID				Product image ID
+//		AccessGroupID			Identifier of the accessory group
+//		PartOfaSet				Boolean indicating if the valve is part of a ActSet
+//		TableSetID				ID of the table containing the set
+//		Price					Price of the product
+//		ProductUseFlag			#eProduct, #eAccessory, #eBoth Integer to indicate if the product is only a product, only accessory or both
+//		AccessorySeriesID		Identifier of the series of the accessory (mainly used in DlgDirSel)
+//		isAttached				0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+//		AccTypeID				Identifier of the accessory type if #eBoth 
+//		AccFamilyID				Identifier of the accessory family if #eBoth
+
+new:CDB_Product(SMARTDP_CONNSET) -> LIST_TAB
+{
+    {
+        {
+			0								// isDeleted
+			1								// isAvailable
+			0								// isHidden
+			1								// isFix
+			0								// Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation )
+			100 							// Free integer (bit 0: NotForIndSel, bit 1: NotForDirSel, bit 2: NotForHMCalc)
+			0            					// Sort integer [0-9999] (Allow to show a group of articles in the order defined with this variable).
+        }					
+        0.0 \ 0.0          				// Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+        NO_ID                    		// PNRangeID            Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+        0.0                    			// Tmax in �C
+        0.0                    			// Tmin in �C
+    }
+    "326040-10001"               	// Reference to the TA Product
+    "IDS_SMARTDP_CONNECTIONSET" 	// Name of the product
+    NO_ID                       	// Identifier of the valve type
+    NO_ID            				// Identifier of the family of the product
+    NO_ID                     		// Identifier of the version of the product
+    1                            	// Level of priority for selection [1,10]
+    ""                           	// Product comment
+    "NO_ID"        					// Product image ID
+    ACCGR_SMARTDPCONSET				// Identifier of the accessory group
+    #ePartOfaSetYes               	// Boolean indicating if product is part of a set. Can be #ePartOfaSetNo, #ePartOfaSetYes, #ePartOfaSetYesBreakOk or #ePartOfaSetYesBreakOnMsg.
+    SMARTDPCSET_TAB                	// Table ID where are sets if exist for the current product.
+    0.0                          	// Price of the product
+    #eBoth                    		// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+    NO_ID                        	// Identifier of the series of the accessory (mainly used in DlgDirSel)
+    0                            	// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+    NO_ID                        	// Identifier of the accessory type if #eBoth 
+    NO_ID                        	// Identifier of the accessory family if #eBoth    
+}                                	
+
+///////////////////////////////////////////////////////////////////
+//    Dp sensor group for TA-Smart-DP
+///////////////////////////////////////////////////////////////////
+
+new:CDB_RuledTable(SMARTDP_DPSENSORGR) -> DPSENSORGROUP_TAB
+{
+	{
+		"Dp sensor for smart differential pressure controller"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	DPSENSOR_10_100SET			// Dp sensor 0-10 V [10-100 kPa].
+	DPSENSOR_40_400SET			// Dp sensor 0-10 V [40-400 kPa].
+	SMARTDP_CONNSET				// Connection set
+}
+
+
+////////////////////////////////////////////////////////////////
+//
+//        Table SMARTACCGROUP_TAB : Smart valves accessory groups
+//
+//        Rules:
+//            ACXXXID \ &ACYYYID    // ACXXXID implies ACYYYID
+//            ACXXXID \ !ACYYYID    // ACXXXID excludes ACYYYID
+//            >ACXXXID              // ACXXXID is built-in
+//            ^ACXXXID              // ACXXXID excludes all others
+//		      *ACXXXID			    // ACXXXID two pieces should be included
+//			  #ACXXXID			    // ACXXXID is distributed on each parent item (3 vessels (1 primary + 2 secondary) => 3 times the accessory).
+//            +ACXXXID              // ACXXXID is an intersection between this group and an other. For this group accessory is NOT displayed
+//            ++ACXXXID             // ACXXXID is an intersection between this group and an other. For this group accessory is displayed
+//
+////////////////////////////////////////////////////////////////
+
+new:CDB_RuledTable(ACCGR_TASMART20) -> SMARTACCGROUP_TAB
+{
+    {
+        "Smart valves DN 20"
+        0                        // 0/1: 1 if this table is the true parent of the IDs in it.
+    }
+	MTACC_TEMPSENSOR3M
+	MTACC_TEMPSENSPOCKETA
+	MTACC_TEMPHOUSING20
+	ACCXFTH_20
+	ACCXMTH_20
+	ACCXW_20
+	ACCXS_18
+	ACCXS_22
+	ACCXSE_18
+	ACCXSE_22
+	ACC_SMV_INS20
+}
+
+new:CDB_RuledTable(ACCGR_TASMARTNPT20) -> SMARTACCGROUP_TAB
+{
+    {
+        "Smart valves NPT DN 20"
+        0                        // 0/1: 1 if this table is the true parent of the IDs in it.
+    }
+	MTACC_TEMPSENSOR3M
+	MTACC_TEMPSENSPOCKETD
+	MTACC_TEMPHOUSING20N
+	ACCXFTHNPT_320                             	// 52 163-320
+	ACCXFTHNPT_220								// 52 163-220 
+	ACCXSNPT_20									// 52 009-720
+}
+
+new:CDB_RuledTable(ACCGR_TASMART25) -> SMARTACCGROUP_TAB
+{
+    {
+        "Smart valves DN 25"
+        0                        // 0/1: 1 if this table is the true parent of the IDs in it.
+    }
+	MTACC_TEMPSENSOR3M
+	MTACC_TEMPSENSPOCKETA
+	MTACC_TEMPHOUSING25
+	ACCXFTH_25
+	ACCXMTH_25
+	ACCXW_25
+	ACCXS_28
+	ACCXSE_25
+	ACC_SMV_INS25
+}
+
+new:CDB_RuledTable(ACCGR_TASMARTNPT25) -> SMARTACCGROUP_TAB
+{
+    {
+        "Smart valves NPT DN 25"
+        0                        // 0/1: 1 if this table is the true parent of the IDs in it.
+    }
+	MTACC_TEMPSENSOR3M
+	MTACC_TEMPSENSPOCKETD
+	MTACC_TEMPHOUSING25N
+	ACCXFTHNPT_325                             	        // 52 163-325   
+	ACCXFTHNPT_225								        // 52 163-225   
+	ACCXSNPT_25									        // 52 009-725
+}
+
+new:CDB_RuledTable(ACCGR_TASMART32) -> SMARTACCGROUP_TAB
+{
+    {
+        "Smart valves DN 32"
+        0                        // 0/1: 1 if this table is the true parent of the IDs in it.
+    }
+	MTACC_TEMPSENSOR3M
+	MTACC_TEMPSENSPOCKETB
+	MTACC_TEMPHOUSING32
+	ACCXFTH_32
+	ACCXMTH_32
+	ACCXW_32
+	ACCXS_32
+	ACCXSE_32
+	ACC_SMV_INS32
+}
+
+new:CDB_RuledTable(ACCGR_TASMARTNPT32) -> SMARTACCGROUP_TAB
+{
+    {
+        "Smart valves NPT DN 32"
+        0                        // 0/1: 1 if this table is the true parent of the IDs in it.
+    }
+	MTACC_TEMPSENSOR3M
+	MTACC_TEMPSENSPOCKETE
+	MTACC_TEMPHOUSING32N
+	ACCXFTHNPT_332                             	        // 52 163-332 
+	ACCXFTHNPT_232								        // 52 163-232  
+	ACCXSNPT_32									        // 52 009-732
+}
+
+new:CDB_RuledTable(ACCGR_TASMART40) -> SMARTACCGROUP_TAB
+{
+    {
+        "Smart valves DN 40"
+        0                        // 0/1: 1 if this table is the true parent of the IDs in it.
+    }
+	MTACC_TEMPSENSOR3M
+	MTACC_TEMPSENSPOCKETB
+	MTACC_TEMPHOUSING40
+	ACCXFTH_40
+	ACCXW_40
+	ACCXS_40
+	ACCXSE_40
+	ACC_SMV_INS40
+}
+
+new:CDB_RuledTable(ACCGR_TASMARTNPT40) -> SMARTACCGROUP_TAB
+{
+    {
+        "Smart valves NPT DN 40"
+        0                        // 0/1: 1 if this table is the true parent of the IDs in it.
+    }
+	MTACC_TEMPSENSOR3M
+	MTACC_TEMPSENSPOCKETE
+	MTACC_TEMPHOUSING40N
+	ACCXFTHNPT_340                             	       // 52 163-340    // 52 163-350
+	ACCXFTHNPT_240								       // 52 163-240    // 52 163-250
+	ACCXSNPT_40									       // 52 009-740
+}
+
+new:CDB_RuledTable(ACCGR_TASMART50) -> SMARTACCGROUP_TAB
+{
+    {
+        "Smart valves DN 50"
+        0                        // 0/1: 1 if this table is the true parent of the IDs in it.
+    }
+	MTACC_TEMPSENSOR3M
+	MTACC_TEMPSENSPOCKETB
+	MTACC_TEMPHOUSING50
+	ACCXFTH_50
+	ACCXW_50
+	ACCXS_50
+	ACCXSE_50
+	ACC_SMV_INS50
+}
+
+new:CDB_RuledTable(ACCGR_TASMARTNPT50) -> SMARTACCGROUP_TAB
+{
+    {
+        "Smart valves NPT DN 50"
+        0                        // 0/1: 1 if this table is the true parent of the IDs in it.
+    }
+	MTACC_TEMPSENSOR3M
+	MTACC_TEMPSENSPOCKETE
+	MTACC_TEMPHOUSING50N
+	ACCXFTHNPT_350                             	       // 52 163-350
+	ACCXFTHNPT_250								       // 52 163-250
+	ACCXSNPT_50									       // 52 009-750
+}
+
+new:CDB_RuledTable(ACCGR_TASMART6580) -> SMARTACCGROUP_TAB
+{
+    {
+        "Smart valves DN 65-80"
+        0                        // 0/1: 1 if this table is the true parent of the IDs in it.
+    }
+	MTACC_TEMPSENSOR5M
+	MTACC_TEMPSENSPOCKETB
+}
+
+new:CDB_RuledTable(ACCGR_TASMARTAF6580) -> SMARTACCGROUP_TAB
+{
+    {
+        "Smart valves ansi flange DN 65-80"
+        0                        // 0/1: 1 if this table is the true parent of the IDs in it.
+    }
+	MTACC_TEMPSENSOR5M
+	MTACC_TEMPSENSPOCKETE
+}
+
+new:CDB_RuledTable(ACCGR_TASMART100125) -> SMARTACCGROUP_TAB
+{
+    {
+        "Smart valves DN 100-125"
+        0                        // 0/1: 1 if this table is the true parent of the IDs in it.
+    }
+	MTACC_TEMPSENSOR5M
+	MTACC_TEMPSENSPOCKETC
+}
+
+// HYS-2047: Add temperature accessories for TA Smart Dp.
+
+new:CDB_RuledTable(ACCGR_TASMARTDP20) -> SMARTACCGROUP_TAB
+{
+    {
+        "Smart Dp DN 20"
+        0                        // 0/1: 1 if this table is the true parent of the IDs in it.
+    }
+	MTACC_TEMPSENSOR3M
+	MTACC_TEMPSENSPOCKETA
+	MTACC_TEMPHOUSING20
+	ACCXFTH_20			//52 163-020
+	ACCXMTH_20			//0601-03.350
+	ACCXW_20			//52 009-020
+	ACCXS_18			//52 009-518
+	ACCXS_22			//52 009-522
+	ACCXSE_18			//52 009-318
+	ACCXSE_22 			//52 009-322
+	ACC_SMV_INS20
+}
+
+new:CDB_RuledTable(ACCGR_TASMARTDP25) -> SMARTACCGROUP_TAB
+{
+    {
+        "Smart Dp DN 25"
+        0                        // 0/1: 1 if this table is the true parent of the IDs in it.
+    }
+	MTACC_TEMPSENSOR3M
+	MTACC_TEMPSENSPOCKETA
+	MTACC_TEMPHOUSING25
+	ACCXFTH_25			//52 163-025
+	ACCXMTH_25			//0601-04.350
+	ACCXW_25			//52 009-025
+	ACCXS_28			//52 009-528
+	ACCXSE_25			//52 009-328
+	ACC_SMV_INS25
+}
+
+new:CDB_RuledTable(ACCGR_TASMARTDP32) -> SMARTACCGROUP_TAB
+{
+    {
+        "Smart Dp DN 32"
+        0                        // 0/1: 1 if this table is the true parent of the IDs in it.
+    }
+	MTACC_TEMPSENSOR3M
+	MTACC_TEMPSENSPOCKETB
+	MTACC_TEMPHOUSING32
+	ACCXFTH_32 //52 163-032
+	ACCXMTH_32 //0601-05.350
+	ACCXW_32   //52 009-032
+	ACCXS_32   //52 009-535
+	ACCXSE_32  //52 009-335
+	ACC_SMV_INS32
+}
+
+new:CDB_RuledTable(ACCGR_TASMARTDP40) -> SMARTACCGROUP_TAB
+{
+    {
+        "Smart Dp DN 40"
+        0                        // 0/1: 1 if this table is the true parent of the IDs in it.
+    }
+	MTACC_TEMPSENSOR3M
+	MTACC_TEMPSENSPOCKETB
+	MTACC_TEMPHOUSING40
+	ACCXFTH_40
+	ACCXW_40
+	ACCXS_40
+	ACCXSE_40
+	ACC_SMV_INS40
+}
+
+new:CDB_RuledTable(ACCGR_TASMARTDP50) -> SMARTACCGROUP_TAB
+{
+    {
+        "Smart Dp DN 50"
+        0                        // 0/1: 1 if this table is the true parent of the IDs in it.
+    }
+	MTACC_TEMPSENSOR3M
+	MTACC_TEMPSENSPOCKETB
+	MTACC_TEMPHOUSING50
+	ACCXFTH_50
+	ACCXW_50
+	ACCXS_50
+	ACCXSE_50
+	ACC_SMV_INS50
+}
+
+new:CDB_RuledTable(ACCGR_TASMARTDP6580) -> SMARTACCGROUP_TAB
+{
+    {
+        "Smart Dp DN 65-80"
+        0                        // 0/1: 1 if this table is the true parent of the IDs in it.
+    }
+	MTACC_TEMPSENSOR5M
+	MTACC_TEMPSENSPOCKETB
+}
+
+new:CDB_RuledTable(ACCGR_TASMARTDP100) -> SMARTACCGROUP_TAB
+{
+    {
+        "Smart Dp DN 100-125"
+        0                        // 0/1: 1 if this table is the true parent of the IDs in it.
+    }
+	MTACC_TEMPSENSOR5M
+	MTACC_TEMPSENSPOCKETC
+}
+
+// Set content for the smart differential pressure controller + Dp sensor set [10-100] kPa.
+new:CDB_RuledTable(ACCGR_SMARTDPDPSSET1) -> SMARTACCGROUP_TAB
+{
+    {
+        "Set content for TA-Smart Dp + Dp sensor set [10-100] kPa"
+        0                        // 0/1: 1 if this table is the true parent of the IDs in it.
+    }
+    >DPSENSOR_0_10V_10_100		// Dp sensor [10-100] kPa;
+	>*ACDPC7					// Capillary pipe 1m. With G1/16 connections.
+	>*ACC_TRNIPPLE_G12_G16		// Transition nipple G1/16. For capillary pipe with G1/2 connection.
+	>*ACC_TRNIPPLE_D6_G16		// Transition nipple G1/16. For capillary pipe with ø6 connection.
+}
+
+// Set content for the smart differential pressure controller + Dp sensor set [40-400] kPa.
+new:CDB_RuledTable(ACCGR_SMARTDPDPSSET2) -> SMARTACCGROUP_TAB
+{
+    {
+        "Set content for TA-Smart Dp + Dp sensor set [40-400] kPa"
+        0                        // 0/1: 1 if this table is the true parent of the IDs in it.
+    }
+    >DPSENSOR_0_10V_40_400		// Dp sensor [40-400] kPa;
+	>*ACDPC7					// Capillary pipe 1m. With G1/16 connections.
+	>*ACC_TRNIPPLE_G12_G16		// Transition nipple G1/16. For capillary pipe with G1/2 connection.
+	>*ACC_TRNIPPLE_D6_G16		// Transition nipple G1/16. For capillary pipe with ø6 connection.
+}
+
+// Set content for the smart differential pressure controller + connection set.
+new:CDB_RuledTable(ACCGR_SMARTDPCONSET) -> SMARTACCGROUP_TAB
+{
+    {
+        "Set content for TA-Smart Dp + connetion set"
+        0                        // 0/1: 1 if this table is the true parent of the IDs in it.
+    }
+	>*ACDPC7					// Capillary pipe 1m. With G1/16 connections.
+	>*ACC_TRNIPPLE_G12_G16		// Transition nipple G1/16. For capillary pipe with G1/2 connection.
+	>*ACC_TRNIPPLE_D6_G16		// Transition nipple G1/16. For capillary pipe with ø6 connection.
+}
+
+////////////////////////////////////////////////////////////////
+//
+//        ROOT TABLE identification
+//
+////////////////////////////////////////////////////////////////
+
+ROOT_TABLE(ROOT_TABLE)

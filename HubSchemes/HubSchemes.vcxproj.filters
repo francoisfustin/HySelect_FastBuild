@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\Box_4_Arrows.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Box_6_Arrows.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Box_8_Arrows.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Digit1.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Digit2.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Digit3.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Digit4.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Digit5.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Digit6.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Digit7.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Digit8.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\End.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\HubSchemes.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Inlet_ISI_ISI_25.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Inlet_ISI_ISI_32.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Inlet_ISI_STAD_25.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Inlet_ISI_STAD_32.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Inlet_ISI_STAV_25.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Inlet_ISI_STAV_32.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Inlet_STADprim_STAP_25.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Inlet_STADprim_STAP_32.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Inlet_STADsec_STAP_25.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Inlet_STADsec_STAP_32.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Label_TA-HUB_8.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Station_PLUG.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Station_STAD15.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Station_STAD15_Ext.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Station_STAD20.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Station_STAD20_Ext.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Station_STAV15.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Station_STAV15_Ext.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Station_STAV20.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Station_STAV20_Ext.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Station_TBV15.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Station_TBV15_Ext.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Station_TBV20.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Station_TBV20_Ext.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Station_TBVC15.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Station_TBVC15_Ext.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Station_TBVC15_TSE.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Station_TBVC15_TSE_Ext.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Station_TBVC15_TSEM.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Station_TBVC15_TSEM_Ext.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Station_TBVC20.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Station_TBVC20_Ext.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Station_TBVC20_TSE.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Station_TBVC20_TSE_Ext.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Station_TBVC20_TSEM.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Station_TBVC20_TSEM_Ext.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\VerticalWhiteLine.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="HubSchemes.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

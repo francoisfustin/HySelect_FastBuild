@@ -1,0 +1,13 @@
+; FPSPRU80.def : Declares the module parameters.
+;LIBRARY      FPSPRU80.OCX
+;jb
+LIBRARY		FPSPRU80.OCX
+
+EXPORTS
+	DllCanUnloadNow     PRIVATE
+	DllGetClassObject   PRIVATE
+	DllRegisterServer   PRIVATE
+	DllUnregisterServer PRIVATE
+
+SECTIONS
+;   .SHARDATA   Read Write Shared

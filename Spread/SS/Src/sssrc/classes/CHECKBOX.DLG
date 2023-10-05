@@ -1,0 +1,15 @@
+#include <windows.h>
+
+tbCB_Up           BITMAP \tbpro\source\toolbox\classes\cbrsv1.bmp
+tbCB_Down         BITMAP \tbpro\source\toolbox\classes\cbrsv2.bmp
+tbCB_FocusUp      BITMAP \tbpro\source\toolbox\classes\cbrsv3.bmp
+tbCB_FocusDown    BITMAP \tbpro\source\toolbox\classes\cbrsv4.bmp
+tbCB_DisabledUp   BITMAP \tbpro\source\toolbox\classes\cbrsv5.bmp
+tbCB_DisabledDown BITMAP \tbpro\source\toolbox\classes\cbrsv6.bmp
+
+tbRB_Up           BITMAP \tbpro\source\toolbox\classes\rbrv1.bmp
+tbRB_Down         BITMAP \tbpro\source\toolbox\classes\rbrv2.bmp
+tbRB_FocusUp      BITMAP \tbpro\source\toolbox\classes\rbrv3.bmp
+tbRB_FocusDown    BITMAP \tbpro\source\toolbox\classes\rbrv4.bmp
+tbRB_DisabledUp   BITMAP \tbpro\source\toolbox\classes\rbrv5.bmp
+tbRB_DisabledDown BITMAP \tbpro\source\toolbox\classes\rbrv6.bmp

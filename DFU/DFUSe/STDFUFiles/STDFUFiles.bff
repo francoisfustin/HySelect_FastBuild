@@ -1,0 +1,80 @@
+
+.ProjectName         = "STDFUFiles"
+.ProjectNames        + .ProjectName             
+
+.ProjectSourcesPath  = "..\DFU\DFUSe\STDFUFiles"
+
+.ProjectLibraryPath  = "$ProjectSourcesPath$\Debug"
+.ProjectLibraryPaths + .ProjectLibraryPath
+
+.ProjectLibraryName  = '$ProjectName$.lib'
+.ProjectLibraryNames + .ProjectLibraryName
+
+Library( 'STDFUFiles_Debug' )
+{
+    Using( .VisualStudio_Include_Directories )
+    Using( .WindowsSDK_Include_Directories )
+    Using( .VisualStudio_Library_Directories )
+    Using( .WindowsSDK_Library_Directories )
+    Using( .VisualStudio_Executable_Tools )
+    
+    ; options for compilation
+    .Compiler = 'Compiler-x86'
+    .CompilerOptions = '/c '
+                     + ' /analyze-'
+                     + ' /D WIN32'
+                     + ' /D UNICODE'
+                     + ' /D _CRT_SECURE_NO_WARNINGS'
+                     + ' /D _DEBUG'
+                     + ' /D _LIB'
+                     + ' /D _UNICODE'
+                     + ' /D _VC80_UPGRADE=0x0600'
+                     + ' /diagnostics:column'
+                     + ' /EHsc'
+                     + ' /external:W3'
+                     + ' /FC'
+                     + ' /Fd"$ProjectSourcesPath$/DEBUG/$ProjectName$.PDB"'
+                     + ' /Fo%2'
+                     + ' /fp:precise'
+                     + ' /FS'
+                     + ' /Gd'
+                     + ' /GS'
+                     + ' /I"$ProjectSourcesPath$/../INCLUDES"'
+                     + ' /MTd'
+                     + ' /nologo'
+                     + ' /Od'
+                     + ' /Oy-'
+                     + ' /RTC1'
+                     + ' /TP'
+                     + ' /W3'
+                     + ' /WX-'
+                     + ' /Zc:forScope'
+                     + ' /Zc:inline'
+                     + ' /Zc:wchar_t'
+                     + ' /Zi'                     
+                     + ' %1'
+    .CompilerOptions + '$VisualStudio_Includes_Path$'
+    .CompilerOptions + '$WindowsSDK_Includes_Path$'
+    .CompilerOutputPath = '$ProjectSourcesPath$/Debug/'
+    
+    ; Options for librarian
+    .Librarian                = '$VisualStudio_LibraryGenerator$'
+    .LibrarianOptions         = ' /OUT:%2'
+                              + ' /NOLOGO'
+                              + ' /MACHINE:X86'
+                              ;+ ' /INCREMENTAL:NO' -> For a static library, lib.exe doesn't recognize this option.
+                              + ' $VisualStudio_Librairies_Path$'
+                              + ' $WindowsSDK_Librairies_Path$'
+                              + ' %1'
+    .LibrarianOutput          = '$ProjectSourcesPath$/Debug/$ProjectLibraryName$'
+    .LibrarianType            = 'msvc'
+    
+    
+    ; Specify inputs for compilation
+    .CompilerInputPath = '$ProjectSourcesPath$'
+}
+
+Alias("$ProjectName$")
+{
+    .Targets = { "$ProjectName$_Debug" }
+}

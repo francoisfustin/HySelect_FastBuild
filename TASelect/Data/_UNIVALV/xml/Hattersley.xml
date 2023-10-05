@@ -1,0 +1,896 @@
+<?xml version="1.0"?>
+<CDataSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Modified>true</Modified>
+  <Mnfr>
+    <ID>MNFR_542102090414</ID>
+    <Name>Hattersley </Name>
+    <FamTab>
+      <ID>FAMTAB_202102090414</ID>
+      <Name>Alien family table</Name>
+      <List>
+        <CDataFamily>
+          <ID>FAM_544309080514</ID>
+          <Name>1000(M2432) - FO</Name>
+          <Order>0</Order>
+        </CDataFamily>
+        <CDataFamily>
+          <ID>FAM_064409080514</ID>
+          <Name>1732 - FO</Name>
+          <Order>1</Order>
+        </CDataFamily>
+        <CDataFamily>
+          <ID>FAM_164409080514</ID>
+          <Name>M2000 - FO</Name>
+          <Order>2</Order>
+        </CDataFamily>
+        <CDataFamily>
+          <ID>FAM_582102090414</ID>
+          <Name>M4983G - FO</Name>
+          <Order>3</Order>
+        </CDataFamily>
+        <CDataFamily>
+          <ID>FAM_564409080514</ID>
+          <Name>M5953G(M5973G) - FO</Name>
+          <Order>4</Order>
+        </CDataFamily>
+        <CDataFamily>
+          <ID>FAM_154509080514</ID>
+          <Name>MH737 - BV</Name>
+          <Order>5</Order>
+        </CDataFamily>
+      </List>
+    </FamTab>
+    <CharTab>
+      <ID>CHARTAB_202102090414</ID>
+      <Name>Alien char table</Name>
+      <List>
+        <CDataChar>
+          <List>
+            <KVP>
+              <O>0.5</O>
+              <KV>5</KV>
+            </KVP>
+            <KVP>
+              <O>1</O>
+              <KV>10</KV>
+            </KVP>
+            <KVP>
+              <O>1.5</O>
+              <KV>12.5</KV>
+            </KVP>
+            <KVP>
+              <O>2</O>
+              <KV>15</KV>
+            </KVP>
+            <KVP>
+              <O>2.5</O>
+              <KV>19</KV>
+            </KVP>
+            <KVP>
+              <O>3</O>
+              <KV>23</KV>
+            </KVP>
+            <KVP>
+              <O>4</O>
+              <KV>29</KV>
+            </KVP>
+            <KVP>
+              <O>5</O>
+              <KV>39</KV>
+            </KVP>
+            <KVP>
+              <O>6</O>
+              <KV>57</KV>
+            </KVP>
+            <KVP>
+              <O>7</O>
+              <KV>74</KV>
+            </KVP>
+            <KVP>
+              <O>8</O>
+              <KV>85</KV>
+            </KVP>
+          </List>
+          <ID>CHAR_261404090414</ID>
+          <Discrete>false</Discrete>
+          <MultiTurn>true</MultiTurn>
+          <NbrCurves>1</NbrCurves>
+        </CDataChar>
+        <CDataChar>
+          <List>
+            <KVP>
+              <O>0.5</O>
+              <KV>3</KV>
+            </KVP>
+            <KVP>
+              <O>1</O>
+              <KV>6</KV>
+            </KVP>
+            <KVP>
+              <O>1.5</O>
+              <KV>10</KV>
+            </KVP>
+            <KVP>
+              <O>2</O>
+              <KV>14</KV>
+            </KVP>
+            <KVP>
+              <O>2.5</O>
+              <KV>17</KV>
+            </KVP>
+            <KVP>
+              <O>3</O>
+              <KV>20</KV>
+            </KVP>
+            <KVP>
+              <O>4</O>
+              <KV>31</KV>
+            </KVP>
+            <KVP>
+              <O>5</O>
+              <KV>46</KV>
+            </KVP>
+            <KVP>
+              <O>6</O>
+              <KV>68</KV>
+            </KVP>
+            <KVP>
+              <O>7</O>
+              <KV>94</KV>
+            </KVP>
+            <KVP>
+              <O>8</O>
+              <KV>111</KV>
+            </KVP>
+          </List>
+          <ID>CHAR_291604090414</ID>
+          <Discrete>false</Discrete>
+          <MultiTurn>true</MultiTurn>
+          <NbrCurves>1</NbrCurves>
+        </CDataChar>
+        <CDataChar>
+          <List>
+            <KVP>
+              <O>0.5</O>
+              <KV>4.5</KV>
+            </KVP>
+            <KVP>
+              <O>1</O>
+              <KV>9</KV>
+            </KVP>
+            <KVP>
+              <O>1.5</O>
+              <KV>14.5</KV>
+            </KVP>
+            <KVP>
+              <O>2</O>
+              <KV>20</KV>
+            </KVP>
+            <KVP>
+              <O>2.5</O>
+              <KV>24.5</KV>
+            </KVP>
+            <KVP>
+              <O>3</O>
+              <KV>29</KV>
+            </KVP>
+            <KVP>
+              <O>4</O>
+              <KV>37</KV>
+            </KVP>
+            <KVP>
+              <O>5</O>
+              <KV>52</KV>
+            </KVP>
+            <KVP>
+              <O>6</O>
+              <KV>80</KV>
+            </KVP>
+            <KVP>
+              <O>7</O>
+              <KV>114</KV>
+            </KVP>
+            <KVP>
+              <O>8</O>
+              <KV>146</KV>
+            </KVP>
+          </List>
+          <ID>CHAR_301704090414</ID>
+          <Discrete>false</Discrete>
+          <MultiTurn>true</MultiTurn>
+          <NbrCurves>1</NbrCurves>
+        </CDataChar>
+        <CDataChar>
+          <List>
+            <KVP>
+              <O>0.5</O>
+              <KV>10</KV>
+            </KVP>
+            <KVP>
+              <O>1</O>
+              <KV>20</KV>
+            </KVP>
+            <KVP>
+              <O>1.5</O>
+              <KV>32</KV>
+            </KVP>
+            <KVP>
+              <O>2</O>
+              <KV>44</KV>
+            </KVP>
+            <KVP>
+              <O>2.5</O>
+              <KV>53</KV>
+            </KVP>
+            <KVP>
+              <O>3</O>
+              <KV>62</KV>
+            </KVP>
+            <KVP>
+              <O>4</O>
+              <KV>86</KV>
+            </KVP>
+            <KVP>
+              <O>5</O>
+              <KV>128</KV>
+            </KVP>
+            <KVP>
+              <O>6</O>
+              <KV>198</KV>
+            </KVP>
+            <KVP>
+              <O>7</O>
+              <KV>230</KV>
+            </KVP>
+            <KVP>
+              <O>8</O>
+              <KV>250</KV>
+            </KVP>
+          </List>
+          <ID>CHAR_431804090414</ID>
+          <Discrete>false</Discrete>
+          <MultiTurn>true</MultiTurn>
+          <NbrCurves>1</NbrCurves>
+        </CDataChar>
+        <CDataChar>
+          <List>
+            <KVP>
+              <O>0.5</O>
+              <KV>10</KV>
+            </KVP>
+            <KVP>
+              <O>1</O>
+              <KV>20</KV>
+            </KVP>
+            <KVP>
+              <O>1.5</O>
+              <KV>31</KV>
+            </KVP>
+            <KVP>
+              <O>2</O>
+              <KV>42</KV>
+            </KVP>
+            <KVP>
+              <O>2.5</O>
+              <KV>63.5</KV>
+            </KVP>
+            <KVP>
+              <O>3</O>
+              <KV>85</KV>
+            </KVP>
+            <KVP>
+              <O>4</O>
+              <KV>137</KV>
+            </KVP>
+            <KVP>
+              <O>5</O>
+              <KV>217</KV>
+            </KVP>
+            <KVP>
+              <O>6</O>
+              <KV>284</KV>
+            </KVP>
+            <KVP>
+              <O>7</O>
+              <KV>351</KV>
+            </KVP>
+            <KVP>
+              <O>8</O>
+              <KV>380</KV>
+            </KVP>
+          </List>
+          <ID>CHAR_441904090414</ID>
+          <Discrete>false</Discrete>
+          <MultiTurn>true</MultiTurn>
+          <NbrCurves>1</NbrCurves>
+        </CDataChar>
+        <CDataChar>
+          <List>
+            <KVP>
+              <O>1</O>
+              <KV>21</KV>
+            </KVP>
+            <KVP>
+              <O>2</O>
+              <KV>40</KV>
+            </KVP>
+            <KVP>
+              <O>3</O>
+              <KV>57</KV>
+            </KVP>
+            <KVP>
+              <O>4</O>
+              <KV>72</KV>
+            </KVP>
+            <KVP>
+              <O>5</O>
+              <KV>120</KV>
+            </KVP>
+            <KVP>
+              <O>6</O>
+              <KV>185</KV>
+            </KVP>
+            <KVP>
+              <O>7</O>
+              <KV>250</KV>
+            </KVP>
+            <KVP>
+              <O>8</O>
+              <KV>315</KV>
+            </KVP>
+            <KVP>
+              <O>9</O>
+              <KV>390</KV>
+            </KVP>
+            <KVP>
+              <O>10</O>
+              <KV>470</KV>
+            </KVP>
+            <KVP>
+              <O>11</O>
+              <KV>550</KV>
+            </KVP>
+            <KVP>
+              <O>12</O>
+              <KV>600</KV>
+            </KVP>
+          </List>
+          <ID>CHAR_082104090414</ID>
+          <Discrete>false</Discrete>
+          <MultiTurn>true</MultiTurn>
+          <NbrCurves>1</NbrCurves>
+        </CDataChar>
+        <CDataChar>
+          <List>
+            <KVP>
+              <O>2</O>
+              <KV>100</KV>
+            </KVP>
+            <KVP>
+              <O>3</O>
+              <KV>138</KV>
+            </KVP>
+            <KVP>
+              <O>4</O>
+              <KV>176</KV>
+            </KVP>
+            <KVP>
+              <O>5</O>
+              <KV>301</KV>
+            </KVP>
+            <KVP>
+              <O>6</O>
+              <KV>426</KV>
+            </KVP>
+            <KVP>
+              <O>7</O>
+              <KV>594</KV>
+            </KVP>
+            <KVP>
+              <O>8</O>
+              <KV>762</KV>
+            </KVP>
+            <KVP>
+              <O>9</O>
+              <KV>889</KV>
+            </KVP>
+            <KVP>
+              <O>10</O>
+              <KV>1015</KV>
+            </KVP>
+            <KVP>
+              <O>11</O>
+              <KV>1113</KV>
+            </KVP>
+            <KVP>
+              <O>12</O>
+              <KV>1211</KV>
+            </KVP>
+          </List>
+          <ID>CHAR_282204090414</ID>
+          <Discrete>false</Discrete>
+          <MultiTurn>true</MultiTurn>
+          <NbrCurves>1</NbrCurves>
+        </CDataChar>
+        <CDataChar>
+          <List>
+            <KVP>
+              <O>2</O>
+              <KV>100</KV>
+            </KVP>
+            <KVP>
+              <O>3</O>
+              <KV>155</KV>
+            </KVP>
+            <KVP>
+              <O>4</O>
+              <KV>210</KV>
+            </KVP>
+            <KVP>
+              <O>5</O>
+              <KV>341</KV>
+            </KVP>
+            <KVP>
+              <O>6</O>
+              <KV>471</KV>
+            </KVP>
+            <KVP>
+              <O>7</O>
+              <KV>610</KV>
+            </KVP>
+            <KVP>
+              <O>8</O>
+              <KV>749</KV>
+            </KVP>
+            <KVP>
+              <O>9</O>
+              <KV>872</KV>
+            </KVP>
+            <KVP>
+              <O>10</O>
+              <KV>994</KV>
+            </KVP>
+            <KVP>
+              <O>11</O>
+              <KV>1112</KV>
+            </KVP>
+            <KVP>
+              <O>12</O>
+              <KV>1230</KV>
+            </KVP>
+            <KVP>
+              <O>14</O>
+              <KV>1369</KV>
+            </KVP>
+            <KVP>
+              <O>16</O>
+              <KV>1438</KV>
+            </KVP>
+            <KVP>
+              <O>18</O>
+              <KV>1521</KV>
+            </KVP>
+          </List>
+          <ID>CHAR_482304090414</ID>
+          <Discrete>false</Discrete>
+          <MultiTurn>true</MultiTurn>
+          <NbrCurves>1</NbrCurves>
+        </CDataChar>
+      </List>
+    </CharTab>
+    <ValveTab>
+      <ID>VALVTAB_202102090414</ID>
+      <Name>Alien valve table</Name>
+      <List>
+        <CValve>
+          <ID>VALV_092402090414</ID>
+          <Name>15mm 1000 (M2432)</Name>
+          <FamID>FAM_544309080514</FamID>
+          <DNID>DN_15</DNID>
+          <CharID />
+          <KvsSignal>1.93</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_492203090414</ID>
+          <Name>15mm 1000M</Name>
+          <FamID>FAM_544309080514</FamID>
+          <DNID>DN_15</DNID>
+          <CharID />
+          <KvsSignal>1.003</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_062303090414</ID>
+          <Name>15mm 1000L</Name>
+          <FamID>FAM_544309080514</FamID>
+          <DNID>DN_15</DNID>
+          <CharID />
+          <KvsSignal>0.506</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_582402090414</ID>
+          <Name>20mm 1000 (M2432)</Name>
+          <FamID>FAM_544309080514</FamID>
+          <DNID>DN_20</DNID>
+          <CharID />
+          <KvsSignal>4.181</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_152502090414</ID>
+          <Name>25mm 1000 (M2432)</Name>
+          <FamID>FAM_544309080514</FamID>
+          <DNID>DN_25</DNID>
+          <CharID />
+          <KvsSignal>7.46</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_292502090414</ID>
+          <Name>32mm 1000 (M2432)</Name>
+          <FamID>FAM_544309080514</FamID>
+          <DNID>DN_32</DNID>
+          <CharID />
+          <KvsSignal>15.33</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_512502090414</ID>
+          <Name>40mm 1000 (M2432)</Name>
+          <FamID>FAM_544309080514</FamID>
+          <DNID>DN_40</DNID>
+          <CharID />
+          <KvsSignal>23.06</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_032602090414</ID>
+          <Name>50mm 1000 (M2432)</Name>
+          <FamID>FAM_544309080514</FamID>
+          <DNID>DN_50</DNID>
+          <CharID />
+          <KvsSignal>47.7</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_392802090414</ID>
+          <Name>15mm 1732</Name>
+          <FamID>FAM_064409080514</FamID>
+          <DNID>DN_15</DNID>
+          <CharID />
+          <KvsSignal>1.943</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_482802090414</ID>
+          <Name>20mm 1732</Name>
+          <FamID>FAM_064409080514</FamID>
+          <DNID>DN_20</DNID>
+          <CharID />
+          <KvsSignal>4.181</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_552802090414</ID>
+          <Name>25mm 1732</Name>
+          <FamID>FAM_064409080514</FamID>
+          <DNID>DN_25</DNID>
+          <CharID />
+          <KvsSignal>7.46</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_082902090414</ID>
+          <Name>32mm 1732</Name>
+          <FamID>FAM_064409080514</FamID>
+          <DNID>DN_32</DNID>
+          <CharID />
+          <KvsSignal>15.33</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_172902090414</ID>
+          <Name>40mm 1732</Name>
+          <FamID>FAM_064409080514</FamID>
+          <DNID>DN_40</DNID>
+          <CharID />
+          <KvsSignal>23.06</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_392902090414</ID>
+          <Name>50mm 1732</Name>
+          <FamID>FAM_064409080514</FamID>
+          <DNID>DN_50</DNID>
+          <CharID />
+          <KvsSignal>47.7</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_420003090414</ID>
+          <Name>65mm M2000</Name>
+          <FamID>FAM_164409080514</FamID>
+          <DNID>DN_65</DNID>
+          <CharID />
+          <KvsSignal>98.58</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_150103090414</ID>
+          <Name>80mm M2000</Name>
+          <FamID>FAM_164409080514</FamID>
+          <DNID>DN_80</DNID>
+          <CharID />
+          <KvsSignal>137.4</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_280103090414</ID>
+          <Name>100mm M2000</Name>
+          <FamID>FAM_164409080514</FamID>
+          <DNID>DN_100</DNID>
+          <CharID />
+          <KvsSignal>224.9</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_440103090414</ID>
+          <Name>125mm M2000</Name>
+          <FamID>FAM_164409080514</FamID>
+          <DNID>DN_125</DNID>
+          <CharID />
+          <KvsSignal>341.1</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_040203090414</ID>
+          <Name>150mm M2000</Name>
+          <FamID>FAM_164409080514</FamID>
+          <DNID>DN_150</DNID>
+          <CharID />
+          <KvsSignal>491.5</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_180803090414</ID>
+          <Name>200mm M2000</Name>
+          <FamID>FAM_164409080514</FamID>
+          <DNID>DN_200</DNID>
+          <CharID />
+          <KvsSignal>835.4</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_530803090414</ID>
+          <Name>250mm M2000</Name>
+          <FamID>FAM_164409080514</FamID>
+          <DNID>DN_250</DNID>
+          <CharID />
+          <KvsSignal>1252</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_210903090414</ID>
+          <Name>300mm M2000</Name>
+          <FamID>FAM_164409080514</FamID>
+          <DNID>DN_300</DNID>
+          <CharID />
+          <KvsSignal>1818</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_381204090414</ID>
+          <Name>350mm M2000</Name>
+          <FamID>FAM_164409080514</FamID>
+          <DNID>DN_350</DNID>
+          <CharID />
+          <KvsSignal>2254</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_541204090414</ID>
+          <Name>400mm M2000</Name>
+          <FamID>FAM_164409080514</FamID>
+          <DNID>DN_400</DNID>
+          <CharID />
+          <KvsSignal>2939</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_111304090414</ID>
+          <Name>450mm M2000</Name>
+          <FamID>FAM_164409080514</FamID>
+          <DNID>DN_450</DNID>
+          <CharID />
+          <KvsSignal>3601</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_251304090414</ID>
+          <Name>500mm M2000</Name>
+          <FamID>FAM_164409080514</FamID>
+          <DNID>DN_500</DNID>
+          <CharID />
+          <KvsSignal>4708</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_361304090414</ID>
+          <Name>600mm M2000</Name>
+          <FamID>FAM_164409080514</FamID>
+          <DNID>DN_600</DNID>
+          <CharID />
+          <KvsSignal>6875</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_261404090414</ID>
+          <Name>65mm MH737</Name>
+          <FamID>FAM_154509080514</FamID>
+          <DNID>DN_65</DNID>
+          <CharID>CHAR_261404090414</CharID>
+          <KvsSignal>-1</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_291604090414</ID>
+          <Name>80mm MH737</Name>
+          <FamID>FAM_154509080514</FamID>
+          <DNID>DN_80</DNID>
+          <CharID>CHAR_291604090414</CharID>
+          <KvsSignal>-1</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_301704090414</ID>
+          <Name>100mm MH737</Name>
+          <FamID>FAM_154509080514</FamID>
+          <DNID>DN_100</DNID>
+          <CharID>CHAR_301704090414</CharID>
+          <KvsSignal>-1</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_431804090414</ID>
+          <Name>125mm MH737</Name>
+          <FamID>FAM_154509080514</FamID>
+          <DNID>DN_125</DNID>
+          <CharID>CHAR_431804090414</CharID>
+          <KvsSignal>-1</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_441904090414</ID>
+          <Name>150mm MH737</Name>
+          <FamID>FAM_154509080514</FamID>
+          <DNID>DN_150</DNID>
+          <CharID>CHAR_441904090414</CharID>
+          <KvsSignal>-1</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_082104090414</ID>
+          <Name>200mm MH737</Name>
+          <FamID>FAM_154509080514</FamID>
+          <DNID>DN_200</DNID>
+          <CharID>CHAR_082104090414</CharID>
+          <KvsSignal>-1</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_282204090414</ID>
+          <Name>250mm MH737</Name>
+          <FamID>FAM_154509080514</FamID>
+          <DNID>DN_250</DNID>
+          <CharID>CHAR_282204090414</CharID>
+          <KvsSignal>-1</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_482304090414</ID>
+          <Name>300mm MH737</Name>
+          <FamID>FAM_154509080514</FamID>
+          <DNID>DN_250</DNID>
+          <CharID>CHAR_482304090414</CharID>
+          <KvsSignal>-1</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_382604090414</ID>
+          <Name>65mm M5953G (M5973G)</Name>
+          <FamID>FAM_564409080514</FamID>
+          <DNID>DN_65</DNID>
+          <CharID />
+          <KvsSignal>98.58</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_592604090414</ID>
+          <Name>80mm M5953G (M5973G)</Name>
+          <FamID>FAM_564409080514</FamID>
+          <DNID>DN_80</DNID>
+          <CharID />
+          <KvsSignal>137.4</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_132704090414</ID>
+          <Name>100mm M5953G (M5973G)</Name>
+          <FamID>FAM_564409080514</FamID>
+          <DNID>DN_100</DNID>
+          <CharID />
+          <KvsSignal>224.9</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_262704090414</ID>
+          <Name>125mm M5953G (M5973G)</Name>
+          <FamID>FAM_564409080514</FamID>
+          <DNID>DN_125</DNID>
+          <CharID />
+          <KvsSignal>341.1</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_422704090414</ID>
+          <Name>150mm M5953G (M5973G)</Name>
+          <FamID>FAM_564409080514</FamID>
+          <DNID>DN_150</DNID>
+          <CharID />
+          <KvsSignal>491.5</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_042804090414</ID>
+          <Name>200mm M5953G (M5973G)</Name>
+          <FamID>FAM_564409080514</FamID>
+          <DNID>DN_200</DNID>
+          <CharID />
+          <KvsSignal>835.4</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_182804090414</ID>
+          <Name>250mm M5953G (M5973G)</Name>
+          <FamID>FAM_564409080514</FamID>
+          <DNID>DN_250</DNID>
+          <CharID />
+          <KvsSignal>1252</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_312804090414</ID>
+          <Name>300mm M5953G (M5973G)</Name>
+          <FamID>FAM_564409080514</FamID>
+          <DNID>DN_300</DNID>
+          <CharID />
+          <KvsSignal>1818</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_432904090414</ID>
+          <Name>65mm M4983G</Name>
+          <FamID>FAM_582102090414</FamID>
+          <DNID>DN_65</DNID>
+          <CharID />
+          <KvsSignal>204</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_043004090414</ID>
+          <Name>80mm M4983G</Name>
+          <FamID>FAM_582102090414</FamID>
+          <DNID>DN_80</DNID>
+          <CharID />
+          <KvsSignal>370</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_173004090414</ID>
+          <Name>100mm M4983G</Name>
+          <FamID>FAM_582102090414</FamID>
+          <DNID>DN_100</DNID>
+          <CharID />
+          <KvsSignal>820</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_293004090414</ID>
+          <Name>125mm M4983G</Name>
+          <FamID>FAM_582102090414</FamID>
+          <DNID>DN_125</DNID>
+          <CharID />
+          <KvsSignal>982</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_423004090414</ID>
+          <Name>150mm M4983G</Name>
+          <FamID>FAM_582102090414</FamID>
+          <DNID>DN_150</DNID>
+          <CharID />
+          <KvsSignal>1353</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_553004090414</ID>
+          <Name>200mm M4983G</Name>
+          <FamID>FAM_582102090414</FamID>
+          <DNID>DN_200</DNID>
+          <CharID />
+          <KvsSignal>2923</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_083104090414</ID>
+          <Name>250mm M4983G</Name>
+          <FamID>FAM_582102090414</FamID>
+          <DNID>DN_250</DNID>
+          <CharID />
+          <KvsSignal>3374</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_253104090414</ID>
+          <Name>300mm M4983G</Name>
+          <FamID>FAM_582102090414</FamID>
+          <DNID>DN_300</DNID>
+          <CharID />
+          <KvsSignal>6350</KvsSignal>
+        </CValve>
+      </List>
+    </ValveTab>
+  </Mnfr>
+</CDataSet>

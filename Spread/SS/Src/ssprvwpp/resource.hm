@@ -1,0 +1,22 @@
+// Microsoft Developer Studio generated Help ID include file.
+// Used by SS30PP.rc
+//
+#define HIDC_ALLOWUSERZOOM              0x806900c9    // IDD_PPGENERAL
+#define HIDC_BORDERSTYLE                0x806900d0    // IDD_PPGENERAL
+#define HIDC_ENABLED                    0x806900ce    // IDD_PPGENERAL
+#define HIDC_GRAYAREAMARGINH            0x806e00d2    // IDD_PPPAGE
+#define HIDC_GRAYAREAMARGINTYPE         0x806e00d1    // IDD_PPPAGE
+#define HIDC_GRAYAREAMARGINV            0x806e00d3    // IDD_PPPAGE
+#define HIDC_MOUSEPOINTER               0x806900d1    // IDD_PPGENERAL
+#define HIDC_PAGEBORDERWIDTH            0x806e00d6    // IDD_PPPAGE
+#define HIDC_PAGEGUTTERH                0x806e00d8    // IDD_PPPAGE
+#define HIDC_PAGEGUTTERV                0x806e00d9    // IDD_PPPAGE
+#define HIDC_PAGEMULTICNTH              0x806e00da    // IDD_PPPAGE
+#define HIDC_PAGEMULTICNTV              0x806e00db    // IDD_PPPAGE
+#define HIDC_PAGESHADOWWIDTH            0x806e00d7    // IDD_PPPAGE
+#define HIDC_PAGEVIEWPERCENTAGE         0x806e00d5    // IDD_PPPAGE
+#define HIDC_PAGEVIEWTYPE               0x806e00d4    // IDD_PPPAGE
+#define HIDC_SCROLLBARH                 0x806900ca    // IDD_PPGENERAL
+#define HIDC_SCROLLBARV                 0x806900cb    // IDD_PPGENERAL
+#define HIDC_SCROLLINCH                 0x806900cc    // IDD_PPGENERAL
+#define HIDC_SCROLLINCV                 0x806900cd    // IDD_PPGENERAL

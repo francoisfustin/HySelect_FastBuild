@@ -1,0 +1,171 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LOGS_XROOTFUNCTIONSAVE 
+                            "The XROOT() function is not exported to Excel. An empty cell has been created in the Excel file."
+    IDS_LOGS_IFFUNCTIONSAVE "The IF() function is not exported to Excel. An empty cell has been created in the Excel file."
+    IDS_LOGS_FP             "===== FarPoint Technologies, Inc =====\n"
+    IDS_LOGS_CLOSE_IMPWB    "===== End of Excel Workbook General Load =====\n"
+    IDS_LOGS_CLOSE_IMPSHEET "===== End of Excel Sheet Load ====="
+    IDS_LOGS_CLOSE_EXPORT   "===== End of Excel Export ====="
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LOGS_EXPORTCHECKBOX "Export encountered a check box cell. The value of the check box cell has been placed in the corresponding Excel cell."
+    IDS_LOGS_EXPORTBUTTON   "Export encountered a button cell. The value of the button cell has been placed in the corresponding Excel cell."
+    IDS_LOGS_EXPORTCOMBOBOX "Export encountered a combo box cell. The current selection in the combo box cell has been placed in the corresponding Excel cell."
+    IDS_LOGS_HEADERSTUFF    "Col\tRow\tInformation\n"
+    IDS_LOGS_OPEN_EXPORT    "===== Begin of Excel Export =====\n"
+    IDS_LOGS_LOADSHEET      "Import Sheet: "
+    IDS_LOGS_OPEN_IMPWB     "===== Begin of Excel Workbook General Load =====\n"
+    IDS_LOGS_OPEN_IMPSHEET  "===== Begin of Excel Sheet Load =====\n"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LOGS_REGISTRYPROPS  "Excel reads the AllowDragDrop, AutoClipboard, and EditEnterAction properties from the registry. If you modify these properties in Spread, the changes are not saved at export."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LOGS_LOADFILE       "Import Excel File: "
+    IDS_LOGS_INTEGERCELLTYPE 
+                            "Rounding/Truncating difference: If a float value is placed in an integer cell, Spread truncates the value.  Excel rounds float values in integer cells. Value from Excel = "
+    IDS_LOGS_INVALIDTOKEN   "Spread does not support the format token. Excel token = "
+    IDS_LOGS_FORMATNOTSUPPORTED 
+                            "Spread does not support this format. Excel format = "
+    IDS_LOGS_DATEFORMATNOTSUPPORTED 
+                            "Spread does not support this date format. Excel format = "
+    IDS_LOGS_FORMAT0IGNORED "Spread ignored zeros in format w/ leading zeros. Excel format = "
+    IDS_LOGS_FORMAT0FORCED  "Spread substituted zeros in format w/ leading or trailing non-zeros. Excel format = "
+    IDS_LOGS_IGNOREDTOKEN   "Spread recognizes this format token, but does not support it. Excel token = "
+    IDS_LOGS_FORMATFRACTION "Spread does not support fraction formats; the value has been changed to a decimal representation. Excel format = "
+    IDS_LOGS_FORMATPERCENT  "Spread does not support percent formats; the value has been changed to a decimal representation. Excel format = "
+    IDS_LOGS_FORMATSCIENTIFIC 
+                            "Spread does not support scientific notation; the value has been changed to a decimal representation. Excel format = "
+    IDS_LOGS_PMTFUNCTIONLOAD 
+                            "PMT() Function - TermsPerYear argument defaults to 12 when Spread imports the Excel file."
+    IDS_LOGS_CELLOBJECTSNOTSUPPORTED 
+                            "Spread does not support graphic objects. The graphic object will not be represented in Spread."
+    IDS_LOGS_FORMPTGNOTSUPPORTED 
+                            "Import encountered unrecognized Excel formula format tag. An empty cell has been created in Spread. Excel format tag = "
+    IDS_LOGS_FUNCFORMCELLTYPE 
+                            "Import encountered a function or formula in the Excel file; a float cell has been created in Spread."
+    IDS_LOGS_FUNCNOTSUPPORTED 
+                            "Spread does not support the specified function. An empty cell has been created in the Spread file. Excel function = "
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LOGS_FORMERROR      "Import encountered a formula error reported from Excel. An empty cell has been created in the Spread file."
+    IDS_LOGS_FLOATOUTOFBOUNDS 
+                            "Float value in Excel is beyond the range of Spread's float cell type. An empty cell has been created in Spread. Excel float value = "
+    IDS_LOGS_CURRENCYMULTIPLECHARS 
+                            "Excel’s currency symbol uses multiple characters. Spread does not support multiple characters; therefore, Spread uses the first character of the Excel symbol. Excel symbol ="
+    IDS_LOGS_CURRENCYNOTFIRST 
+                            "Excel displayed the currency symbol somewhere other than to the left of the value. Spread does not support this; therefore, Spread placed the symbol to the left of the value. Excel format ="
+    IDS_LOGS_RICHTEXTNOTSUPPORTED 
+                            "Spread does not support Rich Text Formats. The text is displayed in the first format encountered. String ="
+    IDS_LOGS_IFFUNCTIONLOAD "The IF() function is not imported into Spread. An empty cell has been created in Spread."
+    IDS_LOGS_TRUNCFUNCTIONLOAD 
+                            "TRUNCATE() Function - Precision argument defaults to 0 when Spread imports the Excel file."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LOGS_SAVEFILE       "Export Excel File: "
+    IDS_LOGS_DATEOUTOFRANGE "Excel dates must fall between 1/1/1900 and 12/31/9999. The date in Spread is not in that range, and has not been saved at export. Date in Spread = "
+    IDS_LOGS_OBJCELLTYPE    "Excel does not support the specified Spread cell type; an empty cell has been created in the Excel file. Spread cell type = "
+    IDS_LOGS_PMTFUNCTIONSAVE 
+                            "The PMT() function is not exported to Excel. An empty cell has been created in the Excel file."
+    IDS_LOGS_PICTOKENNOTSUPPORTED 
+                            "Excel does not support the specified mask definition character. This mask character has not been exported to Excel. Spread mask character = "
+    IDS_LOGS_TOOMANYCOLS    "The Spread control contains more columns than Excel supports. Excel supports only 256 columns; columns beyond 256 have been truncated. Number of columns in Spread = "
+    IDS_LOGS_TOOMANYROWS    "The Spread control contains more rows than Excel supports. Excel supports only 65536 rows; rows beyond 65536 have been truncated. Number of rows in Spread = "
+    IDS_LOGS_CUSTFUNCNOTSUPPORTED 
+                            "Custom functions are not exported to Excel."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LOGS_MULTIPLEFORMATS 
+                            "Spread 3.0 does not support multiple format sections. Spread will represent the value using the default Spread format. Format in Excel = "
+    IDS_LOGS_CUSTHEADERNOTSUPPORTED 
+                            "Custom headers are not exported to Excel. "
+    IDS_LOGS_URLFUNCTIONNOTIFY 
+                            "The URL() function is not exported to Excel. The text displayed in the Spread cell has been placed in the corresponding Excel cell. The hyperlink is:"
+    IDS_LOGS_FEB291900      "February 29, 1900, is not a valid date, although Excel accepts it as a valid date. An empty date cell has been created in Spread."
+    IDS_LOGS_EXPORTSTATICTEXT 
+                            "Excel does not support the Spread static text cell type. The value of the Spread cell has been placed in the corresponding Excel cell, but the cell formatting has been discarded.\n"
+    IDS_LOGS_PASSWORD       "This Excel file is password protected.  Spread cannot open password protected files."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

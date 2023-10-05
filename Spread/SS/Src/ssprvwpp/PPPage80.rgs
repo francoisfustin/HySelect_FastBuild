@@ -1,0 +1,22 @@
+HKCR
+{
+	PPPage.PPPage.3 = s 'PPPage Class'
+	{
+		CLSID = s '{E409C3B7-1BF7-470a-B7FC-B4352A73310F}'
+	}
+	PPPage.PPPage = s 'PPPage Class'
+	{
+		CurVer = s 'PPPage.PPPage.3'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {E409C3B7-1BF7-470a-B7FC-B4352A73310F} = s 'PPPage Class'
+		{
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

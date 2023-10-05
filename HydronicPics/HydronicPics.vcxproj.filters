@@ -1,0 +1,733 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TASelect\EnBitmapAnchorPt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TASelect\HydronicPic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HydronicPicMng.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\TASelect\EnBitmapAnchorPt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TASelect\HydronicPic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HydronicPicMng.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\DSV_DGH_15-32.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\DSV_DGH_40-50.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\DSV_H_F_SOL.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\SEP_ZG_65_F.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\SEP_ZG_65_S.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\TA_DPCBCV_01.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\TA_DPCBCV_M.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\TA_DSV.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\TA_MODULATOR_40-50.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\TA_MODULATOR_65-80.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV216MZ.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV316MZ.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV206GG_25.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV316GG_25.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV325_15.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV216_125.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV216_150.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV216_200.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV216_250_300.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV216RGA_15_25.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV216RGA_32_50.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV225_20_40.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV225_50.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV225_65.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV225_80_125.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV225_150.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV225_200.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV225_240S_E_15.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV240S_E_20_40.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV240S_E_50.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV240S_E_65.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV240S_E_150.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV240S_E_200.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV240S_E_250_300.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV306GG_15_25.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV306GG_32.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV306GG_40_100.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV306GG_125_150.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV316_125.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV316_150.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV316_200.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV325_20_40.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV325_50.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV325_65.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV325_80.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV325_150.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV325_200.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV240S_E_80.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV240S_E_100.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV240S_E_125.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV340S_E_15.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV340S_E_20_40.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV340S_E_50.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV340S_E_65.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV340S_E_80.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV340S_E_100.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV340S_E_125.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV340S_E_150.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV340S_E_200.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV340S_E_250_300.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\SIMPLY_VENTO_V2_1_S.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\SIMPLY_VENTO_V2_1_SWME.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\VENTO_V_CONNECT.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\VENTO_VI_CONNECT.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV206GG_15.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV206GG_20.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV206GG_32.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV206GG_40.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV206GG_50_65.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV206GG_80_100.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV216GG_15.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV216GG_20.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV216GG_25_32.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV216GG_40_50.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV216GG_65.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV216GG_80_100.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV216GG_125_200.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV225_250_300.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV316_250_300.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV316GG_15.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV316GG_20.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV316GG_32.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV316GG_40.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV316GG_50.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV316GG_65.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV316GG_80_100.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV316GG_125_200.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV316RGA_15_25.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV316RGA_32_50.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV325_100_125.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\CV325_250_300.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BR12WT_SET.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\SEP_FCTYPE_80.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\SEP_FCTYPE_150.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\SEP_FCTYPE_273.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\TA_SMART.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\TA_TEMP_SENSOR.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\VENTO_V_F_ECOEFFICIENT.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\STADSTAR25_DPCSET.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\External_temp_housing.gif" />
+    <Image Include="res\TA_LINK.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\TA_LINK_IMG.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\TA_SMART_20-50.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\TA_SMART_65-150.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\TA_SMART_DP.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\AIRV_ZTV.gif" />
+    <Image Include="res\SEP_ZTM.gif" />
+    <Image Include="res\SEP_ZTKM.gif" />
+    <Image Include="res\CircScheme 2W-AutoAdaptive.gif">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="res\AIRV_ZUP.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\AIRV_ZUT25.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\AIRV_ZUTX.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\CircScheme 2W-INJ.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\CircScheme 3W.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\CircScheme 3W-INJ.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\CircScheme BOTTOMDISTR.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\CircScheme BOTTOMDISTR_REV.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\CircScheme OnePipe.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\CircScheme OnePipeTopArrow.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\CircScheme SP.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\CircScheme TOPARROWS.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\CircScheme TOPPENDING.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\CircScheme TU.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\DA50_32A.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\DA50_80A.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\DA50_200A.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\DA516_25A.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\DA516_80A.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FUSION_C50A.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FUSION_C80A.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FUSION_C150A.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FUSION_P50A.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FUSION_P80A.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\FUSION_P150A.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\KT512_20.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\KTCM512_20.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\KTH512_25.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\KTM512_25.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\KTM512_80.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\PILOT-R_80.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\PILOT-R_150.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\SEP_ZEK_80_F.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\SEP_ZEK_80_S.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\SEP_ZEK_200_F.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\SEP_ZEK_200_S.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\SEP_ZIK_80_F.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\SEP_ZIK_80_S.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\SEP_ZIK_200_F.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\SEP_ZIK_200_S.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\SEP_ZIO_80_F.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\SEP_ZIO_80_S.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\SEP_ZIO_200_F.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\SEP_ZIO_200_S.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\SEP_ZUC_25.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\SEP_ZUCM_25.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\SEP_ZUD_25.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\SEP_ZUDL_25.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\SEP_ZUK_25.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\SEP_ZUKM_25.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\SEP_ZUM_25.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\SEP_ZUML_25.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\SEP_ZUR_25.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\SEP_ZUV_25.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\SEP_ZUVL_25.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\STAD25A_BV.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\STAD25B_BV.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\STAD25C_BV.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\STADA25A_BV.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\STADA25B_BV.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\STADA25C_BV.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\STADC25A_BV.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\STADC25B_BV.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\STA-DR_25.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\STAF-R80_BV.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\STAF-SG025_BV.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\STAF-SG080A_BV.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\STAF-SG200A_BV.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\STAG80_BV.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\STAG200_BV.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\STAP25_10-60.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\STAP80_20-80.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\STS15.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_2WCV_01.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_2WCV_01_P.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_2WCV_01_PPT.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_2WCV_M.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_2WCV_M_P.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_2WCV_M_PPT.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_3WCV_01.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_3WCV_01_P.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_3WCV_01_PPT.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_3WCV_M.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_3WCV_M_P.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_3WCV_M_PPT.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_BV.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_CHKV.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_COMPACTDP_15.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_COMPACTP_15.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_CS.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_CSP.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_DPC.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_DPCF.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_DPRV.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_DRV_L.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_DRV_S.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_FO.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_MULTI20_BV.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_MULTI20_CV.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_MULTI20_DPC.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_PICV_01_P.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_PICV_01_PPT.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_PICV_M_P.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_PICV_M_PPT.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_RV.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_RVT.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_SHV.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_TRV.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_VSP.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TA_VV.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TBV20NF_TBV.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TBV-C_20.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TBV-CMP_20.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Docs\DescriptorID for each product type.xlsx">
+      <Filter>Docs</Filter>
+    </None>
+    <None Include="Docs\Prod pics recipe.docx">
+      <Filter>Docs</Filter>
+    </None>
+    <None Include="Docs\Specs for dynamic hydronic schemes.doc">
+      <Filter>Docs</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{aaa559f4-7abc-43b2-98e9-e4cadbc7e2ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3ea44af3-9a57-4f4b-a489-48b39765aef0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{7b371bb0-65ce-43cc-a90f-a5d180242c43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Docs">
+      <UniqueIdentifier>{fac1ea6b-aa65-4fcd-a794-b1c25a9935e0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="HydronicPics.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

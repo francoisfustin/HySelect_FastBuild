@@ -1,0 +1,22 @@
+HKCR
+{
+	PPGeneral.PPGeneral.1 = s 'PPGeneral Class'
+	{
+		CLSID = s '{D5C0FFA1-EAA4-4ec1-AE33-780489348932}'
+	}
+	PPGeneral.PPGeneral = s 'PPGeneral Class'
+	{
+		CurVer = s 'PPGeneral.PPGeneral.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {D5C0FFA1-EAA4-4ec1-AE33-780489348932} = s 'PPGeneral Class'
+		{
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

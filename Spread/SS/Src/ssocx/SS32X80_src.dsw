@@ -1,0 +1,74 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "Adb32"=..\..\..\fplibs\FPDB\ADB\Adb32_src.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "FPTOOL32"=..\..\..\FPLIBS\FPTOOLS\OCX\Fptool32_src.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "SS32X80"=.\SS32X80_src.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Adb32
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name FPTOOL32
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name XL32L80
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "XL32L80"=..\Excel\XL32L80_src.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

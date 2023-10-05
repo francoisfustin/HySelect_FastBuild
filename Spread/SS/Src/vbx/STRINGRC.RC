@@ -1,0 +1,114 @@
+//Microsoft App Studio generated resource script.
+//
+#include "stringrc.h"
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_JANUARY             "Jan.January"
+    IDS_FEBUARY             "Feb.February"
+    IDS_MARCH               "Mar.March"
+    IDS_APRIL               "Apr.April"
+    IDS_MAY                 "May.May"
+    IDS_JUNE                "Jun.June"
+    IDS_JULY                "Jul.July"
+    IDS_AUGUST              "Aug.August"
+    IDS_SEPTEMBER           "Sep.September"
+    IDS_OCTOBER             "Oct.October"
+    IDS_NOVEMBER            "Nov.November"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_DECEMBER            "Dec.December"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SUNDAY              "Sun.Sunday"
+    IDS_MONDAY              "Mon.Monday"
+    IDS_TUESDAY             "Tue.Tuesday"
+    IDS_WEDNESDAY           "Wed.Wednesday"
+    IDS_THURSDAY            "Thu.Thursday"
+    IDS_FRIDAY              "Fri.Friday"
+    IDS_SATURDAY            "Sat.Saturday"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SEPARATOR_YEAR      "YY"
+    IDS_SEPARATOR_MONTH     "MM"
+    IDS_SEPARATOR_DAY       "DD"
+    IDS_CALENDAR_CAPTION    "Calendar"
+    IDS_ERA_MEIJI           "MMEJI"
+    IDS_ERA_TAISHO          "TTASH"
+    IDS_ERA_SHOWA           "SSHWA"
+    IDS_ERA_HEISEI          "HHESE"
+    IDS_ABOUTTEXT           "Click on ''...''"
+    IDS_SEPARATOR_HOUR      "HH"
+    IDS_SEPARATOR_MINUTE    "MM"
+    IDS_SEPARATOR_SECOND    "SS"
+    IDS_TIME_AM             "AMAM"
+    IDS_TIME_PM             "PMPM"
+END
+
+#ifdef SS_V70
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SHEET_STRING        "Sheet"
+END
+#endif // SS_V70
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDSJ_JANUARY            "JAN.ÇPåé"
+    IDSJ_FEBUARY            "FEB.ÇQåé"
+    IDSJ_MARCH              "MAR.ÇRåé"
+    IDSJ_APRIL              "APR.ÇSåé"
+    IDSJ_MAY                "MAY.ÇTåé"
+    IDSJ_JUNE               "JUN.ÇUåé"
+    IDSJ_JULY               "JUL.ÇVåé"
+    IDSJ_AUGUST             "AUG.ÇWåé"
+    IDSJ_SEPTEMBER          "SEP.ÇXåé"
+    IDSJ_OCTOBER            "OCT.10åé"
+    IDSJ_NOVEMBER           "NOV.11åé"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDSJ_DECEMBER           "DEC.12åé"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDSJ_SUNDAY             "ì˙.ì˙ójì˙"
+    IDSJ_MONDAY             "åé.åéójì˙"
+    IDSJ_TUESDAY            "âŒ.âŒójì˙"
+    IDSJ_WEDNESDAY          "êÖ.êÖójì˙"
+    IDSJ_THURSDAY           "ñÿ.ñÿójì˙"
+    IDSJ_FRIDAY             "ã‡.ã‡ójì˙"
+    IDSJ_SATURDAY           "ìy.ìyójì˙"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDSJ_SEPARATOR_YEAR     "îN"
+    IDSJ_SEPARATOR_MONTH    "åé"
+    IDSJ_SEPARATOR_DAY      "ì˙"
+    IDSJ_CALENDAR_CAPTION   "ÉJÉåÉìÉ_Å["
+    IDSJ_ERA_MEIJI          "Mñæé°"
+    IDSJ_ERA_TAISHO         "TëÂê≥"
+    IDSJ_ERA_SHOWA          "Sè∫òa"
+    IDSJ_ERA_HEISEI         "HïΩê¨"
+    IDSJ_ABOUTTEXT          "''...'' ÇÉNÉäÉbÉN"
+    IDSJ_SEPARATOR_HOUR      "éû"
+    IDSJ_SEPARATOR_MINUTE    "ï™"
+    IDSJ_SEPARATOR_SECOND    "ïb"
+    IDSJ_TIME_AM             "åﬂëO"
+    IDSJ_TIME_PM             "åﬂå„"
+END

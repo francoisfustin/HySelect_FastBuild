@@ -1,0 +1,375 @@
+//
+// SSOCX.RC2 - resources App Studio does not edit directly
+//
+
+#ifdef APSTUDIO_INVOKED
+    #error this file is not editable by App Studio
+#endif //APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+// Version stamp for this DLL
+
+#ifdef _WIN32
+#include "winver.h"
+#else
+#include "ver.h"
+#endif
+
+//#if defined SS_V75
+//
+//VS_VERSION_INFO     VERSIONINFO
+////VERSION_NUMBER_7
+//  FILEVERSION       7,5,0,0
+////VERSION_NUMBER_7
+//  PRODUCTVERSION    7,5,0,0
+//  FILEFLAGSMASK     VS_FFI_FILEFLAGSMASK
+//// REMOVE COMMENTS ON RELEASE -scl
+////#ifdef _DEBUG
+//#if BETA
+//  FILEFLAGS         VS_FF_PRIVATEBUILD|VS_FF_PRERELEASE
+//#endif
+////#else
+////  FILEFLAGS         0 // final version
+////#endif
+//  FILEOS            VOS__WINDOWS32
+//  FILETYPE          VFT_DLL
+//  FILESUBTYPE       0   // not used
+//BEGIN
+//    BLOCK "StringFileInfo"
+//    BEGIN
+//        BLOCK "040904B0" // Lang=US English, CharSet=Unicode
+//        BEGIN
+//#if BETA
+//			VALUE "Beta Version Expiration",   "This beta version will expire 11/15/2006."
+//#endif
+//            VALUE "CompanyName",     "FarPoint Technologies, Inc.\0"
+//#if BETA
+//            VALUE "FileVersion",     "7.5.0 BETA\0"
+//#else
+//            VALUE "FileVersion",     "7.5.0\0"
+//#endif
+//#if _IA64 // Itanium processor builds
+//#if _UNICODE
+//            VALUE "FileDescription", "FarPoint Spreadsheet Control (Unicode)\0"
+//            VALUE "InternalName",    "SPRIA64DU75\0"
+//            VALUE "OriginalFilename","SPRIA64DU75.DLL\0"
+//#else
+//            VALUE "FileDescription", "FarPoint Spreadsheet Control\0"
+//            VALUE "InternalName",    "SPRIA64D75\0"
+//            VALUE "OriginalFilename","SPRIA64D75.DLL\0"
+//#endif
+//#else // x64 processor (AMD64/EM64T) builds
+//#if _UNICODE
+//            VALUE "FileDescription", "FarPoint Spreadsheet Control (Unicode)\0"
+//            VALUE "InternalName",    "SPR64DU75\0"
+//            VALUE "OriginalFilename","SPR64DU75.DLL\0"
+//#else
+//            VALUE "FileDescription", "FarPoint Spreadsheet Control\0"
+//            VALUE "InternalName",    "SPR64D75\0"
+//            VALUE "OriginalFilename","SPR64D75.DLL\0"
+//#endif
+//#endif // x64 processor
+//            VALUE "LegalCopyright",  "Copyright \251 1991-2008, FarPoint\0"
+//            VALUE "LegalTrademarks", "\0"
+//#if SPREAD_JPN
+//			VALUE "Localization",    "Japan\0"
+//#endif
+//            VALUE "ProductName",     "Spread\0"
+////VERSION_NUMBER_7
+//#if BETA
+//            VALUE "ProductVersion",  "7.5.0 BETA\0"
+//#else
+//            VALUE "ProductVersion",  "7.5.0\0"
+//#endif
+//        END
+//    END
+//    BLOCK "VarFileInfo"
+//    BEGIN
+//        VALUE "Translation", 0x409, 1200
+//            // English language (0x409) and the Unicode codepage (1200)
+//    END
+//END
+//
+//#elif defined SS_V70
+#if defined SS_V80
+
+VS_VERSION_INFO     VERSIONINFO
+//VERSION_NUMBER_8
+  FILEVERSION       8,0,0,13
+//VERSION_NUMBER_8
+  PRODUCTVERSION    8,0,0,13
+  FILEFLAGSMASK     VS_FFI_FILEFLAGSMASK
+#ifdef _DEBUG
+  FILEFLAGS         VS_FF_DEBUG|VS_FF_PRIVATEBUILD|VS_FF_PRERELEASE
+#elif FP_BETA || BETA || FP_SPLASHEXPIRE
+  FILEFLAGS			VS_FF_PRERELEASE
+#else
+  FILEFLAGS         0 // final version
+#endif
+  FILEOS            VOS__WINDOWS32
+  FILETYPE          VFT_DLL
+  FILESUBTYPE       0   // not used
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0" // Lang=US English, CharSet=Unicode
+        BEGIN
+#if defined(FP_BETA)
+			VALUE "Beta Version Expiration",   "This beta version will expire 11/13/2008."
+#elif FP_SPLASHEXPIRE
+			VALUE "!Release Candidate Expiration!",   "This release candidate version will expire 12/02/2008."
+#endif
+            VALUE "CompanyName",     "FarPoint Technologies, Inc.\0"
+//VERSION_NUMBER_7
+#if _IA64 // Itanium processor builds
+#if _UNICODE
+            VALUE "FileDescription", "FarPoint Spreadsheet Control (Unicode)\0"
+            VALUE "InternalName",    "SPRIA64DU80\0"
+            VALUE "OriginalFilename","SPRIA64DU80.DLL\0"
+#else
+            VALUE "FileDescription", "FarPoint Spreadsheet Control\0"
+            VALUE "InternalName",    "SPRIA64D80\0"
+            VALUE "OriginalFilename","SPRIA64D80.DLL\0"
+#endif
+#elif _WIN64 // x64 processor (AMD64/EM64T) builds
+#if _UNICODE
+            VALUE "FileDescription", "FarPoint Spreadsheet Control (Unicode)\0"
+            VALUE "InternalName",    "SPR64DU80\0"
+            VALUE "OriginalFilename","SPR64DU80.DLL\0"
+#else
+            VALUE "FileDescription", "FarPoint Spreadsheet Control\0"
+            VALUE "InternalName",    "SPR64D80\0"
+            VALUE "OriginalFilename","SPR64D80.DLL\0"
+#endif
+#else // x32 processor
+            VALUE "FileDescription", "FarPoint Spreadsheet Control\0"
+            VALUE "InternalName",    "SPR32D80\0"
+            VALUE "OriginalFilename","SPR32D80.DLL\0"
+#endif // x32 processor
+            VALUE "FileVersion",     "8.0.13\0"
+            VALUE "LegalCopyright",  "Copyright \251 1991-2010, FarPoint\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "ProductName",     "Spread\0"
+//VERSION_NUMBER_7
+            VALUE "ProductVersion",  "8.0.13\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+            // English language (0x409) and the Unicode codepage (1200)
+    END
+END
+#elif defined SS_V70
+
+VS_VERSION_INFO     VERSIONINFO
+//VERSION_NUMBER_7
+  FILEVERSION       7,0,0,55
+//VERSION_NUMBER_7
+  PRODUCTVERSION    7,0,0,55
+  FILEFLAGSMASK     VS_FFI_FILEFLAGSMASK
+#ifdef _DEBUG
+  FILEFLAGS         VS_FF_DEBUG|VS_FF_PRIVATEBUILD|VS_FF_PRERELEASE
+#elif BETA
+  FILEFLAGS			VS_FF_PRERELEASE
+#else
+  FILEFLAGS         0 // final version
+#endif
+  FILEOS            VOS__WINDOWS32
+  FILETYPE          VFT_DLL
+  FILESUBTYPE       0   // not used
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0" // Lang=US English, CharSet=Unicode
+        BEGIN
+#if BETA
+			VALUE "Beta Version Expiration",   "This beta version will expire 11/15/2006."
+#endif
+            VALUE "CompanyName",     "FarPoint Technologies, Inc.\0"
+//VERSION_NUMBER_7
+#if _IA64 // Itanium processor builds
+#if _UNICODE
+            VALUE "FileDescription", "FarPoint Spreadsheet Control (Unicode)\0"
+            VALUE "InternalName",    "SPRIA64DU70\0"
+            VALUE "OriginalFilename","SPRIA64DU70.DLL\0"
+#else
+            VALUE "FileDescription", "FarPoint Spreadsheet Control\0"
+            VALUE "InternalName",    "SPRIA64D70\0"
+            VALUE "OriginalFilename","SPRIA64D70.DLL\0"
+#endif
+#elif _WIN64 // x64 processor (AMD64/EM64T) builds
+#if _UNICODE
+            VALUE "FileDescription", "FarPoint Spreadsheet Control (Unicode)\0"
+            VALUE "InternalName",    "SPR64DU70\0"
+            VALUE "OriginalFilename","SPR64DU70.DLL\0"
+#else
+            VALUE "FileDescription", "FarPoint Spreadsheet Control\0"
+            VALUE "InternalName",    "SPR64D70\0"
+            VALUE "OriginalFilename","SPR64D70.DLL\0"
+#endif
+#else // x32 processor
+            VALUE "FileDescription", "FarPoint Spreadsheet Control\0"
+            VALUE "InternalName",    "SPR32D70\0"
+            VALUE "OriginalFilename","SPR32D70.DLL\0"
+#endif // x32 processor
+            VALUE "FileVersion",     "7.0.55\0"
+            VALUE "LegalCopyright",  "Copyright \251 1991-2010, FarPoint\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "ProductName",     "Spread\0"
+//VERSION_NUMBER_7
+            VALUE "ProductVersion",  "7.0.55\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+            // English language (0x409) and the Unicode codepage (1200)
+    END
+END
+
+#elif defined SS_V40
+
+VS_VERSION_INFO     VERSIONINFO
+//VERSION_NUMBER_6
+  FILEVERSION       6,0,0,57
+//VERSION_NUMBER_6
+  PRODUCTVERSION    6,0,0,57
+  FILEFLAGSMASK     VS_FFI_FILEFLAGSMASK
+#ifdef _DEBUG
+  FILEFLAGS         VS_FF_DEBUG|VS_FF_PRIVATEBUILD|VS_FF_PRERELEASE
+#else
+  FILEFLAGS         0 // final version
+#endif
+  FILEOS            VOS__WINDOWS32
+  FILETYPE          VFT_DLL
+  FILESUBTYPE       0   // not used
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0" // Lang=US English, CharSet=Unicode
+        BEGIN
+            VALUE "CompanyName",     "FarPoint Technologies, Inc.\0"
+            VALUE "FileDescription", "FarPoint Spreadsheet Control\0"
+//VERSION_NUMBER_6
+            VALUE "FileVersion",     "6.0.57\0"
+            VALUE "InternalName",    "SPR32D60\0"
+            VALUE "LegalCopyright",  "Copyright \251 1991-2008, FarPoint\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename","SPR32D60.DLL\0"
+            VALUE "ProductName",     "Spread\0"
+//VERSION_NUMBER_6
+            VALUE "ProductVersion",  "6.0.57\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+            // English language (0x409) and the Unicode codepage (1200)
+    END
+END
+
+#elif defined(SS_V35)
+
+VS_VERSION_INFO     VERSIONINFO
+//VERSION_NUMBER_35
+  FILEVERSION       3,5,0,10
+//VERSION_NUMBER_35
+  PRODUCTVERSION    3,5,0,10
+  FILEFLAGSMASK     VS_FFI_FILEFLAGSMASK
+#ifdef _DEBUG
+  FILEFLAGS         VS_FF_DEBUG|VS_FF_PRIVATEBUILD|VS_FF_PRERELEASE
+#else
+  FILEFLAGS         0 // final version
+#endif
+  FILEOS            VOS__WINDOWS32
+  FILETYPE          VFT_DLL
+  FILESUBTYPE       0   // not used
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0" // Lang=US English, CharSet=Unicode
+        BEGIN
+            VALUE "CompanyName",     "FarPoint Technologies, Inc.\0"
+            VALUE "FileDescription", "FarPoint Spreadsheet Control\0"
+//VERSION_NUMBER_35
+            VALUE "FileVersion",     "3.5.10\0"
+            VALUE "InternalName",    "SPR32D35\0"
+            VALUE "LegalCopyright",  "Copyright \251 1991-2005, FarPoint\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename","SPR32D35.DLL\0"
+            VALUE "ProductName",     "Spread\0"
+//VERSION_NUMBER_35
+            VALUE "ProductVersion",  "3.5.10\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+            // English language (0x409) and the Unicode codepage (1200)
+    END
+END
+
+#else // Spread 3.0:
+
+VS_VERSION_INFO     VERSIONINFO
+//VERSION_NUMBER_30
+  FILEVERSION       3,0,0,55
+//VERSION_NUMBER_30
+  PRODUCTVERSION    3,0,0,55
+  FILEFLAGSMASK     VS_FFI_FILEFLAGSMASK
+#ifdef _DEBUG
+  FILEFLAGS         VS_FF_DEBUG|VS_FF_PRIVATEBUILD|VS_FF_PRERELEASE
+#else
+  FILEFLAGS         0 // final version
+#endif
+#ifdef _WIN32
+  FILEOS            VOS__WINDOWS32
+#else
+  FILEOS            VOS__WINDOWS16
+#endif
+  FILETYPE          VFT_DLL
+  FILESUBTYPE       0   // not used
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+#ifdef _WIN32
+        BLOCK "040904B0" // Lang=US English, CharSet=Unicode
+#else
+        BLOCK "040904E4" // Lang=US English, CharSet=Windows Multilingual
+#endif
+        BEGIN
+            VALUE "CompanyName",     "FarPoint Technologies, Inc.\0"
+            VALUE "FileDescription", "FarPoint Spreadsheet Control\0"
+//VERSION_NUMBER_30
+            VALUE "FileVersion",     "3.0.55\0"
+#ifdef _WIN32
+            VALUE "InternalName",    "SPR32D30\0"
+#else
+            VALUE "InternalName",    "SPR16D30\0"
+#endif
+            VALUE "LegalCopyright",  "Copyright \251 1991-2005, FarPoint\0"
+            VALUE "LegalTrademarks", "\0"
+#ifdef _WIN32
+            VALUE "OriginalFilename","SPR32D30.DLL\0"
+#else
+            VALUE "OriginalFilename","SPR16D30.DLL\0"
+#endif
+            VALUE "ProductName",     "Spread\0"
+//VERSION_NUMBER_30
+            VALUE "ProductVersion",  "3.0.55\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+#ifdef _WIN32
+        VALUE "Translation", 0x409, 1200
+            // English language (0x409) and the Unicode codepage (1200)
+#else
+        VALUE "Translation", 0x409, 1252
+            // English language (0x409) and the Windows ANSI codepage (1252)
+#endif
+    END
+END
+
+#endif

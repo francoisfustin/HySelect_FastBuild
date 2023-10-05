@@ -1,0 +1,909 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>SS32D80</ProjectName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <ProjectGuid>{181FA835-4143-D0D9-37A7-7AC0A08BFFB1}</ProjectGuid>
+    <SccProvider>
+    </SccProvider>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <CLRSupport>false</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <CLRSupport>false</CLRSupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\obju32\</OutDir>
+    <IntDir>.\obju32\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>Spr32u80</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>Spr32u80</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\objud32\</OutDir>
+    <IntDir>.\objud32\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>Spr32du80</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>Spr64du80</TargetName>
+    <OutDir>.\objud64\</OutDir>
+    <IntDir>.\objud64\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <OmitFramePointers>false</OmitFramePointers>
+      <StringPooling>
+      </StringPooling>
+      <AdditionalIncludeDirectories>..\..\include;..\..\..\fplibs\fptools\src;..\sssrc\spread;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;NDEBUG;UNICODE;SS_V30;SS_V35;SS_V40;SS_V70;VC60;WIN32;_WINDOWS;SS_W;SS_DLL;FP_DLL;BUGS;SS_WIN32S;WIN32_LEAN_AND_MEAN;VC50;TT_V2;SS_V80;SS_NO_USE_SH;XL12;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\obju32\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\obju32\Ss32d80_src.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\obju32\</ObjectFileName>
+      <ProgramDataBaseFileName>.\obju32\</ProgramDataBaseFileName>
+      <AdditionalOptions> /Gs </AdditionalOptions>
+      <DisableSpecificWarnings>4995</DisableSpecificWarnings>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MinimalRebuild>false</MinimalRebuild>
+      <FloatingPointExceptions>true</FloatingPointExceptions>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\obju32\Ss32d80_src.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>..\..\include;..\..\..\fplibs\fptools\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_UNICODE;SS_W;SS_DLL;FP_DLL;SS_V30;SS_V35;SS_V40;SS_V70;SS_V80;SS_NO_USE_SH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>
+      </OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <SubSystem>Windows</SubSystem>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <OutputFile>$(TargetDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>.\obju32\Spr32u80.lib</ImportLibrary>
+      <AdditionalLibraryDirectories>..\..\..\fplibs\fptools\dll32\obju32\;..\excel\obju32\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>fptools.lib;xl32l80.lib;comctl32.lib;odbc32.lib;odbccp32.lib;largeint.lib;msimg32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetDir)$(TargetName)$(TargetExt)" "$(ProjectDir)..\..\dll\$(TargetName)$(TargetExt)"
+copy "$(TargetDir)$(TargetName).lib" "$(ProjectDir)..\..\lib\$(TargetName).lib"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <OmitFramePointers>false</OmitFramePointers>
+      <StringPooling>
+      </StringPooling>
+      <AdditionalIncludeDirectories>..\..\include;..\..\..\fplibs\fptools\src;..\sssrc\spread;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;NDEBUG;UNICODE;SS_V30;SS_V35;SS_V40;SS_V70;VC60;WIN32;_WINDOWS;SS_W;SS_DLL;FP_DLL;BUGS;SS_WIN32S;WIN32_LEAN_AND_MEAN;VC50;TT_V2;SS_V80;SS_NO_USE_SH;XL12;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\obju32\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\obju32\Ss32d80_src.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\obju32\</ObjectFileName>
+      <ProgramDataBaseFileName>.\obju32\</ProgramDataBaseFileName>
+      <AdditionalOptions> /Gs </AdditionalOptions>
+      <DisableSpecificWarnings>4995</DisableSpecificWarnings>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FloatingPointExceptions>true</FloatingPointExceptions>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\obju32\Ss32d80_src.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>..\..\include;..\..\..\fplibs\fptools\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_UNICODE;SS_W;SS_DLL;FP_DLL;SS_V30;SS_V35;SS_V40;SS_V70;SS_V80;SS_NO_USE_SH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\obju32\Ss32d80_src.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <SubSystem>Windows</SubSystem>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <OutputFile>$(TargetDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>.\obju32\Spr32u80.lib</ImportLibrary>
+      <AdditionalLibraryDirectories>..\..\..\fplibs\fptools\dll32\obju32\;..\excel\obju32\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>fptools.lib;xl32l80.lib;comctl32.lib;odbc32.lib;odbccp32.lib;largeint.lib;msimg32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetDir)$(TargetName)$(TargetExt)" "$(ProjectDir)..\..\dll\$(TargetName)$(TargetExt)"
+copy "$(TargetDir)$(TargetName).lib" "$(ProjectDir)..\..\lib\$(TargetName).lib"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>..\..\include;..\..\..\fplibs\fptools\src;..\sssrc\spread;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;_DEBUG;UNICODE;SS_V30;SS_V35;SS_V40;SS_V70;VC60;WIN32;_WINDOWS;SS_W;SS_DLL;FP_DLL;BUGS;SS_WIN32S;WIN32_LEAN_AND_MEAN;VC50;TT_V2;SS_V80;SS_NO_USE_SH;XL12;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\objud32\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\objud32\Ss32d80_src.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\objud32\</ObjectFileName>
+      <ProgramDataBaseFileName>.\objud32\</ProgramDataBaseFileName>
+      <DisableSpecificWarnings>4995</DisableSpecificWarnings>
+      <MinimalRebuild />
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\objud32\Ss32d80_src.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>..\..\include;..\..\..\fplibs\fptools\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_UNICODE;_DEBUG;SS_W;SS_DLL;FP_DLL;SS_V30;SS_V35;SS_V40;SS_V70;SS_V80;SS_NO_USE_SH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>
+      </OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <IgnoreSpecificDefaultLibraries>libcmtd;libcd;libcmt;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <OutputFile>$(TargetDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>.\objud32\SPR32DU80.lib</ImportLibrary>
+      <AdditionalLibraryDirectories>..\..\..\fplibs\fptools\dll32\objud32\;..\excel\objud32\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>fptools.lib;xl32l80.lib;comctl32.lib;odbc32.lib;odbccp32.lib;largeint.lib;msimg32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetDir)$(TargetName)$(TargetExt)" "$(ProjectDir)..\..\dll\$(TargetName)$(TargetExt)"
+copy "$(TargetDir)$(TargetName).pdb" "$(ProjectDir)..\..\dll\$(TargetName).pdb"
+copy "$(TargetDir)$(TargetName).lib" "$(ProjectDir)..\..\lib\$(TargetName).lib"
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>..\..\include;..\..\..\fplibs\fptools\src;..\sssrc\spread;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;_DEBUG;UNICODE;SS_V30;SS_V35;SS_V40;SS_V70;VC60;WIN32;_WINDOWS;SS_W;SS_DLL;FP_DLL;BUGS;SS_WIN32S;WIN32_LEAN_AND_MEAN;VC50;TT_V2;SS_V80;SS_NO_USE_SH;XL12;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\objud64\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\objud64\Ss64d80_src.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\objud64\</ObjectFileName>
+      <ProgramDataBaseFileName>.\objud64\</ProgramDataBaseFileName>
+      <DisableSpecificWarnings>4995</DisableSpecificWarnings>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\objud32\Ss32d80_src.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>..\..\include;..\..\..\fplibs\fptools\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_UNICODE;_DEBUG;SS_W;SS_DLL;FP_DLL;SS_V30;SS_V35;SS_V40;SS_V70;SS_V80;SS_NO_USE_SH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\objud32\Ss32d80_src.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <IgnoreSpecificDefaultLibraries>libcmtd;libcd;libcmt;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <OutputFile>$(TargetDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>.\objud64\SPR64DU80.lib</ImportLibrary>
+      <AdditionalLibraryDirectories>..\..\..\fplibs\fptools\dll32\objud64\;..\excel\objud64\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>fptools.lib;xl64l80.lib;comctl32.lib;odbc32.lib;odbccp32.lib;largeint.lib;msimg32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetDir)$(TargetName)$(TargetExt)" "$(ProjectDir)..\..\dll\$(TargetName)$(TargetExt)"
+copy "$(TargetDir)$(TargetName).pdb" "$(ProjectDir)..\..\dll\$(TargetName).pdb"
+copy "$(TargetDir)$(TargetName).lib" "$(ProjectDir)..\..\lib\$(TargetName).lib"
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\SSSRC\ATOF.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CALC\CAL_CALC.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CALC\CAL_CELL.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CALC\CAL_COL.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CALC\CAL_CUST.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CALC\CAL_ERR.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CALC\CAL_EVAL.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CALC\CAL_EXPR.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\calc\cal_fina.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CALC\CAL_FUNC.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\calc\cal_look.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CALC\CAL_MATR.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CALC\CAL_MEM.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CALC\CAL_NAME.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CALC\CAL_OPER.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CALC\CAL_ROW.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CALC\CAL_TOK.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CALC\CAL_VECT.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITDATE\CALENDAR.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\CARET.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\CHAR.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CLASSES\CHECKBOX.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\ct_mem.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\cust_celltype.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITDATE\DATEMGR.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\DATETIME.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITDATE\DYNAMIC1.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITDATE\EDITDATE.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITFLD.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITFLOA\EDITFLOA.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITGEN\EDITGEN.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITINT\EDITINT.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\edit\editnum\EditNum.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITPIC\EDITPIC.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITTIME\EDITTIME.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\FCVT.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\FIELDMGR.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITFLOA\FLOATMGR.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\..\..\FPLIBS\FPTOOLS\SRC\FPSHMALL.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\FSSTUB.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\ftdattim.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITGEN\GENMGR.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\HILIGHT.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITINT\INTMGR.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\KEYBOARD.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\MEM.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\edit\editnum\NumMgr.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AssemblyAndSourceCode</AssemblerOutput>
+      <AssemblerOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AssemblyAndSourceCode</AssemblerOutput>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\OUTPUT1.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\OUTPUT2.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\OUTPUT3.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\OVERMODE.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITPIC\PICMGR.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\Ssprvw\Pvpaint.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\Ssprvw\Pvpinfo.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\Ssprvw\Pvprops.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\Ssprvw\Pvscroll.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\QSORTH.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CLASSES\SPINBTN.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SPREAD.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_ALLOC.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\ss_book.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_BOOL.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_BORD.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_CALC.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_CELL.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_COL.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_COMBO.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_COPY.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_CURS.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_DATA.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_DOC.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_DRAG.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_DRAW.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_EDIT.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_EMODE.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\ss_excel.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_FONT.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_FORMU.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_FUNC.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\ss_gradient.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\SS_HTML.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_MAIN.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_MULTI.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_OVERF.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_PRINT.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_ROW.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_SAVE.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_SAVE4.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_SCBAR.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_SCROL.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_SORT.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\SS_SPAN.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_SPICT.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\SS_SRCH.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\ss_tab.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\ss_text.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\ss_theme.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_TYPE.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_USER.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_VIRT.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\SPREAD\SS_WIN.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\ss_xl12.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\ss_xlload.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\ss_xlparse.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\spread\ss_xml.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\Ssprvw\Ssprvw.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="SSW.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITDATE\STATIC.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\STR1.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\STR2.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CLASSES\SUPERBTN.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CLASSES\TBDIB.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\TEXT.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\..\..\FPLibs\Fptools\Src\Texttip.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITTIME\TIMEMGR.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITDATE\USERDATE.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITFLOA\USERFLOA.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\USERFUNC.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITINT\USERINT.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\sssrc\edit\editnum\UserNum.c">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\EDIT\EDITTIME\USERTIME.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\web\src\web.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\WIN.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\SSSRC\CLASSES\WINTOOLS.C">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /Gs   /Gs </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> /Gs   /Gs </AdditionalOptions>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SSW.RC" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\SSSRC\CALC\cal_cell.h" />
+    <ClInclude Include="..\SSSRC\CALC\cal_col.h" />
+    <ClInclude Include="..\SSSRC\CALC\cal_cust.h" />
+    <ClInclude Include="..\SSSRC\CALC\cal_err.h" />
+    <ClInclude Include="..\SSSRC\CALC\cal_expr.h" />
+    <ClInclude Include="..\SSSRC\CALC\cal_func.h" />
+    <ClInclude Include="..\sssrc\calc\cal_matr.h" />
+    <ClInclude Include="..\sssrc\calc\cal_mem.h" />
+    <ClInclude Include="..\SSSRC\CALC\cal_name.h" />
+    <ClInclude Include="..\SSSRC\CALC\cal_oper.h" />
+    <ClInclude Include="..\SSSRC\CALC\cal_row.h" />
+    <ClInclude Include="..\SSSRC\CALC\cal_tok.h" />
+    <ClInclude Include="..\sssrc\calc\cal_vect.h" />
+    <ClInclude Include="..\SSSRC\EDIT\EDITDATE\calendar.h" />
+    <ClInclude Include="..\SSSRC\CLASSES\checkbox.h" />
+    <ClInclude Include="..\sssrc\spread\ct_mem.h" />
+    <ClInclude Include="..\sssrc\spread\cust_celltype.h" />
+    <ClInclude Include="..\SSSRC\EDIT\EDITDATE\editdate.h" />
+    <ClInclude Include="..\SSSRC\EDIT\editfld.h" />
+    <ClInclude Include="..\SSSRC\EDIT\EDITFLOA\editfloa.h" />
+    <ClInclude Include="..\SSSRC\EDIT\EDITGEN\editgen.h" />
+    <ClInclude Include="..\SSSRC\EDIT\EDITINT\editint.h" />
+    <ClInclude Include="..\SSSRC\EDIT\EDITPIC\editpic.h" />
+    <ClInclude Include="..\SSSRC\EDIT\EDITTIME\edittime.h" />
+    <ClInclude Include="..\sssrc\spread\ftdattim.h" />
+    <ClInclude Include="..\SSSRC\CLASSES\spinbtn.h" />
+    <ClInclude Include="..\sssrc\spread\spread.h" />
+    <ClInclude Include="..\SSSRC\SPREAD\ss_alloc.h" />
+    <ClInclude Include="..\SSSRC\SPREAD\ss_bool.h" />
+    <ClInclude Include="..\SSSRC\SPREAD\ss_bord.h" />
+    <ClInclude Include="..\SSSRC\SPREAD\ss_calc.h" />
+    <ClInclude Include="..\SSSRC\SPREAD\ss_cell.h" />
+    <ClInclude Include="..\SSSRC\SPREAD\ss_col.h" />
+    <ClInclude Include="..\SSSRC\SPREAD\ss_curs.h" />
+    <ClInclude Include="..\SSSRC\SPREAD\ss_data.h" />
+    <ClInclude Include="..\SSSRC\SPREAD\ss_doc.h" />
+    <ClInclude Include="..\SSSRC\SPREAD\ss_drag.h" />
+    <ClInclude Include="..\SSSRC\SPREAD\ss_draw.h" />
+    <ClInclude Include="..\SSSRC\SPREAD\ss_emode.h" />
+    <ClInclude Include="..\sssrc\spread\ss_excel.h" />
+    <ClInclude Include="..\SSSRC\SPREAD\ss_font.h" />
+    <ClInclude Include="..\SSSRC\SPREAD\ss_formu.h" />
+    <ClInclude Include="..\SSSRC\SPREAD\ss_func.h" />
+    <ClInclude Include="..\SSSRC\SPREAD\ss_main.h" />
+    <ClInclude Include="..\SSSRC\SPREAD\ss_multi.h" />
+    <ClInclude Include="..\SSSRC\SPREAD\ss_row.h" />
+    <ClInclude Include="..\SSSRC\SPREAD\ss_save.h" />
+    <ClInclude Include="..\SSSRC\SPREAD\ss_save4.h" />
+    <ClInclude Include="..\SSSRC\SPREAD\ss_scbar.h" />
+    <ClInclude Include="..\SSSRC\SPREAD\ss_scrol.h" />
+    <ClInclude Include="..\SSSRC\SPREAD\ss_spict.h" />
+    <ClInclude Include="..\sssrc\spread\ss_text.h" />
+    <ClInclude Include="..\SSSRC\SPREAD\ss_type.h" />
+    <ClInclude Include="..\SSSRC\SPREAD\ss_user.h" />
+    <ClInclude Include="..\SSSRC\SPREAD\ss_virt.h" />
+    <ClInclude Include="..\SSSRC\SPREAD\ss_win.h" />
+    <ClInclude Include="..\sssrc\spread\ss_xml.h" />
+    <ClInclude Include="..\SSSRC\CLASSES\superbtn.h" />
+    <ClInclude Include="..\..\..\FPLibs\Fptools\Src\Texttip.h" />
+    <ClInclude Include="..\sssrc\classes\wintools.h" />
+    <ClInclude Include="SS_RWDE.H" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Ssw.dlg">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\ssprvw\zoomin.cur" />
+    <CustomBuild Include="..\ssprvw\zoomout.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SSW.RC2" />
+    <None Include="SS_RWDE.DLG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="SS_RWDE.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="LARGEINT.LIB" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

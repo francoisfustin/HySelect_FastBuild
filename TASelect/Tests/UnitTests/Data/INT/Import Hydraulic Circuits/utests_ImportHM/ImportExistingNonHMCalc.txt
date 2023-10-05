@@ -1,0 +1,28 @@
+# Input informations.
+Project to import = ImportNewNonHMCalc.tsp
+# Modules or circuits to import : Element to import => Parent => Insert in => Insert after
+*A.1 => *A => *A.3 => *A.3.2
+*A.2 => *A => *A.4 => *A.4.2
+
+# Output informations.
+
+HMCalc mode = false
+Menu button state before import = true
+Ribbon button state before import = true
+Menu button state after import = true
+Ribbon button state after import = true
+
+// Import result 
+Import result : ImportNewNonHMCalc.tsp imported
+*A 
+*A.1 
+*A.2 
+*A.3 
+*A.3.1 
+*A.3.2 
+*A.3.3 
+*A.4 
+*A.4.1 
+*A.4.2 
+*A.4.3 
+Rem; --------------------->SUCCESS

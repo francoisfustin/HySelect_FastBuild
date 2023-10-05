@@ -1,0 +1,342 @@
+//Microsoft App Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "..\sssrc\dialog.h"
+#include "..\vbsrc\vbspread.h"
+#include "..\sssrc\classes\wintools.h"
+
+#include "\fplibs\fptools\src\fpabout.h"
+
+#include "vbss.rc2"
+
+/////////////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+TBCB_UP                 BITMAP  MOVEABLE PURE   "..\\SSSRC\\CLASSES\\CBRSV1.BMP"
+TBCB_DOWN               BITMAP  MOVEABLE PURE   "..\\SSSRC\\CLASSES\\CBRSV2.BMP"
+TBCB_GRAY               BITMAP  MOVEABLE PURE   "..\\SSSRC\\CLASSES\\CBRSV3.BMP"
+TBCB_FOCUSUP            BITMAP  MOVEABLE PURE   "..\\SSSRC\\CLASSES\\CBRSV4.BMP"
+TBCB_FOCUSDOWN          BITMAP  MOVEABLE PURE   "..\\SSSRC\\CLASSES\\CBRSV5.BMP"
+TBCB_FOCUSGRAY          BITMAP  MOVEABLE PURE   "..\\SSSRC\\CLASSES\\CBRSV6.BMP"
+TBCB_DISABLEDUP         BITMAP  MOVEABLE PURE   "..\\SSSRC\\CLASSES\\CBRSV7.BMP"
+TBCB_DISABLEDDOWN       BITMAP  MOVEABLE PURE   "..\\SSSRC\\CLASSES\\CBRSV8.BMP"
+TBCB_DISABLEDGRAY       BITMAP  MOVEABLE PURE   "..\\SSSRC\\CLASSES\\CBRSV9.BMP"
+SBRHOME                 BITMAP  MOVEABLE PURE   "..\\SSSRC\\SPREAD\\SBRHOME.BMP"
+SBRUP                   BITMAP  MOVEABLE PURE   "..\\SSSRC\\SPREAD\\SBRUP.BMP"
+SBRDN                   BITMAP  MOVEABLE PURE   "..\\SSSRC\\SPREAD\\SBRDN.BMP"
+SBREND                  BITMAP  MOVEABLE PURE   "..\\SSSRC\\SPREAD\\SBREND.BMP"
+SBRPGDN                 BITMAP  MOVEABLE PURE   "..\\SSSRC\\SPREAD\\SBRPGDN.BMP"
+SBRPGUP                 BITMAP  MOVEABLE PURE   "..\\SSSRC\\SPREAD\\SBRPGUP.BMP"
+SBRHOMED                BITMAP  MOVEABLE PURE   "..\\SSSRC\\SPREAD\\SBRHOMED.BMP"
+SBRUPD                  BITMAP  MOVEABLE PURE   "..\\SSSRC\\SPREAD\\SBRUPD.BMP"
+SBRDND                  BITMAP  MOVEABLE PURE   "..\\SSSRC\\SPREAD\\SBRDND.BMP"
+SBRENDD                 BITMAP  MOVEABLE PURE   "..\\SSSRC\\SPREAD\\SBRENDD.BMP"
+SBRPGDND                BITMAP  MOVEABLE PURE   "..\\SSSRC\\SPREAD\\SBRPGDND.BMP"
+SBRPGUPD                BITMAP  MOVEABLE PURE   "..\\SSSRC\\SPREAD\\SBRPGUPD.BMP"
+IDBMP_SPREAD            BITMAP  DISCARDABLE     "..\\VBSRC\\SPREADCU.BMP"
+IDBMP_SPREADDOWN        BITMAP  DISCARDABLE     "..\\VBSRC\\SPREADCD.BMP"
+IDBMP_SPREADMONO        BITMAP  DISCARDABLE     "..\\VBSRC\\SPREADMU.BMP"
+IDBMP_SPREADEGA         BITMAP  DISCARDABLE     "..\\VBSRC\\SPREADEU.BMP"
+
+SPR_ICON                ICON    DISCARDABLE     "spread.ico"
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+CALENDAR DIALOG DISCARDABLE  80, 20, 129, 106
+STYLE WS_POPUP | WS_CAPTION
+CAPTION "Calendar"
+BEGIN
+    CONTROL         "DayList",IDD_DAYLIST,VA_CALENDAR_CLASS_NAME,WS_TABSTOP,0,0,
+                    129,89
+    CONTROL         "",0,"Static",SS_BLACKRECT,0,89,129,1
+    DEFPUSHBUTTON   "OK",IDOK,23,92,38,12
+    PUSHBUTTON      "Cancel",IDCANCEL,69,92,38,12
+END
+
+VBSSPRINTDLGBOX DIALOG DISCARDABLE  0, 0, 100, 48
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Printing"
+BEGIN
+    PUSHBUTTON      "Cancel",IDOK,34,30,28,12
+END
+
+VBSSOPENDB DIALOG DISCARDABLE  0, 0, 168, 92
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Open DataBase"
+BEGIN
+    LTEXT           "Source/Server:",0,6,6,52,8
+    LTEXT           "DataBase:",0,6,21,47,8
+    LTEXT           "User ID:",0,6,36,46,8
+    LTEXT           "Password:",0,6,51,40,8
+    COMBOBOX        IDD_OPENDB_SOURCE,60,5,102,60,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDD_OPENDB_DB,60,20,102,12
+    EDITTEXT        IDD_OPENDB_USERID,60,35,102,12
+    EDITTEXT        IDD_OPENDB_PASSWORD,60,50,102,12
+    PUSHBUTTON      "OK",IDOK,24,71,49,14
+    PUSHBUTTON      "Cancel",IDCANCEL,93,71,51,14
+END
+// these about boxes are not used -scl
+/*
+#ifdef FP_SPLASHSCREEN
+ABOUTBOX DIALOG DISCARDABLE  0, 32, 184, 116
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Spread 3.0"
+BEGIN
+//VERSION_NUMBER_30
+    CTEXT           "Spread 3.0.55 Trial Version for Visual Programming",-1,30,4,123,8
+    CTEXT           "Copyright ｩ 1991-2000, FarPoint Technologies",-1,16,14,151,8
+    CONTROL         "",-1,"Static",SS_BLACKRECT | WS_GROUP,8,27,167,3
+    CTEXT           "The market leader in spreadsheet controls",-1,3,36,177,
+                    8
+    CTEXT           "FarPoint Technologies",-1,44,60,95,8
+    CTEXT           "175 Southport Drive, Suite 900",-1,10,68,164,8
+    CTEXT           "Morrisville, NC 27560",-1,10,76,164,8
+    CTEXT           "Phone (919) 460-4551    Fax (919) 460-7606",-1,10,84,
+                    164,8
+    DEFPUSHBUTTON   "OK",IDOK,73,97,36,14,WS_GROUP
+END
+#else
+ABOUTBOX DIALOG DISCARDABLE  0, 32, 184, 116
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Spread 3.0"
+BEGIN
+//VERSION_NUMBER_30
+    CTEXT           "Spread 3.0.55 for Visual Programming",-1,30,4,123,8
+    CTEXT           "Copyright ｩ 1991-2000, FarPoint Technologies",-1,16,14,151,8
+    CONTROL         "",-1,"Static",SS_BLACKRECT | WS_GROUP,8,27,167,3
+    CTEXT           "The market leader in spreadsheet controls",-1,3,36,177,
+                    8
+    CTEXT           "FarPoint Technologies",-1,44,60,95,8
+    CTEXT           "175 Southport Drive, Suite 900",-1,10,68,164,8
+    CTEXT           "Morrisville, NC 27560",-1,10,76,164,8
+    CTEXT           "Phone (919) 460-4551    Fax (919) 460-7606",-1,10,84,
+                    164,8
+    DEFPUSHBUTTON   "OK",IDOK,73,97,36,14,WS_GROUP
+END
+#endif
+*/
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+STRINGTABLE
+BEGIN
+   IDS_PRODUCT_ICON    "SPR_ICON"
+   IDS_ABOUT_PRODUCT   "About Spread"
+#ifdef SS_V30
+//VERSION_NUMBER_30
+   IDS_PRODUCT         "Spread 3.0.55"
+#else
+//VERSION_NUMBER_25
+   IDS_PRODUCT         "Spread 2.5.45"
+#endif
+   IDS_COPYRIGHT       "Copyright (ｩ) 1994-2007 FarPoint Technologies, Inc."
+//   IDS_WEBSITE         "Web Site: http://www.fpoint.com"
+//   IDS_EMAIL           "email: fpsupport@fpoint.com"
+//   IDS_SALES           "Sales: (800) 645-5913"
+//   IDS_MAIN            "Main:  (919) 460-4551"
+//   IDS_FAX             "Fax:   (919) 460-7606"
+//   IDS_TECHSUPPORT     "Technical Support:  (919) 460-1887"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_UNITTYPE_NORMAL     "0 - Normal"
+    IDS_UNITTYPE_VGA        "1 - VGA Base"
+    IDS_UNITTYPE_TWIPS      "2 - Twips"
+    IDS_HEADERDISP_BLANK    "0 - Blank"
+    IDS_HEADERDISP_NUMBERS  "1 - Display Numbers"
+    IDS_HEADERDISP_LETTERS  "2 - Display Letters"
+    IDS_DAUTOSIZE_OFF       "0 - Off"
+    IDS_DAUTOSIZE_MAXCOL    "1 - Max Col Width"
+    IDS_DAUTOSIZE_BESTGUESS "2 - Best Guess"
+    IDS_EDITENTER_NONE      "0 - None"
+    IDS_EDITENTER_UP        "1 - Up"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_EDITENTER_DOWN      "2 - Down"
+    IDS_EDITENTER_LEFT      "3 - Left"
+    IDS_EDITENTER_RIGHT     "4 - Right"
+    IDS_EDITENTER_NEXT      "5 - Next"
+    IDS_EDITENTER_PREV      "6 - Previous"
+    IDS_EDITENTER_SAME      "7 - Same"
+    IDS_EDITENTER_NEXTROW   "8 - Next Row"
+    IDS_OPERATION_NORMAL    "0 - Normal"
+    IDS_OPERATION_READONLY  "1 - Read Only"
+    IDS_OPERATION_ROWMODE   "2 - Row Mode"
+    IDS_OPERATION_SINGLESEL "3 - Single Select"
+    IDS_OPERATION_MULTISEL  "4 - Multi Select"
+    IDS_OPERATION_EXTSEL    "5 - Extended Select"
+    IDS_POSITION_UL         "0 - Upper Left"
+    IDS_POSITION_UC         "1 - Upper Center"
+    IDS_POSITION_UR         "2 - Upper Right"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_POSITION_CL              "3 - Center Left"
+    IDS_POSITION_C               "4 - Center"
+    IDS_POSITION_CR              "5 - Center Right"
+    IDS_POSITION_BL              "6 - Bottom Left"
+    IDS_POSITION_BC              "7 - Bottom Center"
+    IDS_POSITION_BR              "8 - Bottom Right"
+    IDS_SCROLLBARS_NONE          "0 - None"
+    IDS_SCROLLBARS_HORZ          "1 - Horizontal"
+    IDS_SCROLLBARS_VERT          "2 - Vertical"
+    IDS_SCROLLBARS_BOTH          "3 - Both"
+    IDS_BACKCOLORSTYLE_OVERGRID  "0 - Over Grid"
+    IDS_BACKCOLORSTYLE_UNDERGRID "1 - Under Grid"
+    IDS_BACKCOLORSTYLE_OVERHORZGRIDONLY  "2 - Over Horizontal Grid Only"
+    IDS_BACKCOLORSTYLE_OVERVERTGRIDONLY  "3 - Over Vertical Grid Only"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERR_CALENDARLOCK    "Calendar: Could not lock memory"
+    IDS_ERR_NODBENGINE      "ODBC DataBase engine unavailable.\nPlease consult your Q+E manual."
+    IDS_ERR_DBENGINEHDR     "Design Time Error"
+    IDS_ERR_NO_QE_DLL       "Q+E Library DLL's not found in the Windows System directory!"
+    IDS_ERR_DLLERROR        "DLL Not Found"
+    IDS_ERR_ERROR           "Error"
+    IDS_ERR_NOLICENSE       "License file for custom control not found.  You do not have an appropriate license to use this custom control in the design environment.\n\nCall FarPoint At:\n    1-919-460-4551"
+END
+
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDSJ_UNITTYPE_NORMAL    "0 - デフォルト"
+    IDSJ_UNITTYPE_VGA       "1 - VGA Base"
+    IDSJ_UNITTYPE_TWIPS     "2 - Twips"
+    IDSJ_HEADERDISP_BLANK   "0 - 空白"
+    IDSJ_HEADERDISP_NUMBERS "1 - 数字"
+    IDSJ_HEADERDISP_LETTERS "2 - アルファベット"
+    IDSJ_DAUTOSIZE_OFF      "0 - 自動調整なし"
+    IDSJ_DAUTOSIZE_MAXCOL   "1 - 最長テキストによる自動調整"
+    IDSJ_DAUTOSIZE_BESTGUESS "2 - データ型による自動調整"
+    IDSJ_EDITENTER_NONE     "0 - 動作なし"
+    IDSJ_EDITENTER_UP       "1 - 上のセル"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDSJ_EDITENTER_DOWN     "2 - 下のセル"
+    IDSJ_EDITENTER_LEFT     "3 - 左のセル"
+    IDSJ_EDITENTER_RIGHT    "4 - 右のセル"
+    IDSJ_EDITENTER_NEXT     "5 - 次のセル"
+    IDSJ_EDITENTER_PREV     "6 - 前のセル"
+    IDSJ_EDITENTER_SAME     "7 - アクティブセル"
+    IDSJ_EDITENTER_NEXTROW  "8 - 次の行"
+    IDSJ_OPERATION_NORMAL   "0 - 標準"
+    IDSJ_OPERATION_READONLY "1 - 読出専用"
+    IDSJ_OPERATION_ROWMODE  "2 - 行モード"
+    IDSJ_OPERATION_SINGLESEL "3 - シングル選択"
+    IDSJ_OPERATION_MULTISEL "4 - マルチ選択"
+    IDSJ_OPERATION_EXTSEL   "5 - 拡張選択"
+    IDSJ_POSITION_UL        "0 - 上左"
+    IDSJ_POSITION_UC        "1 - 上中央"
+    IDSJ_POSITION_UR        "2 - 上右"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDSJ_POSITION_CL              "3 - 中央左"
+    IDSJ_POSITION_C               "4 - 中央"
+    IDSJ_POSITION_CR              "5 - 中央右"
+    IDSJ_POSITION_BL              "6 - 下左"
+    IDSJ_POSITION_BC              "7 - 下中央"
+    IDSJ_POSITION_BR              "8 - 下右"
+    IDSJ_SCROLLBARS_NONE          "0 - なし"
+    IDSJ_SCROLLBARS_HORZ          "1 - 水平"
+    IDSJ_SCROLLBARS_VERT          "2 - 垂直"
+    IDSJ_SCROLLBARS_BOTH          "3 - 両方"
+    IDSJ_BACKCOLORSTYLE_OVERGRID  "0 - グリッドの上"
+    IDSJ_BACKCOLORSTYLE_UNDERGRID "1 - グリッドの下"
+    IDSJ_BACKCOLORSTYLE_OVERHORZGRIDONLY  "2 - Over Horizontal Grid Only"
+    IDSJ_BACKCOLORSTYLE_OVERVERTGRIDONLY  "3 - Over Vertical Grid Only"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDSJ_ERR_CALENDARLOCK   "カレンダー：メモリをロックすることができませんでした。"
+    IDSJ_ERR_NODBENGINE     "ＯＤＢＣデータベースエンジンが見つかりません。\n詳細については、「Ｑ＋Ｅ」マニュアルを参照してください。"
+    IDSJ_ERR_DBENGINEHDR    "デザイン時エラー"
+    IDSJ_ERR_NO_QE_DLL      "Ｑ＋ＥのＤＬＬライブラリはパス内には見つかりません。"
+    IDSJ_ERR_DLLERROR       "ＤＬＬエラー"
+    IDSJ_ERR_ERROR          "エラー"
+    IDSJ_ERR_NOLICENSE      "カスタムコントロール用のライセンスファイルが見つかりません。\n正規ライセンスの購入については、文化オリエント(株) パワーツール係(022-373-1460)へ連絡ください。"
+END
+
+
+#ifdef APSTUDIO_INVOKED
+//////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""..\sssrc\dialog.h""\r\n"
+    "#include ""..\vbsrc\vbspread.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""stringrc.rc""\r\n"
+    "#include ""\fplibs\fptools\src\fpabout.rc""\r\n"
+    "#include ""\fplibs\codesent\src\codesent.rc""\r\n"
+    "\r\n"
+    "\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+
+#ifndef APSTUDIO_INVOKED
+////////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include    "stringrc.rc"
+#include    "\fplibs\fptools\src\fpabout.rc"
+#include    "\fplibs\codesent\src\codesent.rc"
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
+#include "splash.rc"
+#ifdef SS_V30
+#include "..\ssprvw\vbssprvw.rc"
+#endif

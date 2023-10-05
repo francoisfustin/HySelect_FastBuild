@@ -1,0 +1,229 @@
+.Host_Description =
+[
+    .Host_Processor = 'x86'
+]
+
+.VisualStudio_Version =
+[
+    .VisualStudio_Version_Main  = '2022'
+    .VisualStudio_Version_Build = '14.37.32822'
+]
+
+.VisualStudio_Directories =
+[
+    Using( .VisualStudio_Version )
+
+    .VisualStudio_BasePath = 'c:/Program Files/Microsoft Visual Studio/$VisualStudio_Version_Main$/Professional'
+]
+
+.VisualStudio_Include_Directories =
+[
+    Using( .VisualStudio_Version )
+    Using( .VisualStudio_Directories )
+    
+    .VisualStudio_IncludePath                = '$VisualStudio_BasePath$/VC/Tools/MSVC/$VisualStudio_Version_Build$/include'
+    .VisualStudio_IncludeATLMFCPath          = '$VisualStudio_BasePath$/VC/Tools/MSVC/$VisualStudio_Version_Build$/atlmfc/include'
+    .VisualStudio_IncludeCrtPath             = '$VisualStudio_BasePath$/VC/Tools/MSVC/$VisualStudio_Version_Build$/crt'
+    
+    ; This one is for the linker, compiler ...
+    .VisualStudio_Includes_Path              = ' /I"$VisualStudio_IncludePath$"'
+                                             + ' /I"$VisualStudio_IncludeATLMFCPath$"'
+                                             + ' /I"$VisualStudio_IncludeCrtPath$"'
+                                    
+    ; This one is for the environement variables.pTH
+    .VisualStudio_Includes_Environment_Path  = '$VisualStudio_IncludePath$'
+                                             + ';$VisualStudio_IncludeATLMFCPath$'
+                                             + ';$VisualStudio_IncludeCrtPath$'
+]
+
+.VisualStudio_Library_Directories =
+[
+	Using( .Host_Description )
+	Using( .VisualStudio_Version )
+    Using( .VisualStudio_Directories )
+    
+    .VisualStudio_LibraryPath                     = '$VisualStudio_BasePath$/VC/Tools/MSVC/$VisualStudio_Version_Build$/lib/$Host_Processor$'
+    .VisualStudio_LibraryATLMFCPath               = '$VisualStudio_BasePath$/VC/Tools/MSVC/$VisualStudio_Version_Build$/atlmfc/lib/$Host_Processor$'
+    .VisualStudio_AuxliliaryLibraryPath           = '$VisualStudio_BasePath$/VC/Auxiliary/VS/lib/$Host_Processor$'
+    .VisualStudio_AuxliliaryUnitTestLibraryPath   = '$VisualStudio_BasePath$/VC/Auxiliary/VS/lib/UnitTest/$Host_Processor$'
+    
+    ; This one is for the linker, compiler ...
+    .VisualStudio_Librairies_Path                 = ' /LIBPATH:"$VisualStudio_LibraryPath$"'
+                                                  + ' /LIBPATH:"$VisualStudio_LibraryATLMFCPath$"'
+                                                  + ' /LIBPATH:"$VisualStudio_AuxliliaryLibraryPath$"'
+                                                  + ' /LIBPATH:"$VisualStudio_AuxliliaryUnitTestLibraryPath$"'
+                                                
+    ; This one is for the environement variables.
+    .VisualStudio_Libraries_Environment_Path      = '$VisualStudio_LibraryPath$'
+                                                  + ';$VisualStudio_LibraryATLMFCPath$'
+                                                  + ';$VisualStudio_AuxliliaryLibraryPath$;'
+                                                  + '$VisualStudio_AuxliliaryUnitTestLibraryPath$'
+]
+
+.VisualStudio_Executable_Directories =
+[
+	Using( .Host_Description )
+	Using( .VisualStudio_Version )
+    Using( .VisualStudio_Directories )
+    
+    .VisualStudio_ExecutableFilePath           = '$VisualStudio_BasePath$/VC/Tools/MSVC/$VisualStudio_Version_Build$/bin/Hostx64/$Host_Processor$'
+    .VisualStudio_MSBuildPath                  = '$VisualStudio_BasePath$/MSBuild/Current/Bin'
+    
+    ; This one is for the environement variables.
+    .VisualStudio_Executables_Environment_Path = '$VisualStudio_ExecutableFilePath$'
+                                               + ';$VisualStudio_MSBuildPath$'
+]
+
+.VisualStudio_Executable_Tools = 
+[
+    Using( .VisualStudio_Executable_Directories )
+    .VisualStudio_Compiler          = '$VisualStudio_ExecutableFilePath$/cl.exe'
+    .VisualStudio_IncrementalLinker = '$VisualStudio_ExecutableFilePath$/link.exe'
+    .VisualStudio_LibraryGenerator  = '$VisualStudio_ExecutableFilePath$/lib.exe'
+    .VisualStudio_MSBuild           = '$VisualStudio_MSBuildPath$/MSBuild.exe'
+]
+
+.WindowsSDK_Version =
+[
+    .WindowsSDK_Version_Main  = '10'
+    .WindowsSDK_Version_Build = '10.0.22621.0'
+]
+
+.WindowsSDK_Directories =
+[
+    .WindowsSDK_BasePath = 'C:/Program Files (x86)/Windows Kits'
+]
+
+.WindowsSDK_Include_Directories =
+[
+    Using( .WindowsSDK_Version )
+    Using( .WindowsSDK_Directories )
+    
+    .WindowsSDK_IncludeCppWinRTPath       = '$WindowsSDK_BasePath$/$WindowsSDK_Version_Main$/Include/$WindowsSDK_Version_Build$/cppwinrt'
+    .WindowsSDK_IncludeSharedPath         = '$WindowsSDK_BasePath$/$WindowsSDK_Version_Main$/Include/$WindowsSDK_Version_Build$/shared'
+    .WindowsSDK_IncludeUcrtPath           = '$WindowsSDK_BasePath$/$WindowsSDK_Version_Main$/Include/$WindowsSDK_Version_Build$/ucrt'
+    .WindowsSDK_IncludeUmPath             = '$WindowsSDK_BasePath$/$WindowsSDK_Version_Main$/Include/$WindowsSDK_Version_Build$/um'
+    
+    ; This one is for the linker, compiler ...
+    .WindowsSDK_Includes_Path             = ' /I"$WindowsSDK_IncludeCppWinRTPath$"'
+                                          + ' /I"$WindowsSDK_IncludeSharedPath$"'
+                                          + ' /I"$WindowsSDK_IncludeUcrtPath$"'
+                                          + ' /I"$WindowsSDK_IncludeUmPath$"'
+                                    
+    ; This one is for the environement variables.
+    .WindowsSDK_Includes_Environment_Path = '$WindowsSDK_IncludeCppWinRTPath$'
+                                          + ';$WindowsSDK_IncludeSharedPath$'
+                                          + ';$WindowsSDK_IncludeUcrtPath$'
+                                          + ';$WindowsSDK_IncludeUmPath$'
+]
+
+.WindowsSDK_Library_Directories =
+[
+	Using( .Host_Description )
+	Using( .WindowsSDK_Version )
+    Using( .WindowsSDK_Include_Directories )
+    
+    .WindowsSDK_LibraryUcrtPath             = '$WindowsSDK_BasePath$/$WindowsSDK_Version_Main$/lib/$WindowsSDK_Version_Build$/ucrt/$Host_Processor$'
+    .WindowsSDK_LibraryUmPath               = '$WindowsSDK_BasePath$/$WindowsSDK_Version_Main$/lib/$WindowsSDK_Version_Build$/um/$Host_Processor$'
+    
+     ; This one is for the linker, compiler ...
+    .WindowsSDK_Librairies_Path             = ' /LIBPATH:"$WindowsSDK_LibraryUcrtPath$"'
+                                            + ' /LIBPATH:"$WindowsSDK_LibraryUmPath$"'
+    
+    ; This one is for the environement variables.
+    .WindowsSDK_Librairies_Environment_Path = '$WindowsSDK_LibraryUcrtPath$'
+                                            + ';$WindowsSDK_LibraryUmPath$'
+]
+
+.WindowsSDK_Executable_Directories =
+[
+    Using( .Host_Description )
+    Using( .WindowsSDK_Version )
+    Using( .WindowsSDK_Directories )
+    
+    .WindowsSDK_ExecutableFilePath = '$WindowsSDK_BasePath$/$WindowsSDK_Version_Main$/bin/$WindowsSDK_Version_Build$/$Host_Processor$'
+]
+
+.WindowsSDK_Executable_Tools =
+[
+    Using( .WindowsSDK_Executable_Directories )
+    
+    .WindowsSDK_ResourceCompiler = '$WindowsSDK_ExecutableFilePath$/rc.exe'
+]
+
+Settings
+{                       
+	Using( .VisualStudio_Include_Directories )
+	Using( .VisualStudio_Library_Directories )
+	Using( .VisualStudio_Executable_Directories )
+	
+	Using( .WindowsSDK_Include_Directories )
+	Using( .WindowsSDK_Library_Directories )
+	Using( .WindowsSDK_Executable_Directories )
+	
+    // General
+    .Environment = {
+        "ALLUSERSPROFILE=C:\ProgramData",
+        "APPDATA=C:\Users\BEFRFU\AppData\Roaming",
+        "CommonProgramFiles=C:\Program Files\Common Files",
+        "CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files",
+        "CommonProgramW6432=C:\Program Files\Common Files",
+        "COMPUTERNAME=IMIHBEMSGC03",
+    	"ComSpec=%SystemRoot%\system32\cmd.exe",
+        "DriverData=C:\Windows\System32\Drivers\DriverData",
+        "GIT_LFS_PATH=C:\Users\BEFRFU\AppData\Local\Programs\Git LFS",
+        "HOMEDRIVE=C:",
+        "HOMEPATH=\Users\BEFRFU",
+        "LOCALAPPDATA=C:\Users\BEFRFU\AppData\Local",
+        "LOGONSERVER=\\IMIHEADDC04",
+        "NUMBER_OF_PROCESSORS=12",
+        "OneDrive=C:\Users\BEFRFU\OneDrive"
+        "OS=Windows_NT",
+    	"PATH=$VisualStudio_Includes_Environment_Path$;$VisualStudio_Libraries_Environment_Path$;$VisualStudio_Executables_Environment_Path$;$WindowsSDK_Includes_Environment_Path$;$WindowsSDK_Librairies_Environment_Path$;$WindowsSDK_ExecutableFilePath$;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;%SYSTEMROOT%\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Incredibuild;d:\CBXtools\MinGW\bin\;d:\CBXtools\Msys\bin\;d:\CBXtools\yagarto_cbx\bin\;C:\Program Files\IDM Computer Solutions\UltraEdit;%TTPRO_APPDIR%;C:\Program Files\PowerShell\7\;C:\Users\BEFRFU\AppData\Local\Programs\Git LFS;C:\Program Files\PuTTY\;c:\Users\BEFRFU\AppData\Local\Programs\Python\Python311\;c:\Users\BEFRFU\AppData\Local\Programs\Python\Python311\Scripts;C:\Program Files\Seapine\Surround SCM;C:\Program Files\dotnet\;c:\Program Files\7-Zip\;C:\Program Files\Git\cmd;c:\DocTA\Software\FastBuild\",
+        "PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC",
+        "POWERSHELL_DISTRIBUTION_CHANNEL=MSI:Windows 10 Enterprise",
+        "PROCESSOR_ARCHITECTURE=AMD64",
+        "PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 158 Stepping 10, GenuineIntel",
+        "PROCESSOR_LEVEL=6",
+        "PROCESSOR_REVISION=9e0a",
+        "ProgramData=C:\ProgramData",
+        "ProgramFiles=C:\Program Files",
+        "ProgramFiles(x86)=C:\Program Files (x86)",
+        "ProgramW6432=C:\Program Files",
+        "PROMPT=^$P^$G",
+        "PSModulePath=%ProgramFiles%\WindowsPowerShell\Modules;%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules",
+        "PUBLIC=C:\Users\Public",
+        "SystemDrive=C:",
+        "SystemRoot=C:\WINDOWS",
+        "TEMP=C:\Users\BEFRFU\AppData\Local\Temp",
+        "TMP=C:\Users\BEFRFU\AppData\Local\Temp",
+        "TTPRO_APPDIR=C:\Program Files\Seapine\TestTrack",
+        "USERDNSDOMAIN=TA-CLOUD.COM",
+        "USERDOMAIN=TA-CLOUD",
+        "USERDOMAIN_ROAMINGPROFILE=TA-CLOUD",
+        "USERNAME=SYSTEM",
+        "USERPROFILE=C:\Users\BEFRFU",
+        "VBOX_MSI_INSTALL_PATH=C:\Program Files\Oracle\VirtualBox\",
+        "VPROCESSOR_REVISION=9e0a",
+        "windir=%SystemRoot%",
+        "ZES_ENABLE_SYSMAN=1"
+        }
+
+    // Caching
+    ;.CachePath                        // (optional) Path to cache location
+    ;.CachePathMountPoint              // (optional) Require that path be a mount point (OSX & Linux only)
+    ;.CachePluginDLL                   // (optional) User plugin to manage cache back-end
+    ;.CachePluginDLLConfig				// (optional) USer configuration string to pass to CachePluginDLL
+    
+    // Distribution
+    ;.Workers                          // (optional) Fixed list of workers if not using automatic discovery
+    ;.WorkerConnectionLimit            // (optional) Limit number of connected workers (default: 15)
+    ;.DistributableJobMemoryLimitMiB   // (optional) Limit memory used locally to prep jobs (default: 2048)
+}
+
+Compiler( "Compiler-x86" )
+{
+    Using( .VisualStudio_Executable_Tools )
+	.Executable = '$VisualStudio_Compiler$'
+	.CompilerFamily = 'msvc'
+}

@@ -1,0 +1,4559 @@
+////////////////////////////////////////////////////////////////
+//
+//		Tadb_SafetyValve.txt : Complement to Tadb.txt containing
+//					 	safety valves product definitions
+//
+////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////
+// For safety valves and accessories.
+////////////////////////////////////////////////////////////////
+
+new:CTable(SAFETYVALVE_TAB) -> ROOT_TABLE
+{
+	"Safety valves"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CTable(SFTYVTYPE_TAB) -> LIST_TAB
+{
+	"Safety valve types"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CTable(SFTYVFAMILY_TAB) -> LIST_TAB
+{
+	"Safety valve families"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CTable(SFTYVVERSION_TAB) -> LIST_TAB
+{
+	"Safety valve versions"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+////////////////////////////////////////////////////////////////
+// HYS-1741: IPI March 2021
+// For accessories and service.
+////////////////////////////////////////////////////////////////
+
+new:CTable(ACCSERVICEFAM_TAB) -> LIST_TAB
+{
+	"Accessories and service families"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+////////////////////////////////////////////////////////////////////
+//
+//		Table SVHEATGENTYPE_TAB : Ordered enumeration of heat generator types
+//
+///////////////////////////////////////////////////////////////////
+
+new:CTable(SVHEATGENTYPE_TAB) -> LIST_TAB
+{
+	"Table listing heat generator types"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_StringID(HEATGENTYPEDIR) ->SVHEATGENTYPE_TAB
+{
+	{
+		"IDS_SAFETYVALVE_SYSTEMHEATGENERATORTYPE_DIRECT"
+	}
+	1
+	NO_ID
+}
+
+new:CDB_StringID(HEATGENTYPEINDIR) ->SVHEATGENTYPE_TAB
+{
+	{
+		"IDS_SAFETYVALVE_SYSTEMHEATGENERATORTYPE_INDIRECT"
+	}
+	2
+	NO_ID
+}
+
+////////////////////////////////////////////////////////////////////
+//
+//		Table SFTYVTYPE_TAB : Ordered enumeration of the types of
+//							 safety valves.
+//
+///////////////////////////////////////////////////////////////////
+
+new:CDB_StringID(SFTYVTYPE_H) ->SFTYVTYPE_TAB
+{
+	{
+		"IDS_SAFETYVALVE_TYPEHEATING"
+	}
+	1
+	SAFETYVALVE_TAB
+}
+
+new:CDB_StringID(SFTYVTYPE_C) ->SFTYVTYPE_TAB
+{
+	{
+		"IDS_SAFETYVALVE_TYPECOOLING"
+	}
+	2
+	SAFETYVALVE_TAB
+}
+
+new:CDB_StringID(SFTYVTYPE_S) ->SFTYVTYPE_TAB
+{
+	{
+		"IDS_SAFETYVALVE_TYPESOLAR"
+	}
+	3
+	SAFETYVALVE_TAB
+}
+
+// HYS-1741: IPI March 2021
+// HYS-1898: IPI March 2022: "Pressure reducing valves" is renamed into "Pressure reducer".
+new:CDB_StringID(ACCSERVICETYPE_PRV) ->SFTYVTYPE_TAB
+{
+	{
+		"IDS_ACCSERVICETYPE_PRV"			// Pressure reducer
+	}
+	4
+	SAFETYVALVE_TAB
+}
+
+////////////////////////////////////////////////////////////////////
+//
+//		Table SFTYVFAMILY_TAB : Ordered enumeration of the families of
+//							 safety valves.
+//
+///////////////////////////////////////////////////////////////////
+
+new:CDB_StringID(SFTYVFAM_H) ->SFTYVFAMILY_TAB
+{
+	{
+		"DSV...H"
+	}
+	1
+	SFTYVTYPE_H
+}
+
+new:CDB_StringID(SFTYVFAM_DGH) ->SFTYVFAMILY_TAB
+{
+	{
+		"DSV...DGH"
+	}
+	2
+	SFTYVTYPE_H
+}
+
+new:CDB_StringID(SFTYVFAM_F) ->SFTYVFAMILY_TAB
+{
+	{
+		"DSV...F"
+	}
+	3
+	SFTYVTYPE_C
+}
+
+new:CDB_StringID(SFTYVFAM_SOL) ->SFTYVFAMILY_TAB
+{
+	{
+		"DSV...SOL"
+	}
+	4
+	SFTYVTYPE_S
+}
+
+// HYS-1741: IPI March 2021
+///////////////////////////////////////////////////////////////////
+//
+//		Table ACCSERVICEFAM_TAB : Ordered enumeration of the families of
+//				accessories and service.
+//
+///////////////////////////////////////////////////////////////////
+
+// HYS-1898: IPI March 2022: "Pressure reducing valve G06F" is renamed into "Pressoreduct".
+new:CDB_StringID(ACCSFAM_PRV_G06F) ->ACCSERVICEFAM_TAB
+{
+	{
+		"IDS_ACCSFAM_PRV_G06F"		// Pressoreduct
+	}
+	1
+	ACCSERVICETYPE_PRV
+}
+
+////////////////////////////////////////////////////////////////////
+//
+//		Table SFTYVVERSION_TAB : Ordered enumeration of the versions of
+//							 safety valves.
+//
+///////////////////////////////////////////////////////////////////
+
+new:CDB_StringID(SFTYVVER_DIAPH) ->SFTYVVERSION_TAB
+{
+	{
+		"IDS_SAFETYVALVE_VERSIONDIAPHRAGM"
+	}
+	1
+	SAFETYVALVE_TAB
+}
+
+new:CDB_StringID(SFTYVVER_BELLOWS) ->SFTYVVERSION_TAB
+{
+	{
+		"IDS_SAFETYVALVE_VERSIONBELLOWS"
+	}
+	2
+	SAFETYVALVE_TAB
+}
+
+///////////////////////////////////////////////////////////////////
+//
+//		Table MEDIUMTYPE_TAB : Ordered enumeration of the different
+//							medium types.
+///////////////////////////////////////////////////////////////////
+
+new:CTable(MEDIUMTYPE_TAB\1) -> LIST_TAB
+{
+	"Medium types"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_StringID(MEDTYPE_HOTW) ->MEDIUMTYPE_TAB
+{
+	{
+		"IDS_SAFETYVALVE_MEDIUMTYPE_HOTWATER"
+	}
+	1
+	""
+}
+
+new:CDB_StringID(MEDTYPE_WWGLYC) ->MEDIUMTYPE_TAB
+{
+	{
+		"IDS_SAFETYVALVE_MEDIUMTYPE_WATERWATERGLYCOLMIX"
+	}
+	2
+	""
+}
+
+new:CDB_StringID(MEDTYPE_SHWORMIX) ->MEDIUMTYPE_TAB
+{
+	{
+		"IDS_SAFETYVALVE_MEDIUMTYPE_SOLARHOTWATERORMIX"
+	}
+	3
+	""
+}
+
+new:CDB_StringID(MEDTYPE_STEAMHOTW) ->MEDIUMTYPE_TAB
+{
+	{
+		"IDS_SAFETYVALVE_MEDIUMTYPE_STEAMHOTWATER"
+	}
+	4
+	""
+}
+
+///////////////////////////////////////////////////////////////////
+//
+//		Table MEDIUMTYPE_TAB : Ordered enumeration of the different
+//							lifting mechanisme types.
+///////////////////////////////////////////////////////////////////
+
+new:CTable(LIFTINGTYPE_TAB\1) -> LIST_TAB
+{
+	"Lifting mechanism types"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_StringID(LIFTTYPE_TWIST) ->LIFTINGTYPE_TAB
+{
+	{
+		"IDS_SAFETYVALVE_LIFTINGTYPE_TWIST"
+	}
+	1
+	""
+}
+
+new:CDB_StringID(LIFTTYPE_LEVER) ->LIFTINGTYPE_TAB
+{
+	{
+		"IDS_SAFETYVALVE_LIFTINGTYPE_LEVER"
+	}
+	2
+	""
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+//
+//								CDB_SafetyValveHeating
+//
+//	Inherite from CDB_SafetyValveBase
+//
+//	new:CDB_SafetyValveHeating(ID)->SAFETYVALVE_TAB
+//	{
+//		{
+//			{
+//				{
+//					{
+//						{
+//							0				isDeleted
+//							1				isAvailable
+//							0				isHidden
+//							1				isFix
+//							0				Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation )
+//							0				Free integer (bit 0: NotForIndSel, bit 1: NotForDirSel, bit 2: NotForHMCalc)
+//							0               Sort integer (Allow to show a group of articles in the order defined with this variable).
+//						}
+//						Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+//						PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+//						Tmax in °C
+//						Tmin in °C
+//					}
+//					"Reference"				Reference to the TA Product
+//					"Name"					Name of the product
+//					TypeID					Identifier of the valve type 
+//					FamilyID				Identifier of the family of the product
+//					VersionID				Identifier of the version of the product
+//					PriorityLevel			Level of priority for selection [1,10]
+//					Comment					Product comment
+//					ProdImgID				Product image ID
+//					AccessGroupID			Identifier of the accessory group
+//					PartOfaSet				Boolean indicating if the valve is part of a ActSet
+//					Price					Price of the product
+// 					ProductUseFlag			#eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+//					AccessorySeriesID		Identifier of the series of the accessory
+//					isAttached				0/1: 1 if accessory cannot be ordered separately		
+//   				AccTypeID				Identifier of Accessory type if #eBoth 
+//					AccFamilyID				Identifier of Accessory family if #eBoth
+//				}
+//				BodyMaterialID			Identifier of the body material
+//				SizeID					Identifier of the corresp. valve size
+//				ConnectID				Identifier of the (inlet/pipe side) connection
+//				ConnTabID				Identifier of the connection table, can be NO_ID
+//				Conn2ID					Identifier of the outlet/body side connection, can be NO_ID
+//				CBIType					Type of the valve as used in the CBI II
+//				CBISize					Size of the valve as used in the CBI II
+//				CBISizeInch				Size of the valve in inch as used in the CBI II
+//				CBICompatibilityIndex	CBI compatibility Index
+//				CBIVersion				CBI Version
+//				Dpmax					Maximum Dp of the valve
+//				MeasPt					Measuring points
+//				MeasurableData			Measurable data
+//				InletSizeID				Identifier of the inlet size ID
+//				OutletSizeID			Identifier of the outlet size ID
+//			}
+//			SetPressure				psv of the safety valve.
+//			MediumNameID			Identifier of the medium type.
+//			LiftingTypeID			Identifier of the lifting type.
+//			TopOutHeight			Height (H) between the top of the product and the middle of the output (Sout).
+//			OutBotHeight			Height (h) between the middle of the output (Sout) and the bottom of the product.
+//			Width					Width (L) between input (Sin) and output (Sout).
+//			Weight					Weight (m) of the product.
+//			BlowTankID				Identifier of the blow tank.
+//		}
+//		PowerLimitDirect		Maximum power allowed for the safety valve for directly heated system.
+//		PowerLimitIndirect		Maximum power allowed for the safety valve for indirectly heated system.
+//
+////////////////////////////////////////////////////////////////
+// Inherited Fields
+//	CDB_Thing::Deleted
+//	CDB_Thing::Available
+//	CDB_Thing::Hidden
+//	CDB_Thing::Fixed
+//	CDB_Thing::FreeInt1
+//	CDB_Thing::FreeInt2
+//	CDB_Thing::SortInt
+//
+//	CDB_HydroThing::Pmax
+//	CDB_HydroThing::PNRange
+//	CDB_HydroThing::Tmax
+//	CDB_HydroThing::Tmin
+//
+//	CDB_Product::Reference
+//	CDB_Product::Name
+//	CDB_Product::TypeID
+//	CDB_Product::FamilyID
+//	CDB_Product::VersionID
+//	CDB_Product::PriorityLevel
+//	CDB_Product::Comment
+//	CDB_Product::ProdImgID
+//	CDB_Product::AccessGroupID
+//	CDB_Product::PartOfaSet
+//  CDB_Product::TableSetID
+//	CDB_Product::Price
+//	CDB_Product::ProductUseFlag
+//	CDB_Product::AccessorySeriesID
+//	CDB_Product::isAttached
+//	CDB_Product::AccTypeID
+//	CDB_Product::AccFamilyID
+//
+//	CDB_TAProduct::BodyMaterialID
+//	CDB_TAProduct::SizeID
+//	CDB_TAProduct::ConnectID
+//  CDB_TAProduct::ConnTabID
+//  CDB_TAProduct::Conn2ID
+//  CDB_TAProduct::CBIType
+//  CDB_TAProduct::CBISize
+//  CDB_TAProduct::CBISizeInch
+//  CDB_TAProduct::CBICompatibilityIndex
+//  CDB_TAProduct::CBIVersion
+//  CDB_TAProduct::Dpmax
+//  CDB_TAProduct::MeasPt
+//  CDB_TAProduct::MeasurableData
+//  CDB_TAProduct::InletSizeID
+//  CDB_TAProduct::OutletSizeID
+
+//  CDB_SafetyValveBase::SetPressure
+//  CDB_SafetyValveBase::MediumNameID
+//  CDB_SafetyValveBase::LiftingTypeID
+//  CDB_SafetyValveBase::TopOutHeight
+//  CDB_SafetyValveBase::OutBotHeight
+//  CDB_SafetyValveBase::Width
+//  CDB_SafetyValveBase::Weight
+//  CDB_SafetyValveBase::BlowTankID
+//
+//  CDB_SafetyValveHeating::PowerLimitDirect
+//  CDB_SafetyValveHeating::PowerLimitIndirect
+// }
+
+//****************************
+// DSV-H
+//****************************
+
+new:CDB_SafetyValveHeating(DSVH_15_3) -> SAFETYVALVE_TAB
+{
+	{
+		{
+			{
+				{
+					{
+						0											// isDeleted
+						1											// isAvailable
+						0											// isHidden
+						1											// isFix
+						0											// Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+						0											// Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+						0               							// Sort integer (Allow to show a group of articles in the order defined with this variable).
+					}
+					3.0e+5 \ 3.0e+5								// Pmaxmin and Pmaxmax  in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+					NO_ID										// Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+					120	        								// Tmax in �C
+					-10             							// Tmin in �C
+				}
+				"537 1030"									// Reference to the Product
+				"DSV 15-3.0 H"								// Name of the product
+				SFTYVTYPE_H									// Identifier of the product type
+				SFTYVFAM_H									// Identifier of the family of the product
+				SFTYVVER_DIAPH								// Identifier of the version of the product
+				1											// Level of priority for selection [1,10]
+				""											// Product comment
+				"PX_DSV_H_F_SOL"			 				// Product image ID
+				NO_ID										// Identifier of the accessory group
+				#ePartOfaSetNo 								// Boolean indicating if the valve is part of a ActSet
+				NO_ID										// Table ID where are sets if exist for the current product.
+				0.0											// Price
+				#eProduct                       			// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+				NO_ID                           			// Identifier of the series of the accessory (mainly used in DlgDirSel)
+				0                               			// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+				NO_ID                           			// Identifier of the accessory type if #eBoth 
+				NO_ID										// Identifier of the accessory family if #eBoth	
+			}
+			BDY_GUNMETAL								// Identifier of the body material
+			DN_15                                       // Identifier of the corresp. valve size
+			CONN_THREAD                                 // Identifier of the (inlet/pipe side) connection
+			NO_ID                                       // Identifier of the connection table, can be NO_ID
+			CONN_THREAD                                 // Identifier of the outlet/body side connection, can be NO_ID
+			""                                          // Type of the valve as used in the CBI II
+			""                                          // Size of the valve as used in the CBI II
+			""                                          // Size of the valve in inch as used in the CBI II
+			0                                           // CBI compatibility Index
+			""                                          // CBI Version
+			3.0e+5                                      // Maximum Dp of the valve
+			#eMeasPointNone						        // Measuring points. #eMeasPointNone or a combination of #eMeasPointInlet, #eMeasPointOutlet, #eMeasPointMeasStatOut or #eMeasPointP+.
+			#eMeasDataNone								// Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+			CONSIZE_FG1_2								// Identifier of the inlet size ID
+			CONSIZE_FG3_4								// Identifier of the outlet size ID
+		}
+		3.0e+5										// psv of the safety valve.
+		MEDTYPE_HOTW								// Identifier of the medium type.
+		LIFTTYPE_TWIST								// Identifier of the lifting type.
+		0.07										// Total height (H) of the product.
+		0.028										// Height (h) where are located the output (Sout).
+		0.034										// Width (L) between input (Sin) and output (Sout).
+		0.3											// Weight (m) of the product.
+		BLOWTANK_ALLOCATION							// Identifier of the blow tank allocation table.
+	}
+	5.0e+4										// Maximum power allowed for the safety valve for directly heated system.
+	5.0e+4										// Maximum power allowed for the safety valve for indirectly heated system.
+}
+
+new:CDB_SafetyValveHeating(DSVH_20_3) -> SAFETYVALVE_TAB
+{Inherited(DSVH_15_3)
+	{
+		CDB_Product::Reference		= "537 2030"
+		CDB_Product::Name			= "DSV 20-3.0 H"
+		CDB_TAProduct::SizeID		= DN_20
+		CDB_TAProduct::InletSizeID  = CONSIZE_FG3_4
+		CDB_TAProduct::OutletSizeID = CONSIZE_FG1
+		CDB_SafetyValveBase::TopOutHeight = 0.065
+		CDB_SafetyValveBase::OutBotHeight = 0.034
+		CDB_SafetyValveBase::Width  = 0.04
+		CDB_SafetyValveBase::Weight = 0.45
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.0e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.0e+5
+	}
+}
+
+new:CDB_SafetyValveHeating(DSVH_25_3) -> SAFETYVALVE_TAB
+{Inherited(DSVH_15_3)
+	{
+		CDB_Product::Reference		= "537 3030"
+		CDB_Product::Name			= "DSV 25-3.0 H"
+		CDB_TAProduct::SizeID		= DN_25
+		CDB_TAProduct::InletSizeID  = CONSIZE_FG1
+		CDB_TAProduct::OutletSizeID = CONSIZE_FG1_1_4
+		CDB_SafetyValveBase::TopOutHeight = 0.075
+		CDB_SafetyValveBase::OutBotHeight = 0.041
+		CDB_SafetyValveBase::Width  = 0.045
+		CDB_SafetyValveBase::Weight = 0.75
+		CDB_SafetyValveHeating::PowerLimitDirect   = 2.0e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 2.0e+5
+	}
+}
+
+new:CDB_SafetyValveHeating(DSVH_32_3) -> SAFETYVALVE_TAB
+{Inherited(DSVH_15_3)
+	{
+		CDB_Product::Reference		= "537 4030"
+		CDB_Product::Name			= "DSV 32-3.0 H"
+		CDB_TAProduct::SizeID		= DN_32
+		CDB_TAProduct::InletSizeID  = CONSIZE_FG1_1_4
+		CDB_TAProduct::OutletSizeID = CONSIZE_FG1_1_2
+		CDB_SafetyValveBase::TopOutHeight = 0.085
+		CDB_SafetyValveBase::OutBotHeight = 0.047
+		CDB_SafetyValveBase::Width  = 0.055
+		CDB_SafetyValveBase::Weight = 1.1
+		CDB_SafetyValveHeating::PowerLimitDirect   = 3.5e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 3.5e+5
+	}
+}
+
+new:CDB_SafetyValveHeating(DSVH_40_3) -> SAFETYVALVE_TAB
+{Inherited(DSVH_15_3)
+	{
+		CDB_Product::Reference		= "537 5030"
+		CDB_Product::Name			= "DSV 40-3.0 H"
+		CDB_TAProduct::SizeID		= DN_40
+		CDB_TAProduct::InletSizeID  = CONSIZE_FG1_1_2
+		CDB_TAProduct::OutletSizeID = CONSIZE_FG2
+		CDB_SafetyValveBase::TopOutHeight = 0.155
+		CDB_SafetyValveBase::OutBotHeight = 0.054
+		CDB_SafetyValveBase::Width  = 0.062
+		CDB_SafetyValveBase::Weight = 2.2
+		CDB_SafetyValveHeating::PowerLimitDirect   = 6.0e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 6.0e+5
+	}
+}
+
+new:CDB_SafetyValveHeating(DSVH_50_3) -> SAFETYVALVE_TAB
+{Inherited(DSVH_15_3)
+	{
+		CDB_Product::Reference		= "537 6030"
+		CDB_Product::Name			= "DSV 50-3.0 H"
+		CDB_TAProduct::SizeID		= DN_50
+		CDB_TAProduct::InletSizeID  = CONSIZE_FG2
+		CDB_TAProduct::OutletSizeID = CONSIZE_FG2_1_2
+		CDB_SafetyValveBase::TopOutHeight = 0.185
+		CDB_SafetyValveBase::OutBotHeight = 0.065
+		CDB_SafetyValveBase::Width  = 0.075
+		CDB_SafetyValveBase::Weight = 3.2
+		CDB_SafetyValveHeating::PowerLimitDirect   = 9.0e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 9.0e+5
+	}
+}
+
+//****************************
+// DSV...DGH - DN15
+//****************************
+
+new:CDB_SafetyValveHeating(DSV15_2.0_DGH) -> SAFETYVALVE_TAB
+{
+	{
+		{
+			{
+				{
+					{
+						0											// isDeleted
+						1											// isAvailable
+						0											// isHidden
+						1											// isFix
+						0											// Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+						0											// Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+						0               							// Sort integer (Allow to show a group of articles in the order defined with this variable).
+					}
+					2.5e+6 \ 2.5e+6								// Pmaxmin and Pmaxmax  in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+					NO_ID										// Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+					120	        								// Tmax in �C
+					-10             							// Tmin in �C
+				}
+				"536 1020"									// Reference to the Product
+				"DSV 15-2.0 DGH"							// Name of the product
+				SFTYVTYPE_H									// Identifier of the product type
+				SFTYVFAM_DGH								// Identifier of the family of the product
+				SFTYVVER_DIAPH								// Identifier of the version of the product
+				1											// Level of priority for selection [1,10]
+				""											// Product comment
+				"PX_DSV_DGH_15_32"			 				// Product image ID
+				NO_ID										// Identifier of the accessory group
+				#ePartOfaSetNo 								// Boolean indicating if the valve is part of a ActSet
+				NO_ID										// Table ID where are sets if exist for the current product.
+				0.0											// Price
+				#eProduct                       			// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+				NO_ID                           			// Identifier of the series of the accessory (mainly used in DlgDirSel)
+				0                               			// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+				NO_ID                           			// Identifier of the accessory type if #eBoth 
+				NO_ID										// Identifier of the accessory family if #eBoth	
+			}
+			BDY_GUNMETAL								// Identifier of the body material
+			DN_15                                       // Identifier of the corresp. valve size
+			CONN_THREAD                                 // Identifier of the (inlet/pipe side) connection
+			NO_ID                                       // Identifier of the connection table, can be NO_ID
+			CONN_THREAD                                 // Identifier of the outlet/body side connection, can be NO_ID
+			""                                          // Type of the valve as used in the CBI II
+			""                                          // Size of the valve as used in the CBI II
+			""                                          // Size of the valve in inch as used in the CBI II
+			0                                           // CBI compatibility Index
+			""                                          // CBI Version
+			2.0e+5                                      // Maximum Dp of the valve
+			#eMeasPointNone						        // Measuring points. #eMeasPointNone or a combination of #eMeasPointInlet, #eMeasPointOutlet, #eMeasPointMeasStatOut or #eMeasPointP+.
+			#eMeasDataNone								// Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+			CONSIZE_FG1_2								// Identifier of the inlet size ID
+			CONSIZE_FG1									// Identifier of the outlet size ID
+		}
+		2.0e+5										// psv of the safety valve.
+		MEDTYPE_HOTW								// Identifier of the medium type.
+		LIFTTYPE_LEVER								// Identifier of the lifting type.
+		0.091										// Total height (H) of the product.
+		0.03										// Height (h) where are located the output (Sout).
+		0.04										// Width (L) between input (Sin) and output (Sout).
+		0.4											// Weight (m) of the product.
+		BLOWTANK_ALLOCATION							// Identifier of the blow tank allocation table.
+	}
+	6.8e+4										// Maximum power allowed for the safety valve for directly heated system.
+	3.6e+6										// Maximum power allowed for the safety valve for indirectly heated system.
+}
+
+new:CDB_SafetyValveHeating(DSV15_2.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV15_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 1025"
+		CDB_Product::Name			= "DSV 15-2.5 DGH"
+		CDB_TAProduct::Dpmax		= 2.5e+5
+		CDB_SafetyValveBase::SetPressure = 2.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 7.9e+4
+		CDB_SafetyValveHeating::PowerLimitIndirect = 4.0e+6
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV15_3.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV15_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 1030"
+		CDB_Product::Name			= "DSV 15-3.0 DGH"
+		CDB_TAProduct::Dpmax		= 3.0e+5
+		CDB_SafetyValveBase::SetPressure = 3.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 8.9e+4
+		CDB_SafetyValveHeating::PowerLimitIndirect = 4.4e+6
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV15_3.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV15_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 1035"
+		CDB_Product::Name			= "DSV 15-3.5 DGH"
+		CDB_TAProduct::Dpmax		= 3.5e+5
+		CDB_SafetyValveBase::SetPressure = 3.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 9.9e+4
+		CDB_SafetyValveHeating::PowerLimitIndirect = 4.7e+6
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV15_4.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV15_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 1040"
+		CDB_Product::Name			= "DSV 15-4.0 DGH"
+		CDB_TAProduct::Dpmax		= 4.0e+5
+		CDB_SafetyValveBase::SetPressure = 4.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.09e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 5.0e+6
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV15_4.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV15_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 1045"
+		CDB_Product::Name			= "DSV 15-4.5 DGH"
+		CDB_TAProduct::Dpmax		= 4.5e+5
+		CDB_SafetyValveBase::SetPressure = 4.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.19e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 5.3e+6
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV15_5.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV15_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 1055"
+		CDB_Product::Name			= "DSV 15-5.5 DGH"
+		CDB_TAProduct::Dpmax		= 5.5e+5
+		CDB_SafetyValveBase::SetPressure = 5.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.39e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 5.9e+6
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV15_6.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV15_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 1060"
+		CDB_Product::Name			= "DSV 15-6.0 DGH"
+		CDB_TAProduct::Dpmax		= 6.0e+5
+		CDB_SafetyValveBase::SetPressure = 6.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.49e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 6.2e+6
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV15_7.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV15_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 1070"
+		CDB_Product::Name			= "DSV 15-7.0 DGH"
+		CDB_TAProduct::Dpmax		= 7.0e+5
+		CDB_SafetyValveBase::SetPressure = 7.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.68e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 6.6e+6
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV15_7.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV15_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 1075"
+		CDB_Product::Name			= "DSV 15-7.5 DGH"
+		CDB_TAProduct::Dpmax		= 7.5e+5
+		CDB_SafetyValveBase::SetPressure = 7.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.78e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 6.9e+6
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV15_8.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV15_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 1080"
+		CDB_Product::Name			= "DSV 15-8.0 DGH"
+		CDB_TAProduct::Dpmax		= 8.0e+5
+		CDB_SafetyValveBase::SetPressure = 8.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.87e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 7.1e+6
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV15_8.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV15_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 1085"
+		CDB_Product::Name			= "DSV 15-8.5 DGH"
+		CDB_TAProduct::Dpmax		= 8.5e+5
+		CDB_SafetyValveBase::SetPressure = 8.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.97e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 7.3e+6
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV15_9.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV15_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 1090"
+		CDB_Product::Name			= "DSV 15-9.0 DGH"
+		CDB_TAProduct::Dpmax		= 9.0e+5
+		CDB_SafetyValveBase::SetPressure = 9.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 2.06e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 7.5e+6
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV15_9.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV15_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 1095"
+		CDB_Product::Name			= "DSV 15-9.5 DGH"
+		CDB_TAProduct::Dpmax		= 9.5e+5
+		CDB_SafetyValveBase::SetPressure = 9.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 2.15e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 7.7e+6
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV15_10.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV15_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 1100"
+		CDB_Product::Name			= "DSV 15-10.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.0e+6
+		CDB_SafetyValveBase::SetPressure = 1.0e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 2.25e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 7.9e+6
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV15_11.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV15_2.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 15-11.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.1e+6
+		CDB_SafetyValveBase::SetPressure = 1.1e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 2.43e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 8.34e+6
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV15_12.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV15_2.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 15-12.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.2e+6
+		CDB_SafetyValveBase::SetPressure = 1.2e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 2.61e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 8.71e+6
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV15_13.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV15_2.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 15-13.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.3e+6
+		CDB_SafetyValveBase::SetPressure = 1.3e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 2.79e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 9.07e+6
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV15_14.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV15_2.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 15-14.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.4e+6
+		CDB_SafetyValveBase::SetPressure = 1.4e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 2.97e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 9.41e+6
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV15_15.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV15_2.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 15-15.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.5e+6
+		CDB_SafetyValveBase::SetPressure = 1.5e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 3.14e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 9.74e+6
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV15_16.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV15_2.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 15-16.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.6e+6
+		CDB_SafetyValveBase::SetPressure = 1.6e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 3.31e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.01e+7
+	}
+}
+
+//****************************
+// DSV...DGH - DN20
+//****************************
+
+new:CDB_SafetyValveHeating(DSV20_2.0_DGH) -> SAFETYVALVE_TAB
+{
+	{
+		{
+			{
+				{
+					{
+						0											// isDeleted
+						1											// isAvailable
+						0											// isHidden
+						1											// isFix
+						0											// Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+						0											// Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+						0               							// Sort integer (Allow to show a group of articles in the order defined with this variable).
+					}
+					2.5e+6 \ 2.5e+6								// Pmaxmin and Pmaxmax  in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+					NO_ID										// Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+					120	        								// Tmax in �C
+					-10             							// Tmin in �C
+				}
+				"536 2020"									// Reference to the Product
+				"DSV 20-2.0 DGH"							// Name of the product
+				SFTYVTYPE_H									// Identifier of the product type
+				SFTYVFAM_DGH								// Identifier of the family of the product
+				SFTYVVER_DIAPH								// Identifier of the version of the product
+				1											// Level of priority for selection [1,10]
+				""											// Product comment
+				"PX_DSV_DGH_15_32"			 				// Product image ID
+				NO_ID										// Identifier of the accessory group
+				#ePartOfaSetNo 								// Boolean indicating if the valve is part of a ActSet
+				NO_ID										// Table ID where are sets if exist for the current product.
+				0.0											// Price
+				#eProduct                       			// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+				NO_ID                           			// Identifier of the series of the accessory (mainly used in DlgDirSel)
+				0                               			// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+				NO_ID                           			// Identifier of the accessory type if #eBoth 
+				NO_ID										// Identifier of the accessory family if #eBoth	
+			}
+			BDY_GUNMETAL								// Identifier of the body material
+			DN_20                                       // Identifier of the corresp. valve size
+			CONN_THREAD                                 // Identifier of the (inlet/pipe side) connection
+			NO_ID                                       // Identifier of the connection table, can be NO_ID
+			CONN_THREAD                                 // Identifier of the outlet/body side connection, can be NO_ID
+			""                                          // Type of the valve as used in the CBI II
+			""                                          // Size of the valve as used in the CBI II
+			""                                          // Size of the valve in inch as used in the CBI II
+			0                                           // CBI compatibility Index
+			""                                          // CBI Version
+			2.0e+5                                      // Maximum Dp of the valve
+			#eMeasPointNone						        // Measuring points. #eMeasPointNone or a combination of #eMeasPointInlet, #eMeasPointOutlet, #eMeasPointMeasStatOut or #eMeasPointP+.
+			#eMeasDataNone								// Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+			CONSIZE_FG3_4								// Identifier of the inlet size ID
+			CONSIZE_FG1_1_4								// Identifier of the outlet size ID
+		}
+		2.0e+5										// psv of the safety valve.
+		MEDTYPE_HOTW								// Identifier of the medium type.
+		LIFTTYPE_LEVER								// Identifier of the lifting type.
+		0.158										// Total height (H) of the product.
+		0.039										// Height (h) where are located the output (Sout).
+		0.043										// Width (L) between input (Sin) and output (Sout).
+		1.0											// Weight (m) of the product.
+		BLOWTANK_ALLOCATION							// Identifier of the blow tank allocation table.
+	}
+	1.52e+5										// Maximum power allowed for the safety valve for directly heated system.
+	1.04e+7										// Maximum power allowed for the safety valve for indirectly heated system.
+}
+
+new:CDB_SafetyValveHeating(DSV20_2.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV20_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 2025"
+		CDB_Product::Name			= "DSV 20-2.5 DGH"
+		CDB_TAProduct::Dpmax		= 2.5e+5
+		CDB_SafetyValveBase::SetPressure = 2.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.82e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.16e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV20_3.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV20_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 2030"
+		CDB_Product::Name			= "DSV 20-3.0 DGH"
+		CDB_TAProduct::Dpmax		= 3.0e+5
+		CDB_SafetyValveBase::SetPressure = 3.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 2.1e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.27e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV20_3.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV20_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 2035"
+		CDB_Product::Name			= "DSV 20-3.5 DGH"
+		CDB_TAProduct::Dpmax		= 3.5e+5
+		CDB_SafetyValveBase::SetPressure = 3.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 2.34e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.37e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV20_4.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV20_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 2040"
+		CDB_Product::Name			= "DSV 20-4.0 DGH"
+		CDB_TAProduct::Dpmax		= 4.0e+5
+		CDB_SafetyValveBase::SetPressure = 4.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 2.58e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.47e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV20_4.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV20_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 2045"
+		CDB_Product::Name			= "DSV 20-4.5 DGH"
+		CDB_TAProduct::Dpmax		= 4.5e+5
+		CDB_SafetyValveBase::SetPressure = 4.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 2.82e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.56e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV20_5.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV20_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 2050"
+		CDB_Product::Name			= "DSV 20-5.0 DGH"
+		CDB_TAProduct::Dpmax		= 5.0e+5
+		CDB_SafetyValveBase::SetPressure = 5.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 3.05e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.64e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV20_5.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV20_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 2055"
+		CDB_Product::Name			= "DSV 20-5.5 DGH"
+		CDB_TAProduct::Dpmax		= 5.5e+5
+		CDB_SafetyValveBase::SetPressure = 5.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 3.29e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.72e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV20_6.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV20_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 2060"
+		CDB_Product::Name			= "DSV 20-6.0 DGH"
+		CDB_TAProduct::Dpmax		= 6.0e+5
+		CDB_SafetyValveBase::SetPressure = 6.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 3.52e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.80e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV20_7.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV20_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 2070"
+		CDB_Product::Name			= "DSV 20-7.0 DGH"
+		CDB_TAProduct::Dpmax		= 7.0e+5
+		CDB_SafetyValveBase::SetPressure = 7.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 3.97e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.94e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV20_7.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV20_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 2075"
+		CDB_Product::Name			= "DSV 20-7.5 DGH"
+		CDB_TAProduct::Dpmax		= 7.5e+5
+		CDB_SafetyValveBase::SetPressure = 7.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 4.20e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 2.01e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV20_8.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV20_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 2080"
+		CDB_Product::Name			= "DSV 20-8.0 DGH"
+		CDB_TAProduct::Dpmax		= 8.0e+5
+		CDB_SafetyValveBase::SetPressure = 8.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 4.42e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 2.08e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV20_8.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV20_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 2085"
+		CDB_Product::Name			= "DSV 20-8.5 DGH"
+		CDB_TAProduct::Dpmax		= 8.5e+5
+		CDB_SafetyValveBase::SetPressure = 8.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 4.65e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 2.14e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV20_9.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV20_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 2090"
+		CDB_Product::Name			= "DSV 20-9.0 DGH"
+		CDB_TAProduct::Dpmax		= 9.0e+5
+		CDB_SafetyValveBase::SetPressure = 9.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 4.87e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 2.20e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV20_9.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV20_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 2095"
+		CDB_Product::Name			= "DSV 20-9.5 DGH"
+		CDB_TAProduct::Dpmax		= 9.5e+5
+		CDB_SafetyValveBase::SetPressure = 9.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 5.08e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 2.26e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV20_10.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV20_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 2100"
+		CDB_Product::Name			= "DSV 20-10.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.0e+6
+		CDB_SafetyValveBase::SetPressure = 1.0e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 5.30e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 2.32e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV20_11.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV20_2.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 20-11.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.1e+6
+		CDB_SafetyValveBase::SetPressure = 1.1e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 5.74e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 2.44e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV20_12.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV20_2.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 20-12.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.2e+6
+		CDB_SafetyValveBase::SetPressure = 1.2e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 6.16e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 2.54e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV20_13.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV20_2.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 20-13.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.3e+6
+		CDB_SafetyValveBase::SetPressure = 1.3e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 6.58e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 2.65e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV20_14.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV20_2.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 20-14.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.4e+6
+		CDB_SafetyValveBase::SetPressure = 1.4e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 7.0e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 2.75e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV20_15.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV20_2.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 20-15.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.5e+6
+		CDB_SafetyValveBase::SetPressure = 1.5e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 7.4e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 2.84e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV20_16.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV20_2.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 20-16.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.6e+6
+		CDB_SafetyValveBase::SetPressure = 1.6e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 7.82e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 2.94e+7
+	}
+}
+
+//****************************
+// DSV...DGH - DN25
+//****************************
+
+new:CDB_SafetyValveHeating(DSV25_2.0_DGH) -> SAFETYVALVE_TAB
+{
+	{
+		{
+			{
+				{
+					{
+						0											// isDeleted
+						1											// isAvailable
+						0											// isHidden
+						1											// isFix
+						0											// Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+						0											// Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+						0               							// Sort integer (Allow to show a group of articles in the order defined with this variable).
+					}
+					2.5e+6 \ 2.5e+6								// Pmaxmin and Pmaxmax  in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+					NO_ID										// Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+					120	        								// Tmax in �C
+					-10             							// Tmin in �C
+				}
+				"536 3020"									// Reference to the Product
+				"DSV 25-2.0 DGH"							// Name of the product
+				SFTYVTYPE_H									// Identifier of the product type
+				SFTYVFAM_DGH								// Identifier of the family of the product
+				SFTYVVER_DIAPH								// Identifier of the version of the product
+				1											// Level of priority for selection [1,10]
+				""											// Product comment
+				"PX_DSV_DGH_15_32"			 				// Product image ID
+				NO_ID										// Identifier of the accessory group
+				#ePartOfaSetNo 								// Boolean indicating if the valve is part of a ActSet
+				NO_ID										// Table ID where are sets if exist for the current product.
+				0.0											// Price
+				#eProduct                       			// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+				NO_ID                           			// Identifier of the series of the accessory (mainly used in DlgDirSel)
+				0                               			// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+				NO_ID                           			// Identifier of the accessory type if #eBoth 
+				NO_ID										// Identifier of the accessory family if #eBoth	
+			}
+			BDY_GUNMETAL								// Identifier of the body material
+			DN_25                                       // Identifier of the corresp. valve size
+			CONN_THREAD                                 // Identifier of the (inlet/pipe side) connection
+			NO_ID                                       // Identifier of the connection table, can be NO_ID
+			CONN_THREAD                                 // Identifier of the outlet/body side connection, can be NO_ID
+			""                                          // Type of the valve as used in the CBI II
+			""                                          // Size of the valve as used in the CBI II
+			""                                          // Size of the valve in inch as used in the CBI II
+			0                                           // CBI compatibility Index
+			""                                          // CBI Version
+			2.0e+5                                      // Maximum Dp of the valve
+			#eMeasPointNone						        // Measuring points. #eMeasPointNone or a combination of #eMeasPointInlet, #eMeasPointOutlet, #eMeasPointMeasStatOut or #eMeasPointP+.
+			#eMeasDataNone								// Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+			CONSIZE_FG1									// Identifier of the inlet size ID
+			CONSIZE_FG1_1_2								// Identifier of the outlet size ID
+		}
+		2.0e+5										// psv of the safety valve.
+		MEDTYPE_HOTW								// Identifier of the medium type.
+		LIFTTYPE_LEVER								// Identifier of the lifting type.
+		0.192										// Total height (H) of the product.
+		0.045										// Height (h) where are located the output (Sout).
+		0.05										// Width (L) between input (Sin) and output (Sout).
+		1.8											// Weight (m) of the product.
+		BLOWTANK_ALLOCATION							// Identifier of the blow tank allocation table.
+	}
+	2.36e+5										// Maximum power allowed for the safety valve for directly heated system.
+	1.7e+7										// Maximum power allowed for the safety valve for indirectly heated system.
+}
+
+new:CDB_SafetyValveHeating(DSV25_2.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV25_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 3025"
+		CDB_Product::Name			= "DSV 25-2.5 DGH"
+		CDB_TAProduct::Dpmax		= 2.5e+5
+		CDB_SafetyValveBase::SetPressure = 2.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 2.77e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.90e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV25_3.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV25_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 3030"
+		CDB_Product::Name			= "DSV 25-3.0 DGH"
+		CDB_TAProduct::Dpmax		= 3.0e+5
+		CDB_SafetyValveBase::SetPressure = 3.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 3.20e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 2.10e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV25_3.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV25_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 3035"
+		CDB_Product::Name			= "DSV 25-3.5 DGH"
+		CDB_TAProduct::Dpmax		= 3.5e+5
+		CDB_SafetyValveBase::SetPressure = 3.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 3.57e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 2.20e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV25_4.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV25_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 3040"
+		CDB_Product::Name			= "DSV 25-4.0 DGH"
+		CDB_TAProduct::Dpmax		= 4.0e+5
+		CDB_SafetyValveBase::SetPressure = 4.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 3.93e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 2.40e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV25_4.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV25_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 3045"
+		CDB_Product::Name			= "DSV 25-4.5 DGH"
+		CDB_TAProduct::Dpmax		= 4.5e+5
+		CDB_SafetyValveBase::SetPressure = 4.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 4.30e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 2.50e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV25_5.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV25_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 3050"
+		CDB_Product::Name			= "DSV 25-5.0 DGH"
+		CDB_TAProduct::Dpmax		= 5.0e+5
+		CDB_SafetyValveBase::SetPressure = 5.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 4.65e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 2.70e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV25_5.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV25_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 3055"
+		CDB_Product::Name			= "DSV 25-5.5 DGH"
+		CDB_TAProduct::Dpmax		= 5.5e+5
+		CDB_SafetyValveBase::SetPressure = 5.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 5.01e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 2.80e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV25_6.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV25_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 3060"
+		CDB_Product::Name			= "DSV 25-6.0 DGH"
+		CDB_TAProduct::Dpmax		= 6.0e+5
+		CDB_SafetyValveBase::SetPressure = 6.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 5.37e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 2.90e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV25_7.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV25_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 3070"
+		CDB_Product::Name			= "DSV 25-7.0 DGH"
+		CDB_TAProduct::Dpmax		= 7.0e+5
+		CDB_SafetyValveBase::SetPressure = 7.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 6.05e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 3.20e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV25_7.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV25_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 3075"
+		CDB_Product::Name			= "DSV 25-7.5 DGH"
+		CDB_TAProduct::Dpmax		= 7.5e+5
+		CDB_SafetyValveBase::SetPressure = 7.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 6.40e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 3.30e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV25_8.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV25_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 3080"
+		CDB_Product::Name			= "DSV 25-8.0 DGH"
+		CDB_TAProduct::Dpmax		= 8.0e+5
+		CDB_SafetyValveBase::SetPressure = 8.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 6.74e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 3.40e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV25_8.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV25_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 3085"
+		CDB_Product::Name			= "DSV 25-8.5 DGH"
+		CDB_TAProduct::Dpmax		= 8.5e+5
+		CDB_SafetyValveBase::SetPressure = 8.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 7.08e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 3.50e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV25_9.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV25_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 3090"
+		CDB_Product::Name			= "DSV 25-9.0 DGH"
+		CDB_TAProduct::Dpmax		= 9.0e+5
+		CDB_SafetyValveBase::SetPressure = 9.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 7.42e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 3.60e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV25_9.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV25_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 3095"
+		CDB_Product::Name			= "DSV 25-9.5 DGH"
+		CDB_TAProduct::Dpmax		= 9.5e+5
+		CDB_SafetyValveBase::SetPressure = 9.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 7.75e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 3.70e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV25_10.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV25_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 3100"
+		CDB_Product::Name			= "DSV 25-10.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.0e+6
+		CDB_SafetyValveBase::SetPressure = 1.0e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 8.08e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 3.80e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV25_11.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV25_2.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 25-11.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.1e+6
+		CDB_SafetyValveBase::SetPressure = 1.1e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 8.74e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 3.98e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV25_12.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV25_2.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 25-12.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.2e+6
+		CDB_SafetyValveBase::SetPressure = 1.2e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 9.39e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 4.15e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV25_13.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV25_2.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 25-13.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.3e+6
+		CDB_SafetyValveBase::SetPressure = 1.3e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.0e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 4.32e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV25_14.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV25_2.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 25-14.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.4e+6
+		CDB_SafetyValveBase::SetPressure = 1.4e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.07e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 4.49e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV25_15.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV25_2.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 25-15.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.5e+6
+		CDB_SafetyValveBase::SetPressure = 1.5e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.13e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 4.64e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV25_16.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV25_2.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 25-16.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.6e+6
+		CDB_SafetyValveBase::SetPressure = 1.6e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.19e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 4.80e+7
+	}
+}
+
+//****************************
+// DSV...DGH - DN32
+//****************************
+
+new:CDB_SafetyValveHeating(DSV32_2.0_DGH) -> SAFETYVALVE_TAB
+{
+	{
+		{
+			{
+				{
+					{
+						0											// isDeleted
+						1											// isAvailable
+						0											// isHidden
+						1											// isFix
+						0											// Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+						0											// Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+						0               							// Sort integer (Allow to show a group of articles in the order defined with this variable).
+					}
+					2.5e+6 \ 2.5e+6								// Pmaxmin and Pmaxmax  in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+					NO_ID										// Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+					120	        								// Tmax in �C
+					-10             							// Tmin in �C
+				}
+				"536 4020"									// Reference to the Product
+				"DSV 32-2.0 DGH"							// Name of the product
+				SFTYVTYPE_H									// Identifier of the product type
+				SFTYVFAM_DGH								// Identifier of the family of the product
+				SFTYVVER_DIAPH								// Identifier of the version of the product
+				1											// Level of priority for selection [1,10]
+				""											// Product comment
+				"PX_DSV_DGH_15_32"			 				// Product image ID
+				NO_ID										// Identifier of the accessory group
+				#ePartOfaSetNo 								// Boolean indicating if the valve is part of a ActSet
+				NO_ID										// Table ID where are sets if exist for the current product.
+				0.0											// Price
+				#eProduct                       			// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+				NO_ID                           			// Identifier of the series of the accessory (mainly used in DlgDirSel)
+				0                               			// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+				NO_ID                           			// Identifier of the accessory type if #eBoth 
+				NO_ID										// Identifier of the accessory family if #eBoth	
+			}
+			BDY_GUNMETAL								// Identifier of the body material
+			DN_32                                       // Identifier of the corresp. valve size
+			CONN_THREAD                                 // Identifier of the (inlet/pipe side) connection
+			NO_ID                                       // Identifier of the connection table, can be NO_ID
+			CONN_THREAD                                 // Identifier of the outlet/body side connection, can be NO_ID
+			""                                          // Type of the valve as used in the CBI II
+			""                                          // Size of the valve as used in the CBI II
+			""                                          // Size of the valve in inch as used in the CBI II
+			0                                           // CBI compatibility Index
+			""                                          // CBI Version
+			2.0e+5                                      // Maximum Dp of the valve
+			#eMeasPointNone						        // Measuring points. #eMeasPointNone or a combination of #eMeasPointInlet, #eMeasPointOutlet, #eMeasPointMeasStatOut or #eMeasPointP+.
+			#eMeasDataNone								// Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+			CONSIZE_FG1_1_4								// Identifier of the inlet size ID
+			CONSIZE_FG2									// Identifier of the outlet size ID
+		}
+		2.0e+5										// psv of the safety valve.
+		MEDTYPE_HOTW								// Identifier of the medium type.
+		LIFTTYPE_LEVER								// Identifier of the lifting type.
+		0.264										// Total height (H) of the product.
+		0.055										// Height (h) where are located the output (Sout).
+		0.061										// Width (L) between input (Sin) and output (Sout).
+		4.0											// Weight (m) of the product.
+		BLOWTANK_ALLOCATION							// Identifier of the blow tank allocation table.
+	}
+	4.01e+5										// Maximum power allowed for the safety valve for directly heated system.
+	2.9e+7										// Maximum power allowed for the safety valve for indirectly heated system.
+}
+
+new:CDB_SafetyValveHeating(DSV32_2.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV32_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 4025"
+		CDB_Product::Name			= "DSV 32-2.5 DGH"
+		CDB_TAProduct::Dpmax		= 2.5e+5
+		CDB_SafetyValveBase::SetPressure = 2.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 4.81e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 3.30e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV32_3.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV32_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 4030"
+		CDB_Product::Name			= "DSV 32-3.0 DGH"
+		CDB_TAProduct::Dpmax		= 3.0e+5
+		CDB_SafetyValveBase::SetPressure = 3.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 5.55e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 3.60e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV32_3.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV32_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 4035"
+		CDB_Product::Name			= "DSV 32-3.5 DGH"
+		CDB_TAProduct::Dpmax		= 3.5e+5
+		CDB_SafetyValveBase::SetPressure = 3.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 6.19e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 3.90e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV32_4.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV32_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 4040"
+		CDB_Product::Name			= "DSV 32-4.0 DGH"
+		CDB_TAProduct::Dpmax		= 4.0e+5
+		CDB_SafetyValveBase::SetPressure = 4.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 6.82e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 4.20e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV32_4.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV32_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 4045"
+		CDB_Product::Name			= "DSV 32-4.5 DGH"
+		CDB_TAProduct::Dpmax		= 4.5e+5
+		CDB_SafetyValveBase::SetPressure = 4.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 7.46e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 4.40e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV32_5.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV32_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 4050"
+		CDB_Product::Name			= "DSV 32-5.0 DGH"
+		CDB_TAProduct::Dpmax		= 5.0e+5
+		CDB_SafetyValveBase::SetPressure = 5.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 8.08e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 4.70e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV32_5.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV32_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 4055"
+		CDB_Product::Name			= "DSV 32-5.5 DGH"
+		CDB_TAProduct::Dpmax		= 5.5e+5
+		CDB_SafetyValveBase::SetPressure = 5.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 8.70e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 4.90e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV32_6.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV32_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 4060"
+		CDB_Product::Name			= "DSV 32-6.0 DGH"
+		CDB_TAProduct::Dpmax		= 6.0e+5
+		CDB_SafetyValveBase::SetPressure = 6.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 9.31e+5
+		CDB_SafetyValveHeating::PowerLimitIndirect = 5.10e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV32_7.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV32_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 4070"
+		CDB_Product::Name			= "DSV 32-7.0 DGH"
+		CDB_TAProduct::Dpmax		= 7.0e+5
+		CDB_SafetyValveBase::SetPressure = 7.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.05e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 5.50e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV32_7.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV32_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 4075"
+		CDB_Product::Name			= "DSV 32-7.5 DGH"
+		CDB_TAProduct::Dpmax		= 7.5e+5
+		CDB_SafetyValveBase::SetPressure = 7.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.11e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 5.70e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV32_8.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV32_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 4080"
+		CDB_Product::Name			= "DSV 32-8.0 DGH"
+		CDB_TAProduct::Dpmax		= 8.0e+5
+		CDB_SafetyValveBase::SetPressure = 8.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.17e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 5.90e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV32_8.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV32_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 4085"
+		CDB_Product::Name			= "DSV 32-8.5 DGH"
+		CDB_TAProduct::Dpmax		= 8.5e+5
+		CDB_SafetyValveBase::SetPressure = 8.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.23e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 6.10e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV32_9.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV32_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 4090"
+		CDB_Product::Name			= "DSV 32-9.0 DGH"
+		CDB_TAProduct::Dpmax		= 9.0e+5
+		CDB_SafetyValveBase::SetPressure = 9.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.29e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 6.20e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV32_9.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV32_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 4095"
+		CDB_Product::Name			= "DSV 32-9.5 DGH"
+		CDB_TAProduct::Dpmax		= 9.5e+5
+		CDB_SafetyValveBase::SetPressure = 9.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.35e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 6.40e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV32_10.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV32_2.0_DGH)
+	{
+		CDB_Product::Reference		= "536 4100"
+		CDB_Product::Name			= "DSV 32-10.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.0e+6
+		CDB_SafetyValveBase::SetPressure = 1.0e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.40e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 6.60e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV32_11.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV32_2.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 32-11.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.1e+6
+		CDB_SafetyValveBase::SetPressure = 1.1e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.52e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 6.9e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV32_12.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV32_2.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 32-12.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.2e+6
+		CDB_SafetyValveBase::SetPressure = 1.2e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.63e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 7.215e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV32_13.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV32_2.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 32-13.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.3e+6
+		CDB_SafetyValveBase::SetPressure = 1.3e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.74e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 7.5e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV32_14.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV32_2.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 32-14.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.4e+6
+		CDB_SafetyValveBase::SetPressure = 1.4e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.85e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 7.79e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV32_15.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV32_2.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 32-15.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.5e+6
+		CDB_SafetyValveBase::SetPressure = 1.5e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.96e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 8.06e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV32_16.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV32_2.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 32-16.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.6e+6
+		CDB_SafetyValveBase::SetPressure = 1.6e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 2.07e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 8.33e+7
+	}
+}
+
+//****************************
+// DSV...DGH - DN40
+//****************************
+
+new:CDB_SafetyValveHeating(DSV40_3.0_DGH) -> SAFETYVALVE_TAB
+{
+	{
+		{
+			{
+				{
+					{
+						0											// isDeleted
+						1											// isAvailable
+						0											// isHidden
+						1											// isFix
+						0											// Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+						0											// Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+						0               							// Sort integer (Allow to show a group of articles in the order defined with this variable).
+					}
+					1.6e+6 \ 1.6e+6								// Pmaxmin and Pmaxmax  in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+					NO_ID										// Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+					120	        								// Tmax in �C
+					-10             							// Tmin in �C
+				}
+				"536 5030"									// Reference to the Product
+				"DSV 40-3.0 DGH"							// Name of the product
+				SFTYVTYPE_H									// Identifier of the product type
+				SFTYVFAM_DGH								// Identifier of the family of the product
+				SFTYVVER_BELLOWS							// Identifier of the version of the product
+				1											// Level of priority for selection [1,10]
+				""											// Product comment
+				"PX_DSV_DGH_40_50"			 				// Product image ID
+				NO_ID										// Identifier of the accessory group
+				#ePartOfaSetNo 								// Boolean indicating if the valve is part of a ActSet
+				NO_ID										// Table ID where are sets if exist for the current product.
+				0.0											// Price
+				#eProduct                       			// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+				NO_ID                           			// Identifier of the series of the accessory (mainly used in DlgDirSel)
+				0                               			// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+				NO_ID                           			// Identifier of the accessory type if #eBoth 
+				NO_ID										// Identifier of the accessory family if #eBoth	
+			}
+			BDY_DUCTIRON								// Identifier of the body material
+			DN_40                                       // Identifier of the corresp. valve size
+			CONN_FLANGE                                 // Identifier of the (inlet/pipe side) connection
+			NO_ID                                       // Identifier of the connection table, can be NO_ID
+			CONN_FLANGE                                 // Identifier of the outlet/body side connection, can be NO_ID
+			""                                          // Type of the valve as used in the CBI II
+			""                                          // Size of the valve as used in the CBI II
+			""                                          // Size of the valve in inch as used in the CBI II
+			0                                           // CBI compatibility Index
+			""                                          // CBI Version
+			3.0e+5                                      // Maximum Dp of the valve
+			#eMeasPointNone						        // Measuring points. #eMeasPointNone or a combination of #eMeasPointInlet, #eMeasPointOutlet, #eMeasPointMeasStatOut or #eMeasPointP+.
+			#eMeasDataNone								// Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+			CONSIZE_FL40								// Identifier of the inlet size ID
+			CONSIZE_FL65									// Identifier of the outlet size ID
+		}
+		3.0e+5										// psv of the safety valve.
+		MEDTYPE_HOTW								// Identifier of the medium type.
+		LIFTTYPE_LEVER								// Identifier of the lifting type.
+		0.345										// Total height (H) of the product.
+		0.14										// Height (h) where are located the output (Sout).
+		0.115										// Width (L) between input (Sin) and output (Sout).
+		17.0										// Weight (m) of the product.
+		BLOWTANK_ALLOCATION							// Identifier of the blow tank allocation table.
+	}
+	1.04e+6										// Maximum power allowed for the safety valve for directly heated system.
+	5.50e+7										// Maximum power allowed for the safety valve for indirectly heated system.
+}
+
+new:CDB_SafetyValveHeating(DSV40_3.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV40_3.0_DGH)
+	{
+		CDB_Product::Reference		= "536 5035"
+		CDB_Product::Name			= "DSV 40-3.5 DGH"
+		CDB_TAProduct::Dpmax		= 3.5e+5
+		CDB_SafetyValveBase::SetPressure = 3.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.16e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 5.90e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV40_4.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV40_3.0_DGH)
+	{
+		CDB_Product::Reference		= "536 5040"
+		CDB_Product::Name			= "DSV 40-4.0 DGH"
+		CDB_TAProduct::Dpmax		= 4.0e+5
+		CDB_SafetyValveBase::SetPressure = 4.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.28e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 6.30e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV40_4.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV40_3.0_DGH)
+	{
+		CDB_Product::Reference		= "536 5045"
+		CDB_Product::Name			= "DSV 40-4.5 DGH"
+		CDB_TAProduct::Dpmax		= 4.5e+5
+		CDB_SafetyValveBase::SetPressure = 4.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.40e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 6.70e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV40_5.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV40_3.0_DGH)
+	{
+		CDB_Product::Reference		= "536 5050"
+		CDB_Product::Name			= "DSV 40-5.0 DGH"
+		CDB_TAProduct::Dpmax		= 5.0e+5
+		CDB_SafetyValveBase::SetPressure = 5.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.51e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 7.10e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV40_5.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV40_3.0_DGH)
+	{
+		CDB_Product::Reference		= "536 5055"
+		CDB_Product::Name			= "DSV 40-5.5 DGH"
+		CDB_TAProduct::Dpmax		= 5.5e+5
+		CDB_SafetyValveBase::SetPressure = 5.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.63e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 7.40e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV40_6.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV40_3.0_DGH)
+	{
+		CDB_Product::Reference		= "536 5060"
+		CDB_Product::Name			= "DSV 40-6.0 DGH"
+		CDB_TAProduct::Dpmax		= 6.0e+5
+		CDB_SafetyValveBase::SetPressure = 6.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.74e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 7.70e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV40_7.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV40_3.0_DGH)
+	{
+		CDB_Product::Reference		= "536 5070"
+		CDB_Product::Name			= "DSV 40-7.0 DGH"
+		CDB_TAProduct::Dpmax		= 7.0e+5
+		CDB_SafetyValveBase::SetPressure = 7.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.97e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 8.40e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV40_7.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV40_3.0_DGH)
+	{
+		CDB_Product::Reference		= "536 5075"
+		CDB_Product::Name			= "DSV 40-7.5 DGH"
+		CDB_TAProduct::Dpmax		= 7.5e+5
+		CDB_SafetyValveBase::SetPressure = 7.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 2.08e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 8.60e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV40_8.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV40_3.0_DGH)
+	{
+		CDB_Product::Reference		= "536 5080"
+		CDB_Product::Name			= "DSV 40-8.0 DGH"
+		CDB_TAProduct::Dpmax		= 8.0e+5
+		CDB_SafetyValveBase::SetPressure = 8.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 2.19e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 8.90e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV40_8.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV40_3.0_DGH)
+	{
+		CDB_Product::Reference		= "536 5085"
+		CDB_Product::Name			= "DSV 40-8.5 DGH"
+		CDB_TAProduct::Dpmax		= 8.5e+5
+		CDB_SafetyValveBase::SetPressure = 8.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 2.30e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 9.20e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV40_9.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV40_3.0_DGH)
+	{
+		CDB_Product::Reference		= "536 5090"
+		CDB_Product::Name			= "DSV 40-9.0 DGH"
+		CDB_TAProduct::Dpmax		= 9.0e+5
+		CDB_SafetyValveBase::SetPressure = 9.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 2.40e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 9.50e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV40_9.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV40_3.0_DGH)
+	{
+		CDB_Product::Reference		= "536 5095"
+		CDB_Product::Name			= "DSV 40-9.5 DGH"
+		CDB_TAProduct::Dpmax		= 9.5e+5
+		CDB_SafetyValveBase::SetPressure = 9.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 2.52e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 9.70e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV40_10.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV40_3.0_DGH)
+	{
+		CDB_Product::Reference		= "536 5100"
+		CDB_Product::Name			= "DSV 40-10.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.0e+6
+		CDB_SafetyValveBase::SetPressure = 1.0e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 2.62e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.00e+8
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV40_11.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV40_3.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 40-11.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.1e+6
+		CDB_SafetyValveBase::SetPressure = 1.1e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 2.84e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.05e+8
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV40_12.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV40_3.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 40-12.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.2e+6
+		CDB_SafetyValveBase::SetPressure = 1.2e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 3.05e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.09e+8
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV40_13.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV40_3.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 40-13.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.3e+6
+		CDB_SafetyValveBase::SetPressure = 1.3e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 3.27e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.14e+8
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV40_14.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV40_3.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 40-14.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.4e+6
+		CDB_SafetyValveBase::SetPressure = 1.4e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 3.47e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.18e+8
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV40_15.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV40_3.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 40-15.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.5e+6
+		CDB_SafetyValveBase::SetPressure = 1.5e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 3.68e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.22e+8
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV40_16.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV40_3.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 40-16.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.6e+6
+		CDB_SafetyValveBase::SetPressure = 1.6e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 3.88e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.26e+8
+	}
+}
+
+//****************************
+// DSV...DGH - DN50
+//****************************
+
+new:CDB_SafetyValveHeating(DSV50_3.0_DGH) -> SAFETYVALVE_TAB
+{
+	{
+		{
+			{
+				{
+					{
+						0											// isDeleted
+						1											// isAvailable
+						0											// isHidden
+						1											// isFix
+						0											// Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+						0											// Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+						0               							// Sort integer (Allow to show a group of articles in the order defined with this variable).
+					}
+					1.6e+6 \ 1.6e+6								// Pmaxmin and Pmaxmax  in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+					NO_ID										// Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+					120	        								// Tmax in �C
+					-10             							// Tmin in �C
+				}
+				"536 6030"									// Reference to the Product
+				"DSV 50-3.0 DGH"							// Name of the product
+				SFTYVTYPE_H									// Identifier of the product type
+				SFTYVFAM_DGH								// Identifier of the family of the product
+				SFTYVVER_BELLOWS							// Identifier of the version of the product
+				1											// Level of priority for selection [1,10]
+				""											// Product comment
+				"PX_DSV_DGH_40_50"			 				// Product image ID
+				NO_ID										// Identifier of the accessory group
+				#ePartOfaSetNo 								// Boolean indicating if the valve is part of a ActSet
+				NO_ID										// Table ID where are sets if exist for the current product.
+				0.0											// Price
+				#eProduct                       			// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+				NO_ID                           			// Identifier of the series of the accessory (mainly used in DlgDirSel)
+				0                               			// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+				NO_ID                           			// Identifier of the accessory type if #eBoth 
+				NO_ID										// Identifier of the accessory family if #eBoth	
+			}
+			BDY_DUCTIRON								// Identifier of the body material
+			DN_50                                       // Identifier of the corresp. valve size
+			CONN_FLANGE                                 // Identifier of the (inlet/pipe side) connection
+			NO_ID                                       // Identifier of the connection table, can be NO_ID
+			CONN_FLANGE                                 // Identifier of the outlet/body side connection, can be NO_ID
+			""                                          // Type of the valve as used in the CBI II
+			""                                          // Size of the valve as used in the CBI II
+			""                                          // Size of the valve in inch as used in the CBI II
+			0                                           // CBI compatibility Index
+			""                                          // CBI Version
+			3.0e+5                                      // Maximum Dp of the valve
+			#eMeasPointNone						        // Measuring points. #eMeasPointNone or a combination of #eMeasPointInlet, #eMeasPointOutlet, #eMeasPointMeasStatOut or #eMeasPointP+.
+			#eMeasDataNone								// Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+			CONSIZE_FL50								// Identifier of the inlet size ID
+			CONSIZE_FL80								// Identifier of the outlet size ID
+		}
+		3.0e+5										// psv of the safety valve.
+		MEDTYPE_HOTW								// Identifier of the medium type.
+		LIFTTYPE_LEVER								// Identifier of the lifting type.
+		0.345										// Total height (H) of the product.
+		0.15										// Height (h) where are located the output (Sout).
+		0.12										// Width (L) between input (Sin) and output (Sout).
+		19.0										// Weight (m) of the product.
+		BLOWTANK_ALLOCATION							// Identifier of the blow tank allocation table.
+	}
+	1.60e+6										// Maximum power allowed for the safety valve for directly heated system.
+	8.50e+7										// Maximum power allowed for the safety valve for indirectly heated system.
+}
+
+new:CDB_SafetyValveHeating(DSV50_3.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV50_3.0_DGH)
+	{
+		CDB_Product::Reference		= "536 6035"
+		CDB_Product::Name			= "DSV 50-3.5 DGH"
+		CDB_TAProduct::Dpmax		= 3.5e+5
+		CDB_SafetyValveBase::SetPressure = 3.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.79e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 9.10e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV50_4.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV50_3.0_DGH)
+	{
+		CDB_Product::Reference		= "536 6040"
+		CDB_Product::Name			= "DSV 50-4.0 DGH"
+		CDB_TAProduct::Dpmax		= 4.0e+5
+		CDB_SafetyValveBase::SetPressure = 4.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 1.98e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 9.80e+7
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV50_4.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV50_3.0_DGH)
+	{
+		CDB_Product::Reference		= "536 6045"
+		CDB_Product::Name			= "DSV 50-4.5 DGH"
+		CDB_TAProduct::Dpmax		= 4.5e+5
+		CDB_SafetyValveBase::SetPressure = 4.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 2.16e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.04e+8
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV50_5.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV50_3.0_DGH)
+	{
+		CDB_Product::Reference		= "536 6050"
+		CDB_Product::Name			= "DSV 50-5.0 DGH"
+		CDB_TAProduct::Dpmax		= 5.0e+5
+		CDB_SafetyValveBase::SetPressure = 5.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 2.33e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.09e+8
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV50_5.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV50_3.0_DGH)
+	{
+		CDB_Product::Reference		= "536 6055"
+		CDB_Product::Name			= "DSV 50-5.5 DGH"
+		CDB_TAProduct::Dpmax		= 5.5e+5
+		CDB_SafetyValveBase::SetPressure = 5.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 2.51e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.14e+8
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV50_6.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV50_3.0_DGH)
+	{
+		CDB_Product::Reference		= "536 6060"
+		CDB_Product::Name			= "DSV 50-6.0 DGH"
+		CDB_TAProduct::Dpmax		= 6.0e+5
+		CDB_SafetyValveBase::SetPressure = 6.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 2.68e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.20e+8
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV50_6.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV50_3.0_DGH)
+	{
+		CDB_Product::Reference		= "536 6065"
+		CDB_Product::Name			= "DSV 50-6.5 DGH"
+		CDB_TAProduct::Dpmax		= 6.5e+5
+		CDB_SafetyValveBase::SetPressure = 6.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 2.86e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.24e+8
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV50_7.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV50_3.0_DGH)
+	{
+		CDB_Product::Reference		= "536 6070"
+		CDB_Product::Name			= "DSV 50-7.0 DGH"
+		CDB_TAProduct::Dpmax		= 7.0e+5
+		CDB_SafetyValveBase::SetPressure = 7.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 3.03e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.29e+8
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV50_7.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV50_3.0_DGH)
+	{
+		CDB_Product::Reference		= "536 6075"
+		CDB_Product::Name			= "DSV 50-7.5 DGH"
+		CDB_TAProduct::Dpmax		= 7.5e+5
+		CDB_SafetyValveBase::SetPressure = 7.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 3.20e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.34e+8
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV50_8.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV50_3.0_DGH)
+	{
+		CDB_Product::Reference		= "536 6080"
+		CDB_Product::Name			= "DSV 50-8.0 DGH"
+		CDB_TAProduct::Dpmax		= 8.0e+5
+		CDB_SafetyValveBase::SetPressure = 8.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 3.37e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.38e+8
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV50_8.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV50_3.0_DGH)
+	{
+		CDB_Product::Reference		= "536 6085"
+		CDB_Product::Name			= "DSV 50-8.5 DGH"
+		CDB_TAProduct::Dpmax		= 8.5e+5
+		CDB_SafetyValveBase::SetPressure = 8.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 3.54e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.42e+8
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV50_9.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV50_3.0_DGH)
+	{
+		CDB_Product::Reference		= "536 6090"
+		CDB_Product::Name			= "DSV 50-9.0 DGH"
+		CDB_TAProduct::Dpmax		= 9.0e+5
+		CDB_SafetyValveBase::SetPressure = 9.0e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 3.71e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.46e+8
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV50_9.5_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV50_3.0_DGH)
+	{
+		CDB_Product::Reference		= "536 6095"
+		CDB_Product::Name			= "DSV 50-9.5 DGH"
+		CDB_TAProduct::Dpmax		= 9.5e+5
+		CDB_SafetyValveBase::SetPressure = 9.5e+5
+		CDB_SafetyValveHeating::PowerLimitDirect   = 3.88e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.50e+8
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV50_10.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV50_3.0_DGH)
+	{
+		CDB_Product::Reference		= "536 6100"
+		CDB_Product::Name			= "DSV 50-10.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.0e+6
+		CDB_SafetyValveBase::SetPressure = 1.0e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 4.04e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.54e+8
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV50_11.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV50_3.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 50-11.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.1e+6
+		CDB_SafetyValveBase::SetPressure = 1.1e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 4.38e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.62e+8
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV50_12.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV50_3.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 50-12.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.2e+6
+		CDB_SafetyValveBase::SetPressure = 1.2e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 4.71e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.69e+8
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV50_13.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV50_3.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 50-13.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.3e+6
+		CDB_SafetyValveBase::SetPressure = 1.3e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 5.04e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.76e+8
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV50_14.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV50_3.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 50-14.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.4e+6
+		CDB_SafetyValveBase::SetPressure = 1.4e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 5.35e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.83e+8
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV50_15.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV50_3.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 50-15.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.5e+6
+		CDB_SafetyValveBase::SetPressure = 1.5e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 5.66e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.89e+8
+	}
+}
+
+new:CDB_SafetyValveHeating(DSV50_16.0_DGH) -> SAFETYVALVE_TAB
+{Inherited(DSV50_3.0_DGH)
+	{
+		CDB_Product::Reference		= "IDS_ON_REQUEST"
+		CDB_Product::Name			= "DSV 50-16.0 DGH"
+		CDB_TAProduct::Dpmax		= 1.6e+6
+		CDB_SafetyValveBase::SetPressure = 1.6e+6
+		CDB_SafetyValveHeating::PowerLimitDirect   = 5.99e+6
+		CDB_SafetyValveHeating::PowerLimitIndirect = 1.95e+8
+	}
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+//
+//								CDB_SafetyValveCooling
+//
+//	Inherite from CDB_SafetyValveBase
+//
+//	new:CDB_SafetyValveCooling(ID)->SAFETYVALVE_TAB
+//	{
+//		{
+//			{
+//				{
+//					{
+//						{
+//							0				isDeleted
+//							1				isAvailable
+//							0				isHidden
+//							1				isFix
+//							0				Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation )
+//							0				Free integer (bit 0: NotForIndSel, bit 1: NotForDirSel, bit 2: NotForHMCalc)
+//							0               Sort integer (Allow to show a group of articles in the order defined with this variable).
+//						}
+//						Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+//						PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+//						Tmax in °C
+//						Tmin in °C
+//					}
+//					"Reference"				Reference to the TA Product
+//					"Name"					Name of the product
+//					TypeID					Identifier of the valve type 
+//					FamilyID				Identifier of the family of the product
+//					VersionID				Identifier of the version of the product
+//					PriorityLevel			Level of priority for selection [1,10]
+//					Comment					Product comment
+//					ProdImgID				Product image ID
+//					AccessGroupID			Identifier of the accessory group
+//					PartOfaSet				Boolean indicating if the valve is part of a ActSet
+//					Price					Price of the product
+// 					ProductUseFlag			#eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+//					AccessorySeriesID		Identifier of the series of the accessory
+//					isAttached				0/1: 1 if accessory cannot be ordered separately		
+//   				AccTypeID				Identifier of Accessory type if #eBoth 
+//					AccFamilyID				Identifier of Accessory family if #eBoth
+//				}
+//				BodyMaterialID			Identifier of the body material
+//				SizeID					Identifier of the corresp. valve size
+//				ConnectID				Identifier of the (inlet/pipe side) connection
+//				ConnTabID				Identifier of the connection table, can be NO_ID
+//				Conn2ID					Identifier of the outlet/body side connection, can be NO_ID
+//				CBIType					Type of the valve as used in the CBI II
+//				CBISize					Size of the valve as used in the CBI II
+//				CBISizeInch				Size of the valve in inch as used in the CBI II
+//				CBICompatibilityIndex	CBI compatibility Index
+//				CBIVersion				CBI Version
+//				Dpmax					Maximum Dp of the valve
+//				MeasPt					Measuring points
+//				MeasurableData			Measurable data
+//				InletSizeID				Identifier of the inlet size ID
+//				OutletSizeID			Identifier of the outlet size ID
+//			}
+//			SetPressure				psv of the safety valve.
+//			MediumNameID			Identifier of the medium type.
+//			LiftingTypeID			Identifier of the lifting type.
+//			TopOutHeight			Height (H) between the top of the product and the middle of the output (Sout).
+//			OutBotHeight			Height (h) between the middle of the output (Sout) and the bottom of the product.
+//			Width					Width (L) between input (Sin) and output (Sout).
+//			Weight					Weight (m) of the product.
+//			BlowTankID				Identifier of the blow tank.
+//		}
+//		PowerLimitEN12828		Maximum power allowed for the safety valve for EN12828 norm.
+//		PowerLimitNone			Maximum power allowed for the safety valve without norm.
+//
+////////////////////////////////////////////////////////////////
+// Inherited Fields
+//	CDB_Thing::Deleted
+//	CDB_Thing::Available
+//	CDB_Thing::Hidden
+//	CDB_Thing::Fixed
+//	CDB_Thing::FreeInt1
+//	CDB_Thing::FreeInt2
+//	CDB_Thing::SortInt
+//
+//	CDB_HydroThing::Pmax
+//	CDB_HydroThing::PNRange
+//	CDB_HydroThing::Tmax
+//	CDB_HydroThing::Tmin
+//
+//	CDB_Product::Reference
+//	CDB_Product::Name
+//	CDB_Product::TypeID
+//	CDB_Product::FamilyID
+//	CDB_Product::VersionID
+//	CDB_Product::PriorityLevel
+//	CDB_Product::Comment
+//	CDB_Product::ProdImgID
+//	CDB_Product::AccessGroupID
+//	CDB_Product::PartOfaSet
+//  CDB_Product::TableSetID
+//	CDB_Product::Price
+//	CDB_Product::ProductUseFlag
+//	CDB_Product::AccessorySeriesID
+//	CDB_Product::isAttached
+//	CDB_Product::AccTypeID
+//	CDB_Product::AccFamilyID
+//
+//	CDB_TAProduct::BodyMaterialID
+//	CDB_TAProduct::SizeID
+//	CDB_TAProduct::ConnectID
+//  CDB_TAProduct::ConnTabID
+//  CDB_TAProduct::Conn2ID
+//  CDB_TAProduct::CBIType
+//  CDB_TAProduct::CBISize
+//  CDB_TAProduct::CBISizeInch
+//  CDB_TAProduct::CBICompatibilityIndex
+//  CDB_TAProduct::CBIVersion
+//  CDB_TAProduct::Dpmax
+//  CDB_TAProduct::MeasPt
+//  CDB_TAProduct::MeasurableData
+//  CDB_TAProduct::InletSizeID
+//  CDB_TAProduct::OutletSizeID
+
+//  CDB_SafetyValveBase::SetPressure
+//  CDB_SafetyValveBase::MediumNameID
+//  CDB_SafetyValveBase::LiftingTypeID
+//  CDB_SafetyValveBase::TopOutHeight
+//  CDB_SafetyValveBase::OutBotHeight
+//  CDB_SafetyValveBase::Width
+//  CDB_SafetyValveBase::Weight
+//  CDB_SafetyValveBase::BlowTankID
+//
+//  CDB_SafetyValveCooling::PowerLimitEN12828
+//  CDB_SafetyValveCooling::PowerLimitNone
+// }
+
+//****************************
+// DSV...F - DN15
+//****************************
+
+new:CDB_SafetyValveCooling(DSV15_3.0_F) -> SAFETYVALVE_TAB
+{
+	{
+		{
+			{
+				{
+					{
+						0											// isDeleted
+						1											// isAvailable
+						0											// isHidden
+						1											// isFix
+						0											// Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+						0											// Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+						0               							// Sort integer (Allow to show a group of articles in the order defined with this variable).
+					}
+					1.6e+6 \ 1.6e+6								// Pmaxmin and Pmaxmax  in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+					NO_ID										// Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+					120	        								// Tmax in �C
+					-50             							// Tmin in �C
+				}
+				"301051-20430"								// Reference to the Product
+				"DSV 15-3.0 F"								// Name of the product
+				SFTYVTYPE_C									// Identifier of the product type
+				SFTYVFAM_F									// Identifier of the family of the product
+				SFTYVVER_DIAPH								// Identifier of the version of the product
+				1											// Level of priority for selection [1,10]
+				""											// Product comment
+				"PX_DSV_H_F_SOL"			 				// Product image ID
+				NO_ID										// Identifier of the accessory group
+				#ePartOfaSetNo 								// Boolean indicating if the valve is part of a ActSet
+				NO_ID										// Table ID where are sets if exist for the current product.
+				0.0											// Price
+				#eProduct                              	    // #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+				NO_ID                                       // Identifier of the series of the accessory (mainly used in DlgDirSel)
+				0                                           // 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+				NO_ID                                      	// Identifier of the accessory type if #eBoth 
+				NO_ID										// Identifier of the accessory family if #eBoth	
+			}
+			BDY_GUNMETAL								// Identifier of the body material
+			DN_15                                       // Identifier of the corresp. valve size
+			CONN_THREAD                                 // Identifier of the (inlet/pipe side) connection
+			NO_ID                                       // Identifier of the connection table, can be NO_ID
+			CONN_THREAD                                 // Identifier of the outlet/body side connection, can be NO_ID
+			""                                          // Type of the valve as used in the CBI II
+			""                                          // Size of the valve as used in the CBI II
+			""                                          // Size of the valve in inch as used in the CBI II
+			0                                           // CBI compatibility Index
+			""                                          // CBI Version
+			3.0e+5                                      // Maximum Dp of the valve
+			#eMeasPointNone						        // Measuring points. #eMeasPointNone or a combination of #eMeasPointInlet, #eMeasPointOutlet, #eMeasPointMeasStatOut or #eMeasPointP+.
+			#eMeasDataNone								// Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+			CONSIZE_FG1_2								// Identifier of the inlet size ID
+			CONSIZE_FG1_2								// Identifier of the outlet size ID
+		}
+		3.0e+5										// psv of the safety valve.
+		MEDTYPE_WWGLYC								// Identifier of the medium type.
+		LIFTTYPE_TWIST								// Identifier of the lifting type.
+		0.070										// Total height (H) of the product.
+		0.017										// Height (h) where are located the output (Sout).
+		0.026										// Width (L) between input (Sin) and output (Sout).
+		0.2											// Weight (m) of the product.
+		NO_ID										// Identifier of the blow tank.
+	}
+	2.6e+6										// Maximum power allowed for the safety valve for EN12828 norm.
+	6.77080E+6									// Maximum power allowed for the safety valve without norm.
+}
+
+new:CDB_SafetyValveCooling(DSV15_4.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV15_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20440"
+		CDB_Product::Name			= "DSV 15-4.0 F"
+		CDB_TAProduct::Dpmax		= 4.0e+5
+		CDB_SafetyValveBase::SetPressure = 4.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 3.00E+6
+		CDB_SafetyValveCooling::PowerLimitNone = 7.81250E+6		
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV15_5.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV15_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20450"
+		CDB_Product::Name			= "DSV 15-5.0 F"
+		CDB_TAProduct::Dpmax		= 5.0e+5
+		CDB_SafetyValveBase::SetPressure = 5.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 3.40E+6
+		CDB_SafetyValveCooling::PowerLimitNone = 8.85420E+6
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV15_6.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV15_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20460"
+		CDB_Product::Name			= "DSV 15-6.0 F"
+		CDB_TAProduct::Dpmax		= 6.0e+5
+		CDB_SafetyValveBase::SetPressure = 6.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 3.70E+6
+		CDB_SafetyValveCooling::PowerLimitNone = 9.63540E+6
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV15_7.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV15_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20470"
+		CDB_Product::Name			= "DSV 15-7.0 F"
+		CDB_TAProduct::Dpmax		= 7.0e+5
+		CDB_SafetyValveBase::SetPressure = 7.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 4.00E+6
+		CDB_SafetyValveCooling::PowerLimitNone = 1.04167E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV15_8.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV15_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20480"
+		CDB_Product::Name			= "DSV 15-8.0 F"
+		CDB_TAProduct::Dpmax		= 8.0e+5
+		CDB_SafetyValveBase::SetPressure = 8.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 4.30E+6
+		CDB_SafetyValveCooling::PowerLimitNone = 1.11979E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV15_9.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV15_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20490"
+		CDB_Product::Name			= "DSV 15-9.0 F"
+		CDB_TAProduct::Dpmax		= 9.0e+5
+		CDB_SafetyValveBase::SetPressure = 9.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 4.50E+6
+		CDB_SafetyValveCooling::PowerLimitNone = 1.17188E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV15_10.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV15_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20410"
+		CDB_Product::Name			= "DSV 15-10.0 F"
+		CDB_TAProduct::Dpmax		= 1.0e+6
+		CDB_SafetyValveBase::SetPressure = 1.0e+6
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 4.80E+6
+		CDB_SafetyValveCooling::PowerLimitNone = 1.25000E+7
+	}
+}
+
+//****************************
+// DSV...F - DN20
+//****************************
+
+new:CDB_SafetyValveCooling(DSV20_3.0_F) -> SAFETYVALVE_TAB
+{
+	{
+		{
+			{
+				{
+					{
+						0											// isDeleted
+						1											// isAvailable
+						0											// isHidden
+						1											// isFix
+						0											// Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+						0											// Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+						0               							// Sort integer (Allow to show a group of articles in the order defined with this variable).
+					}
+					1.6e+6 \ 1.6e+6								// Pmaxmin and Pmaxmax  in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+					NO_ID										// Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+					120	        								// Tmax in �C
+					-50             							// Tmin in �C
+				}
+				"301051-20530"								// Reference to the Product
+				"DSV 20-3.0 F"								// Name of the product
+				SFTYVTYPE_C									// Identifier of the product type
+				SFTYVFAM_F									// Identifier of the family of the product
+				SFTYVVER_DIAPH								// Identifier of the version of the product
+				1											// Level of priority for selection [1,10]
+				""											// Product comment
+				"PX_DSV_H_F_SOL"			 				// Product image ID
+				NO_ID										// Identifier of the accessory group
+				#ePartOfaSetNo 								// Boolean indicating if the valve is part of a ActSet
+				NO_ID										// Table ID where are sets if exist for the current product.
+				0.0											// Price
+				#eProduct                              	    // #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+				NO_ID                                       // Identifier of the series of the accessory (mainly used in DlgDirSel)
+				0                                           // 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+				NO_ID                                      	// Identifier of the accessory type if #eBoth 
+				NO_ID										// Identifier of the accessory family if #eBoth	
+			}
+			BDY_GUNMETAL								// Identifier of the body material
+			DN_20                                       // Identifier of the corresp. valve size
+			CONN_THREAD                                 // Identifier of the (inlet/pipe side) connection
+			NO_ID                                       // Identifier of the connection table, can be NO_ID
+			CONN_THREAD                                 // Identifier of the outlet/body side connection, can be NO_ID
+			""                                          // Type of the valve as used in the CBI II
+			""                                          // Size of the valve as used in the CBI II
+			""                                          // Size of the valve in inch as used in the CBI II
+			0                                           // CBI compatibility Index
+			""                                          // CBI Version
+			3.0e+5                                      // Maximum Dp of the valve
+			#eMeasPointNone						        // Measuring points. #eMeasPointNone or a combination of #eMeasPointInlet, #eMeasPointOutlet, #eMeasPointMeasStatOut or #eMeasPointP+.
+			#eMeasDataNone								// Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+			CONSIZE_FG3_4								// Identifier of the inlet size ID
+			CONSIZE_FG3_4								// Identifier of the outlet size ID
+		}
+		3.0e+5										// psv of the safety valve.
+		MEDTYPE_WWGLYC								// Identifier of the medium type.
+		LIFTTYPE_TWIST								// Identifier of the lifting type.
+		0.070										// Total height (H) of the product.
+		0.018										// Height (h) where are located the output (Sout).
+		0.031										// Width (L) between input (Sin) and output (Sout).
+		0.3											// Weight (m) of the product.
+		NO_ID										// Identifier of the blow tank.
+	}
+	4.40E+6										// Maximum power allowed for the safety valve for EN12828 norm.
+	1.14583E+7									// Maximum power allowed for the safety valve without norm.
+}
+
+new:CDB_SafetyValveCooling(DSV20_4.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV20_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20540"
+		CDB_Product::Name			= "DSV 20-4.0 F"
+		CDB_TAProduct::Dpmax		= 4.0e+5
+		CDB_SafetyValveBase::SetPressure = 4.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 5.10E+6
+		CDB_SafetyValveCooling::PowerLimitNone = 1.32813E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV20_5.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV20_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20550"
+		CDB_Product::Name			= "DSV 20-5.0 F"
+		CDB_TAProduct::Dpmax		= 5.0e+5
+		CDB_SafetyValveBase::SetPressure = 5.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 5.70E+6
+		CDB_SafetyValveCooling::PowerLimitNone = 1.48438E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV20_6.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV20_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20560"
+		CDB_Product::Name			= "DSV 20-6.0 F"
+		CDB_TAProduct::Dpmax		= 6.0e+5
+		CDB_SafetyValveBase::SetPressure = 6.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 6.30E+6
+		CDB_SafetyValveCooling::PowerLimitNone = 1.64063E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV20_7.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV20_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20570"
+		CDB_Product::Name			= "DSV 20-7.0 F"
+		CDB_TAProduct::Dpmax		= 7.0e+5
+		CDB_SafetyValveBase::SetPressure = 7.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 6.80E+6
+		CDB_SafetyValveCooling::PowerLimitNone = 1.77083E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV20_8.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV20_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20580"
+		CDB_Product::Name			= "DSV 20-8.0 F"
+		CDB_TAProduct::Dpmax		= 8.0e+5
+		CDB_SafetyValveBase::SetPressure = 8.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 7.20E+6
+		CDB_SafetyValveCooling::PowerLimitNone = 1.87500E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV20_9.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV20_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20590"
+		CDB_Product::Name			= "DSV 20-9.0 F"
+		CDB_TAProduct::Dpmax		= 9.0e+5
+		CDB_SafetyValveBase::SetPressure = 9.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 7.70E+6
+		CDB_SafetyValveCooling::PowerLimitNone = 2.00521E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV20_10.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV20_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20510"
+		CDB_Product::Name			= "DSV 20-10.0 F"
+		CDB_TAProduct::Dpmax		= 1.0e+6
+		CDB_SafetyValveBase::SetPressure = 1.0e+6
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 8.10E+6
+		CDB_SafetyValveCooling::PowerLimitNone = 2.10938E+7
+	}
+}
+
+//****************************
+// DSV...F - DN25
+//****************************
+
+new:CDB_SafetyValveCooling(DSV25_3.0_F) -> SAFETYVALVE_TAB
+{
+	{
+		{
+			{
+				{
+					{
+						0											// isDeleted
+						1											// isAvailable
+						0											// isHidden
+						1											// isFix
+						0											// Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+						0											// Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+						0               							// Sort integer (Allow to show a group of articles in the order defined with this variable).
+					}
+					1.6e+6 \ 1.6e+6								// Pmaxmin and Pmaxmax  in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+					NO_ID										// Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+					120	        								// Tmax in �C
+					-50             							// Tmin in �C
+				}
+				"301051-20630"								// Reference to the Product
+				"DSV 25-3.0 F"								// Name of the product
+				SFTYVTYPE_C									// Identifier of the product type
+				SFTYVFAM_F									// Identifier of the family of the product
+				SFTYVVER_DIAPH								// Identifier of the version of the product
+				1											// Level of priority for selection [1,10]
+				""											// Product comment
+				"PX_DSV_H_F_SOL"			 				// Product image ID
+				NO_ID										// Identifier of the accessory group
+				#ePartOfaSetNo 								// Boolean indicating if the valve is part of a ActSet
+				NO_ID										// Table ID where are sets if exist for the current product.
+				0.0											// Price
+				#eProduct                              	    // #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+				NO_ID                                       // Identifier of the series of the accessory (mainly used in DlgDirSel)
+				0                                           // 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+				NO_ID                                      	// Identifier of the accessory type if #eBoth 
+				NO_ID										// Identifier of the accessory family if #eBoth	
+			}
+			BDY_GUNMETAL								// Identifier of the body material
+			DN_25                                       // Identifier of the corresp. valve size
+			CONN_THREAD                                 // Identifier of the (inlet/pipe side) connection
+			NO_ID                                       // Identifier of the connection table, can be NO_ID
+			CONN_THREAD                                 // Identifier of the outlet/body side connection, can be NO_ID
+			""                                          // Type of the valve as used in the CBI II
+			""                                          // Size of the valve as used in the CBI II
+			""                                          // Size of the valve in inch as used in the CBI II
+			0                                           // CBI compatibility Index
+			""                                          // CBI Version
+			3.0e+5                                      // Maximum Dp of the valve
+			#eMeasPointNone						        // Measuring points. #eMeasPointNone or a combination of #eMeasPointInlet, #eMeasPointOutlet, #eMeasPointMeasStatOut or #eMeasPointP+.
+			#eMeasDataNone								// Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+			CONSIZE_FG1									// Identifier of the inlet size ID
+			CONSIZE_FG1									// Identifier of the outlet size ID
+		}
+		3.0e+5										// psv of the safety valve.
+		MEDTYPE_WWGLYC								// Identifier of the medium type.
+		LIFTTYPE_TWIST								// Identifier of the lifting type.
+		0.080										// Total height (H) of the product.
+		0.022										// Height (h) where are located the output (Sout).
+		0.035										// Width (L) between input (Sin) and output (Sout).
+		0.5											// Weight (m) of the product.
+		NO_ID										// Identifier of the blow tank.
+	}
+	6.70E+6										// Maximum power allowed for the safety valve for EN12828 norm.
+	1.74479E+7									// Maximum power allowed for the safety valve without norm.
+}
+
+new:CDB_SafetyValveCooling(DSV25_4.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV25_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20640"
+		CDB_Product::Name			= "DSV 25-4.0 F"
+		CDB_TAProduct::Dpmax		= 4.0e+5
+		CDB_SafetyValveBase::SetPressure = 4.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 7.70E+6
+		CDB_SafetyValveCooling::PowerLimitNone = 2.00521E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV25_5.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV25_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20650"
+		CDB_Product::Name			= "DSV 25-5.0 F"
+		CDB_TAProduct::Dpmax		= 5.0e+5
+		CDB_SafetyValveBase::SetPressure = 5.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 8.60E+6
+		CDB_SafetyValveCooling::PowerLimitNone = 2.23958E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV25_6.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV25_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20660"
+		CDB_Product::Name			= "DSV 25-6.0 F"
+		CDB_TAProduct::Dpmax		= 6.0e+5
+		CDB_SafetyValveBase::SetPressure = 6.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 9.50E+6
+		CDB_SafetyValveCooling::PowerLimitNone = 2.47396E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV25_7.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV25_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20670"
+		CDB_Product::Name			= "DSV 25-7.0 F"
+		CDB_TAProduct::Dpmax		= 7.0e+5
+		CDB_SafetyValveBase::SetPressure = 7.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 1.02E+7
+		CDB_SafetyValveCooling::PowerLimitNone = 2.65625E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV25_8.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV25_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20680"
+		CDB_Product::Name			= "DSV 25-8.0 F"
+		CDB_TAProduct::Dpmax		= 8.0e+5
+		CDB_SafetyValveBase::SetPressure = 8.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 1.09E+7
+		CDB_SafetyValveCooling::PowerLimitNone = 2.83854E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV25_9.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV25_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20690"
+		CDB_Product::Name			= "DSV 25-9.0 F"
+		CDB_TAProduct::Dpmax		= 9.0e+5
+		CDB_SafetyValveBase::SetPressure = 9.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 1.16E+7
+		CDB_SafetyValveCooling::PowerLimitNone = 3.02083E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV25_10.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV25_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20610"
+		CDB_Product::Name			= "DSV 25-10.0 F"
+		CDB_TAProduct::Dpmax		= 1.0e+6
+		CDB_SafetyValveBase::SetPressure = 1.0e+6
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 1.22E+7
+		CDB_SafetyValveCooling::PowerLimitNone = 3.17708E+7
+	}
+}
+
+//****************************
+// DSV...F - DN32
+//****************************
+
+new:CDB_SafetyValveCooling(DSV32_3.0_F) -> SAFETYVALVE_TAB
+{
+	{
+		{
+			{
+				{
+					{
+						0											// isDeleted
+						1											// isAvailable
+						0											// isHidden
+						1											// isFix
+						0											// Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+						0											// Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+						0               							// Sort integer (Allow to show a group of articles in the order defined with this variable).
+					}
+					1.6e+6 \ 1.6e+6								// Pmaxmin and Pmaxmax  in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+					NO_ID										// Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+					120	        								// Tmax in �C
+					-50             							// Tmin in �C
+				}
+				"301051-20730"								// Reference to the Product
+				"DSV 32-3.0 F"								// Name of the product
+				SFTYVTYPE_C									// Identifier of the product type
+				SFTYVFAM_F									// Identifier of the family of the product
+				SFTYVVER_DIAPH								// Identifier of the version of the product
+				1											// Level of priority for selection [1,10]
+				""											// Product comment
+				"PX_DSV_H_F_SOL"			 				// Product image ID
+				NO_ID										// Identifier of the accessory group
+				#ePartOfaSetNo 								// Boolean indicating if the valve is part of a ActSet
+				NO_ID										// Table ID where are sets if exist for the current product.
+				0.0											// Price
+				#eProduct                              	    // #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+				NO_ID                                       // Identifier of the series of the accessory (mainly used in DlgDirSel)
+				0                                           // 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+				NO_ID                                      	// Identifier of the accessory type if #eBoth 
+				NO_ID										// Identifier of the accessory family if #eBoth	
+			}
+			BDY_GUNMETAL								// Identifier of the body material
+			DN_32                                       // Identifier of the corresp. valve size
+			CONN_THREAD                                 // Identifier of the (inlet/pipe side) connection
+			NO_ID                                       // Identifier of the connection table, can be NO_ID
+			CONN_THREAD                                 // Identifier of the outlet/body side connection, can be NO_ID
+			""                                          // Type of the valve as used in the CBI II
+			""                                          // Size of the valve as used in the CBI II
+			""                                          // Size of the valve in inch as used in the CBI II
+			0                                           // CBI compatibility Index
+			""                                          // CBI Version
+			3.0e+5                                      // Maximum Dp of the valve
+			#eMeasPointNone						        // Measuring points. #eMeasPointNone or a combination of #eMeasPointInlet, #eMeasPointOutlet, #eMeasPointMeasStatOut or #eMeasPointP+.
+			#eMeasDataNone								// Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+			CONSIZE_FG1_1_4								// Identifier of the inlet size ID
+			CONSIZE_FG1_1_4								// Identifier of the outlet size ID
+		}
+		3.0e+5										// psv of the safety valve.
+		MEDTYPE_WWGLYC								// Identifier of the medium type.
+		LIFTTYPE_TWIST								// Identifier of the lifting type.
+		0.1											// Total height (H) of the product.
+		0.025										// Height (h) where are located the output (Sout).
+		0.04										// Width (L) between input (Sin) and output (Sout).
+		0.7											// Weight (m) of the product.
+		NO_ID										// Identifier of the blow tank.
+	}
+	8.50E+6										// Maximum power allowed for the safety valve for EN12828 norm.
+	2.21354E+7									// Maximum power allowed for the safety valve without norm.
+}
+
+new:CDB_SafetyValveCooling(DSV32_4.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV32_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20740"
+		CDB_Product::Name			= "DSV 32-4.0 F"
+		CDB_TAProduct::Dpmax		= 4.0e+5
+		CDB_SafetyValveBase::SetPressure = 4.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 9.80E+6
+		CDB_SafetyValveCooling::PowerLimitNone = 2.55208E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV32_5.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV32_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20750"
+		CDB_Product::Name			= "DSV 32-5.0 F"
+		CDB_TAProduct::Dpmax		= 5.0e+5
+		CDB_SafetyValveBase::SetPressure = 5.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 1.09E+7
+		CDB_SafetyValveCooling::PowerLimitNone = 2.83854E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV32_6.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV32_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20760"
+		CDB_Product::Name			= "DSV 32-6.0 F"
+		CDB_TAProduct::Dpmax		= 6.0e+5
+		CDB_SafetyValveBase::SetPressure = 6.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 1.20E+7
+		CDB_SafetyValveCooling::PowerLimitNone = 3.12500E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV32_7.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV32_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20770"
+		CDB_Product::Name			= "DSV 32-7.0 F"
+		CDB_TAProduct::Dpmax		= 7.0e+5
+		CDB_SafetyValveBase::SetPressure = 7.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 1.29E+7
+		CDB_SafetyValveCooling::PowerLimitNone = 3.35938E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV32_8.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV32_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20780"
+		CDB_Product::Name			= "DSV 32-8.0 F"
+		CDB_TAProduct::Dpmax		= 8.0e+5
+		CDB_SafetyValveBase::SetPressure = 8.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 1.38E+7
+		CDB_SafetyValveCooling::PowerLimitNone = 3.59375E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV32_9.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV32_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20790"
+		CDB_Product::Name			= "DSV 32-9.0 F"
+		CDB_TAProduct::Dpmax		= 9.0e+5
+		CDB_SafetyValveBase::SetPressure = 9.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 1.47E+7
+		CDB_SafetyValveCooling::PowerLimitNone = 3.82813E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV32_10.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV32_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20710"
+		CDB_Product::Name			= "DSV 32-10.0 F"
+		CDB_TAProduct::Dpmax		= 1.0e+6
+		CDB_SafetyValveBase::SetPressure = 1.0e+6
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 1.55E+7
+		CDB_SafetyValveCooling::PowerLimitNone = 4.03646E+7
+	}
+}
+
+//****************************
+// DSV...F - DN40
+//****************************
+
+new:CDB_SafetyValveCooling(DSV40_3.0_F) -> SAFETYVALVE_TAB
+{
+	{
+		{
+			{
+				{
+					{
+						0											// isDeleted
+						1											// isAvailable
+						0											// isHidden
+						1											// isFix
+						0											// Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+						0											// Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+						0               							// Sort integer (Allow to show a group of articles in the order defined with this variable).
+					}
+					1.6e+6 \ 1.6e+6								// Pmaxmin and Pmaxmax  in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+					NO_ID										// Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+					120	        								// Tmax in �C
+					-50             							// Tmin in �C
+				}
+				"301051-20830"								// Reference to the Product
+				"DSV 40-3.0 F"								// Name of the product
+				SFTYVTYPE_C									// Identifier of the product type
+				SFTYVFAM_F									// Identifier of the family of the product
+				SFTYVVER_DIAPH								// Identifier of the version of the product
+				1											// Level of priority for selection [1,10]
+				""											// Product comment
+				"PX_DSV_H_F_SOL"			 				// Product image ID
+				NO_ID										// Identifier of the accessory group
+				#ePartOfaSetNo 								// Boolean indicating if the valve is part of a ActSet
+				NO_ID										// Table ID where are sets if exist for the current product.
+				0.0											// Price
+				#eProduct                              	    // #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+				NO_ID                                       // Identifier of the series of the accessory (mainly used in DlgDirSel)
+				0                                           // 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+				NO_ID                                      	// Identifier of the accessory type if #eBoth 
+				NO_ID										// Identifier of the accessory family if #eBoth	
+			}
+			BDY_GUNMETAL								// Identifier of the body material
+			DN_40                                       // Identifier of the corresp. valve size
+			CONN_THREAD                                 // Identifier of the (inlet/pipe side) connection
+			NO_ID                                       // Identifier of the connection table, can be NO_ID
+			CONN_THREAD                                 // Identifier of the outlet/body side connection, can be NO_ID
+			""                                          // Type of the valve as used in the CBI II
+			""                                          // Size of the valve as used in the CBI II
+			""                                          // Size of the valve in inch as used in the CBI II
+			0                                           // CBI compatibility Index
+			""                                          // CBI Version
+			3.0e+5                                      // Maximum Dp of the valve
+			#eMeasPointNone						        // Measuring points. #eMeasPointNone or a combination of #eMeasPointInlet, #eMeasPointOutlet, #eMeasPointMeasStatOut or #eMeasPointP+.
+			#eMeasDataNone								// Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+			CONSIZE_FG1_1_2								// Identifier of the inlet size ID
+			CONSIZE_FG1_1_2								// Identifier of the outlet size ID
+		}
+		3.0e+5										// psv of the safety valve.
+		MEDTYPE_WWGLYC								// Identifier of the medium type.
+		LIFTTYPE_TWIST								// Identifier of the lifting type.
+		0.14										// Total height (H) of the product.
+		0.028										// Height (h) where are located the output (Sout).
+		0.046										// Width (L) between input (Sin) and output (Sout).
+		1.2											// Weight (m) of the product.
+		NO_ID										// Identifier of the blow tank.
+	}
+	1.27E+7										// Maximum power allowed for the safety valve for EN12828 norm.
+	3.30729E+7									// Maximum power allowed for the safety valve without norm.
+}
+
+new:CDB_SafetyValveCooling(DSV40_4.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV40_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20840"
+		CDB_Product::Name			= "DSV 40-4.0 F"
+		CDB_TAProduct::Dpmax		= 4.0e+5
+		CDB_SafetyValveBase::SetPressure = 4.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 1.46E+7
+		CDB_SafetyValveCooling::PowerLimitNone = 3.80208E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV40_5.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV40_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20850"
+		CDB_Product::Name			= "DSV 40-5.0 F"
+		CDB_TAProduct::Dpmax		= 5.0e+5
+		CDB_SafetyValveBase::SetPressure = 5.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 1.63E+7
+		CDB_SafetyValveCooling::PowerLimitNone = 4.24479E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV40_6.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV40_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20860"
+		CDB_Product::Name			= "DSV 40-6.0 F"
+		CDB_TAProduct::Dpmax		= 6.0e+5
+		CDB_SafetyValveBase::SetPressure = 6.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 1.79E+7
+		CDB_SafetyValveCooling::PowerLimitNone = 4.66146E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV40_7.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV40_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20870"
+		CDB_Product::Name			= "DSV 40-7.0 F"
+		CDB_TAProduct::Dpmax		= 7.0e+5
+		CDB_SafetyValveBase::SetPressure = 7.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 1.93E+7
+		CDB_SafetyValveCooling::PowerLimitNone = 5.02604E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV40_8.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV40_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20880"
+		CDB_Product::Name			= "DSV 40-8.0 F"
+		CDB_TAProduct::Dpmax		= 8.0e+5
+		CDB_SafetyValveBase::SetPressure = 8.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 2.07E+7
+		CDB_SafetyValveCooling::PowerLimitNone = 5.39063E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV40_9.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV40_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20890"
+		CDB_Product::Name			= "DSV 40-9.0 F"
+		CDB_TAProduct::Dpmax		= 9.0e+5
+		CDB_SafetyValveBase::SetPressure = 9.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 2.19E+7
+		CDB_SafetyValveCooling::PowerLimitNone = 5.70313E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV40_10.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV40_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20810"
+		CDB_Product::Name			= "DSV 40-10.0 F"
+		CDB_TAProduct::Dpmax		= 1.0e+6
+		CDB_SafetyValveBase::SetPressure = 1.0e+6
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 2.31E+7
+		CDB_SafetyValveCooling::PowerLimitNone = 6.01563E+7
+	}
+}
+
+//****************************
+// DSV...F - DN50
+//****************************
+
+new:CDB_SafetyValveCooling(DSV50_3.0_F) -> SAFETYVALVE_TAB
+{
+	{
+		{
+			{
+				{
+					{
+						0											// isDeleted
+						1											// isAvailable
+						0											// isHidden
+						1											// isFix
+						0											// Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+						0											// Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+						0               							// Sort integer (Allow to show a group of articles in the order defined with this variable).
+					}
+					1.6e+6 \ 1.6e+6								// Pmaxmin and Pmaxmax  in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+					NO_ID										// Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+					120	        								// Tmax in �C
+					-50             							// Tmin in �C
+				}
+				"301051-20930"								// Reference to the Product
+				"DSV 50-3.0 F"								// Name of the product
+				SFTYVTYPE_C									// Identifier of the product type
+				SFTYVFAM_F									// Identifier of the family of the product
+				SFTYVVER_DIAPH								// Identifier of the version of the product
+				1											// Level of priority for selection [1,10]
+				""											// Product comment
+				"PX_DSV_H_F_SOL"			 				// Product image ID
+				NO_ID										// Identifier of the accessory group
+				#ePartOfaSetNo 								// Boolean indicating if the valve is part of a ActSet
+				NO_ID										// Table ID where are sets if exist for the current product.
+				0.0											// Price
+				#eProduct                              	    // #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+				NO_ID                                       // Identifier of the series of the accessory (mainly used in DlgDirSel)
+				0                                           // 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+				NO_ID                                      	// Identifier of the accessory type if #eBoth 
+				NO_ID										// Identifier of the accessory family if #eBoth	
+			}
+			BDY_GUNMETAL								// Identifier of the body material
+			DN_50                                       // Identifier of the corresp. valve size
+			CONN_THREAD                                 // Identifier of the (inlet/pipe side) connection
+			NO_ID                                       // Identifier of the connection table, can be NO_ID
+			CONN_THREAD                                 // Identifier of the outlet/body side connection, can be NO_ID
+			""                                          // Type of the valve as used in the CBI II
+			""                                          // Size of the valve as used in the CBI II
+			""                                          // Size of the valve in inch as used in the CBI II
+			0                                           // CBI compatibility Index
+			""                                          // CBI Version
+			3.0e+5                                      // Maximum Dp of the valve
+			#eMeasPointNone						        // Measuring points. #eMeasPointNone or a combination of #eMeasPointInlet, #eMeasPointOutlet, #eMeasPointMeasStatOut or #eMeasPointP+.
+			#eMeasDataNone								// Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+			CONSIZE_FG2									// Identifier of the inlet size ID
+			CONSIZE_FG2									// Identifier of the outlet size ID
+		}
+		3.0e+5										// psv of the safety valve.
+		MEDTYPE_WWGLYC								// Identifier of the medium type.
+		LIFTTYPE_TWIST								// Identifier of the lifting type.
+		0.155										// Total height (H) of the product.
+		0.034										// Height (h) where are located the output (Sout).
+		0.054										// Width (L) between input (Sin) and output (Sout).
+		1.6											// Weight (m) of the product.
+		NO_ID										// Identifier of the blow tank.
+	}
+	1.63E+7										// Maximum power allowed for the safety valve for EN12828 norm.
+	4.24479E+7									// Maximum power allowed for the safety valve without norm.
+}
+
+new:CDB_SafetyValveCooling(DSV50_4.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV50_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20940"
+		CDB_Product::Name			= "DSV 50-4.0 F"
+		CDB_TAProduct::Dpmax		= 4.0e+5
+		CDB_SafetyValveBase::SetPressure = 4.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 1.89E+7
+		CDB_SafetyValveCooling::PowerLimitNone = 4.92188E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV50_5.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV50_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20950"
+		CDB_Product::Name			= "DSV 50-5.0 F"
+		CDB_TAProduct::Dpmax		= 5.0e+5
+		CDB_SafetyValveBase::SetPressure = 5.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 2.11E+7
+		CDB_SafetyValveCooling::PowerLimitNone = 5.49479E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV50_6.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV50_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20960"
+		CDB_Product::Name			= "DSV 50-6.0 F"
+		CDB_TAProduct::Dpmax		= 6.0e+5
+		CDB_SafetyValveBase::SetPressure = 6.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 2.31E+7
+		CDB_SafetyValveCooling::PowerLimitNone = 6.01563E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV50_7.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV50_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20970"
+		CDB_Product::Name			= "DSV 50-7.0 F"
+		CDB_TAProduct::Dpmax		= 7.0e+5
+		CDB_SafetyValveBase::SetPressure = 7.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 2.50E+7
+		CDB_SafetyValveCooling::PowerLimitNone = 6.51042E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV50_8.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV50_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20980"
+		CDB_Product::Name			= "DSV 50-8.0 F"
+		CDB_TAProduct::Dpmax		= 8.0e+5
+		CDB_SafetyValveBase::SetPressure = 8.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 2.67E+7
+		CDB_SafetyValveCooling::PowerLimitNone = 6.95313E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV50_9.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV50_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20990"
+		CDB_Product::Name			= "DSV 50-9.0 F"
+		CDB_TAProduct::Dpmax		= 9.0e+5
+		CDB_SafetyValveBase::SetPressure = 9.0e+5
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 2.83E+7
+		CDB_SafetyValveCooling::PowerLimitNone = 7.36979E+7
+	}
+}
+
+new:CDB_SafetyValveCooling(DSV50_10.0_F) -> SAFETYVALVE_TAB
+{Inherited(DSV50_3.0_F)
+	{
+		CDB_Product::Reference		= "301051-20910"
+		CDB_Product::Name			= "DSV 50-10.0 F"
+		CDB_TAProduct::Dpmax		= 1.0e+6
+		CDB_SafetyValveBase::SetPressure = 1.0e+6
+		CDB_SafetyValveCooling::PowerLimitEN12828 = 2.98E+7
+		CDB_SafetyValveCooling::PowerLimitNone = 7.76042E+7
+	}
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+//
+//								CDB_SafetyValveSolar
+//
+//	Inherite from CDB_SafetyValveBase
+//
+//	new:CDB_SafetyValveSolar(ID)->SAFETYVALVE_TAB
+//	{
+//		{
+//			{
+//				{
+//					{
+//						{
+//							0				isDeleted
+//							1				isAvailable
+//							0				isHidden
+//							1				isFix
+//							0				Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation )
+//							0				Free integer (bit 0: NotForIndSel, bit 1: NotForDirSel, bit 2: NotForHMCalc)
+//							0               Sort integer (Allow to show a group of articles in the order defined with this variable).
+//						}
+//						Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+//						PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+//						Tmax in °C
+//						Tmin in °C
+//					}
+//					"Reference"				Reference to the TA Product
+//					"Name"					Name of the product
+//					TypeID					Identifier of the valve type 
+//					FamilyID				Identifier of the family of the product
+//					VersionID				Identifier of the version of the product
+//					PriorityLevel			Level of priority for selection [1,10]
+//					Comment					Product comment
+//					ProdImgID				Product image ID
+//					AccessGroupID			Identifier of the accessory group
+//					PartOfaSet				Boolean indicating if the valve is part of a ActSet
+//					Price					Price of the product
+// 					ProductUseFlag			#eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+//					AccessorySeriesID		Identifier of the series of the accessory
+//					isAttached				0/1: 1 if accessory cannot be ordered separately		
+//   				AccTypeID				Identifier of Accessory type if #eBoth 
+//					AccFamilyID				Identifier of Accessory family if #eBoth
+//				}
+//				BodyMaterialID			Identifier of the body material
+//				SizeID					Identifier of the corresp. valve size
+//				ConnectID				Identifier of the (inlet/pipe side) connection
+//				ConnTabID				Identifier of the connection table, can be NO_ID
+//				Conn2ID					Identifier of the outlet/body side connection, can be NO_ID
+//				CBIType					Type of the valve as used in the CBI II
+//				CBISize					Size of the valve as used in the CBI II
+//				CBISizeInch				Size of the valve in inch as used in the CBI II
+//				CBICompatibilityIndex	CBI compatibility Index
+//				CBIVersion				CBI Version
+//				Dpmax					Maximum Dp of the valve
+//				MeasPt					Measuring points
+//				MeasurableData			Measurable data
+//				InletSizeID				Identifier of the inlet size ID
+//				OutletSizeID			Identifier of the outlet size ID
+//			}
+//			SetPressure				psv of the safety valve.
+//			MediumNameID			Identifier of the medium type.
+//			LiftingTypeID			Identifier of the lifting type.
+//			TopOutHeight			Height (H) between the top of the product and the middle of the output (Sout).
+//			OutBotHeight			Height (h) between the middle of the output (Sout) and the bottom of the product.
+//			Width					Width (L) between input (Sin) and output (Sout).
+//			Weight					Weight (m) of the product.
+//			BlowTankID				Identifier of the blow tank.
+//		}
+//		PowerLimit				Maximum power of the system allowed for the safety valve.
+//		CollectorLimit			Maximum surface of collector allowed for the safety valve.
+//
+////////////////////////////////////////////////////////////////
+// Inherited Fields
+//	CDB_Thing::Deleted
+//	CDB_Thing::Available
+//	CDB_Thing::Hidden
+//	CDB_Thing::Fixed
+//	CDB_Thing::FreeInt1
+//	CDB_Thing::FreeInt2
+//	CDB_Thing::SortInt
+//
+//	CDB_HydroThing::Pmax
+//	CDB_HydroThing::PNRange
+//	CDB_HydroThing::Tmax
+//	CDB_HydroThing::Tmin
+//
+//	CDB_Product::Reference
+//	CDB_Product::Name
+//	CDB_Product::TypeID
+//	CDB_Product::FamilyID
+//	CDB_Product::VersionID
+//	CDB_Product::PriorityLevel
+//	CDB_Product::Comment
+//	CDB_Product::ProdImgID
+//	CDB_Product::AccessGroupID
+//	CDB_Product::PartOfaSet
+//  CDB_Product::TableSetID
+//	CDB_Product::Price
+//	CDB_Product::ProductUseFlag
+//	CDB_Product::AccessorySeriesID
+//	CDB_Product::isAttached
+//	CDB_Product::AccTypeID
+//	CDB_Product::AccFamilyID
+//
+//	CDB_TAProduct::BodyMaterialID
+//	CDB_TAProduct::SizeID
+//	CDB_TAProduct::ConnectID
+//  CDB_TAProduct::ConnTabID
+//  CDB_TAProduct::Conn2ID
+//  CDB_TAProduct::CBIType
+//  CDB_TAProduct::CBISize
+//  CDB_TAProduct::CBISizeInch
+//  CDB_TAProduct::CBICompatibilityIndex
+//  CDB_TAProduct::CBIVersion
+//  CDB_TAProduct::Dpmax
+//  CDB_TAProduct::MeasPt
+//  CDB_TAProduct::MeasurableData
+//  CDB_TAProduct::InletSizeID
+//  CDB_TAProduct::OutletSizeID
+
+//  CDB_SafetyValveBase::SetPressure
+//  CDB_SafetyValveBase::MediumNameID
+//  CDB_SafetyValveBase::LiftingTypeID
+//  CDB_SafetyValveBase::TopOutHeight
+//  CDB_SafetyValveBase::OutBotHeight
+//  CDB_SafetyValveBase::Width
+//  CDB_SafetyValveBase::Weight
+//  CDB_SafetyValveBase::BlowTankID
+//
+//  CDB_SafetyValveSolar::PowerLimit
+//  CDB_SafetyValveSolar::CollectorLimit
+// }
+
+//****************************
+// DSV...SOL - DN15
+//****************************
+
+new:CDB_SafetyValveSolar(DSV15_3.0_SOL) -> SAFETYVALVE_TAB
+{
+	{
+		{
+			{
+				{
+					{
+						0											// isDeleted
+						1											// isAvailable
+						0											// isHidden
+						1											// isFix
+						0											// Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+						0											// Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+						0               							// Sort integer (Allow to show a group of articles in the order defined with this variable).
+					}
+					1.0e+6 \ 1.0e+6								// Pmaxmin and Pmaxmax  in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+					NO_ID										// Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+					160	        								// Tmax in �C
+					-10             							// Tmin in �C
+				}
+				"301051-10430"								// Reference to the Product
+				"DSV 15-3.0 SOL"							// Name of the product
+				SFTYVTYPE_S									// Identifier of the product type
+				SFTYVFAM_SOL								// Identifier of the family of the product
+				SFTYVVER_DIAPH								// Identifier of the version of the product
+				1											// Level of priority for selection [1,10]
+				""											// Product comment
+				"PX_DSV_H_F_SOL"			 				// Product image ID
+				NO_ID										// Identifier of the accessory group
+				#ePartOfaSetNo 								// Boolean indicating if the valve is part of a ActSet
+				NO_ID										// Table ID where are sets if exist for the current product.
+				0.0											// Price
+				#eProduct                       			// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+				NO_ID                           			// Identifier of the series of the accessory (mainly used in DlgDirSel)
+				0                               			// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+				NO_ID                           			// Identifier of the accessory type if #eBoth 
+				NO_ID										// Identifier of the accessory family if #eBoth	
+			}
+			BDY_GUNMETAL								// Identifier of the body material
+			DN_15                                       // Identifier of the corresp. valve size
+			CONN_THREAD                                 // Identifier of the (inlet/pipe side) connection
+			NO_ID                                       // Identifier of the connection table, can be NO_ID
+			CONN_THREAD                                 // Identifier of the outlet/body side connection, can be NO_ID
+			""                                          // Type of the valve as used in the CBI II
+			""                                          // Size of the valve as used in the CBI II
+			""                                          // Size of the valve in inch as used in the CBI II
+			0                                           // CBI compatibility Index
+			""                                          // CBI Version
+			3.0e+5                                      // Maximum Dp of the valve
+			#eMeasPointNone						        // Measuring points. #eMeasPointNone or a combination of #eMeasPointInlet, #eMeasPointOutlet, #eMeasPointMeasStatOut or #eMeasPointP+.
+			#eMeasDataNone								// Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+			CONSIZE_FG1_2								// Identifier of the inlet size ID
+			CONSIZE_FG3_4								// Identifier of the outlet size ID
+		}
+		3.0e+5										// psv of the safety valve.
+		MEDTYPE_SHWORMIX							// Identifier of the medium type.
+		LIFTTYPE_TWIST								// Identifier of the lifting type.
+		0.070										// Total height (H) of the product.
+		0.028										// Height (h) where are located the output (Sout).
+		0.034										// Width (L) between input (Sin) and output (Sout).
+		0.3											// Weight (m) of the product.
+		NO_ID										// Identifier of the blow tank.
+	}
+	5.0e+4										// Maximum power of the system allowed for the safety valve.
+	50											// Maximum surface of collector allowed for the safety valve.
+}
+
+new:CDB_SafetyValveSolar(DSV15_4.0_SOL) -> SAFETYVALVE_TAB
+{Inherited(DSV15_3.0_SOL)
+	{
+		CDB_Product::Reference		= "301051-10440"
+		CDB_Product::Name			= "DSV 15-4.0 SOL"
+		CDB_TAProduct::Dpmax		= 4.0e+5
+		CDB_SafetyValveBase::SetPressure = 4.0e+5
+	}
+}
+
+new:CDB_SafetyValveSolar(DSV15_6.0_SOL) -> SAFETYVALVE_TAB
+{Inherited(DSV15_3.0_SOL)
+	{
+		CDB_Product::Reference		= "301051-10460"
+		CDB_Product::Name			= "DSV 15-6.0 SOL"
+		CDB_TAProduct::Dpmax		= 6.0e+5
+		CDB_SafetyValveBase::SetPressure = 6.0e+5
+	}
+}
+
+new:CDB_SafetyValveSolar(DSV15_8.0_SOL) -> SAFETYVALVE_TAB
+{Inherited(DSV15_3.0_SOL)
+	{
+		CDB_Product::Reference		= "301051-10480"
+		CDB_Product::Name			= "DSV 15-8.0 SOL"
+		CDB_TAProduct::Dpmax		= 8.0e+5
+		CDB_SafetyValveBase::SetPressure = 8.0e+5
+	}
+}
+
+new:CDB_SafetyValveSolar(DSV15_10.0_SOL) -> SAFETYVALVE_TAB
+{Inherited(DSV15_3.0_SOL)
+	{
+		CDB_Product::Reference		= "301051-10410"
+		CDB_Product::Name			= "DSV 15-10.0 SOL"
+		CDB_TAProduct::Dpmax		= 1.0e+6
+		CDB_SafetyValveBase::SetPressure = 1.0e+6
+	}
+}
+
+//****************************
+// DSV...SOL - DN20
+//****************************
+
+new:CDB_SafetyValveSolar(DSV20_3.0_SOL) -> SAFETYVALVE_TAB
+{
+	{
+		{
+			{
+				{
+					{
+						0											// isDeleted
+						1											// isAvailable
+						0											// isHidden
+						1											// isFix
+						0											// Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+						0											// Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+						0               							// Sort integer (Allow to show a group of articles in the order defined with this variable).
+					}
+					1.0e+6 \ 1.0e+6								// Pmaxmin and Pmaxmax  in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+					NO_ID										// Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+					160	        								// Tmax in �C
+					-10             							// Tmin in �C
+				}
+				"301051-10530"								// Reference to the Product
+				"DSV 20-3.0 SOL"							// Name of the product
+				SFTYVTYPE_S									// Identifier of the product type
+				SFTYVFAM_SOL								// Identifier of the family of the product
+				SFTYVVER_DIAPH								// Identifier of the version of the product
+				1											// Level of priority for selection [1,10]
+				""											// Product comment
+				"PX_DSV_H_F_SOL"			 				// Product image ID
+				NO_ID										// Identifier of the accessory group
+				#ePartOfaSetNo 								// Boolean indicating if the valve is part of a ActSet
+				NO_ID										// Table ID where are sets if exist for the current product.
+				0.0											// Price
+				#eProduct                       			// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+				NO_ID                           			// Identifier of the series of the accessory (mainly used in DlgDirSel)
+				0                               			// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+				NO_ID                           			// Identifier of the accessory type if #eBoth 
+				NO_ID										// Identifier of the accessory family if #eBoth	
+			}
+			BDY_GUNMETAL								// Identifier of the body material
+			DN_20                                       // Identifier of the corresp. valve size
+			CONN_THREAD                                 // Identifier of the (inlet/pipe side) connection
+			NO_ID                                       // Identifier of the connection table, can be NO_ID
+			CONN_THREAD                                 // Identifier of the outlet/body side connection, can be NO_ID
+			""                                          // Type of the valve as used in the CBI II
+			""                                          // Size of the valve as used in the CBI II
+			""                                          // Size of the valve in inch as used in the CBI II
+			0                                           // CBI compatibility Index
+			""                                          // CBI Version
+			3.0e+5                                      // Maximum Dp of the valve
+			#eMeasPointNone						        // Measuring points. #eMeasPointNone or a combination of #eMeasPointInlet, #eMeasPointOutlet, #eMeasPointMeasStatOut or #eMeasPointP+.
+			#eMeasDataNone								// Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+			CONSIZE_FG3_4								// Identifier of the inlet size ID
+			CONSIZE_FG1									// Identifier of the outlet size ID
+		}
+		3.0e+5										// psv of the safety valve.
+		MEDTYPE_SHWORMIX							// Identifier of the medium type.
+		LIFTTYPE_TWIST								// Identifier of the lifting type.
+		0.065										// Total height (H) of the product.
+		0.034										// Height (h) where are located the output (Sout).
+		0.04										// Width (L) between input (Sin) and output (Sout).
+		0.5											// Weight (m) of the product.
+		NO_ID										// Identifier of the blow tank.
+	}
+	1.0e+5										// Maximum power of the system allowed for the safety valve.
+	100											// Maximum surface of collector allowed for the safety valve.
+}
+
+new:CDB_SafetyValveSolar(DSV20_4.0_SOL) -> SAFETYVALVE_TAB
+{Inherited(DSV20_3.0_SOL)
+	{
+		CDB_Product::Reference		= "301051-10540"
+		CDB_Product::Name			= "DSV 20-4.0 SOL"
+		CDB_TAProduct::Dpmax		= 4.0e+5
+		CDB_SafetyValveBase::SetPressure = 4.0e+5
+	}
+}
+
+new:CDB_SafetyValveSolar(DSV20_6.0_SOL) -> SAFETYVALVE_TAB
+{Inherited(DSV20_3.0_SOL)
+	{
+		CDB_Product::Reference		= "301051-10560"
+		CDB_Product::Name			= "DSV 20-6.0 SOL"
+		CDB_TAProduct::Dpmax		= 6.0e+5
+		CDB_SafetyValveBase::SetPressure = 6.0e+5
+	}
+}
+
+new:CDB_SafetyValveSolar(DSV20_8.0_SOL) -> SAFETYVALVE_TAB
+{Inherited(DSV20_3.0_SOL)
+	{
+		CDB_Product::Reference		= "301051-10580"
+		CDB_Product::Name			= "DSV 20-8.0 SOL"
+		CDB_TAProduct::Dpmax		= 8.0e+5
+		CDB_SafetyValveBase::SetPressure = 8.0e+5
+	}
+}
+
+new:CDB_SafetyValveSolar(DSV20_10.0_SOL) -> SAFETYVALVE_TAB
+{Inherited(DSV20_3.0_SOL)
+	{
+		CDB_Product::Reference		= "301051-10510"
+		CDB_Product::Name			= "DSV 20-10.0 SOL"
+		CDB_TAProduct::Dpmax		= 1.0e+6
+		CDB_SafetyValveBase::SetPressure = 1.0e+6
+	}
+}
+
+//****************************
+// DSV...SOL - DN25
+//****************************
+
+new:CDB_SafetyValveSolar(DSV25_3.0_SOL) -> SAFETYVALVE_TAB
+{
+	{
+		{
+			{
+				{
+					{
+						0											// isDeleted
+						1											// isAvailable
+						0											// isHidden
+						1											// isFix
+						0											// Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+						0											// Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+						0               							// Sort integer (Allow to show a group of articles in the order defined with this variable).
+					}
+					1.0e+6 \ 1.0e+6								// Pmaxmin and Pmaxmax  in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+					NO_ID										// Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+					160	        								// Tmax in �C
+					-10             							// Tmin in �C
+				}
+				"301051-10630"								// Reference to the Product
+				"DSV 25-3.0 SOL"							// Name of the product
+				SFTYVTYPE_S									// Identifier of the product type
+				SFTYVFAM_SOL								// Identifier of the family of the product
+				SFTYVVER_DIAPH								// Identifier of the version of the product
+				1											// Level of priority for selection [1,10]
+				""											// Product comment
+				"PX_DSV_H_F_SOL"			 				// Product image ID
+				NO_ID										// Identifier of the accessory group
+				#ePartOfaSetNo 								// Boolean indicating if the valve is part of a ActSet
+				NO_ID										// Table ID where are sets if exist for the current product.
+				0.0											// Price
+				#eProduct                       			// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+				NO_ID                           			// Identifier of the series of the accessory (mainly used in DlgDirSel)
+				0                               			// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+				NO_ID                           			// Identifier of the accessory type if #eBoth 
+				NO_ID										// Identifier of the accessory family if #eBoth	
+			}
+			BDY_GUNMETAL								// Identifier of the body material
+			DN_25                                       // Identifier of the corresp. valve size
+			CONN_THREAD                                 // Identifier of the (inlet/pipe side) connection
+			NO_ID                                       // Identifier of the connection table, can be NO_ID
+			CONN_THREAD                                 // Identifier of the outlet/body side connection, can be NO_ID
+			""                                          // Type of the valve as used in the CBI II
+			""                                          // Size of the valve as used in the CBI II
+			""                                          // Size of the valve in inch as used in the CBI II
+			0                                           // CBI compatibility Index
+			""                                          // CBI Version
+			3.0e+5                                      // Maximum Dp of the valve
+			#eMeasPointNone						        // Measuring points. #eMeasPointNone or a combination of #eMeasPointInlet, #eMeasPointOutlet, #eMeasPointMeasStatOut or #eMeasPointP+.
+			#eMeasDataNone								// Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+			CONSIZE_FG1								// Identifier of the inlet size ID
+			CONSIZE_FG1_1_4									// Identifier of the outlet size ID
+		}
+		3.0e+5										// psv of the safety valve.
+		MEDTYPE_SHWORMIX							// Identifier of the medium type.
+		LIFTTYPE_TWIST								// Identifier of the lifting type.
+		0.075										// Total height (H) of the product.
+		0.041										// Height (h) where are located the output (Sout).
+		0.045										// Width (L) between input (Sin) and output (Sout).
+		0.75										// Weight (m) of the product.
+		NO_ID										// Identifier of the blow tank.
+	}
+	2.0e+5										// Maximum power of the system allowed for the safety valve.
+	200											// Maximum surface of collector allowed for the safety valve.
+}
+
+new:CDB_SafetyValveSolar(DSV25_4.0_SOL) -> SAFETYVALVE_TAB
+{Inherited(DSV25_3.0_SOL)
+	{
+		CDB_Product::Reference		= "301051-10640"
+		CDB_Product::Name			= "DSV 25-4.0 SOL"
+		CDB_TAProduct::Dpmax		= 4.0e+5
+		CDB_SafetyValveBase::SetPressure = 4.0e+5
+	}
+}
+
+new:CDB_SafetyValveSolar(DSV25_6.0_SOL) -> SAFETYVALVE_TAB
+{Inherited(DSV25_3.0_SOL)
+	{
+		CDB_Product::Reference		= "301051-10660"
+		CDB_Product::Name			= "DSV 25-6.0 SOL"
+		CDB_TAProduct::Dpmax		= 6.0e+5
+		CDB_SafetyValveBase::SetPressure = 6.0e+5
+	}
+}
+
+new:CDB_SafetyValveSolar(DSV25_8.0_SOL) -> SAFETYVALVE_TAB
+{Inherited(DSV25_3.0_SOL)
+	{
+		CDB_Product::Reference		= "301051-10680"
+		CDB_Product::Name			= "DSV 25-8.0 SOL"
+		CDB_TAProduct::Dpmax		= 8.0e+5
+		CDB_SafetyValveBase::SetPressure = 8.0e+5
+	}
+}
+
+new:CDB_SafetyValveSolar(DSV25_10.0_SOL) -> SAFETYVALVE_TAB
+{Inherited(DSV25_3.0_SOL)
+	{
+		CDB_Product::Reference		= "301051-10610"
+		CDB_Product::Name			= "DSV 25-10.0 SOL"
+		CDB_TAProduct::Dpmax		= 1.0e+6
+		CDB_SafetyValveBase::SetPressure = 1.0e+6
+	}
+}
+
+////////////////////////////////////////////////////////////////
+// For blow tank devices.
+////////////////////////////////////////////////////////////////
+
+new:CTable(BLOWTANK_TAB) -> ROOT_TABLE
+{
+	"Blow tank"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CTable(BLOWTANKTYPE_TAB) -> LIST_TAB
+{
+	"Blow tank types"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CTable(BLOWTANKFAMILY_TAB) -> LIST_TAB
+{
+	"Blow tank families"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CTable(BLOWTANKVERSION_TAB) -> LIST_TAB
+{
+	"Blow tank versions"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+////////////////////////////////////////////////////////////////////
+//
+//		Table BLOWTANKTYPE_TAB : Ordered enumeration of the types of
+//							 blow tank.
+//
+///////////////////////////////////////////////////////////////////
+
+new:CDB_StringID(BLOWTANKTYPE_STD) ->BLOWTANKTYPE_TAB
+{
+	{
+		"IDS_BLOWTANK_STANDARD"
+	}
+	1
+	BLOWTANK_TAB
+}
+
+////////////////////////////////////////////////////////////////////
+//
+//		Table BLOWTANKFAMILY_TAB : Ordered enumeration of the families of
+//							 blow tank.
+//
+///////////////////////////////////////////////////////////////////
+
+new:CDB_StringID(BLOWTANKFAM_ET) ->BLOWTANKFAMILY_TAB
+{
+	{
+		"Blow tank ET"
+	}
+	1
+	BLOWTANKTYPE_STD
+}
+
+////////////////////////////////////////////////////////////////////
+//
+//		Table BLOWTANKVERSION_TAB : Ordered enumeration of the versions of
+//							 blow tank.
+//
+///////////////////////////////////////////////////////////////////
+
+new:CDB_StringID(BLOWTANKVER_VERT) ->BLOWTANKVERSION_TAB
+{
+	{
+		"IDS_BLOWTANK_VERSIONVERTICAL"
+	}
+	1
+	BLOWTANK_TAB
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+//
+//								CDB_BlowTank
+//
+//	new:CDB_BlowTank(ID)->BLOWTANK_TAB
+//	{
+//		{
+//			{
+//				{
+//					{
+//						0							isDeleted
+//						1							isAvailable
+//						0							isHidden
+//						1							isFix
+//						0							Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation )
+//						0							Free integer (bit 0: NotForIndSel, bit 1: NotForDirSel, bit 2: NotForHMCalc)
+//						0               			Sort integer (Allow to show a group of articles in the order defined with this variable).
+//					}
+//					Pmaxmin and Pmaxmax 		in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+//					PNRangeID					Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+//					Tmax in °C
+//					Tmin in °C
+//				}
+//				"Reference"					Reference to the TA Product
+//				"Name"						Name of the product
+//				TypeID						Identifier of the valve type 
+//				FamilyID					Identifier of the family of the product
+//				VersionID					Identifier of the version of the product
+//				PriorityLevel				Level of priority for selection [1,10]
+//				Comment						Product comment
+//				ProdImgID					Product image ID
+//				AccessGroupID				Identifier of the accessory group
+//				PartOfaSet					Boolean indicating if the valve is part of a ActSet
+//				Price						Price of the product
+// 				ProductUseFlag				#eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+//				AccessorySeriesID			Identifier of the series of the accessory
+//				isAttached					0/1: 1 if accessory cannot be ordered separately		
+//  			AccTypeID					Identifier of Accessory type if #eBoth 
+//				AccFamilyID					Identifier of Accessory family if #eBoth
+//			}
+//			BodyMaterialID				Identifier of the body material
+//			SizeID						Identifier of the corresp. valve size
+//			ConnectID					Identifier of the (inlet/pipe side) connection
+//			ConnTabID					Identifier of the connection table, can be NO_ID
+//			Conn2ID						Identifier of the outlet/body side connection, can be NO_ID
+//			CBIType						Type of the valve as used in the CBI II
+//			CBISize						Size of the valve as used in the CBI II
+//			CBISizeInch					Size of the valve in inch as used in the CBI II
+//			CBICompatibilityIndex		CBI compatibility Index
+//			CBIVersion					CBI Version
+//			Dpmax						Maximum Dp of the valve
+//			MeasPt						Measuring points
+//			MeasurableData				Measurable data
+//			InletSizeID					Identifier of the inlet size ID
+//			OutletSizeID				Identifier of the outlet size ID
+//		}
+//		ApplicationCompatibility	psv of the safety valve.
+//		DrainLineSizeID				Identifier of the drain line (Sw) output size.
+//		Weight						Weight (m) of the product.
+//		Diameter					Diameter (D) of the device.
+//		Height						Height (H) of the device.
+//
+////////////////////////////////////////////////////////////////
+// Inherited Fields
+//	CDB_Thing::Deleted
+//	CDB_Thing::Available
+//	CDB_Thing::Hidden
+//	CDB_Thing::Fixed
+//	CDB_Thing::FreeInt1
+//	CDB_Thing::FreeInt2
+//	CDB_Thing::SortInt
+//
+//	CDB_HydroThing::Pmax
+//	CDB_HydroThing::PNRange
+//	CDB_HydroThing::Tmax
+//	CDB_HydroThing::Tmin
+//
+//	CDB_Product::Reference
+//	CDB_Product::Name
+//	CDB_Product::TypeID
+//	CDB_Product::FamilyID
+//	CDB_Product::VersionID
+//	CDB_Product::PriorityLevel
+//	CDB_Product::Comment
+//	CDB_Product::ProdImgID
+//	CDB_Product::AccessGroupID
+//	CDB_Product::PartOfaSet
+//  CDB_Product::TableSetID
+//	CDB_Product::Price
+//	CDB_Product::ProductUseFlag
+//	CDB_Product::AccessorySeriesID
+//	CDB_Product::isAttached
+//	CDB_Product::AccTypeID
+//	CDB_Product::AccFamilyID
+//
+//	CDB_TAProduct::BodyMaterialID
+//	CDB_TAProduct::SizeID
+//	CDB_TAProduct::ConnectID
+//  CDB_TAProduct::ConnTabID
+//  CDB_TAProduct::Conn2ID
+//  CDB_TAProduct::CBIType
+//  CDB_TAProduct::CBISize
+//  CDB_TAProduct::CBISizeInch
+//  CDB_TAProduct::CBICompatibilityIndex
+//  CDB_TAProduct::CBIVersion
+//  CDB_TAProduct::Dpmax
+//  CDB_TAProduct::MeasPt
+//  CDB_TAProduct::MeasurableData
+//  CDB_TAProduct::InletSizeID
+//  CDB_TAProduct::OutletSizeID
+//  CDB_BlowTank::ApplicationCompatibility
+//	CDB_BlowTank::SteamLineSizeID
+//  CDB_BlowTank::DrainLineSizeID
+//  CDB_BlowTank::Weight
+//  CDB_BlowTank::Diameter
+//  CDB_BlowTank::Height
+// }
+
+//****************************
+// Blow tank ET
+//****************************
+
+new:CDB_BlowTank(BLOWTANKET32_125) -> BLOWTANK_TAB
+{
+	{
+		{
+			{
+				{
+					0											// isDeleted
+					1											// isAvailable
+					0											// isHidden
+					1											// isFix
+					0											// Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+					0											// Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+					0               							// Sort integer (Allow to show a group of articles in the order defined with this variable).
+				}
+				0.0 \ 2.0e+5								// Pmaxmin and Pmaxmax  in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+				NO_ID										// Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+				120	        								// Tmax in �C
+				-10             							// Tmin in �C
+			}
+			"785 2500"									// Reference to the Product
+			"ET 32-125"									// Name of the product
+			BLOWTANKTYPE_STD							// Identifier of the product type
+			BLOWTANKFAM_ET								// Identifier of the family of the product
+			BLOWTANKVER_VERT							// Identifier of the version of the product
+			1											// Level of priority for selection [1,10]
+			""											// Product comment
+			"NO_ID"			 							// Product image ID
+			NO_ID										// Identifier of the accessory group
+			#ePartOfaSetNo 								// Boolean indicating if the valve is part of a ActSet
+			NO_ID										// Table ID where are sets if exist for the current product.
+			0.0											// Price
+			#eProduct                       			// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+			NO_ID                           			// Identifier of the series of the accessory (mainly used in DlgDirSel)
+			0                               			// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+			NO_ID                           			// Identifier of the accessory type if #eBoth 
+			NO_ID										// Identifier of the accessory family if #eBoth	
+		}
+		BDY_STEEL									// Identifier of the body material
+		DN_32                                       // Identifier of the corresp. valve size
+		NO_ID		                                // Identifier of the (inlet/pipe side) connection
+		NO_ID                                       // Identifier of the connection table, can be NO_ID
+		NO_ID                                 		// Identifier of the outlet/body side connection, can be NO_ID
+		""                                          // Type of the valve as used in the CBI II
+		""                                          // Size of the valve as used in the CBI II
+		""                                          // Size of the valve in inch as used in the CBI II
+		0                                           // CBI compatibility Index
+		""                                          // CBI Version
+		0.0                                      	// Maximum Dp of the valve
+		#eMeasPointNone						        // Measuring points. #eMeasPointNone or a combination of #eMeasPointInlet, #eMeasPointOutlet, #eMeasPointMeasStatOut or #eMeasPointP+.
+		#eMeasDataNone								// Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+		NO_ID										// Identifier of the inlet size ID
+		NO_ID										// Identifier of the outlet size ID
+	}
+	#ePMHeating									// Type of the application (Heating, cooling or solar).
+	MEDTYPE_STEAMHOTW							// Identifier of the medium type.
+	DN_65										// Identifier of the steam line (Sout) output size.
+	DN_15										// Identifier of the drain line (Sw) output size.
+	4.5											// Weight (m) of the product.
+	0.133										// Diameter (D) of the device.
+	0.312										// Height (H) of the device.
+}
+
+new:CDB_BlowTank(BLOWTANKET65_250) -> BLOWTANK_TAB
+{Inherited(BLOWTANKET32_125)
+	{
+		CDB_Product::Reference		= "785 2501"
+		CDB_Product::Name			= "ET 65-250"
+		CDB_TAProduct::SizeID = DN_65
+		CDB_BlowTank::SteamLineSizeID = DN_125
+		CDB_BlowTank::DrainLineSizeID = DN_20
+		CDB_BlowTank::Weight 	= 9.0
+		CDB_BlowTank::Diameter	= 0.285
+		CDB_BlowTank::Height	= 0.5
+	}
+}
+
+new:CDB_BlowTank(BLOWTANKET100_400) -> BLOWTANK_TAB
+{Inherited(BLOWTANKET32_125)
+	{
+		CDB_Product::Reference		= "785 2502"
+		CDB_Product::Name			= "ET 100-400"
+		CDB_TAProduct::SizeID = DN_100
+		CDB_BlowTank::SteamLineSizeID = DN_200
+		CDB_BlowTank::DrainLineSizeID = DN_25
+		CDB_BlowTank::Weight 	= 23.5
+		CDB_BlowTank::Diameter	= 0.405
+		CDB_BlowTank::Height	= 0.76
+	}
+}
+
+new:CDB_BlowTank(BLOWTANKET150_600) -> BLOWTANK_TAB
+{Inherited(BLOWTANKET32_125)
+	{
+		CDB_Product::Reference		= "785 2503"
+		CDB_Product::Name			= "ET 150-600"
+		CDB_TAProduct::SizeID = DN_150
+		CDB_BlowTank::SteamLineSizeID = DN_300
+		CDB_BlowTank::DrainLineSizeID = DN_32
+		CDB_BlowTank::Weight 	= 38.0
+		CDB_BlowTank::Diameter	= 0.605
+		CDB_BlowTank::Height	= 1.022
+	}
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+//
+//								CDB_BlowTankAllocation
+//
+//	Inherited from CDB_StringArray
+//
+//	{
+//		5							        // Number of column of the selection.
+//		SafetyValveID1 \ psv limit 1 \ BlowTankID1 \ psv limit 2 \ BlowTankID2
+//		SafetyValveID2 \ psv limit 1 \ BlowTankID3 \ psv limit 2 \ BlowTankID4
+//		...
+//	}
+//  Note: - values are saved in 'm_mapBlowTankAllocation'.
+//        - "psv limit" must be preceded by '<', '<=', '>' or '>='.
+///////////////////////////////////////////////////////////////////////////////////
+
+new:CDB_BlowTankAllocation(BLOWTANK_ALLOCATION)->ROOT_TABLE
+{
+	{
+		6
+		SFTYVFAM_H \ DN_15 \ \ \ \ 
+		SFTYVFAM_H \ DN_20 \ \ \ \ 
+		SFTYVFAM_H \ DN_25 \ \ \ \ 
+		SFTYVFAM_H \ DN_32 \ >= 0 \ BLOWTANKET65_250 \ \ 
+		SFTYVFAM_H \ DN_40 \ >= 0 \ BLOWTANKET100_400 \ \ 
+		SFTYVFAM_H \ DN_50 \ >= 0 \ BLOWTANKET100_400 \ \ 
+		SFTYVFAM_DGH \ DN_15 \ \ \ \ 
+		SFTYVFAM_DGH \ DN_20 \ \ \ \ 
+		SFTYVFAM_DGH \ DN_25 \ <= 5e5 \ BLOWTANKET65_250 \ > 5e5 \ BLOWTANKET65_250
+		SFTYVFAM_DGH \ DN_32 \ <= 5e5 \ BLOWTANKET65_250 \ > 5e5 \ BLOWTANKET65_250
+		SFTYVFAM_DGH \ DN_40 \ <= 5e5 \ BLOWTANKET65_250 \ > 5e5 \ BLOWTANKET100_400
+		SFTYVFAM_DGH \ DN_50 \ <= 5e5 \ BLOWTANKET100_400 \ > 5e5 \ BLOWTANKET100_400
+	}							
+}
+
+////////////////////////////////////////////////////////////////
+//
+//              HYS-1741: IPI March 2021
+//		Table ACCSERVICE_TAB :Accessories and service
+//
+////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////
+//
+//	How to write a Pressure reducing valve information ?
+//	--------------------------------------
+//
+//	new:CDB_PWQPressureReducer(ID)->SAFETYVALVE_TAB
+//	{
+//		{
+//			{
+//				{
+//					{
+//						0				isDeleted
+//						1				isAvailable
+//						0				isHidden
+//						1				isFix
+//						0				Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation )
+//						0				Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+//  	   				0               Sort integer (Allow to show a group of articles in the order defined with this variable).
+//					}
+//					Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+//					PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+//					Tmax in °C
+//					Tmin in °C
+//				}
+//				"Reference"				Reference to the TA Product
+//				"Name"					Name of the product
+//				TypeID					Identifier of the valve type
+//				FamilyID				Identifier of the family of the product
+//				VersionID				Identifier of the version of the product
+//				PriorityLevel			Level of priority for selection [1,10]
+//				Comment					Product comment
+//				ProdImgID				Product image ID
+//				AccessGroupID			Identifier of the accessory group
+//				PartOfaSet				Boolean indicating if the valve is part of a ActSet
+//				TableSetID				Table ID where are sets if exist for the current product.
+//				Price					Price of the product
+// 				ProductUseFlag			#eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+//				AccessorySeriesID		Identifier of the series of the accessory
+//				isAttached				0/1: 1 if accessory cannot be ordered separately		
+//  	 		AccTypeID				Identifier of Accessory type if #eBoth 
+//				AccFamilyID				Identifier of Accessory family if #eBoth
+//			}
+//			BodyMaterialID			Identifier of the body material
+//			SizeID					Identifier of the corresp. valve size
+//			ConnectID				Identifier of the (inlet/pipe side) connection
+//			ConnTabID				Identifier of the connection table, can be NO_ID
+//			Conn2ID					Identifier of the outlet/body side connection, can be NO_ID
+//			CBIType					Type of the valve as used in the CBI II
+//			CBISize					Size of the valve as used in the CBI II
+//			CBISizeInch				Size of the valve in inch as used in the CBI II
+//			CBICompatibilityIndex	CBI compatibility Index
+//			CBIVersion				CBI Version
+//			Dpmax					Maximum Dp of the valve
+//			MeasPt					Measuring points
+//			MeasurableData			Measurable data
+//			InletSizeID				Identifier of the inlet size ID
+//			OutletSizeID			Identifier of the outlet size ID
+//		}
+//  	MaxInletPressure        Max. inlet pressure 
+//  	MinOutletPressure       Min. outlet pressure 
+//  	MaxOutletPressure       Max. outlet pressure 
+//	}
+// Inherited Fields
+//	CDB_Thing::Deleted
+//	CDB_Thing::Available
+//	CDB_Thing::Hidden
+//	CDB_Thing::Fixed
+//	CDB_Thing::FreeInt1
+//	CDB_Thing::FreeInt2
+//	CDB_Thing::SortInt
+//	CDB_HydroThing::Pmax
+//	CDB_HydroThing::PNRange
+//	CDB_HydroThing::Tmax
+//	CDB_HydroThing::Tmin
+//	CDB_Product::Reference
+//	CDB_Product::Name
+//  CDB_Product::TypeID
+//	CDB_Product::FamilyID
+//	CDB_Product::VersionID
+//	CDB_Product::PriorityLevel
+//	CDB_Product::Comment
+//	CDB_Product::ProdImgID
+//	CDB_Product::AccessGroupID
+//	CDB_Product::PartOfaSet
+//  CDB_Product::TableSetID
+//	CDB_Product::Price
+//	CDB_Product::ProductUseFlag
+//	CDB_Product::AccessorySeriesID
+//	CDB_Product::isAttached
+//	CDB_Product::AccTypeID
+//	CDB_Product::AccFamilyID
+//	CDB_TAProduct::BodyMaterialID
+//	CDB_TAProduct::SizeID
+//	CDB_TAProduct::ConnectID
+//	CDB_TAProduct::ConnTabID
+//	CDB_TAProduct::Conn2ID
+//	CDB_TAProduct::CBIType
+//	CDB_TAProduct::CBISize
+//	CDB_TAProduct::CBISizeInch
+//  CDB_TAProduct::CBICompatibilityIndex
+//	CDB_TAProduct::CBIVersion
+//	CDB_TAProduct::Dpmax
+//	CDB_TAProduct::MeasPt
+//	CDB_TAProduct::MeasurableData
+//	CDB_TAProduct::InletSizeID
+//	CDB_TAProduct::OutletSizeID
+//	CDB_PWQPressureReducer::MaxInletPressure
+//	CDB_PWQPressureReducer::MinIOutletPressure
+//	CDB_PWQPressureReducer::MaxOutletPressure
+//
+////////////////////////////////////////////////////////////////
+
+new:CDB_PWQPressureReducer(PRVG06F_15) -> SAFETYVALVE_TAB
+{
+	{
+		{
+			{
+				{
+					0								                // isDeleted
+					1                                               // isAvailable
+					0                                               // isHidden
+					1                                               // isFix
+					0                                               // Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+					01                                              // Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+					0               								// Sort integer (Allow to show a group of articles in the order defined with this variable).
+				}
+				0.6e+6 \ 1.6e+6                         		// Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+				NO_ID                                           // PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+				40.0                                            // Tmax in °C
+				5.0                                             // Tmin in °C
+			}
+			"301052-00431"                                  // Reference to the TA Product
+			"Pressoreduct 15"                               // Name of the product
+			ACCSERVICETYPE_PRV                              // Identifier of the valve type
+			ACCSFAM_PRV_G06F                                // Identifier of the family of the product
+			VERS_STD                                        // Identifier of the version of the product
+			1                                               // Level of priority for selection [1,10]
+			""                                              // Product comment
+			"NO_ID"                                         // Product image ID
+			NO_ID                                           // Identifier of the accessory group
+			#ePartOfaSetNo                                  // Boolean indicating if product is part of a set. Can be #ePartOfaSetNo, #ePartOfaSetYes, #ePartOfaSetYesBreakOk or #ePartOfaSetYesBreakOnMsg.
+			NO_ID											// Table ID where are sets if exist for the current product.
+			0.0                                             // Price of the product
+			#eProduct                              		    // #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+			NO_ID                                       	// Identifier of the series of the accessory (mainly used in DlgDirSel)
+			0                                           	// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+			NO_ID                                      		// Identifier of the accessory type if #eBoth 
+			NO_ID											// Identifier of the accessory family if #eBoth	
+		}
+		BDY_GUNMETALLEADFREE                            // Identifier of the body material
+		DN_15                                           // Identifier of the corresp. valve size
+		CONN_THREADM                                    // Identifier of the (inlet/pipe side) connection
+		NO_ID                                           // Identifier of the connection table, can be NO_ID
+		NO_ID                                           // Identifier of the outlet/body side connection, can be NO_ID
+		""                                              // Type of the valve as used in the CBI II
+		""                                              // Size of the valve as used in the CBI II
+		""                                              // Size of the valve in inch as used in the CBI II
+		0                                               // CBI compatibility Index
+		""                                              // CBI Version
+		0.0                                             // Maximum Dp of the valve
+		#eMeasPointNone                                 // Measuring points
+		#eMeasDataNone                                  // Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+		NO_ID											// Identifier of the inlet size ID
+		NO_ID											// Identifier of the outlet size ID
+	}
+	1.6e+6											// Max. inlet pressure (Pa)
+	1.5e+5											// Min. outlet pressure (Pa)
+	7e+5											// Max. outlet pressure (Pa)
+}
+
+new:CDB_PWQPressureReducer(PRVG06F_20) -> SAFETYVALVE_TAB
+{	Inherited(PRVG06F_15)
+	{
+		CDB_Product::Reference	=	"301052-00531"
+		CDB_Product::Name	    =	"Pressoreduct 20"
+		CDB_TAProduct::SizeID	= 	DN_20
+	}
+}
+
+new:CDB_PWQPressureReducer(PRVG06F_25) -> SAFETYVALVE_TAB
+{	Inherited(PRVG06F_15)
+	{
+		CDB_Product::Reference	=	"301052-00631"
+		CDB_Product::Name	    =	"Pressoreduct 25"
+		CDB_TAProduct::SizeID	= 	DN_25
+	}
+}
+
+new:CDB_PWQPressureReducer(PRVG06F_32) -> SAFETYVALVE_TAB
+{	Inherited(PRVG06F_15)
+	{
+		CDB_Product::Reference	=	"301052-00731"
+		CDB_Product::Name	    =	"Pressoreduct 32"
+		CDB_TAProduct::SizeID	= 	DN_32
+	}
+}
+
+new:CDB_PWQPressureReducer(PRVG06F_40) -> SAFETYVALVE_TAB
+{	Inherited(PRVG06F_15)
+	{
+		CDB_Product::Reference	=	"301052-00831"
+		CDB_Product::Name	    =	"Pressoreduct 40"
+		CDB_TAProduct::SizeID	= 	DN_40
+	}
+}
+
+new:CDB_PWQPressureReducer(PRVG06F_50) -> SAFETYVALVE_TAB
+{	Inherited(PRVG06F_15)
+	{
+		CDB_Product::Reference	=	"301052-00931"
+		CDB_Product::Name	    =	"Pressoreduct 50"
+		CDB_TAProduct::SizeID	= 	DN_50
+	}
+}
+
+////////////////////////////////////////////////////////////////
+//
+//		ROOT TABLE identification
+//
+////////////////////////////////////////////////////////////////
+
+ROOT_TABLE(ROOT_TABLE)

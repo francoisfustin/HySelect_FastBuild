@@ -1,0 +1,889 @@
+#Start of test definition
+
+StartTechnicalParameters
+ApplicationType = 1
+AvailablePMPanels = 7
+BreakTankRequiredForWaterMakeUp = 1
+CVDefKvReynard = 1
+CVMaxDispDp = 200000
+CVMaxDpProp = 65000
+CVMinAuthCstFlow = 0.5
+CVMinAuthor = 0.25
+CVMinDpOnoff = 3000
+CVMinDpProp = 10000
+CVUseDpCPBand = 0
+CanChangePressureVolumeLimit = 0
+CurrencyID = CURRENCY_EUR
+DefaultCalculationNorm = PM_NORM_EN12828
+DefaultCoolingTps = 6
+DefaultFillTemperature = 15
+DefaultHeatingTps = 70
+DefaultISChangeOverCoolingSideAdditFamilyID = WATER_ADDIT
+DefaultISChangeOverCoolingSideAdditID = WATER
+DefaultISChangeOverCoolingSideDT = 6
+DefaultISChangeOverCoolingSidePcWeight = 0
+DefaultISChangeOverCoolingSideTps = 6
+DefaultISChangeOverHeatingSideAdditFamilyID = WATER_ADDIT
+DefaultISChangeOverHeatingSideAdditID = WATER
+DefaultISChangeOverHeatingSideDT = 20
+DefaultISChangeOverHeatingSidePcWeight = 0
+DefaultISChangeOverHeatingSideTps = 70
+DefaultISCoolingAdditFamilyID = WATER_ADDIT
+DefaultISCoolingAdditID = WATER
+DefaultISCoolingDT = 6
+DefaultISCoolingPcWeight = 0
+DefaultISCoolingTps = 6
+DefaultISHeatingAdditFamilyID = WATER_ADDIT
+DefaultISHeatingAdditID = WATER
+DefaultISHeatingDT = 20
+DefaultISHeatingPcWeight = 0
+DefaultISHeatingTps = 70
+DefaultISSolarAdditFamilyID = WATER_ADDIT
+DefaultISSolarAdditID = WATER
+DefaultISSolarDT = 20
+DefaultISSolarPcWeight = 0
+DefaultISSolarTps = 70
+DefaultMaxTempInCooling = 45
+DefaultMinTempInHeating = 5
+DefaultMinTempInSolar = 5
+DefaultPipeSerieID = STEEL_GEN
+DefaultPrjCoolingAdditID = WATER
+DefaultPrjCoolingDT = 6
+DefaultPrjCoolingPcWeight = 0
+DefaultPrjHeatingAdditID = WATER
+DefaultPrjHeatingDT = 20
+DefaultPrjHeatingPcWeight = 0
+DefaultSafetyPressureResponseValve = 300000
+DefaultSecondaryPumpHMin = 25000
+DefaultSmartCVLocation = 1
+DefaultStaticPressureOfWaterNetwork = 400000
+DefaultTAZ = 100
+DefaultWaterHardness = 1.78324958
+DefaultWaterMakeUpTemp = 15
+DegassingWaterReserveForVessel = 0.002
+DpCBCVDpcmin = 5000
+DpCBCVDplmin = 5000
+DpCHide = 0
+DpCHminFullyOpenMv = 0
+DpCMinDp = 5000
+DpCMvLocation = 0
+DpCMvWithSameSizeOnly = 0
+DpRefForBest6Way = 3000
+FixedOrificeMaxDp = 6000
+FixedOrificeMinDp = 2000
+FlowDeviationMinus = -0.1
+FlowDeviationPlus = 0.1
+FluidTempLimitEN12953 = 105
+InitialPressureMargin = 30000
+MaxNumberOfAdditionalVesselsInParallel = 4
+MaxNumberOfVentoInParallel = 2
+MaxSafetyValveInParallel = 3
+MaxSizeShift = 4
+MinPressureMargin = 20000
+PICvHide = 0
+PICvMinDp = 1000
+PSetupCompresso = 10000
+PSetupTransfero = 20000
+PipeMaxDp = 200
+PipeMaxVelocity = 2
+PipeMinDp = 10
+PipeMinVelocity = 0.3
+PipeTargetDp = 150
+PipeTargetVelocity = 1
+PipeTargetVelosityUsed = 0
+PressureVolumeLimit = 300000
+ProjectType = 2
+SafetyTempLimiterLimitEN12953 = 110
+SizeShiftAbove = 2
+SizeShiftBelow = -2
+SmartValveDpMaxForBestSuggestion = 20000
+TrvDefDpTotal = 10000
+TrvDefRoomTemperature = 20
+TrvDefSupplyTemperature = 80
+TrvMaxDp = 30000
+TrvMinDpRatio = 0.25
+UseDefaultFreezingPointAsMinTemperature = 1
+UseSimplyPst = 0
+UseVesselPressureVolumeLimit = 0
+ValveMaxDp = 200000
+ValveMin2Dp = 6000
+ValveMinDp = 3000
+VenturiMaxDp = 10000
+VenturiMinDp = 1000
+VesselSelectionRangePercentage = 0
+EndTechnicalParameters
+
+Test number = 0
+
+SelectionMode = Individual
+ProductCategory = Smart control valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 70
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002552777777063
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TASMART_25A;TA-Smart 25;Ametal(tm);Thread male;25;25 (1");-10/110;25 (1");96.8975;0.439324
+Result number = 1;TASMART_20A;TA-Smart 20;Ametal(tm);Thread male;25;20 (3/4");-10/110;25 (1");96.8975;0.439324
+Result number = 2;TASMART_25B;TA-Smart 1";Ametal(tm);Thread NPT;25;25 (1");-10/110;25 (1");96.8975;0.439324
+Result number = 3;TASMART_20B;TA-Smart 3/4";Ametal(tm);Thread NPT;25;20 (3/4");-10/110;25 (1");96.8975;0.439324
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 1
+
+SelectionMode = Individual
+ProductCategory = Smart control valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 70
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.000255555555484
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TASMART_32A;TA-Smart 32;Ametal(tm);Thread male;25;32 (1 1/4");-10/110;25 (1");97.0939;0.439802
+Result number = 1;TASMART_25A;TA-Smart 25;Ametal(tm);Thread male;25;25 (1");-10/110;25 (1");97.0939;0.439802
+Result number = 2;TASMART_20A;TA-Smart 20;Ametal(tm);Thread male;25;20 (3/4");-10/110;25 (1");97.0939;0.439802
+Result number = 3;TASMART_32B;TA-Smart 1 1/4";Ametal(tm);Thread NPT;25;32 (1 1/4");-10/110;25 (1");97.0939;0.439802
+Result number = 4;TASMART_25B;TA-Smart 1";Ametal(tm);Thread NPT;25;25 (1");-10/110;25 (1");97.0939;0.439802
+Result number = 5;TASMART_20B;TA-Smart 3/4";Ametal(tm);Thread NPT;25;20 (3/4");-10/110;25 (1");97.0939;0.439802
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 2
+
+SelectionMode = Individual
+ProductCategory = Smart control valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 70
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00127777777742
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TASMART_50A;TA-Smart 50;Ametal(tm);Thread male;25;50 (2");-10/110;50 (2");70.2507;0.57918
+Result number = 1;TASMART_40A;TA-Smart 40;Ametal(tm);Thread male;25;40 (1 1/2");-10/110;50 (2");70.2507;0.57918
+Result number = 2;TASMART_32A;TA-Smart 32;Ametal(tm);Thread male;25;32 (1 1/4");-10/110;50 (2");70.2507;0.57918
+Result number = 3;TASMART_50B;TA-Smart 2";Ametal(tm);Thread NPT;25;50 (2");-10/110;50 (2");70.2507;0.57918
+Result number = 4;TASMART_40B;TA-Smart 1 1/2";Ametal(tm);Thread NPT;25;40 (1 1/2");-10/110;50 (2");70.2507;0.57918
+Result number = 5;TASMART_32B;TA-Smart 1 1/4";Ametal(tm);Thread NPT;25;32 (1 1/4");-10/110;50 (2");70.2507;0.57918
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 3
+
+SelectionMode = Individual
+ProductCategory = Smart control valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 70
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.001278055555198
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TASMART_50A;TA-Smart 50;Ametal(tm);Thread male;25;50 (2");-10/110;50 (2");70.2795;0.579306
+Result number = 1;TASMART_40A;TA-Smart 40;Ametal(tm);Thread male;25;40 (1 1/2");-10/110;50 (2");70.2795;0.579306
+Result number = 2;TASMART_50B;TA-Smart 2";Ametal(tm);Thread NPT;25;50 (2");-10/110;50 (2");70.2795;0.579306
+Result number = 3;TASMART_40B;TA-Smart 1 1/2";Ametal(tm);Thread NPT;25;40 (1 1/2");-10/110;50 (2");70.2795;0.579306
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 4
+
+SelectionMode = Individual
+ProductCategory = Smart control valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 70
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0004330555554343
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TASMART_32A;TA-Smart 32;Ametal(tm);Thread male;25;32 (1 1/4");-10/110;32 (1 1/4");64.9141;0.427824
+Result number = 1;TASMART_25A;TA-Smart 25;Ametal(tm);Thread male;25;25 (1");-10/110;32 (1 1/4");64.9141;0.427824
+Result number = 2;TASMART_20A;TA-Smart 20;Ametal(tm);Thread male;25;20 (3/4");-10/110;32 (1 1/4");64.9141;0.427824
+Result number = 3;TASMART_32B;TA-Smart 1 1/4";Ametal(tm);Thread NPT;25;32 (1 1/4");-10/110;32 (1 1/4");64.9141;0.427824
+Result number = 4;TASMART_25B;TA-Smart 1";Ametal(tm);Thread NPT;25;25 (1");-10/110;32 (1 1/4");64.9141;0.427824
+Result number = 5;TASMART_20B;TA-Smart 3/4";Ametal(tm);Thread NPT;25;20 (3/4");-10/110;32 (1 1/4");64.9141;0.427824
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 5
+
+SelectionMode = Individual
+ProductCategory = Smart control valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 70
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.000433333333212
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TASMART_40A;TA-Smart 40;Ametal(tm);Thread male;25;40 (1 1/2");-10/110;32 (1 1/4");64.9916;0.428098
+Result number = 1;TASMART_32A;TA-Smart 32;Ametal(tm);Thread male;25;32 (1 1/4");-10/110;32 (1 1/4");64.9916;0.428098
+Result number = 2;TASMART_25A;TA-Smart 25;Ametal(tm);Thread male;25;25 (1");-10/110;32 (1 1/4");64.9916;0.428098
+Result number = 3;TASMART_20A;TA-Smart 20;Ametal(tm);Thread male;25;20 (3/4");-10/110;32 (1 1/4");64.9916;0.428098
+Result number = 4;TASMART_40B;TA-Smart 1 1/2";Ametal(tm);Thread NPT;25;40 (1 1/2");-10/110;32 (1 1/4");64.9916;0.428098
+Result number = 5;TASMART_32B;TA-Smart 1 1/4";Ametal(tm);Thread NPT;25;32 (1 1/4");-10/110;32 (1 1/4");64.9916;0.428098
+Result number = 6;TASMART_25B;TA-Smart 1";Ametal(tm);Thread NPT;25;25 (1");-10/110;32 (1 1/4");64.9916;0.428098
+Result number = 7;TASMART_20B;TA-Smart 3/4";Ametal(tm);Thread NPT;25;20 (3/4");-10/110;32 (1 1/4");64.9916;0.428098
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 6
+
+SelectionMode = Individual
+ProductCategory = Smart control valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 70
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00216666666606
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TASMART_65A;TA-Smart 65;Ductile iron;Flange;16;65 (2 1/2");-10/110;50 (2");191.548;0.982088
+Result number = 1;TASMART_65C;TA-Smart 65;Ductile iron;Flange;25;65 (2 1/2");-10/110;50 (2");191.548;0.982088
+Result number = 2;TASMART_50A;TA-Smart 50;Ametal(tm);Thread male;25;50 (2");-10/110;50 (2");191.548;0.982088
+Result number = 3;TASMART_40A;TA-Smart 40;Ametal(tm);Thread male;25;40 (1 1/2");-10/110;50 (2");191.548;0.982088
+Result number = 4;TASMART_65B;TA-Smart 2 1/2";Ductile iron;ANSI Flange;25;65 (2 1/2");-10/110;50 (2");191.548;0.982088
+Result number = 5;TASMART_50B;TA-Smart 2";Ametal(tm);Thread NPT;25;50 (2");-10/110;50 (2");191.548;0.982088
+Result number = 6;TASMART_40B;TA-Smart 1 1/2";Ametal(tm);Thread NPT;25;40 (1 1/2");-10/110;50 (2");191.548;0.982088
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 7
+
+SelectionMode = Individual
+ProductCategory = Smart control valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 70
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002166944443838
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TASMART_65A;TA-Smart 65;Ductile iron;Flange;16;65 (2 1/2");-10/110;50 (2");191.595;0.982214
+Result number = 1;TASMART_65C;TA-Smart 65;Ductile iron;Flange;25;65 (2 1/2");-10/110;50 (2");191.595;0.982214
+Result number = 2;TASMART_50A;TA-Smart 50;Ametal(tm);Thread male;25;50 (2");-10/110;50 (2");191.595;0.982214
+Result number = 3;TASMART_65B;TA-Smart 2 1/2";Ductile iron;ANSI Flange;25;65 (2 1/2");-10/110;50 (2");191.595;0.982214
+Result number = 4;TASMART_50B;TA-Smart 2";Ametal(tm);Thread NPT;25;50 (2");-10/110;50 (2");191.595;0.982214
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 8
+
+SelectionMode = Individual
+ProductCategory = Smart control valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 70
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0007441666664583
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TASMART_40A;TA-Smart 40;Ametal(tm);Thread male;25;40 (1 1/2");-10/110;32 (1 1/4");179.554;0.735176
+Result number = 1;TASMART_32A;TA-Smart 32;Ametal(tm);Thread male;25;32 (1 1/4");-10/110;32 (1 1/4");179.554;0.735176
+Result number = 2;TASMART_25A;TA-Smart 25;Ametal(tm);Thread male;25;25 (1");-10/110;32 (1 1/4");179.554;0.735176
+Result number = 3;TASMART_40B;TA-Smart 1 1/2";Ametal(tm);Thread NPT;25;40 (1 1/2");-10/110;32 (1 1/4");179.554;0.735176
+Result number = 4;TASMART_32B;TA-Smart 1 1/4";Ametal(tm);Thread NPT;25;32 (1 1/4");-10/110;32 (1 1/4");179.554;0.735176
+Result number = 5;TASMART_25B;TA-Smart 1";Ametal(tm);Thread NPT;25;25 (1");-10/110;32 (1 1/4");179.554;0.735176
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 9
+
+SelectionMode = Individual
+ProductCategory = Smart control valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 70
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.000744444444236
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TASMART_50A;TA-Smart 50;Ametal(tm);Thread male;25;50 (2");-10/110;32 (1 1/4");179.681;0.735451
+Result number = 1;TASMART_40A;TA-Smart 40;Ametal(tm);Thread male;25;40 (1 1/2");-10/110;32 (1 1/4");179.681;0.735451
+Result number = 2;TASMART_32A;TA-Smart 32;Ametal(tm);Thread male;25;32 (1 1/4");-10/110;32 (1 1/4");179.681;0.735451
+Result number = 3;TASMART_25A;TA-Smart 25;Ametal(tm);Thread male;25;25 (1");-10/110;32 (1 1/4");179.681;0.735451
+Result number = 4;TASMART_50B;TA-Smart 2";Ametal(tm);Thread NPT;25;50 (2");-10/110;32 (1 1/4");179.681;0.735451
+Result number = 5;TASMART_40B;TA-Smart 1 1/2";Ametal(tm);Thread NPT;25;40 (1 1/2");-10/110;32 (1 1/4");179.681;0.735451
+Result number = 6;TASMART_32B;TA-Smart 1 1/4";Ametal(tm);Thread NPT;25;32 (1 1/4");-10/110;32 (1 1/4");179.681;0.735451
+Result number = 7;TASMART_25B;TA-Smart 1";Ametal(tm);Thread NPT;25;25 (1");-10/110;32 (1 1/4");179.681;0.735451
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 10
+
+SelectionMode = Individual
+ProductCategory = Smart control valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 70
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00372222222118
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TASMART_80A;TA-Smart 80;Ductile iron;Flange;16;80 (3");-10/110;65 (2 1/2");143.815;1.00123
+Result number = 1;TASMART_80C;TA-Smart 80;Ductile iron;Flange;25;80 (3");-10/110;65 (2 1/2");143.815;1.00123
+Result number = 2;TASMART_65A;TA-Smart 65;Ductile iron;Flange;16;65 (2 1/2");-10/110;65 (2 1/2");143.815;1.00123
+Result number = 3;TASMART_65C;TA-Smart 65;Ductile iron;Flange;25;65 (2 1/2");-10/110;65 (2 1/2");143.815;1.00123
+Result number = 4;TASMART_50A;TA-Smart 50;Ametal(tm);Thread male;25;50 (2");-10/110;65 (2 1/2");143.815;1.00123
+Result number = 5;TASMART_80B;TA-Smart 3";Ductile iron;ANSI Flange;25;80 (3");-10/110;65 (2 1/2");143.815;1.00123
+Result number = 6;TASMART_65B;TA-Smart 2 1/2";Ductile iron;ANSI Flange;25;65 (2 1/2");-10/110;65 (2 1/2");143.815;1.00123
+Result number = 7;TASMART_50B;TA-Smart 2";Ametal(tm);Thread NPT;25;50 (2");-10/110;65 (2 1/2");143.815;1.00123
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 11
+
+SelectionMode = Individual
+ProductCategory = Smart control valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 70
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.003722499998958
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TASMART_80A;TA-Smart 80;Ductile iron;Flange;16;80 (3");-10/110;65 (2 1/2");143.836;1.00131
+Result number = 1;TASMART_80C;TA-Smart 80;Ductile iron;Flange;25;80 (3");-10/110;65 (2 1/2");143.836;1.00131
+Result number = 2;TASMART_65A;TA-Smart 65;Ductile iron;Flange;16;65 (2 1/2");-10/110;65 (2 1/2");143.836;1.00131
+Result number = 3;TASMART_65C;TA-Smart 65;Ductile iron;Flange;25;65 (2 1/2");-10/110;65 (2 1/2");143.836;1.00131
+Result number = 4;TASMART_80B;TA-Smart 3";Ductile iron;ANSI Flange;25;80 (3");-10/110;65 (2 1/2");143.836;1.00131
+Result number = 5;TASMART_65B;TA-Smart 2 1/2";Ductile iron;ANSI Flange;25;65 (2 1/2");-10/110;65 (2 1/2");143.836;1.00131
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 12
+
+SelectionMode = Individual
+ProductCategory = Smart control valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 70
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.001610833332882
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TASMART_50A;TA-Smart 50;Ametal(tm);Thread male;25;50 (2");-10/110;50 (2");108.859;0.730145
+Result number = 1;TASMART_40A;TA-Smart 40;Ametal(tm);Thread male;25;40 (1 1/2");-10/110;50 (2");108.859;0.730145
+Result number = 2;TASMART_50B;TA-Smart 2";Ametal(tm);Thread NPT;25;50 (2");-10/110;50 (2");108.859;0.730145
+Result number = 3;TASMART_40B;TA-Smart 1 1/2";Ametal(tm);Thread NPT;25;40 (1 1/2");-10/110;50 (2");108.859;0.730145
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 13
+
+SelectionMode = Individual
+ProductCategory = Smart control valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 70
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00161111111066
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TASMART_65A;TA-Smart 65;Ductile iron;Flange;16;65 (2 1/2");-10/110;50 (2");108.894;0.730271
+Result number = 1;TASMART_65C;TA-Smart 65;Ductile iron;Flange;25;65 (2 1/2");-10/110;50 (2");108.894;0.730271
+Result number = 2;TASMART_50A;TA-Smart 50;Ametal(tm);Thread male;25;50 (2");-10/110;50 (2");108.894;0.730271
+Result number = 3;TASMART_40A;TA-Smart 40;Ametal(tm);Thread male;25;40 (1 1/2");-10/110;50 (2");108.894;0.730271
+Result number = 4;TASMART_65B;TA-Smart 2 1/2";Ductile iron;ANSI Flange;25;65 (2 1/2");-10/110;50 (2");108.894;0.730271
+Result number = 5;TASMART_50B;TA-Smart 2";Ametal(tm);Thread NPT;25;50 (2");-10/110;50 (2");108.894;0.730271
+Result number = 6;TASMART_40B;TA-Smart 1 1/2";Ametal(tm);Thread NPT;25;40 (1 1/2");-10/110;50 (2");108.894;0.730271
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 14
+
+SelectionMode = Individual
+ProductCategory = Smart control valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 70
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0080555555533
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TASMART_125C;TA-Smart 125;Ductile iron;Flange;16;125 (5");-10/110;100 (4");74.2467;0.930309
+Result number = 1;TASMART_125A;TA-Smart 125;Ductile iron;Flange;25;125 (5");-10/110;100 (4");74.2467;0.930309
+Result number = 2;TASMART_100C;TA-Smart 100;Ductile iron;Flange;16;100 (4");-10/110;100 (4");74.2467;0.930309
+Result number = 3;TASMART_100A;TA-Smart 100;Ductile iron;Flange;25;100 (4");-10/110;100 (4");74.2467;0.930309
+Result number = 4;TASMART_80A;TA-Smart 80;Ductile iron;Flange;16;80 (3");-10/110;100 (4");74.2467;0.930309
+Result number = 5;TASMART_80C;TA-Smart 80;Ductile iron;Flange;25;80 (3");-10/110;100 (4");74.2467;0.930309
+Result number = 6;TASMART_65A;TA-Smart 65;Ductile iron;Flange;16;65 (2 1/2");-10/110;100 (4");74.2467;0.930309
+Result number = 7;TASMART_65C;TA-Smart 65;Ductile iron;Flange;25;65 (2 1/2");-10/110;100 (4");74.2467;0.930309
+Result number = 8;TASMART_125B;TA-Smart 5";Ductile iron;ANSI Flange;25;125 (5");-10/110;100 (4");74.2467;0.930309
+Result number = 9;TASMART_100B;TA-Smart 4";Ductile iron;ANSI Flange;25;100 (4");-10/110;100 (4");74.2467;0.930309
+Result number = 10;TASMART_80B;TA-Smart 3";Ductile iron;ANSI Flange;25;80 (3");-10/110;100 (4");74.2467;0.930309
+Result number = 11;TASMART_65B;TA-Smart 2 1/2";Ductile iron;ANSI Flange;25;65 (2 1/2");-10/110;100 (4");74.2467;0.930309
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 15
+
+SelectionMode = Individual
+ProductCategory = Smart control valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 70
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.008055833331078
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TASMART_125C;TA-Smart 125;Ductile iron;Flange;16;125 (5");-10/110;100 (4");74.2516;0.930341
+Result number = 1;TASMART_125A;TA-Smart 125;Ductile iron;Flange;25;125 (5");-10/110;100 (4");74.2516;0.930341
+Result number = 2;TASMART_100C;TA-Smart 100;Ductile iron;Flange;16;100 (4");-10/110;100 (4");74.2516;0.930341
+Result number = 3;TASMART_100A;TA-Smart 100;Ductile iron;Flange;25;100 (4");-10/110;100 (4");74.2516;0.930341
+Result number = 4;TASMART_80A;TA-Smart 80;Ductile iron;Flange;16;80 (3");-10/110;100 (4");74.2516;0.930341
+Result number = 5;TASMART_80C;TA-Smart 80;Ductile iron;Flange;25;80 (3");-10/110;100 (4");74.2516;0.930341
+Result number = 6;TASMART_125B;TA-Smart 5";Ductile iron;ANSI Flange;25;125 (5");-10/110;100 (4");74.2516;0.930341
+Result number = 7;TASMART_100B;TA-Smart 4";Ductile iron;ANSI Flange;25;100 (4");-10/110;100 (4");74.2516;0.930341
+Result number = 8;TASMART_80B;TA-Smart 3";Ductile iron;ANSI Flange;25;80 (3");-10/110;100 (4");74.2516;0.930341
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 16
+
+SelectionMode = Individual
+ProductCategory = Smart control valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 70
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00239972222155
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TASMART_65A;TA-Smart 65;Ductile iron;Flange;16;65 (2 1/2");-10/110;65 (2 1/2");62.3376;0.645497
+Result number = 1;TASMART_65C;TA-Smart 65;Ductile iron;Flange;25;65 (2 1/2");-10/110;65 (2 1/2");62.3376;0.645497
+Result number = 2;TASMART_50A;TA-Smart 50;Ametal(tm);Thread male;25;50 (2");-10/110;65 (2 1/2");62.3376;0.645497
+Result number = 3;TASMART_65B;TA-Smart 2 1/2";Ductile iron;ANSI Flange;25;65 (2 1/2");-10/110;65 (2 1/2");62.3376;0.645497
+Result number = 4;TASMART_50B;TA-Smart 2";Ametal(tm);Thread NPT;25;50 (2");-10/110;65 (2 1/2");62.3376;0.645497
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 17
+
+SelectionMode = Individual
+ProductCategory = Smart control valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 70
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002399999999328
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TASMART_80A;TA-Smart 80;Ductile iron;Flange;16;80 (3");-10/110;65 (2 1/2");62.3512;0.645572
+Result number = 1;TASMART_80C;TA-Smart 80;Ductile iron;Flange;25;80 (3");-10/110;65 (2 1/2");62.3512;0.645572
+Result number = 2;TASMART_65A;TA-Smart 65;Ductile iron;Flange;16;65 (2 1/2");-10/110;65 (2 1/2");62.3512;0.645572
+Result number = 3;TASMART_65C;TA-Smart 65;Ductile iron;Flange;25;65 (2 1/2");-10/110;65 (2 1/2");62.3512;0.645572
+Result number = 4;TASMART_50A;TA-Smart 50;Ametal(tm);Thread male;25;50 (2");-10/110;65 (2 1/2");62.3512;0.645572
+Result number = 5;TASMART_80B;TA-Smart 3";Ductile iron;ANSI Flange;25;80 (3");-10/110;65 (2 1/2");62.3512;0.645572
+Result number = 6;TASMART_65B;TA-Smart 2 1/2";Ductile iron;ANSI Flange;25;65 (2 1/2");-10/110;65 (2 1/2");62.3512;0.645572
+Result number = 7;TASMART_50B;TA-Smart 2";Ametal(tm);Thread NPT;25;50 (2");-10/110;65 (2 1/2");62.3512;0.645572
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 18
+
+SelectionMode = Individual
+ProductCategory = Smart control valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 70
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.01199999999664
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TASMART_125C;TA-Smart 125;Ductile iron;Flange;16;125 (5");-10/110;100 (4");159.848;1.38584
+Result number = 1;TASMART_125A;TA-Smart 125;Ductile iron;Flange;25;125 (5");-10/110;100 (4");159.848;1.38584
+Result number = 2;TASMART_100C;TA-Smart 100;Ductile iron;Flange;16;100 (4");-10/110;100 (4");159.848;1.38584
+Result number = 3;TASMART_100A;TA-Smart 100;Ductile iron;Flange;25;100 (4");-10/110;100 (4");159.848;1.38584
+Result number = 4;TASMART_80A;TA-Smart 80;Ductile iron;Flange;16;80 (3");-10/110;100 (4");159.848;1.38584
+Result number = 5;TASMART_80C;TA-Smart 80;Ductile iron;Flange;25;80 (3");-10/110;100 (4");159.848;1.38584
+Result number = 6;TASMART_125B;TA-Smart 5";Ductile iron;ANSI Flange;25;125 (5");-10/110;100 (4");159.848;1.38584
+Result number = 7;TASMART_100B;TA-Smart 4";Ductile iron;ANSI Flange;25;100 (4");-10/110;100 (4");159.848;1.38584
+Result number = 8;TASMART_80B;TA-Smart 3";Ductile iron;ANSI Flange;25;80 (3");-10/110;100 (4");159.848;1.38584
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 19
+
+SelectionMode = Individual
+ProductCategory = Smart control valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 70
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.01200027777442
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TASMART_125C;TA-Smart 125;Ductile iron;Flange;16;125 (5");-10/110;100 (4");159.856;1.38587
+Result number = 1;TASMART_125A;TA-Smart 125;Ductile iron;Flange;25;125 (5");-10/110;100 (4");159.856;1.38587
+Result number = 2;TASMART_100C;TA-Smart 100;Ductile iron;Flange;16;100 (4");-10/110;100 (4");159.856;1.38587
+Result number = 3;TASMART_100A;TA-Smart 100;Ductile iron;Flange;25;100 (4");-10/110;100 (4");159.856;1.38587
+Result number = 4;TASMART_125B;TA-Smart 5";Ductile iron;ANSI Flange;25;125 (5");-10/110;100 (4");159.856;1.38587
+Result number = 5;TASMART_100B;TA-Smart 4";Ductile iron;ANSI Flange;25;100 (4");-10/110;100 (4");159.856;1.38587
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+

@@ -1,0 +1,478 @@
+////////////////////////////////////////////////////////////////
+//
+//		Table VARIOUS_TAB : Table for various parameters
+//
+////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////
+//
+//	DB Version, Localization, Price used, Trv used, ...
+//
+////////////////////////////////////////////////////////////////
+
+// Remark about the 'Cv Used', 'Trv Used', 'BCV Used' and so on. These variables allow to not show the corresponding category
+// for the individual/batch/wizard/direct selection (No icon in the start page and no icon in the ribbon gallery). It is not because
+// you set 'false' for example the 'PICv Used' variable that the PIBCV valves all deleted or filtered out from the database.
+// If PIBCV valve exist, there will be available in the HMCalc!!!
+new:CDB_MultiString(TADB_VERSION\1) -> VARIOUS_TAB
+{
+	"4.5.0.5"							// DB version each field can take value from 0 to 9
+	"Sverige"							// DB area
+	"TadbKey = SE"						// DB version code
+	"Price Used	=	false"				// Price Used
+	"Hub Price Used = true"				// Display Hub Price informations
+	"DpC Used   =	true"				// DpC Used
+	"Trv Used	=	true"				// Trv Used
+	"Hub Used	=	false"				// Hub used
+	"Cv Used	=	true"				// CV tab
+	"Cv Family	=	Hora"				// Cv family: Hora, Brazil
+	"PICv Used	=	true"				// PICv tab
+	"BCV Used	=	true"               // Balancing and Control valves used.
+	"DpCBCV Used =  true"               // DpCBCV Used
+	"6WayCV Used =  true"               // HYS-1150: 6 way control valves used.
+	"ShutOffV Used =  true"             // Set if shut-oof valve are used.
+	"AirVSep Used =  true"				// Set if air vents & separators are used
+	"PressMaint Used = true"			// Set if pressurisation and water quality are used
+	"PM Price Index Used = true"		// Set if we use price index to sort PM results.
+	"Safety valve Used = true"			// Set if safety valves are used.
+	"Smart control valve Used = true"	// Set if smart control valves are used.
+	"Smart Dp Used = true"  			// Set if smart Dp valves are used.
+	"Floor heating control used = true" // Set if floor heating controls are used.
+	"Tap water control used = true"	    // Set if tap water control products are used.
+	"LAN Used	=	true"				// Local article number displayed
+	"HideTaArt	=	false"				// Hide TA article number -> only if LAN displayed
+	"LocPrefix	=	RSK "				// Local article number prefix
+	"AutoSaving =	true"				// Enable Autosave
+	"UniversalValv = Both"				// OnlyPremium / Both / None
+	"TenderText =	false"				// Tender Text
+	"GAEBExport =	false"				// GAEB-90 Export
+}
+
+new:CDB_MultiString(VERSION_LANGUAGE) -> VARIOUS_TAB
+{
+	"sv"								// Default Language
+}
+
+
+////////////////////////////////////////////////////////////////
+//
+//	CBI compatibility
+//
+////////////////////////////////////////////////////////////////
+
+new:CDB_MultiString(CBI_COMPATIBIL) -> VARIOUS_TAB
+{
+	"1"						// TAS3/CBI compatibility index
+	"STD"					// TAS3/CBI DB area compatibility
+}
+
+
+////////////////////////////////////////////////////////////////
+//
+//	HMCALC activation
+//
+////////////////////////////////////////////////////////////////
+
+new:CDB_MultiString(HMCALCACTIVAT) -> VARIOUS_TAB
+{
+	"TAHC*Jc-Alen*212"		// Private BlowFish key
+	"false"					// Activation is machine dependent
+}
+
+
+////////////////////////////////////////////////////////////////
+//
+//	How to write Technical parameters
+//
+////////////////////////////////////////////////////////////////
+
+new:CDS_TechnicalParameter(PARAM_TECH\1) -> VARIOUS_TAB
+{
+	3000		// Min. DP in valves
+	6000		// Max. min. DP in valves
+	200000		// Max. DP in valves
+	2000		// Min. DP in FO
+	6000		// Max. DP in FO
+	1000		// Min. DP in Venturi (HYS-1436)
+	10000		// Max. DP in Venturi
+	0			// Above shift of device size w.r.t. pipe size
+	-2			// Below shift of device size w.r.t. pipe size
+	4			// Maximum size shift above and below the pipe size
+	10			// Min. DP in pipes
+	150			// Max. DP in pipes
+	0.3			// Min. velocity in pipes
+	1.5			// Max. velocity in pipes
+	100			// Target DP in pipes
+	1.0			// Target velocity in pipes
+	0			// 0/1: 1 if TargVel is used to determine the best pipe
+	0.25		// Min. Dp ratio to be taken in Trv
+	10000		// Default available diff. press. on rad. circuits
+	20.0		// Default room temperature for radiator sizing
+	80.0		// Default supply temperature for radiator sizing
+	30000.0		// Max Dp in Trv's
+	0.25		// Min. authority for control valves
+	0.5			// Min. authority for control valves in cst flow system
+	3000		// Min. DP in on-off control valves
+	10000		// Min. DP in proportional control valves
+	65000		// Max. DP in proportional control valves
+	200000		// Max. DP in control valves
+	1			// 0/1: 1 if Kvs values of control valves are by default selected from Reynard series
+	1000.0		// Min. Dp in PICv
+	0			// 0/1 : 1 if Dp control part of PICv that do not satisfy the Min. Dp limit must be hidden
+	5000.0		// Min. Dp in DpC
+	0			// 0/1 : 1 if DpC that do not satisfy the Min. Dp limit must be hidden
+	0			// Default measuring valve location 0/1: MV in primary/MV in secondary
+	1			// 0/1 : 1 if Hmin must be computed with fully open Mv
+	1			// 1/2 : 1 Heating / 2 Cooling
+	6			// Default Cooling Tps
+	75			// Default Heating Tps
+	6			// Default Cooling DT 6°C
+	20			// Default Heating DT 6°C
+	"CURRENCY_SEK"
+	"STEEL_SS1232"	// Default pipe seriess
+	20000		// 0.2 bar margin over static height as per EN 12828-2014
+	2			// Maximum number of additional vessels in parallel
+	0			// 0/1: Use the pressure.volume limit certification for vessel selection
+	300000		// Default value for the pressure.volume limit
+	0			// 0/1: 1 if pressure.volume limit can be changed in technical parameters.
+	10000		// Pressure tolerance for the compresso (in pascal unit)
+	20000		// Pressure tolerance for the transfero (in pascal unit)
+	10			// Default fill water temperature (in °C)
+	1			// 0/1: Use default freezing point as the minmum temperature
+	10			// Default temperature of makeup water (°C)
+	45			// Default max temperature in cooling (in °C) (45°C) 
+	5.0			// Default min temperature in heating 
+	5.0			// Default min temperature in solar (°C) (Freezing point) 
+	3e+5		// Default safety valve response pressure (bar) (3 bar) 
+	100			// Default safety temperature limiter (°C) (e.g. 90°C) 
+	PM_NORM_EN12828			// Default calculation norm (EN12828/SWKI/None) 
+	0			// Break-tank required by default for water-makeup (y/n) 
+	4e+5		// Default static pressure of water network for water makeup (bar) (4 bar) 
+	#ePMHeating | #ePMCooling | #ePMSolar
+	2			// Maximum number of Vento in parallel
+	1.78324958	// Default water hardness (in mol/m3) with 1°dH = 0.17832mol/m3
+	3000.0		// Minimum Dp that a control part of a DpC BCV valve must have to correctly work.
+	0.0 		// Propose Vessel selection of volume x percent below nominal volume.
+	WATER		// DefaultPrjCoolingAdditID
+	WATER		// DefaultPrjHeatingAdditID
+	0.0			// DefaultPrjCoolingPcWeight
+	0.0			// DefaultPrjHeatingPcWeight
+	2e-3		// Additional water volume (in m3) to add in the vessel when a degassing device is added in the system.
+	3			// Max number of safety valve in parallel
+	5000.0		// Minimum Dp that a DpC BCV valve can stabilize.
+	30000.0		// HYS-1022: 0.3 bar margin for initial pressure (EN 12828-2014).
+	110.0		// HYS-1104: safety temperature limiter limit from which we need to pass to the EN 12953 norm.
+	105.0		// HYS-1104: supply/return temperature limit from which we need to pass to the EN 12953 norm.
+	0           // HYS-1126: 0/1: Use simplified calculation for pst checkbox.
+	3000.0		// HYS-1151: 3 kPa, the reference value used to determine the best 6-way valve at a flow given.
+	1			// Product selection: 1 Heating / 2 Cooling / 4 Solar / 8 ChangeOver
+	75.0		// Product selection, heating: default supply temperature.
+	20.0		// Product selection, heating: default DT.
+	WATER		// Product selection, heating: default additive ID.
+	0.0			// Product selection, heating: default pc weight for the additive.
+	6.0			// Product selection, cooling: default supply temperature.
+	6.0			// Product selection, cooling: default DT.
+	WATER		// Product selection, cooling: default additive ID.
+	0.0			// Product selection, cooling: default pc weight for the additive.
+	75.0		// Product selection, solar: default supply temperature.
+	20.0		// Product selection, solar: default DT.
+	WATER		// Product selection, solar: default additive ID.
+	0.0			// Product selection, solar: default pc weight for the additive.
+	6.0			// Product selection, change-over, cooling side: default supply temperature.
+	6.0			// Product selection, change-over, cooling side: default DT.
+	WATER		// Product selection, change-over, cooling side: default additive ID.
+	0.0			// Product selection, change-over, cooling side: default pc weight for the additive.
+	75.0		// Product selection, change-over, heating side: default supply temperature.
+	20.0		// Product selection, change-over, heating side: default DT.
+	WATER		// Product selection, change-over, heating side: default additive ID.
+	0.0			// Product selection, change-over, heating side: default pc weight for the additive.
+	1			// HYS-1763: Smart control valve default location in hydronic circuit calculation: 1 Supply side / 0 Return side.
+	25000.0		// Dp max for "best" suggestion for smart control valves and smart differential pressure controllers.	
+	25000.0		// Default Hmin for all pumps at the secondary side of a hydraulic circuit.
+}
+
+////////////////////////////////////////////////////////////////
+//
+//						Default units
+//
+// Different possibilities
+//
+// PHYS_PRESSURE, PHYS_DIFFPRESS: "Pa" "kPa" "bar" "mbar" "m H2O" "mm H2O" 
+//                                    "atm" "ft H2O" "in H2O" "psi" "kgf/cm2"
+//
+// PHYS_LINDP: "Pa/m" "dPa/m" "mm H2O/m" "ft H2O/100ft" "psi/100ft"
+//
+// PHYS_FLOW: "m3/s" "m3/h" "l/s" "l/min" "l/h" "USGPM" "USGPH" "UKGPM" "CFM"
+//
+// PHYS_VELOCITY: "m/s" "ft/s" "ft/min"
+//
+// PHYS_TEMP, PHYS_DIFFTEMP: "°C" "°F" "°R" "K"
+//
+// PHYS_TH_POWER: "W" "kW" "Cal/h" "kCal/h" "Btu/h" "kBtu/h" "HP" "ton (refrig.)"
+//
+// PHYS_ELEC_POWER: "W" "kW" "mW"
+//
+// PHYS_LENGTH, PHYS_DIAMETER, PHYS_ROUGHNESS, PHYS_THICKNESS: 
+//                              "m" "cm" "mm" "µm" "ft" "in" "mil"
+//
+// PHYS_AREA: "m2" "cm2" "mm2" "ft2" "inch2"
+//
+// PHYS_VOLUME: "m3" "dm3" "l" "ft3" "inch3" "Gal(UK)" "Gal(US)"
+//
+// PHYS_MASS: "kg" "g" "lb" "oz"
+//
+// PHYS_DENSITY: "kg/m3" "lb/ft3"
+//
+// PHYS_KINVISC: "m2/s" "cm2/s" "mm2/s" "Stks" "cStks" "ft2/s"
+//
+// PHYS_DYNVISC: "Pa.s" "N.s/m2" "kg/m.s" "Poise" "cPoise" "g/cm.s" 
+//                   "lb/ft.s" "lb/ft.h" "lb.s/ft2" "lb.s/in2"
+//
+// PHYS_SPECIFHEAT: "J/kg.K" "kJ/kg.K" "kCal/kg.°C" "Btu/lb.°F"
+//
+// PHYS_THERMCOND: "W/m.K" "Btu/h.ft.°F"
+//
+// PHYS_HEATTRANSF: "W/m2.K" "Btu/h.ft2.°F"
+//
+// PHYS_FORCE:"N" "kN" "kgf" "lbf" "dyne"
+//
+// PHYS_TORQUE: "Nm" "lbf.ft" "lbf.in"
+//
+// PHYS_TIME: "s"
+//
+// PHYS_VALVCOEFF: "Kv" "Cv"
+//
+// PHYS_WATERHARDNESS: "mol/m3" "mmol/l" "°dH" "°dGH" "°fH" "°e" "°Clark" "ppm" "mg/l" "mval/l" "gpg"
+//
+// PHYS_ENERGY: "J" "kJ" "MJ" "kWh" "Cal" "kCal" "Btu" "kBtu" "MBtu" "ton.h"
+//
+////////////////////////////////////////////////////////////////
+
+new:CDB_DefaultUnits(DEFAULT_UNITS\1) -> VARIOUS_TAB
+{
+	"PHYS_DIFFPRESS		=	kPa"
+	"PHYS_PRESSURE		=	bar"
+	"PHYS_LINDP			=	Pa/m"
+	"PHYS_FLOW			=	l/h"
+	"PHYS_VELOCITY		=	m/s"
+	"PHYS_TEMP			=	°C"
+	"PHYS_DIFFTEMP		=	K"
+	"PHYS_TH_POWER		=	W"
+	"PHYS_ELEC_POWER	=	W"
+	"PHYS_LENGTH		=	m"
+	"PHYS_DIAMETER		=	mm"
+	"PHYS_ROUGHNESS		=	µm"
+	"PHYS_THICKNESS		=	mm"
+	"PHYS_AREA			=	m2"
+	"PHYS_VOLUME		=	m3"
+	"PHYS_MASS			=	kg"
+	"PHYS_DENSITY		=	kg/m3"
+	"PHYS_KINVISC		=	m2/s"
+	"PHYS_DYNVISC		=	Pa.s"
+	"PHYS_SPECIFHEAT	=	J/kg.K"
+	"PHYS_THERMCOND		=	W/m.K"
+	"PHYS_HEATTRANSF	=	W/m2.K"
+	"PHYS_FORCE			=	N"
+	"PHYS_TORQUE		=	Nm"
+	"PHYS_TIME			=	s"
+	"PHYS_VALVCOEFF		=	Kv"
+	"PHYS_WATERHARDNESS =   °dH"
+	"PHYS_ENERGY        =   J"
+}
+
+////////////////////////////////////////////////////////////////
+//
+//	How to write Ftp parameters
+//
+//						ftp server
+//						ftp password
+//						http server
+//						http login
+//						http password
+//						version directory
+//
+////////////////////////////////////////////////////////////////
+
+new:CDB_MultiString(FTPSERVER_PARAM) -> VARIOUS_TAB
+{
+	"tahcollegeserver.com"					// 0-ftp server
+	"tas3sve@tahcollegeserver.com"			// 1-ftp login
+	"ez4dkj7p"								// 2-ftp password
+	"www.tahcollegeserver.com"				// 2-Http server
+	"guest"									// 3-Http Login
+	"fg9kim5z"								// 4-Http Password
+	"tahc_software\"						// 5-Software directory up to 2003 version
+	"winver6\"								// 6-Software directory from Windows version 6 (Vista) and above
+}
+
+////////////////////////////////////////////////////////////////
+//
+//	How Reynard or Cv series is written
+//
+//						Kv1
+//						Kv2
+//						Kv3
+//						...
+//
+////////////////////////////////////////////////////////////////
+
+new:CDB_MultiString(REYNARD_SERIES\1) -> VARIOUS_TAB
+{
+	"0.1"
+	"0.16"
+	"0.25"
+	"0.4"
+	"0.63"
+	"1.0"
+	"1.6"
+	"2.5"
+	"4.0"
+	"6.3"
+	"10"
+	"16"
+	"25"
+	"40"
+	"63"
+	"100"
+	"160"
+	"250"
+	"400"
+	"630"
+	"1000"
+	"1600"
+	"2500"
+	"4000"
+}
+
+new:CDB_MultiString(CV_SERIES\1) -> VARIOUS_TAB
+{
+	"0.12"
+	"0.19"
+	"0.29"
+	"0.47"
+	"0.73"
+	"1.16"
+	"1.86"
+	"2.90"
+	"4.65"
+	"7.3"
+	"11.6"
+	"18.6"
+	"29.0"
+	"46"
+	"73"
+	"116"
+	"186"
+	"290"
+	"460"
+	"730"
+	"1160"
+	"1860"
+	"2900"
+	"4600"
+}
+
+////////////////////////////////////////////////////////////////
+//
+//	How the password CDB_MultiString is written
+//
+//						developer's password
+//						hiding password
+//
+////////////////////////////////////////////////////////////////
+
+new:CDB_MultiString(PASSWORD_PARAM) -> VARIOUS_TAB
+{
+	"gistoux"
+	"Injustering"
+	"debug"
+}
+
+////////////////////////////////////////////////////////////////
+//
+//	How the CDB_MultiString with language extensions for
+//  doc files is written
+//
+//						Qrs file language extension
+//						Cat file language extension
+//						Qrs of non-selectable product excluded
+//
+////////////////////////////////////////////////////////////////
+
+new:CDB_MultiString(DOCEXT_PARAM) -> VARIOUS_TAB
+{
+	"-se"
+	"_SE"
+	"true"
+}
+
+////////////////////////////////////////////////////////////////
+//
+//	How the CDB_MultiString with user manual and release notes
+//	filenames is written
+//
+//						User Manual Filename "user's guide.pdf"
+//						Release Notes Filename
+//
+//  Set an empty filename if User Manual or Release Notes menu
+//	must be hidden.
+//
+////////////////////////////////////////////////////////////////
+
+new:CDB_MultiString(HELPFILE_PARAM) -> VARIOUS_TAB
+{
+	"user's guide.pdf"
+	"readme.htm"
+}
+
+////////////////////////////////////////////////////////////////
+//
+//		Table RADNOMCOND_TAB : Radiator nominal conditions
+//
+////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////
+//
+//	How to write a Radiator nom. cond. information ?
+//	---------------------------------------------- 
+//
+//	new:CDB_RadNomCond(ID)->tableID	Common CData syntax
+//	{
+//		Ts
+//		Tr
+//		Ti
+//	}
+//
+////////////////////////////////////////////////////////////////
+new:CDB_RadNomCond(NC907020)->RADNOMCOND_TAB
+{
+	90
+	70
+	20
+}
+*new:CDB_RadNomCond(NC827120)->RADNOMCOND_TAB
+{
+	82
+	71
+	20
+}
+new:CDB_RadNomCond(NC806020)->RADNOMCOND_TAB
+{
+	80
+	60
+	20
+}
+new:CDB_RadNomCond(NC756520)->RADNOMCOND_TAB
+{
+	75
+	65
+	20
+}
+
+////////////////////////////////////////////////////////////////
+//
+//		ROOT TABLE identification
+//
+////////////////////////////////////////////////////////////////
+
+ROOT_TABLE(ROOT_TABLE)

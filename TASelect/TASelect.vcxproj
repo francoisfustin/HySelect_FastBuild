@@ -1,0 +1,2451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{48E8F00D-EB72-4457-A4C3-2A2DD665E075}</ProjectGuid>
+    <RootNamespace>TASelect</RootNamespace>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+    <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <UseOfAtl>false</UseOfAtl>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <UseOfAtl>false</UseOfAtl>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <PlatformToolset>v143</PlatformToolset>
+    <EnableASAN>false</EnableASAN>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">HySelect</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">HySelect</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\Program Files (x86)\Visual Leak Detector\include;$(SolutionDir)UnitTests\cppunit\include;$(SolutionDir)sqlite;$(SolutionDir)TASelect\JsonParser;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <EmbedManifest>true</EmbedManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\Program Files (x86)\Visual Leak Detector\include;$(SolutionDir)UnitTests\cppunit\include;$(SolutionDir)TASelect\JsonParser;$(IncludePath)</IncludePath>
+    <EmbedManifest>true</EmbedManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)SerialLibTAScope;$(ProjectDir)TeeChart;$(ProjectDir)Tests;$(ProjectDir)Tests\TestRunner\;$(SolutionDir)DFU\DFUSe\Include\;$(SolutionDir)DFU\DFUSe\STDFU\;$(SolutionDir)DFU\DFUSe\STDFUFiles\;$(SolutionDir)DFU\DFUSe\STDFUprt\;$(SolutionDir)DFU\NewDFUSe\dfu-util\src\;$(SolutionDir)DFU\NewDFUSe\getopt\src\;$(SolutionDir)DFU\NewDFUSe\libusb\src\;$(SolutionDir)DFU\NewDFUSe\libusb\src\os\;$(SolutionDir)Spread\SS\include;$(SolutionDir)Vld\include;$(SolutionDir)ZipArchive\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;XL12;SS_V30;SS_V35;SS_V40;SS_V70;SS_V80;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(TargetDir)HySelect4.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>
+      </AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <BrowseInformation>
+      </BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <UseFullPaths>true</UseFullPaths>
+      <FloatingPointExceptions>
+      </FloatingPointExceptions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;AFX_TARG_NEU;AFX_TARG_ENG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
+      <AdditionalIncludeDirectories>$(ExecutablePath);$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <ShowProgress>NotSet</ShowProgress>
+      <OutputFile>$(TargetPath)</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(OutDir);$(SolutionDir)DFU\DFUSe\lib\;$(SolutionDir)DFU\DFUSe\STDFU\Debug\;$(SolutionDir)DFU\NewDFUSe\dfu-util\Debug\;$(SolutionDir)lib\$(Configuration)\;$(SolutionDir)Spread\SS\Lib\;$(SolutionDir)Vld\lib\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>$(OutDir)ZipArchive.lib;cppunit.lib;vld.lib;SPR32DU80.lib;SetupAPI.lib;hid.lib;STDFU.lib;dfu-util.lib;msxml6.lib</AdditionalDependencies>
+      <Profile>false</Profile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <IgnoreSpecificDefaultLibraries>msvcrtd.lib</IgnoreSpecificDefaultLibraries>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile />
+    </Bscmake>
+    <PostBuildEvent>
+      <Command>copy "$(ProjectDir)..\HubSchemes\$(Configuration)\HubSchemes.dll" "$(OutDir)HubSchemes.dll"
+copy "$(ProjectDir)..\HydronicPics\$(Configuration)\HydronicPics.dll" "$(OutDir)HydronicPics.dll"
+copy "$(ProjectDir)..\Spread\SS\dll\SPR32DU80.dll" "$(OutDir)SPR32DU80.dll"
+copy "$(ProjectDir)..\Spread\SS\dll\SPR32DU80.pdb" "$(OutDir)SPR32DU80.pdb"
+copy "$(ProjectDir)..\Vld\bin\Win32\dbghelp.dll" "$(OutDir)dbghelp.dll"
+copy "$(ProjectDir)..\Vld\bin\Win32\vld_x86.dll" "$(OutDir)vld_x86.dll"
+copy "$(ProjectDir)TeeChart\TeeChart2018.ocx" "$(OutDir)TeeChart2018.ocx"
+</Command>
+    </PostBuildEvent>
+    <PreLinkEvent>
+      <Command>copy "..\ZipArchive\Debug STL Unicode\ZipArchive.lib" "$(OutDir)ZipArchive.lib"</Command>
+    </PreLinkEvent>
+    <Manifest>
+      <TypeLibraryFile>
+      </TypeLibraryFile>
+    </Manifest>
+    <Manifest>
+      <ComponentFileName>
+      </ComponentFileName>
+      <AdditionalManifestFiles>$(ProjectDir)TeeChart.manifest %(AdditionalManifestFiles)</AdditionalManifestFiles>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)SerialLibTAScope;$(ProjectDir)TeeChart;$(ProjectDir)Tests;$(ProjectDir)Tests\TestRunner\;$(SolutionDir)DFU\DFUSe\Include\;$(SolutionDir)DFU\DFUSe\STDFU\;$(SolutionDir)DFU\DFUSe\STDFUFiles\;$(SolutionDir)DFU\DFUSe\STDFUprt\;$(SolutionDir)DFU\NewDFUSe\dfu-util\src\;$(SolutionDir)DFU\NewDFUSe\getopt\src\;$(SolutionDir)DFU\NewDFUSe\libusb\src\;$(SolutionDir)DFU\NewDFUSe\libusb\src\os\;$(SolutionDir)Spread\SS\include;$(SolutionDir)ZipArchive\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;XL12;SS_V30;SS_V35;SS_V40;SS_V70;SS_V80;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <BrowseInformation />
+      <UseFullPaths>true</UseFullPaths>
+      <PrecompiledHeaderOutputFile>$(TargetDir)HySelect4.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <BrowseInformation />
+      <UseFullPaths>true</UseFullPaths>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FloatingPointExceptions>true</FloatingPointExceptions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;AFX_TARG_NEU;AFX_TARG_ENG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(TargetPath)</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir);$(SolutionDir)DFU\DFUSe\lib\;$(SolutionDir)DFU\DFUSe\STDFU\Release\;$(SolutionDir)DFU\NewDFUSe\dfu-util\Release\;$(SolutionDir)lib\$(Configuration)\;$(SolutionDir)Spread\SS\Lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(Configuration)/$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>$(OutDir)ZipArchive.lib;Spr32u80.lib;SetupAPI.lib;hid.lib;STDFU.lib;dfu-util.lib</AdditionalDependencies>
+      <MapExports>false</MapExports>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(ProjectDir)..\HubSchemes\$(Configuration)\HubSchemes.dll" "$(OutDir)HubSchemes.dll"
+copy "$(ProjectDir)..\HydronicPics\$(Configuration)\HydronicPics.dll" "$(OutDir)HydronicPics.dll"
+copy "$(ProjectDir)..\Spread\SS\Dll\SPR32U80.dll" "$(OutDir)SPR32U80.dll"
+copy "$(ProjectDir)TeeChart\TeeChart2018.ocx" "$(OutDir)TeeChart2018.ocx"
+
+
+</Command>
+    </PostBuildEvent>
+    <PreLinkEvent>
+      <Command>copy "$(ProjectDir)..\ZipArchive\Release STL Unicode\ZipArchive.lib" "$(OutDir)ZipArchive.lib"
+</Command>
+    </PreLinkEvent>
+    <Manifest>
+      <AdditionalManifestFiles>$(ProjectDir)TeeChart.manifest %(AdditionalManifestFiles)</AdditionalManifestFiles>
+    </Manifest>
+    <Bscmake>
+      <OutputFile />
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Spread\SS\Include\Ssdllmfc.cpp" />
+    <ClCompile Include="..\sqlite\sqlite3.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="DlgBatchSelSmartControlValve.cpp" />
+    <ClCompile Include="DlgBatchSelSmartDpC.cpp" />
+    <ClCompile Include="DlgExceptionMessage.cpp" />
+    <ClCompile Include="DlgHydronicSchViewLarge.cpp" />
+    <ClCompile Include="DlgHydronicSchView_BaseTab.cpp" />
+    <ClCompile Include="DlgHydronicSchView_BVTab.cpp" />
+    <ClCompile Include="DlgHydronicSchView_CVTab.cpp" />
+    <ClCompile Include="DlgHydronicSchView_DpCTab.cpp" />
+    <ClCompile Include="DlgHydronicSchView_SmartTab.cpp" />
+    <ClCompile Include="DlgHydronicSchView_SmartDpTab.cpp" />
+    <ClCompile Include="DlgIndSelSmartControlValve.cpp" />
+    <ClCompile Include="DlgIndSelSmartDpC.cpp" />
+    <ClCompile Include="DlgInjectionError.cpp" />
+    <ClCompile Include="DlgNoDevSmartControlValveFound.cpp" />
+    <ClCompile Include="DlgSolarContentMultiplierFactor.cpp" />
+    <ClCompile Include="DlgSearchAndReplaceCircuitsResults.cpp" />
+    <ClCompile Include="DlgSpecActComputeCRC.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="DlgSpecialActionExtractArticleWithoutPrice.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="DlgStorageTankMaxTemperature.cpp" />
+    <ClCompile Include="DlgTPGeneralSmartValves.cpp" />
+    <ClCompile Include="DlgTPPageHCPumps.cpp" />
+    <ClCompile Include="DlgTPPageHCSmartCV.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputCoolSystemVolumePowerSWKI.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputHeatSystemVolumePowerSWKI.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputSolarSystemVolumePowerSWKI.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputSolarSystemVolumePowerSWKIAdv.cpp" />
+    <ClCompile Include="DpSVisioNewDFUCommunication.cpp" />
+    <ClCompile Include="ExportHMBase.cpp" />
+    <ClCompile Include="ExportHMToJson.cpp" />
+    <ClCompile Include="ExtEdit.cpp" />
+    <ClCompile Include="HySelectException.cpp" />
+    <ClCompile Include="DlgCOWaterChar.cpp" />
+    <ClCompile Include="DlgIndSel6WayValve.cpp" />
+    <ClCompile Include="DlgIndSel6WayValveCircuits.cpp" />
+    <ClCompile Include="DlgDpSVisioDFUInstallation.cpp" />
+    <ClCompile Include="DlgDpSVisioDFUUpgradeRunning.cpp" />
+    <ClCompile Include="DlgDpSVisioUnplugPlug.cpp" />
+    <ClCompile Include="DlgIndSel6WayValve_6WayValveTab.cpp" />
+    <ClCompile Include="DlgIndSel6WayValve_SecondTab.cpp" />
+    <ClCompile Include="DlgLicense.cpp" />
+    <ClCompile Include="DlgNoDev6WValveFound.cpp" />
+    <ClCompile Include="DlgPMTChartHelper.cpp" />
+    <ClCompile Include="CsvParser.cpp" />
+    <ClCompile Include="DeletedProductHelper.cpp" />
+    <ClCompile Include="DlgDebugSearchDBObject.cpp" />
+    <ClCompile Include="DlgBatchSelBase.cpp" />
+    <ClCompile Include="DlgBatchSelBCv.cpp" />
+    <ClCompile Include="DlgBatchSelBv.cpp" />
+    <ClCompile Include="DlgBatchSelCtrlBase.cpp" />
+    <ClCompile Include="DlgBatchSelDpC.cpp" />
+    <ClCompile Include="DlgBatchSelDpC_BvTab.cpp" />
+    <ClCompile Include="DlgBatchSelDpC_DpCTab.cpp" />
+    <ClCompile Include="DlgBatchSelectionOutput.cpp" />
+    <ClCompile Include="DlgBatchSelPICv.cpp" />
+    <ClCompile Include="DlgBatchSelSeparator.cpp" />
+    <ClCompile Include="DlgCreateModuleTiny.cpp" />
+    <ClCompile Include="DlgDpSVisio.cpp" />
+    <ClCompile Include="DlgDpSVisioBase.cpp" />
+    <ClCompile Include="DlgDpSVisioUpgradeFinished.cpp" />
+    <ClCompile Include="DlgDpSVisioStatus.cpp" />
+    <ClCompile Include="DlgDpSVisioHIDUpgradeRunning.cpp" />
+    <ClCompile Include="DlgIndSelAdditionalPiping.cpp" />
+    <ClCompile Include="DlgIndSelCtrlBase.cpp" />
+    <ClCompile Include="DlgIndSelDpCBCV.cpp" />
+    <ClCompile Include="DlgIndSelPM.cpp" />
+    <ClCompile Include="DlgIndSelPMExcludedProducts.cpp" />
+    <ClCompile Include="DlgIndSelPMPanels.cpp" />
+    <ClCompile Include="DlgIndSelPMSysVolCooling.cpp" />
+    <ClCompile Include="DlgIndSelPMSysVolHeating.cpp" />
+    <ClCompile Include="DlgIndSelSafetyValve.cpp" />
+    <ClCompile Include="DlgIndSelSeparator.cpp" />
+    <ClCompile Include="DlgIndSelSv.cpp" />
+    <ClCompile Include="DlgInfoSSelDpCBCV.cpp" />
+    <ClCompile Include="DlgNoDevSafetyValveFound.cpp" />
+    <ClCompile Include="DlgNoDevSeparatorFound.cpp" />
+    <ClCompile Include="DlgOutputHelper.cpp" />
+    <ClCompile Include="DlgDiversityFactor.cpp" />
+    <ClCompile Include="DlgHMCompilationOutput.cpp" />
+    <ClCompile Include="DlgHydroCalc.cpp" />
+    <ClCompile Include="DlgHydroCalcBase.cpp" />
+    <ClCompile Include="DlgHydroCalcQKvDp.cpp" />
+    <ClCompile Include="DlgHydroCalcQPDT.cpp" />
+    <ClCompile Include="DlgHydroCalcRedDisk.cpp" />
+    <ClCompile Include="DlgNoDevTrvFound.cpp" />
+    <ClCompile Include="DlgOutput.cpp" />
+    <ClCompile Include="DlgOutputSpreadContainer.cpp" />
+    <ClCompile Include="DlgPMGraphsOutput.cpp" />
+    <ClCompile Include="DlgPMWQSelectionPrefs.cpp" />
+    <ClCompile Include="DlgQuickMeasNote.cpp" />
+    <ClCompile Include="DlgSearchAndReplaceActuator.cpp" />
+    <ClCompile Include="DlgSearchAndReplaceSet.cpp" />
+    <ClCompile Include="DlgSelectActuator.cpp" />
+    <ClCompile Include="DlgSelectionBase.cpp" />
+    <ClCompile Include="DlgSelectionComboHelper.cpp" />
+    <ClCompile Include="DlgSelectionTabHelper.cpp" />
+    <ClCompile Include="DlgSpecActReformatFilterTabFiles.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="DlgSRPageActuator.cpp" />
+    <ClCompile Include="DlgSRPageSet.cpp" />
+    <ClCompile Include="DlgSRPageTemp.cpp" />
+    <ClCompile Include="DlgTALink.cpp" />
+    <ClCompile Include="DlgSearchAndReplaceCircuits.cpp" />
+    <ClCompile Include="DlgSRPageCircuit.cpp" />
+    <ClCompile Include="DlgTender.cpp" />
+    <ClCompile Include="DlgTPPageHCActuators.cpp" />
+    <ClCompile Include="DlgTPPageMainHC.cpp" />
+    <ClCompile Include="DlgTPGeneralPressureMaintenance.cpp" />
+    <ClCompile Include="DlgTPGeneralWaterQuality.cpp" />
+    <ClCompile Include="DlgTreeList.cpp" />
+    <ClCompile Include="DlgWizardSelBase.cpp" />
+    <ClCompile Include="DlgWizardSelPM.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputBase.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputCoolConsumers.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputCoolGenerators.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputCoolPMType.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputCoolPres.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputCoolPresAdv.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputCoolRequ.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputCoolRequ2.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputCoolTemp.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputCoolTempAdv.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputCoolSystemVolumePower.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputHeatConsumers.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputHeatGenerators.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputHeatPMType.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputHeatPres.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputHeatPresAdv.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputHeatRequ.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputHeatRequ2.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputHeatTemp.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputHeatTempAdv.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputHeatSystemVolumePower.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputProjectType.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputSolarPMType.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputSolarRequ.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputSolarRequ2.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputSolarTempAdv.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputSolarSystemVolumePower.cpp" />
+    <ClCompile Include="DlgWizPMRightViewPictureContainer.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputSolarPres.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputSolarPresAdv.cpp" />
+    <ClCompile Include="DlgWizPMRightViewInputSolarTemp.cpp" />
+    <ClCompile Include="DlgWizPMRightViewTextContainer.cpp" />
+    <ClCompile Include="DocDb.cpp" />
+    <ClCompile Include="DpSVisioBaseCommunication.cpp" />
+    <ClCompile Include="DpSVisioDFUCommunication.cpp" />
+    <ClCompile Include="DpSVisioFakeDFUCommunication.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="DpSVisioFakeHIDCommunication.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="DpSVisioHIDCommand.cpp" />
+    <ClCompile Include="DpSVisioHIDCommunication.cpp" />
+    <ClCompile Include="DpSVisioUtils.cpp" />
+    <ClCompile Include="ExtButton.cpp" />
+    <ClCompile Include="ExtProgressCtrl.cpp" />
+    <ClCompile Include="ExtMenu.cpp" />
+    <ClCompile Include="ExtStatic.cpp" />
+    <ClCompile Include="hid.cpp" />
+    <ClCompile Include="HMHub.cpp" />
+    <ClCompile Include="HMPipes.cpp" />
+    <ClCompile Include="HMPump.cpp" />
+    <ClCompile Include="HydroMod_DebugLog.cpp">
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</PreprocessToFile>
+    </ClCompile>
+    <ClCompile Include="HySelectExceptionHandlers.cpp" />
+    <ClCompile Include="ImportExportHM.cpp" />
+    <ClCompile Include="ImportExportHMNodeDefinitions.cpp" />
+    <ClCompile Include="ImportHMBase.cpp" />
+    <ClCompile Include="ImportHMFromJson.cpp" />
+    <ClCompile Include="ImportHMFromXML.cpp" />
+    <ClCompile Include="JsonParser\json_reader.cpp" />
+    <ClCompile Include="JsonParser\json_value.cpp" />
+    <ClCompile Include="JsonParser\json_writer.cpp" />
+    <ClCompile Include="MacroDefs.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="MessageManager.cpp" />
+    <ClCompile Include="MFCRibbonButtonEx.cpp" />
+    <ClCompile Include="MultiSpreadBase.cpp" />
+    <ClCompile Include="MultiSpreadInDialog.cpp" />
+    <ClCompile Include="MultiSpreadInView.cpp" />
+    <ClCompile Include="PipeUserDatabase.cpp" />
+    <ClCompile Include="PMPressureGaugeHelper.cpp" />
+    <ClCompile Include="PMSelectionHelper.cpp" />
+    <ClCompile Include="ProductSelectionParameters.cpp" />
+    <ClCompile Include="RCImageManager.cpp" />
+    <ClCompile Include="RegAccess.cpp" />
+    <ClCompile Include="RViewDescription.cpp" />
+    <ClCompile Include="RViewSelProd.cpp" />
+    <ClCompile Include="RViewSSel6WayValve.cpp" />
+    <ClCompile Include="RViewSSelBCV.cpp" />
+    <ClCompile Include="RViewSSelBv.cpp" />
+    <ClCompile Include="RViewSSelCtrl.cpp" />
+    <ClCompile Include="RViewSSelCV.cpp" />
+    <ClCompile Include="RViewSSelDpC.cpp" />
+    <ClCompile Include="RViewSSelDpCBCV.cpp" />
+    <ClCompile Include="RViewSSelPICV.cpp" />
+    <ClCompile Include="RViewSSelPM.cpp" />
+    <ClCompile Include="RViewSSelSafetyValve.cpp" />
+    <ClCompile Include="RViewSSelSeparator.cpp" />
+    <ClCompile Include="RViewSSelSmartControlValve.cpp" />
+    <ClCompile Include="RViewSSelSmartDpC.cpp" />
+    <ClCompile Include="RViewSSelSv.cpp" />
+    <ClCompile Include="RViewStartPage.cpp" />
+    <ClCompile Include="RViewWizardSelBase.cpp" />
+    <ClCompile Include="RViewWizardSelPM.cpp" />
+    <ClCompile Include="Select.cpp" />
+    <ClCompile Include="SelectPM.cpp" />
+    <ClCompile Include="SelProdArticle.cpp" />
+    <ClCompile Include="SelProdDockPane.cpp" />
+    <ClCompile Include="SelProdPage6WayValve.cpp" />
+    <ClCompile Include="SelProdPageAirVentSep.cpp" />
+    <ClCompile Include="SelProdPageArtList.cpp" />
+    <ClCompile Include="SelProdPageBase.cpp" />
+    <ClCompile Include="SelProdPageBv.cpp" />
+    <ClCompile Include="SelProdPageCtrl.cpp" />
+    <ClCompile Include="SelProdPageDiversityFactor.cpp" />
+    <ClCompile Include="SelProdPageDpC.cpp" />
+    <ClCompile Include="SelProdPageDpCBCV.cpp" />
+    <ClCompile Include="SelProdPageSmartDpC.cpp" />
+    <ClCompile Include="SelProdPageTCFloorHeatingControl.cpp" />
+    <ClCompile Include="SelProdPagePDef.cpp" />
+    <ClCompile Include="SelProdPageHub.cpp" />
+    <ClCompile Include="SelProdPagePipeList.cpp" />
+    <ClCompile Include="SelProdPagePressMaint.cpp" />
+    <ClCompile Include="SelProdPageSafetyValve.cpp" />
+    <ClCompile Include="SelProdPageSmartControlValve.cpp" />
+    <ClCompile Include="SelProdPageSv.cpp" />
+    <ClCompile Include="SelProdPageTCTapWaterControl.cpp" />
+    <ClCompile Include="SelProdPageTender.cpp" />
+    <ClCompile Include="SelProdPageTrv.cpp" />
+    <ClCompile Include="SSheet.cpp" />
+    <ClCompile Include="DlgIndSelBCV.cpp" />
+    <ClCompile Include="DlgIndSelBv.cpp" />
+    <ClCompile Include="TabDlgSpecActDev.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="TabDlgSpecActHMCalc.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="DlgSpecActHyToolsPMCompare.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="TabDlgSpecActProdSel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="TabDlgSpecActProdSelUpdate.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="TabDlgSpecActProdSelExport.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="TabDlgSpecActProdSelTest.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="TabDlgSpecActTesting.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="TabDlgSpecActTesting2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="TADataBase.cpp" />
+    <ClCompile Include="TASelect.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TASelectDoc.cpp" />
+    <ClCompile Include="TASelectView.cpp" />
+    <ClCompile Include="DlgLTtabctrl.cpp" />
+    <ClCompile Include="DlgLeftTabBase.cpp" />
+    <ClCompile Include="DlgLeftTabInfo.cpp" />
+    <ClCompile Include="DlgLeftTabProject.cpp" />
+    <ClCompile Include="DlgLeftTabSelP.cpp" />
+    <ClCompile Include="DlgIndSelBase.cpp" />
+    <ClCompile Include="DlgIndSelCv.cpp" />
+    <ClCompile Include="DlgIndSelDpC.cpp" />
+    <ClCompile Include="DlgIndSelHub.cpp" />
+    <ClCompile Include="DlgLeftTabSelManager.cpp" />
+    <ClCompile Include="DlgIndSelPICv.cpp" />
+    <ClCompile Include="DlgIndSelTrv.cpp" />
+    <ClCompile Include="TabDlgSpecActUser.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="DialogExt.cpp" />
+    <ClCompile Include="DlgAboutBox.cpp" />
+    <ClCompile Include="DlgAccessory.cpp" />
+    <ClCompile Include="DlgAddNC.cpp" />
+    <ClCompile Include="DlgComboBoxHM.cpp" />
+    <ClCompile Include="DlgConfSel.cpp" />
+    <ClCompile Include="DlgCreateModule.cpp" />
+    <ClCompile Include="DlgCustPipe.cpp" />
+    <ClCompile Include="DlgDefUnits.cpp" />
+    <ClCompile Include="DlgDirSel.cpp" />
+    <ClCompile Include="DlgDispRef.cpp" />
+    <ClCompile Include="DlgDocs.cpp" />
+    <ClCompile Include="DlgEditString.cpp" />
+    <ClCompile Include="DlgExportChart.cpp" />
+    <ClCompile Include="DlgExportConfigFile.cpp" />
+    <ClCompile Include="DlgExportLdlist.cpp" />
+    <ClCompile Include="DlgGateway.cpp" />
+    <ClCompile Include="DlgHeader.cpp" />
+    <ClCompile Include="DlgHMDirSel.cpp" />
+    <ClCompile Include="DlgHMTree.cpp" />
+    <ClCompile Include="DlgHtmlView.cpp" />
+    <ClCompile Include="DlgHubCvCB.cpp" />
+    <ClCompile Include="DlgHydronicSchView.cpp" />
+    <ClCompile Include="DlgImportHM.cpp" />
+    <ClCompile Include="DlgImportHMProp.cpp" />
+    <ClCompile Include="DlgInfoSSelDpC.cpp" />
+    <ClCompile Include="DlgKvCvInput.cpp" />
+    <ClCompile Include="DlgKvSeries.cpp" />
+    <ClCompile Include="DlgKvSeriesTabDzeta.cpp" />
+    <ClCompile Include="DlgKvSeriesTabKvCv.cpp" />
+    <ClCompile Include="DlgKvSeriesTabNomCond.cpp" />
+    <ClCompile Include="DlgListBox.cpp" />
+    <ClCompile Include="DlgNoDevCtrlFound.cpp" />
+    <ClCompile Include="DlgNoDevFound.cpp" />
+    <ClCompile Include="DlgNoDpCFound.cpp" />
+    <ClCompile Include="DlgPageField.cpp" />
+    <ClCompile Include="DlgPassword.cpp" />
+    <ClCompile Include="DlgPasteHM.cpp" />
+    <ClCompile Include="DlgPipeDp.cpp" />
+    <ClCompile Include="DlgPrint.cpp" />
+    <ClCompile Include="DlgProgBarExportXls.cpp" />
+    <ClCompile Include="DlgProgressBar.cpp" />
+    <ClCompile Include="DlgRef.cpp" />
+    <ClCompile Include="DlgRegister.cpp" />
+    <ClCompile Include="DlgReplacePopup.cpp" />
+    <ClCompile Include="DlgResolCBIPlantModif.cpp" />
+    <ClCompile Include="DlgRibbonDateTime.cpp" />
+    <ClCompile Include="DlgSizeRad.cpp" />
+    <ClCompile Include="DlgSpecAct.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="DlgTip.cpp" />
+    <ClCompile Include="DlgTSPOpeningInfo.cpp" />
+    <ClCompile Include="DlgUnitConv.cpp" />
+    <ClCompile Include="DlgUserRef.cpp" />
+    <ClCompile Include="DlgViscCorr.cpp" />
+    <ClCompile Include="DlgWaterChar.cpp" />
+    <ClCompile Include="DlgWizCircuit.cpp" />
+    <ClCompile Include="DlgCtrlPropPage.cpp" />
+    <ClCompile Include="DlgCtrlPropPageMng.cpp" />
+    <ClCompile Include="DlgCtrlPropTree.cpp" />
+    <ClCompile Include="DlgTechParam.cpp" />
+    <ClCompile Include="DlgTPGeneralBalancingValves.cpp" />
+    <ClCompile Include="DlgTPGeneralStdAndAdjustableControlValves.cpp" />
+    <ClCompile Include="DlgTPGeneralDeviceSizes.cpp" />
+    <ClCompile Include="DlgTPGeneralDpControllers.cpp" />
+    <ClCompile Include="DlgTPGeneralFixedOrifices.cpp" />
+    <ClCompile Include="DlgTPGeneral.cpp" />
+    <ClCompile Include="DlgTPPageHC.cpp" />
+    <ClCompile Include="DlgTPPageHCPipes.cpp" />
+    <ClCompile Include="DlgTPGeneralPIBCV.cpp" />
+    <ClCompile Include="DlgTPGeneralPipes.cpp" />
+    <ClCompile Include="DlgTPGeneralRadiatorValves.cpp" />
+    <ClCompile Include="DlgSearchReplace.cpp" />
+    <ClCompile Include="DlgSRPagePipes.cpp" />
+    <ClCompile Include="ActWatch.cpp" />
+    <ClCompile Include="BlowFish.cpp" />
+    <ClCompile Include="CbiRestrEdit.cpp" />
+    <ClCompile Include="CEditString.cpp" />
+    <ClCompile Include="CRC32.cpp" />
+    <ClCompile Include="CustomEdits.cpp" />
+    <ClCompile Include="DrawSet.cpp" />
+    <ClCompile Include="ExtComboBox.cpp" />
+    <ClCompile Include="ExtNumEdit.cpp" />
+    <ClCompile Include="ExtListCtrl.cpp" />
+    <ClCompile Include="ExtTreeCtrl.cpp" />
+    <ClCompile Include="FileTableMng.cpp" />
+    <ClCompile Include="HMTreeDroptarget.cpp" />
+    <ClCompile Include="HMTreeListCtrl.cpp" />
+    <ClCompile Include="HtmlViewer.cpp" />
+    <ClCompile Include="HydronicPic.cpp" />
+    <ClCompile Include="HydroWarningList.cpp" />
+    <ClCompile Include="MFCRibbonBarEx.cpp" />
+    <ClCompile Include="MFCRibbonEditEx.cpp" />
+    <ClCompile Include="MFCRibbonGalleryEx.cpp" />
+    <ClCompile Include="MFCRibbonPanelEx.cpp" />
+    <ClCompile Include="MFCVisualManagerOffice2007Ex.cpp" />
+    <ClCompile Include="ModuleVersion.cpp" />
+    <ClCompile Include="MyToolTipCtrl.cpp" />
+    <ClCompile Include="PicGroupBox.cpp" />
+    <ClCompile Include="ProjTreeCtrl.cpp" />
+    <ClCompile Include="RestartAPI.cpp" />
+    <ClCompile Include="SerialCom.cpp" />
+    <ClCompile Include="Setdpi.cpp" />
+    <ClCompile Include="SplashWindow.cpp" />
+    <ClCompile Include="StaticImg.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="stringex.cpp" />
+    <ClCompile Include="TCImageList.cpp" />
+    <ClCompile Include="TeeChart\activitydonut.cpp" />
+    <ClCompile Include="TeeChart\activitygauge.cpp" />
+    <ClCompile Include="TeeChart\adxfunction.cpp" />
+    <ClCompile Include="TeeChart\alligatorfunction.cpp" />
+    <ClCompile Include="TeeChart\amountfilter.cpp" />
+    <ClCompile Include="TeeChart\animationlist.cpp" />
+    <ClCompile Include="TeeChart\animations.cpp" />
+    <ClCompile Include="TeeChart\annotationcallout.cpp" />
+    <ClCompile Include="TeeChart\annotationtool.cpp" />
+    <ClCompile Include="TeeChart\antialiastool.cpp" />
+    <ClCompile Include="TeeChart\areaseries.cpp" />
+    <ClCompile Include="TeeChart\arrowseries.cpp" />
+    <ClCompile Include="TeeChart\arrowtool.cpp" />
+    <ClCompile Include="TeeChart\aspect.cpp" />
+    <ClCompile Include="TeeChart\atrfunction.cpp" />
+    <ClCompile Include="TeeChart\automatictext.cpp" />
+    <ClCompile Include="TeeChart\averagefunction.cpp" />
+    <ClCompile Include="TeeChart\axes.cpp" />
+    <ClCompile Include="TeeChart\axis.cpp" />
+    <ClCompile Include="TeeChart\axisarrowtool.cpp" />
+    <ClCompile Include="TeeChart\axisbreak.cpp" />
+    <ClCompile Include="TeeChart\axisbreaks.cpp" />
+    <ClCompile Include="TeeChart\axisbreakstool.cpp" />
+    <ClCompile Include="TeeChart\axisgridpen.cpp" />
+    <ClCompile Include="TeeChart\axislabels.cpp" />
+    <ClCompile Include="TeeChart\axislabelsitem.cpp" />
+    <ClCompile Include="TeeChart\axisscrollbartool.cpp" />
+    <ClCompile Include="TeeChart\axisscrolltool.cpp" />
+    <ClCompile Include="TeeChart\axistitle.cpp" />
+    <ClCompile Include="TeeChart\backimage.cpp" />
+    <ClCompile Include="TeeChart\bannertool.cpp" />
+    <ClCompile Include="TeeChart\bar3dseries.cpp" />
+    <ClCompile Include="TeeChart\barjoinseries.cpp" />
+    <ClCompile Include="TeeChart\barseries.cpp" />
+    <ClCompile Include="TeeChart\bevelfilter.cpp" />
+    <ClCompile Include="TeeChart\bezierseries.cpp" />
+    <ClCompile Include="TeeChart\blurfilter.cpp" />
+    <ClCompile Include="TeeChart\bmpexport.cpp" />
+    <ClCompile Include="TeeChart\bollingerfunction.cpp" />
+    <ClCompile Include="TeeChart\boxplotseries.cpp" />
+    <ClCompile Include="TeeChart\brightnessfilter.cpp" />
+    <ClCompile Include="TeeChart\brush.cpp" />
+    <ClCompile Include="TeeChart\bubble3dseries.cpp" />
+    <ClCompile Include="TeeChart\bubbleseries.cpp" />
+    <ClCompile Include="TeeChart\calendarcell.cpp" />
+    <ClCompile Include="TeeChart\calendarcellupper.cpp" />
+    <ClCompile Include="TeeChart\calendarseries.cpp" />
+    <ClCompile Include="TeeChart\candleseries.cpp" />
+    <ClCompile Include="TeeChart\canvas.cpp" />
+    <ClCompile Include="TeeChart\ccifunction.cpp" />
+    <ClCompile Include="TeeChart\chartanimations.cpp" />
+    <ClCompile Include="TeeChart\chartaxispen.cpp" />
+    <ClCompile Include="TeeChart\chartcollection.cpp" />
+    <ClCompile Include="TeeChart\charteditorpanel.cpp" />
+    <ClCompile Include="TeeChart\chartfont.cpp" />
+    <ClCompile Include="TeeChart\chartgrid.cpp" />
+    <ClCompile Include="TeeChart\chartgridcols.cpp" />
+    <ClCompile Include="TeeChart\chartgridnavigator.cpp" />
+    <ClCompile Include="TeeChart\chartgridrows.cpp" />
+    <ClCompile Include="TeeChart\charthiddenpen.cpp" />
+    <ClCompile Include="TeeChart\chartimagetool.cpp" />
+    <ClCompile Include="TeeChart\chartpagenavigator.cpp" />
+    <ClCompile Include="TeeChart\circlelabels.cpp" />
+    <ClCompile Include="TeeChart\circulargauge.cpp" />
+    <ClCompile Include="TeeChart\clipseriestool.cpp" />
+    <ClCompile Include="TeeChart\clockhand.cpp" />
+    <ClCompile Include="TeeChart\clockseries.cpp" />
+    <ClCompile Include="TeeChart\clusteringtool.cpp" />
+    <ClCompile Include="TeeChart\clvfunction.cpp" />
+    <ClCompile Include="TeeChart\colorbandtool.cpp" />
+    <ClCompile Include="TeeChart\colorfilter.cpp" />
+    <ClCompile Include="TeeChart\colorgridseries.cpp" />
+    <ClCompile Include="TeeChart\colorlinetool.cpp" />
+    <ClCompile Include="TeeChart\compressfunction.cpp" />
+    <ClCompile Include="TeeChart\contourlevel.cpp" />
+    <ClCompile Include="TeeChart\contourlevels.cpp" />
+    <ClCompile Include="TeeChart\contourmarks.cpp" />
+    <ClCompile Include="TeeChart\contourseries.cpp" />
+    <ClCompile Include="TeeChart\contrastfilter.cpp" />
+    <ClCompile Include="TeeChart\cropfilter.cpp" />
+    <ClCompile Include="TeeChart\crosstabsource.cpp" />
+    <ClCompile Include="TeeChart\cursortool.cpp" />
+    <ClCompile Include="TeeChart\curvefittingfunction.cpp" />
+    <ClCompile Include="TeeChart\custom3dpaletteseries.cpp" />
+    <ClCompile Include="TeeChart\customaxes.cpp" />
+    <ClCompile Include="TeeChart\customfunction.cpp" />
+    <ClCompile Include="TeeChart\customserieslist.cpp" />
+    <ClCompile Include="TeeChart\customtextshape.cpp" />
+    <ClCompile Include="TeeChart\darvasseries.cpp" />
+    <ClCompile Include="TeeChart\datatabletool.cpp" />
+    <ClCompile Include="TeeChart\deltapointseries.cpp" />
+    <ClCompile Include="TeeChart\donutseries.cpp" />
+    <ClCompile Include="TeeChart\doublehorizbarseries.cpp" />
+    <ClCompile Include="TeeChart\downsamplingfunction.cpp" />
+    <ClCompile Include="TeeChart\dragmarkstool.cpp" />
+    <ClCompile Include="TeeChart\dragpointtool.cpp" />
+    <ClCompile Include="TeeChart\drawline.cpp" />
+    <ClCompile Include="TeeChart\drawlinelist.cpp" />
+    <ClCompile Include="TeeChart\drawlinetool.cpp" />
+    <ClCompile Include="TeeChart\embossfilter.cpp" />
+    <ClCompile Include="TeeChart\environment.cpp" />
+    <ClCompile Include="TeeChart\epsexport.cpp" />
+    <ClCompile Include="TeeChart\equalizerseries.cpp" />
+    <ClCompile Include="TeeChart\equivolumeseries.cpp" />
+    <ClCompile Include="TeeChart\errorbarseries.cpp" />
+    <ClCompile Include="TeeChart\errorpoint3dseries.cpp" />
+    <ClCompile Include="TeeChart\errorpointseries.cpp" />
+    <ClCompile Include="TeeChart\errors.cpp" />
+    <ClCompile Include="TeeChart\errors3d.cpp" />
+    <ClCompile Include="TeeChart\errors3dformat.cpp" />
+    <ClCompile Include="TeeChart\errorseries.cpp" />
+    <ClCompile Include="TeeChart\errorsformat.cpp" />
+    <ClCompile Include="TeeChart\expandanimation.cpp" />
+    <ClCompile Include="TeeChart\expavgfunction.cpp" />
+    <ClCompile Include="TeeChart\explodedslices.cpp" />
+    <ClCompile Include="TeeChart\expmovavgfunction.cpp" />
+    <ClCompile Include="TeeChart\export.cpp" />
+    <ClCompile Include="TeeChart\extralegendtool.cpp" />
+    <ClCompile Include="TeeChart\fadertool.cpp" />
+    <ClCompile Include="TeeChart\fastlineseries.cpp" />
+    <ClCompile Include="TeeChart\fibonacciitem.cpp" />
+    <ClCompile Include="TeeChart\fibonaccilevels.cpp" />
+    <ClCompile Include="TeeChart\fibonaccitool.cpp" />
+    <ClCompile Include="TeeChart\filteritems.cpp" />
+    <ClCompile Include="TeeChart\filterregion.cpp" />
+    <ClCompile Include="TeeChart\flexexport.cpp" />
+    <ClCompile Include="TeeChart\floatxyz.cpp" />
+    <ClCompile Include="TeeChart\framebrush.cpp" />
+    <ClCompile Include="TeeChart\framedborder.cpp" />
+    <ClCompile Include="TeeChart\frametool.cpp" />
+    <ClCompile Include="TeeChart\fullscreentool.cpp" />
+    <ClCompile Include="TeeChart\funnelseries.cpp" />
+    <ClCompile Include="TeeChart\gammacorrectionfilter.cpp" />
+    <ClCompile Include="TeeChart\ganttseries.cpp" />
+    <ClCompile Include="TeeChart\gantttool.cpp" />
+    <ClCompile Include="TeeChart\gaugehand.cpp" />
+    <ClCompile Include="TeeChart\gaugehanditem.cpp" />
+    <ClCompile Include="TeeChart\gaugehands.cpp" />
+    <ClCompile Include="TeeChart\gaugepointerrange.cpp" />
+    <ClCompile Include="TeeChart\gaugerange.cpp" />
+    <ClCompile Include="TeeChart\gaugeranges.cpp" />
+    <ClCompile Include="TeeChart\gaugeseries.cpp" />
+    <ClCompile Include="TeeChart\gaugeseriespointer.cpp" />
+    <ClCompile Include="TeeChart\gifexport.cpp" />
+    <ClCompile Include="TeeChart\gllightsource.cpp" />
+    <ClCompile Include="TeeChart\glposition.cpp" />
+    <ClCompile Include="TeeChart\gradient.cpp" />
+    <ClCompile Include="TeeChart\gradientcolor.cpp" />
+    <ClCompile Include="TeeChart\gradientcolors.cpp" />
+    <ClCompile Include="TeeChart\grayscalefilter.cpp" />
+    <ClCompile Include="TeeChart\gridbandbrush.cpp" />
+    <ClCompile Include="TeeChart\gridbandtool.cpp" />
+    <ClCompile Include="TeeChart\gridtransposetool.cpp" />
+    <ClCompile Include="TeeChart\hierarchicalclustering.cpp" />
+    <ClCompile Include="TeeChart\highlowlineseries.cpp" />
+    <ClCompile Include="TeeChart\highlowseries.cpp" />
+    <ClCompile Include="TeeChart\histogramfunction.cpp" />
+    <ClCompile Include="TeeChart\histogramseries.cpp" />
+    <ClCompile Include="TeeChart\horizareaseries.cpp" />
+    <ClCompile Include="TeeChart\horizbarseries.cpp" />
+    <ClCompile Include="TeeChart\horizboxplotseries.cpp" />
+    <ClCompile Include="TeeChart\horizhistogramseries.cpp" />
+    <ClCompile Include="TeeChart\horizlineseries.cpp" />
+    <ClCompile Include="TeeChart\hover.cpp" />
+    <ClCompile Include="TeeChart\htmlexport.cpp" />
+    <ClCompile Include="TeeChart\huelumsatfilter.cpp" />
+    <ClCompile Include="TeeChart\imagebarseries.cpp" />
+    <ClCompile Include="TeeChart\imagepointseries.cpp" />
+    <ClCompile Include="TeeChart\import.cpp" />
+    <ClCompile Include="TeeChart\isosurfaceseries.cpp" />
+    <ClCompile Include="TeeChart\javascriptexport.cpp" />
+    <ClCompile Include="TeeChart\jpegexport.cpp" />
+    <ClCompile Include="TeeChart\jsonexport.cpp" />
+    <ClCompile Include="TeeChart\kagiseries.cpp" />
+    <ClCompile Include="TeeChart\kmeansclustering.cpp" />
+    <ClCompile Include="TeeChart\knobgauge.cpp" />
+    <ClCompile Include="TeeChart\legend.cpp" />
+    <ClCompile Include="TeeChart\legenditem.cpp" />
+    <ClCompile Include="TeeChart\legenditems.cpp" />
+    <ClCompile Include="TeeChart\legendpalettetool.cpp" />
+    <ClCompile Include="TeeChart\legendpointer.cpp" />
+    <ClCompile Include="TeeChart\legendscrollbartool.cpp" />
+    <ClCompile Include="TeeChart\legendsymbol.cpp" />
+    <ClCompile Include="TeeChart\legendtitle.cpp" />
+    <ClCompile Include="TeeChart\levelsegment.cpp" />
+    <ClCompile Include="TeeChart\lightfilter.cpp" />
+    <ClCompile Include="TeeChart\lighttool.cpp" />
+    <ClCompile Include="TeeChart\lineargauge.cpp" />
+    <ClCompile Include="TeeChart\linepointseries.cpp" />
+    <ClCompile Include="TeeChart\lineseries.cpp" />
+    <ClCompile Include="TeeChart\linktool.cpp" />
+    <ClCompile Include="TeeChart\macdfunction.cpp" />
+    <ClCompile Include="TeeChart\magnifytool.cpp" />
+    <ClCompile Include="TeeChart\mapmarks.cpp" />
+    <ClCompile Include="TeeChart\mappolygon.cpp" />
+    <ClCompile Include="TeeChart\mappolygonlist.cpp" />
+    <ClCompile Include="TeeChart\mapseries.cpp" />
+    <ClCompile Include="TeeChart\margins.cpp" />
+    <ClCompile Include="TeeChart\marks.cpp" />
+    <ClCompile Include="TeeChart\markscallout.cpp" />
+    <ClCompile Include="TeeChart\marksitem.cpp" />
+    <ClCompile Include="TeeChart\markssymbol.cpp" />
+    <ClCompile Include="TeeChart\markstail.cpp" />
+    <ClCompile Include="TeeChart\markstiptool.cpp" />
+    <ClCompile Include="TeeChart\medianfunction.cpp" />
+    <ClCompile Include="TeeChart\metafileexport.cpp" />
+    <ClCompile Include="TeeChart\mirrorfilter.cpp" />
+    <ClCompile Include="TeeChart\modefunction.cpp" />
+    <ClCompile Include="TeeChart\moneyflowfunction.cpp" />
+    <ClCompile Include="TeeChart\mosaicfilter.cpp" />
+    <ClCompile Include="TeeChart\movingavgfunction.cpp" />
+    <ClCompile Include="TeeChart\nativeexport.cpp" />
+    <ClCompile Include="TeeChart\nearesttool.cpp" />
+    <ClCompile Include="TeeChart\numericgauge.cpp" />
+    <ClCompile Include="TeeChart\numericmarker.cpp" />
+    <ClCompile Include="TeeChart\obvfunction.cpp" />
+    <ClCompile Include="TeeChart\odsexport.cpp" />
+    <ClCompile Include="TeeChart\orgitem.cpp" />
+    <ClCompile Include="TeeChart\orgitemcollection.cpp" />
+    <ClCompile Include="TeeChart\orgseries.cpp" />
+    <ClCompile Include="TeeChart\orgshape.cpp" />
+    <ClCompile Include="TeeChart\page.cpp" />
+    <ClCompile Include="TeeChart\pagecontrol.cpp" />
+    <ClCompile Include="TeeChart\pagenumtool.cpp" />
+    <ClCompile Include="TeeChart\panel.cpp" />
+    <ClCompile Include="TeeChart\paretofunction.cpp" />
+    <ClCompile Include="TeeChart\pcxexport.cpp" />
+    <ClCompile Include="TeeChart\pdfexport.cpp" />
+    <ClCompile Include="TeeChart\pen.cpp" />
+    <ClCompile Include="TeeChart\performancefunction.cpp" />
+    <ClCompile Include="TeeChart\pieangle.cpp" />
+    <ClCompile Include="TeeChart\piemarks.cpp" />
+    <ClCompile Include="TeeChart\pieotherslice.cpp" />
+    <ClCompile Include="TeeChart\pieseries.cpp" />
+    <ClCompile Include="TeeChart\pietool.cpp" />
+    <ClCompile Include="TeeChart\pngexport.cpp" />
+    <ClCompile Include="TeeChart\point3dseries.cpp" />
+    <ClCompile Include="TeeChart\pointarray.cpp" />
+    <ClCompile Include="TeeChart\pointer.cpp" />
+    <ClCompile Include="TeeChart\pointfigureseries.cpp" />
+    <ClCompile Include="TeeChart\pointseries.cpp" />
+    <ClCompile Include="TeeChart\polarbarseries.cpp" />
+    <ClCompile Include="TeeChart\polarcontourseries.cpp" />
+    <ClCompile Include="TeeChart\polargridseries.cpp" />
+    <ClCompile Include="TeeChart\polarlabels.cpp" />
+    <ClCompile Include="TeeChart\polarseries.cpp" />
+    <ClCompile Include="TeeChart\polygonseries.cpp" />
+    <ClCompile Include="TeeChart\printer.cpp" />
+    <ClCompile Include="TeeChart\printersettings.cpp" />
+    <ClCompile Include="TeeChart\pvofunction.cpp" />
+    <ClCompile Include="TeeChart\pyramidseries.cpp" />
+    <ClCompile Include="TeeChart\qtclustering.cpp" />
+    <ClCompile Include="TeeChart\radarseries.cpp" />
+    <ClCompile Include="TeeChart\rectangletool.cpp" />
+    <ClCompile Include="TeeChart\renkoseries.cpp" />
+    <ClCompile Include="TeeChart\repaintmonitortool.cpp" />
+    <ClCompile Include="TeeChart\resizefilter.cpp" />
+    <ClCompile Include="TeeChart\rmsfunction.cpp" />
+    <ClCompile Include="TeeChart\roseseries.cpp" />
+    <ClCompile Include="TeeChart\rotatefilter.cpp" />
+    <ClCompile Include="TeeChart\rotatetool.cpp" />
+    <ClCompile Include="TeeChart\rsifunction.cpp" />
+    <ClCompile Include="TeeChart\rvifunction.cpp" />
+    <ClCompile Include="TeeChart\sarfunction.cpp" />
+    <ClCompile Include="TeeChart\scroll.cpp" />
+    <ClCompile Include="TeeChart\scrollbarthumb.cpp" />
+    <ClCompile Include="TeeChart\scrollpagertool.cpp" />
+    <ClCompile Include="TeeChart\selectortool.cpp" />
+    <ClCompile Include="TeeChart\sepiafilter.cpp" />
+    <ClCompile Include="TeeChart\series.cpp" />
+    <ClCompile Include="TeeChart\seriesanimationtool.cpp" />
+    <ClCompile Include="TeeChart\seriesbandtool.cpp" />
+    <ClCompile Include="TeeChart\seriesgroup.cpp" />
+    <ClCompile Include="TeeChart\seriesgroups.cpp" />
+    <ClCompile Include="TeeChart\serieslist.cpp" />
+    <ClCompile Include="TeeChart\seriesmarkposition.cpp" />
+    <ClCompile Include="TeeChart\seriesmarkspositions.cpp" />
+    <ClCompile Include="TeeChart\seriespointeritems.cpp" />
+    <ClCompile Include="TeeChart\seriesregiontool.cpp" />
+    <ClCompile Include="TeeChart\seriesstatstool.cpp" />
+    <ClCompile Include="TeeChart\seriestextfield.cpp" />
+    <ClCompile Include="TeeChart\seriestextfields.cpp" />
+    <ClCompile Include="TeeChart\seriestextsource.cpp" />
+    <ClCompile Include="TeeChart\seriesxmlsource.cpp" />
+    <ClCompile Include="TeeChart\shapecallout.cpp" />
+    <ClCompile Include="TeeChart\shapeseries.cpp" />
+    <ClCompile Include="TeeChart\sharpenfilter.cpp" />
+    <ClCompile Include="TeeChart\skewnessfunction.cpp" />
+    <ClCompile Include="TeeChart\smithseries.cpp" />
+    <ClCompile Include="TeeChart\smoothingfunction.cpp" />
+    <ClCompile Include="TeeChart\smoothpoints.cpp" />
+    <ClCompile Include="TeeChart\sobelfilter.cpp" />
+    <ClCompile Include="TeeChart\softenfilter.cpp" />
+    <ClCompile Include="TeeChart\spacing.cpp" />
+    <ClCompile Include="TeeChart\stddeviationfunction.cpp" />
+    <ClCompile Include="TeeChart\strings.cpp" />
+    <ClCompile Include="TeeChart\subchart.cpp" />
+    <ClCompile Include="TeeChart\subchartchart.cpp" />
+    <ClCompile Include="TeeChart\subcharttool.cpp" />
+    <ClCompile Include="TeeChart\subgradient.cpp" />
+    <ClCompile Include="TeeChart\subsetteefunction.cpp" />
+    <ClCompile Include="TeeChart\surfacenearesttool.cpp" />
+    <ClCompile Include="TeeChart\surfaceseries.cpp" />
+    <ClCompile Include="TeeChart\surfacesides.cpp" />
+    <ClCompile Include="TeeChart\svgexport.cpp" />
+    <ClCompile Include="TeeChart\tablelegend.cpp" />
+    <ClCompile Include="TeeChart\tagcloudseries.cpp" />
+    <ClCompile Include="TeeChart\tchart.cpp" />
+    <ClCompile Include="TeeChart\teeanimate.cpp" />
+    <ClCompile Include="TeeChart\teeanimation.cpp" />
+    <ClCompile Include="TeeChart\teecommander.cpp" />
+    <ClCompile Include="TeeChart\teecommanderbutton.cpp" />
+    <ClCompile Include="TeeChart\teecorner.cpp" />
+    <ClCompile Include="TeeChart\teecorners.cpp" />
+    <ClCompile Include="TeeChart\teecustomshape.cpp" />
+    <ClCompile Include="TeeChart\teeeditor.cpp" />
+    <ClCompile Include="TeeChart\teeeditoroptions.cpp" />
+    <ClCompile Include="TeeChart\teeeditorshowpages.cpp" />
+    <ClCompile Include="TeeChart\teeemboss.cpp" />
+    <ClCompile Include="TeeChart\teefilter.cpp" />
+    <ClCompile Include="TeeChart\teefont.cpp" />
+    <ClCompile Include="TeeChart\teefunction.cpp" />
+    <ClCompile Include="TeeChart\teegdiplus.cpp" />
+    <ClCompile Include="TeeChart\teelistbox.cpp" />
+    <ClCompile Include="TeeChart\teelistboxsection.cpp" />
+    <ClCompile Include="TeeChart\teeopengl.cpp" />
+    <ClCompile Include="TeeChart\teepanelslist.cpp" />
+    <ClCompile Include="TeeChart\teepanning.cpp" />
+    <ClCompile Include="TeeChart\teepicture.cpp" />
+    <ClCompile Include="TeeChart\teepoint2d.cpp" />
+    <ClCompile Include="TeeChart\teepoint3d.cpp" />
+    <ClCompile Include="TeeChart\teepreviewer.cpp" />
+    <ClCompile Include="TeeChart\teeprevieweroptions.cpp" />
+    <ClCompile Include="TeeChart\teepreviewpanel.cpp" />
+    <ClCompile Include="TeeChart\teerect.cpp" />
+    <ClCompile Include="TeeChart\teeselected.cpp" />
+    <ClCompile Include="TeeChart\teeshadow.cpp" />
+    <ClCompile Include="TeeChart\teeshape.cpp" />
+    <ClCompile Include="TeeChart\teeshapeitem.cpp" />
+    <ClCompile Include="TeeChart\teeshapes.cpp" />
+    <ClCompile Include="TeeChart\ternaryseries.cpp" />
+    <ClCompile Include="TeeChart\text3dtool.cpp" />
+    <ClCompile Include="TeeChart\textexport.cpp" />
+    <ClCompile Include="TeeChart\textshape.cpp" />
+    <ClCompile Include="TeeChart\themeslist.cpp" />
+    <ClCompile Include="TeeChart\tilefilter.cpp" />
+    <ClCompile Include="TeeChart\titles.cpp" />
+    <ClCompile Include="TeeChart\toollist.cpp" />
+    <ClCompile Include="TeeChart\tools.cpp" />
+    <ClCompile Include="TeeChart\towerseries.cpp" />
+    <ClCompile Include="TeeChart\transformanimation.cpp" />
+    <ClCompile Include="TeeChart\transposeseriestool.cpp" />
+    <ClCompile Include="TeeChart\treemapseries.cpp" />
+    <ClCompile Include="TeeChart\trendfunction.cpp" />
+    <ClCompile Include="TeeChart\trisurfaceseries.cpp" />
+    <ClCompile Include="TeeChart\valuelist.cpp" />
+    <ClCompile Include="TeeChart\valuelists.cpp" />
+    <ClCompile Include="TeeChart\vector3dseries.cpp" />
+    <ClCompile Include="TeeChart\videoplayertool.cpp" />
+    <ClCompile Include="TeeChart\videotool.cpp" />
+    <ClCompile Include="TeeChart\volumepipeseries.cpp" />
+    <ClCompile Include="TeeChart\volumeseries.cpp" />
+    <ClCompile Include="TeeChart\wall.cpp" />
+    <ClCompile Include="TeeChart\walls.cpp" />
+    <ClCompile Include="TeeChart\waterfallseries.cpp" />
+    <ClCompile Include="TeeChart\windroseseries.cpp" />
+    <ClCompile Include="TeeChart\worldflags.cpp" />
+    <ClCompile Include="TeeChart\worldseries.cpp" />
+    <ClCompile Include="TeeChart\xamlexport.cpp" />
+    <ClCompile Include="TeeChart\xlsexport.cpp" />
+    <ClCompile Include="TeeChart\xlsobjectexport.cpp" />
+    <ClCompile Include="TeeChart\xmlexport.cpp" />
+    <ClCompile Include="TeeChart\zoom.cpp" />
+    <ClCompile Include="TeeChart\zoomfilter.cpp" />
+    <ClCompile Include="Tender.cpp" />
+    <ClCompile Include="TerminalUnit.cpp" />
+    <ClCompile Include="Tests\TestRunner\ActiveTest.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\TestRunner\DynamicWindow\cdxCDynamicDialog.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\TestRunner\DynamicWindow\cdxCDynamicPropSheet.cpp">
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</PreprocessToFile>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\TestRunner\DynamicWindow\cdxCDynamicWnd.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\TestRunner\DynamicWindow\cdxCDynamicWndEx.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\TestRunner\DynamicWindow\cdxCSizeIconCtrl.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\TestRunner\ListCtrlFormatter.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\TestRunner\ListCtrlSetter.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\TestRunner\MsDevCallerListCtrl.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\TestRunner\ProgressBar.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\TestRunner\TestRunnerDlg.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\TestRunner\TestRunnerModel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\TestRunner\TreeHierarchyDlg.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\UnitTests\utests_base.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\UnitTests\utests_CDBAdditChar.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\UnitTests\utests_CDBCloseOfDp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\UnitTests\utests_CDBPageField.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\UnitTests\utests_CircuitSchemePosition.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\UnitTests\UTests_Common.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\UnitTests\utests_CEquation.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\UnitTests\utests_ExpansionPipeSize.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\UnitTests\utests_ExportInOneSheet.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\UnitTests\utests_HydronicCalculation.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\UnitTests\utests_HyToolsPMCompare.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\UnitTests\utests_IDPTR.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\UnitTests\utests_ImportHM.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\UnitTests\utests_ProductSelection.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\UnitTests\utests_LocalizedString.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\UnitTests\utests_Printout.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\UnitTests\utests_PrjParams.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\UnitTests\utests_CProductSortKey.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\UnitTests\utests_Select.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\UnitTests\utests_SelectActuator.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\UnitTests\utests_TADBCopy.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\UnitTests\utests_TenderText.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\UnitTests\utests_VerifyArticleNumbers.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Tests\UnitTests\utests_CWaterChar.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ToolsDockablePane.cpp" />
+    <ClCompile Include="TreeListCtrl.cpp" />
+    <ClCompile Include="TreeListWnd.cpp" />
+    <ClCompile Include="TUProductSelectionHelper.cpp" />
+    <ClCompile Include="TUProductSelectionHelperError.cpp" />
+    <ClCompile Include="Utilities.cpp" />
+    <ClCompile Include="WinSysUtil.cpp" />
+    <ClCompile Include="XGroupBox.cpp" />
+    <ClCompile Include="FormViewEx.cpp" />
+    <ClCompile Include="RScrollView.cpp" />
+    <ClCompile Include="RViewChart.cpp" />
+    <ClCompile Include="RViewGen.cpp" />
+    <ClCompile Include="RViewHMCalc.cpp" />
+    <ClCompile Include="RViewHMSumm.cpp" />
+    <ClCompile Include="RViewInfo.cpp" />
+    <ClCompile Include="RViewLDSumm.cpp" />
+    <ClCompile Include="RViewLogData.cpp" />
+    <ClCompile Include="RViewProj.cpp" />
+    <ClCompile Include="RViewQuickMeas.cpp" />
+    <ClCompile Include="RViewSSelHub.cpp" />
+    <ClCompile Include="RViewSSelSS.cpp" />
+    <ClCompile Include="RViewSSelTrv.cpp" />
+    <ClCompile Include="EnBitmap.cpp" />
+    <ClCompile Include="EnBitmapAnchorPt.cpp" />
+    <ClCompile Include="EnBitmapChessBoard.cpp" />
+    <ClCompile Include="EnBitmapComponent.cpp" />
+    <ClCompile Include="EnBitmapPatchWork.cpp" />
+    <ClCompile Include="EnBitmapRow.cpp" />
+    <ClCompile Include="CurvFit.cpp" />
+    <ClCompile Include="Hydronic.cpp" />
+    <ClCompile Include="SurfFit.cpp" />
+    <ClCompile Include="DataBase.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="DataStruct.cpp" />
+    <ClCompile Include="HubHandler.cpp" />
+    <ClCompile Include="HydroMod.cpp">
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</PreprocessToFile>
+    </ClCompile>
+    <ClCompile Include="Units.cpp" />
+    <ClCompile Include="XmlReader.cpp" />
+    <ClCompile Include="DlgSpreadCB.cpp" />
+    <ClCompile Include="picture.cpp" />
+    <ClCompile Include="SpreadComboBox.cpp" />
+    <ClCompile Include="spreadpreview.cpp" />
+    <ClCompile Include="DataBObj.cpp" />
+    <ClCompile Include="LoggedDataChart.cpp" />
+    <ClCompile Include="SheetHMCalc.cpp" />
+    <ClCompile Include="SSheetGen.cpp" />
+    <ClCompile Include="SSheetHMSumm.cpp" />
+    <ClCompile Include="SSheetHub.cpp" />
+    <ClCompile Include="SSheetLDSumm.cpp" />
+    <ClCompile Include="SSheetLogData.cpp" />
+    <ClCompile Include="SSheetPanelCirc1.cpp" />
+    <ClCompile Include="SSheetPanelCirc2.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\DocTA\Software\HySelect\HySelect\Spread\SS\Src\sssrc\spread;C:\DocTA\Software\HySelect\HySelect\Spread\SS\Src\sssrc\classes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="SSheetQuickMeas.cpp" />
+    <ClCompile Include="PanelCBILog.cpp" />
+    <ClCompile Include="PanelCBIPlant.cpp" />
+    <ClCompile Include="PanelCirc1.cpp" />
+    <ClCompile Include="PanelCirc2.cpp" />
+    <ClCompile Include="Wizard.cpp" />
+    <ClCompile Include="WizardCBI.cpp" />
+    <ClCompile Include="DlgPanelTAScopeDownload.cpp" />
+    <ClCompile Include="DlgPanelTAScopeMaintenance.cpp" />
+    <ClCompile Include="DlgPanelTAScopeStart.cpp" />
+    <ClCompile Include="DlgPanelTAScopeUpdate.cpp" />
+    <ClCompile Include="DlgPanelTAScopeUpload.cpp" />
+    <ClCompile Include="DlgWizTAScope.cpp" />
+    <ClCompile Include="SerialLibTAScope\HiPerfTimer.cpp" />
+    <ClCompile Include="SerialLibTAScope\Packet.cpp" />
+    <ClCompile Include="SerialLibTAScope\SerialPort.cpp" />
+    <ClCompile Include="SerialLibTAScope\ServiceManager.cpp" />
+    <ClCompile Include="TAScopeUtil.cpp" />
+    <ClCompile Include="Excel_Tools.cpp" />
+    <ClCompile Include="Excel_Workbook.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TASelect.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\NewIn.txt">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="CDS_Sel.cd" />
+    <None Include="cpp.hint" />
+    <None Include="DatabaseObject.cd" />
+    <None Include="JsonParser\json_internalarray.inl" />
+    <None Include="JsonParser\json_internalmap.inl" />
+    <None Include="JsonParser\json_valueiterator.inl" />
+    <None Include="res\TASelect.rc2" />
+    <None Include="SpreadSheet.cd" />
+    <None Include="TabCDialog.cd" />
+    <None Include="TeeChart\ManifestComDependency-Win32.exe" />
+    <None Include="TeeChart\mt.exe" />
+    <None Include="TeeChart\TeeChart2018.ocx" />
+    <None Include="ViewManagement.cd" />
+    <None Include="TASelectModList.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Spread\SS\Include\SSDLL.H" />
+    <ClInclude Include="..\Spread\SS\Include\Ssdllmfc.h" />
+    <ClInclude Include="..\sqlite\sqlite3.h" />
+    <ClInclude Include="DlgBatchSelSmartControlValve.h" />
+    <ClInclude Include="DlgBatchSelSmartDpC.h" />
+    <ClInclude Include="DlgExceptionMessage.h" />
+    <ClInclude Include="DlgHydronicSchViewLarge.h" />
+    <ClInclude Include="DlgHydronicSchView_BaseTab.h" />
+    <ClInclude Include="DlgHydronicSchView_BVTab.h" />
+    <ClInclude Include="DlgHydronicSchView_CVTab.h" />
+    <ClInclude Include="DlgHydronicSchView_DpCTab.h" />
+    <ClInclude Include="DlgHydronicSchView_SmartTab.h" />
+    <ClInclude Include="DlgHydronicSchView_SmartDpTab.h" />
+    <ClInclude Include="DlgIndSelSmartControlValve.h" />
+    <ClInclude Include="DlgIndSelSmartDpC.h" />
+    <ClInclude Include="DlgInjectionError.h" />
+    <ClInclude Include="DlgNoDevSmartControlValveFound.h" />
+    <ClInclude Include="DlgSolarContentMultiplierFactor.h" />
+    <ClInclude Include="DlgSearchAndReplaceCircuitsResults.h" />
+    <ClInclude Include="DlgSpecActComputeCRC.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="DlgSpecialActionExtractArticleWithoutPrice.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="DlgStorageTankMaxTemperature.h" />
+    <ClInclude Include="DlgTPGeneralSmartValves.h" />
+    <ClInclude Include="DlgTPPageHCPumps.h" />
+    <ClInclude Include="DlgTPPageHCSmartCV.h" />
+    <ClInclude Include="DlgWizPMRightViewInputCoolSystemVolumePowerSWKI.h" />
+    <ClInclude Include="DlgWizPMRightViewInputHeatSystemVolumePowerSWKI.h" />
+    <ClInclude Include="DlgWizPMRightViewInputSolarSystemVolumePowerSWKI.h" />
+    <ClInclude Include="DlgWizPMRightViewInputSolarSystemVolumePowerSWKIAdv.h" />
+    <ClInclude Include="DpSVisioNewDFUCommunication.h" />
+    <ClInclude Include="ExportHMBase.h" />
+    <ClInclude Include="ExportHMToJson.h" />
+    <ClInclude Include="ExtEdit.h" />
+    <ClInclude Include="HySelectException.h" />
+    <ClInclude Include="DlgCOWaterChar.h" />
+    <ClInclude Include="DlgIndSel6WayValve.h" />
+    <ClInclude Include="DlgIndSel6WayValveCircuits.h" />
+    <ClInclude Include="DlgDpSVisioDFUInstallation.h" />
+    <ClInclude Include="DlgDpSVisioDFUUpgradeRunning.h" />
+    <ClInclude Include="DlgDpSVisioUnplugPlug.h" />
+    <ClInclude Include="DlgIndSel6WayValve_6WayValveTab.h" />
+    <ClInclude Include="DlgIndSel6WayValve_SecondTab.h" />
+    <ClInclude Include="DlgLicense.h" />
+    <ClInclude Include="DlgNoDev6WValveFound.h" />
+    <ClInclude Include="DlgPMTChartHelper.h" />
+    <ClInclude Include="CsvParser.h" />
+    <ClInclude Include="DBPageFieldVersion.h" />
+    <ClInclude Include="DeletedProductHelper.h" />
+    <ClInclude Include="DlgDebugSearchDBObject.h" />
+    <ClInclude Include="DlgBatchSelBase.h" />
+    <ClInclude Include="DlgBatchSelBCv.h" />
+    <ClInclude Include="DlgBatchSelBv.h" />
+    <ClInclude Include="DlgBatchSelCtrlBase.h" />
+    <ClInclude Include="DlgBatchSelDpC.h" />
+    <ClInclude Include="DlgBatchSelDpC_BvTab.h" />
+    <ClInclude Include="DlgBatchSelDpC_DpCTab.h" />
+    <ClInclude Include="DlgBatchSelectionOutput.h" />
+    <ClInclude Include="DlgBatchSelPICv.h" />
+    <ClInclude Include="DlgBatchSelSeparator.h" />
+    <ClInclude Include="DlgCreateModuleTiny.h" />
+    <ClInclude Include="DlgDpSVisio.h" />
+    <ClInclude Include="DlgDpSVisioBase.h" />
+    <ClInclude Include="DlgDpSVisioUpgradeFinished.h" />
+    <ClInclude Include="DlgDpSVisioStatus.h" />
+    <ClInclude Include="DlgDpSVisioHIDUpgradeRunning.h" />
+    <ClInclude Include="DlgIndSelAdditionalPiping.h" />
+    <ClInclude Include="DlgIndSelCtrlBase.h" />
+    <ClInclude Include="DlgIndSelDpCBCV.h" />
+    <ClInclude Include="DlgIndSelPM.h" />
+    <ClInclude Include="DlgIndSelPMExcludedProducts.h" />
+    <ClInclude Include="DlgIndSelPMPanels.h" />
+    <ClInclude Include="DlgIndSelPMSysVolCooling.h" />
+    <ClInclude Include="DlgIndSelPMSysVolHeating.h" />
+    <ClInclude Include="DlgIndSelSafetyValve.h" />
+    <ClInclude Include="DlgIndSelSeparator.h" />
+    <ClInclude Include="DlgIndSelSv.h" />
+    <ClInclude Include="DlgInfoSSelDpCBCV.h" />
+    <ClInclude Include="DlgNoDevSafetyValveFound.h" />
+    <ClInclude Include="DlgNoDevSeparatorFound.h" />
+    <ClInclude Include="DlgOutputHelper.h" />
+    <ClInclude Include="DataBase.hpp" />
+    <ClInclude Include="DlgDiversityFactor.h" />
+    <ClInclude Include="DlgHMCompilationOutput.h" />
+    <ClInclude Include="DlgHydroCalc.h" />
+    <ClInclude Include="DlgHydroCalcBase.h" />
+    <ClInclude Include="DlgHydroCalcQKvDp.h" />
+    <ClInclude Include="DlgHydroCalcQPDT.h" />
+    <ClInclude Include="DlgHydroCalcRedDisk.h" />
+    <ClInclude Include="DlgNoDevTrvFound.h" />
+    <ClInclude Include="DlgOutput.h" />
+    <ClInclude Include="DlgOutputSpreadContainer.h" />
+    <ClInclude Include="DlgPMGraphsOutput.h" />
+    <ClInclude Include="DlgPMWQSelectionPrefs.h" />
+    <ClInclude Include="DlgQuickMeasNote.h" />
+    <ClInclude Include="DlgSearchAndReplaceActuator.h" />
+    <ClInclude Include="DlgSearchAndReplaceSet.h" />
+    <ClInclude Include="DlgSelectActuator.h" />
+    <ClInclude Include="DlgSelectionBase.h" />
+    <ClInclude Include="DlgSelectionComboHelper.h" />
+    <ClInclude Include="DlgSelectionTabHelper.h" />
+    <ClInclude Include="DlgSpecActReformatFilterTabFiles.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="DlgSRPageActuator.h" />
+    <ClInclude Include="DlgSRPageSet.h" />
+    <ClInclude Include="DlgSRPageTemp.h" />
+    <ClInclude Include="DlgTALink.h" />
+    <ClInclude Include="DlgSearchAndReplaceCircuits.h" />
+    <ClInclude Include="DlgSRPageCircuit.h" />
+    <ClInclude Include="DlgTender.h" />
+    <ClInclude Include="DlgTPPageHCActuators.h" />
+    <ClInclude Include="DlgTPPageMainHC.h" />
+    <ClInclude Include="DlgTPGeneralPressureMaintenance.h" />
+    <ClInclude Include="DlgTPGeneralWaterQuality.h" />
+    <ClInclude Include="DlgTreeList.h" />
+    <ClInclude Include="DlgWizardSelBase.h" />
+    <ClInclude Include="DlgWizardSelPM.h" />
+    <ClInclude Include="DlgWizPMRightViewInputBase.h" />
+    <ClInclude Include="DlgWizPMRightViewInputCoolConsumers.h" />
+    <ClInclude Include="DlgWizPMRightViewInputCoolGenerators.h" />
+    <ClInclude Include="DlgWizPMRightViewInputCoolPMType.h" />
+    <ClInclude Include="DlgWizPMRightViewInputCoolPres.h" />
+    <ClInclude Include="DlgWizPMRightViewInputCoolPresAdv.h" />
+    <ClInclude Include="DlgWizPMRightViewInputCoolRequ.h" />
+    <ClInclude Include="DlgWizPMRightViewInputCoolRequ2.h" />
+    <ClInclude Include="DlgWizPMRightViewInputCoolTemp.h" />
+    <ClInclude Include="DlgWizPMRightViewInputCoolTempAdv.h" />
+    <ClInclude Include="DlgWizPMRightViewInputCoolSystemVolumePower.h" />
+    <ClInclude Include="DlgWizPMRightViewInputHeatConsumers.h" />
+    <ClInclude Include="DlgWizPMRightViewInputHeatGenerators.h" />
+    <ClInclude Include="DlgWizPMRightViewInputHeatPMType.h" />
+    <ClInclude Include="DlgWizPMRightViewInputHeatPres.h" />
+    <ClInclude Include="DlgWizPMRightViewInputHeatPresAdv.h" />
+    <ClInclude Include="DlgWizPMRightViewInputHeatRequ.h" />
+    <ClInclude Include="DlgWizPMRightViewInputHeatRequ2.h" />
+    <ClInclude Include="DlgWizPMRightViewInputHeatTemp.h" />
+    <ClInclude Include="DlgWizPMRightViewInputHeatTempAdv.h" />
+    <ClInclude Include="DlgWizPMRightViewInputHeatSystemVolumePower.h" />
+    <ClInclude Include="DlgWizPMRightViewInputProjectType.h" />
+    <ClInclude Include="DlgWizPMRightViewInputSolarPMType.h" />
+    <ClInclude Include="DlgWizPMRightViewInputSolarRequ.h" />
+    <ClInclude Include="DlgWizPMRightViewInputSolarRequ2.h" />
+    <ClInclude Include="DlgWizPMRightViewInputSolarTempAdv.h" />
+    <ClInclude Include="DlgWizPMRightViewInputSolarSystemVolumePower.h" />
+    <ClInclude Include="DlgWizPMRightViewPictureContainer.h" />
+    <ClInclude Include="DlgWizPMRightViewInputSolarPres.h" />
+    <ClInclude Include="DlgWizPMRightViewInputSolarPresAdv.h" />
+    <ClInclude Include="DlgWizPMRightViewInputSolarTemp.h" />
+    <ClInclude Include="DlgWizPMRightViewTextContainer.h" />
+    <ClInclude Include="DocDb.h" />
+    <ClInclude Include="DpSVisioBaseCommand.h" />
+    <ClInclude Include="DpSVisioBaseCommunication.h" />
+    <ClInclude Include="DpSVisioDFUCommand.h" />
+    <ClInclude Include="DpSVisioDFUCommunication.h" />
+    <ClInclude Include="DpSVisioFakeDFUCommunication.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="DpSVisioFakeHIDCommunication.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="DpSVisioHIDCommand.h" />
+    <ClInclude Include="DpSVisioHIDCommunication.h" />
+    <ClInclude Include="DpSVisioIncludes.h" />
+    <ClInclude Include="DpSVisioUSBcmdDef.h" />
+    <ClInclude Include="DpSVisioUtils.h" />
+    <ClInclude Include="ExtButton.h" />
+    <ClInclude Include="ExtProgressCtrl.h" />
+    <ClInclude Include="ExtMenu.h" />
+    <ClInclude Include="ExtStatic.h" />
+    <ClInclude Include="Global.h" />
+    <ClInclude Include="hidapi.h" />
+    <ClInclude Include="HMHub.h" />
+    <ClInclude Include="HMInclude.h" />
+    <ClInclude Include="HMPipes.h" />
+    <ClInclude Include="HMPump.h" />
+    <ClInclude Include="HydroMod_DebugLog.h" />
+    <ClInclude Include="HySelectExceptionHandlers.h" />
+    <ClInclude Include="ImportExportHM.h" />
+    <ClInclude Include="ImportExportHMNodeDefinitions.h" />
+    <ClInclude Include="ImportHMBase.h" />
+    <ClInclude Include="ImportHMFromJson.h" />
+    <ClInclude Include="ImportHMFromXML.h" />
+    <ClInclude Include="JsonParser\autolink.h" />
+    <ClInclude Include="JsonParser\config.h" />
+    <ClInclude Include="JsonParser\features.h" />
+    <ClInclude Include="JsonParser\forwards.h" />
+    <ClInclude Include="JsonParser\json.h" />
+    <ClInclude Include="JsonParser\json_batchallocator.h" />
+    <ClInclude Include="JsonParser\reader.h" />
+    <ClInclude Include="JsonParser\value.h" />
+    <ClInclude Include="JsonParser\writer.h" />
+    <ClInclude Include="MacroDefs.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="MessageManager.h" />
+    <ClInclude Include="MFCRibbonButtonEx.h" />
+    <ClInclude Include="MultiSpreadBase.h" />
+    <ClInclude Include="MultiSpreadInDialog.h" />
+    <ClInclude Include="MultiSpreadInView.h" />
+    <ClInclude Include="PipeUserDatabase.h" />
+    <ClInclude Include="PMPressureGaugeHelper.h" />
+    <ClInclude Include="PMSelectionHelper.h" />
+    <ClInclude Include="ProductSelectionParameters.h" />
+    <ClInclude Include="RCImageManager.h" />
+    <ClInclude Include="RegAccess.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="RViewDescription.h" />
+    <ClInclude Include="RViewQuickMeas.h" />
+    <ClInclude Include="RViewSelProd.h" />
+    <ClInclude Include="RViewSSel6WayValve.h" />
+    <ClInclude Include="RViewSSelBCV.h" />
+    <ClInclude Include="RViewSSelBv.h" />
+    <ClInclude Include="RViewSSelCtrl.h" />
+    <ClInclude Include="RViewSSelCV.h" />
+    <ClInclude Include="RViewSSelDpC.h" />
+    <ClInclude Include="RViewSSelDpCBCV.h" />
+    <ClInclude Include="RViewSSelPICV.h" />
+    <ClInclude Include="RViewSSelPM.h" />
+    <ClInclude Include="RViewSSelSafetyValve.h" />
+    <ClInclude Include="RViewSSelSeparator.h" />
+    <ClInclude Include="RViewSSelSmartControlValve.h" />
+    <ClInclude Include="RViewSSelSmartDpC.h" />
+    <ClInclude Include="RViewSSelSv.h" />
+    <ClInclude Include="RViewStartPage.h" />
+    <ClInclude Include="RViewWizardSelBase.h" />
+    <ClInclude Include="RViewWizardSelPM.h" />
+    <ClInclude Include="SelectPM.h" />
+    <ClInclude Include="SelProdArticle.h" />
+    <ClInclude Include="SelProdDockPane.h" />
+    <ClInclude Include="SelProdPage6WayValve.h" />
+    <ClInclude Include="SelProdPageAirVentSep.h" />
+    <ClInclude Include="SelProdPageArtList.h" />
+    <ClInclude Include="SelProdPageBase.h" />
+    <ClInclude Include="SelProdPageBv.h" />
+    <ClInclude Include="SelProdPageCtrl.h" />
+    <ClInclude Include="SelProdPageDiversityFactor.h" />
+    <ClInclude Include="SelProdPageDpC.h" />
+    <ClInclude Include="SelProdPageDpCBCV.h" />
+    <ClInclude Include="SelProdPageSmartDpC.h" />
+    <ClInclude Include="SelProdPageTCFloorHeatingControl.h" />
+    <ClInclude Include="SelProdPagePDef.h" />
+    <ClInclude Include="SelProdPageHub.h" />
+    <ClInclude Include="SelProdPagePipeList.h" />
+    <ClInclude Include="SelProdPagePressMaint.h" />
+    <ClInclude Include="SelProdPageSafetyValve.h" />
+    <ClInclude Include="SelProdPageSmartControlValve.h" />
+    <ClInclude Include="SelProdPageSv.h" />
+    <ClInclude Include="SelProdPageTCTapWaterControl.h" />
+    <ClInclude Include="SelProdPageTender.h" />
+    <ClInclude Include="SelProdPageTrv.h" />
+    <ClInclude Include="SSheet.h" />
+    <ClInclude Include="DlgIndSelBCV.h" />
+    <ClInclude Include="DlgIndSelBv.h" />
+    <ClInclude Include="SSheetHMSumm.h" />
+    <ClInclude Include="TabDlgSpecActDev.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="TabDlgSpecActHMCalc.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="DlgSpecActHyToolsPMCompare.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="TabDlgSpecActProdSel.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="TabDlgSpecActProdSelUpdate.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="TabDlgSpecActProdSelExport.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="TabDlgSpecActProdSelTest.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="TabDlgSpecActTesting.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="TabDlgSpecActTesting2.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TASelect.h" />
+    <ClInclude Include="TASelectDoc.h" />
+    <ClInclude Include="TASelectView.h" />
+    <ClInclude Include="TeeChart\activitydonut.h" />
+    <ClInclude Include="TeeChart\activitygauge.h" />
+    <ClInclude Include="TeeChart\adxfunction.h" />
+    <ClInclude Include="TeeChart\alligatorfunction.h" />
+    <ClInclude Include="TeeChart\amountfilter.h" />
+    <ClInclude Include="TeeChart\animationlist.h" />
+    <ClInclude Include="TeeChart\animations.h" />
+    <ClInclude Include="TeeChart\annotationcallout.h" />
+    <ClInclude Include="TeeChart\annotationtool.h" />
+    <ClInclude Include="TeeChart\antialiastool.h" />
+    <ClInclude Include="TeeChart\areaseries.h" />
+    <ClInclude Include="TeeChart\arrowseries.h" />
+    <ClInclude Include="TeeChart\arrowtool.h" />
+    <ClInclude Include="TeeChart\aspect.h" />
+    <ClInclude Include="TeeChart\atrfunction.h" />
+    <ClInclude Include="TeeChart\automatictext.h" />
+    <ClInclude Include="TeeChart\averagefunction.h" />
+    <ClInclude Include="TeeChart\axes.h" />
+    <ClInclude Include="TeeChart\axis.h" />
+    <ClInclude Include="TeeChart\axisarrowtool.h" />
+    <ClInclude Include="TeeChart\axisbreak.h" />
+    <ClInclude Include="TeeChart\axisbreaks.h" />
+    <ClInclude Include="TeeChart\axisbreakstool.h" />
+    <ClInclude Include="TeeChart\axisgridpen.h" />
+    <ClInclude Include="TeeChart\axislabels.h" />
+    <ClInclude Include="TeeChart\axislabelsitem.h" />
+    <ClInclude Include="TeeChart\axisscrollbartool.h" />
+    <ClInclude Include="TeeChart\axisscrolltool.h" />
+    <ClInclude Include="TeeChart\axistitle.h" />
+    <ClInclude Include="TeeChart\backimage.h" />
+    <ClInclude Include="TeeChart\bannertool.h" />
+    <ClInclude Include="TeeChart\bar3dseries.h" />
+    <ClInclude Include="TeeChart\barjoinseries.h" />
+    <ClInclude Include="TeeChart\barseries.h" />
+    <ClInclude Include="TeeChart\bevelfilter.h" />
+    <ClInclude Include="TeeChart\bezierseries.h" />
+    <ClInclude Include="TeeChart\blurfilter.h" />
+    <ClInclude Include="TeeChart\bmpexport.h" />
+    <ClInclude Include="TeeChart\bollingerfunction.h" />
+    <ClInclude Include="TeeChart\boxplotseries.h" />
+    <ClInclude Include="TeeChart\brightnessfilter.h" />
+    <ClInclude Include="TeeChart\brush.h" />
+    <ClInclude Include="TeeChart\bubble3dseries.h" />
+    <ClInclude Include="TeeChart\bubbleseries.h" />
+    <ClInclude Include="TeeChart\calendarcell.h" />
+    <ClInclude Include="TeeChart\calendarcellupper.h" />
+    <ClInclude Include="TeeChart\calendarseries.h" />
+    <ClInclude Include="TeeChart\candleseries.h" />
+    <ClInclude Include="TeeChart\canvas.h" />
+    <ClInclude Include="TeeChart\ccifunction.h" />
+    <ClInclude Include="TeeChart\chartanimations.h" />
+    <ClInclude Include="TeeChart\chartaxispen.h" />
+    <ClInclude Include="TeeChart\chartcollection.h" />
+    <ClInclude Include="TeeChart\charteditorpanel.h" />
+    <ClInclude Include="TeeChart\chartfont.h" />
+    <ClInclude Include="TeeChart\chartgrid.h" />
+    <ClInclude Include="TeeChart\chartgridcols.h" />
+    <ClInclude Include="TeeChart\chartgridnavigator.h" />
+    <ClInclude Include="TeeChart\chartgridrows.h" />
+    <ClInclude Include="TeeChart\charthiddenpen.h" />
+    <ClInclude Include="TeeChart\chartimagetool.h" />
+    <ClInclude Include="TeeChart\chartpagenavigator.h" />
+    <ClInclude Include="TeeChart\circlelabels.h" />
+    <ClInclude Include="TeeChart\circulargauge.h" />
+    <ClInclude Include="TeeChart\clipseriestool.h" />
+    <ClInclude Include="TeeChart\clockhand.h" />
+    <ClInclude Include="TeeChart\clockseries.h" />
+    <ClInclude Include="TeeChart\clusteringtool.h" />
+    <ClInclude Include="TeeChart\clvfunction.h" />
+    <ClInclude Include="TeeChart\colorbandtool.h" />
+    <ClInclude Include="TeeChart\colorfilter.h" />
+    <ClInclude Include="TeeChart\colorgridseries.h" />
+    <ClInclude Include="TeeChart\colorlinetool.h" />
+    <ClInclude Include="TeeChart\compressfunction.h" />
+    <ClInclude Include="TeeChart\contourlevel.h" />
+    <ClInclude Include="TeeChart\contourlevels.h" />
+    <ClInclude Include="TeeChart\contourmarks.h" />
+    <ClInclude Include="TeeChart\contourseries.h" />
+    <ClInclude Include="TeeChart\contrastfilter.h" />
+    <ClInclude Include="TeeChart\cropfilter.h" />
+    <ClInclude Include="TeeChart\crosstabsource.h" />
+    <ClInclude Include="TeeChart\cursortool.h" />
+    <ClInclude Include="TeeChart\curvefittingfunction.h" />
+    <ClInclude Include="TeeChart\custom3dpaletteseries.h" />
+    <ClInclude Include="TeeChart\customaxes.h" />
+    <ClInclude Include="TeeChart\customfunction.h" />
+    <ClInclude Include="TeeChart\customserieslist.h" />
+    <ClInclude Include="TeeChart\customtextshape.h" />
+    <ClInclude Include="TeeChart\darvasseries.h" />
+    <ClInclude Include="TeeChart\datatabletool.h" />
+    <ClInclude Include="TeeChart\deltapointseries.h" />
+    <ClInclude Include="TeeChart\donutseries.h" />
+    <ClInclude Include="TeeChart\doublehorizbarseries.h" />
+    <ClInclude Include="TeeChart\downsamplingfunction.h" />
+    <ClInclude Include="TeeChart\dragmarkstool.h" />
+    <ClInclude Include="TeeChart\dragpointtool.h" />
+    <ClInclude Include="TeeChart\drawline.h" />
+    <ClInclude Include="TeeChart\drawlinelist.h" />
+    <ClInclude Include="TeeChart\drawlinetool.h" />
+    <ClInclude Include="TeeChart\embossfilter.h" />
+    <ClInclude Include="TeeChart\environment.h" />
+    <ClInclude Include="TeeChart\epsexport.h" />
+    <ClInclude Include="TeeChart\equalizerseries.h" />
+    <ClInclude Include="TeeChart\equivolumeseries.h" />
+    <ClInclude Include="TeeChart\errorbarseries.h" />
+    <ClInclude Include="TeeChart\errorpoint3dseries.h" />
+    <ClInclude Include="TeeChart\errorpointseries.h" />
+    <ClInclude Include="TeeChart\errors.h" />
+    <ClInclude Include="TeeChart\errors3d.h" />
+    <ClInclude Include="TeeChart\errors3dformat.h" />
+    <ClInclude Include="TeeChart\errorseries.h" />
+    <ClInclude Include="TeeChart\errorsformat.h" />
+    <ClInclude Include="TeeChart\expandanimation.h" />
+    <ClInclude Include="TeeChart\expavgfunction.h" />
+    <ClInclude Include="TeeChart\explodedslices.h" />
+    <ClInclude Include="TeeChart\expmovavgfunction.h" />
+    <ClInclude Include="TeeChart\export.h" />
+    <ClInclude Include="TeeChart\extralegendtool.h" />
+    <ClInclude Include="TeeChart\fadertool.h" />
+    <ClInclude Include="TeeChart\fastlineseries.h" />
+    <ClInclude Include="TeeChart\fibonacciitem.h" />
+    <ClInclude Include="TeeChart\fibonaccilevels.h" />
+    <ClInclude Include="TeeChart\fibonaccitool.h" />
+    <ClInclude Include="TeeChart\filteritems.h" />
+    <ClInclude Include="TeeChart\filterregion.h" />
+    <ClInclude Include="TeeChart\flexexport.h" />
+    <ClInclude Include="TeeChart\floatxyz.h" />
+    <ClInclude Include="TeeChart\framebrush.h" />
+    <ClInclude Include="TeeChart\framedborder.h" />
+    <ClInclude Include="TeeChart\frametool.h" />
+    <ClInclude Include="TeeChart\fullscreentool.h" />
+    <ClInclude Include="TeeChart\funnelseries.h" />
+    <ClInclude Include="TeeChart\gammacorrectionfilter.h" />
+    <ClInclude Include="TeeChart\ganttseries.h" />
+    <ClInclude Include="TeeChart\gantttool.h" />
+    <ClInclude Include="TeeChart\gaugehand.h" />
+    <ClInclude Include="TeeChart\gaugehanditem.h" />
+    <ClInclude Include="TeeChart\gaugehands.h" />
+    <ClInclude Include="TeeChart\gaugepointerrange.h" />
+    <ClInclude Include="TeeChart\gaugerange.h" />
+    <ClInclude Include="TeeChart\gaugeranges.h" />
+    <ClInclude Include="TeeChart\gaugeseries.h" />
+    <ClInclude Include="TeeChart\gaugeseriespointer.h" />
+    <ClInclude Include="TeeChart\gifexport.h" />
+    <ClInclude Include="TeeChart\gllightsource.h" />
+    <ClInclude Include="TeeChart\glposition.h" />
+    <ClInclude Include="TeeChart\gradient.h" />
+    <ClInclude Include="TeeChart\gradientcolor.h" />
+    <ClInclude Include="TeeChart\gradientcolors.h" />
+    <ClInclude Include="TeeChart\grayscalefilter.h" />
+    <ClInclude Include="TeeChart\gridbandbrush.h" />
+    <ClInclude Include="TeeChart\gridbandtool.h" />
+    <ClInclude Include="TeeChart\gridtransposetool.h" />
+    <ClInclude Include="TeeChart\hierarchicalclustering.h" />
+    <ClInclude Include="TeeChart\highlowlineseries.h" />
+    <ClInclude Include="TeeChart\highlowseries.h" />
+    <ClInclude Include="TeeChart\histogramfunction.h" />
+    <ClInclude Include="TeeChart\histogramseries.h" />
+    <ClInclude Include="TeeChart\horizareaseries.h" />
+    <ClInclude Include="TeeChart\horizbarseries.h" />
+    <ClInclude Include="TeeChart\horizboxplotseries.h" />
+    <ClInclude Include="TeeChart\horizhistogramseries.h" />
+    <ClInclude Include="TeeChart\horizlineseries.h" />
+    <ClInclude Include="TeeChart\hover.h" />
+    <ClInclude Include="TeeChart\htmlexport.h" />
+    <ClInclude Include="TeeChart\huelumsatfilter.h" />
+    <ClInclude Include="TeeChart\imagebarseries.h" />
+    <ClInclude Include="TeeChart\imagepointseries.h" />
+    <ClInclude Include="TeeChart\import.h" />
+    <ClInclude Include="TeeChart\isosurfaceseries.h" />
+    <ClInclude Include="TeeChart\javascriptexport.h" />
+    <ClInclude Include="TeeChart\jpegexport.h" />
+    <ClInclude Include="TeeChart\jsonexport.h" />
+    <ClInclude Include="TeeChart\kagiseries.h" />
+    <ClInclude Include="TeeChart\kmeansclustering.h" />
+    <ClInclude Include="TeeChart\knobgauge.h" />
+    <ClInclude Include="TeeChart\legend.h" />
+    <ClInclude Include="TeeChart\legenditem.h" />
+    <ClInclude Include="TeeChart\legenditems.h" />
+    <ClInclude Include="TeeChart\legendpalettetool.h" />
+    <ClInclude Include="TeeChart\legendpointer.h" />
+    <ClInclude Include="TeeChart\legendscrollbartool.h" />
+    <ClInclude Include="TeeChart\legendsymbol.h" />
+    <ClInclude Include="TeeChart\legendtitle.h" />
+    <ClInclude Include="TeeChart\levelsegment.h" />
+    <ClInclude Include="TeeChart\lightfilter.h" />
+    <ClInclude Include="TeeChart\lighttool.h" />
+    <ClInclude Include="TeeChart\lineargauge.h" />
+    <ClInclude Include="TeeChart\linepointseries.h" />
+    <ClInclude Include="TeeChart\lineseries.h" />
+    <ClInclude Include="TeeChart\linktool.h" />
+    <ClInclude Include="TeeChart\macdfunction.h" />
+    <ClInclude Include="TeeChart\magnifytool.h" />
+    <ClInclude Include="TeeChart\mapmarks.h" />
+    <ClInclude Include="TeeChart\mappolygon.h" />
+    <ClInclude Include="TeeChart\mappolygonlist.h" />
+    <ClInclude Include="TeeChart\mapseries.h" />
+    <ClInclude Include="TeeChart\margins.h" />
+    <ClInclude Include="TeeChart\marks.h" />
+    <ClInclude Include="TeeChart\markscallout.h" />
+    <ClInclude Include="TeeChart\marksitem.h" />
+    <ClInclude Include="TeeChart\markssymbol.h" />
+    <ClInclude Include="TeeChart\markstail.h" />
+    <ClInclude Include="TeeChart\markstiptool.h" />
+    <ClInclude Include="TeeChart\medianfunction.h" />
+    <ClInclude Include="TeeChart\metafileexport.h" />
+    <ClInclude Include="TeeChart\mirrorfilter.h" />
+    <ClInclude Include="TeeChart\modefunction.h" />
+    <ClInclude Include="TeeChart\moneyflowfunction.h" />
+    <ClInclude Include="TeeChart\mosaicfilter.h" />
+    <ClInclude Include="TeeChart\movingavgfunction.h" />
+    <ClInclude Include="TeeChart\nativeexport.h" />
+    <ClInclude Include="TeeChart\nearesttool.h" />
+    <ClInclude Include="TeeChart\numericgauge.h" />
+    <ClInclude Include="TeeChart\numericmarker.h" />
+    <ClInclude Include="TeeChart\obvfunction.h" />
+    <ClInclude Include="TeeChart\odsexport.h" />
+    <ClInclude Include="TeeChart\orgitem.h" />
+    <ClInclude Include="TeeChart\orgitemcollection.h" />
+    <ClInclude Include="TeeChart\orgseries.h" />
+    <ClInclude Include="TeeChart\orgshape.h" />
+    <ClInclude Include="TeeChart\page.h" />
+    <ClInclude Include="TeeChart\pagecontrol.h" />
+    <ClInclude Include="TeeChart\pagenumtool.h" />
+    <ClInclude Include="TeeChart\panel.h" />
+    <ClInclude Include="TeeChart\paretofunction.h" />
+    <ClInclude Include="TeeChart\pcxexport.h" />
+    <ClInclude Include="TeeChart\pdfexport.h" />
+    <ClInclude Include="TeeChart\pen.h" />
+    <ClInclude Include="TeeChart\performancefunction.h" />
+    <ClInclude Include="TeeChart\pieangle.h" />
+    <ClInclude Include="TeeChart\piemarks.h" />
+    <ClInclude Include="TeeChart\pieotherslice.h" />
+    <ClInclude Include="TeeChart\pieseries.h" />
+    <ClInclude Include="TeeChart\pietool.h" />
+    <ClInclude Include="TeeChart\pngexport.h" />
+    <ClInclude Include="TeeChart\point3dseries.h" />
+    <ClInclude Include="TeeChart\pointarray.h" />
+    <ClInclude Include="TeeChart\pointer.h" />
+    <ClInclude Include="TeeChart\pointfigureseries.h" />
+    <ClInclude Include="TeeChart\pointseries.h" />
+    <ClInclude Include="TeeChart\polarbarseries.h" />
+    <ClInclude Include="TeeChart\polarcontourseries.h" />
+    <ClInclude Include="TeeChart\polargridseries.h" />
+    <ClInclude Include="TeeChart\polarlabels.h" />
+    <ClInclude Include="TeeChart\polarseries.h" />
+    <ClInclude Include="TeeChart\polygonseries.h" />
+    <ClInclude Include="TeeChart\printer.h" />
+    <ClInclude Include="TeeChart\printersettings.h" />
+    <ClInclude Include="TeeChart\pvofunction.h" />
+    <ClInclude Include="TeeChart\pyramidseries.h" />
+    <ClInclude Include="TeeChart\qtclustering.h" />
+    <ClInclude Include="TeeChart\radarseries.h" />
+    <ClInclude Include="TeeChart\rectangletool.h" />
+    <ClInclude Include="TeeChart\renkoseries.h" />
+    <ClInclude Include="TeeChart\repaintmonitortool.h" />
+    <ClInclude Include="TeeChart\resizefilter.h" />
+    <ClInclude Include="TeeChart\rmsfunction.h" />
+    <ClInclude Include="TeeChart\roseseries.h" />
+    <ClInclude Include="TeeChart\rotatefilter.h" />
+    <ClInclude Include="TeeChart\rotatetool.h" />
+    <ClInclude Include="TeeChart\rsifunction.h" />
+    <ClInclude Include="TeeChart\rvifunction.h" />
+    <ClInclude Include="TeeChart\sarfunction.h" />
+    <ClInclude Include="TeeChart\scroll.h" />
+    <ClInclude Include="TeeChart\scrollbarthumb.h" />
+    <ClInclude Include="TeeChart\scrollpagertool.h" />
+    <ClInclude Include="TeeChart\selectortool.h" />
+    <ClInclude Include="TeeChart\sepiafilter.h" />
+    <ClInclude Include="TeeChart\series.h" />
+    <ClInclude Include="TeeChart\seriesanimationtool.h" />
+    <ClInclude Include="TeeChart\seriesbandtool.h" />
+    <ClInclude Include="TeeChart\seriesgroup.h" />
+    <ClInclude Include="TeeChart\seriesgroups.h" />
+    <ClInclude Include="TeeChart\serieslist.h" />
+    <ClInclude Include="TeeChart\seriesmarkposition.h" />
+    <ClInclude Include="TeeChart\seriesmarkspositions.h" />
+    <ClInclude Include="TeeChart\seriespointeritems.h" />
+    <ClInclude Include="TeeChart\seriesregiontool.h" />
+    <ClInclude Include="TeeChart\seriesstatstool.h" />
+    <ClInclude Include="TeeChart\seriestextfield.h" />
+    <ClInclude Include="TeeChart\seriestextfields.h" />
+    <ClInclude Include="TeeChart\seriestextsource.h" />
+    <ClInclude Include="TeeChart\seriesxmlsource.h" />
+    <ClInclude Include="TeeChart\shapecallout.h" />
+    <ClInclude Include="TeeChart\shapeseries.h" />
+    <ClInclude Include="TeeChart\sharpenfilter.h" />
+    <ClInclude Include="TeeChart\skewnessfunction.h" />
+    <ClInclude Include="TeeChart\smithseries.h" />
+    <ClInclude Include="TeeChart\smoothingfunction.h" />
+    <ClInclude Include="TeeChart\smoothpoints.h" />
+    <ClInclude Include="TeeChart\sobelfilter.h" />
+    <ClInclude Include="TeeChart\softenfilter.h" />
+    <ClInclude Include="TeeChart\spacing.h" />
+    <ClInclude Include="TeeChart\stddeviationfunction.h" />
+    <ClInclude Include="TeeChart\strings.h" />
+    <ClInclude Include="TeeChart\subchart.h" />
+    <ClInclude Include="TeeChart\subchartchart.h" />
+    <ClInclude Include="TeeChart\subcharttool.h" />
+    <ClInclude Include="TeeChart\subgradient.h" />
+    <ClInclude Include="TeeChart\subsetteefunction.h" />
+    <ClInclude Include="TeeChart\surfacenearesttool.h" />
+    <ClInclude Include="TeeChart\surfaceseries.h" />
+    <ClInclude Include="TeeChart\surfacesides.h" />
+    <ClInclude Include="TeeChart\svgexport.h" />
+    <ClInclude Include="TeeChart\tablelegend.h" />
+    <ClInclude Include="TeeChart\tagcloudseries.h" />
+    <ClInclude Include="TeeChart\tchart.h" />
+    <ClInclude Include="TeeChart\teeanimate.h" />
+    <ClInclude Include="TeeChart\teeanimation.h" />
+    <ClInclude Include="TeeChart\TeeChartDefines.h" />
+    <ClInclude Include="TeeChart\teecommander.h" />
+    <ClInclude Include="TeeChart\teecommanderbutton.h" />
+    <ClInclude Include="TeeChart\teecorner.h" />
+    <ClInclude Include="TeeChart\teecorners.h" />
+    <ClInclude Include="TeeChart\teecustomshape.h" />
+    <ClInclude Include="TeeChart\teeeditor.h" />
+    <ClInclude Include="TeeChart\teeeditoroptions.h" />
+    <ClInclude Include="TeeChart\teeeditorshowpages.h" />
+    <ClInclude Include="TeeChart\teeemboss.h" />
+    <ClInclude Include="TeeChart\teefilter.h" />
+    <ClInclude Include="TeeChart\teefont.h" />
+    <ClInclude Include="TeeChart\teefunction.h" />
+    <ClInclude Include="TeeChart\teegdiplus.h" />
+    <ClInclude Include="TeeChart\teelistbox.h" />
+    <ClInclude Include="TeeChart\teelistboxsection.h" />
+    <ClInclude Include="TeeChart\teeopengl.h" />
+    <ClInclude Include="TeeChart\teepanelslist.h" />
+    <ClInclude Include="TeeChart\teepanning.h" />
+    <ClInclude Include="TeeChart\teepicture.h" />
+    <ClInclude Include="TeeChart\teepoint2d.h" />
+    <ClInclude Include="TeeChart\teepoint3d.h" />
+    <ClInclude Include="TeeChart\teepreviewer.h" />
+    <ClInclude Include="TeeChart\teeprevieweroptions.h" />
+    <ClInclude Include="TeeChart\teepreviewpanel.h" />
+    <ClInclude Include="TeeChart\teerect.h" />
+    <ClInclude Include="TeeChart\teeselected.h" />
+    <ClInclude Include="TeeChart\teeshadow.h" />
+    <ClInclude Include="TeeChart\teeshape.h" />
+    <ClInclude Include="TeeChart\teeshapeitem.h" />
+    <ClInclude Include="TeeChart\teeshapes.h" />
+    <ClInclude Include="TeeChart\ternaryseries.h" />
+    <ClInclude Include="TeeChart\text3dtool.h" />
+    <ClInclude Include="TeeChart\textexport.h" />
+    <ClInclude Include="TeeChart\textshape.h" />
+    <ClInclude Include="TeeChart\themeslist.h" />
+    <ClInclude Include="TeeChart\tilefilter.h" />
+    <ClInclude Include="TeeChart\titles.h" />
+    <ClInclude Include="TeeChart\toollist.h" />
+    <ClInclude Include="TeeChart\tools.h" />
+    <ClInclude Include="TeeChart\towerseries.h" />
+    <ClInclude Include="TeeChart\transformanimation.h" />
+    <ClInclude Include="TeeChart\transposeseriestool.h" />
+    <ClInclude Include="TeeChart\treemapseries.h" />
+    <ClInclude Include="TeeChart\trendfunction.h" />
+    <ClInclude Include="TeeChart\trisurfaceseries.h" />
+    <ClInclude Include="TeeChart\valuelist.h" />
+    <ClInclude Include="TeeChart\valuelists.h" />
+    <ClInclude Include="TeeChart\vector3dseries.h" />
+    <ClInclude Include="TeeChart\videoplayertool.h" />
+    <ClInclude Include="TeeChart\videotool.h" />
+    <ClInclude Include="TeeChart\volumepipeseries.h" />
+    <ClInclude Include="TeeChart\volumeseries.h" />
+    <ClInclude Include="TeeChart\wall.h" />
+    <ClInclude Include="TeeChart\walls.h" />
+    <ClInclude Include="TeeChart\waterfallseries.h" />
+    <ClInclude Include="TeeChart\windroseseries.h" />
+    <ClInclude Include="TeeChart\worldflags.h" />
+    <ClInclude Include="TeeChart\worldseries.h" />
+    <ClInclude Include="TeeChart\xamlexport.h" />
+    <ClInclude Include="TeeChart\xlsexport.h" />
+    <ClInclude Include="TeeChart\xlsobjectexport.h" />
+    <ClInclude Include="TeeChart\xmlexport.h" />
+    <ClInclude Include="TeeChart\zoom.h" />
+    <ClInclude Include="TeeChart\zoomfilter.h" />
+    <ClInclude Include="Tender.h" />
+    <ClInclude Include="TerminalUnit.h" />
+    <ClInclude Include="Tests\TestRunner\ActiveTest.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\TestRunner\DynamicWindow\cdxCDynamicDialog.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\TestRunner\DynamicWindow\cdxCDynamicPropSheet.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\TestRunner\DynamicWindow\cdxCDynamicWnd.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\TestRunner\DynamicWindow\cdxCDynamicWndEx.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\TestRunner\DynamicWindow\cdxCSizeIconCtrl.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\TestRunner\ListCtrlFormatter.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\TestRunner\ListCtrlSetter.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\TestRunner\MfcSynchronizationObject.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\TestRunner\MsDevCallerListCtrl.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\TestRunner\ProgressBar.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\TestRunner\TestRunnerDlg.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\TestRunner\TestRunnerModel.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\TestRunner\TreeHierarchyDlg.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\UnitTests\utests_base.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\UnitTests\utests_CDBAdditChar.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\UnitTests\utests_CDBCloseOffDp.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\UnitTests\utests_CDBPageField.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\UnitTests\utests_CircuitSchemePosition.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\UnitTests\UTests_Common.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\UnitTests\utests_CEquation.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\UnitTests\utests_ExpansionPipeSize.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\UnitTests\utests_ExportInOneSheet.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\UnitTests\utests_HydronicCalculation.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\UnitTests\utests_HyToolsPMCompare.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\UnitTests\utests_IDPTR.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\UnitTests\utests_ImportHM.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\UnitTests\utests_ProductSelection.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\UnitTests\utests_LocalizedString.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\UnitTests\utests_Printout.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\UnitTests\utests_PrjParams.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\UnitTests\utests_CProductSortKey.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\UnitTests\utests_Select.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\UnitTests\utests_SelectActuator.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\UnitTests\utests_TADBCopy.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\UnitTests\utests_TenderText.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\UnitTests\utests_VerifyArticleNumbers.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Tests\UnitTests\utests_CWaterChar.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="ToolsDockablePane.h" />
+    <ClInclude Include="TUProductSelectionHelper.h" />
+    <ClInclude Include="TUProductSelectionHelperError.h" />
+    <ClInclude Include="WinSysUtil.h" />
+    <ClInclude Include="Excel_Tools.h" />
+    <ClInclude Include="Excel_Workbook.h" />
+    <ClInclude Include="XVisualStyles.h" />
+    <ClInclude Include="DialogExt.h" />
+    <ClInclude Include="DlgAboutBox.h" />
+    <ClInclude Include="DlgAccessory.h" />
+    <ClInclude Include="DlgAddNC.h" />
+    <ClInclude Include="DlgComboBoxHM.h" />
+    <ClInclude Include="DlgConfSel.h" />
+    <ClInclude Include="DlgCreateModule.h" />
+    <ClInclude Include="DlgCustPipe.h" />
+    <ClInclude Include="DlgDefUnits.h" />
+    <ClInclude Include="DlgDirSel.h" />
+    <ClInclude Include="DlgDispRef.h" />
+    <ClInclude Include="DlgDocs.h" />
+    <ClInclude Include="DlgEditString.h" />
+    <ClInclude Include="DlgExportChart.h" />
+    <ClInclude Include="DlgExportConfigFile.h" />
+    <ClInclude Include="DlgExportLdlist.h" />
+    <ClInclude Include="DlgGateway.h" />
+    <ClInclude Include="DlgHeader.h" />
+    <ClInclude Include="DlgHMDirSel.h" />
+    <ClInclude Include="DlgHMTree.h" />
+    <ClInclude Include="DlgHtmlView.h" />
+    <ClInclude Include="DlgHubCvCB.h" />
+    <ClInclude Include="DlgHydronicSchView.h" />
+    <ClInclude Include="DlgImportHM.h" />
+    <ClInclude Include="DlgImportHMProp.h" />
+    <ClInclude Include="DlgInfoSSelDpC.h" />
+    <ClInclude Include="DlgKvCvInput.h" />
+    <ClInclude Include="DlgKvSeries.h" />
+    <ClInclude Include="DlgKvSeriesTabDzeta.h" />
+    <ClInclude Include="DlgKvSeriesTabKvCv.h" />
+    <ClInclude Include="DlgKvSeriesTabNomCond.h" />
+    <ClInclude Include="DlgListBox.h" />
+    <ClInclude Include="DlgNoDevCtrlFound.h" />
+    <ClInclude Include="DlgNoDevFound.h" />
+    <ClInclude Include="DlgNoDpCFound.h" />
+    <ClInclude Include="DlgPageField.h" />
+    <ClInclude Include="DlgPassword.h" />
+    <ClInclude Include="DlgPasteHM.h" />
+    <ClInclude Include="DlgPipeDp.h" />
+    <ClInclude Include="DlgPrint.h" />
+    <ClInclude Include="DlgProgBarExportXls.h" />
+    <ClInclude Include="DlgProgressBar.h" />
+    <ClInclude Include="DlgRef.h" />
+    <ClInclude Include="DlgRegister.h" />
+    <ClInclude Include="DlgReplacePopup.h" />
+    <ClInclude Include="DlgResolCBIPlantModif.h" />
+    <ClInclude Include="DlgRibbonDateTime.h" />
+    <ClInclude Include="DlgSizeRad.h" />
+    <ClInclude Include="DlgSpecAct.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="DlgTip.h" />
+    <ClInclude Include="DlgTSPOpeningInfo.h" />
+    <ClInclude Include="DlgUnitConv.h" />
+    <ClInclude Include="DlgUserRef.h" />
+    <ClInclude Include="DlgViscCorr.h" />
+    <ClInclude Include="DlgWaterChar.h" />
+    <ClInclude Include="DlgWizCircuit.h" />
+    <ClInclude Include="DlgCtrlPropPage.h" />
+    <ClInclude Include="DlgCtrlPropPageMng.h" />
+    <ClInclude Include="DlgCtrlPropTree.h" />
+    <ClInclude Include="DlgTechParam.h" />
+    <ClInclude Include="DlgTPGeneralBalancingValves.h" />
+    <ClInclude Include="DlgTPGeneralStdAndAdjustableControlValves.h" />
+    <ClInclude Include="DlgTPGeneralDeviceSizes.h" />
+    <ClInclude Include="DlgTPGeneralDpControllers.h" />
+    <ClInclude Include="DlgTPGeneralFixedOrifices.h" />
+    <ClInclude Include="DlgTPGeneral.h" />
+    <ClInclude Include="DlgTPPageHC.h" />
+    <ClInclude Include="DlgTPPageHCPipes.h" />
+    <ClInclude Include="DlgTPGeneralPIBCV.h" />
+    <ClInclude Include="DlgTPGeneralPipes.h" />
+    <ClInclude Include="DlgTPGeneralRadiatorValves.h" />
+    <ClInclude Include="DlgSearchReplace.h" />
+    <ClInclude Include="DlgSRPagePipes.h" />
+    <ClInclude Include="EnBitmap.h" />
+    <ClInclude Include="EnBitmapAnchorPt.h" />
+    <ClInclude Include="EnBitmapChessBoard.h" />
+    <ClInclude Include="EnBitmapComponent.h" />
+    <ClInclude Include="EnBitmapPatchWork.h" />
+    <ClInclude Include="EnBitmapRow.h" />
+    <ClInclude Include="CurvFit.h" />
+    <ClInclude Include="Hydronic.h" />
+    <ClInclude Include="Select.h" />
+    <ClInclude Include="SurfFit.h" />
+    <ClInclude Include="ActWatch.h" />
+    <ClInclude Include="BlowFish.h" />
+    <ClInclude Include="CbiRestrEdit.h" />
+    <ClInclude Include="CEditString.h" />
+    <ClInclude Include="CRC32.h" />
+    <ClInclude Include="CustomEdits.h" />
+    <ClInclude Include="DrawSet.h" />
+    <ClInclude Include="ExtComboBox.h" />
+    <ClInclude Include="ExtNumEdit.h" />
+    <ClInclude Include="ExtListCtrl.h" />
+    <ClInclude Include="ExtTreeCtrl.h" />
+    <ClInclude Include="FileTableMng.h" />
+    <ClInclude Include="HMTreeDroptarget.h" />
+    <ClInclude Include="HMTreeListCtrl.h" />
+    <ClInclude Include="HtmlViewer.h" />
+    <ClInclude Include="HydronicPic.h" />
+    <ClInclude Include="HydroWarningList.h" />
+    <ClInclude Include="MFCRibbonBarEx.h" />
+    <ClInclude Include="MFCRibbonEditEx.h" />
+    <ClInclude Include="MFCRibbonGalleryEx.h" />
+    <ClInclude Include="MFCRibbonPanelEx.h" />
+    <ClInclude Include="MFCVisualManagerOffice2007Ex.h" />
+    <ClInclude Include="ModuleVersion.h" />
+    <ClInclude Include="MyToolTipCtrl.h" />
+    <ClInclude Include="PicGroupBox.h" />
+    <ClInclude Include="ProjTreeCtrl.h" />
+    <ClInclude Include="RestartAPI.h" />
+    <ClInclude Include="SerialCom.h" />
+    <ClInclude Include="Setdpi.h" />
+    <ClInclude Include="SplashWindow.h" />
+    <ClInclude Include="StaticImg.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="stringex.h" />
+    <ClInclude Include="TCImageList.h" />
+    <ClInclude Include="TreeListCtrl.h" />
+    <ClInclude Include="TreeListWnd.h" />
+    <ClInclude Include="Utilities.h" />
+    <ClInclude Include="XGroupBox.h" />
+    <ClInclude Include="PanelCBILog.h" />
+    <ClInclude Include="PanelCBIPlant.h" />
+    <ClInclude Include="PanelCirc1.h" />
+    <ClInclude Include="PanelCirc2.h" />
+    <ClInclude Include="Wizard.h" />
+    <ClInclude Include="WizardCBI.h" />
+    <ClInclude Include="DataBase.h" />
+    <ClInclude Include="DataBObj.h" />
+    <ClInclude Include="DataStruct.h" />
+    <ClInclude Include="Datastruct.hpp" />
+    <ClInclude Include="HubHandler.h" />
+    <ClInclude Include="HydroMod.h" />
+    <ClInclude Include="TADataBase.h" />
+    <ClInclude Include="Units.h" />
+    <ClInclude Include="XmlReader.h" />
+    <ClInclude Include="LoggedDataChart.h" />
+    <ClInclude Include="SheetHMCalc.h" />
+    <ClInclude Include="SSheetGen.h" />
+    <ClInclude Include="SSheetHub.h" />
+    <ClInclude Include="SSheetLDSumm.h" />
+    <ClInclude Include="SSheetLogData.h" />
+    <ClInclude Include="SSheetPanelCirc1.h" />
+    <ClInclude Include="SSheetPanelCirc2.h" />
+    <ClInclude Include="SSheetQuickMeas.h" />
+    <ClInclude Include="FormViewEx.h" />
+    <ClInclude Include="RScrollView.h" />
+    <ClInclude Include="RViewChart.h" />
+    <ClInclude Include="RViewGen.h" />
+    <ClInclude Include="RViewHMCalc.h" />
+    <ClInclude Include="RViewHMSumm.h" />
+    <ClInclude Include="RViewInfo.h" />
+    <ClInclude Include="RViewLDSumm.h" />
+    <ClInclude Include="RViewLogData.h" />
+    <ClInclude Include="RViewProj.h" />
+    <ClInclude Include="RViewSSelHub.h" />
+    <ClInclude Include="RViewSSelSS.h" />
+    <ClInclude Include="RViewSSelTrv.h" />
+    <ClInclude Include="DlgLTtabctrl.h" />
+    <ClInclude Include="DlgLeftTabBase.h" />
+    <ClInclude Include="DlgLeftTabInfo.h" />
+    <ClInclude Include="DlgLeftTabProject.h" />
+    <ClInclude Include="DlgLeftTabSelP.h" />
+    <ClInclude Include="DlgIndSelBase.h" />
+    <ClInclude Include="DlgIndSelCv.h" />
+    <ClInclude Include="DlgIndSelDpC.h" />
+    <ClInclude Include="DlgIndSelHub.h" />
+    <ClInclude Include="DlgLeftTabSelManager.h" />
+    <ClInclude Include="DlgIndSelPICv.h" />
+    <ClInclude Include="DlgIndSelTrv.h" />
+    <ClInclude Include="TabDlgSpecActUser.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="DlgPanelTAScopeDownload.h" />
+    <ClInclude Include="DlgPanelTAScopeMaintenance.h" />
+    <ClInclude Include="DlgPanelTAScopeStart.h" />
+    <ClInclude Include="DlgPanelTAScopeUpdate.h" />
+    <ClInclude Include="DlgPanelTAScopeUpload.h" />
+    <ClInclude Include="DlgWizTAScope.h" />
+    <ClInclude Include="SerialLibTAScope\HiPerfTimer.h" />
+    <ClInclude Include="SerialLibTAScope\Packet.h" />
+    <ClInclude Include="SerialLibTAScope\SerialPort.h" />
+    <ClInclude Include="SerialLibTAScope\ServiceManager.h" />
+    <ClInclude Include="TAScopeUtil.h" />
+    <ClInclude Include="DlgSpreadCB.h" />
+    <ClInclude Include="picture.h" />
+    <ClInclude Include="SpreadComboBox.h" />
+    <ClInclude Include="spreadpreview.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DFU\DFUSe\STDFU\STDFU.vcxproj">
+      <Project>{866a4348-3ae8-4cb4-bb8d-76dcff088fde}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\ZipArchive\ZipArchive.vcxproj">
+      <Project>{a51cf340-b0ea-4c9b-a2fa-4d7487692ef5}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\..\Temp\dynamic_image_after_resize_0_9.bmp" />
+    <Image Include="..\..\..\..\..\Temp\ImageBeforeSetImage.bmp" />
+    <Image Include="..\..\..\..\..\Temp\Justaftergethydronicschemes(SavaAsBMP2).bmp" />
+    <Image Include="..\..\..\..\..\Temp\Justaftergethydronicschemes.bmp" />
+    <Image Include="..\..\..\..\..\Temp\sheethmcalc.bmp" />
+    <Image Include="..\..\..\..\..\Temp\sheethmcalc_afterresize_1_0.bmp" />
+    <Image Include="..\..\..\..\..\Temp\sheethmcalc_beforeresize.bmp" />
+    <Image Include="res\6-wayValve.ico" />
+    <Image Include="res\6Way_A.bmp" />
+    <Image Include="res\6Way_B.bmp" />
+    <Image Include="res\6Way_C.bmp" />
+    <Image Include="res\6Way_D.bmp" />
+    <Image Include="res\arrowback.ico" />
+    <Image Include="res\ArrowCollapse.bmp" />
+    <Image Include="res\ArrowCollapseGroup.bmp" />
+    <Image Include="res\ArrowDownLow.bmp" />
+    <Image Include="res\ArrowError.ico" />
+    <Image Include="res\ArrowExpand.bmp" />
+    <Image Include="res\ArrowExpandGroup.bmp" />
+    <Image Include="res\ArrowLeft.ico" />
+    <Image Include="res\ArrowOK.ico" />
+    <Image Include="res\ArrowRight.ico" />
+    <Image Include="res\ArrowRightGrayed.ico" />
+    <Image Include="res\ArrowUpLow.bmp" />
+    <Image Include="res\ArrowYellowRight.ico" />
+    <Image Include="res\BatchSelOk.ico" />
+    <Image Include="res\BatchSelOk_InfoOverlayed.ico" />
+    <Image Include="res\BCV.ico" />
+    <Image Include="res\BestPrice.ico" />
+    <Image Include="res\bitmap7.bmp" />
+    <Image Include="res\browse.ico" />
+    <Image Include="res\calculator.ico" />
+    <Image Include="res\cannotsendsigns.bmp" />
+    <Image Include="res\cbiondrawing.bmp" />
+    <Image Include="res\characteqm.ico" />
+    <Image Include="res\charactlin!.ico" />
+    <Image Include="res\charactlin.ico" />
+    <Image Include="res\charactnone.ico" />
+    <Image Include="res\CheckBoxGrayedChecked.bmp" />
+    <Image Include="res\CheckBoxGrayedUncheck.bmp" />
+    <Image Include="res\checkedunchecked.bmp" />
+    <Image Include="res\CircDet_Land.gif" />
+    <Image Include="res\CircDet_Port.gif" />
+    <Image Include="res\CircTab_Land.gif" />
+    <Image Include="res\CircTab_Port.gif" />
+    <Image Include="res\circuit.gif" />
+    <Image Include="res\CircuitPending.bmp" />
+    <Image Include="res\ClosedBox16x16.ico" />
+    <Image Include="res\Coin.bmp" />
+    <Image Include="res\collapseallcol.ico" />
+    <Image Include="res\combo.ico" />
+    <Image Include="res\comboboxexssela.bmp" />
+    <Image Include="res\ComboBoxExSSelGrayed.bmp" />
+    <Image Include="res\comboedit.ico" />
+    <Image Include="res\Comm_TASCOPE_clean_48.bmp" />
+    <Image Include="res\Comm_TASCOPE_delete_backup_48.bmp" />
+    <Image Include="res\Comm_TASCOPE_download_48.bmp" />
+    <Image Include="res\Comm_TASCOPE_maint_48.bmp" />
+    <Image Include="res\Comm_TASCOPE_reload_48.bmp" />
+    <Image Include="res\Comm_TASCOPE_upload_48.bmp" />
+    <Image Include="res\compresso.ico" />
+    <Image Include="res\ComStatus.bmp" />
+    <Image Include="res\CondProjStruct_Land.gif" />
+    <Image Include="res\CondProjStruct_Port.gif" />
+    <Image Include="res\connect.bmp" />
+    <Image Include="res\Connection to PC.gif" />
+    <Image Include="res\control-valve-Brazil.ico" />
+    <Image Include="res\control-valve.ico" />
+    <Image Include="res\DlgWizardSelPM_Cooling.bmp" />
+    <Image Include="res\DlgWizardSelPM_Heating.bmp" />
+    <Image Include="res\DlgWizardSelPM_Solar.bmp" />
+    <Image Include="res\DPCBCV.ico" />
+    <Image Include="res\DpS-Visio_left_bmp_status.bmp" />
+    <Image Include="res\DpS-Visio_left_bmp_upgrade_finished_error.bmp" />
+    <Image Include="res\DpS-Visio_left_bmp_upgrade_finished_ok.bmp" />
+    <Image Include="res\DpS-Visio_left_bmp_upgrade_running.bmp" />
+    <Image Include="res\EqualArrows.bmp" />
+    <Image Include="res\expandallcol.ico" />
+    <Image Include="res\ExpandAllTree.ico" />
+    <Image Include="res\Flag-Red.bmp" />
+    <Image Include="res\Green3ArrowsLtoR.bmp" />
+    <Image Include="res\GreenArrow(TSpread).bmp" />
+    <Image Include="res\GreenCircle.ico" />
+    <Image Include="res\GreenOK.ico" />
+    <Image Include="res\greenrarrow.bmp" />
+    <Image Include="res\h2oice.bmp" />
+    <Image Include="res\h2oliquid.bmp" />
+    <Image Include="res\h2ox.bmp" />
+    <Image Include="res\handclick.ico" />
+    <Image Include="res\handclosed.ico" />
+    <Image Include="res\handforbidden.ico" />
+    <Image Include="res\handopen.ico" />
+    <Image Include="res\hmcalcrarrow.ico" />
+    <Image Include="res\hmcalcrarrowRet.ico" />
+    <Image Include="res\hmcalcrarrowSup.ico" />
+    <Image Include="res\hmtree.gif" />
+    <Image Include="res\Hourglass_Bkg.bmp" />
+    <Image Include="res\Hourglass_Frg.bmp" />
+    <Image Include="res\HTree.ico" />
+    <Image Include="res\HTreeR.ico" />
+    <Image Include="res\HySelect.ico" />
+    <Image Include="res\ImgInforCell.ico" />
+    <Image Include="res\ImgList6WayValveTabCtrl.bmp" />
+    <Image Include="res\ImgListButton.bmp" />
+    <Image Include="res\ImgListCheckBox1616.bmp" />
+    <Image Include="res\ImgListCustPipe.bmp" />
+    <Image Include="res\ImgListDlgDirSel.bmp" />
+    <Image Include="res\ImgListGroupBox.bmp" />
+    <Image Include="res\ImgListGroupBoxGrayed.bmp" />
+    <Image Include="res\ImgListHMTree.bmp" />
+    <Image Include="res\ImgListPMWQPrefs.bmp" />
+    <Image Include="res\ImgListPrint.bmp" />
+    <Image Include="res\ImgListWater.bmp" />
+    <Image Include="res\imi_tagline.bmp" />
+    <Image Include="res\insertmodule.bmp" />
+    <Image Include="res\insertvalve.bmp" />
+    <Image Include="res\k-head.ico" />
+    <Image Include="res\kv-values.ico" />
+    <Image Include="res\Left_arrow_green_24.bmp" />
+    <Image Include="res\lightbulb.bmp" />
+    <Image Include="res\lockup.ico" />
+    <Image Include="res\LogChart_Land.gif" />
+    <Image Include="res\LogChart_Port.gif" />
+    <Image Include="res\LogData_Land.gif" />
+    <Image Include="res\LogData_Port.gif" />
+    <Image Include="res\logota_print.bmp" />
+    <Image Include="res\logota_screen.bmp" />
+    <Image Include="res\logota_screen_125pc.bmp" />
+    <Image Include="res\logota_screen_150pc.bmp" />
+    <Image Include="res\lrarrow.bmp" />
+    <Image Include="res\lvinfotree.bmp" />
+    <Image Include="res\lvprojtree.bmp" />
+    <Image Include="res\lvtabctr.bmp" />
+    <Image Include="res\main.bmp" />
+    <Image Include="res\MoreInfo.ico" />
+    <Image Include="res\new.ico" />
+    <Image Include="res\OpenBox.ico" />
+    <Image Include="res\OpenBox_16.bmp" />
+    <Image Include="res\OutputBox_Error.ico" />
+    <Image Include="res\OutputBox_Info.ico" />
+    <Image Include="res\OutputBox_Warning.ico" />
+    <Image Include="res\OutputBox_WInfoOverlayed.ico" />
+    <Image Include="res\PencilDiagShort.ico" />
+    <Image Include="res\PIBCV.ico" />
+    <Image Include="res\pipe-pressure-drop.ico" />
+    <Image Include="res\PipeCalculator.ico" />
+    <Image Include="res\PlusGreen.ico" />
+    <Image Include="res\PMEN12828IconInfo.ico" />
+    <Image Include="res\PMTecBoxIntegrated.ico" />
+    <Image Include="res\PMTecBoxNextTo.ico" />
+    <Image Include="res\PMTecBoxVsslTop.ico" />
+    <Image Include="res\pmtecboxwallhanged.ico" />
+    <Image Include="res\PMVentoFloorStanding.ico" />
+    <Image Include="res\PMVsslFloorStanding.ico" />
+    <Image Include="res\PMVsslWallHanged.ico" />
+    <Image Include="res\Preview_HydrSubset_32.bmp" />
+    <Image Include="res\ProjStruct_Land.gif" />
+    <Image Include="res\ProjStruct_Port.gif" />
+    <Image Include="res\pushclose.ico" />
+    <Image Include="res\pushopen.ico" />
+    <Image Include="res\QMLink.bmp" />
+    <Image Include="res\radinfo.bmp" />
+    <Image Include="res\radiocheckedunchecked.bmp" />
+    <Image Include="res\rarrow.bmp" />
+    <Image Include="res\redbullet.bmp" />
+    <Image Include="res\RedCircle.ico" />
+    <Image Include="res\RedError.ico" />
+    <Image Include="res\Right_arrow_green_24.bmp" />
+    <Image Include="res\SafetyValve.ico" />
+    <Image Include="res\sautocheck.ico" />
+    <Image Include="res\SButton.ico" />
+    <Image Include="res\scheck.ico" />
+    <Image Include="res\secret.bmp" />
+    <Image Include="res\Selp_Land.gif" />
+    <Image Include="res\SelP_Port.gif" />
+    <Image Include="res\shutoff-valve.ico" />
+    <Image Include="res\slarrow.ico" />
+    <Image Include="res\SmartControlValve.ico" />
+    <Image Include="res\sminus.ico" />
+    <Image Include="res\SolarCollectorExpansionFactor.ico" />
+    <Image Include="res\splus.ico" />
+    <Image Include="res\srarrow.ico" />
+    <Image Include="res\stad.ico" />
+    <Image Include="res\stap.ico" />
+    <Image Include="res\StorageTankMaxTemp.ico" />
+    <Image Include="res\Strip_AppMenu_16.bmp" />
+    <Image Include="res\Strip_AppMenu_32.bmp" />
+    <Image Include="res\Strip_Comm_16.bmp" />
+    <Image Include="res\Strip_Comm_32.bmp" />
+    <Image Include="res\Strip_Home_16.bmp" />
+    <Image Include="res\Strip_Home_32.bmp" />
+    <Image Include="res\Strip_LoggedData_16.bmp" />
+    <Image Include="res\Strip_LoggedData_32.bmp" />
+    <Image Include="res\Strip_ProductSel_16.bmp" />
+    <Image Include="res\Strip_ProductSel_32.bmp" />
+    <Image Include="res\Strip_Project_16.bmp" />
+    <Image Include="res\Strip_Project_32.bmp" />
+    <Image Include="res\Strip_SingleSelCateg.bmp" />
+    <Image Include="res\Strip_TabHydroCalc.bmp" />
+    <Image Include="res\Strip_Tools_16.bmp" />
+    <Image Include="res\Strip_Tools_32.bmp" />
+    <Image Include="res\SubMenu.bmp" />
+    <Image Include="res\suncheck.ico" />
+    <Image Include="res\TA-Smart-Dp.ico" />
+    <Image Include="res\tacbi-com.ico" />
+    <Image Include="res\TAH-star-blown-up-gradient-cut.bmp" />
+    <Image Include="res\talink.ico" />
+    <Image Include="res\TAScope wizard header.bmp" />
+    <Image Include="res\TAScope wizard side band.bmp" />
+    <Image Include="res\tascope-com.ico" />
+    <Image Include="res\TASelect.ico" />
+    <Image Include="res\TASelectDoc.ico" />
+    <Image Include="res\TasIcone_80x80.bmp" />
+    <Image Include="res\tender.ico" />
+    <Image Include="res\Trash.ico" />
+    <Image Include="res\UnderConstruction.bmp" />
+    <Image Include="res\unit-conversion.ico" />
+    <Image Include="res\unlockup.ico" />
+    <Image Include="res\update.ico" />
+    <Image Include="res\viscosity-correction.ico" />
+    <Image Include="res\Volume-icon.ico" />
+    <Image Include="res\Volume-iconOk.ico" />
+    <Image Include="res\Warning_16.bmp" />
+    <Image Include="res\zeparo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="TeeChart.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Developer.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="TASelect.rc" _x007B_DE52502E-F837-492B-AE14-A182531AFAF4_x007D_="CFpspread1" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

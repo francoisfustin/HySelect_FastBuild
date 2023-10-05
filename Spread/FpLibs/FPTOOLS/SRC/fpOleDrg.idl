@@ -1,0 +1,123 @@
+/* // not needed for ButtonMaker.  uncomment if you need it. -scl
+    typedef [hidden, helpstring("Constants for the OLEDragMode property (but not the DragMode or OLEDropMode properties).")]
+    enum {
+        fpOLEDragManual = 0,
+        fpOLEDragAutomatic = 1
+    } OLEDragModeConstants;
+*/
+    typedef [helpcontext(OLEDROPMODE_HELPCONTEXT), helpstring("Constants for the OLEDropMode property (but not the DragMode or OLEDragMode properties).")]
+    enum {
+        [helpstring("None")]	fpOLEDropNone = 0,
+        [helpstring("Manual")]	fpOLEDropManual = 1,
+#ifdef DROPAUTO
+		[helpstring("Automatic")] fpOLEDropAutomatic = 2
+#endif
+
+    } OLEDropModeConstants;
+
+#ifdef DRAGAUTO
+    typedef [helpcontext(OLEDRAGMODE_HELPCONTEXT), helpstring("Constants for the OLEDragMode property.")]
+    enum {
+        [helpstring("Manual")]	fpOLEDragManual = 0,
+		[helpstring("Automatic")] fpOLEDragAutomatic = 1
+    } OLEDragModeConstants;
+#endif
+
+    typedef [helpcontext(OLEDRAGOVERCONTSTANTS_HELPCONTEXT), helpstring("State transition constants for the DragOver and OLEDragOver events.")]
+    enum {
+        [helpstring("Enter")]	fpEnter = 0,
+        [helpstring("Leave")]	fpLeave = 1,
+		[helpstring("Over")]	fpOver = 2
+    } OLEDragOverConstants;
+
+    typedef [helpcontext(CLIPFORMATCONSTANTS_HELPCONTEXT), helpstring("Clipboard format constants.")]
+    enum {
+        [helpstring("Text")]		fpCFText = 1,
+        [helpstring("Bitmap")]		fpCFBitmap = 2,
+        [helpstring("Metafile")]	fpCFMetafile = 3,
+        [helpstring("DIB")]			fpCFDIB = 8,
+        [helpstring("Palette")]		fpCFPalette = 9,
+        [helpstring("EMetafile")]	fpCFEMetafile = 14,
+        [helpstring("Files")]		fpCFFiles = 15,
+        [helpstring("Rich Text")]	fpCFRTF = -16639
+    } ClipFormatConstants;
+
+    typedef [helpcontext(OLEDRAGDROP_HELPCONTEXT), helpstring("Drop effect constants for OLE drag and drop events.")]
+    enum {
+        [helpstring("None")]	fpOLEDropEffectNone = 0,
+        [helpstring("Copy")]	fpOLEDropEffectCopy = 1,
+        [helpstring("Move")]	fpOLEDropEffectMove = 2,
+        [helpstring("Scroll")]	fpOLEDropEffectScroll = 0x80000000
+    } OLEDropModeEffectConstants;
+
+    [
+      odl,
+      uuid(69310C25-4993-11d1-8905-0020AF131A57),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation,
+    ]
+    interface IfpDataObjectFiles : IDispatch {
+        [id(0), helpcontext(10007), propget, helpstring("Returns a specific filename by index from the Files collection of a fpDataObject object (fpCFFiles format only).")]
+        HRESULT _stdcall Item(
+                        [in] long lIndex, 
+                        [out, retval] BSTR* bstrItem);
+        [id(1), helpcontext(10008), propget]
+        HRESULT _stdcall Count([out, retval] long* plCount);
+        [id(2), helpcontext(10009), helpstring("Adds a filename to the Files collection of a fpDataObject object (fpCFFiles format only).")]
+        HRESULT _stdcall Add(
+                        [in] BSTR bstrFilename, 
+                        [in, optional] VARIANT vIndex);
+        [id(3), helpcontext(10010), helpstring("Clears all filenames stored in the Files collection of a fpDataObject object (fpCFFiles format only).")]
+        HRESULT _stdcall Clear();
+        [id(4), helpcontext(10011), helpstring("Removes a filename from the Files collection of a fpDataObject object (fpCFFiles format only).")]
+        HRESULT _stdcall Remove([in] VARIANT vIndex);
+        [id(0xfffffffc), propget, restricted, hidden]
+        HRESULT _stdcall _NewEnum([out, retval] IUnknown** ppUnk);
+    };
+
+    [
+      uuid(69310C26-4993-11d1-8905-0020AF131A57), 
+	  helpcontext(FPDATAOBJECTFILES_HELPCONTEXT),
+      helpstring("A collection of strings which is the type of the Files property on the fpDataObject object.")
+    ]
+    coclass fpDataObjectFiles {
+        [default] interface IfpDataObjectFiles;
+    };
+
+    [
+      odl,
+      uuid(69310C27-4993-11d1-8905-0020AF131A57),
+      hidden,
+      dual,
+      nonextensible,
+      oleautomation
+    ]
+    interface IfpDataObject : IDispatch {
+        [id(1), helpcontext(10001), helpstring("Clears all data and formats in a fpDataObject object.")]
+        HRESULT _stdcall Clear();
+        [id(2), helpcontext(10002), helpstring("Retrieves data of a specified format from a fpDataObject object.")]
+        HRESULT _stdcall GetData(
+                        [in] short nFormat, 
+                        [out, retval] VARIANT* pvData);
+        [id(3), helpcontext(10003), helpstring("Determines if a specified clipboard format is supported by the fpDataObject object.")]
+        HRESULT _stdcall GetFormat(
+                        [in] short nFormat, 
+                        [out, retval] VARIANT_BOOL* pbFormatSupported);
+        [id(4), helpcontext(10004), helpstring("Adds a supported format and possibly its data to a fpDataObject object.")]
+        HRESULT _stdcall SetData(
+                        [in, optional] VARIANT vValue, 
+                        [in, optional] VARIANT vFormat);
+        [id(5), helpcontext(10005), propget, helpstring("A collection of filenames used by the fpCFFiles format.")]
+        HRESULT _stdcall Files([out, retval] IfpDataObjectFiles** ppFiles);
+    };
+
+    [
+      uuid(69310C28-4993-11d1-8905-0020AF131A57),
+	  helpcontext(FPDATAOBJECT_HELPCONTEXT),
+      helpstring("A container for data being transferred from a source to a target in an OLE drag/drop operation.")
+    ]
+    coclass fpDataObject {
+        [default] interface IfpDataObject;
+    };

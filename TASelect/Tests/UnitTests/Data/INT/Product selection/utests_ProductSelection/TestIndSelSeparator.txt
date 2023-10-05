@@ -1,0 +1,724 @@
+#Start of test definition
+
+StartTechnicalParameters
+ApplicationType = 2
+AvailablePMPanels = 7
+BreakTankRequiredForWaterMakeUp = 1
+CVDefKvReynard = 1
+CVMaxDispDp = 200000
+CVMaxDpProp = 65000
+CVMinAuthCstFlow = 0.5
+CVMinAuthor = 0.25
+CVMinDpOnoff = 3000
+CVMinDpProp = 10000
+CVUseDpCPBand = 0
+CanChangePressureVolumeLimit = 0
+CurrencyID = CURRENCY_EUR
+DefaultCalculationNorm = PM_NORM_EN12828
+DefaultCoolingTps = 7
+DefaultFillTemperature = 15
+DefaultHeatingTps = 50
+DefaultISChangeOverCoolingSideAdditFamilyID = WATER_ADDIT
+DefaultISChangeOverCoolingSideAdditID = WATER
+DefaultISChangeOverCoolingSideDT = 6
+DefaultISChangeOverCoolingSidePcWeight = 0
+DefaultISChangeOverCoolingSideTps = 6
+DefaultISChangeOverHeatingSideAdditFamilyID = WATER_ADDIT
+DefaultISChangeOverHeatingSideAdditID = WATER
+DefaultISChangeOverHeatingSideDT = 20
+DefaultISChangeOverHeatingSidePcWeight = 0
+DefaultISChangeOverHeatingSideTps = 75
+DefaultISCoolingAdditFamilyID = WATER_ADDIT
+DefaultISCoolingAdditID = WATER
+DefaultISCoolingDT = 20
+DefaultISCoolingPcWeight = 0
+DefaultISCoolingTps = 60
+DefaultISHeatingAdditFamilyID = WATER_ADDIT
+DefaultISHeatingAdditID = WATER
+DefaultISHeatingDT = 5
+DefaultISHeatingPcWeight = 0
+DefaultISHeatingTps = 80
+DefaultISSolarAdditFamilyID = WATER_ADDIT
+DefaultISSolarAdditID = WATER
+DefaultISSolarDT = 20
+DefaultISSolarPcWeight = 0
+DefaultISSolarTps = 70
+DefaultMaxTempInCooling = 45
+DefaultMinTempInHeating = 5
+DefaultMinTempInSolar = 5
+DefaultPipeSerieID = STEEL_DIN2440
+DefaultPrjCoolingAdditID = WATER
+DefaultPrjCoolingDT = 5
+DefaultPrjCoolingPcWeight = 0
+DefaultPrjHeatingAdditID = WATER
+DefaultPrjHeatingDT = 5
+DefaultPrjHeatingPcWeight = 0
+DefaultSafetyPressureResponseValve = 300000
+DefaultSecondaryPumpHMin = 25000
+DefaultSmartCVLocation = 1
+DefaultStaticPressureOfWaterNetwork = 400000
+DefaultTAZ = 100
+DefaultWaterHardness = 1.78324958
+DefaultWaterMakeUpTemp = 15
+DegassingWaterReserveForVessel = 0.002
+DpCBCVDpcmin = 5000
+DpCBCVDplmin = 5000
+DpCHide = 0
+DpCHminFullyOpenMv = 0
+DpCMinDp = 5000
+DpCMvLocation = 0
+DpCMvWithSameSizeOnly = 0
+DpRefForBest6Way = 3000
+FixedOrificeMaxDp = 6000
+FixedOrificeMinDp = 2000
+FlowDeviationMinus = -0.1
+FlowDeviationPlus = 0.1
+FluidTempLimitEN12953 = 105
+InitialPressureMargin = 30000
+MaxNumberOfAdditionalVesselsInParallel = 4
+MaxNumberOfVentoInParallel = 2
+MaxSafetyValveInParallel = 3
+MaxSizeShift = 4
+MinPressureMargin = 20000
+PICvHide = 0
+PICvMinDp = 1000
+PSetupCompresso = 10000
+PSetupTransfero = 20000
+PipeMaxDp = 200
+PipeMaxVelocity = 2
+PipeMinDp = 10
+PipeMinVelocity = 0.3
+PipeTargetDp = 150
+PipeTargetVelocity = 1
+PipeTargetVelosityUsed = 0
+PressureVolumeLimit = 300000
+ProjectType = 1
+SafetyTempLimiterLimitEN12953 = 110
+SizeShiftAbove = 0
+SizeShiftBelow = -2
+SmartValveDpMaxForBestSuggestion = 20000
+TrvDefDpTotal = 10000
+TrvDefRoomTemperature = 20
+TrvDefSupplyTemperature = 80
+TrvMaxDp = 30000
+TrvMinDpRatio = 0.25
+UseDefaultFreezingPointAsMinTemperature = 1
+UseSimplyPst = 0
+UseVesselPressureVolumeLimit = 0
+ValveMaxDp = 200000
+ValveMin2Dp = 6000
+ValveMinDp = 3000
+VenturiMaxDp = 10000
+VenturiMinDp = 2000
+VesselSelectionRangePercentage = 0
+EndTechnicalParameters
+
+Test number = 0
+
+SelectionMode = Individual
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;ZCD_25;ZCD 25;Brass;Thread;Standard;10;25 (1");2731.11;-10/120;25 (1");116.19;0.478046
+Result number = 1;ZUV_25;ZUV 25;Brass;Thread;Standard;10;25 (1");275.244;-10/110;25 (1");116.19;0.478046
+Result number = 2;ZUVS_25;ZUVS 25;Brass;Thread;Solar;10;25 (1");275.244;-10/160;25 (1");116.19;0.478046
+Result number = 3;ZTVI_25;ZTVI 25;Brass;Thread;Turnable;10;25 (1");1054.59;-10/110;25 (1");116.19;0.478046
+Result number = 4;ZUD_25;ZUD 25;Brass;Thread;Standard;10;25 (1");275.244;-10/110;25 (1");116.19;0.478046
+Result number = 5;ZTMI_25;ZTMI 25;Brass;Thread;Turnable;10;25 (1");1054.59;-10/110;25 (1");116.19;0.478046
+Result number = 6;ZUM_25;ZUM 25;Brass;Thread;Magnetic;10;25 (1");275.244;-10/110;25 (1");116.19;0.478046
+Result number = 7;ZTKMI_25;ZTKMI 25;Brass;Thread;Turnable;10;25 (1");1054.59;-10/110;25 (1");116.19;0.478046
+Result number = 8;ZUKM_25;ZUKM 25;Brass;Thread;Magnetic;10;25 (1");275.244;-10/110;25 (1");116.19;0.478046
+Result number = 9;ZUC_25;ZUC 25;Brass;Thread;Low loss header;10;25 (1");275.244;-10/110;25 (1");116.19;0.478046
+Result number = 10;ZUCM_25;ZUCM 25;Brass;Thread;Low loss header, magnetic;10;25 (1");275.244;-10/110;25 (1");116.19;0.478046
+Result number = 11;ZCD_20;ZCD 20;Brass;Thread;Standard;10;20 (3/4");2824.48;-10/120;25 (1");116.19;0.478046
+Result number = 12;ZUV_20;ZUV 20;Brass;Thread;Standard;10;20 (3/4");909.024;-10/110;25 (1");116.19;0.478046
+Result number = 13;ZUVS_20;ZUVS 20;Brass;Thread;Solar;10;20 (3/4");909.024;-10/160;25 (1");116.19;0.478046
+Result number = 14;ZTVI_20;ZTVI 20;Brass;Thread;Turnable;10;20 (3/4");1172.41;-10/110;25 (1");116.19;0.478046
+Result number = 15;ZUVS_22;ZUVS 22;Brass;Compression fitting;Solar;10;20 (3/4");909.024;-10/160;25 (1");116.19;0.478046
+Result number = 16;ZUD_20;ZUD 20;Brass;Thread;Standard;10;20 (3/4");909.024;-10/110;25 (1");116.19;0.478046
+Result number = 17;ZTMI_20;ZTMI 20;Brass;Thread;Turnable;10;20 (3/4");1172.41;-10/110;25 (1");116.19;0.478046
+Result number = 18;ZUM_20;ZUM 20;Brass;Thread;Magnetic;10;20 (3/4");909.024;-10/110;25 (1");116.19;0.478046
+Result number = 19;ZTKMI_20;ZTKMI 20;Brass;Thread;Turnable;10;20 (3/4");1172.41;-10/110;25 (1");116.19;0.478046
+Result number = 20;ZUKM_20;ZUKM 20;Brass;Thread;Magnetic;10;20 (3/4");909.024;-10/110;25 (1");116.19;0.478046
+Result number = 21;ZUC_20;ZUC 20;Brass;Thread;Low loss header;10;20 (3/4");909.024;-10/110;25 (1");116.19;0.478046
+Result number = 22;ZUCM_20;ZUCM 20;Brass;Thread;Low loss header, magnetic;10;20 (3/4");909.024;-10/110;25 (1");116.19;0.478046
+Result number = 23;ZUKM_22;ZUKM 22;Brass;Compression fitting;Magnetic;10;20 (3/4");909.024;-10/110;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 1
+
+SelectionMode = Individual
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SEPTYPE_ZCD
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;ZCD_25;ZCD 25;Brass;Thread;Standard;10;25 (1");2731.11;-10/120;25 (1");116.19;0.478046
+Result number = 1;ZCD_20;ZCD 20;Brass;Thread;Standard;10;20 (3/4");2824.48;-10/120;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 2
+
+SelectionMode = Individual
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SEPTYPE_MB
+ComboFamilyID = FAM_ZUV
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;ZUV_25;ZUV 25;Brass;Thread;Standard;10;25 (1");275.244;-10/110;25 (1");116.19;0.478046
+Result number = 1;ZUVS_25;ZUVS 25;Brass;Thread;Solar;10;25 (1");275.244;-10/160;25 (1");116.19;0.478046
+Result number = 2;ZUV_20;ZUV 20;Brass;Thread;Standard;10;20 (3/4");909.024;-10/110;25 (1");116.19;0.478046
+Result number = 3;ZUVS_20;ZUVS 20;Brass;Thread;Solar;10;20 (3/4");909.024;-10/160;25 (1");116.19;0.478046
+Result number = 4;ZUVS_22;ZUVS 22;Brass;Compression fitting;Solar;10;20 (3/4");909.024;-10/160;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 3
+
+SelectionMode = Individual
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SEPTYPE_SP
+ComboFamilyID = FAM_ZUDZUM
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;ZUD_25;ZUD 25;Brass;Thread;Standard;10;25 (1");275.244;-10/110;25 (1");116.19;0.478046
+Result number = 1;ZUM_25;ZUM 25;Brass;Thread;Magnetic;10;25 (1");275.244;-10/110;25 (1");116.19;0.478046
+Result number = 2;ZUD_20;ZUD 20;Brass;Thread;Standard;10;20 (3/4");909.024;-10/110;25 (1");116.19;0.478046
+Result number = 3;ZUM_20;ZUM 20;Brass;Thread;Magnetic;10;20 (3/4");909.024;-10/110;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 4
+
+SelectionMode = Individual
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SEPTYPE_MBSP
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;ZTKMI_25;ZTKMI 25;Brass;Thread;Turnable;10;25 (1");1054.59;-10/110;25 (1");116.19;0.478046
+Result number = 1;ZUKM_25;ZUKM 25;Brass;Thread;Magnetic;10;25 (1");275.244;-10/110;25 (1");116.19;0.478046
+Result number = 2;ZUC_25;ZUC 25;Brass;Thread;Low loss header;10;25 (1");275.244;-10/110;25 (1");116.19;0.478046
+Result number = 3;ZUCM_25;ZUCM 25;Brass;Thread;Low loss header, magnetic;10;25 (1");275.244;-10/110;25 (1");116.19;0.478046
+Result number = 4;ZTKMI_20;ZTKMI 20;Brass;Thread;Turnable;10;20 (3/4");1172.41;-10/110;25 (1");116.19;0.478046
+Result number = 5;ZUKM_20;ZUKM 20;Brass;Thread;Magnetic;10;20 (3/4");909.024;-10/110;25 (1");116.19;0.478046
+Result number = 6;ZUC_20;ZUC 20;Brass;Thread;Low loss header;10;20 (3/4");909.024;-10/110;25 (1");116.19;0.478046
+Result number = 7;ZUCM_20;ZUCM 20;Brass;Thread;Low loss header, magnetic;10;20 (3/4");909.024;-10/110;25 (1");116.19;0.478046
+Result number = 8;ZUKM_22;ZUKM 22;Brass;Compression fitting;Magnetic;10;20 (3/4");909.024;-10/110;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 5
+
+SelectionMode = Individual
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.05499999
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SEPTYPE_MBORSP
+ComboFamilyID = FAM_ZIO
+ComboMaterialID = 
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_INDUSTR
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;ZIOF_200;ZIO 200F;Steel;Flange;Industrial;10;200 (8");2389.82;-10/110;200 (8");97.7085;1.6343
+Result number = 1;ZIOF_150;ZIO 150F;Steel;Flange;Industrial;10;150 (6");9801.63;-10/110;200 (8");97.7085;1.6343
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 6
+
+SelectionMode = Individual
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SEPTYPE_ZCD
+ComboFamilyID = FAM_ZCD
+ComboMaterialID = 
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;ZCD_50;ZCD 50;Brass;Thread;Standard;10;50 (2");3112.93;-10/120;50 (2");83.9692;0.629544
+Result number = 1;ZCD_40;ZCD 40;Brass;Thread;Standard;10;40 (1 1/2");6530.98;-10/120;50 (2");83.9692;0.629544
+Result number = 2;ZCD_32;ZCD 32;Brass;Thread;Standard;10;32 (1 1/4");14544.4;-10/120;50 (2");83.9692;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 7
+
+SelectionMode = Individual
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00438888
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SEPTYPE_ZCD
+ComboFamilyID = FAM_ZG
+ComboMaterialID = 
+ComboConnectID = CONN_WELDINGGROOVE
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;ZG_80W;ZG 80 W;Steel;Welding and Groove;Standard;16;80 (3");6184.05;-10/110;80 (3");88.9923;0.855936
+Result number = 1;ZG_65W;ZG 65 W;Steel;Welding and Groove;Standard;16;65 (2 1/2");12911.6;-10/110;80 (3");88.9923;0.855936
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 8
+
+SelectionMode = Individual
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SEPTYPE_MB
+ComboFamilyID = FAM_ZUV
+ComboMaterialID = 
+ComboConnectID = CONN_COMPRFIT
+ComboVersionID = VERS_SOLAR
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;ZUVS_22;ZUVS 22;Brass;Compression fitting;Solar;10;20 (3/4");227.256;-10/160;20 (3/4");101.525;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 9
+
+SelectionMode = Individual
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SEPTYPE_MB
+ComboFamilyID = FAM_ZUV
+ComboMaterialID = 
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_LATERALSOLAR
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 10
+
+SelectionMode = Individual
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SEPTYPE_SP
+ComboFamilyID = FAM_ZUDZUM
+ComboMaterialID = 
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_MAGNET
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;ZUM_20;ZUM 20;Brass;Thread;Magnetic;10;20 (3/4");227.256;-10/110;20 (3/4");101.525;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 11
+
+SelectionMode = Individual
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00138888
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SEPTYPE_SP
+ComboFamilyID = FAM_ZUDZUM
+ComboMaterialID = 
+ComboConnectID = CONN_THREAD
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;ZUD_40;ZUD 40;Brass;Thread;Standard;10;40 (1 1/2");1156.58;-10/110;50 (2");83.9682;0.62954
+Result number = 1;ZUM_40;ZUM 40;Brass;Thread;Magnetic;10;40 (1 1/2");1156.58;-10/110;50 (2");83.9682;0.62954
+Result number = 2;ZUD_32;ZUD 32;Brass;Thread;Standard;10;32 (1 1/4");2029.63;-10/110;50 (2");83.9682;0.62954
+Result number = 3;ZUM_32;ZUM 32;Brass;Thread;Magnetic;10;32 (1 1/4");2029.63;-10/110;50 (2");83.9682;0.62954
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 12
+
+SelectionMode = Individual
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SEPTYPE_MBSP
+ComboFamilyID = FAM_ZUK
+ComboMaterialID = 
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 13
+
+SelectionMode = Individual
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SEPTYPE_MBSP
+ComboFamilyID = FAM_ZUK
+ComboMaterialID = 
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_MAGNET
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;ZUKM_20;ZUKM 20;Brass;Thread;Magnetic;10;20 (3/4");227.256;-10/110;20 (3/4");101.525;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 14
+
+SelectionMode = Individual
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SEPTYPE_MBSP
+ComboFamilyID = FAM_ZUK
+ComboMaterialID = 
+ComboConnectID = CONN_COMPRFIT
+ComboVersionID = VERS_MAGNET
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;ZUKM_22;ZUKM 22;Brass;Compression fitting;Magnetic;10;20 (3/4");227.256;-10/110;20 (3/4");101.525;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 15
+
+SelectionMode = Individual
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0005555555554
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SEPTYPE_MBSP
+ComboFamilyID = FAM_ZUC
+ComboMaterialID = 
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_COLLECT
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;ZUC_32;ZUC 32;Brass;Thread;Low loss header;10;32 (1 1/4");324.746;-10/110;32 (1 1/4");105.791;0.548844
+Result number = 1;ZUC_25;ZUC 25;Brass;Thread;Low loss header;10;25 (1");1100.98;-10/110;32 (1 1/4");105.791;0.548844
+Result number = 2;ZUC_20;ZUC 20;Brass;Thread;Low loss header;10;20 (3/4");3636.09;-10/110;32 (1 1/4");105.791;0.548844
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 16
+
+SelectionMode = Individual
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0005555555554
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SEPTYPE_MBSP
+ComboFamilyID = FAM_ZUC
+ComboMaterialID = 
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_COLLECTMAGNET
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;ZUCM_32;ZUCM 32;Brass;Thread;Low loss header, magnetic;10;32 (1 1/4");324.746;-10/110;32 (1 1/4");105.791;0.548844
+Result number = 1;ZUCM_25;ZUCM 25;Brass;Thread;Low loss header, magnetic;10;25 (1");1100.98;-10/110;32 (1 1/4");105.791;0.548844
+Result number = 2;ZUCM_20;ZUCM 20;Brass;Thread;Low loss header, magnetic;10;20 (3/4");3636.09;-10/110;32 (1 1/4");105.791;0.548844
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+

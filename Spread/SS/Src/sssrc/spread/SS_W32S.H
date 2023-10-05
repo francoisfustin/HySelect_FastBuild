@@ -1,0 +1,40 @@
+/************
+* SS_W32S.H
+************/
+
+#ifndef SS_W32S_H
+#define SS_W32S_H
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#define EM_GETSEL_WIN32S       (WM_USER+0)
+#define EM_SETSEL_WIN32S       (WM_USER+1)
+#define EM_GETMODIFY_WIN32S    (WM_USER+8)
+#define EM_SETMODIFY_WIN32S    (WM_USER+9)
+#define EM_REPLACESEL_WIN32S   (WM_USER+18)
+#define EM_LIMITTEXT_WIN32S    (WM_USER+21)
+
+#define BM_GETCHECK_WIN32S     (WM_USER+0)
+#define BM_SETCHECK_WIN32S     (WM_USER+1)
+#define BM_GETSTATE_WIN32S     (WM_USER+2)
+#define BM_SETSTATE_WIN32S     (WM_USER+3)
+#define BM_SETSTYLE_WIN32S     (WM_USER+4)
+
+#define CB_ADDSTRING_WIN32S    (WM_USER+3)
+#define CB_DELETESTRING_WIN32S (WM_USER+4)
+#define CB_GETCOUNT_WIN32S     (WM_USER+6)
+#define CB_GETCURSEL_WIN32S    (WM_USER+7)
+#define CB_GETLBTEXT_WIN32S    (WM_USER+8)
+#define CB_GETLBTEXTLEN_WIN32S (WM_USER+9)
+#define CB_INSERTSTRING_WIN32S (WM_USER+10)
+#define CB_RESETCONTENT_WIN32S (WM_USER+11)
+#define CB_SETCURSEL_WIN32S    (WM_USER+14)
+#define CB_SHOWDROPDOWN_WIN32S (WM_USER+15)
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

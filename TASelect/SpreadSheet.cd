@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CSpreadSheet" Collapsed="true">
+    <Position X="11.5" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>/////+/3///////+///////7f///3+////////////8=</HashCode>
+      <FileName>spreadsheet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CWnd" Collapsed="true">
+    <Position X="10" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>v977//bPf7//b//96f/Pvf/97/+e33f39uv7/d/+/7c=</HashCode>
+      <FileName>c:\program files (x86)\microsoft visual studio 9.0\vc\atlmfc\include\afxwin.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSSheet" Collapsed="true">
+    <Position X="11.5" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BNfCHMBbCRIAMkLglpgJEhZiACVYQUBjvQkGlWRDYjI=</HashCode>
+      <FileName>SSheet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSSheetGen" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AABQkQAAEAABAAACCGEIAFAAAAAAAEAQAAACAAAADAI=</HashCode>
+      <FileName>SSheetGen.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSSheetHMProj" Collapsed="true">
+    <Position X="6.75" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ARAAEAAABAAAAAACACAMBQCAABSAAEYQAIAAwAAABAA=</HashCode>
+      <FileName>SSheetHMProj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSSheetHMSumm" Collapsed="true">
+    <Position X="4.75" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAABAABAAAAAiBIgACAAAAAAEQQAAAAgAAABAA=</HashCode>
+      <FileName>ssheethmsumm.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSSheetLDSumm" Collapsed="true">
+    <Position X="8.75" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAABAAAAAAAACBIAACAAAAAAUQQAAAAwAAABAA=</HashCode>
+      <FileName>SSheetLDSumm.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSSheetLogData" Collapsed="true">
+    <Position X="10.75" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAACACAIAACAASCAAEQACAiAAAAAAAA=</HashCode>
+      <FileName>SSheetLogData.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSSheetPanelCirc1" Collapsed="true">
+    <Position X="20.75" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAYAIAAAAAgggAAAEAABQABoAAAAACAAEABAA=</HashCode>
+      <FileName>SSheetPanelCirc1.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSSheetPanelCirc2" Collapsed="true">
+    <Position X="22.75" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>JDYQCWmF2IKgqDIQAiPoEQAQFA8B0EdJCQgLeJMwER0=</HashCode>
+      <FileName>SSheetPanelCirc2.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSSheetQuickMeas" Collapsed="true">
+    <Position X="12.75" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AABAGAAABAACBAAAkSIIAACUABRAIEQQAgAQAQIAhAA=</HashCode>
+      <FileName>SSheetQuickMeas.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSSheetSelProd" Collapsed="true">
+    <Position X="18.75" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ACgAGAJMEAIARBJADmCIBQAgEQBhAECAAABAIKCEACQ=</HashCode>
+      <FileName>SSheetSelProd.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSSheetSSelCtrl" Collapsed="true">
+    <Position X="12.5" Y="7.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ABJkABAwAABgBDiBAAFBAAIBAQ2ABADCJoAABJUASAA=</HashCode>
+      <FileName>SSheetSSelCtrl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSSheetSSelCV" Collapsed="true">
+    <Position X="11.5" Y="8.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAQAAAAAAAAAAACIAAQAA=</HashCode>
+      <FileName>SSheetSSelCV.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSSheetSSelPICV" Collapsed="true">
+    <Position X="13.5" Y="8.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAQAAgAACAAAAABAACBAAAAAAAIAAAgIAAQAA=</HashCode>
+      <FileName>SSheetSSelPICV.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSSheetTAHub" Collapsed="true">
+    <Position X="16.75" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>QAlMCAAUOqACgTABCBFABYABAAcAIGchBAAaYwMwQSg=</HashCode>
+      <FileName>SSheetHub.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSheetSSelSpread" Collapsed="true">
+    <Position X="14.75" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AABEICAgUAiBFA6BAAhQKAAAGCQBAAAAgACAIQwIAIE=</HashCode>
+      <FileName>SheetSSelSpread.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSheet" Collapsed="true">
+    <Position X="8.5" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>QAEAGAAEEQAAAABACoAAAAAAKAAAAGAAAAAAAIAACEI=</HashCode>
+      <FileName>Sheet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSheetSSel" Collapsed="true">
+    <Position X="8.5" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AICAAJAhRAAAgCAQAAggEgAQQIAACEIAKBAAAAggCBE=</HashCode>
+      <FileName>SheetSSel.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CF1Book" Collapsed="true">
+    <Position X="8.5" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>P//ff7////997/f/n//3u/X+///////97/f/+/d59/w=</HashCode>
+      <FileName>F1book.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSheetHMCalc" Collapsed="true">
+    <Position X="2.5" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>UABAiQAGOpWyknIDCDhIAQBCAF8kKmQFEokKZ8s0UiA=</HashCode>
+      <FileName>SheetHMCalc.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSSheetSSelWithoutCtrl" Collapsed="true">
+    <Position X="17" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ABJEABAwAABghDiBAAFhAAAACQ2ABADDJoAABBUASAA=</HashCode>
+      <FileName>SSheetSSelWithoutCtrl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,2122 @@
+#Start of test definition
+
+StartTechnicalParameters
+ApplicationType = 2
+AvailablePMPanels = 7
+BreakTankRequiredForWaterMakeUp = 1
+CVDefKvReynard = 1
+CVMaxDispDp = 200000
+CVMaxDpProp = 65000
+CVMinAuthCstFlow = 0.5
+CVMinAuthor = 0.25
+CVMinDpOnoff = 3000
+CVMinDpProp = 10000
+CVUseDpCPBand = 0
+CanChangePressureVolumeLimit = 0
+CurrencyID = CURRENCY_EUR
+DefaultCalculationNorm = PM_NORM_EN12828
+DefaultCoolingTps = 7
+DefaultFillTemperature = 15
+DefaultHeatingTps = 50
+DefaultISChangeOverCoolingSideAdditFamilyID = WATER_ADDIT
+DefaultISChangeOverCoolingSideAdditID = WATER
+DefaultISChangeOverCoolingSideDT = 6
+DefaultISChangeOverCoolingSidePcWeight = 0
+DefaultISChangeOverCoolingSideTps = 6
+DefaultISChangeOverHeatingSideAdditFamilyID = WATER_ADDIT
+DefaultISChangeOverHeatingSideAdditID = WATER
+DefaultISChangeOverHeatingSideDT = 20
+DefaultISChangeOverHeatingSidePcWeight = 0
+DefaultISChangeOverHeatingSideTps = 75
+DefaultISCoolingAdditFamilyID = WATER_ADDIT
+DefaultISCoolingAdditID = WATER
+DefaultISCoolingDT = 20
+DefaultISCoolingPcWeight = 0
+DefaultISCoolingTps = 60
+DefaultISHeatingAdditFamilyID = WATER_ADDIT
+DefaultISHeatingAdditID = WATER
+DefaultISHeatingDT = 5
+DefaultISHeatingPcWeight = 0
+DefaultISHeatingTps = 80
+DefaultISSolarAdditFamilyID = WATER_ADDIT
+DefaultISSolarAdditID = WATER
+DefaultISSolarDT = 20
+DefaultISSolarPcWeight = 0
+DefaultISSolarTps = 70
+DefaultMaxTempInCooling = 45
+DefaultMinTempInHeating = 5
+DefaultMinTempInSolar = 5
+DefaultPipeSerieID = STEEL_DIN2440
+DefaultPrjCoolingAdditID = WATER
+DefaultPrjCoolingDT = 5
+DefaultPrjCoolingPcWeight = 0
+DefaultPrjHeatingAdditID = WATER
+DefaultPrjHeatingDT = 5
+DefaultPrjHeatingPcWeight = 0
+DefaultSafetyPressureResponseValve = 300000
+DefaultSecondaryPumpHMin = 25000
+DefaultSmartCVLocation = 1
+DefaultStaticPressureOfWaterNetwork = 400000
+DefaultTAZ = 100
+DefaultWaterHardness = 1.78324958
+DefaultWaterMakeUpTemp = 15
+DegassingWaterReserveForVessel = 0.002
+DpCBCVDpcmin = 5000
+DpCBCVDplmin = 5000
+DpCHide = 0
+DpCHminFullyOpenMv = 0
+DpCMinDp = 5000
+DpCMvLocation = 0
+DpCMvWithSameSizeOnly = 0
+DpRefForBest6Way = 3000
+FixedOrificeMaxDp = 6000
+FixedOrificeMinDp = 2000
+FlowDeviationMinus = -0.1
+FlowDeviationPlus = 0.1
+FluidTempLimitEN12953 = 105
+InitialPressureMargin = 30000
+MaxNumberOfAdditionalVesselsInParallel = 4
+MaxNumberOfVentoInParallel = 2
+MaxSafetyValveInParallel = 3
+MaxSizeShift = 4
+MinPressureMargin = 20000
+PICvHide = 0
+PICvMinDp = 1000
+PSetupCompresso = 10000
+PSetupTransfero = 20000
+PipeMaxDp = 200
+PipeMaxVelocity = 2
+PipeMinDp = 10
+PipeMinVelocity = 0.3
+PipeTargetDp = 150
+PipeTargetVelocity = 1
+PipeTargetVelosityUsed = 0
+PressureVolumeLimit = 300000
+ProjectType = 1
+SafetyTempLimiterLimitEN12953 = 110
+SizeShiftAbove = 0
+SizeShiftBelow = -2
+SmartValveDpMaxForBestSuggestion = 20000
+TrvDefDpTotal = 10000
+TrvDefRoomTemperature = 20
+TrvDefSupplyTemperature = 80
+TrvMaxDp = 30000
+TrvMinDpRatio = 0.25
+UseDefaultFreezingPointAsMinTemperature = 1
+UseSimplyPst = 0
+UseVesselPressureVolumeLimit = 0
+ValveMaxDp = 200000
+ValveMin2Dp = 6000
+ValveMinDp = 3000
+VenturiMaxDp = 10000
+VenturiMinDp = 2000
+VesselSelectionRangePercentage = 0
+EndTechnicalParameters
+
+Test number = 0
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.011111111108
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;STAP100_20-80;STAP 100;Cast iron;Flange;Standard;16;100 (4");false;false;13001;[20000-80000];false;350000;-10/120;100 (4");139.908;1.28318
+Result number = 1;STAP100_40-160;STAP 100;Cast iron;Flange;Standard;16;100 (4");false;false;13001;[40000-160000];false;350000;-10/120;100 (4");139.908;1.28318
+Result number = 2;PILOT-R_100A16;TA-PILOT-R 100;Ductile iron;Flange;PT 90;16;100 (4");false;false;4855.31;[10000-50000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 3;PILOT-R_100B16;TA-PILOT-R 100;Ductile iron;Flange;PT 90;16;100 (4");false;false;4855.31;[30000-150000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 4;PILOT-R_100C16;TA-PILOT-R 100;Ductile iron;Flange;PT 90;16;100 (4");false;false;4855.31;[80000-400000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 5;PILOT-R_100A25;TA-PILOT-R 100;Ductile iron;Flange;PT 90;25;100 (4");false;false;4855.31;[10000-50000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 6;PILOT-R_100B25;TA-PILOT-R 100;Ductile iron;Flange;PT 90;25;100 (4");false;false;4855.31;[30000-150000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 7;PILOT-R_100C25;TA-PILOT-R 100;Ductile iron;Flange;PT 90;25;100 (4");false;false;4855.31;[80000-400000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 8;PILOT-R_100A16SF;TA-PILOT-R 100;Ductile iron;Flange;PT 90 & Sil.-free grease;16;100 (4");false;false;4855.31;[10000-50000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 9;PILOT-R_100B16SF;TA-PILOT-R 100;Ductile iron;Flange;PT 90 & Sil.-free grease;16;100 (4");false;false;4855.31;[30000-150000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 10;PILOT-R_100C16SF;TA-PILOT-R 100;Ductile iron;Flange;PT 90 & Sil.-free grease;16;100 (4");false;false;4855.31;[80000-400000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 11;PILOT-R_100A25SF;TA-PILOT-R 100;Ductile iron;Flange;PT 90 & Sil.-free grease;25;100 (4");false;false;4855.31;[10000-50000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 12;PILOT-R_100B25SF;TA-PILOT-R 100;Ductile iron;Flange;PT 90 & Sil.-free grease;25;100 (4");false;false;4855.31;[30000-150000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 13;PILOT-R_100C25SF;TA-PILOT-R 100;Ductile iron;Flange;PT 90 & Sil.-free grease;25;100 (4");false;false;4855.31;[80000-400000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 14;PILOT-R_100A16T;TA-PILOT-R 100;Ductile iron;Flange;PT 100;16;100 (4");false;false;4855.31;[10000-50000];false;1.2e+06;-10/150;100 (4");139.908;1.28318
+Result number = 15;PILOT-R_100B16T;TA-PILOT-R 100;Ductile iron;Flange;PT 100;16;100 (4");false;false;4855.31;[30000-150000];false;1.2e+06;-10/150;100 (4");139.908;1.28318
+Result number = 16;PILOT-R_100C16T;TA-PILOT-R 100;Ductile iron;Flange;PT 100;16;100 (4");false;false;4855.31;[80000-400000];false;1.2e+06;-10/150;100 (4");139.908;1.28318
+Result number = 17;PILOT-R_100A25T;TA-PILOT-R 100;Ductile iron;Flange;PT 100;25;100 (4");false;false;4855.31;[10000-50000];false;1.2e+06;-10/150;100 (4");139.908;1.28318
+Result number = 18;PILOT-R_100B25T;TA-PILOT-R 100;Ductile iron;Flange;PT 100;25;100 (4");false;false;4855.31;[30000-150000];false;1.2e+06;-10/150;100 (4");139.908;1.28318
+Result number = 19;PILOT-R_100C25T;TA-PILOT-R 100;Ductile iron;Flange;PT 100;25;100 (4");false;false;4855.31;[80000-400000];false;1.2e+06;-10/150;100 (4");139.908;1.28318
+Result number = 20;PILOT-R_80A16;TA-PILOT-R 80;Ductile iron;Flange;PT 90;16;80 (3");false;false;13001;[10000-50000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 21;PILOT-R_80B16;TA-PILOT-R 80;Ductile iron;Flange;PT 90;16;80 (3");false;false;13001;[30000-150000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 22;PILOT-R_80C16;TA-PILOT-R 80;Ductile iron;Flange;PT 90;16;80 (3");false;false;13001;[80000-400000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 23;PILOT-R_80A25;TA-PILOT-R 80;Ductile iron;Flange;PT 90;25;80 (3");false;false;13001;[10000-50000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 24;PILOT-R_80B25;TA-PILOT-R 80;Ductile iron;Flange;PT 90;25;80 (3");false;false;13001;[30000-150000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 25;PILOT-R_80C25;TA-PILOT-R 80;Ductile iron;Flange;PT 90;25;80 (3");false;false;13001;[80000-400000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 26;PILOT-R_80A16SF;TA-PILOT-R 80;Ductile iron;Flange;PT 90 & Sil.-free grease;16;80 (3");false;false;13001;[10000-50000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 27;PILOT-R_80B16SF;TA-PILOT-R 80;Ductile iron;Flange;PT 90 & Sil.-free grease;16;80 (3");false;false;13001;[30000-150000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 28;PILOT-R_80C16SF;TA-PILOT-R 80;Ductile iron;Flange;PT 90 & Sil.-free grease;16;80 (3");false;false;13001;[80000-400000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 29;PILOT-R_80A25SF;TA-PILOT-R 80;Ductile iron;Flange;PT 90 & Sil.-free grease;25;80 (3");false;false;13001;[10000-50000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 30;PILOT-R_80B25SF;TA-PILOT-R 80;Ductile iron;Flange;PT 90 & Sil.-free grease;25;80 (3");false;false;13001;[30000-150000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 31;PILOT-R_80C25SF;TA-PILOT-R 80;Ductile iron;Flange;PT 90 & Sil.-free grease;25;80 (3");false;false;13001;[80000-400000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 32;PILOT-R_80A16T;TA-PILOT-R 80;Ductile iron;Flange;PT 100;16;80 (3");false;false;13001;[10000-50000];false;1.2e+06;-10/150;100 (4");139.908;1.28318
+Result number = 33;PILOT-R_80B16T;TA-PILOT-R 80;Ductile iron;Flange;PT 100;16;80 (3");false;false;13001;[30000-150000];false;1.2e+06;-10/150;100 (4");139.908;1.28318
+Result number = 34;PILOT-R_80C16T;TA-PILOT-R 80;Ductile iron;Flange;PT 100;16;80 (3");false;false;13001;[80000-400000];false;1.2e+06;-10/150;100 (4");139.908;1.28318
+Result number = 35;PILOT-R_80A25T;TA-PILOT-R 80;Ductile iron;Flange;PT 100;25;80 (3");false;false;13001;[10000-50000];false;1.2e+06;-10/150;100 (4");139.908;1.28318
+Result number = 36;PILOT-R_80B25T;TA-PILOT-R 80;Ductile iron;Flange;PT 100;25;80 (3");false;false;13001;[30000-150000];false;1.2e+06;-10/150;100 (4");139.908;1.28318
+Result number = 37;PILOT-R_80C25T;TA-PILOT-R 80;Ductile iron;Flange;PT 100;25;80 (3");false;false;13001;[80000-400000];false;1.2e+06;-10/150;100 (4");139.908;1.28318
+Result number = 38;PILOT-R_65A16;TA-PILOT-R 65;Ductile iron;Flange;PT 90;16;65 (2 1/2");false;false;27966.6;[10000-50000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 39;PILOT-R_65B16;TA-PILOT-R 65;Ductile iron;Flange;PT 90;16;65 (2 1/2");false;false;27966.6;[30000-150000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 40;PILOT-R_65C16;TA-PILOT-R 65;Ductile iron;Flange;PT 90;16;65 (2 1/2");false;false;27966.6;[80000-400000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 41;PILOT-R_65A25;TA-PILOT-R 65;Ductile iron;Flange;PT 90;25;65 (2 1/2");false;false;27966.6;[10000-50000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 42;PILOT-R_65B25;TA-PILOT-R 65;Ductile iron;Flange;PT 90;25;65 (2 1/2");false;false;27966.6;[30000-150000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 43;PILOT-R_65C25;TA-PILOT-R 65;Ductile iron;Flange;PT 90;25;65 (2 1/2");false;false;27966.6;[80000-400000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 44;PILOT-R_65A16SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;16;65 (2 1/2");false;false;27966.6;[10000-50000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 45;PILOT-R_65B16SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;16;65 (2 1/2");false;false;27966.6;[30000-150000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 46;PILOT-R_65C16SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;16;65 (2 1/2");false;false;27966.6;[80000-400000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 47;PILOT-R_65A25SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;25;65 (2 1/2");false;false;27966.6;[10000-50000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 48;PILOT-R_65B25SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;25;65 (2 1/2");false;false;27966.6;[30000-150000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 49;PILOT-R_65C25SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;25;65 (2 1/2");false;false;27966.6;[80000-400000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 50;PILOT-R_65A16T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;16;65 (2 1/2");false;false;27966.6;[10000-50000];false;1.2e+06;-10/150;100 (4");139.908;1.28318
+Result number = 51;PILOT-R_65B16T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;16;65 (2 1/2");false;false;27966.6;[30000-150000];false;1.2e+06;-10/150;100 (4");139.908;1.28318
+Result number = 52;PILOT-R_65C16T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;16;65 (2 1/2");false;false;27966.6;[80000-400000];false;1.2e+06;-10/150;100 (4");139.908;1.28318
+Result number = 53;PILOT-R_65A25T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;25;65 (2 1/2");false;false;27966.6;[10000-50000];false;1.2e+06;-10/150;100 (4");139.908;1.28318
+Result number = 54;PILOT-R_65B25T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;25;65 (2 1/2");false;false;27966.6;[30000-150000];false;1.2e+06;-10/150;100 (4");139.908;1.28318
+Result number = 55;PILOT-R_65C25T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;25;65 (2 1/2");false;false;27966.6;[80000-400000];false;1.2e+06;-10/150;100 (4");139.908;1.28318
+Result number = 56;STAP100B_20-80;STAP 4";Cast iron;ANSI Flange;Standard;20;100 (4");false;false;13001;[20000-80000];false;350000;-10/120;100 (4");139.908;1.28318
+Result number = 57;STAP100B_40-160;STAP 4";Cast iron;ANSI Flange;Standard;20;100 (4");false;false;13001;[40000-160000];false;350000;-10/120;100 (4");139.908;1.28318
+Result number = 58;PILOT-R_100A25US;TA-PILOT-R 4";Ductile iron;ANSI Flange;PT 90;20;100 (4");false;false;4855.31;[10000-50000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 59;PILOT-R_100B25US;TA-PILOT-R 4";Ductile iron;ANSI Flange;PT 90;20;100 (4");false;false;4855.31;[30000-150000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 60;PILOT-R_100C25US;TA-PILOT-R 4";Ductile iron;ANSI Flange;PT 90;20;100 (4");false;false;4855.31;[80000-400000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 61;PILOT-R_100A25USSF;TA-PILOT-R 4";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;100 (4");false;false;4855.31;[10000-50000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 62;PILOT-R_100B25USSF;TA-PILOT-R 4";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;100 (4");false;false;4855.31;[30000-150000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 63;PILOT-R_100C25USSF;TA-PILOT-R 4";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;100 (4");false;false;4855.31;[80000-400000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 64;PILOT-R_100A25USB;TA-PILOT-R 4";Ductile iron;ANSI Flange;PT 100;20;100 (4");false;false;4855.31;[10000-50000];false;1.2e+06;-10/150;100 (4");139.908;1.28318
+Result number = 65;PILOT-R_100B25USB;TA-PILOT-R 4";Ductile iron;ANSI Flange;PT 100;20;100 (4");false;false;4855.31;[30000-150000];false;1.2e+06;-10/150;100 (4");139.908;1.28318
+Result number = 66;PILOT-R_100C25USB;TA-PILOT-R 4";Ductile iron;ANSI Flange;PT 100;20;100 (4");false;false;4855.31;[80000-400000];false;1.2e+06;-10/150;100 (4");139.908;1.28318
+Result number = 67;PILOT-R_80A25US;TA-PILOT-R 3";Ductile iron;ANSI Flange;PT 90;20;80 (3");false;false;13001;[10000-50000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 68;PILOT-R_80B25US;TA-PILOT-R 3";Ductile iron;ANSI Flange;PT 90;20;80 (3");false;false;13001;[30000-150000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 69;PILOT-R_80C25US;TA-PILOT-R 3";Ductile iron;ANSI Flange;PT 90;20;80 (3");false;false;13001;[80000-400000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 70;PILOT-R_80A25USSF;TA-PILOT-R 3";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;80 (3");false;false;13001;[10000-50000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 71;PILOT-R_80B25USSF;TA-PILOT-R 3";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;80 (3");false;false;13001;[30000-150000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 72;PILOT-R_80C25USSF;TA-PILOT-R 3";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;80 (3");false;false;13001;[80000-400000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 73;PILOT-R_80A25USB;TA-PILOT-R 3";Ductile iron;ANSI Flange;PT 100;20;80 (3");false;false;13001;[10000-50000];false;1.2e+06;-10/150;100 (4");139.908;1.28318
+Result number = 74;PILOT-R_80B25USB;TA-PILOT-R 3";Ductile iron;ANSI Flange;PT 100;20;80 (3");false;false;13001;[30000-150000];false;1.2e+06;-10/150;100 (4");139.908;1.28318
+Result number = 75;PILOT-R_80C25USB;TA-PILOT-R 3";Ductile iron;ANSI Flange;PT 100;20;80 (3");false;false;13001;[80000-400000];false;1.2e+06;-10/150;100 (4");139.908;1.28318
+Result number = 76;PILOT-R_65A25US;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");false;false;27966.6;[10000-50000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 77;PILOT-R_65B25US;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");false;false;27966.6;[30000-150000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 78;PILOT-R_65C25US;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");false;false;27966.6;[80000-400000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 79;PILOT-R_150A25USSF;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;65 (2 1/2");false;false;27966.6;[10000-50000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 80;PILOT-R_200A25USSF;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;65 (2 1/2");false;false;27966.6;[10000-50000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 81;PILOT-R_65A25USSF;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;65 (2 1/2");false;false;27966.6;[10000-50000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 82;PILOT-R_65B25USSF;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;65 (2 1/2");false;false;27966.6;[30000-150000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 83;PILOT-R_65C25USSF;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;65 (2 1/2");false;false;27966.6;[80000-400000];false;1.2e+06;-10/120;100 (4");139.908;1.28318
+Result number = 84;PILOT-R_65A25USB;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 100;20;65 (2 1/2");false;false;27966.6;[10000-50000];false;1.2e+06;-10/150;100 (4");139.908;1.28318
+Result number = 85;PILOT-R_65B25USB;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 100;20;65 (2 1/2");false;false;27966.6;[30000-150000];false;1.2e+06;-10/150;100 (4");139.908;1.28318
+Result number = 86;PILOT-R_65C25USB;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 100;20;65 (2 1/2");false;false;27966.6;[80000-400000];false;1.2e+06;-10/150;100 (4");139.908;1.28318
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 1
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.011111111108
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_STD
+ComboFamilyID = FAM_STAP
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;STAP100_20-80;STAP 100;Cast iron;Flange;Standard;16;100 (4");false;false;13001;[20000-80000];false;350000;-10/120;100 (4");139.908;1.28318
+Result number = 1;STAP100_40-160;STAP 100;Cast iron;Flange;Standard;16;100 (4");false;false;13001;[40000-160000];false;350000;-10/120;100 (4");139.908;1.28318
+Result number = 2;STAP100B_20-80;STAP 4";Cast iron;ANSI Flange;Standard;20;100 (4");false;false;13001;[20000-80000];false;350000;-10/120;100 (4");139.908;1.28318
+Result number = 3;STAP100B_40-160;STAP 4";Cast iron;ANSI Flange;Standard;20;100 (4");false;false;13001;[40000-160000];false;350000;-10/120;100 (4");139.908;1.28318
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 2
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_STD
+ComboFamilyID = FAM_STAP
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;STAP50_20-80;STAP 50;Ametal(tm);Thread;Standard;16;50 (2");false;true;16514.4;[20000-80000];false;250000;-20/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;STAP50B_20-80;STAP 2";Ametal(tm);Thread NPT;Standard;16;50 (2");false;false;16514.4;[20000-80000];false;250000;-20/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 3
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_STD
+ComboFamilyID = FAM_STAP
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;STAP50_20-80;STAP 50;Ametal(tm);Thread;Standard;16;50 (2");false;true;16514.4;[20000-80000];false;250000;-20/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 4
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_STD
+ComboFamilyID = FAM_STAP
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADN
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;STAP50B_20-80;STAP 2";Ametal(tm);Thread NPT;Standard;16;50 (2");false;false;16514.4;[20000-80000];false;250000;-20/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 5
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_STD
+ComboFamilyID = FAM_STAP
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_SMTHEND
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 6
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_STD
+ComboFamilyID = FAM_STAP
+ComboMaterialID = BDY_CASTIRON
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;STAP65_20-80;STAP 65;Cast iron;Flange;Standard;16;65 (2 1/2");false;false;7586.42;[20000-80000];false;350000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;STAP65_40-160;STAP 65;Cast iron;Flange;Standard;16;65 (2 1/2");false;false;7586.42;[40000-160000];false;350000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 2;STAP65B_20-80;STAP 2 1/2";Cast iron;ANSI Flange;Standard;20;65 (2 1/2");false;false;7586.42;[20000-80000];false;350000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 3;STAP65B_40-160;STAP 2 1/2";Cast iron;ANSI Flange;Standard;20;65 (2 1/2");false;false;7586.42;[40000-160000];false;350000;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 7
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_STD
+ComboFamilyID = FAM_STAP
+ComboMaterialID = BDY_CASTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;STAP65_20-80;STAP 65;Cast iron;Flange;Standard;16;65 (2 1/2");false;false;7586.42;[20000-80000];false;350000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;STAP65_40-160;STAP 65;Cast iron;Flange;Standard;16;65 (2 1/2");false;false;7586.42;[40000-160000];false;350000;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 8
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_STD
+ComboFamilyID = FAM_STAP
+ComboMaterialID = BDY_CASTIRON
+ComboConnectID = CONN_ANSIFL
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;STAP65B_20-80;STAP 2 1/2";Cast iron;ANSI Flange;Standard;20;65 (2 1/2");false;false;7586.42;[20000-80000];false;350000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;STAP65B_40-160;STAP 2 1/2";Cast iron;ANSI Flange;Standard;20;65 (2 1/2");false;false;7586.42;[40000-160000];false;350000;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 9
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_HIDP
+ComboFamilyID = 
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;PILOT-R_65A16;TA-PILOT-R 65;Ductile iron;Flange;PT 90;16;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;PILOT-R_65B16;TA-PILOT-R 65;Ductile iron;Flange;PT 90;16;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 2;PILOT-R_65C16;TA-PILOT-R 65;Ductile iron;Flange;PT 90;16;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 3;PILOT-R_65A25;TA-PILOT-R 65;Ductile iron;Flange;PT 90;25;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 4;PILOT-R_65B25;TA-PILOT-R 65;Ductile iron;Flange;PT 90;25;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 5;PILOT-R_65C25;TA-PILOT-R 65;Ductile iron;Flange;PT 90;25;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 6;PILOT-R_65A16SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;16;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 7;PILOT-R_65B16SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;16;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 8;PILOT-R_65C16SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;16;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 9;PILOT-R_65A25SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;25;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 10;PILOT-R_65B25SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;25;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 11;PILOT-R_65C25SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;25;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 12;PILOT-R_65A16T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;16;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 13;PILOT-R_65B16T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;16;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 14;PILOT-R_65C16T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;16;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 15;PILOT-R_65A25T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;25;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 16;PILOT-R_65B25T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;25;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 17;PILOT-R_65C25T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;25;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 18;DA516_40APTTFTF;DA 516 DN40/50;Ductile iron;Thread;PT 90;25;50 (2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 19;DA516_40BPTTFTF;DA 516 DN40/50;Ductile iron;Thread;PT 90;25;50 (2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 20;DA516_40CPTTFTF;DA 516 DN40/50;Ductile iron;Thread;PT 90;25;50 (2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 21;DA516_40DPTTFTF;DA 516 DN40/50;Ductile iron;Thread;PT 90;25;50 (2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 22;DA516_40A150TFTF;DA 516 DN40/50;Ductile iron;Thread;Without meas. point;25;50 (2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 23;DA516_40B150TFTF;DA 516 DN40/50;Ductile iron;Thread;Without meas. point;25;50 (2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 24;DA516_40C150TFTF;DA 516 DN40/50;Ductile iron;Thread;Without meas. point;25;50 (2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 25;DA516_40D150TFTF;DA 516 DN40/50;Ductile iron;Thread;Without meas. point;25;50 (2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 26;DA516_40APTMFMF;DA 516 DN40/50;Ductile iron;Thread male;PT 90;25;50 (2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 27;DA516_40BPTMFMF;DA 516 DN40/50;Ductile iron;Thread male;PT 90;25;50 (2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 28;DA516_40CPTMFMF;DA 516 DN40/50;Ductile iron;Thread male;PT 90;25;50 (2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 29;DA516_40DPTMFMF;DA 516 DN40/50;Ductile iron;Thread male;PT 90;25;50 (2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 30;DA516_40A150MFMF;DA 516 DN40/50;Ductile iron;Thread male;Without meas. point;25;50 (2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 31;DA516_40B150MFMF;DA 516 DN40/50;Ductile iron;Thread male;Without meas. point;25;50 (2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 32;DA516_40C150MFMF;DA 516 DN40/50;Ductile iron;Thread male;Without meas. point;25;50 (2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 33;DA516_40D150MFMF;DA 516 DN40/50;Ductile iron;Thread male;Without meas. point;25;50 (2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 34;DA516_40APTTRFTRF;DA 516 DN40/50;Ductile iron;Thread ISO228 Female RC;PT 90;25;50 (2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 35;DA516_40BPTTRFTRF;DA 516 DN40/50;Ductile iron;Thread ISO228 Female RC;PT 90;25;50 (2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 36;DA516_40CPTTRFTRF;DA 516 DN40/50;Ductile iron;Thread ISO228 Female RC;PT 90;25;50 (2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 37;DA516_40DPTTRFTRF;DA 516 DN40/50;Ductile iron;Thread ISO228 Female RC;PT 90;25;50 (2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 38;DA516_40A150TRFTRF;DA 516 DN40/50;Ductile iron;Thread ISO228 Female RC;Without meas. point;25;50 (2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 39;DA516_40B150TRFTRF;DA 516 DN40/50;Ductile iron;Thread ISO228 Female RC;Without meas. point;25;50 (2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 40;DA516_40C150TRFTRF;DA 516 DN40/50;Ductile iron;Thread ISO228 Female RC;Without meas. point;25;50 (2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 41;DA516_40D150TRFTRF;DA 516 DN40/50;Ductile iron;Thread ISO228 Female RC;Without meas. point;25;50 (2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 42;DA516_40APTIFOF;DA 516 DN40/50;Ductile iron;Flange;PT 90;25;50 (2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 43;DA516_40BPTIFOF;DA 516 DN40/50;Ductile iron;Flange;PT 90;25;50 (2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 44;DA516_40CPTIFOF;DA 516 DN40/50;Ductile iron;Flange;PT 90;25;50 (2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 45;DA516_40DPTIFOF;DA 516 DN40/50;Ductile iron;Flange;PT 90;25;50 (2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 46;DA516_40A150IFOF;DA 516 DN40/50;Ductile iron;Flange;Without meas. point;25;50 (2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 47;DA516_40B150IFOF;DA 516 DN40/50;Ductile iron;Flange;Without meas. point;25;50 (2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 48;DA516_40C150IFOF;DA 516 DN40/50;Ductile iron;Flange;Without meas. point;25;50 (2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 49;DA516_40D150IFOF;DA 516 DN40/50;Ductile iron;Flange;Without meas. point;25;50 (2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 50;DA516_40APTWFWF;DA 516 DN40/50;Ductile iron;Welding;PT 90;25;50 (2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 51;DA516_40BPTWFWF;DA 516 DN40/50;Ductile iron;Welding;PT 90;25;50 (2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 52;DA516_40CPTWFWF;DA 516 DN40/50;Ductile iron;Welding;PT 90;25;50 (2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 53;DA516_40DPTWFWF;DA 516 DN40/50;Ductile iron;Welding;PT 90;25;50 (2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 54;DA516_40A150WFWF;DA 516 DN40/50;Ductile iron;Welding;Without meas. point;25;50 (2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 55;DA516_40B150WFWF;DA 516 DN40/50;Ductile iron;Welding;Without meas. point;25;50 (2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 56;DA516_40C150WFWF;DA 516 DN40/50;Ductile iron;Welding;Without meas. point;25;50 (2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 57;DA516_40D150WFWF;DA 516 DN40/50;Ductile iron;Welding;Without meas. point;25;50 (2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 58;DA516_40APTTETE;DA 516 DN40/50;Ductile iron;Thread;PT 90;25;40 (1 1/2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 59;DA516_40BPTTETE;DA 516 DN40/50;Ductile iron;Thread;PT 90;25;40 (1 1/2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 60;DA516_40CPTTETE;DA 516 DN40/50;Ductile iron;Thread;PT 90;25;40 (1 1/2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 61;DA516_40DPTTETE;DA 516 DN40/50;Ductile iron;Thread;PT 90;25;40 (1 1/2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 62;DA516_40A150TETE;DA 516 DN40/50;Ductile iron;Thread;Without meas. point;25;40 (1 1/2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 63;DA516_40B150TETE;DA 516 DN40/50;Ductile iron;Thread;Without meas. point;25;40 (1 1/2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 64;DA516_40C150TETE;DA 516 DN40/50;Ductile iron;Thread;Without meas. point;25;40 (1 1/2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 65;DA516_40D150TETE;DA 516 DN40/50;Ductile iron;Thread;Without meas. point;25;40 (1 1/2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 66;DA516_40APTMEME;DA 516 DN40/50;Ductile iron;Thread male;PT 90;25;40 (1 1/2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 67;DA516_40BPTMEME;DA 516 DN40/50;Ductile iron;Thread male;PT 90;25;40 (1 1/2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 68;DA516_40CPTMEME;DA 516 DN40/50;Ductile iron;Thread male;PT 90;25;40 (1 1/2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 69;DA516_40DPTMEME;DA 516 DN40/50;Ductile iron;Thread male;PT 90;25;40 (1 1/2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 70;DA516_40A150MEME;DA 516 DN40/50;Ductile iron;Thread male;Without meas. point;25;40 (1 1/2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 71;DA516_40B150MEME;DA 516 DN40/50;Ductile iron;Thread male;Without meas. point;25;40 (1 1/2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 72;DA516_40C150MEME;DA 516 DN40/50;Ductile iron;Thread male;Without meas. point;25;40 (1 1/2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 73;DA516_40D150MEME;DA 516 DN40/50;Ductile iron;Thread male;Without meas. point;25;40 (1 1/2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 74;DA516_40APTTRETRE;DA 516 DN40/50;Ductile iron;Thread ISO228 Female RC;PT 90;25;40 (1 1/2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 75;DA516_40BPTTRETRE;DA 516 DN40/50;Ductile iron;Thread ISO228 Female RC;PT 90;25;40 (1 1/2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 76;DA516_40CPTTRETRE;DA 516 DN40/50;Ductile iron;Thread ISO228 Female RC;PT 90;25;40 (1 1/2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 77;DA516_40DPTTRETRE;DA 516 DN40/50;Ductile iron;Thread ISO228 Female RC;PT 90;25;40 (1 1/2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 78;DA516_40A150TRETRE;DA 516 DN40/50;Ductile iron;Thread ISO228 Female RC;Without meas. point;25;40 (1 1/2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 79;DA516_40B150TRETRE;DA 516 DN40/50;Ductile iron;Thread ISO228 Female RC;Without meas. point;25;40 (1 1/2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 80;DA516_40C150TRETRE;DA 516 DN40/50;Ductile iron;Thread ISO228 Female RC;Without meas. point;25;40 (1 1/2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 81;DA516_40D150TRETRE;DA 516 DN40/50;Ductile iron;Thread ISO228 Female RC;Without meas. point;25;40 (1 1/2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 82;DA516_40APTIEFOE;DA 516 DN40/50;Ductile iron;Flange;PT 90;25;40 (1 1/2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 83;DA516_40BPTIEFOE;DA 516 DN40/50;Ductile iron;Flange;PT 90;25;40 (1 1/2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 84;DA516_40CPTIEFOE;DA 516 DN40/50;Ductile iron;Flange;PT 90;25;40 (1 1/2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 85;DA516_40DPTIEFOE;DA 516 DN40/50;Ductile iron;Flange;PT 90;25;40 (1 1/2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 86;DA516_40A150IEFOE;DA 516 DN40/50;Ductile iron;Flange;Without meas. point;25;40 (1 1/2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 87;DA516_40B150IEFOE;DA 516 DN40/50;Ductile iron;Flange;Without meas. point;25;40 (1 1/2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 88;DA516_40C150IEFOE;DA 516 DN40/50;Ductile iron;Flange;Without meas. point;25;40 (1 1/2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 89;DA516_40D150IEFOE;DA 516 DN40/50;Ductile iron;Flange;Without meas. point;25;40 (1 1/2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 90;DA516_40APTWEWE;DA 516 DN40/50;Ductile iron;Welding;PT 90;25;40 (1 1/2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 91;DA516_40BPTWEWE;DA 516 DN40/50;Ductile iron;Welding;PT 90;25;40 (1 1/2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 92;DA516_40CPTWEWE;DA 516 DN40/50;Ductile iron;Welding;PT 90;25;40 (1 1/2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 93;DA516_40DPTWEWE;DA 516 DN40/50;Ductile iron;Welding;PT 90;25;40 (1 1/2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 94;DA516_40A150WEWE;DA 516 DN40/50;Ductile iron;Welding;Without meas. point;25;40 (1 1/2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 95;DA516_40B150WEWE;DA 516 DN40/50;Ductile iron;Welding;Without meas. point;25;40 (1 1/2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 96;DA516_40C150WEWE;DA 516 DN40/50;Ductile iron;Welding;Without meas. point;25;40 (1 1/2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 97;DA516_40D150WEWE;DA 516 DN40/50;Ductile iron;Welding;Without meas. point;25;40 (1 1/2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 98;PILOT-R_65A25US;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 99;PILOT-R_65B25US;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 100;PILOT-R_65C25US;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 101;PILOT-R_150A25USSF;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 102;PILOT-R_200A25USSF;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 103;PILOT-R_65A25USSF;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 104;PILOT-R_65B25USSF;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 105;PILOT-R_65C25USSF;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 106;PILOT-R_65A25USB;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 100;20;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 107;PILOT-R_65B25USB;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 100;20;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 108;PILOT-R_65C25USB;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 100;20;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 10
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_HIDP
+ComboFamilyID = FAM_PILOT_R
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;PILOT-R_65A16;TA-PILOT-R 65;Ductile iron;Flange;PT 90;16;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;PILOT-R_65B16;TA-PILOT-R 65;Ductile iron;Flange;PT 90;16;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 2;PILOT-R_65C16;TA-PILOT-R 65;Ductile iron;Flange;PT 90;16;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 3;PILOT-R_65A25;TA-PILOT-R 65;Ductile iron;Flange;PT 90;25;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 4;PILOT-R_65B25;TA-PILOT-R 65;Ductile iron;Flange;PT 90;25;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 5;PILOT-R_65C25;TA-PILOT-R 65;Ductile iron;Flange;PT 90;25;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 6;PILOT-R_65A16SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;16;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 7;PILOT-R_65B16SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;16;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 8;PILOT-R_65C16SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;16;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 9;PILOT-R_65A25SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;25;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 10;PILOT-R_65B25SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;25;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 11;PILOT-R_65C25SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;25;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 12;PILOT-R_65A16T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;16;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 13;PILOT-R_65B16T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;16;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 14;PILOT-R_65C16T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;16;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 15;PILOT-R_65A25T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;25;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 16;PILOT-R_65B25T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;25;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 17;PILOT-R_65C25T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;25;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 18;PILOT-R_65A25US;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 19;PILOT-R_65B25US;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 20;PILOT-R_65C25US;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 21;PILOT-R_150A25USSF;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 22;PILOT-R_200A25USSF;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 23;PILOT-R_65A25USSF;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 24;PILOT-R_65B25USSF;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 25;PILOT-R_65C25USSF;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 26;PILOT-R_65A25USB;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 100;20;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 27;PILOT-R_65B25USB;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 100;20;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 28;PILOT-R_65C25USB;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 100;20;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 11
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_HIDP
+ComboFamilyID = FAM_PILOT_R
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;PILOT-R_65A16;TA-PILOT-R 65;Ductile iron;Flange;PT 90;16;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;PILOT-R_65B16;TA-PILOT-R 65;Ductile iron;Flange;PT 90;16;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 2;PILOT-R_65C16;TA-PILOT-R 65;Ductile iron;Flange;PT 90;16;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 3;PILOT-R_65A25;TA-PILOT-R 65;Ductile iron;Flange;PT 90;25;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 4;PILOT-R_65B25;TA-PILOT-R 65;Ductile iron;Flange;PT 90;25;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 5;PILOT-R_65C25;TA-PILOT-R 65;Ductile iron;Flange;PT 90;25;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 6;PILOT-R_65A16SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;16;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 7;PILOT-R_65B16SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;16;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 8;PILOT-R_65C16SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;16;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 9;PILOT-R_65A25SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;25;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 10;PILOT-R_65B25SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;25;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 11;PILOT-R_65C25SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;25;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 12;PILOT-R_65A16T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;16;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 13;PILOT-R_65B16T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;16;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 14;PILOT-R_65C16T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;16;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 15;PILOT-R_65A25T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;25;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 16;PILOT-R_65B25T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;25;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 17;PILOT-R_65C25T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;25;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 12
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_HIDP
+ComboFamilyID = FAM_PILOT_R
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_PT90
+ComboPNID = 
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;PILOT-R_65A16;TA-PILOT-R 65;Ductile iron;Flange;PT 90;16;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;PILOT-R_65B16;TA-PILOT-R 65;Ductile iron;Flange;PT 90;16;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 2;PILOT-R_65C16;TA-PILOT-R 65;Ductile iron;Flange;PT 90;16;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 3;PILOT-R_65A25;TA-PILOT-R 65;Ductile iron;Flange;PT 90;25;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 4;PILOT-R_65B25;TA-PILOT-R 65;Ductile iron;Flange;PT 90;25;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 5;PILOT-R_65C25;TA-PILOT-R 65;Ductile iron;Flange;PT 90;25;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 13
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_HIDP
+ComboFamilyID = FAM_PILOT_R
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_PT90SF
+ComboPNID = 
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;PILOT-R_65A16SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;16;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;PILOT-R_65B16SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;16;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 2;PILOT-R_65C16SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;16;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 3;PILOT-R_65A25SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;25;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 4;PILOT-R_65B25SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;25;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 5;PILOT-R_65C25SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;25;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 14
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_HIDP
+ComboFamilyID = FAM_PILOT_R
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_PT100
+ComboPNID = 
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;PILOT-R_65A16T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;16;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 1;PILOT-R_65B16T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;16;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 2;PILOT-R_65C16T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;16;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 3;PILOT-R_65A25T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;25;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 4;PILOT-R_65B25T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;25;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 5;PILOT-R_65C25T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;25;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 15
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_HIDP
+ComboFamilyID = FAM_PILOT_R
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_PT90
+ComboPNID = PN_3
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;PILOT-R_65A16;TA-PILOT-R 65;Ductile iron;Flange;PT 90;16;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;PILOT-R_65B16;TA-PILOT-R 65;Ductile iron;Flange;PT 90;16;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 2;PILOT-R_65C16;TA-PILOT-R 65;Ductile iron;Flange;PT 90;16;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 16
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_HIDP
+ComboFamilyID = FAM_PILOT_R
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;PILOT-R_65A25;TA-PILOT-R 65;Ductile iron;Flange;PT 90;25;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;PILOT-R_65B25;TA-PILOT-R 65;Ductile iron;Flange;PT 90;25;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 2;PILOT-R_65C25;TA-PILOT-R 65;Ductile iron;Flange;PT 90;25;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 17
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_HIDP
+ComboFamilyID = FAM_PILOT_R
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_PT90SF
+ComboPNID = PN_3
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;PILOT-R_65A16SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;16;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;PILOT-R_65B16SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;16;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 2;PILOT-R_65C16SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;16;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 18
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_HIDP
+ComboFamilyID = FAM_PILOT_R
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_PT90SF
+ComboPNID = PN_5
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;PILOT-R_65A25SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;25;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;PILOT-R_65B25SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;25;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 2;PILOT-R_65C25SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;25;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 19
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_HIDP
+ComboFamilyID = FAM_PILOT_R
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_PT100
+ComboPNID = PN_3
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;PILOT-R_65A16T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;16;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 1;PILOT-R_65B16T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;16;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 2;PILOT-R_65C16T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;16;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 20
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_HIDP
+ComboFamilyID = FAM_PILOT_R
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_PT100
+ComboPNID = PN_5
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;PILOT-R_65A25T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;25;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 1;PILOT-R_65B25T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;25;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 2;PILOT-R_65C25T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;25;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 21
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_HIDP
+ComboFamilyID = FAM_PILOT_R
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_ANSIFL
+ComboVersionID = 
+ComboPNID = PN_4
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;PILOT-R_65A25US;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;PILOT-R_65B25US;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 2;PILOT-R_65C25US;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 3;PILOT-R_150A25USSF;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 4;PILOT-R_200A25USSF;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 5;PILOT-R_65A25USSF;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 6;PILOT-R_65B25USSF;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 7;PILOT-R_65C25USSF;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 8;PILOT-R_65A25USB;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 100;20;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 9;PILOT-R_65B25USB;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 100;20;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 10;PILOT-R_65C25USB;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 100;20;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 22
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_HIDP
+ComboFamilyID = FAM_PILOT_R
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_ANSIFL
+ComboVersionID = VERS_PT90
+ComboPNID = PN_4
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;PILOT-R_65A25US;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;PILOT-R_65B25US;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 2;PILOT-R_65C25US;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 23
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_HIDP
+ComboFamilyID = FAM_PILOT_R
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_ANSIFL
+ComboVersionID = VERS_PT90SF
+ComboPNID = PN_4
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;PILOT-R_150A25USSF;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;PILOT-R_200A25USSF;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 2;PILOT-R_65A25USSF;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 3;PILOT-R_65B25USSF;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 4;PILOT-R_65C25USSF;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 24
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_HIDP
+ComboFamilyID = FAM_PILOT_R
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_ANSIFL
+ComboVersionID = VERS_PT100
+ComboPNID = PN_4
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;PILOT-R_65A25USB;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 100;20;65 (2 1/2");false;false;1747.91;[10000-50000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 1;PILOT-R_65B25USB;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 100;20;65 (2 1/2");false;false;1747.91;[30000-150000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+Result number = 2;PILOT-R_65C25USB;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 100;20;65 (2 1/2");false;false;1747.91;[80000-400000];false;1.2e+06;-10/150;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 25
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_HIDP
+ComboFamilyID = FAM_DA516
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = 
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;DA516_40APTTFTF;DA 516 DN40/50;Ductile iron;Thread;PT 90;25;50 (2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;DA516_40BPTTFTF;DA 516 DN40/50;Ductile iron;Thread;PT 90;25;50 (2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 2;DA516_40CPTTFTF;DA 516 DN40/50;Ductile iron;Thread;PT 90;25;50 (2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 3;DA516_40DPTTFTF;DA 516 DN40/50;Ductile iron;Thread;PT 90;25;50 (2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 4;DA516_40APTMFMF;DA 516 DN40/50;Ductile iron;Thread male;PT 90;25;50 (2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 5;DA516_40BPTMFMF;DA 516 DN40/50;Ductile iron;Thread male;PT 90;25;50 (2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 6;DA516_40CPTMFMF;DA 516 DN40/50;Ductile iron;Thread male;PT 90;25;50 (2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 7;DA516_40DPTMFMF;DA 516 DN40/50;Ductile iron;Thread male;PT 90;25;50 (2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 8;DA516_40APTTRFTRF;DA 516 DN40/50;Ductile iron;Thread ISO228 Female RC;PT 90;25;50 (2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 9;DA516_40BPTTRFTRF;DA 516 DN40/50;Ductile iron;Thread ISO228 Female RC;PT 90;25;50 (2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 10;DA516_40CPTTRFTRF;DA 516 DN40/50;Ductile iron;Thread ISO228 Female RC;PT 90;25;50 (2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 11;DA516_40DPTTRFTRF;DA 516 DN40/50;Ductile iron;Thread ISO228 Female RC;PT 90;25;50 (2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 12;DA516_40APTIFOF;DA 516 DN40/50;Ductile iron;Flange;PT 90;25;50 (2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 13;DA516_40BPTIFOF;DA 516 DN40/50;Ductile iron;Flange;PT 90;25;50 (2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 14;DA516_40CPTIFOF;DA 516 DN40/50;Ductile iron;Flange;PT 90;25;50 (2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 15;DA516_40DPTIFOF;DA 516 DN40/50;Ductile iron;Flange;PT 90;25;50 (2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 16;DA516_40APTWFWF;DA 516 DN40/50;Ductile iron;Welding;PT 90;25;50 (2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 17;DA516_40BPTWFWF;DA 516 DN40/50;Ductile iron;Welding;PT 90;25;50 (2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 18;DA516_40CPTWFWF;DA 516 DN40/50;Ductile iron;Welding;PT 90;25;50 (2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 19;DA516_40DPTWFWF;DA 516 DN40/50;Ductile iron;Welding;PT 90;25;50 (2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 20;DA516_40APTTETE;DA 516 DN40/50;Ductile iron;Thread;PT 90;25;40 (1 1/2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 21;DA516_40BPTTETE;DA 516 DN40/50;Ductile iron;Thread;PT 90;25;40 (1 1/2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 22;DA516_40CPTTETE;DA 516 DN40/50;Ductile iron;Thread;PT 90;25;40 (1 1/2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 23;DA516_40DPTTETE;DA 516 DN40/50;Ductile iron;Thread;PT 90;25;40 (1 1/2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 24;DA516_40APTMEME;DA 516 DN40/50;Ductile iron;Thread male;PT 90;25;40 (1 1/2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 25;DA516_40BPTMEME;DA 516 DN40/50;Ductile iron;Thread male;PT 90;25;40 (1 1/2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 26;DA516_40CPTMEME;DA 516 DN40/50;Ductile iron;Thread male;PT 90;25;40 (1 1/2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 27;DA516_40DPTMEME;DA 516 DN40/50;Ductile iron;Thread male;PT 90;25;40 (1 1/2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 28;DA516_40APTTRETRE;DA 516 DN40/50;Ductile iron;Thread ISO228 Female RC;PT 90;25;40 (1 1/2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 29;DA516_40BPTTRETRE;DA 516 DN40/50;Ductile iron;Thread ISO228 Female RC;PT 90;25;40 (1 1/2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 30;DA516_40CPTTRETRE;DA 516 DN40/50;Ductile iron;Thread ISO228 Female RC;PT 90;25;40 (1 1/2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 31;DA516_40DPTTRETRE;DA 516 DN40/50;Ductile iron;Thread ISO228 Female RC;PT 90;25;40 (1 1/2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 32;DA516_40APTIEFOE;DA 516 DN40/50;Ductile iron;Flange;PT 90;25;40 (1 1/2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 33;DA516_40BPTIEFOE;DA 516 DN40/50;Ductile iron;Flange;PT 90;25;40 (1 1/2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 34;DA516_40CPTIEFOE;DA 516 DN40/50;Ductile iron;Flange;PT 90;25;40 (1 1/2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 35;DA516_40DPTIEFOE;DA 516 DN40/50;Ductile iron;Flange;PT 90;25;40 (1 1/2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 36;DA516_40APTWEWE;DA 516 DN40/50;Ductile iron;Welding;PT 90;25;40 (1 1/2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 37;DA516_40BPTWEWE;DA 516 DN40/50;Ductile iron;Welding;PT 90;25;40 (1 1/2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 38;DA516_40CPTWEWE;DA 516 DN40/50;Ductile iron;Welding;PT 90;25;40 (1 1/2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 39;DA516_40DPTWEWE;DA 516 DN40/50;Ductile iron;Welding;PT 90;25;40 (1 1/2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 26
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_HIDP
+ComboFamilyID = FAM_DA516
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;DA516_40APTTFTF;DA 516 DN40/50;Ductile iron;Thread;PT 90;25;50 (2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;DA516_40BPTTFTF;DA 516 DN40/50;Ductile iron;Thread;PT 90;25;50 (2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 2;DA516_40CPTTFTF;DA 516 DN40/50;Ductile iron;Thread;PT 90;25;50 (2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 3;DA516_40DPTTFTF;DA 516 DN40/50;Ductile iron;Thread;PT 90;25;50 (2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 4;DA516_40APTTETE;DA 516 DN40/50;Ductile iron;Thread;PT 90;25;40 (1 1/2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 5;DA516_40BPTTETE;DA 516 DN40/50;Ductile iron;Thread;PT 90;25;40 (1 1/2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 6;DA516_40CPTTETE;DA 516 DN40/50;Ductile iron;Thread;PT 90;25;40 (1 1/2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 7;DA516_40DPTTETE;DA 516 DN40/50;Ductile iron;Thread;PT 90;25;40 (1 1/2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 27
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_HIDP
+ComboFamilyID = FAM_DA516
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;DA516_40APTMFMF;DA 516 DN40/50;Ductile iron;Thread male;PT 90;25;50 (2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;DA516_40BPTMFMF;DA 516 DN40/50;Ductile iron;Thread male;PT 90;25;50 (2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 2;DA516_40CPTMFMF;DA 516 DN40/50;Ductile iron;Thread male;PT 90;25;50 (2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 3;DA516_40DPTMFMF;DA 516 DN40/50;Ductile iron;Thread male;PT 90;25;50 (2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 4;DA516_40APTMEME;DA 516 DN40/50;Ductile iron;Thread male;PT 90;25;40 (1 1/2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 5;DA516_40BPTMEME;DA 516 DN40/50;Ductile iron;Thread male;PT 90;25;40 (1 1/2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 6;DA516_40CPTMEME;DA 516 DN40/50;Ductile iron;Thread male;PT 90;25;40 (1 1/2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 7;DA516_40DPTMEME;DA 516 DN40/50;Ductile iron;Thread male;PT 90;25;40 (1 1/2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 28
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_HIDP
+ComboFamilyID = FAM_DA516
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;DA516_40APTIFOF;DA 516 DN40/50;Ductile iron;Flange;PT 90;25;50 (2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;DA516_40BPTIFOF;DA 516 DN40/50;Ductile iron;Flange;PT 90;25;50 (2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 2;DA516_40CPTIFOF;DA 516 DN40/50;Ductile iron;Flange;PT 90;25;50 (2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 3;DA516_40DPTIFOF;DA 516 DN40/50;Ductile iron;Flange;PT 90;25;50 (2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 4;DA516_40APTIEFOE;DA 516 DN40/50;Ductile iron;Flange;PT 90;25;40 (1 1/2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 5;DA516_40BPTIEFOE;DA 516 DN40/50;Ductile iron;Flange;PT 90;25;40 (1 1/2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 6;DA516_40CPTIEFOE;DA 516 DN40/50;Ductile iron;Flange;PT 90;25;40 (1 1/2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 7;DA516_40DPTIEFOE;DA 516 DN40/50;Ductile iron;Flange;PT 90;25;40 (1 1/2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 29
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_HIDP
+ComboFamilyID = FAM_DA516
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_ANSIFL
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 30
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_HIDP
+ComboFamilyID = FAM_DA516
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_WELDING
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;DA516_40APTWFWF;DA 516 DN40/50;Ductile iron;Welding;PT 90;25;50 (2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;DA516_40BPTWFWF;DA 516 DN40/50;Ductile iron;Welding;PT 90;25;50 (2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 2;DA516_40CPTWFWF;DA 516 DN40/50;Ductile iron;Welding;PT 90;25;50 (2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 3;DA516_40DPTWFWF;DA 516 DN40/50;Ductile iron;Welding;PT 90;25;50 (2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 4;DA516_40APTWEWE;DA 516 DN40/50;Ductile iron;Welding;PT 90;25;40 (1 1/2");false;false;10924.4;[5000-30000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 5;DA516_40BPTWEWE;DA 516 DN40/50;Ductile iron;Welding;PT 90;25;40 (1 1/2");false;false;10924.4;[10000-60000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 6;DA516_40CPTWEWE;DA 516 DN40/50;Ductile iron;Welding;PT 90;25;40 (1 1/2");false;false;10924.4;[10000-100000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 7;DA516_40DPTWEWE;DA 516 DN40/50;Ductile iron;Welding;PT 90;25;40 (1 1/2");false;false;10924.4;[60000-150000];false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 31
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_HIDP
+ComboFamilyID = FAM_DA50
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 32
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_HIDP
+ComboFamilyID = FAM_DA50
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_5
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 33
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0233333
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_HIDP
+ComboFamilyID = FAM_DA50
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_ANSIFL
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 34
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.008333333331
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_HIDP
+ComboFamilyID = 
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = UpStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;DAF50_100A;DAF 50 DN100;Ductile iron;Flange;Standard;16;100 (4");false;false;6145;[10000-60000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 1;DAF50_100C;DAF 50 DN100;Ductile iron;Flange;Standard;16;100 (4");false;false;6145;[50000-150000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 2;DAF50_100E;DAF 50 DN100;Ductile iron;Flange;Standard;16;100 (4");false;false;6145;[130000-250000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 3;DAF50_100B;DAF 50 DN100;Ductile iron;Flange;Standard;25;100 (4");false;false;6145;[10000-60000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 4;DAF50_100D;DAF 50 DN100;Ductile iron;Flange;Standard;25;100 (4");false;false;6145;[50000-150000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 5;DAF50_100F;DAF 50 DN100;Ductile iron;Flange;Standard;25;100 (4");false;false;6145;[130000-250000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 6;DAF516_100A16;DAF 516 DN100(PN16);Ductile iron;Flange;Without meas. point;16;100 (4");false;false;3932.8;[5000-30000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 7;DAF516_100B16;DAF 516 DN100(PN16);Ductile iron;Flange;Without meas. point;16;100 (4");false;false;3932.8;[10000-60000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 8;DAF516_100C16;DAF 516 DN100(PN16);Ductile iron;Flange;Without meas. point;16;100 (4");false;false;3932.8;[10000-100000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 9;DAF516_100D16;DAF 516 DN100(PN16);Ductile iron;Flange;Without meas. point;16;100 (4");false;false;3932.8;[60000-150000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 10;DAF516_100A;DAF 516 DN100;Ductile iron;Flange;Without meas. point;25;100 (4");false;false;3932.8;[5000-30000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 11;DAF516_100B;DAF 516 DN100;Ductile iron;Flange;Without meas. point;25;100 (4");false;false;3932.8;[10000-60000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 12;DAF516_100C;DAF 516 DN100;Ductile iron;Flange;Without meas. point;25;100 (4");false;false;3932.8;[10000-100000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 13;DAF516_100D;DAF 516 DN100;Ductile iron;Flange;Without meas. point;25;100 (4");false;false;3932.8;[60000-150000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 14;DAF50_80C;DAF 50 DN80;Ductile iron;Flange;Standard;16;80 (3");false;false;18058.8;[50000-150000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 15;DAF50_80E;DAF 50 DN80;Ductile iron;Flange;Standard;16;80 (3");false;false;18058.8;[130000-250000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 16;DAF50_80A;DAF 50 DN80;Ductile iron;Flange;Standard;16/25;80 (3");false;false;18058.8;[10000-60000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 17;DAF516_80A;DAF 516 DN80;Ductile iron;Flange;Without meas. point;16/25;80 (3");false;false;24580;[5000-30000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 18;DAF516_80B;DAF 516 DN80;Ductile iron;Flange;Without meas. point;16/25;80 (3");false;false;24580;[10000-60000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 19;DAF516_80C;DAF 516 DN80;Ductile iron;Flange;Without meas. point;16/25;80 (3");false;false;24580;[10000-100000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 20;DAF516_80D;DAF 516 DN80;Ductile iron;Flange;Without meas. point;16/25;80 (3");false;false;24580;[60000-150000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 21;DAF50_65A;DAF 50 DN65;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;29252.2;[10000-60000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 22;DAF50_65C;DAF 50 DN65;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;29252.2;[50000-150000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 23;DAF50_65E;DAF 50 DN65;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;29252.2;[130000-250000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 24;DAF50_65B;DAF 50 DN65;Ductile iron;Flange;Standard;25;65 (2 1/2");false;false;29252.2;[10000-60000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 25;DAF50_65D;DAF 50 DN65;Ductile iron;Flange;Standard;25;65 (2 1/2");false;false;29252.2;[50000-150000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 26;DAF50_65F;DAF 50 DN65;Ductile iron;Flange;Standard;25;65 (2 1/2");false;false;29252.2;[130000-250000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 27;DAF516_65A;DAF 516 DN65;Ductile iron;Flange;Without meas. point;16/25;65 (2 1/2");false;false;24580;[5000-30000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 28;DAF516_65B;DAF 516 DN65;Ductile iron;Flange;Without meas. point;16/25;65 (2 1/2");false;false;24580;[10000-60000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 29;DAF516_65C;DAF 516 DN65;Ductile iron;Flange;Without meas. point;16/25;65 (2 1/2");false;false;24580;[10000-100000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 30;DAF516_65D;DAF 516 DN65;Ductile iron;Flange;Without meas. point;16/25;65 (2 1/2");false;false;24580;[60000-150000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 35
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.008333333331
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = DPCTYPE_HIDP
+ComboFamilyID = FAM_DAF516
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = 
+ComboVersionID = VERS_NOPT
+ComboPNID = 
+OnlyForSet = false
+GroupDpBranchOrKvChecked = false
+DpMaxChecked = false
+DpBranch = 0
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = UpStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;DAF516_100A16;DAF 516 DN100(PN16);Ductile iron;Flange;Without meas. point;16;100 (4");false;false;3932.8;[5000-30000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 1;DAF516_100B16;DAF 516 DN100(PN16);Ductile iron;Flange;Without meas. point;16;100 (4");false;false;3932.8;[10000-60000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 2;DAF516_100C16;DAF 516 DN100(PN16);Ductile iron;Flange;Without meas. point;16;100 (4");false;false;3932.8;[10000-100000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 3;DAF516_100D16;DAF 516 DN100(PN16);Ductile iron;Flange;Without meas. point;16;100 (4");false;false;3932.8;[60000-150000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 4;DAF516_100A;DAF 516 DN100;Ductile iron;Flange;Without meas. point;25;100 (4");false;false;3932.8;[5000-30000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 5;DAF516_100B;DAF 516 DN100;Ductile iron;Flange;Without meas. point;25;100 (4");false;false;3932.8;[10000-60000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 6;DAF516_100C;DAF 516 DN100;Ductile iron;Flange;Without meas. point;25;100 (4");false;false;3932.8;[10000-100000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 7;DAF516_100D;DAF 516 DN100;Ductile iron;Flange;Without meas. point;25;100 (4");false;false;3932.8;[60000-150000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 8;DAF516_80A;DAF 516 DN80;Ductile iron;Flange;Without meas. point;16/25;80 (3");false;false;24580;[5000-30000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 9;DAF516_80B;DAF 516 DN80;Ductile iron;Flange;Without meas. point;16/25;80 (3");false;false;24580;[10000-60000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 10;DAF516_80C;DAF 516 DN80;Ductile iron;Flange;Without meas. point;16/25;80 (3");false;false;24580;[10000-100000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 11;DAF516_80D;DAF 516 DN80;Ductile iron;Flange;Without meas. point;16/25;80 (3");false;false;24580;[60000-150000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 12;DAF516_65A;DAF 516 DN65;Ductile iron;Flange;Without meas. point;16/25;65 (2 1/2");false;false;24580;[5000-30000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 13;DAF516_65B;DAF 516 DN65;Ductile iron;Flange;Without meas. point;16/25;65 (2 1/2");false;false;24580;[10000-60000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 14;DAF516_65C;DAF 516 DN65;Ductile iron;Flange;Without meas. point;16/25;65 (2 1/2");false;false;24580;[10000-100000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 15;DAF516_65D;DAF 516 DN65;Ductile iron;Flange;Without meas. point;16/25;65 (2 1/2");false;false;24580;[60000-150000];false;1.6e+06;-10/150;100 (4");80.6172;0.962388
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 36
+
+SelectionMode = Individual
+ProductCategory = DpC
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.008333333331
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+GroupDpBranchOrKvChecked = true
+DpMaxChecked = false
+DpBranch = 50000
+DpMax = 0
+Kv = 0
+DpStabilizedOn = Branch
+DpCLocalization = DownStream
+MvLocalization = Primary
+EndInputs
+
+StartOutputs
+Result number = 0;STAP100_20-80;STAP 100;Cast iron;Flange;Standard;16;100 (4");false;false;7313.06;[20000-80000];false;350000;-10/120;100 (4");80.6172;0.962388
+Result number = 1;STAP100_40-160;STAP 100;Cast iron;Flange;Standard;16;100 (4");false;false;7313.06;[40000-160000];false;350000;-10/120;100 (4");80.6172;0.962388
+Result number = 2;PILOT-R_100A16;TA-PILOT-R 100;Ductile iron;Flange;PT 90;16;100 (4");false;false;2731.11;[10000-50000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 3;PILOT-R_100B16;TA-PILOT-R 100;Ductile iron;Flange;PT 90;16;100 (4");false;false;2731.11;[30000-150000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 4;PILOT-R_100C16;TA-PILOT-R 100;Ductile iron;Flange;PT 90;16;100 (4");false;false;2731.11;[80000-400000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 5;PILOT-R_100A25;TA-PILOT-R 100;Ductile iron;Flange;PT 90;25;100 (4");false;false;2731.11;[10000-50000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 6;PILOT-R_100B25;TA-PILOT-R 100;Ductile iron;Flange;PT 90;25;100 (4");false;false;2731.11;[30000-150000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 7;PILOT-R_100C25;TA-PILOT-R 100;Ductile iron;Flange;PT 90;25;100 (4");false;false;2731.11;[80000-400000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 8;PILOT-R_100A16SF;TA-PILOT-R 100;Ductile iron;Flange;PT 90 & Sil.-free grease;16;100 (4");false;false;2731.11;[10000-50000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 9;PILOT-R_100B16SF;TA-PILOT-R 100;Ductile iron;Flange;PT 90 & Sil.-free grease;16;100 (4");false;false;2731.11;[30000-150000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 10;PILOT-R_100C16SF;TA-PILOT-R 100;Ductile iron;Flange;PT 90 & Sil.-free grease;16;100 (4");false;false;2731.11;[80000-400000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 11;PILOT-R_100A25SF;TA-PILOT-R 100;Ductile iron;Flange;PT 90 & Sil.-free grease;25;100 (4");false;false;2731.11;[10000-50000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 12;PILOT-R_100B25SF;TA-PILOT-R 100;Ductile iron;Flange;PT 90 & Sil.-free grease;25;100 (4");false;false;2731.11;[30000-150000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 13;PILOT-R_100C25SF;TA-PILOT-R 100;Ductile iron;Flange;PT 90 & Sil.-free grease;25;100 (4");false;false;2731.11;[80000-400000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 14;PILOT-R_100A16T;TA-PILOT-R 100;Ductile iron;Flange;PT 100;16;100 (4");false;false;2731.11;[10000-50000];false;1.2e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 15;PILOT-R_100B16T;TA-PILOT-R 100;Ductile iron;Flange;PT 100;16;100 (4");false;false;2731.11;[30000-150000];false;1.2e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 16;PILOT-R_100C16T;TA-PILOT-R 100;Ductile iron;Flange;PT 100;16;100 (4");false;false;2731.11;[80000-400000];false;1.2e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 17;PILOT-R_100A25T;TA-PILOT-R 100;Ductile iron;Flange;PT 100;25;100 (4");false;false;2731.11;[10000-50000];false;1.2e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 18;PILOT-R_100B25T;TA-PILOT-R 100;Ductile iron;Flange;PT 100;25;100 (4");false;false;2731.11;[30000-150000];false;1.2e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 19;PILOT-R_100C25T;TA-PILOT-R 100;Ductile iron;Flange;PT 100;25;100 (4");false;false;2731.11;[80000-400000];false;1.2e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 20;STAP80_20-80;STAP 80;Cast iron;Flange;Standard;16;80 (3");false;false;29252.2;[20000-80000];false;350000;-10/120;100 (4");80.6172;0.962388
+Result number = 21;STAP80_40-160;STAP 80;Cast iron;Flange;Standard;16;80 (3");false;false;29252.2;[40000-160000];false;350000;-10/120;100 (4");80.6172;0.962388
+Result number = 22;PILOT-R_80A16;TA-PILOT-R 80;Ductile iron;Flange;PT 90;16;80 (3");false;false;7313.06;[10000-50000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 23;PILOT-R_80B16;TA-PILOT-R 80;Ductile iron;Flange;PT 90;16;80 (3");false;false;7313.06;[30000-150000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 24;PILOT-R_80C16;TA-PILOT-R 80;Ductile iron;Flange;PT 90;16;80 (3");false;false;7313.06;[80000-400000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 25;PILOT-R_80A25;TA-PILOT-R 80;Ductile iron;Flange;PT 90;25;80 (3");false;false;7313.06;[10000-50000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 26;PILOT-R_80B25;TA-PILOT-R 80;Ductile iron;Flange;PT 90;25;80 (3");false;false;7313.06;[30000-150000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 27;PILOT-R_80C25;TA-PILOT-R 80;Ductile iron;Flange;PT 90;25;80 (3");false;false;7313.06;[80000-400000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 28;PILOT-R_80A16SF;TA-PILOT-R 80;Ductile iron;Flange;PT 90 & Sil.-free grease;16;80 (3");false;false;7313.06;[10000-50000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 29;PILOT-R_80B16SF;TA-PILOT-R 80;Ductile iron;Flange;PT 90 & Sil.-free grease;16;80 (3");false;false;7313.06;[30000-150000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 30;PILOT-R_80C16SF;TA-PILOT-R 80;Ductile iron;Flange;PT 90 & Sil.-free grease;16;80 (3");false;false;7313.06;[80000-400000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 31;PILOT-R_80A25SF;TA-PILOT-R 80;Ductile iron;Flange;PT 90 & Sil.-free grease;25;80 (3");false;false;7313.06;[10000-50000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 32;PILOT-R_80B25SF;TA-PILOT-R 80;Ductile iron;Flange;PT 90 & Sil.-free grease;25;80 (3");false;false;7313.06;[30000-150000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 33;PILOT-R_80C25SF;TA-PILOT-R 80;Ductile iron;Flange;PT 90 & Sil.-free grease;25;80 (3");false;false;7313.06;[80000-400000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 34;PILOT-R_80A16T;TA-PILOT-R 80;Ductile iron;Flange;PT 100;16;80 (3");false;false;7313.06;[10000-50000];false;1.2e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 35;PILOT-R_80B16T;TA-PILOT-R 80;Ductile iron;Flange;PT 100;16;80 (3");false;false;7313.06;[30000-150000];false;1.2e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 36;PILOT-R_80C16T;TA-PILOT-R 80;Ductile iron;Flange;PT 100;16;80 (3");false;false;7313.06;[80000-400000];false;1.2e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 37;PILOT-R_80A25T;TA-PILOT-R 80;Ductile iron;Flange;PT 100;25;80 (3");false;false;7313.06;[10000-50000];false;1.2e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 38;PILOT-R_80B25T;TA-PILOT-R 80;Ductile iron;Flange;PT 100;25;80 (3");false;false;7313.06;[30000-150000];false;1.2e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 39;PILOT-R_80C25T;TA-PILOT-R 80;Ductile iron;Flange;PT 100;25;80 (3");false;false;7313.06;[80000-400000];false;1.2e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 40;PILOT-R_65A16;TA-PILOT-R 65;Ductile iron;Flange;PT 90;16;65 (2 1/2");false;false;15731.2;[10000-50000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 41;PILOT-R_65B16;TA-PILOT-R 65;Ductile iron;Flange;PT 90;16;65 (2 1/2");false;false;15731.2;[30000-150000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 42;PILOT-R_65C16;TA-PILOT-R 65;Ductile iron;Flange;PT 90;16;65 (2 1/2");false;false;15731.2;[80000-400000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 43;PILOT-R_65A25;TA-PILOT-R 65;Ductile iron;Flange;PT 90;25;65 (2 1/2");false;false;15731.2;[10000-50000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 44;PILOT-R_65B25;TA-PILOT-R 65;Ductile iron;Flange;PT 90;25;65 (2 1/2");false;false;15731.2;[30000-150000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 45;PILOT-R_65C25;TA-PILOT-R 65;Ductile iron;Flange;PT 90;25;65 (2 1/2");false;false;15731.2;[80000-400000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 46;PILOT-R_65A16SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;16;65 (2 1/2");false;false;15731.2;[10000-50000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 47;PILOT-R_65B16SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;16;65 (2 1/2");false;false;15731.2;[30000-150000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 48;PILOT-R_65C16SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;16;65 (2 1/2");false;false;15731.2;[80000-400000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 49;PILOT-R_65A25SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;25;65 (2 1/2");false;false;15731.2;[10000-50000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 50;PILOT-R_65B25SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;25;65 (2 1/2");false;false;15731.2;[30000-150000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 51;PILOT-R_65C25SF;TA-PILOT-R 65;Ductile iron;Flange;PT 90 & Sil.-free grease;25;65 (2 1/2");false;false;15731.2;[80000-400000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 52;PILOT-R_65A16T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;16;65 (2 1/2");false;false;15731.2;[10000-50000];false;1.2e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 53;PILOT-R_65B16T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;16;65 (2 1/2");false;false;15731.2;[30000-150000];false;1.2e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 54;PILOT-R_65C16T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;16;65 (2 1/2");false;false;15731.2;[80000-400000];false;1.2e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 55;PILOT-R_65A25T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;25;65 (2 1/2");false;false;15731.2;[10000-50000];false;1.2e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 56;PILOT-R_65B25T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;25;65 (2 1/2");false;false;15731.2;[30000-150000];false;1.2e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 57;PILOT-R_65C25T;TA-PILOT-R 65;Ductile iron;Flange;PT 100;25;65 (2 1/2");false;false;15731.2;[80000-400000];false;1.2e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 58;STAP100B_20-80;STAP 4";Cast iron;ANSI Flange;Standard;20;100 (4");false;false;7313.06;[20000-80000];false;350000;-10/120;100 (4");80.6172;0.962388
+Result number = 59;STAP100B_40-160;STAP 4";Cast iron;ANSI Flange;Standard;20;100 (4");false;false;7313.06;[40000-160000];false;350000;-10/120;100 (4");80.6172;0.962388
+Result number = 60;PILOT-R_100A25US;TA-PILOT-R 4";Ductile iron;ANSI Flange;PT 90;20;100 (4");false;false;2731.11;[10000-50000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 61;PILOT-R_100B25US;TA-PILOT-R 4";Ductile iron;ANSI Flange;PT 90;20;100 (4");false;false;2731.11;[30000-150000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 62;PILOT-R_100C25US;TA-PILOT-R 4";Ductile iron;ANSI Flange;PT 90;20;100 (4");false;false;2731.11;[80000-400000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 63;PILOT-R_100A25USSF;TA-PILOT-R 4";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;100 (4");false;false;2731.11;[10000-50000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 64;PILOT-R_100B25USSF;TA-PILOT-R 4";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;100 (4");false;false;2731.11;[30000-150000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 65;PILOT-R_100C25USSF;TA-PILOT-R 4";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;100 (4");false;false;2731.11;[80000-400000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 66;PILOT-R_100A25USB;TA-PILOT-R 4";Ductile iron;ANSI Flange;PT 100;20;100 (4");false;false;2731.11;[10000-50000];false;1.2e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 67;PILOT-R_100B25USB;TA-PILOT-R 4";Ductile iron;ANSI Flange;PT 100;20;100 (4");false;false;2731.11;[30000-150000];false;1.2e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 68;PILOT-R_100C25USB;TA-PILOT-R 4";Ductile iron;ANSI Flange;PT 100;20;100 (4");false;false;2731.11;[80000-400000];false;1.2e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 69;STAP80B_20-80;STAP 3";Cast iron;ANSI Flange;Standard;20;80 (3");false;false;29252.2;[20000-80000];false;350000;-10/120;100 (4");80.6172;0.962388
+Result number = 70;STAP80B_40-160;STAP 3";Cast iron;ANSI Flange;Standard;20;80 (3");false;false;29252.2;[40000-160000];false;350000;-10/120;100 (4");80.6172;0.962388
+Result number = 71;PILOT-R_80A25US;TA-PILOT-R 3";Ductile iron;ANSI Flange;PT 90;20;80 (3");false;false;7313.06;[10000-50000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 72;PILOT-R_80B25US;TA-PILOT-R 3";Ductile iron;ANSI Flange;PT 90;20;80 (3");false;false;7313.06;[30000-150000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 73;PILOT-R_80C25US;TA-PILOT-R 3";Ductile iron;ANSI Flange;PT 90;20;80 (3");false;false;7313.06;[80000-400000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 74;PILOT-R_80A25USSF;TA-PILOT-R 3";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;80 (3");false;false;7313.06;[10000-50000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 75;PILOT-R_80B25USSF;TA-PILOT-R 3";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;80 (3");false;false;7313.06;[30000-150000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 76;PILOT-R_80C25USSF;TA-PILOT-R 3";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;80 (3");false;false;7313.06;[80000-400000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 77;PILOT-R_80A25USB;TA-PILOT-R 3";Ductile iron;ANSI Flange;PT 100;20;80 (3");false;false;7313.06;[10000-50000];false;1.2e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 78;PILOT-R_80B25USB;TA-PILOT-R 3";Ductile iron;ANSI Flange;PT 100;20;80 (3");false;false;7313.06;[30000-150000];false;1.2e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 79;PILOT-R_80C25USB;TA-PILOT-R 3";Ductile iron;ANSI Flange;PT 100;20;80 (3");false;false;7313.06;[80000-400000];false;1.2e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 80;PILOT-R_65A25US;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");false;false;15731.2;[10000-50000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 81;PILOT-R_65B25US;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");false;false;15731.2;[30000-150000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 82;PILOT-R_65C25US;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");false;false;15731.2;[80000-400000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 83;PILOT-R_150A25USSF;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;65 (2 1/2");false;false;15731.2;[10000-50000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 84;PILOT-R_200A25USSF;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;65 (2 1/2");false;false;15731.2;[10000-50000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 85;PILOT-R_65A25USSF;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;65 (2 1/2");false;false;15731.2;[10000-50000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 86;PILOT-R_65B25USSF;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;65 (2 1/2");false;false;15731.2;[30000-150000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 87;PILOT-R_65C25USSF;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 90 & Sil.-free grease;20;65 (2 1/2");false;false;15731.2;[80000-400000];false;1.2e+06;-10/120;100 (4");80.6172;0.962388
+Result number = 88;PILOT-R_65A25USB;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 100;20;65 (2 1/2");false;false;15731.2;[10000-50000];false;1.2e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 89;PILOT-R_65B25USB;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 100;20;65 (2 1/2");false;false;15731.2;[30000-150000];false;1.2e+06;-10/150;100 (4");80.6172;0.962388
+Result number = 90;PILOT-R_65C25USB;TA-PILOT-R 2 1/2";Ductile iron;ANSI Flange;PT 100;20;65 (2 1/2");false;false;15731.2;[80000-400000];false;1.2e+06;-10/150;100 (4");80.6172;0.962388
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+

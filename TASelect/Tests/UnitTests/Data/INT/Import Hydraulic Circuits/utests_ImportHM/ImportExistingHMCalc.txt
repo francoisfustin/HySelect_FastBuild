@@ -1,0 +1,142 @@
+# Input informations.
+Project to import = ImportNewHMCalc.tsp
+# Modules or circuits to import : Element to import => Parent => Insert in => Insert after
+*A.1 => *A => *A.1 => *A.1.1
+
+# Output informations.
+
+HMCalc mode = true
+Menu button state before unfreeze = false
+Ribbon button state before unfreeze = false
+Menu button state after unfreeze = true
+Ribbon button state after unfreeze = true
+Menu button state after import = true
+Ribbon button state after import = true
+
+// Import result 
+Import result : ImportNewHMCalc.tsp in an existing project 
+*A; PUMP_BV;  HM; TU-Dp;86841.4 Pa
+*A; PUMP_BV;  HM; TU-Q;26400 l/h
+*A; PUMP_BV;  HM; Dp;89841.4 Pa
+*A; PUMP_BV;  HM; FLOW;26400 l/h
+*A; PUMP_BV;  HM; HAvail;89841.4 Pa
+*A; PUMP_BV;  BVP; BVNAME;STAF* 100
+*A; PUMP_BV;  BVP; Dp;3000 Pa
+*A; PUMP_BV;  BVP; Flow;26400 l/h
+*A; PUMP_BV;  BVP; PRESET;6.55
+*A; PUMP_BV;  CIRCPIPE; Dp;0 Pa
+*A; PUMP_BV;  DISTSUPPIPE; Dp;0 Pa
+*A; PUMP_BV;  CIRCACC; Dp;0 Pa
+*A; PUMP_BV;  DISTSUPACC; Dp;0 Pa
+*A.1; 2WD_BV1;  HM; TU-Dp;55112.3 Pa
+*A.1; 2WD_BV1;  HM; TU-Q;13400 l/h
+*A.1; 2WD_BV1;  HM; Dp;86841.4 Pa
+*A.1; 2WD_BV1;  HM; FLOW;13400 l/h
+*A.1; 2WD_BV1;  HM; HAvail;86841.4 Pa
+*A.1; 2WD_BV1;  BVP; BVNAME;STAF* 65
+*A.1; 2WD_BV1;  BVP; Dp;3000 Pa
+*A.1; 2WD_BV1;  BVP; Flow;13400 l/h
+*A.1; 2WD_BV1;  BVP; PRESET;7.25
+*A.1; 2WD_BV1;  CV; CVNAME;CV 216 RGA DN40
+*A.1; 2WD_BV1;  CV; CVACTR;TA-MC 55Y
+*A.1; 2WD_BV1;  CV; Kvs;25.00
+*A.1; 2WD_BV1;  CV; KvsMax;28.27
+*A.1; 2WD_BV1;  CV; Dp;28729.1 Pa
+*A.1; 2WD_BV1;  CV; Flow;13400 l/h
+*A.1; 2WD_BV1;  CIRCPIPE; Dp;0 Pa
+*A.1; 2WD_BV1;  DISTSUPPIPE; Dp;0 Pa
+*A.1; 2WD_BV1;  CIRCACC; Dp;4309.29 Pa
+*A.1; 2WD_BV1;  DISTSUPACC; Dp;1225.54 Pa
+*A.1.1; 2WD_BV1;  HM; TU-Dp;20000 Pa
+*A.1.1; 2WD_BV1;  HM; TU-Q;13000 l/h
+*A.1.1; 2WD_BV1;  HM; Dp;54403.4 Pa
+*A.1.1; 2WD_BV1;  HM; FLOW;13000 l/h
+*A.1.1; 2WD_BV1;  HM; HAvail;54403.4 Pa
+*A.1.1; 2WD_BV1;  BVP; BVNAME;STAF* 65
+*A.1.1; 2WD_BV1;  BVP; Dp;3000 Pa
+*A.1.1; 2WD_BV1;  BVP; Flow;13000 l/h
+*A.1.1; 2WD_BV1;  BVP; PRESET;7.05
+*A.1.1; 2WD_BV1;  CV; CVNAME;CV 216 RGA DN40
+*A.1.1; 2WD_BV1;  CV; CVACTR;TA-MC 55Y
+*A.1.1; 2WD_BV1;  CV; Kvs;25.00
+*A.1.1; 2WD_BV1;  CV; KvsMax;27.43
+*A.1.1; 2WD_BV1;  CV; Dp;27039.5 Pa
+*A.1.1; 2WD_BV1;  CV; Flow;13000 l/h
+*A.1.1; 2WD_BV1;  CIRCPIPE; Dp;1005.46 Pa
+*A.1.1; 2WD_BV1;  DISTSUPPIPE; Dp;708.896 Pa
+*A.1.1; 2WD_BV1;  CIRCACC; Dp;3358.38 Pa
+*A.1.1; 2WD_BV1;  DISTSUPACC; Dp;58.0834 Pa
+*A.1.2; 2WD_DPCBCV;  HM; TU-Dp;14870.6 Pa
+*A.1.2; 2WD_DPCBCV;  HM; TU-Q;400 l/h
+*A.1.2; 2WD_DPCBCV;  HM; Dp;54345.3 Pa
+*A.1.2; 2WD_DPCBCV;  HM; FLOW;400 l/h
+*A.1.2; 2WD_DPCBCV;  HM; HAvail;54345.3 Pa
+*A.1.2; 2WD_DPCBCV;  CV; CVNAME;TA-Compact-DP 20
+*A.1.2; 2WD_DPCBCV;  CV; PRESET;5.25
+*A.1.2; 2WD_DPCBCV;  CV; CVACTR;TA-Slider 160 (1m)
+*A.1.2; 2WD_DPCBCV;  CV; Kv;-1.00
+*A.1.2; 2WD_DPCBCV;  CV; KvsMax;0.000
+*A.1.2; 2WD_DPCBCV;  CV; Dp;39128.9 Pa
+*A.1.2; 2WD_DPCBCV;  CV; Flow;400 l/h
+*A.1.2; 2WD_DPCBCV;  CIRCPIPE; Dp;0 Pa
+*A.1.2; 2WD_DPCBCV;  DISTSUPPIPE; Dp;0 Pa
+*A.1.2; 2WD_DPCBCV;  CIRCACC; Dp;91.9192 Pa
+*A.1.2; 2WD_DPCBCV;  DISTSUPACC; Dp;0 Pa
+*A.1.2.1; 2WD_BV1;  HM; TU-Dp;1000 Pa
+*A.1.2.1; 2WD_BV1;  HM; TU-Q;400 l/h
+*A.1.2.1; 2WD_BV1;  HM; Dp;14691 Pa
+*A.1.2.1; 2WD_BV1;  HM; FLOW;400 l/h
+*A.1.2.1; 2WD_BV1;  HM; HAvail;14691 Pa
+*A.1.2.1; 2WD_BV1;  BVP; BVNAME;STAD* 15
+*A.1.2.1; 2WD_BV1;  BVP; Dp;3000 Pa
+*A.1.2.1; 2WD_BV1;  BVP; Flow;400 l/h
+*A.1.2.1; 2WD_BV1;  BVP; PRESET;3.73
+*A.1.2.1; 2WD_BV1;  CV; CVNAME;CV 216 RGA DN15
+*A.1.2.1; 2WD_BV1;  CV; CVACTR;TA-MC 55Y
+*A.1.2.1; 2WD_BV1;  CV; Kvs;1.25
+*A.1.2.1; 2WD_BV1;  CV; KvsMax;1.26
+*A.1.2.1; 2WD_BV1;  CV; Dp;10239.8 Pa
+*A.1.2.1; 2WD_BV1;  CV; Flow;400 l/h
+*A.1.2.1; 2WD_BV1;  CIRCPIPE; Dp;359.205 Pa
+*A.1.2.1; 2WD_BV1;  DISTSUPPIPE; Dp;179.603 Pa
+*A.1.2.1; 2WD_BV1;  CIRCACC; Dp;91.9192 Pa
+*A.1.2.1; 2WD_BV1;  DISTSUPACC; Dp;0 Pa
+*A.2; 2WD_BV1;  HM; TU-Dp;52658.6 Pa
+*A.2; 2WD_BV1;  HM; TU-Q;13000 l/h
+*A.2; 2WD_BV1;  HM; Dp;85615.9 Pa
+*A.2; 2WD_BV1;  HM; FLOW;13000 l/h
+*A.2; 2WD_BV1;  HM; HAvail;85615.9 Pa
+*A.2; 2WD_BV1;  BVP; BVNAME;STAF* 65
+*A.2; 2WD_BV1;  BVP; Dp;5917.73 Pa
+*A.2; 2WD_BV1;  BVP; Flow;13000 l/h
+*A.2; 2WD_BV1;  BVP; PRESET;5.8
+*A.2; 2WD_BV1;  CV; CVNAME;CV 216 RGA DN40
+*A.2; 2WD_BV1;  CV; CVACTR;TA-MC 55Y
+*A.2; 2WD_BV1;  CV; Kvs;25.00
+*A.2; 2WD_BV1;  CV; KvsMax;27.43
+*A.2; 2WD_BV1;  CV; Dp;27039.5 Pa
+*A.2; 2WD_BV1;  CV; Flow;13000 l/h
+*A.2; 2WD_BV1;  CIRCPIPE; Dp;0 Pa
+*A.2; 2WD_BV1;  DISTSUPPIPE; Dp;0 Pa
+*A.2; 2WD_BV1;  CIRCACC; Dp;943.266 Pa
+*A.2; 2WD_BV1;  DISTSUPACC; Dp;0 Pa
+*A.2.1; 2WD_BV1;  HM; TU-Dp;20000 Pa
+*A.2.1; 2WD_BV1;  HM; TU-Q;13000 l/h
+*A.2.1; 2WD_BV1;  HM; Dp;51988.3 Pa
+*A.2.1; 2WD_BV1;  HM; FLOW;13000 l/h
+*A.2.1; 2WD_BV1;  HM; HAvail;51988.3 Pa
+*A.2.1; 2WD_BV1;  BVP; BVNAME;STAF* 65
+*A.2.1; 2WD_BV1;  BVP; Dp;3000 Pa
+*A.2.1; 2WD_BV1;  BVP; Flow;13000 l/h
+*A.2.1; 2WD_BV1;  BVP; PRESET;7.05
+*A.2.1; 2WD_BV1;  CV; CVNAME;CV 216 RGA DN40
+*A.2.1; 2WD_BV1;  CV; CVACTR;TA-MC 55Y
+*A.2.1; 2WD_BV1;  CV; Kvs;25.00
+*A.2.1; 2WD_BV1;  CV; KvsMax;27.43
+*A.2.1; 2WD_BV1;  CV; Dp;27039.5 Pa
+*A.2.1; 2WD_BV1;  CV; Flow;13000 l/h
+*A.2.1; 2WD_BV1;  CIRCPIPE; Dp;1005.46 Pa
+*A.2.1; 2WD_BV1;  DISTSUPPIPE; Dp;670.306 Pa
+*A.2.1; 2WD_BV1;  CIRCACC; Dp;943.266 Pa
+*A.2.1; 2WD_BV1;  DISTSUPACC; Dp;0 Pa
+Rem; --------------------->SUCCESS

@@ -1,0 +1,1370 @@
+#Start of test definition
+
+StartTechnicalParameters
+ApplicationType = 8
+AvailablePMPanels = 7
+BreakTankRequiredForWaterMakeUp = 1
+CVDefKvReynard = 1
+CVMaxDispDp = 200000
+CVMaxDpProp = 65000
+CVMinAuthCstFlow = 0.5
+CVMinAuthor = 0.25
+CVMinDpOnoff = 3000
+CVMinDpProp = 10000
+CVUseDpCPBand = 0
+CanChangePressureVolumeLimit = 0
+CurrencyID = CURRENCY_EUR
+DefaultCalculationNorm = PM_NORM_EN12828
+DefaultCoolingTps = 6
+DefaultFillTemperature = 15
+DefaultHeatingTps = 70
+DefaultISChangeOverCoolingSideAdditFamilyID = WATER_ADDIT
+DefaultISChangeOverCoolingSideAdditID = WATER
+DefaultISChangeOverCoolingSideDT = 6
+DefaultISChangeOverCoolingSidePcWeight = 0
+DefaultISChangeOverCoolingSideTps = 6
+DefaultISChangeOverHeatingSideAdditFamilyID = WATER_ADDIT
+DefaultISChangeOverHeatingSideAdditID = WATER
+DefaultISChangeOverHeatingSideDT = 20
+DefaultISChangeOverHeatingSidePcWeight = 0
+DefaultISChangeOverHeatingSideTps = 70
+DefaultISCoolingAdditFamilyID = WATER_ADDIT
+DefaultISCoolingAdditID = WATER
+DefaultISCoolingDT = 6
+DefaultISCoolingPcWeight = 0
+DefaultISCoolingTps = 6
+DefaultISHeatingAdditFamilyID = WATER_ADDIT
+DefaultISHeatingAdditID = WATER
+DefaultISHeatingDT = 20
+DefaultISHeatingPcWeight = 0
+DefaultISHeatingTps = 70
+DefaultISSolarAdditFamilyID = WATER_ADDIT
+DefaultISSolarAdditID = WATER
+DefaultISSolarDT = 20
+DefaultISSolarPcWeight = 0
+DefaultISSolarTps = 70
+DefaultMaxTempInCooling = 45
+DefaultMinTempInHeating = 5
+DefaultMinTempInSolar = 5
+DefaultPipeSerieID = STEEL_DIN2440
+DefaultPrjCoolingAdditID = WATER
+DefaultPrjCoolingDT = 6
+DefaultPrjCoolingPcWeight = 0
+DefaultPrjHeatingAdditID = WATER
+DefaultPrjHeatingDT = 20
+DefaultPrjHeatingPcWeight = 0
+DefaultSafetyPressureResponseValve = 300000
+DefaultSecondaryPumpHMin = 25000
+DefaultSmartCVLocation = 1
+DefaultStaticPressureOfWaterNetwork = 400000
+DefaultTAZ = 100
+DefaultWaterHardness = 1.78324958
+DefaultWaterMakeUpTemp = 15
+DegassingWaterReserveForVessel = 0.002
+DpCBCVDpcmin = 5000
+DpCBCVDplmin = 5000
+DpCHide = 0
+DpCHminFullyOpenMv = 0
+DpCMinDp = 5000
+DpCMvLocation = 0
+DpCMvWithSameSizeOnly = 0
+DpRefForBest6Way = 3000
+FixedOrificeMaxDp = 6000
+FixedOrificeMinDp = 2000
+FlowDeviationMinus = -0.1
+FlowDeviationPlus = 0.1
+FluidTempLimitEN12953 = 105
+InitialPressureMargin = 30000
+MaxNumberOfAdditionalVesselsInParallel = 4
+MaxNumberOfVentoInParallel = 2
+MaxSafetyValveInParallel = 3
+MaxSizeShift = 4
+MinPressureMargin = 20000
+PICvHide = 0
+PICvMinDp = 1000
+PSetupCompresso = 10000
+PSetupTransfero = 20000
+PipeMaxDp = 350
+PipeMaxVelocity = 2
+PipeMinDp = 10
+PipeMinVelocity = 0.3
+PipeTargetDp = 200
+PipeTargetVelocity = 1
+PipeTargetVelosityUsed = 0
+PressureVolumeLimit = 300000
+ProjectType = 2
+SafetyTempLimiterLimitEN12953 = 110
+SizeShiftAbove = 1
+SizeShiftBelow = -2
+SmartValveDpMaxForBestSuggestion = 20000
+TrvDefDpTotal = 10000
+TrvDefRoomTemperature = 20
+TrvDefSupplyTemperature = 80
+TrvMaxDp = 30000
+TrvMinDpRatio = 0.25
+UseDefaultFreezingPointAsMinTemperature = 1
+UseSimplyPst = 0
+UseVesselPressureVolumeLimit = 0
+ValveMaxDp = 200000
+ValveMin2Dp = 6000
+ValveMinDp = 3000
+VenturiMaxDp = 10000
+VenturiMinDp = 2000
+VesselSelectionRangePercentage = 0
+EndTechnicalParameters
+
+Test number = 0
+
+SelectionMode = Individual
+ProductCategory = TA-6-way valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 6
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = CV6w
+CVCtrlType = No
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+WCTempCooling = 6
+WCTempHeating = 70
+WCPCWeightCooling = 0
+WCPCWeightHeating = 0
+SelectionMode = EQM
+FastElecConnEnabled = true
+FlowCooling = 0.0008344444442108
+FlowHeating = 0.00022222222216
+PowerCooling = 0
+DTCooling = 0
+PowerHeating = 0
+DTHeating = 0
+6WComboConnectID = 
+6WComboVersionID = 
+
+
+#StartInputs PIBCV
+
+#ProductCategory = PIBCV
+
+#StartInputs
+SecondComboTypeID = PICVTYPE_STD
+SecondComboFamilyID = 
+SecondComboMaterialID = 
+SecondComboConnectID = 
+SecondComboVersionID = 
+SecondComboPNID = 
+SecondCVCtrlType = Proportional
+SecondComboActuatorInputSignalID = 
+SecondDpMaxChecked = false
+SecondDpMax = 0
+#EndInputs PIBCV
+
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 1
+
+SelectionMode = Individual
+ProductCategory = TA-6-way valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 6
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = CV6w
+CVCtrlType = No
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+WCTempCooling = 6
+WCTempHeating = 70
+WCPCWeightCooling = 0
+WCPCWeightHeating = 0
+SelectionMode = EQM
+FastElecConnEnabled = true
+FlowCooling = 0.0008341666664331
+FlowHeating = 0.00022222222216
+PowerCooling = 0
+DTCooling = 0
+PowerHeating = 0
+DTHeating = 0
+6WComboConnectID = 
+6WComboVersionID = 
+
+
+#StartInputs PIBCV
+
+#ProductCategory = PIBCV
+
+#StartInputs
+SecondComboTypeID = PICVTYPE_STD
+SecondComboFamilyID = 
+SecondComboMaterialID = 
+SecondComboConnectID = 
+SecondComboVersionID = 
+SecondComboPNID = 
+SecondCVCtrlType = Proportional
+SecondComboActuatorInputSignalID = 
+SecondDpMaxChecked = false
+SecondDpMax = 0
+#EndInputs PIBCV
+
+EndInputs
+
+StartOutputs
+Result number = 0;6WAY_DZR_FEM_20;TA-6-way valve DN20;Dezincification resistant brass;Thread;Non-plated (raw finish);16;20 (3/4");56361.6;3910.8;-10/120;32 (1 1/4")
+Result number = 1;6WAY_DZR_CONE_1520;TA-6-way valve DN15-20;Dezincification resistant brass;M.T. Eurocone;Non-plated (raw finish);16;20 (3/4");115024;7981.22;-10/120;32 (1 1/4")
+Result number = 2;6WAY_DZR_FLAT_1520;TA-6-way valve DN15-20;Dezincification resistant brass;M.T. Flat faced ends;Non-plated (raw finish);16;20 (3/4");115024;7981.22;-10/120;32 (1 1/4")
+#StartOutputs PIBCV
+Result number = 3;TA_MODULATOR_32A;6WAY_DZR_FEM_20;TA-Modulator 32;Ametal(tm);Thread male;Standard;16;32 (1 1/4");>75;0.01;18516.2;0.00656;EqualPc;PushToClose;false;600000;-20/120;32 (1 1/4");271.119;0.824089
+#EndOutputs PIBCV
+
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 2
+
+SelectionMode = Individual
+ProductCategory = TA-6-way valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 6
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = CV6w
+CVCtrlType = No
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+WCTempCooling = 6
+WCTempHeating = 70
+WCPCWeightCooling = 0
+WCPCWeightHeating = 0
+SelectionMode = EQM
+FastElecConnEnabled = true
+FlowCooling = 0.000597222222055
+FlowHeating = 0.00022222222216
+PowerCooling = 0
+DTCooling = 0
+PowerHeating = 0
+DTHeating = 0
+6WComboConnectID = 
+6WComboVersionID = 
+
+
+#StartInputs PIBCV
+
+#ProductCategory = PIBCV
+
+#StartInputs
+SecondComboTypeID = PICVTYPE_STD
+SecondComboFamilyID = 
+SecondComboMaterialID = 
+SecondComboConnectID = 
+SecondComboVersionID = 
+SecondComboPNID = 
+SecondCVCtrlType = Proportional
+SecondComboActuatorInputSignalID = 
+SecondDpMaxChecked = false
+SecondDpMax = 0
+#EndInputs PIBCV
+
+EndInputs
+
+StartOutputs
+Result number = 0;6WAY_DZR_FEM_20;TA-6-way valve DN20;Dezincification resistant brass;Thread;Non-plated (raw finish);16;20 (3/4");28890.1;3910.8;-10/120;32 (1 1/4")
+Result number = 1;6WAY_DZR_CONE_1520;TA-6-way valve DN15-20;Dezincification resistant brass;M.T. Eurocone;Non-plated (raw finish);16;20 (3/4");58959.5;7981.22;-10/120;32 (1 1/4")
+Result number = 2;6WAY_DZR_FLAT_1520;TA-6-way valve DN15-20;Dezincification resistant brass;M.T. Flat faced ends;Non-plated (raw finish);16;20 (3/4");58959.5;7981.22;-10/120;32 (1 1/4")
+#StartOutputs PIBCV
+Result number = 3;TA_MODULATOR_32A;6WAY_DZR_FEM_20;TA-Modulator 32;Ametal(tm);Thread male;Standard;16;32 (1 1/4");>75;0.01;18516.2;0.00656;EqualPc;PushToClose;false;600000;-20/120;32 (1 1/4");147.994;0.590007
+Result number = 4;COMPACT_P_25A;6WAY_DZR_FEM_20;TA-Compact-P 25;Ametal(tm);Thread male;Standard;16;25 (1");>50;0.01;16334.1;0.004;Linear;PushToClose;false;400000;-10/90;32 (1 1/4");147.994;0.590007
+#EndOutputs PIBCV
+
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 3
+
+SelectionMode = Individual
+ProductCategory = TA-6-way valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 6
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = CV6w
+CVCtrlType = No
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+WCTempCooling = 6
+WCTempHeating = 70
+WCPCWeightCooling = 0
+WCPCWeightHeating = 0
+SelectionMode = EQM
+FastElecConnEnabled = true
+FlowCooling = 0.000594444444278
+FlowHeating = 0.00022222222216
+PowerCooling = 0
+DTCooling = 0
+PowerHeating = 0
+DTHeating = 0
+6WComboConnectID = 
+6WComboVersionID = 
+
+
+#StartInputs PIBCV
+
+#ProductCategory = PIBCV
+
+#StartInputs
+SecondComboTypeID = PICVTYPE_STD
+SecondComboFamilyID = 
+SecondComboMaterialID = 
+SecondComboConnectID = 
+SecondComboVersionID = 
+SecondComboPNID = 
+SecondCVCtrlType = Proportional
+SecondComboActuatorInputSignalID = 
+SecondDpMaxChecked = false
+SecondDpMax = 0
+#EndInputs PIBCV
+
+EndInputs
+
+StartOutputs
+Result number = 0;6WAY_DZR_FEM_20;TA-6-way valve DN20;Dezincification resistant brass;Thread;Non-plated (raw finish);16;20 (3/4");28622;3910.8;-10/120;32 (1 1/4")
+Result number = 1;6WAY_DZR_CONE_1520;TA-6-way valve DN15-20;Dezincification resistant brass;M.T. Eurocone;Non-plated (raw finish);16;20 (3/4");58412.3;7981.22;-10/120;32 (1 1/4")
+Result number = 2;6WAY_DZR_FLAT_1520;TA-6-way valve DN15-20;Dezincification resistant brass;M.T. Flat faced ends;Non-plated (raw finish);16;20 (3/4");58412.3;7981.22;-10/120;32 (1 1/4")
+#StartOutputs PIBCV
+Result number = 3;TA_MODULATOR_32A;6WAY_DZR_FEM_20;TA-Modulator 32;Ametal(tm);Thread male;Standard;16;32 (1 1/4");>75;0.01;18516.2;0.00656;EqualPc;PushToClose;false;600000;-20/120;32 (1 1/4");146.756;0.587263
+Result number = 4;COMPACT_P_25A;6WAY_DZR_FEM_20;TA-Compact-P 25;Ametal(tm);Thread male;Standard;16;25 (1");>50;0.01;16334.1;0.004;Linear;PushToClose;false;400000;-10/90;32 (1 1/4");146.756;0.587263
+#EndOutputs PIBCV
+
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 4
+
+SelectionMode = Individual
+ProductCategory = TA-6-way valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 6
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = CV6w
+CVCtrlType = No
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+WCTempCooling = 6
+WCTempHeating = 70
+WCPCWeightCooling = 0
+WCPCWeightHeating = 0
+SelectionMode = EQM
+FastElecConnEnabled = true
+FlowCooling = 0.00033333333324
+FlowHeating = 0.00011111111108
+PowerCooling = 0
+DTCooling = 0
+PowerHeating = 0
+DTHeating = 0
+6WComboConnectID = 
+6WComboVersionID = 
+
+
+#StartInputs PIBCV
+
+#ProductCategory = PIBCV
+
+#StartInputs
+SecondComboTypeID = PICVTYPE_STD
+SecondComboFamilyID = 
+SecondComboMaterialID = 
+SecondComboConnectID = 
+SecondComboVersionID = 
+SecondComboPNID = 
+SecondCVCtrlType = Proportional
+SecondComboActuatorInputSignalID = 
+SecondDpMaxChecked = false
+SecondDpMax = 0
+#EndInputs PIBCV
+
+EndInputs
+
+StartOutputs
+Result number = 0;6WAY_DZR_FEM_20;TA-6-way valve DN20;Dezincification resistant brass;Thread;Non-plated (raw finish);16;20 (3/4");8999.85;977.7;-10/120;25 (1")
+Result number = 1;6WAY_DZR_CONE_1520;TA-6-way valve DN15-20;Dezincification resistant brass;M.T. Eurocone;Non-plated (raw finish);16;20 (3/4");18367;1995.31;-10/120;25 (1")
+Result number = 2;6WAY_DZR_FLAT_1520;TA-6-way valve DN15-20;Dezincification resistant brass;M.T. Flat faced ends;Non-plated (raw finish);16;20 (3/4");18367;1995.31;-10/120;25 (1")
+Result number = 3;6WAY_STD_CONE_15;TA-6-way valve DN15;Brass;M.T. Eurocone;Nickel-plated;16;15 (1/2");92158.5;10011.6;-10/120;25 (1")
+Result number = 4;6WAY_DZR_CONE_15;TA-6-way valve DN15;Dezincification resistant brass;M.T. Eurocone;Non-plated (raw finish);16;15 (1/2");92158.5;10011.6;-10/120;25 (1")
+Result number = 5;6WAY_STD_FLAT_15;TA-6-way valve DN15;Dezincification resistant brass;M.T. Flat faced ends;Nickel-plated;16;15 (1/2");92158.5;10011.6;-10/120;25 (1")
+Result number = 6;6WAY_DZR_FLAT_15;TA-6-way valve DN15;Dezincification resistant brass;M.T. Flat faced ends;Non-plated (raw finish);16;15 (1/2");92158.5;10011.6;-10/120;25 (1")
+#StartOutputs PIBCV
+Result number = 7;TA_MODULATOR_32A;6WAY_DZR_FEM_20;TA-Modulator 32;Ametal(tm);Thread male;Standard;16;32 (1 1/4");>75;0.01;18500;0.00656;EqualPc;PushToClose;false;600000;-20/120;25 (1");200.63;0.573655
+Result number = 8;COMPACT_P_25A;6WAY_DZR_FEM_20;TA-Compact-P 25;Ametal(tm);Thread male;Standard;16;25 (1");>50;0.01;15705.5;0.004;Linear;PushToClose;false;400000;-10/90;25 (1");200.63;0.573655
+Result number = 9;TA_MODULATOR_25A;6WAY_DZR_FEM_20;TA-Modulator 25;Ametal(tm);Thread male;Standard;16;25 (1");>75;0.01;16046.6;0.00651;EqualPc;PushToClose;false;400000;-10/90;25 (1");200.63;0.573655
+Result number = 10;TA_MODULATOR_25C;6WAY_DZR_FEM_20;TA-Modulator 25;Ametal(tm);Thread male;Standard;16;25 (1");>75;0.01;16046.6;0.00651;EqualPc;PushToClose;false;600000;-20/120;25 (1");200.63;0.573655
+#EndOutputs PIBCV
+
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 5
+
+SelectionMode = Individual
+ProductCategory = TA-6-way valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 6
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = CV6w
+CVCtrlType = No
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+WCTempCooling = 6
+WCTempHeating = 70
+WCPCWeightCooling = 0
+WCPCWeightHeating = 0
+SelectionMode = EQM
+FastElecConnEnabled = true
+FlowCooling = 0.0004863888887527
+FlowHeating = 1.3888888885e-05
+PowerCooling = 0
+DTCooling = 0
+PowerHeating = 0
+DTHeating = 0
+6WComboConnectID = 
+6WComboVersionID = 
+
+
+#StartInputs PIBCV
+
+#ProductCategory = PIBCV
+
+#StartInputs
+SecondComboTypeID = PICVTYPE_STD
+SecondComboFamilyID = 
+SecondComboMaterialID = 
+SecondComboConnectID = 
+SecondComboVersionID = 
+SecondComboPNID = 
+SecondCVCtrlType = Proportional
+SecondComboActuatorInputSignalID = 
+SecondDpMaxChecked = false
+SecondDpMax = 0
+#EndInputs PIBCV
+
+EndInputs
+
+StartOutputs
+Result number = 0;6WAY_DZR_FEM_20;TA-6-way valve DN20;Dezincification resistant brass;Thread;Non-plated (raw finish);16;20 (3/4");19162.2;15.2766;-10/120;32 (1 1/4")
+Result number = 1;6WAY_DZR_CONE_1520;TA-6-way valve DN15-20;Dezincification resistant brass;M.T. Eurocone;Non-plated (raw finish);16;20 (3/4");39106.5;31.1767;-10/120;32 (1 1/4")
+Result number = 2;6WAY_DZR_FLAT_1520;TA-6-way valve DN15-20;Dezincification resistant brass;M.T. Flat faced ends;Non-plated (raw finish);16;20 (3/4");39106.5;31.1767;-10/120;32 (1 1/4")
+#StartOutputs PIBCV
+Result number = 3;TA_MODULATOR_32A;6WAY_DZR_FEM_20;TA-Modulator 32;Ametal(tm);Thread male;Standard;16;32 (1 1/4");>75;0.01;18500;0.00656;EqualPc;PushToClose;false;600000;-20/120;32 (1 1/4");102.38;0.480513
+#EndOutputs PIBCV
+
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 6
+
+SelectionMode = Individual
+ProductCategory = TA-6-way valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 6
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = CV6w
+CVCtrlType = No
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+WCTempCooling = 6
+WCTempHeating = 70
+WCPCWeightCooling = 0
+WCPCWeightHeating = 0
+SelectionMode = EQM
+FastElecConnEnabled = true
+FlowCooling = 0.000486111110975
+FlowHeating = 1.3888888885e-05
+PowerCooling = 0
+DTCooling = 0
+PowerHeating = 0
+DTHeating = 0
+6WComboConnectID = 
+6WComboVersionID = 
+
+
+#StartInputs PIBCV
+
+#ProductCategory = PIBCV
+
+#StartInputs
+SecondComboTypeID = PICVTYPE_STD
+SecondComboFamilyID = 
+SecondComboMaterialID = 
+SecondComboConnectID = 
+SecondComboVersionID = 
+SecondComboPNID = 
+SecondCVCtrlType = Proportional
+SecondComboActuatorInputSignalID = 
+SecondDpMaxChecked = false
+SecondDpMax = 0
+#EndInputs PIBCV
+
+EndInputs
+
+StartOutputs
+Result number = 0;6WAY_DZR_FEM_20;TA-6-way valve DN20;Dezincification resistant brass;Thread;Non-plated (raw finish);16;20 (3/4");19140.3;15.2766;-10/120;32 (1 1/4")
+Result number = 1;6WAY_DZR_CONE_1520;TA-6-way valve DN15-20;Dezincification resistant brass;M.T. Eurocone;Non-plated (raw finish);16;20 (3/4");39061.8;31.1767;-10/120;32 (1 1/4")
+Result number = 2;6WAY_DZR_FLAT_1520;TA-6-way valve DN15-20;Dezincification resistant brass;M.T. Flat faced ends;Non-plated (raw finish);16;20 (3/4");39061.8;31.1767;-10/120;32 (1 1/4")
+#StartOutputs PIBCV
+Result number = 3;TA_MODULATOR_32A;6WAY_DZR_FEM_20;TA-Modulator 32;Ametal(tm);Thread male;Standard;16;32 (1 1/4");>75;0.01;18500;0.00656;EqualPc;PushToClose;false;600000;-20/120;32 (1 1/4");102.275;0.480238
+Result number = 4;TA_MODULATOR_25A;6WAY_DZR_FEM_20;TA-Modulator 25;Ametal(tm);Thread male;Standard;16;25 (1");>75;0.01;16000;0.00651;EqualPc;PushToClose;false;400000;-10/90;32 (1 1/4");102.275;0.480238
+Result number = 5;TA_MODULATOR_25C;6WAY_DZR_FEM_20;TA-Modulator 25;Ametal(tm);Thread male;Standard;16;25 (1");>75;0.01;16000;0.00651;EqualPc;PushToClose;false;600000;-20/120;32 (1 1/4");102.275;0.480238
+#EndOutputs PIBCV
+
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 7
+
+SelectionMode = Individual
+ProductCategory = TA-6-way valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 6
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = CV6w
+CVCtrlType = No
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+WCTempCooling = 6
+WCTempHeating = 70
+WCPCWeightCooling = 0
+WCPCWeightHeating = 0
+SelectionMode = EQM
+FastElecConnEnabled = false
+FlowCooling = 0.00041666666655
+FlowHeating = 0.00013888888885
+PowerCooling = 0
+DTCooling = 0
+PowerHeating = 0
+DTHeating = 0
+6WComboConnectID = 
+6WComboVersionID = 
+
+
+#StartInputs PIBCV
+
+#ProductCategory = PIBCV
+
+#StartInputs
+SecondComboTypeID = PICVTYPE_STD
+SecondComboFamilyID = 
+SecondComboMaterialID = 
+SecondComboConnectID = 
+SecondComboVersionID = 
+SecondComboPNID = 
+SecondCVCtrlType = Proportional
+SecondComboActuatorInputSignalID = 
+SecondDpMaxChecked = false
+SecondDpMax = 0
+#EndInputs PIBCV
+
+EndInputs
+
+StartOutputs
+Result number = 0;6WAY_DZR_FEM_20;TA-6-way valve DN20;Dezincification resistant brass;Thread;Non-plated (raw finish);16;20 (3/4");14062.3;1527.66;-10/120;25 (1")
+Result number = 1;6WAY_DZR_CONE_1520;TA-6-way valve DN15-20;Dezincification resistant brass;M.T. Eurocone;Non-plated (raw finish);16;20 (3/4");28698.5;3117.67;-10/120;25 (1")
+Result number = 2;6WAY_DZR_FLAT_1520;TA-6-way valve DN15-20;Dezincification resistant brass;M.T. Flat faced ends;Non-plated (raw finish);16;20 (3/4");28698.5;3117.67;-10/120;25 (1")
+Result number = 3;6WAY_STD_CONE_15;TA-6-way valve DN15;Brass;M.T. Eurocone;Nickel-plated;16;15 (1/2");143998;15643.2;-10/120;25 (1")
+Result number = 4;6WAY_DZR_CONE_15;TA-6-way valve DN15;Dezincification resistant brass;M.T. Eurocone;Non-plated (raw finish);16;15 (1/2");143998;15643.2;-10/120;25 (1")
+Result number = 5;6WAY_STD_FLAT_15;TA-6-way valve DN15;Dezincification resistant brass;M.T. Flat faced ends;Nickel-plated;16;15 (1/2");143998;15643.2;-10/120;25 (1")
+Result number = 6;6WAY_DZR_FLAT_15;TA-6-way valve DN15;Dezincification resistant brass;M.T. Flat faced ends;Non-plated (raw finish);16;15 (1/2");143998;15643.2;-10/120;25 (1")
+#StartOutputs PIBCV
+Result number = 7;TA_MODULATOR_32A;6WAY_DZR_FEM_20;TA-Modulator 32;Ametal(tm);Thread male;Standard;16;32 (1 1/4");>75;0.01;18500;0.00656;EqualPc;PushToClose;false;600000;-20/120;25 (1");299.914;0.717069
+Result number = 8;COMPACT_P_25A;6WAY_DZR_FEM_20;TA-Compact-P 25;Ametal(tm);Thread male;Standard;16;25 (1");>50;0.01;15807.3;0.004;Linear;PushToClose;false;400000;-10/90;25 (1");299.914;0.717069
+Result number = 9;TA_MODULATOR_25A;6WAY_DZR_FEM_20;TA-Modulator 25;Ametal(tm);Thread male;Standard;16;25 (1");>75;0.01;16238.1;0.00651;EqualPc;PushToClose;false;400000;-10/90;25 (1");299.914;0.717069
+Result number = 10;TA_MODULATOR_25C;6WAY_DZR_FEM_20;TA-Modulator 25;Ametal(tm);Thread male;Standard;16;25 (1");>75;0.01;16238.1;0.00651;EqualPc;PushToClose;false;600000;-20/120;25 (1");299.914;0.717069
+#EndOutputs PIBCV
+
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 8
+
+SelectionMode = Individual
+ProductCategory = TA-6-way valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 6
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = CV6w
+CVCtrlType = No
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+WCTempCooling = 6
+WCTempHeating = 70
+WCPCWeightCooling = 0
+WCPCWeightHeating = 0
+SelectionMode = Onoff PIBCV
+FastElecConnEnabled = false
+FlowCooling = 0.0008344444442108
+FlowHeating = 0.00022222222216
+PowerCooling = 0
+DTCooling = 0
+PowerHeating = 0
+DTHeating = 0
+6WComboConnectID = 
+6WComboVersionID = 
+
+
+#StartInputs PIBCV
+
+#ProductCategory = PIBCV
+
+#StartInputs
+SecondComboTypeID = PICVTYPE_STD
+SecondComboFamilyID = FAM_COMPACT_P
+SecondComboMaterialID = BDY_AMETAL
+SecondComboConnectID = CONN_THREADM
+SecondComboVersionID = VERS_STD
+SecondComboPNID = PN_3
+SecondCVCtrlType = Proportional
+SecondComboActuatorInputSignalID = 
+SecondDpMaxChecked = false
+SecondDpMax = 0
+#EndInputs PIBCV
+
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 9
+
+SelectionMode = Individual
+ProductCategory = TA-6-way valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 6
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = CV6w
+CVCtrlType = No
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+WCTempCooling = 6
+WCTempHeating = 70
+WCPCWeightCooling = 0
+WCPCWeightHeating = 0
+SelectionMode = Onoff PIBCV
+FastElecConnEnabled = false
+FlowCooling = 0.0008341666664331
+FlowHeating = 0.00022222222216
+PowerCooling = 0
+DTCooling = 0
+PowerHeating = 0
+DTHeating = 0
+6WComboConnectID = 
+6WComboVersionID = 
+
+
+#StartInputs PIBCV
+
+#ProductCategory = PIBCV
+
+#StartInputs
+SecondComboTypeID = PICVTYPE_STD
+SecondComboFamilyID = FAM_COMPACT_P
+SecondComboMaterialID = BDY_AMETAL
+SecondComboConnectID = CONN_THREADM
+SecondComboVersionID = VERS_STD
+SecondComboPNID = PN_3
+SecondCVCtrlType = Proportional
+SecondComboActuatorInputSignalID = 
+SecondDpMaxChecked = false
+SecondDpMax = 0
+#EndInputs PIBCV
+
+EndInputs
+
+StartOutputs
+Result number = 0;6WAY_DZR_FEM_20;TA-6-way valve DN20;Dezincification resistant brass;Thread;Non-plated (raw finish);16;20 (3/4");56361.6;3910.8;-10/120;32 (1 1/4")
+Result number = 1;6WAY_DZR_CONE_1520;TA-6-way valve DN15-20;Dezincification resistant brass;M.T. Eurocone;Non-plated (raw finish);16;20 (3/4");115024;7981.22;-10/120;32 (1 1/4")
+Result number = 2;6WAY_DZR_FLAT_1520;TA-6-way valve DN15-20;Dezincification resistant brass;M.T. Flat faced ends;Non-plated (raw finish);16;20 (3/4");115024;7981.22;-10/120;32 (1 1/4")
+#StartOutputs PIBCV Cooling
+Result number = 3;COMPACT_P_32A;6WAY_DZR_FEM_20;TA-Compact-P 32;Ametal(tm);Thread male;Standard;16;32 (1 1/4");6.72476;6.75 (0.25);>50;0.01;21362.4;0.004;Linear;PushToClose;false;400000;-10/90;32 (1 1/4");271.119;0.824089
+#EndOutputs PIBCV Cooling
+
+#StartOutputs PIBCV Heating
+Result number = 4;COMPACT_P_25A;6WAY_DZR_FEM_20;TA-Compact-P 25;Ametal(tm);Thread male;Standard;16;25 (1");2.8629;2.75 (0.25);>50;0.01;16334.1;0.004;Linear;PushToClose;false;400000;-10/90;20 (3/4");298.277;0.606443
+Result number = 5;COMPACT_P_20A;6WAY_DZR_FEM_20;TA-Compact-P 20;Ametal(tm);Thread male;Standard;16;20 (3/4");6.18614;6.25 (0.25);>50;0.01;14554.1;0.004;Linear;PushToClose;false;400000;-10/90;20 (3/4");298.277;0.606443
+#EndOutputs PIBCV Heating
+
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 10
+
+SelectionMode = Individual
+ProductCategory = TA-6-way valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 6
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = PowerDTMode
+Flow = 0
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = CV6w
+CVCtrlType = No
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+WCTempCooling = 6
+WCTempHeating = 70
+WCPCWeightCooling = 0
+WCPCWeightHeating = 0
+SelectionMode = Onoff PIBCV
+FastElecConnEnabled = false
+FlowCooling = 0.0003967663137578
+FlowHeating = 9.764282887875e-05
+PowerCooling = 10000
+DTCooling = 6
+PowerHeating = 8000
+DTHeating = 20
+6WComboConnectID = 
+6WComboVersionID = 
+
+
+#StartInputs PIBCV
+
+#ProductCategory = PIBCV
+
+#StartInputs
+SecondComboTypeID = PICVTYPE_STD
+SecondComboFamilyID = FAM_COMPACT_P
+SecondComboMaterialID = BDY_AMETAL
+SecondComboConnectID = CONN_THREADM
+SecondComboVersionID = VERS_STD
+SecondComboPNID = PN_3
+SecondCVCtrlType = Proportional
+SecondComboActuatorInputSignalID = 
+SecondDpMaxChecked = false
+SecondDpMax = 0
+#EndInputs PIBCV
+
+EndInputs
+
+StartOutputs
+Result number = 0;6WAY_DZR_FEM_20;TA-6-way valve DN20;Dezincification resistant brass;Thread;Non-plated (raw finish);16;20 (3/4");12751.1;755.042;-10/120;25 (1")
+Result number = 1;6WAY_DZR_CONE_1520;TA-6-way valve DN15-20;Dezincification resistant brass;M.T. Eurocone;Non-plated (raw finish);16;20 (3/4");26022.6;1540.9;-10/120;25 (1")
+Result number = 2;6WAY_DZR_FLAT_1520;TA-6-way valve DN15-20;Dezincification resistant brass;M.T. Flat faced ends;Non-plated (raw finish);16;20 (3/4");26022.6;1540.9;-10/120;25 (1")
+Result number = 3;6WAY_STD_CONE_15;TA-6-way valve DN15;Brass;M.T. Eurocone;Nickel-plated;16;15 (1/2");130571;7731.63;-10/120;25 (1")
+Result number = 4;6WAY_DZR_CONE_15;TA-6-way valve DN15;Dezincification resistant brass;M.T. Eurocone;Non-plated (raw finish);16;15 (1/2");130571;7731.63;-10/120;25 (1")
+Result number = 5;6WAY_STD_FLAT_15;TA-6-way valve DN15;Dezincification resistant brass;M.T. Flat faced ends;Nickel-plated;16;15 (1/2");130571;7731.63;-10/120;25 (1")
+Result number = 6;6WAY_DZR_FLAT_15;TA-6-way valve DN15;Dezincification resistant brass;M.T. Flat faced ends;Non-plated (raw finish);16;15 (1/2");130571;7731.63;-10/120;25 (1")
+#StartOutputs PIBCV Cooling
+Result number = 7;COMPACT_P_32A;6WAY_DZR_FEM_20;TA-Compact-P 32;Ametal(tm);Thread male;Standard;16;32 (1 1/4");2.52447;2.5 (0.25);>50;0.01;19338.9;0.004;Linear;PushToClose;false;400000;-10/90;25 (1");274.525;0.682821
+Result number = 8;COMPACT_P_25A;6WAY_DZR_FEM_20;TA-Compact-P 25;Ametal(tm);Thread male;Standard;16;25 (1");5.7231;5.75 (0.25);>50;0.01;18723.1;0.004;Linear;PushToClose;false;400000;-10/90;25 (1");274.525;0.682821
+#EndOutputs PIBCV Cooling
+
+#StartOutputs PIBCV Heating
+Result number = 9;COMPACT_P_20A;6WAY_DZR_FEM_20;TA-Compact-P 20;Ametal(tm);Thread male;Standard;16;20 (3/4");2.13151;2.25 (0.25);>50;0.01;13163.6;0.004;Linear;PushToClose;false;400000;-10/90;15 (1/2");296.5;0.485636
+Result number = 10;COMPACT_P_15A;6WAY_DZR_FEM_20;TA-Compact-P 15;Ametal(tm);Thread male;Standard;16;15 (1/2");6.27879;6.25 (0.25);>50;0.01;14379.2;0.004;Linear;PushToClose;false;400000;-10/90;15 (1/2");296.5;0.485636
+#EndOutputs PIBCV Heating
+
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 11
+
+SelectionMode = Individual
+ProductCategory = TA-6-way valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 6
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = CV6w
+CVCtrlType = No
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+WCTempCooling = 6
+WCTempHeating = 70
+WCPCWeightCooling = 0
+WCPCWeightHeating = 0
+SelectionMode = Onoff PIBCV
+FastElecConnEnabled = false
+FlowCooling = 0.0008333333331
+FlowHeating = 4.1666666655e-06
+PowerCooling = 0
+DTCooling = 0
+PowerHeating = 0
+DTHeating = 0
+6WComboConnectID = 
+6WComboVersionID = 
+
+
+#StartInputs PIBCV
+
+#ProductCategory = PIBCV
+
+#StartInputs
+SecondComboTypeID = PICVTYPE_STD
+SecondComboFamilyID = FAM_COMPACT_P
+SecondComboMaterialID = BDY_AMETAL
+SecondComboConnectID = CONN_THREADM
+SecondComboVersionID = VERS_STD
+SecondComboPNID = PN_3
+SecondCVCtrlType = Proportional
+SecondComboActuatorInputSignalID = 
+SecondDpMaxChecked = false
+SecondDpMax = 0
+#EndInputs PIBCV
+
+EndInputs
+
+StartOutputs
+Result number = 0;6WAY_DZR_FEM_20;TA-6-way valve DN20;Dezincification resistant brass;Thread;Non-plated (raw finish);16;20 (3/4");56249.1;1.37489;-10/120;32 (1 1/4")
+Result number = 1;6WAY_DZR_CONE_1520;TA-6-way valve DN15-20;Dezincification resistant brass;M.T. Eurocone;Non-plated (raw finish);16;20 (3/4");114794;2.8059;-10/120;32 (1 1/4")
+Result number = 2;6WAY_DZR_FLAT_1520;TA-6-way valve DN15-20;Dezincification resistant brass;M.T. Flat faced ends;Non-plated (raw finish);16;20 (3/4");114794;2.8059;-10/120;32 (1 1/4")
+#StartOutputs PIBCV Cooling
+Result number = 3;COMPACT_P_32A;6WAY_DZR_FEM_20;TA-Compact-P 32;Ametal(tm);Thread male;Standard;16;32 (1 1/4");6.71408;6.75 (0.25);>50;0.01;21357;0.004;Linear;PushToClose;false;400000;-10/90;32 (1 1/4");270.626;0.823266
+#EndOutputs PIBCV Cooling
+
+#StartOutputs PIBCV Heating
+Result number = 4;COMPACT_P_10A;6WAY_DZR_FEM_20;TA-Compact-P 10;Ametal(tm);Thread male;Standard;16;10 (3/8");0.679962;0.75 (0.25);>50;0.01;15600;0.004;Linear;PushToClose;false;400000;-10/90;10 (3/8");10.2445;0.0339531
+#EndOutputs PIBCV Heating
+
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 12
+
+SelectionMode = Individual
+ProductCategory = TA-6-way valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 6
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = CV6w
+CVCtrlType = No
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+WCTempCooling = 6
+WCTempHeating = 70
+WCPCWeightCooling = 0
+WCPCWeightHeating = 0
+SelectionMode = Onoff PIBCV
+FastElecConnEnabled = false
+FlowCooling = 0.0008333333331
+FlowHeating = 2.777777777e-06
+PowerCooling = 0
+DTCooling = 0
+PowerHeating = 0
+DTHeating = 0
+6WComboConnectID = 
+6WComboVersionID = 
+
+
+#StartInputs PIBCV
+
+#ProductCategory = PIBCV
+
+#StartInputs
+SecondComboTypeID = PICVTYPE_STD
+SecondComboFamilyID = FAM_COMPACT_P
+SecondComboMaterialID = BDY_AMETAL
+SecondComboConnectID = CONN_THREADM
+SecondComboVersionID = VERS_STD
+SecondComboPNID = PN_3
+SecondCVCtrlType = Proportional
+SecondComboActuatorInputSignalID = 
+SecondDpMaxChecked = false
+SecondDpMax = 0
+#EndInputs PIBCV
+
+EndInputs
+
+StartOutputs
+Result number = 0;6WAY_DZR_FEM_20;TA-6-way valve DN20;Dezincification resistant brass;Thread;Non-plated (raw finish);16;20 (3/4");56249.1;0.611062;-10/120;32 (1 1/4")
+Result number = 1;6WAY_DZR_CONE_1520;TA-6-way valve DN15-20;Dezincification resistant brass;M.T. Eurocone;Non-plated (raw finish);16;20 (3/4");114794;1.24707;-10/120;32 (1 1/4")
+Result number = 2;6WAY_DZR_FLAT_1520;TA-6-way valve DN15-20;Dezincification resistant brass;M.T. Flat faced ends;Non-plated (raw finish);16;20 (3/4");114794;1.24707;-10/120;32 (1 1/4")
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 13
+
+SelectionMode = Individual
+ProductCategory = TA-6-way valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 6
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = CV6w
+CVCtrlType = No
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+WCTempCooling = 6
+WCTempHeating = 70
+WCPCWeightCooling = 0
+WCPCWeightHeating = 0
+SelectionMode = Onoff BV
+FastElecConnEnabled = false
+FlowCooling = 0.0008341666664331
+FlowHeating = 0.00022222222216
+PowerCooling = 0
+DTCooling = 0
+PowerHeating = 0
+DTHeating = 0
+6WComboConnectID = 
+6WComboVersionID = 
+
+
+#StartInputs BV
+
+#ProductCategory = BV
+
+#StartInputs
+SecondComboTypeID = RVTYPE_BV
+SecondComboFamilyID = FAM_STADA*
+SecondComboMaterialID = BDY_AMETAL
+SecondComboConnectID = CONN_THREAD
+SecondComboVersionID = VERS_DRAIN34
+SecondComboPNID = PN_5
+#EndInputs BV
+
+EndInputs
+
+StartOutputs
+Result number = 0;6WAY_DZR_FEM_20;TA-6-way valve DN20;Dezincification resistant brass;Thread;Non-plated (raw finish);16;20 (3/4");56361.6;3910.8;-10/120;32 (1 1/4")
+Result number = 1;6WAY_DZR_CONE_1520;TA-6-way valve DN15-20;Dezincification resistant brass;M.T. Eurocone;Non-plated (raw finish);16;20 (3/4");115024;7981.22;-10/120;32 (1 1/4")
+Result number = 2;6WAY_DZR_FLAT_1520;TA-6-way valve DN15-20;Dezincification resistant brass;M.T. Flat faced ends;Non-plated (raw finish);16;20 (3/4");115024;7981.22;-10/120;32 (1 1/4")
+#StartOutputs BV Cooling
+Result number = 3;STADA*40A_BV;6WAY_DZR_FEM_20;STADA* 40;Ametal(tm);Thread;With drain 3/4";25;40 (1 1/2");3.68561;3.69 (0.01);3000;2435.95;23081.9;-20/120;32 (1 1/4");271.119;0.824089
+Result number = 4;STADA*32A_BV;6WAY_DZR_FEM_20;STADA* 32;Ametal(tm);Thread;With drain 3/4";25;32 (1 1/4");4;4* (0.01);4485.78;4485.78;33067.4;-20/120;32 (1 1/4");271.119;0.824089
+Result number = 5;STADA*25A_BV;6WAY_DZR_FEM_20;STADA* 25;Ametal(tm);Thread;With drain 3/4";25;25 (1");4;4* (0.01);12228.2;12228.2;67976.4;-20/120;32 (1 1/4");271.119;0.824089
+Result number = 6;STADA*20A_BV;6WAY_DZR_FEM_20;STADA* 20;Ametal(tm);Thread;With drain 3/4";25;20 (3/4");4;4* (0.01);31029.7;31029.7;236067;-20/120;32 (1 1/4");271.119;0.824089
+#EndOutputs BV Cooling
+
+#StartOutputs BV Heating
+Result number = 7;STADA*25A_BV;6WAY_DZR_FEM_20;STADA* 25;Ametal(tm);Thread;With drain 3/4";25;25 (1");2.28257;2.28 (0.01);3000;848.607;4717.2;-20/120;20 (3/4");298.277;0.606443
+Result number = 8;STADA*20A_BV;6WAY_DZR_FEM_20;STADA* 20;Ametal(tm);Thread;With drain 3/4";25;20 (3/4");3.53304;3.53 (0.01);3000;2153.31;16382.1;-20/120;20 (3/4");298.277;0.606443
+Result number = 9;STADA*15A_BV;6WAY_DZR_FEM_20;STADA* 15;Ametal(tm);Thread;With drain 3/4";25;15 (1/2");4;4* (0.01);9537.18;9537.18;161817;-20/120;20 (3/4");298.277;0.606443
+Result number = 10;STADA*10A_BV;6WAY_DZR_FEM_20;STADA* 10;Ametal(tm);Thread;With drain 3/4";25;10 (3/8");4;4* (0.01);33719.6;33719.6;873913;-20/120;20 (3/4");298.277;0.606443
+#EndOutputs BV Heating
+
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 14
+
+SelectionMode = Individual
+ProductCategory = TA-6-way valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 6
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = PowerDTMode
+Flow = 0
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = CV6w
+CVCtrlType = No
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+WCTempCooling = 6
+WCTempHeating = 70
+WCPCWeightCooling = 0
+WCPCWeightHeating = 0
+SelectionMode = Onoff BV
+FastElecConnEnabled = false
+FlowCooling = 0.0003967663137578
+FlowHeating = 9.764282887875e-05
+PowerCooling = 10000
+DTCooling = 6
+PowerHeating = 8000
+DTHeating = 20
+6WComboConnectID = 
+6WComboVersionID = 
+
+
+#StartInputs BV
+
+#ProductCategory = BV
+
+#StartInputs
+SecondComboTypeID = RVTYPE_BV
+SecondComboFamilyID = FAM_STAD-R*
+SecondComboMaterialID = BDY_AMETAL
+SecondComboConnectID = CONN_THREAD
+SecondComboVersionID = VERS_DRAIN34
+SecondComboPNID = PN_5
+#EndInputs BV
+
+EndInputs
+
+StartOutputs
+Result number = 0;6WAY_DZR_FEM_20;TA-6-way valve DN20;Dezincification resistant brass;Thread;Non-plated (raw finish);16;20 (3/4");12751.1;755.042;-10/120;25 (1")
+Result number = 1;6WAY_DZR_CONE_1520;TA-6-way valve DN15-20;Dezincification resistant brass;M.T. Eurocone;Non-plated (raw finish);16;20 (3/4");26022.6;1540.9;-10/120;25 (1")
+Result number = 2;6WAY_DZR_FLAT_1520;TA-6-way valve DN15-20;Dezincification resistant brass;M.T. Flat faced ends;Non-plated (raw finish);16;20 (3/4");26022.6;1540.9;-10/120;25 (1")
+Result number = 3;6WAY_STD_CONE_15;TA-6-way valve DN15;Brass;M.T. Eurocone;Nickel-plated;16;15 (1/2");130571;7731.63;-10/120;25 (1")
+Result number = 4;6WAY_DZR_CONE_15;TA-6-way valve DN15;Dezincification resistant brass;M.T. Eurocone;Non-plated (raw finish);16;15 (1/2");130571;7731.63;-10/120;25 (1")
+Result number = 5;6WAY_STD_FLAT_15;TA-6-way valve DN15;Dezincification resistant brass;M.T. Flat faced ends;Nickel-plated;16;15 (1/2");130571;7731.63;-10/120;25 (1")
+Result number = 6;6WAY_DZR_FLAT_15;TA-6-way valve DN15;Dezincification resistant brass;M.T. Flat faced ends;Non-plated (raw finish);16;15 (1/2");130571;7731.63;-10/120;25 (1")
+#StartOutputs BV Cooling
+Result number = 7;STADR*25A_BV;6WAY_DZR_FEM_20;STADR* 25;Ametal(tm);Thread;With drain 3/4";25;25 (1");4;4* (0.01);8462.61;8462.61;128507;-20/120;25 (1");274.525;0.682821
+Result number = 8;STADR*20A_BV;6WAY_DZR_FEM_20;STADR* 20;Ametal(tm);Thread;With drain 3/4";25;20 (3/4");4;4* (0.01);29495.5;29495.5;405859;-20/120;25 (1");274.525;0.682821
+Result number = 9;STADR*15A_BV;6WAY_DZR_FEM_20;STADR* 15;Ametal(tm);Thread;With drain 3/4";25;15 (1/2");4;4* (0.01);126491;126491;2.65894e+06;-20/120;25 (1");274.525;0.682821
+#EndOutputs BV Cooling
+
+#StartOutputs BV Heating
+Result number = 10;STADR*20A_BV;6WAY_DZR_FEM_20;STADR* 20;Ametal(tm);Thread;With drain 3/4";25;20 (3/4");3.55888;3.56 (0.01);3000;1746.55;24032.5;-20/120;15 (1/2");296.5;0.485636
+Result number = 11;STADR*15A_BV;6WAY_DZR_FEM_20;STADR* 15;Ametal(tm);Thread;With drain 3/4";25;15 (1/2");4;4* (0.01);7490.04;7490.04;157446;-20/120;15 (1/2");296.5;0.485636
+#EndOutputs BV Heating
+
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 15
+
+SelectionMode = Individual
+ProductCategory = TA-6-way valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 6
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = PowerDTMode
+Flow = 0
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = CONN_FLATFACED_THRM
+ComboVersionID = VERS_NONPLATED
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = CV6w
+CVCtrlType = No
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+WCTempCooling = 6
+WCTempHeating = 70
+WCPCWeightCooling = 0
+WCPCWeightHeating = 0
+SelectionMode = Alone
+FastElecConnEnabled = false
+FlowCooling = 0.000714179364764
+FlowHeating = 0.0001464642433181
+PowerCooling = 18000
+DTCooling = 6
+PowerHeating = 12000
+DTHeating = 20
+6WComboConnectID = CONN_FLATFACED_THRM
+6WComboVersionID = VERS_NONPLATED
+EndInputs
+
+StartOutputs
+Result number = 0;6WAY_DZR_FLAT_1520;TA-6-way valve DN15-20;Dezincification resistant brass;M.T. Flat faced ends;Non-plated (raw finish);16;20 (3/4");84313.3;3467.03;-10/120;32 (1 1/4")
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+

@@ -1,0 +1,51 @@
+Nb of file = 3
+
+* Hydronic calculation\utests_HydronicCalculation\CV\TestCV22.txt - TestCV22.tsp
+	- Node A.1: "*A.1; 2WD_BV1; CV; ***ERROR*** Kvs > Kvs max;"
+		=> Due to the parameter size below = 2 and the pipe size = 40, we can not go under DN 25 size. 
+		   Unfortunately the CV 216 RGA DN25 has its kvs 8.00 > kvs max 7.54.
+		   The old replaced valve was CV 216 MZ DN25 with kvs = 6.30 kvs max = 7.16.
+
+*Hydronic calculation\utests_HydronicCalculation\AutoAdaptive\ModuleBigHavailChildrenCVTAAuthOK.txt - .tsp
+	- Node A.1.1: "*A.1.1; 2WD_BV1; CV; ***ERROR*** Kvs > Kvs max;"
+		=> Due to the lower size DN15, we can not get valves with lower size. 
+		   Unfortunately the CV 216 RGA DN15 has its kvs 0.63 > kvs max 0.6.
+		   The old replaced valve was CV 216 MZ DN15 with kvs = 0.40 kvs max = 0.6.
+	- Node A.1.2: "*A.1.2; 2WD_BV1; CV; ***ERROR*** Kvs > Kvs max;"
+		=> Due to the lower size DN15, we can not get valves with lower size. 
+		   Unfortunately the CV 216 RGA DN15 has its kvs 0.63 > kvs max 0.6.
+		   The old replaced valve was CV 216 MZ DN15 with kvs = 0.40 kvs max = 0.6.
+	- Node A.1.3: "*A.1.3; 2WD_BV1; CV; ***ERROR*** Kvs > Kvs max;"
+		=> Due to the lower size DN15, we can not get valves with lower size. 
+		   Unfortunately the CV 216 RGA DN15 has its kvs 0.63 > kvs max 0.6.
+		   The old replaced valve was CV 216 MZ DN15 with kvs = 0.40 kvs max = 0.6.
+	- Node A.1.4: "*A.1.4; 2WD_BV1; CV; ***ERROR*** Kvs > Kvs max;"
+		=> Due to the lower size DN15, we can not get valves with lower size. 
+		   Unfortunately the CV 216 RGA DN15 has its kvs 0.63 > kvs max 0.6.
+		   The old replaced valve was CV 216 MZ DN15 with kvs = 0.40 kvs max = 0.6.
+	- Node A.1.5: "*A.1.5; 2WD_BV1; CV; ***ERROR*** Kvs > Kvs max;"
+		=> Due to the lower size DN15, we can not get valves with lower size. 
+		   Unfortunately the CV 216 RGA DN15 has its kvs 0.63 > kvs max 0.6.
+		   The old replaced valve was CV 216 MZ DN15 with kvs = 0.40 kvs max = 0.6.
+
+*Hydronic calculation\utests_HydronicCalculation\AutoAdaptive\ModuleBigHavailChildrenCVTAAuthOKHuser.txt - .tsp
+	- Node A.1.1: "*A.1.1; 2WD_BV1; CV; ***ERROR*** Kvs > Kvs max;"
+		=> Due to the lower size DN15, we can not get valves with lower size. 
+		   Unfortunately the CV 216 RGA DN15 has its kvs 0.63 > kvs max 0.571.
+		   The old replaced valve was CV 216 MZ DN15 with kvs = 0.40 kvs max = 0.0.571.
+	- Node A.1.2: "*A.1.2; 2WD_BV1; CV; ***ERROR*** Kvs > Kvs max;"
+		=> Due to the lower size DN15, we can not get valves with lower size. 
+		   Unfortunately the CV 216 RGA DN15 has its kvs 0.63 > kvs max 0.571.
+		   The old replaced valve was CV 216 MZ DN15 with kvs = 0.40 kvs max = 0.571.
+	- Node A.1.3: "*A.1.3; 2WD_BV1; CV; ***ERROR*** Kvs > Kvs max;"
+		=> Due to the lower size DN15, we can not get valves with lower size. 
+		   Unfortunately the CV 216 RGA DN15 has its kvs 0.63 > kvs max 0.571.
+		   The old replaced valve was CV 216 MZ DN15 with kvs = 0.40 kvs max = 0.571.
+	- Node A.1.4: "*A.1.4; 2WD_BV1; CV; ***ERROR*** Kvs > Kvs max;"
+		=> Due to the lower size DN15, we can not get valves with lower size. 
+		   Unfortunately the CV 216 RGA DN15 has its kvs 0.63 > kvs max 0.571.
+		   The old replaced valve was CV 216 MZ DN15 with kvs = 0.40 kvs max = 0.571.
+	- Node A.1.5: "*A.1.5; 2WD_BV1; CV; ***ERROR*** Kvs > Kvs max;"
+		=> Due to the lower size DN15, we can not get valves with lower size. 
+		   Unfortunately the CV 216 RGA DN15 has its kvs 0.63 > kvs max 0.571.
+		   The old replaced valve was CV 216 MZ DN15 with kvs = 0.40 kvs max = 0.571.

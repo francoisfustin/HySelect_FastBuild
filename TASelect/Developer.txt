@@ -1,0 +1,4 @@
+tahcollege
+
+This file must be located in the installation directory of HySelect.
+Without this file and the word "tahcollege" start in it, it's not possible to launch unit test.

@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<CDataSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Modified>true</Modified>
+  <Mnfr>
+    <ID>MNFR_212406290115</ID>
+    <Name>TACO</Name>
+    <FamTab>
+      <ID>FAMTAB_162206290115</ID>
+      <Name>Alien family table</Name>
+      <List>
+        <CDataFamily>
+          <ID>FAM_082506290115</ID>
+          <Name>Accu-Flow</Name>
+          <Order>0</Order>
+        </CDataFamily>
+      </List>
+    </FamTab>
+    <CharTab>
+      <ID>CHARTAB_162206290115</ID>
+      <Name>Alien char table</Name>
+      <List />
+    </CharTab>
+    <ValveTab>
+      <ID>VALVTAB_162206290115</ID>
+      <Name>Alien valve table</Name>
+      <List>
+        <CValve>
+          <ID>VALV_012606290115</ID>
+          <Name>ACUF-050-AC Sweat</Name>
+          <FamID>FAM_082506290115</FamID>
+          <DNID>DN_15</DNID>
+          <CharID />
+          <KvsSignal>1.8337493150400002</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_412906290115</ID>
+          <Name>ACUF-050-AT NPT</Name>
+          <FamID>FAM_082506290115</FamID>
+          <DNID>DN_15</DNID>
+          <CharID />
+          <KvsSignal>1.8337493150400002</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_233406290115</ID>
+          <Name>ACUF-075-AC Sweat</Name>
+          <FamID>FAM_082506290115</FamID>
+          <DNID>DN_20</DNID>
+          <CharID />
+          <KvsSignal>3.3734067588</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_443406290115</ID>
+          <Name>ACUF-075-AT NPT</Name>
+          <FamID>FAM_082506290115</FamID>
+          <DNID>DN_20</DNID>
+          <CharID />
+          <KvsSignal>3.3734067588</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_403506290115</ID>
+          <Name>ACUF-100-AC Sweat</Name>
+          <FamID>FAM_082506290115</FamID>
+          <DNID>DN_25</DNID>
+          <CharID />
+          <KvsSignal>7.2657991728</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_503506290115</ID>
+          <Name>ACUF-100-AT NPT</Name>
+          <FamID>FAM_082506290115</FamID>
+          <DNID>DN_25</DNID>
+          <CharID />
+          <KvsSignal>7.2657991728</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_263606290115</ID>
+          <Name>ACUF-125-AC Sweat</Name>
+          <FamID>FAM_082506290115</FamID>
+          <DNID>DN_32</DNID>
+          <CharID />
+          <KvsSignal>14.9640863916</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_383606290115</ID>
+          <Name>ACUF-125-AT NPT</Name>
+          <FamID>FAM_082506290115</FamID>
+          <DNID>DN_32</DNID>
+          <CharID />
+          <KvsSignal>14.9640863916</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_453606290115</ID>
+          <Name>ACUF-150-AC Sweat</Name>
+          <FamID>FAM_082506290115</FamID>
+          <DNID>DN_40</DNID>
+          <CharID />
+          <KvsSignal>24.4788234036</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_553606290115</ID>
+          <Name>ACUF-150-AT NPT</Name>
+          <FamID>FAM_082506290115</FamID>
+          <DNID>DN_40</DNID>
+          <CharID />
+          <KvsSignal>24.4788234036</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_083706290115</ID>
+          <Name>ACUF-200-AC Sweat</Name>
+          <FamID>FAM_082506290115</FamID>
+          <DNID>DN_50</DNID>
+          <CharID />
+          <KvsSignal>53.8880105316</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_223706290115</ID>
+          <Name>ACUF-200-AT NPT</Name>
+          <FamID>FAM_082506290115</FamID>
+          <DNID>DN_50</DNID>
+          <CharID />
+          <KvsSignal>53.8880105316</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_373706290115</ID>
+          <Name>ACUF-250-AF Flanged</Name>
+          <FamID>FAM_082506290115</FamID>
+          <DNID>DN_65</DNID>
+          <CharID />
+          <KvsSignal>105.52708322400001</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_453706290115</ID>
+          <Name>ACUF-300-AF Flanged</Name>
+          <FamID>FAM_082506290115</FamID>
+          <DNID>DN_80</DNID>
+          <CharID />
+          <KvsSignal>183.37493150400002</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_023806290115</ID>
+          <Name>ACUF-400-AF Flanged</Name>
+          <FamID>FAM_082506290115</FamID>
+          <DNID>DN_100</DNID>
+          <CharID />
+          <KvsSignal>384.049384848</KvsSignal>
+        </CValve>
+      </List>
+    </ValveTab>
+  </Mnfr>
+</CDataSet>

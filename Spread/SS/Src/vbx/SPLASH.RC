@@ -1,0 +1,54 @@
+/************
+* splash.rc
+************/
+
+SplashScreen DIALOG 6, 15, 194, 163
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Spread"
+FONT 8, "MS Sans Serif"
+{
+CONTROL "Spread Trial Version\nFarPoint Technologies, July 1997", -1, "STATIC", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 5, 5, 183, 16
+CONTROL "Welcome to the latest release of FarPoint's Spread.\nThis is a trial release that will not function after:\nSeptember 30th, 1997.", -1, "STATIC", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 5, 29, 183, 24
+CONTROL "Spread is part of the new Visual Architect Series that will include a VBX, 16- and 32-bit OCXs, and 16- and 32-bit DLLs.  We hope you enjoy this trial version, and we would appreciate your comments.", -1, "STATIC", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 5, 61, 183, 32
+CONTROL "For sales information call us at 800-645-5913.  If you have comments or suggestions, fax us at 919-460-7606.", -1, "STATIC", SS_CENTER | WS_CHILD | WS_VISIBLE | WS_GROUP, 5, 101, 183, 24
+CONTROL "OK", IDOK, "BUTTON", BS_DEFPUSHBUTTON | WS_CHILD | WS_VISIBLE | WS_TABSTOP, 72, 141, 50, 14
+}
+#if SS_V80
+SPLASHEXPIRE DIALOG DISCARDABLE  6, 15, 195, 118
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Spread v8 RC"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "Thank you for using the release candidate of Spread v8. Unfortunately, the RC period has already expired.",
+                    0,5,5,183,16
+    CTEXT           "If you have any questions, please feel free to contact our Sales department at 800-645-5913 or 919-460-4551.",
+                    -1,5,61,183,32
+    DEFPUSHBUTTON   "OK",IDOK,71,97,50,14
+END
+#elif SS_V75
+SPLASHEXPIRE DIALOG DISCARDABLE  6, 15, 195, 118
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Spread v7.5 for 64-bit"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "Thank you for using the trial version of Spread v7.5 for 64-bit. Unfortunately, the trial has already expired.",
+                    0,5,5,183,16
+    CTEXT           "If you have any questions, please feel free to contact our Sales department at 800-645-5913 or 919-460-4551.",
+                    -1,5,61,183,32
+    DEFPUSHBUTTON   "OK",IDOK,71,97,50,14
+END
+#else
+SPLASHEXPIRE DIALOG DISCARDABLE  6, 15, 195, 118
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Spread 2.5"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "Thank you for using the trial version of Spread 2.5. Unfortunately, the trial has already expired.",
+                    0,5,5,183,16
+    CTEXT           "If you have not had the opportunity to try this product, you are welcome to download the most recent trial version from our web site - http://www.fpoint.com.",
+                    -1,5,29,183,24
+    CTEXT           "If you have any questions, please feel free to contact our Sales department at 800-645-5913 or 919-460-4551.",
+                    -1,5,61,183,32
+    DEFPUSHBUTTON   "OK",IDOK,71,97,50,14
+END
+#endif

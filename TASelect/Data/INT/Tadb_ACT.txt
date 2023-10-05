@@ -1,0 +1,2317 @@
+
+new:CTable(RELAY_TAB) -> LIST_TAB
+{
+	"Type of relay"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+////////////////////////////////////////////////////////////////
+//
+//		Table RELAY_TAB : ordered enumeration of type of relay
+//
+////////////////////////////////////////////////////////////////
+
+new:CDB_StringID(RELAY_NO)->RELAY_TAB
+{
+	{
+		"IDS_RELAY_NO"
+	}
+	1
+	""
+}
+
+// Relay for Change-over (Typically it is a possibility to connect 24V to the next actuator)
+new:CDB_StringID(RELAY_CO)->RELAY_TAB
+{
+	{
+		"IDS_RELAY_CO"
+	}
+	2
+	""
+}
+
+// Relay 24VAC-DC.
+new:CDB_StringID(RELAY_24V)->RELAY_TAB
+{
+	{
+		"IDS_RELAY_24V"
+	}
+	3
+	""
+}
+
+// Relay 220VAC.
+new:CDB_StringID(RELAY_220V)->RELAY_TAB
+{
+	{
+		"IDS_RELAY_220V"
+	}
+	4
+	""
+}
+
+////////////////////////////////////////////////////////////////
+//
+//		Table ACTUATOR_TAB : Actuators
+//
+////////////////////////////////////////////////////////////////
+//
+//	new:CDB_Actuator(ID)->ACTUATOR_TAB
+//	{
+//		{
+//			{
+//				{
+//					0				isDeleted
+//					1				isAvailable
+//					0				isHidden
+//					1				isFix
+//					0				Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+//					0				Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc). (bit 0: NotForIndSel, bit 1: NotForDirSel, bit 2: NotForHMCalc)
+//      			0               Sort integer (Allow to show a group of articles in the order defined with this variable).
+//				}
+//				Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+//				PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+//				Tmax in °C
+//				Tmin in °C
+//			}
+//			"Reference"				Reference to the product.
+//			"Name"					Name of the product
+//			TypeID					Identifier of the valve type 
+//			FamilyID				Identifier of the family of the product
+//			VersionID				Identifier of the version of the product
+//			PriorityLevel			Level of priority for selection [1,10]
+//			Comment					Product comment
+//			ProdImgID				Product image ID
+//			AccessGroupID			Identifier of the accessory group
+//			PartOfaSet				Boolean indicating if the valve is part of a ActSet
+//			TableSetID				Table ID where are sets if exist for the current product.
+//			Price					Price of the product
+// 			ProductUseFlag			#eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+//			AccessorySeriesID		Identifier of the series of the accessory
+//			isAttached				0/1: 1 if accessory cannot be ordered separately		
+//   		AccTypeID				Identifier of Accessory type if #eBoth 
+//			AccFamilyID				Identifier of Accessory family if #eBoth
+//		}
+//		OpeningType			Opening type (Linear or Circular)
+//		MaxForceTorque		Max force or torque developped by the actuator
+//		MinLimitedStroke	Min. limited stroke of the actuator
+//		LimitedStrokeMode	Limited stroke mode of the actuator
+//		MaxStroke			Max stroke of the actuator (in m for #eOPENTYPE_Linear; in ° for #eOPENTYPE_Circ)
+//		ActAdapterGroupID	Identifier of the actuator adapter group
+//		MinEnvTemp			Min temperature for operating environment in °C
+//		MaxEnvTemp			Max temperature for operating environment in °C
+//	}
+// Inherited Fields
+//	CDB_Thing::Deleted
+//	CDB_Thing::Available
+//	CDB_Thing::Hidden
+//	CDB_Thing::Fixed
+//	CDB_Thing::FreeInt1
+//	CDB_Thing::FreeInt2
+//	CDB_Thing::SortInt
+//	CDB_HydroThing::Pmax
+//	CDB_HydroThing::PNRange
+//	CDB_HydroThing::Tmax
+//	CDB_HydroThing::Tmin
+//	CDB_Product::Reference
+//	CDB_Product::Name
+//  CDB_Product::TypeID
+//	CDB_Product::FamilyID
+//	CDB_Product::VersionID
+//	CDB_Product::PriorityLevel
+//	CDB_Product::Comment
+//	CDB_Product::ProdImgID
+//	CDB_Product::AccessGroupID
+//	CDB_Product::PartOfaSet
+//  CDB_Product::TableSetID
+//	CDB_Product::Price
+//	CDB_Product::ProductUseFlag
+//	CDB_Product::AccessorySeriesID
+//	CDB_Product::isAttached
+//	CDB_Product::AccTypeID
+//	CDB_Product::AccFamilyID
+//	CDB_Actuator::OpeningType
+//	CDB_Actuator::MaxForceTorque
+//	CDB_Actuator::MinLimitedStroke
+//  CDB_Actuator::LimitedStrokeMode
+//	CDB_Actuator::MaxStroke
+//	CDB_Actuator::ActAdapterGroupID
+//  CDB_Actuator::MinEnvTemp
+//  CDB_Actuator::MaxEnvTemp
+//
+////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////
+//
+//		Table ACTUATOR_TAB : Electro Actuators
+//
+////////////////////////////////////////////////////////////////
+//
+//	new:CDB_ElectroActuator(ID)->ACTUATOR_TAB
+//	{
+//		{
+//			{
+//				{
+//					{
+//						0				isDeleted
+//						1				isAvailable
+//						0				isHidden
+//						1				isFix
+//						0				Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+//						0				Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc). (bit 0: NotForIndSel, bit 1: NotForDirSel, bit 2: NotForHMCalc)
+//      				0               Sort integer (Allow to show a group of articles in the order defined with this variable).
+//					}
+//					Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+//					PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+//					Tmax in °C
+//					Tmin in °C
+//				}
+//				"Reference"				Reference to the product.
+//				"Name"					Name of the product
+//				TypeID					Identifier of the valve type 
+//				FamilyID				Identifier of the family of the product
+//				VersionID				Identifier of the version of the product
+//				PriorityLevel			Level of priority for selection [1,10]
+//				Comment					Product comment
+//				ProdImgID				Product image ID
+//				AccessGroupID			Identifier of the accessory group
+//				PartOfaSet				Boolean indicating if the valve is part of a ActSet
+//				TableSetID				Table ID where are sets if exist for the current product.
+//				Price					Price of the product
+// 				ProductUseFlag			#eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+//				AccessorySeriesID		Identifier of the series of the accessory
+//				isAttached				0/1: 1 if accessory cannot be ordered separately		
+//   			AccTypeID				Identifier of Accessory type if #eBoth 
+//				AccFamilyID				Identifier of Accessory family if #eBoth
+//			}
+//			OpeningType				Opening type (Linear or Circular)
+//			MaxForceTorque			Max force or torque developped by the actuator
+//			MinLimitedStroke		Min. limited stroke of the actuator
+//			LimitedStrokeMode		Limited stroke mode of the actuator
+//			MaxStroke				Max stroke of the actuator (in m for #eOPENTYPE_Linear; in ° for #eOPENTYPE_Circ)
+//			ActAdapterGroupID		Identifier of the actuator adapter group
+//			MinEnvTemp				Min temperature for operating environment in °C
+//			MaxEnvTemp				Max temperature for operating environment in °C
+//		}
+//		ActuatingTimes			List of actuating times separated by \ with default setting followed by * (in s/m for #eOPENTYPE_Linear; in ° for #eOPENTYPE_Circ)
+//		IPxxAuto				Enclosure protection of the actuator in auto mode
+//		IPxxManual				Enclosure protection of the actuator when using manual override
+//		Power supply			List of accepted Power supplies separated by \
+//		Frequency				Accepted frequency
+//		Input signals			List of accepted input control signals separated by \
+//		Output signals			List of accepted output control signals separated by \
+//		FailSafeType        	#eFailSafeNone, #eElectronicFailSafe, #eSpringReturn.
+//		OnOffPossible			1 if a 3 points or proportional actuator can work in On/Off mode otherwise 0.
+//		RelayID					Type of relay
+//      Binary input			Number of binary input.
+//		DefaultReturnPosition 	#eDRP_None, #eDRP_Extending, #eDRP_Retracting or #eDRP_Configurable.
+//	}
+// Inherited Fields
+//	CDB_Thing::Deleted
+//	CDB_Thing::Available
+//	CDB_Thing::Hidden
+//	CDB_Thing::Fixed
+//	CDB_Thing::FreeInt1
+//	CDB_Thing::FreeInt2
+//	CDB_Thing::SortInt
+//	CDB_HydroThing::Pmax
+//	CDB_HydroThing::PNRange
+//	CDB_HydroThing::Tmax
+//	CDB_HydroThing::Tmin
+//	CDB_Product::Reference
+//	CDB_Product::Name
+//  CDB_Product::TypeID
+//	CDB_Product::FamilyID
+//	CDB_Product::VersionID
+//	CDB_Product::PriorityLevel
+//	CDB_Product::Comment
+//	CDB_Product::ProdImgID
+//	CDB_Product::AccessGroupID
+//	CDB_Product::PartOfaSet
+//  CDB_Product::TableSetID
+//	CDB_Product::Price
+//	CDB_Product::ProductUseFlag
+//	CDB_Product::AccessorySeriesID
+//	CDB_Product::isAttached
+//	CDB_Product::AccTypeID
+//	CDB_Product::AccFamilyID
+//	CDB_Actuator::OpeningType
+//	CDB_Actuator::MaxForceTorque
+//	CDB_Actuator::MinLimitedStroke
+//  CDB_Actuator::LimitedStrokeMode
+//	CDB_Actuator::MaxStroke
+//	CDB_Actuator::ActAdapterGroupID
+//  CDB_Actuator::MinEnvTemp
+//  CDB_Actuator::MaxEnvTemp
+//	CDB_ElectroActuator::ActuatingTimes
+//	CDB_ElectroActuator::IPxxAuto
+//	CDB_ElectroActuator::IPxxManual
+//	CDB_ElectroActuator::PowerSupplyIDs
+//	CDB_ElectroActuator::FrequencyID
+//	CDB_ElectroActuator::InputSignalIDs
+//	CDB_ElectroActuator::OutputSignalIDs
+//	CDB_ElectroActuator::FailSafeType
+//  CDB_ElectroActuator::OnOffPossible
+//  CDB_ElectroActuator::RelayID
+//  CDB_ElectroActuator::BinaryInput
+//  CDB_ElectroActuator::DefaultReturnPosition
+//
+////////////////////////////////////////////////////////////////
+
+/////////////////////////
+// TA-Slider 160 Standard
+// Input signal: 0(2)-10 VDC
+/////////////////////////
+
+new:CDB_ElectroActuator(SLIDER160-STD1M) -> ACTUATOR_TAB
+{
+	{
+		{
+			
+			{
+				{
+					0											// isDeleted
+					1                                           // isAvailable
+					0                                           // isHidden
+					1                                           // isFix
+					0                                           // Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+					0                                           // Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+					0               							// Sort integer (Allow to show a group of articles in the order defined with this variable).
+				}
+				0 \ DBL_MAX									// Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+				NO_ID                                       // PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+				120                                     	// Tmax in °C: Max media temperature in °C
+				DBL_MIN                                     // Tmin in °C: Min media temperature in °C
+			}
+			"322224-10111"								// Reference to the TA Product
+			"TA-Slider 160 (1m)"                        // Name of the product
+			ACTTYP_ELEC                                 // Identifier of the actuator type
+			ACTFAM_SLIDER                               // Identifier of the family of the product
+			VERS_STD                                    // Identifier of the actuator version
+			1											// Level of priority for selection [1,10]
+			""                                          // Description of the product
+			"NO_ID"										// Product image ID
+			ACAGR_SLIDER160                             // Identifier of the actuator accessory group
+			#ePartOfaSetNo                              // Boolean indicating if product is part of a set. Can be #ePartOfaSetNo, #ePartOfaSetYes, #ePartOfaSetYesBreakOk or #ePartOfaSetYesBreakOnMsg.
+			NO_ID										// Table ID where are sets if exist for the current product.
+			0.0                                         // Price of the product
+			#eProduct                       			// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+			NO_ID                           			// Identifier of the series of the accessory (mainly used in DlgDirSel)
+			0                               			// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+			NO_ID                           			// Identifier of the accessory type if #eBoth 
+			NO_ID										// Identifier of the accessory family if #eBoth
+		}
+		#eOPENTYPE_Linear                           // Opening type (Linear or Circular)
+		1.6e+2 \ 1.9e+2                             // Max force or torque developped by the actuator
+		2.5e-4                                      // Min. limited stroke of the actuator
+		#eLimitedStrokeMode_Electronic				// Limited stroke mode of the actuator
+		6.5e-3                                      // Max stroke of the actuator (in m for #eOPENTYPE_Linear; in ° for #eOPENTYPE_Circ)
+		NO_ID                               		// Identifier of the actuator adapter group
+		0											// Min temperature for operating environment in °C
+		50											// Max temperature for operating environment in °C
+	}
+	10000*										// List of actuating times separated by \ with default setting followed by * (in s/m for #eOPENTYPE_Linear; in ° for #eOPENTYPE_Circ)
+	"54"                                        // Enclosure protection of the actuator in auto mode
+	""                                          // Enclosure protection of the actuator when using manual override
+	POW_24VAC \ POW_24VDC                       // List of accepted Power supplies separated by \
+	FREQ_50-60                                  // Accepted frequency
+	SIG_0-10V \ SIG_2-10V                       // List of accepted input control signals separated by \
+	NO_ID                                       // List of accepted output control signals separated by \
+	#eFailSafeNone								// #eFailSafeNone, #eElectronicFailSafe, #eSpringReturn.
+	0											// 1 if a 3 points or proportional actuator can work in On/Off mode otherwise 0.
+	RELAY_NO									// Type of relay.
+	0											// Number of binary input.
+	#eDRP_None									// #eDRP_None, #eDRP_Extending, #eDRP_Retracting or #eDRP_Configurable.
+}
+
+new:CDB_ElectroActuator(SLIDER160-STD2M) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 1
+		CDB_Product::Reference	=				"322224-10112"
+		CDB_Product::Name		=				"TA-Slider 160 (2m)"
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER160-STD5M) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 2
+		CDB_Product::Reference	=				"322224-10113"
+		CDB_Product::Name		=				"TA-Slider 160 (5m)"
+	}
+}
+
+// Version with halogen free for cables.
+
+new:CDB_ElectroActuator(SLIDER160-STD1MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 3
+		CDB_Product::Reference	=				"322224-10114"
+		CDB_Product::Name		=				"TA-Slider 160 (1m HF)"
+		CDB_Product::VersionID  = VERS_STDHF
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER160-STD2MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 4
+		CDB_Product::Reference	=				"322224-10115"
+		CDB_Product::Name		=				"TA-Slider 160 (2m HF)"
+		CDB_Product::VersionID  = VERS_STDHF
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER160-STD5MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 5
+		CDB_Product::Reference	=				"322224-10116"
+		CDB_Product::Name		=				"TA-Slider 160 (5m HF)"
+		CDB_Product::VersionID  = VERS_STDHF
+	}
+}
+
+/////////////////////////
+// TA-Slider 160 I/O
+// Input signal: 0(2)-10 VDC
+// With binary input, VDC output
+/////////////////////////
+
+new:CDB_ElectroActuator(SLIDER160-IO1M) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 0
+		CDB_Product::Reference	=				"322224-10411"
+		CDB_Product::Name		=				"TA-Slider 160 I/O (1m)"
+		CDB_Product::VersionID  = VERS_IO
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER160-IO2M) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 1
+		CDB_Product::Reference	=				"322224-10412"
+		CDB_Product::Name		=				"TA-Slider 160 I/O (2m)"
+		CDB_Product::VersionID  = VERS_IO
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER160-IO5M) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 2
+		CDB_Product::Reference	=				"322224-10413"
+		CDB_Product::Name		=				"TA-Slider 160 I/O (5m)"
+		CDB_Product::VersionID  = VERS_IO
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+// Version with halogen free for cables.
+
+new:CDB_ElectroActuator(SLIDER160-IO1MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 3
+		CDB_Product::Reference	=				"322224-10414"
+		CDB_Product::Name		=				"TA-Slider 160 I/O (1m HF)"
+		CDB_Product::VersionID  = VERS_IOHF
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER160-IO2MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 4
+		CDB_Product::Reference	=				"322224-10415"
+		CDB_Product::Name		=				"TA-Slider 160 I/O (2m HF)"
+		CDB_Product::VersionID  = VERS_IOHF
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER160-IO5MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 5
+		CDB_Product::Reference	=				"322224-10416"
+		CDB_Product::Name		=				"TA-Slider 160 I/O (5m HF)"
+		CDB_Product::VersionID  = VERS_IOHF
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+/////////////////////////
+// TA-Slider 160 Plus
+// Input signal: 0(2)-10 VDC
+// With binary input, relay, VDC output
+/////////////////////////
+
+new:CDB_ElectroActuator(SLIDER160-AD1M) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 0
+		CDB_Product::Reference	=				"322224-10211"
+		CDB_Product::Name		=				"TA-Slider 160 Plus (1m)"
+		CDB_Product::VersionID  = VERS_PLUS
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER160-AD2M) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 1
+		CDB_Product::Reference	=				"322224-10212"
+		CDB_Product::Name		=				"TA-Slider 160 Plus (2m)"
+		CDB_Product::VersionID  = VERS_PLUS
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER160-AD5M) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 2
+		CDB_Product::Reference	=				"322224-10213"
+		CDB_Product::Name		=				"TA-Slider 160 Plus (5m)"
+		CDB_Product::VersionID  = VERS_PLUS
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+// Version with halogen free for cables.
+
+new:CDB_ElectroActuator(SLIDER160-AD1MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 3
+		CDB_Product::Reference	=				"322224-10214"
+		CDB_Product::Name		=				"TA-Slider 160 Plus (1m HF)"
+		CDB_Product::VersionID  = VERS_PLUSHF
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER160-AD2MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 4
+		CDB_Product::Reference	=				"322224-10215"
+		CDB_Product::Name		=				"TA-Slider 160 Plus (2m HF)"
+		CDB_Product::VersionID  = VERS_PLUSHF
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER160-AD5MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 5
+		CDB_Product::Reference	=				"322224-10216"
+		CDB_Product::Name		=				"TA-Slider 160 Plus (5m HF)"
+		CDB_Product::VersionID  = VERS_PLUSHF
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+////////////////////
+// TA-Slider 160 KNX
+// Twisted pair; KNX/TP
+// With binary input
+////////////////////
+
+new:CDB_ElectroActuator(SLIDER160-KNX1M) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 0
+		CDB_Product::Reference	=				"322224-01001"
+		CDB_Product::Name		=				"TA-Slider 160 KNX (1m)"
+		CDB_Product::VersionID  = VERS_KNX
+		CDB_ElectroActuator::InputSignalIDs =  SIG_KNX
+		CDB_ElectroActuator::OnOffPossible = 1
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER160-KNX2M) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 1
+		CDB_Product::Reference	=				"322224-01002"
+		CDB_Product::Name		=				"TA-Slider 160 KNX (2m)"
+		CDB_Product::VersionID  = VERS_KNX
+		CDB_ElectroActuator::InputSignalIDs =  SIG_KNX
+		CDB_ElectroActuator::OnOffPossible = 1
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER160-KNX5M) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 2
+		CDB_Product::Reference	=				"322224-01003"
+		CDB_Product::Name		=				"TA-Slider 160 KNX (5m)"
+		CDB_Product::VersionID  = VERS_KNX
+		CDB_ElectroActuator::InputSignalIDs =  SIG_KNX
+		CDB_ElectroActuator::OnOffPossible = 1
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+// Version with halogen free for cables.
+
+new:CDB_ElectroActuator(SLIDER160-KNX1MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 3
+		CDB_Product::Reference	=				"322224-01004"
+		CDB_Product::Name		=				"TA-Slider 160 KNX (1m HF)"
+		CDB_Product::VersionID  = VERS_KNXHF
+		CDB_ElectroActuator::InputSignalIDs =  SIG_KNX
+		CDB_ElectroActuator::OnOffPossible = 1
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER160-KNX2MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 4
+		CDB_Product::Reference	=				"322224-01005"
+		CDB_Product::Name		=				"TA-Slider 160 KNX (2m HF)"
+		CDB_Product::VersionID  = VERS_KNXHF
+		CDB_ElectroActuator::InputSignalIDs =  SIG_KNX
+		CDB_ElectroActuator::OnOffPossible = 1
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER160-KNX5MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 5
+		CDB_Product::Reference	=				"322224-01006"
+		CDB_Product::Name		=				"TA-Slider 160 KNX (5m HF)"
+		CDB_Product::VersionID  = VERS_KNXHF
+		CDB_ElectroActuator::InputSignalIDs =  SIG_KNX
+		CDB_ElectroActuator::OnOffPossible = 1
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+//////////////////////////
+// TA-Slider 160 KNX Relay
+// Twisted pair; KNX/TP
+// With binary input, relay 24V
+//////////////////////////
+
+new:CDB_ElectroActuator(SLIDER160-KNXR1M) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 0
+		CDB_Product::Reference	=				"322224-01301"
+		CDB_Product::Name		=				"TA-Slider 160 KNX R24 (1m)"
+		CDB_Product::VersionID  = VERS_KNXR24
+		CDB_ElectroActuator::InputSignalIDs =  SIG_KNX
+		CDB_ElectroActuator::OnOffPossible = 1
+		CDB_ElectroActuator::RelayID = RELAY_24V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER160-KNXR2M) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 1
+		CDB_Product::Reference	=				"322224-01302"
+		CDB_Product::Name		=				"TA-Slider 160 KNX R24 (2m)"
+		CDB_Product::VersionID  = VERS_KNXR24
+		CDB_ElectroActuator::InputSignalIDs =  SIG_KNX
+		CDB_ElectroActuator::OnOffPossible = 1
+		CDB_ElectroActuator::RelayID = RELAY_24V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER160-KNXR5M) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 2
+		CDB_Product::Reference	=				"322224-01303"
+		CDB_Product::Name		=				"TA-Slider 160 KNX R24 (5m)"
+		CDB_Product::VersionID  = VERS_KNXR24
+		CDB_ElectroActuator::InputSignalIDs =  SIG_KNX
+		CDB_ElectroActuator::OnOffPossible = 1
+		CDB_ElectroActuator::RelayID = RELAY_24V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+// Version with halogen free for cables.
+
+new:CDB_ElectroActuator(SLIDER160-KNXR1MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 3
+		CDB_Product::Reference	=				"322224-01304"
+		CDB_Product::Name		=				"TA-Slider 160 KNX R24 (1m HF)"
+		CDB_Product::VersionID  = VERS_KNXR24HF
+		CDB_ElectroActuator::InputSignalIDs =  SIG_KNX
+		CDB_ElectroActuator::OnOffPossible = 1
+		CDB_ElectroActuator::RelayID = RELAY_24V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER160-KNXR2MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 4
+		CDB_Product::Reference	=				"322224-01305"
+		CDB_Product::Name		=				"TA-Slider 160 KNX R24 (2m HF)"
+		CDB_Product::VersionID  = VERS_KNXR24HF
+		CDB_ElectroActuator::InputSignalIDs =  SIG_KNX
+		CDB_ElectroActuator::OnOffPossible = 1
+		CDB_ElectroActuator::RelayID = RELAY_24V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER160-KNXR5MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 5
+		CDB_Product::Reference	=				"322224-01306"
+		CDB_Product::Name		=				"TA-Slider 160 KNX R24 (5m HF)"
+		CDB_Product::VersionID  = VERS_KNXR24HF
+		CDB_ElectroActuator::InputSignalIDs =  SIG_KNX
+		CDB_ElectroActuator::OnOffPossible = 1
+		CDB_ElectroActuator::RelayID = RELAY_24V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+//////////////////////////
+// TA-Slider 160 CO
+// Input signal: 0(2)-10 VDC
+// With binary input, relay change-over
+//////////////////////////
+
+new:CDB_ElectroActuator(SLIDER160-CO1MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 3
+		CDB_Product::Reference	=				"322224-10514"
+		CDB_Product::Name		=				"TA-Slider 160 CO (1m HF)"
+		CDB_Product::VersionID  = VERS_COHF
+		CDB_ElectroActuator::PowerSupplyIDs = POW_24VAC
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::RelayID = RELAY_CO
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER160-CO2MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 4
+		CDB_Product::Reference	=				"322224-10515"
+		CDB_Product::Name		=				"TA-Slider 160 CO (2m HF)"
+		CDB_Product::VersionID  = VERS_COHF
+		CDB_ElectroActuator::PowerSupplyIDs = POW_24VAC
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::RelayID = RELAY_CO
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER160-CO5MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 5
+		CDB_Product::Reference	=				"322224-10516"
+		CDB_Product::Name		=				"TA-Slider 160 CO (5m HF)"
+		CDB_Product::VersionID  = VERS_COHF
+		CDB_ElectroActuator::PowerSupplyIDs = POW_24VAC
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::RelayID = RELAY_CO
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+//////////////////////////
+// TA-Slider 160 Modbus
+// Input signal: 0(2)-10 VDC
+// With BUS communication (with binary input, without relays, without output signal)
+//////////////////////////
+
+new:CDB_ElectroActuator(SLIDER160-MB) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 0
+		CDB_Product::Reference	=				"322224-12011"
+		CDB_Product::Name		=				"TA-Slider 160 Modbus"
+		CDB_Product::VersionID  = VERS_MODBUS
+		CDB_Product::AccessGroupID  = 			ACAGR_BACNET_MODBUS
+		CDB_ElectroActuator::InputSignalIDs =   SIG_MODBUS_RTU \ SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+//////////////////////////
+// TA-Slider 160 BACnet
+// Input signal: 0(2)-10 VDC
+// With BUS communication (with binary input, without relays, without output signal)
+//////////////////////////
+
+new:CDB_ElectroActuator(SLIDER160-BN) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 0
+		CDB_Product::Reference	=				"322224-13011"
+		CDB_Product::Name		=				"TA-Slider 160 BACnet"
+		CDB_Product::VersionID  = VERS_BACNET
+		CDB_Product::AccessGroupID  = 			ACAGR_BACNET_MODBUS
+		CDB_ElectroActuator::InputSignalIDs =   SIG_BACNET_MSTP \ SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+
+//////////////////////////
+// TA-Slider 160 Modbus CO
+// Input signal: 0(2)-10 VDC
+// With BUS communication (with binary input, with relay change-over)
+//////////////////////////
+
+new:CDB_ElectroActuator(SLIDER160-MBCO1MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 3
+		CDB_Product::Reference	=				"322224-12514"
+		CDB_Product::Name		=				"TA-Slider 160 Modbus CO (1m HF)"
+		CDB_Product::VersionID  = VERS_MODBUSCOHF
+		CDB_Product::AccessGroupID  = 			ACAGR_BACNET_MODBUS
+		CDB_ElectroActuator::InputSignalIDs =   SIG_MODBUS_RTU \ SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::RelayID = RELAY_CO
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER160-MBCO2MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 4
+		CDB_Product::Reference	=				"322224-12515"
+		CDB_Product::Name		=				"TA-Slider 160 Modbus CO (2m HF)"
+		CDB_Product::VersionID  = VERS_MODBUSCOHF
+		CDB_Product::AccessGroupID  = 			ACAGR_BACNET_MODBUS
+		CDB_ElectroActuator::InputSignalIDs =   SIG_MODBUS_RTU \ SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::RelayID = RELAY_CO
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER160-MBCO5MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 5
+		CDB_Product::Reference	=				"322224-12516"
+		CDB_Product::Name		=				"TA-Slider 160 Modbus CO (5m HF)"
+		CDB_Product::VersionID  = VERS_MODBUSCOHF
+		CDB_Product::AccessGroupID  = 			ACAGR_BACNET_MODBUS
+		CDB_ElectroActuator::InputSignalIDs =   SIG_MODBUS_RTU \ SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::RelayID = RELAY_CO
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+
+//////////////////////////
+// TA-Slider 160 BACnet CO
+// Input signal: 0(2)-10 VDC
+// With BUS communication (with binary input, with relay change-over)
+//////////////////////////
+
+new:CDB_ElectroActuator(SLIDER160-BNCO1MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 3
+		CDB_Product::Reference	=				"322224-13514"
+		CDB_Product::Name		=				"TA-Slider 160 BACnet CO (1m HF)"
+		CDB_Product::VersionID  = VERS_BACNETCOHF
+		CDB_Product::AccessGroupID  = 			ACAGR_BACNET_MODBUS
+		CDB_ElectroActuator::InputSignalIDs =   SIG_BACNET_MSTP \ SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::RelayID = RELAY_CO
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER160-BNCO2MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 4
+		CDB_Product::Reference	=				"322224-13515"
+		CDB_Product::Name		=				"TA-Slider 160 BACnet CO (2m HF)"
+		CDB_Product::VersionID  = VERS_BACNETCOHF
+		CDB_Product::AccessGroupID  = 			ACAGR_BACNET_MODBUS
+		CDB_ElectroActuator::InputSignalIDs =   SIG_BACNET_MSTP \ SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::RelayID = RELAY_CO
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER160-BNCO5MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 5
+		CDB_Product::Reference	=				"322224-13516"
+		CDB_Product::Name		=				"TA-Slider 160 BACnet CO (5m HF)"
+		CDB_Product::VersionID  = VERS_BACNETCOHF
+		CDB_Product::AccessGroupID  = 			ACAGR_BACNET_MODBUS
+		CDB_ElectroActuator::InputSignalIDs =   SIG_BACNET_MSTP \ SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::RelayID = RELAY_CO
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+//////////////////////////
+// TA-Slider 160 Fail-safe I/O
+// Input signal: 0(2)-10 VDC
+// With binary input and outut signal.
+//////////////////////////
+
+new:CDB_ElectroActuator(SLIDER160-FSIO1MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 0
+		CDB_Product::Reference	=				"322224-10614"
+		CDB_Product::Name		=				"TA-Slider 160 Fail-safe I/O (1m HF)"
+		CDB_Product::VersionID  = VERS_IOHF
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::FailSafeType =  #eElectronicFailSafe
+		CDB_ElectroActuator::BinaryInput = 1
+		CDB_ElectroActuator::DefaultReturnPosition = #eDRP_Configurable
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER160-FSIO2MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 1
+		CDB_Product::Reference	=				"322224-10615"
+		CDB_Product::Name		=				"TA-Slider 160 Fail-safe I/O (2m HF)"
+		CDB_Product::VersionID  = VERS_IOHF
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::FailSafeType =  #eElectronicFailSafe
+		CDB_ElectroActuator::BinaryInput = 1
+		CDB_ElectroActuator::DefaultReturnPosition = #eDRP_Configurable
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER160-FSIO5MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 2
+		CDB_Product::Reference	=				"322224-10616"
+		CDB_Product::Name		=				"TA-Slider 160 Fail-safe I/O (5m HF)"
+		CDB_Product::VersionID  = VERS_IOHF
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::FailSafeType =  #eElectronicFailSafe
+		CDB_ElectroActuator::BinaryInput = 1
+		CDB_ElectroActuator::DefaultReturnPosition = #eDRP_Configurable
+	}
+}
+
+//////////////////////////
+// TA-Slider 160 Plus Fail-safe
+// Input signal: 0(2)-10 VDC
+// With relay, binary input and output signal.
+//////////////////////////
+
+new:CDB_ElectroActuator(SLIDER160-FSR241MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 0
+		CDB_Product::Reference	=				"322224-10714"
+		CDB_Product::Name		=				"TA-Slider 160 Fail-safe R24 (1m HF)"
+		CDB_Product::VersionID  =               VERS_PLUSHF
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::FailSafeType =     #eElectronicFailSafe
+		CDB_ElectroActuator::RelayID =          RELAY_24V
+		CDB_ElectroActuator::BinaryInput =      1
+		CDB_ElectroActuator::DefaultReturnPosition = #eDRP_Configurable
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER160-FSR242MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 1
+		CDB_Product::Reference	=				"322224-10715"
+		CDB_Product::Name		=				"TA-Slider 160 Fail-safe R24 (2m HF)"
+		CDB_Product::VersionID  =               VERS_PLUSHF
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::FailSafeType =     #eElectronicFailSafe
+		CDB_ElectroActuator::RelayID =          RELAY_24V
+		CDB_ElectroActuator::BinaryInput =      1
+		CDB_ElectroActuator::DefaultReturnPosition = #eDRP_Configurable
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER160-FSR245MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-STD1M)
+	{
+		CDB_Thing::SortInt = 2
+		CDB_Product::Reference	=				"322224-10716"
+		CDB_Product::Name		=				"TA-Slider 160 Fail-safe R24 (5m HF)"
+		CDB_Product::VersionID  =               VERS_PLUSHF
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::FailSafeType =     #eElectronicFailSafe
+		CDB_ElectroActuator::RelayID =          RELAY_24V
+		CDB_ElectroActuator::BinaryInput =      1
+		CDB_ElectroActuator::DefaultReturnPosition = #eDRP_Configurable
+	}
+}
+
+/////////////////////////
+// TA-Slider 500 Standard
+// Input signal: 0(2)-10 VDC
+/////////////////////////
+
+//****************************
+//*** ACTGRP COMMENTED !!! ***
+//****************************
+
+new:CDB_ElectroActuator(SLIDER500-STD1M) -> ACTUATOR_TAB
+{
+	{
+		{
+			{
+				{
+					0          									// isDeleted
+					1                                           // isAvailable
+					0                                           // isHidden
+					1                                           // isFix
+					0                                           // Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+					0                                           // Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+					0               							// Sort integer (Allow to show a group of articles in the order defined with this variable).
+				}
+				0 \ DBL_MAX									// Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+				NO_ID                                       // PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+				120                                     	// Tmax in °C: Max media temperature in °C
+				DBL_MIN                                     // Tmin in °C: Min media temperature in °C
+			}
+			"322225-10111"                               // Reference to the TA Product
+			"TA-Slider 500 (1m)"                        // Name of the product
+			ACTTYP_ELEC                                 // Identifier of the actuator type
+			ACTFAM_SLIDER                               // Identifier of the family of the product
+			VERS_STD                                    // Identifier of the actuator version
+			1											// Level of priority for selection [1,10]
+			""                                          // Description of the product
+			"NO_ID"										// Product image ID
+			ACAGR_SLIDER160                             // Identifier of the actuator accessory group
+			#ePartOfaSetNo                              // Boolean indicating if product is part of a set. Can be #ePartOfaSetNo, #ePartOfaSetYes, #ePartOfaSetYesBreakOk or #ePartOfaSetYesBreakOnMsg.
+			NO_ID										// Table ID where are sets if exist for the current product.
+			0.0                                         // Price of the product
+			#eProduct                       			// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+			NO_ID                           			// Identifier of the series of the accessory (mainly used in DlgDirSel)
+			0                               			// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+			NO_ID                           			// Identifier of the accessory type if #eBoth 
+			NO_ID										// Identifier of the accessory family if #eBoth
+		}
+		#eOPENTYPE_Linear                           // Opening type (Linear or Circular)
+		5.0e+2                                      // Max force or torque developped by the actuator
+		1.0e-3                                      // Min. limited stroke of the actuator
+		#eLimitedStrokeMode_Electronic				// Limited stroke mode of the actuator
+		1.5e-2                                      // Max stroke of the actuator (in m for #eOPENTYPE_Linear; in ° for #eOPENTYPE_Circ)
+		NO_ID										// Identifier of the actuator adapter group
+		0											// Min temperature for operating environment in °C
+		50											// Max temperature for operating environment in °C
+	}
+	10000 \ 20000*                              // List of actuating times separated by \ with default setting followed by * (in s/m for #eOPENTYPE_Linear; in ° for #eOPENTYPE_Circ)
+	"54"                                        // Enclosure protection of the actuator in auto mode
+	""                                          // Enclosure protection of the actuator when using manual override
+	POW_24VAC \ POW_24VDC                       // List of accepted Power supplies separated by \
+	FREQ_50-60                                  // Accepted frequency
+	SIG_0-10V \ SIG_2-10V                       // List of accepted input control signals separated by \
+	NO_ID                                       // List of accepted output control signals separated by \
+	#eFailSafeNone								// #eFailSafeNone, #eElectronicFailSafe, #eSpringReturn.
+	0											// 1 if a 3 points or proportional actuator can work in On/Off mode otherwise 0.
+	RELAY_NO									// Type of relay.
+	0											// Number of binary input.
+	#eDRP_None									// #eDRP_None, #eDRP_Extending, #eDRP_Retracting or #eDRP_Configurable.
+}
+
+new:CDB_ElectroActuator(SLIDER500-STD2M) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 1
+		CDB_Product::Reference	=				"322225-10112"
+		CDB_Product::Name		=				"TA-Slider 500 (2m)"
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER500-STD3M) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 2
+		CDB_Product::Reference	=				"322225-10113"
+		CDB_Product::Name		=				"TA-Slider 500 (5m)"
+	}
+}
+
+// Version with halogen free for cables.
+
+new:CDB_ElectroActuator(SLIDER500-STD1MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 3
+		CDB_Product::Reference	=				"322225-10114"
+		CDB_Product::Name		=				"TA-Slider 500 (1m HF)"
+		CDB_Product::VersionID  = VERS_STDHF
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER500-STD2MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 4
+		CDB_Product::Reference	=				"322225-10115"
+		CDB_Product::Name		=				"TA-Slider 500 (2m HF)"
+		CDB_Product::VersionID  = VERS_STDHF
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER500-STD3MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 5
+		CDB_Product::Reference	=				"322225-10116"
+		CDB_Product::Name		=				"TA-Slider 500 (5m HF)"
+		CDB_Product::VersionID  = VERS_STDHF
+	}
+}
+
+/////////////////////////
+// TA-Slider 500 I/O
+// Input signal: 0(2)-10 VDC
+// With binary input, with VDC output
+/////////////////////////
+
+new:CDB_ElectroActuator(SLIDER500-IO1M) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 0
+		CDB_Product::Reference	=				"322225-10411"
+		CDB_Product::Name		=				"TA-Slider 500 I/O (1m)"
+		CDB_Product::VersionID  = VERS_IO
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER500-IO2M) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 1
+		CDB_Product::Reference	=				"322225-10412"
+		CDB_Product::Name		=				"TA-Slider 500 I/O (2m)"
+		CDB_Product::VersionID  = VERS_IO
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER500-IO3M) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 2
+		CDB_Product::Reference	=				"322225-10413"
+		CDB_Product::Name		=				"TA-Slider 500 I/O (5m)"
+		CDB_Product::VersionID  = VERS_IO
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+// Version with halogen free for cables.
+
+new:CDB_ElectroActuator(SLIDER500-IO1MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 3
+		CDB_Product::Reference	=				"322225-10414"
+		CDB_Product::Name		=				"TA-Slider 500 I/O (1m HF)"
+		CDB_Product::VersionID  = VERS_IOHF
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER500-IO2MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 4
+		CDB_Product::Reference	=				"322225-10415"
+		CDB_Product::Name		=				"TA-Slider 500 I/O (2m HF)"
+		CDB_Product::VersionID  = VERS_IOHF
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER500-IO3MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 5
+		CDB_Product::Reference	=				"322225-10416"
+		CDB_Product::Name		=				"TA-Slider 500 I/O (5m HF)"
+		CDB_Product::VersionID  = VERS_IOHF
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+
+/////////////////////////
+// TA-Slider 500 Plus
+// Input signal: 0(2)-10 VDC
+// With binary input, with relay, with VDC output
+/////////////////////////
+
+new:CDB_ElectroActuator(SLIDER500-AD1M) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 0
+		CDB_Product::Reference	=				"322225-10211"
+		CDB_Product::Name		=				"TA-Slider 500 Plus (1m)"
+		CDB_Product::VersionID  = VERS_PLUS
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER500-AD2M) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 1
+		CDB_Product::Reference	=				"322225-10212"
+		CDB_Product::Name		=				"TA-Slider 500 Plus (2m)"
+		CDB_Product::VersionID  = VERS_PLUS
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER500-AD3M) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 2
+		CDB_Product::Reference	=				"322225-10213"
+		CDB_Product::Name		=				"TA-Slider 500 Plus (5m)"
+		CDB_Product::VersionID  = VERS_PLUS
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+// Version with halogen free for cables.
+
+new:CDB_ElectroActuator(SLIDER500-AD1MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 3
+		CDB_Product::Reference	=				"322225-10214"
+		CDB_Product::Name		=				"TA-Slider 500 Plus (1m HF)"
+		CDB_Product::VersionID  = VERS_PLUSHF
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER500-AD2MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 4
+		CDB_Product::Reference	=				"322225-10215"
+		CDB_Product::Name		=				"TA-Slider 500 Plus (2m HF)"
+		CDB_Product::VersionID  = VERS_PLUSHF
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER500-AD3MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 5
+		CDB_Product::Reference	=				"322225-10216"
+		CDB_Product::Name		=				"TA-Slider 500 Plus (5m HF)"
+		CDB_Product::VersionID  = VERS_PLUSHF
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+//////////////////////////
+// TA-Slider 500 Modbus
+// Input signal: 0(2)-10 VDC
+// With BUS communication (With binary input, without relays, without output signal)
+//////////////////////////
+
+new:CDB_ElectroActuator(SLIDER500-MB) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 0
+		CDB_Product::Reference	=				"322225-12011"
+		CDB_Product::Name		=				"TA-Slider 500 Modbus"
+		CDB_Product::VersionID  = VERS_MODBUS
+		CDB_Product::AccessGroupID  = 			ACAGR_BACNET_MODBUS
+		CDB_ElectroActuator::InputSignalIDs =   SIG_MODBUS_RTU \ SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+//////////////////////////
+// TA-Slider 500 BACnet
+// Input signal: 0(2)-10 VDC
+// With BUS communication (With binary input, without relays, without output signal)
+//////////////////////////
+
+new:CDB_ElectroActuator(SLIDER500-BN) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 0
+		CDB_Product::Reference	=				"322225-13011"
+		CDB_Product::Name		=				"TA-Slider 500 BACnet"
+		CDB_Product::VersionID  = VERS_BACNET
+		CDB_Product::AccessGroupID  = 			ACAGR_BACNET_MODBUS
+		CDB_ElectroActuator::InputSignalIDs =   SIG_BACNET_MSTP \ SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+//////////////////////////
+// TA-Slider 500 Modbus Relay
+// Input signal: 0(2)-10 VDC
+// With BUS communication (With BUS communication, with binary input, with relays, without output signal)
+//////////////////////////
+
+new:CDB_ElectroActuator(SLIDER500-MBR1MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 3
+		CDB_Product::Reference	=				"322225-12314"
+		CDB_Product::Name		=				"TA-Slider 500 Modbus R24 (1m HF)"
+		CDB_Product::VersionID  = VERS_MODBUSR24HF
+		CDB_Product::AccessGroupID  = 			ACAGR_BACNET_MODBUS
+		CDB_ElectroActuator::InputSignalIDs =   SIG_MODBUS_RTU \ SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::RelayID = RELAY_24V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER500-MBR2MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 4
+		CDB_Product::Reference	=				"322225-12315"
+		CDB_Product::Name		=				"TA-Slider 500 Modbus R24 (2m HF)"
+		CDB_Product::VersionID  = VERS_MODBUSR24HF
+		CDB_Product::AccessGroupID  = 			ACAGR_BACNET_MODBUS
+		CDB_ElectroActuator::InputSignalIDs =   SIG_MODBUS_RTU \ SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::RelayID = RELAY_24V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER500-MBR5MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 5
+		CDB_Product::Reference	=				"322225-12316"
+		CDB_Product::Name		=				"TA-Slider 500 Modbus R24 (5m HF)"
+		CDB_Product::VersionID  = VERS_MODBUSR24HF
+		CDB_Product::AccessGroupID  = 			ACAGR_BACNET_MODBUS
+		CDB_ElectroActuator::InputSignalIDs =   SIG_MODBUS_RTU \ SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::RelayID = RELAY_24V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+//////////////////////////
+// TA-Slider 500 BACnet Relay
+// Input signal: 0(2)-10 VDC
+// With BUS communication (With BUS communication, with binary input, with relays, without output signal)
+//////////////////////////
+
+new:CDB_ElectroActuator(SLIDER500-BNR1MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 3
+		CDB_Product::Reference	=				"322225-13314"
+		CDB_Product::Name		=				"TA-Slider 500 BACnet R24 (1m HF)"
+		CDB_Product::VersionID  = VERS_BACNETR24HF
+		CDB_Product::AccessGroupID  = 			ACAGR_BACNET_MODBUS
+		CDB_ElectroActuator::InputSignalIDs =   SIG_BACNET_MSTP \ SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::RelayID = RELAY_24V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER500-BNR2MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 4
+		CDB_Product::Reference	=				"322225-13315"
+		CDB_Product::Name		=				"TA-Slider 500 BACnet R24 (2m HF)"
+		CDB_Product::VersionID  = VERS_BACNETR24HF
+		CDB_Product::AccessGroupID  = 			ACAGR_BACNET_MODBUS
+		CDB_ElectroActuator::InputSignalIDs =   SIG_BACNET_MSTP \ SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::RelayID = RELAY_24V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER500-BNR5MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 5
+		CDB_Product::Reference	=				"322225-13316"
+		CDB_Product::Name		=				"TA-Slider 500 BACnet R24 (5m HF)"
+		CDB_Product::VersionID  = VERS_BACNETR24HF
+		CDB_Product::AccessGroupID  = 			ACAGR_BACNET_MODBUS
+		CDB_ElectroActuator::InputSignalIDs =   SIG_BACNET_MSTP \ SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::RelayID = RELAY_24V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+//////////////////////////
+// TA-Slider 500 Fail-safe I/O
+// Input signal: 0(2)-10 VDC
+// With binary input, without relay, with output signal
+//////////////////////////
+
+new:CDB_ElectroActuator(SLIDER500-FSIO1MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 0
+		CDB_Product::Reference	=				"322225-10614"
+		CDB_Product::Name		=				"TA-Slider 500 Fail-safe I/O (1m HF)"
+		CDB_Product::VersionID  = VERS_IOHF
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::FailSafeType =  #eElectronicFailSafe
+		CDB_ElectroActuator::BinaryInput = 1
+		CDB_ElectroActuator::DefaultReturnPosition = #eDRP_Configurable
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER500-FSIO2MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 1
+		CDB_Product::Reference	=				"322225-10615"
+		CDB_Product::Name		=				"TA-Slider 500 Fail-safe I/O (2m HF)"
+		CDB_Product::VersionID  = VERS_IOHF
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::FailSafeType =  #eElectronicFailSafe
+		CDB_ElectroActuator::BinaryInput = 1
+		CDB_ElectroActuator::DefaultReturnPosition = #eDRP_Configurable
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER500-FSIO5MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 2
+		CDB_Product::Reference	=				"322225-10616"
+		CDB_Product::Name		=				"TA-Slider 500 Fail-safe I/O (5m HF)"
+		CDB_Product::VersionID  = VERS_IOHF
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::FailSafeType =  #eElectronicFailSafe
+		CDB_ElectroActuator::BinaryInput = 1
+		CDB_ElectroActuator::DefaultReturnPosition = #eDRP_Configurable
+	}
+}
+
+//////////////////////////
+// TA-Slider 500 Plus Fail-safe
+// Input signal: 0(2)-10 VDC
+// With binary input, with relay, with output signal.
+//////////////////////////
+
+new:CDB_ElectroActuator(SLIDER500-FSR241MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 0
+		CDB_Product::Reference	=				"322225-10714"
+		CDB_Product::Name		=				"TA-Slider 500 Fail-safe R24 (1m HF)"
+		CDB_Product::VersionID  =               VERS_PLUSHF
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::FailSafeType =     #eElectronicFailSafe
+		CDB_ElectroActuator::RelayID =          RELAY_24V
+		CDB_ElectroActuator::BinaryInput =      1
+		CDB_ElectroActuator::DefaultReturnPosition = #eDRP_Configurable
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER500-FSR242MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 1
+		CDB_Product::Reference	=				"322225-10715"
+		CDB_Product::Name		=				"TA-Slider 500 Fail-safe R24 (2m HF)"
+		CDB_Product::VersionID  =               VERS_PLUSHF
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::FailSafeType =     #eElectronicFailSafe
+		CDB_ElectroActuator::RelayID =          RELAY_24V
+		CDB_ElectroActuator::BinaryInput =      1
+		CDB_ElectroActuator::DefaultReturnPosition = #eDRP_Configurable
+	}
+}
+
+new:CDB_ElectroActuator(SLIDER500-FSR245MHF) -> ACTUATOR_TAB
+{	Inherited(SLIDER500-STD1M)
+	{
+		CDB_Thing::SortInt = 2
+		CDB_Product::Reference	=				"322225-10716"
+		CDB_Product::Name		=				"TA-Slider 500 Fail-safe R24 (5m HF)"
+		CDB_Product::VersionID  =               VERS_PLUSHF
+		CDB_ElectroActuator::OutputSignalIDs =  SIG_0-10V \ SIG_2-10V
+		CDB_ElectroActuator::FailSafeType =     #eElectronicFailSafe
+		CDB_ElectroActuator::RelayID =          RELAY_24V
+		CDB_ElectroActuator::BinaryInput =      1
+		CDB_ElectroActuator::DefaultReturnPosition = #eDRP_Configurable
+	}
+}
+
+/////////////////////////
+// TA-Slider 750 Standard
+// Input signal: 0(2)-10 VDC, 0(4)-20 mA, 3-point, on-off
+// Without binary input, without relays, with output signal
+/////////////////////////
+
+new:CDB_ElectroActuator(SLIDER750-STD-24) -> ACTUATOR_TAB
+{
+	{
+		{
+			{	
+				{
+					0																			// isDeleted
+					1                                                                           // isAvailable
+					0                                                                           // isHidden
+					1                                                                           // isFix
+					0                                                                           // Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+					0                                                                           // Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+					0               															// Sort integer (Allow to show a group of articles in the order defined with this variable).
+				}
+				0 \ DBL_MAX									// Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+				NO_ID                                       // PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+				120                                     	// Tmax in °C: Max media temperature in °C
+				0                                     		// Tmin in °C: Min media temperature in °C
+			}
+			"322226-10110"                              // Reference to the TA Product
+			"TA-Slider 750 (24V)"                       // Name of the product
+			ACTTYP_ELEC                                 // Identifier of the actuator type
+			ACTFAM_SLIDER                               // Identifier of the family of the product
+			NO_ID                                       // Identifier of the actuator version
+			1											// Level of priority for selection [1,10]
+			""                                          // Description of the product
+			"NO_ID"										// Product image ID
+			ACAGR_SLIDER750                             // Identifier of the actuator accessory group
+			#ePartOfaSetNo                              // Boolean indicating if product is part of a set. Can be #ePartOfaSetNo, #ePartOfaSetYes, #ePartOfaSetYesBreakOk or #ePartOfaSetYesBreakOnMsg.
+			NO_ID										// Table ID where are sets if exist for the current product.
+			0.0                                         // Price of the product
+			#eProduct                       			// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+			NO_ID                           			// Identifier of the series of the accessory (mainly used in DlgDirSel)
+			0                               			// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+			NO_ID                           			// Identifier of the accessory type if #eBoth 
+			NO_ID										// Identifier of the accessory family if #eBoth
+		}
+		#eOPENTYPE_Linear                        	// Opening type (Linear or Circular)
+		7.5e+2                                   	// Max force or torque developped by the actuator
+		1.0e-3                                   	// Min. limited stroke of the actuator
+		#eLimitedStrokeMode_Electronic				// Limited stroke mode of the actuator
+		2.0e-2                                   	// Max stroke of the actuator (in m for #eOPENTYPE_Linear; in ° for #eOPENTYPE_Circ)
+		ADPGR_SLD_750                            	// Identifier of the actuator adapter group
+		0										 	// Min temperature for operating environment in °C
+		50										 	// Max temperature for operating environment in °C
+	}
+	3000 \ 4000 \ 6000 \ 8000 \ 12000 \ 16000*                                  // List of actuating times separated by \ with default setting followed by * (in s/m for #eOPENTYPE_Linear; in ° for #eOPENTYPE_Circ)
+	"54"                                                                        // Enclosure protection of the actuator in auto mode
+	""                                                                          // Enclosure protection of the actuator when using manual override
+	POW_24VAC \ POW_24VDC                                                       // List of accepted Power supplies separated by \
+	FREQ_50-60                                                                  // Accepted frequency
+	SIG_ON-OFF \ SIG_3POINT \ SIG_0-10V \ SIG_2-10V \ SIG_0-20mA \ SIG_4-20mA   // List of accepted input control signals separated by \
+	SIG_0-10V \ SIG_2-10V                                                       // List of accepted output control signals separated by \
+	#eFailSafeNone								                                // #eFailSafeNone, #eElectronicFailSafe, #eSpringReturn.
+	1																			// 1 if a 3 points or proportional actuator can work in On/Off mode otherwise 0.
+	RELAY_NO																	// Type of relay.
+	0																			// Number of binary input.
+	#eDRP_None																	// #eDRP_None, #eDRP_Extending, #eDRP_Retracting or #eDRP_Configurable.
+}
+
+new:CDB_ElectroActuator(SLIDER750-STD-HV) -> ACTUATOR_TAB
+{	Inherited(SLIDER750-STD-24)
+	{
+		CDB_Thing::SortInt = 1
+		CDB_Product::Reference	=				"322226-40110"
+		CDB_Product::Name		=				"TA-Slider 750 (HV)"
+		CDB_ElectroActuator::PowerSupplyIDs =   POW_115VAC \ POW_230VAC
+	}
+}
+
+//////////////////////////////////
+// TA-Slider 750 Plus 24V
+// Input signal: 0(2)-10 VDC, 0(4)-20 mA, 3-point, on-off
+// With binary input, with relays, with output signal
+//////////////////////////////////
+
+new:CDB_ElectroActuator(SLIDER750-AD24) -> ACTUATOR_TAB
+{	Inherited(SLIDER750-STD-24)
+	{
+		CDB_Thing::SortInt = 0
+		CDB_Product::Reference	=				"322226-10219"
+		CDB_Product::Name		=				"TA-Slider 750 Plus (24V)"
+		CDB_ElectroActuator::OutputSignalIDs = SIG_0-10V \ SIG_2-10V \ SIG_0-20mA \ SIG_4-20mA
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+//////////////////////////////////
+// TA-Slider 750 Plus HV
+// Input signal: 0(2)-10 VDC, 0(4)-20 mA, 3-point, on-off
+// With binary input, with relays, with output signal
+//////////////////////////////////
+
+new:CDB_ElectroActuator(SLIDER750-ADHV) -> ACTUATOR_TAB
+{	Inherited(SLIDER750-STD-HV)
+	{
+		CDB_Thing::SortInt = 1
+		CDB_Product::Reference	=				"322226-40219"
+		CDB_Product::Name		=				"TA-Slider 750 Plus (HV)"
+		CDB_ElectroActuator::OutputSignalIDs = SIG_0-10V \ SIG_2-10V \ SIG_0-20mA \ SIG_4-20mA
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+/////////////////////////////////////////////////////////////
+// TA-Slider 750 Plus 24V
+// Input signal: 0(2)-10 VDC, 0(4)-20 mA, 3-point, on-off
+// With BUS communication (without binary input, without relays, without output signal)
+/////////////////////////////////////////////////////////////
+new:CDB_ElectroActuator(SLD750-AD24-MOD485) -> ACTUATOR_TAB
+{	Inherited(SLIDER750-STD-24)
+	{
+		CDB_Thing::SortInt = 0
+		CDB_Product::Reference	=				"322226-12210"
+		CDB_Product::Name		=				"TA-Slider 750 Plus Modbus/RTU (24V)"
+		CDB_ElectroActuator::InputSignalIDs = SIG_ON-OFF \ SIG_3POINT \ SIG_0-10V \ SIG_2-10V \ SIG_0-20mA \ SIG_4-20mA \ SIG_MODBUS_RTU
+		CDB_ElectroActuator::OutputSignalIDs = NO_ID
+	}
+}
+
+new:CDB_ElectroActuator(SLD750-AD24-BAC485) -> ACTUATOR_TAB
+{	Inherited(SLIDER750-STD-24)
+	{
+		CDB_Thing::SortInt = 1
+		CDB_Product::Reference	=				"322226-13210"
+		CDB_Product::Name		=				"TA-Slider 750 Plus BACnet/MSTP (24V)"
+		CDB_ElectroActuator::InputSignalIDs = SIG_ON-OFF \ SIG_3POINT \ SIG_0-10V \ SIG_2-10V \ SIG_0-20mA \ SIG_4-20mA \ SIG_BACNET_MSTP
+		CDB_ElectroActuator::OutputSignalIDs = NO_ID
+	}
+}
+
+new:CDB_ElectroActuator(SLD750-AD24-MODTCP) -> ACTUATOR_TAB
+{	Inherited(SLIDER750-STD-24)
+	{
+		CDB_Thing::SortInt = 2
+		CDB_Product::Reference	=				"322226-14210"
+		CDB_Product::Name		=				"TA-Slider 750 Plus Modbus/TCP (24V)"
+		CDB_ElectroActuator::InputSignalIDs = SIG_ON-OFF \ SIG_3POINT \ SIG_0-10V \ SIG_2-10V \ SIG_0-20mA \ SIG_4-20mA \ SIG_MODBUS_TCP
+		CDB_ElectroActuator::OutputSignalIDs = NO_ID
+	}
+}
+
+new:CDB_ElectroActuator(SLD750-AD24-BACIP) -> ACTUATOR_TAB
+{	Inherited(SLIDER750-STD-24)
+	{
+		CDB_Thing::SortInt = 3
+		CDB_Product::Reference	=				"322226-16210"
+		CDB_Product::Name		=				"TA-Slider 750 Plus BACnet/IP (24V)"
+		CDB_ElectroActuator::InputSignalIDs = SIG_ON-OFF \ SIG_3POINT \ SIG_0-10V \ SIG_2-10V \ SIG_0-20mA \ SIG_4-20mA \ SIG_BACNET_IP
+		CDB_ElectroActuator::OutputSignalIDs = NO_ID
+	}
+}
+
+//////////////////////////////////////////////////////////
+// TA-Slider 750 Plus 24V
+// Input signal: 0(2)-10 VDC, 0(4)-20 mA, 3-point, on-off
+// With BUS communication, with binary input, with relays, with output signal.
+//////////////////////////////////////////////////////////
+
+new:CDB_ElectroActuator(SLD750-AD24R-MOD485) -> ACTUATOR_TAB
+{	Inherited(SLD750-AD24-MOD485)
+	{
+		CDB_Thing::SortInt = 0
+		CDB_Product::Reference	=				"322226-12219"
+		CDB_Product::Name		=				"TA-Slider 750 Plus Modbus/RTU (24V)"
+		CDB_ElectroActuator::OutputSignalIDs = SIG_0-10V \ SIG_2-10V \ SIG_0-20mA \ SIG_4-20mA 
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLD750-AD24R-BAC485) -> ACTUATOR_TAB
+{	Inherited(SLD750-AD24-BAC485)
+	{
+		CDB_Thing::SortInt = 1
+		CDB_Product::Reference	=				"322226-13219"
+		CDB_Product::Name		=				"TA-Slider 750 Plus BACnet/MSTP (24V)"
+		CDB_ElectroActuator::OutputSignalIDs = SIG_0-10V \ SIG_2-10V \ SIG_0-20mA \ SIG_4-20mA 
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLD750-AD24R-MODTCP) -> ACTUATOR_TAB
+{	Inherited(SLD750-AD24-MODTCP)
+	{
+		CDB_Thing::SortInt = 2
+		CDB_Product::Reference	=				"322226-14219"
+		CDB_Product::Name		=				"TA-Slider 750 Plus Modbus/TCP (24V)"
+		CDB_ElectroActuator::OutputSignalIDs = SIG_0-10V \ SIG_2-10V \ SIG_0-20mA \ SIG_4-20mA 
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLD750-AD24R-BACIP) -> ACTUATOR_TAB
+{	Inherited(SLD750-AD24-BACIP)
+	{
+		CDB_Thing::SortInt = 3
+		CDB_Product::Reference	=				"322226-16219"
+		CDB_Product::Name		=				"TA-Slider 750 Plus BACnet/IP (24V)"
+		CDB_ElectroActuator::OutputSignalIDs = SIG_0-10V \ SIG_2-10V \ SIG_0-20mA \ SIG_4-20mA 
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+////////////////////////////////////////////////////////////
+// TA-Slider 750 Plus HV
+// Input signal: 0(2)-10 VDC, 0(4)-20 mA, 3-point, on-off
+// With BUS communication (without binary input, without relays, without output signal)
+////////////////////////////////////////////////////////////
+
+new:CDB_ElectroActuator(SLD750-ADHV-MOD485) -> ACTUATOR_TAB
+{	Inherited(SLD750-AD24-MOD485)
+	{
+		CDB_Thing::SortInt = 0
+		CDB_Product::Reference	=				"322226-42210"
+		CDB_Product::Name		=				"TA-Slider 750 Plus Modbus/RTU (HV)"
+		CDB_ElectroActuator::PowerSupplyIDs =   POW_115VAC \ POW_230VAC
+	}
+}
+
+new:CDB_ElectroActuator(SLD750-ADHV-BAC485) -> ACTUATOR_TAB
+{	Inherited(SLD750-AD24-BAC485)
+	{
+		CDB_Thing::SortInt = 1
+		CDB_Product::Reference	=				"322226-43210"
+		CDB_Product::Name		=				"TA-Slider 750 Plus BACnet/MSTP (HV)"
+		CDB_ElectroActuator::PowerSupplyIDs =   POW_115VAC \ POW_230VAC
+	}
+}
+
+new:CDB_ElectroActuator(SLD750-ADHV-MODTCP) -> ACTUATOR_TAB
+{	Inherited(SLD750-AD24-MODTCP)
+	{
+		CDB_Thing::SortInt = 2
+		CDB_Product::Reference	=				"322226-44210"
+		CDB_Product::Name		=				"TA-Slider 750 Plus Modbus/TCP (HV)"
+		CDB_ElectroActuator::PowerSupplyIDs =   POW_115VAC \ POW_230VAC
+	}
+}
+
+new:CDB_ElectroActuator(SLD750-ADHV-BACIP) -> ACTUATOR_TAB
+{	Inherited(SLD750-AD24-BACIP)
+	{
+		CDB_Thing::SortInt = 3
+		CDB_Product::Reference	=				"322226-46210"
+		CDB_Product::Name		=				"TA-Slider 750 Plus BACnet/IP (HV)"
+		CDB_ElectroActuator::PowerSupplyIDs =   POW_115VAC \ POW_230VAC
+	}
+}
+
+/////////////////////////////////////////////////////////
+// TA-Slider 750 Plus HV
+// Input signal: 0(2)-10 VDC, 0(4)-20 mA, 3-point, on-off
+// With BUS communication, with binary input, with relays, with output signal
+/////////////////////////////////////////////////////////
+
+new:CDB_ElectroActuator(SLD750-ADHVR-MOD485) -> ACTUATOR_TAB
+{	Inherited(SLD750-AD24R-MOD485)
+	{
+		CDB_Thing::SortInt = 0
+		CDB_Product::Reference	=				"322226-42219"
+		CDB_Product::Name		=				"TA-Slider 750 Plus Modbus/RTU (HV)"
+		CDB_ElectroActuator::PowerSupplyIDs =   POW_115VAC \ POW_230VAC
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLD750-ADHVR-BAC485) -> ACTUATOR_TAB
+{	Inherited(SLD750-AD24R-BAC485)
+	{
+		CDB_Thing::SortInt = 1
+		CDB_Product::Reference	=				"322226-43219" 
+		CDB_Product::Name		=				"TA-Slider 750 Plus BACnet/MSTP (HV)"
+		CDB_ElectroActuator::PowerSupplyIDs =   POW_115VAC \ POW_230VAC
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLD750-ADHVR-MODTCP) -> ACTUATOR_TAB
+{	Inherited(SLD750-AD24R-MODTCP)
+	{
+		CDB_Thing::SortInt = 2
+		CDB_Product::Reference	=				"322226-44219"
+		CDB_Product::Name		=				"TA-Slider 750 Plus Modbus/TCP (HV)"
+		CDB_ElectroActuator::PowerSupplyIDs =   POW_115VAC \ POW_230VAC
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLD750-ADHVR-BACIP) -> ACTUATOR_TAB
+{	Inherited(SLD750-AD24R-BACIP)
+	{
+		CDB_Thing::SortInt = 3
+		CDB_Product::Reference	=				"322226-46219"
+		CDB_Product::Name		=				"TA-Slider 750 Plus BACnet/IP (HV)"
+		CDB_ElectroActuator::PowerSupplyIDs =   POW_115VAC \ POW_230VAC
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+//////////////////////////////////
+// TA-Slider 750 Fail-safe Plus 24V
+// Input signal: 0(2)-10 VDC, 0(4)-20 mA, 3-point, on-off
+// With binary input, relays, mA output
+//////////////////////////////////
+
+new:CDB_ElectroActuator(SLIDER750-FSAD24) -> ACTUATOR_TAB
+{	Inherited(SLIDER750-STD-24)
+	{
+		CDB_Thing::SortInt = 0
+		CDB_Product::Reference	=				"322226-10319"
+		CDB_Product::Name		=				"TA-Slider 750 Fail-safe Plus (24V)"
+		CDB_ElectroActuator::OutputSignalIDs = SIG_0-10V \ SIG_2-10V \ SIG_0-20mA \ SIG_4-20mA
+		CDB_ElectroActuator::FailSafeType = #eElectronicFailSafe
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+		CDB_ElectroActuator::DefaultReturnPosition = #eDRP_Configurable
+	}
+}
+
+//////////////////////////////////
+// TA-Slider 750 Fail-safe Plus HV
+// Input signal: 0(2)-10 VDC, 0(4)-20 mA, 3-point, on-off
+// With binary input, relays, mA output
+//////////////////////////////////
+new:CDB_ElectroActuator(SLIDER750-FSADHV) -> ACTUATOR_TAB
+{	Inherited(SLIDER750-STD-HV)
+	{
+		CDB_Thing::SortInt = 1
+		CDB_Product::Reference	=				"322226-40319"
+		CDB_Product::Name		=				"TA-Slider 750 Fail-safe Plus (HV)"
+		CDB_ElectroActuator::OutputSignalIDs = SIG_0-10V \ SIG_2-10V \ SIG_0-20mA \ SIG_4-20mA
+		CDB_ElectroActuator::FailSafeType = #eElectronicFailSafe
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+		CDB_ElectroActuator::DefaultReturnPosition = #eDRP_Configurable
+	}
+}
+
+// HYS-1227: To put in deleted when receiving confirmation that there is no more available in stock
+//////////////////////////////////////////////////////////////////
+//
+//  Actuator Slider 160
+//
+/////////////////////////////////////////////////////////////////
+
+new:CDB_ElectroActuator(SLIDER160-CO1M) -> ACTUATOR_TAB
+{
+	{
+		{
+			
+			{
+				{
+					0											// isDeleted
+					1                                           // isAvailable
+					0                                           // isHidden
+					1                                           // isFix
+					0                                           // Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+					0                                           // Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+					0               							// Sort integer (Allow to show a group of articles in the order defined with this variable).
+				}
+				0 \ DBL_MAX									// Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+				NO_ID                                       // PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+				120                                     	// Tmax in °C: Max media temperature in °C
+				DBL_MIN                                     // Tmin in °C: Min media temperature in °C
+			}
+			"322224-10511"								// Reference to the TA Product
+			"TA-Slider 160 CO (1m)"                     // Name of the product
+			ACTTYP_ELEC                                 // Identifier of the actuator type
+			ACTFAM_SLIDER                               // Identifier of the family of the product
+			VERS_CO                                     // Identifier of the actuator version
+			1											// Level of priority for selection [1,10]
+			""                                          // Description of the product
+			"NO_ID"										// Product image ID
+			NO_ID                                       // Identifier of the actuator accessory group
+			#ePartOfaSetNo                              // Boolean indicating if product is part of a set. Can be #ePartOfaSetNo, #ePartOfaSetYes, #ePartOfaSetYesBreakOk or #ePartOfaSetYesBreakOnMsg.
+			NO_ID										// Table ID where are sets if exist for the current product.
+			0.0                                         // Price of the product
+			#eProduct                       			// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+			NO_ID                           			// Identifier of the series of the accessory (mainly used in DlgDirSel)
+			0                               			// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+			NO_ID                           			// Identifier of the accessory type if #eBoth 
+			NO_ID										// Identifier of the accessory family if #eBoth
+		}
+		#eOPENTYPE_Linear                           // Opening type (Linear or Circular)
+		1.6e+2 \ 1.9e+2                             // Max force or torque developped by the actuator
+		2.5e-4                                      // Min. limited stroke of the actuator
+		#eLimitedStrokeMode_Electronic				// Limited stroke mode of the actuator
+		6.5e-3                                      // Max stroke of the actuator (in m for #eOPENTYPE_Linear; in ° for #eOPENTYPE_Circ)
+		NO_ID                               		// Identifier of the actuator adapter group
+		0											// Min temperature for operating environment in °C
+		50											// Max temperature for operating environment in °C
+	}
+	10000*										// List of actuating times separated by \ with default setting followed by * (in s/m for #eOPENTYPE_Linear; in ° for #eOPENTYPE_Circ)
+	"54"                                        // Enclosure protection of the actuator in auto mode
+	""                                          // Enclosure protection of the actuator when using manual override
+	POW_24VAC			                        // List of accepted Power supplies separated by \
+	FREQ_50-60                                  // Accepted frequency
+	SIG_0-10V \ SIG_2-10V                       // List of accepted input control signals separated by \
+	SIG_0-10V \ SIG_2-10V                       // List of accepted output control signals separated by \
+	#eFailSafeNone								// #eFailSafeNone, #eElectronicFailSafe, #eSpringReturn.
+	0											// 1 if a 3 points or proportional actuator can work in On/Off mode otherwise 0.
+	RELAY_CO									// Type of relay.
+	1											// Number of binary input.
+	#eDRP_None									// #eDRP_None, #eDRP_Extending, #eDRP_Retracting or #eDRP_Configurable.
+}
+
+new:CDB_ElectroActuator(SLIDER160-CO2M) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-CO1M)
+	{
+		CDB_Thing::SortInt = 1
+		CDB_Product::Reference	=				"322224-10512"
+		CDB_Product::Name		=				"TA-Slider 160 CO (2m)"
+	}
+}
+
+// HYS-1877: Add information for 6-way valve set. This actuator is with PIBCV.
+new:CDB_ElectroActuator(SLIDER160-CO5M) -> ACTUATOR_TAB
+{	Inherited(SLIDER160-CO1M)
+	{
+		CDB_Thing::SortInt = 2
+		CDB_Product::Reference	=				"322224-10513"
+		CDB_Product::Name		=				"TA-Slider 160 CO (5m)"
+		CDB_Product::PartOfaSet  = #ePartOfaSetYesBreakOk 
+		CDB_Product::TableSetID  = 6WAYCTRLVALVSET_TAB 
+	}
+}
+
+// HYS-2038: Add new Slider 1600 N
+//////////////////////////
+// TA-Slider 1600 standard
+// Input signal: 0(2)-10 VDC, 0(4)-20 mA, 3-point, on-off
+//////////////////////////
+
+new:CDB_ElectroActuator(SLIDER1600-STD-24) -> ACTUATOR_TAB
+{
+	{
+			
+		{
+			{
+				{
+					0																				// isDeleted
+					1                                                                               // isAvailable
+					0                                                                               // isHidden
+					1                                                                               // isFix
+					0                                                                               // Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+					0                                                                               // Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+					0               																// Sort integer (Allow to show a group of articles in the order defined with this variable).
+				}
+				0 \ DBL_MAX									// Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+				NO_ID                                       // PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+				120                                     	// Tmax in °C: Max media temperature in °C
+				0                                     		// Tmin in °C: Min media temperature in °C
+			}
+			"322228-10110"                              // Reference to the TA Product
+			"TA-Slider 1600 (24V)"                      // Name of the product
+			ACTTYP_ELEC                                 // Identifier of the actuator type
+			ACTFAM_SLIDER                               // Identifier of the family of the product
+			NO_ID                                       // Identifier of the actuator version
+			1											// Level of priority for selection [1,10]
+			""                                          // Description of the product
+			"NO_ID"										// Product image ID
+			ACAGR_SLIDER1600                            // Identifier of the actuator accessory group
+			#ePartOfaSetNo                              // Boolean indicating if product is part of a set. Can be #ePartOfaSetNo, #ePartOfaSetYes, #ePartOfaSetYesBreakOk or #ePartOfaSetYesBreakOnMsg.
+			NO_ID										// Table ID where are sets if exist for the current product.
+			0.0                                         // Price of the product
+			#eProduct                       			// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+			NO_ID                           			// Identifier of the series of the accessory (mainly used in DlgDirSel)
+			0                               			// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+			NO_ID                           			// Identifier of the accessory type if #eBoth 
+			NO_ID										// Identifier of the accessory family if #eBoth
+		}
+		#eOPENTYPE_Linear                           // Opening type (Linear or Circular)
+		1.6e+3                                      // Max force or torque developped by the actuator
+		1.0e-3                                   	// Min. limited stroke of the actuator
+		#eLimitedStrokeMode_Electronic				// Limited stroke mode of the actuator
+		3.3e-2                                      // Max stroke of the actuator (in m for #eOPENTYPE_Linear; in ° for #eOPENTYPE_Circ)
+		ADPGR_SLD_1250								// Identifier of the actuator adapter group
+		0											// Min temperature for operating environment in °C
+		50											// Max temperature for operating environment in °C
+	}
+	3000* \ 4000 \ 6000 \ 8000 \ 12000 \ 16000                                      // List of actuating times separated by \ with default setting followed by * (in s/m for #eOPENTYPE_Linear; in ° for #eOPENTYPE_Circ)
+	"54"                                                                            // Enclosure protection of the actuator in auto mode
+	""                                                                              // Enclosure protection of the actuator when using manual override
+	POW_24VAC \ POW_24VDC                                                           // List of accepted Power supplies separated by \
+	FREQ_50-60                                                                      // Accepted frequency
+	SIG_ON-OFF \ SIG_3POINT \ SIG_0-10V \ SIG_2-10V \ SIG_0-20mA \ SIG_4-20mA       // List of accepted input control signals separated by \
+	SIG_0-10V \ SIG_2-10V                                                           // List of accepted output control signals separated by \
+	#eFailSafeNone																	// #eFailSafeNone, #eElectronicFailSafe, #eSpringReturn.
+	1																				// 1 if a 3 points or proportional actuator can work in On/Off mode otherwise 0.
+	RELAY_NO																		// Type of relay.
+	0																				// Number of binary input.
+	#eDRP_None																		// #eDRP_None, #eDRP_Extending, #eDRP_Retracting or #eDRP_Configurable.
+}
+
+new:CDB_ElectroActuator(SLIDER1600-STD-HV) -> ACTUATOR_TAB
+{	Inherited(SLIDER1600-STD-24)
+	{
+		CDB_Thing::SortInt = 1
+		CDB_Product::Reference	=				"322228-40110"
+		CDB_Product::Name		=				"TA-Slider 1600 (HV)"
+		CDB_ElectroActuator::PowerSupplyIDs =   POW_115VAC \ POW_230VAC
+	}
+}
+
+////////////////////////////////////////
+// TA-Slider 1600 Plus 24V
+// Input signal: 0(2)-10 VDC, 0(4)-20 mA, 3-point, on-off
+// With binary input, with relays, with mA output
+////////////////////////////////////////
+
+new:CDB_ElectroActuator(SLIDER1600AD24) -> ACTUATOR_TAB
+{	Inherited(SLIDER1600-STD-24)
+	{
+		CDB_Thing::SortInt = 0
+		CDB_Product::Reference	=				"322228-10219"
+		CDB_Product::Name		=				"TA-Slider 1600 Plus (24V)"
+		CDB_ElectroActuator::OutputSignalIDs = SIG_0-10V \ SIG_2-10V \ SIG_0-20mA \ SIG_4-20mA
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+////////////////////////////////////////
+// TA-Slider 1600 Plus HV
+// Input signal: 0(2)-10 VDC, 0(4)-20 mA, 3-point, on-off
+// With binary input, with relays, with mA output
+////////////////////////////////////////
+
+new:CDB_ElectroActuator(SLIDER1600ADHV) -> ACTUATOR_TAB
+{	Inherited(SLIDER1600-STD-HV)
+	{
+		CDB_Thing::SortInt = 1
+		CDB_Product::Reference	=				"322228-40219"
+		CDB_Product::Name		=				"TA-Slider 1600 Plus (HV)"
+		CDB_ElectroActuator::OutputSignalIDs = SIG_0-10V \ SIG_2-10V \ SIG_0-20mA \ SIG_4-20mA
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+//////////////////////////////////////////////////////////////
+// TA-Slider 1600 Plus 24V
+// Input signal: 0(2)-10 VDC, 0(4)-20 mA, 3-point, on-off
+// With BUS communication (without binary input, without relays, without mA output)
+//////////////////////////////////////////////////////////////
+
+new:CDB_ElectroActuator(SLD1600-AD24-MOD485) -> ACTUATOR_TAB
+{	Inherited(SLIDER1600-STD-24)
+	{
+		CDB_Thing::SortInt = 0
+		CDB_Product::Reference	=				"322228-12210"
+		CDB_Product::Name		=				"TA-Slider 1600 Plus Modbus/RTU (24V)"
+		CDB_ElectroActuator::InputSignalIDs = SIG_ON-OFF \ SIG_3POINT \ SIG_0-10V \ SIG_2-10V \ SIG_0-20mA \ SIG_4-20mA \ SIG_MODBUS_RTU
+		CDB_ElectroActuator::OutputSignalIDs = SIG_0-10V \ SIG_2-10V \ SIG_0-20mA \ SIG_4-20mA
+	}
+}
+
+new:CDB_ElectroActuator(SLD1600-AD24-BAC485) -> ACTUATOR_TAB
+{	Inherited(SLIDER1600-STD-24)
+	{
+		CDB_Thing::SortInt = 1
+		CDB_Product::Reference	=				"322228-13210"
+		CDB_Product::Name		=				"TA-Slider 1600 Plus BACnet/MSTP (24V)"
+		CDB_ElectroActuator::InputSignalIDs = SIG_ON-OFF \ SIG_3POINT \ SIG_0-10V \ SIG_2-10V \ SIG_0-20mA \ SIG_4-20mA \ SIG_BACNET_MSTP
+		CDB_ElectroActuator::OutputSignalIDs = SIG_0-10V \ SIG_2-10V \ SIG_0-20mA \ SIG_4-20mA
+	}
+}
+
+new:CDB_ElectroActuator(SLD1600-AD24-MODTCP) -> ACTUATOR_TAB
+{	Inherited(SLIDER1600-STD-24)
+	{
+		CDB_Thing::SortInt = 2
+		CDB_Product::Reference	=				"322228-14210"
+		CDB_Product::Name		=				"TA-Slider 1600 Plus Modbus/TCP (24V)"
+		CDB_ElectroActuator::InputSignalIDs = SIG_ON-OFF \ SIG_3POINT \ SIG_0-10V \ SIG_2-10V \ SIG_0-20mA \ SIG_4-20mA \ SIG_MODBUS_TCP
+		CDB_ElectroActuator::OutputSignalIDs = SIG_0-10V \ SIG_2-10V \ SIG_0-20mA \ SIG_4-20mA
+	}
+}
+
+new:CDB_ElectroActuator(SLD1600-AD24-BACIP) -> ACTUATOR_TAB
+{	Inherited(SLIDER1600-STD-24)
+	{
+		CDB_Thing::SortInt = 3
+		CDB_Product::Reference	=				"322228-16210"
+		CDB_Product::Name		=				"TA-Slider 1600 Plus BACnet/IP (24V)"
+		CDB_ElectroActuator::InputSignalIDs = SIG_ON-OFF \ SIG_3POINT \ SIG_0-10V \ SIG_2-10V \ SIG_0-20mA \ SIG_4-20mA \ SIG_BACNET_IP
+		CDB_ElectroActuator::OutputSignalIDs = SIG_0-10V \ SIG_2-10V \ SIG_0-20mA \ SIG_4-20mA
+	}
+}
+
+/////////////////////////////////////////////////////////
+// TA-Slider 1600 Plus 24V
+// Input signal: 0(2)-10 VDC, 0(4)-20 mA, 3-point, on-off
+// With BUS communication, with binary input, with relays, with mA output
+/////////////////////////////////////////////////////////
+
+new:CDB_ElectroActuator(SLD1600-AD24R-MOD485) -> ACTUATOR_TAB
+{	Inherited(SLD1600-AD24-MOD485)
+	{
+		CDB_Thing::SortInt = 0
+		CDB_Product::Reference	=				"322228-12219"
+		CDB_Product::Name		=				"TA-Slider 1600 Plus Modbus/RTU (24V)"
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLD1600-AD24R-BAC485) -> ACTUATOR_TAB
+{	Inherited(SLD1600-AD24-BAC485)
+	{
+		CDB_Thing::SortInt = 1
+		CDB_Product::Reference	=				"322228-13219"
+		CDB_Product::Name		=				"TA-Slider 1600 Plus BACnet/MSTP (24V)"
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLD1600-AD24R-MODTCP) -> ACTUATOR_TAB
+{	Inherited(SLD1600-AD24-MODTCP)
+	{
+		CDB_Thing::SortInt = 2
+		CDB_Product::Reference	=				"322228-14219"
+		CDB_Product::Name		=				"TA-Slider 1600 Plus Modbus/TCP (24V)"
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+new:CDB_ElectroActuator(SLD1600-AD24R-BACIP) -> ACTUATOR_TAB
+{	Inherited(SLD1600-AD24-BACIP)
+	{
+		CDB_Thing::SortInt = 3
+		CDB_Product::Reference	=				"322228-16219"
+		CDB_Product::Name		=				"TA-Slider 1600 Plus BACnet/IP (24V)"
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+//////////////////////////////////////////////////////////////
+// TA-Slider 1600 Plus HV
+// Input signal: 0(2)-10 VDC, 0(4)-20 mA, 3-point, on-off
+// With BUS communication (without binary input, without relays, without mA output)
+//////////////////////////////////////////////////////////////
+
+new:CDB_ElectroActuator(SLD1600-ADHV-MOD485) -> ACTUATOR_TAB
+{	Inherited(SLD1600-AD24-MOD485)
+	{
+		CDB_Thing::SortInt = 0
+		CDB_Product::Reference	=				"322228-42210"
+		CDB_Product::Name		=				"TA-Slider 1600 Plus Modbus/RTU (HV)"
+		CDB_ElectroActuator::PowerSupplyIDs =   POW_115VAC \ POW_230VAC
+	}
+}
+
+new:CDB_ElectroActuator(SLD1600-ADHV-BAC485) -> ACTUATOR_TAB
+{	Inherited(SLD1600-AD24-BAC485)
+	{
+		CDB_Thing::SortInt = 1
+		CDB_Product::Reference	=				"322228-43210"
+		CDB_Product::Name		=				"TA-Slider 1600 Plus BACnet/MSTP (HV)"
+		CDB_ElectroActuator::PowerSupplyIDs =   POW_115VAC \ POW_230VAC
+	}
+}
+
+new:CDB_ElectroActuator(SLD1600-ADHV-MODTCP) -> ACTUATOR_TAB
+{	Inherited(SLD1600-AD24-MODTCP)
+	{
+		CDB_Thing::SortInt = 2
+		CDB_Product::Reference	=				"322228-44210"
+		CDB_Product::Name		=				"TA-Slider 1600 Plus Modbus/TCP (HV)"
+		CDB_ElectroActuator::PowerSupplyIDs =   POW_115VAC \ POW_230VAC
+	}
+}
+
+new:CDB_ElectroActuator(SLD1600-ADHV-BACIP) -> ACTUATOR_TAB
+{	Inherited(SLD1600-AD24-BACIP)
+	{
+		CDB_Thing::SortInt = 3
+		CDB_Product::Reference	=				"322228-46210"
+		CDB_Product::Name		=				"TA-Slider 1600 Plus BACnet/IP (HV)"
+		CDB_ElectroActuator::PowerSupplyIDs =   POW_115VAC \ POW_230VAC
+	}
+}
+
+//////////////////////////////////////////////////////////
+// TA-Slider 1600 Plus HV
+// Input signal: 0(2)-10 VDC, 0(4)-20 mA, 3-point, on-off
+// With BUS communication, with binary input, with relays, with mA output
+//////////////////////////////////////////////////////////
+
+new:CDB_ElectroActuator(SLD1600-ADHVR-MOD485) -> ACTUATOR_TAB
+{	Inherited(SLD1600-AD24R-MOD485)
+	{
+		CDB_Thing::SortInt = 0
+		CDB_Product::Reference	=				"322228-42219"
+		CDB_Product::Name		=				"TA-Slider 1600 Plus Modbus/RTU Relay(HV)"
+		CDB_ElectroActuator::PowerSupplyIDs =   POW_115VAC \ POW_230VAC
+	}
+}
+
+new:CDB_ElectroActuator(SLD1600-ADHVR-BAC485) -> ACTUATOR_TAB
+{	Inherited(SLD1600-AD24R-BAC485)
+	{
+		CDB_Thing::SortInt = 1
+		CDB_Product::Reference	=				"322228-43219" 
+		CDB_Product::Name		=				"TA-Slider 1600 Plus BACnet/MSTP Relay(HV)"
+		CDB_ElectroActuator::PowerSupplyIDs =   POW_115VAC \ POW_230VAC
+	}
+}
+
+new:CDB_ElectroActuator(SLD1600-ADHVR-MODTCP) -> ACTUATOR_TAB
+{	Inherited(SLD1600-AD24R-MODTCP)
+	{
+		CDB_Thing::SortInt = 2
+		CDB_Product::Reference	=				"322228-44219"
+		CDB_Product::Name		=				"TA-Slider 1600 Plus Modbus/TCP Relay(HV)"
+		CDB_ElectroActuator::PowerSupplyIDs =   POW_115VAC \ POW_230VAC
+	}
+}
+
+new:CDB_ElectroActuator(SLD1600-ADHVR-BACIP) -> ACTUATOR_TAB
+{	Inherited(SLD1600-AD24R-BACIP)
+	{
+		CDB_Thing::SortInt = 3
+		CDB_Product::Reference	=				"322228-46219"
+		CDB_Product::Name		=				"TA-Slider 1600 Plus BACnet/IP (HV)"
+		CDB_ElectroActuator::PowerSupplyIDs =   POW_115VAC \ POW_230VAC
+		CDB_ElectroActuator::BinaryInput = 1
+	}
+}
+
+//////////////////////////////////
+// TA-Slider 1600 Fail-safe Plus 24V
+// Input signal: 0(2)-10 VDC, 0(4)-20 mA, 3-point, on-off
+// With binary input, with relays, with mA output
+//////////////////////////////////
+
+new:CDB_ElectroActuator(SLIDER1600-FSAD24) -> ACTUATOR_TAB
+{	Inherited(SLIDER1600-STD-24)
+	{
+		CDB_Thing::SortInt = 0
+		CDB_Product::Reference	=				"322228-10319"
+		CDB_Product::Name		=				"TA-Slider 1600 Fail-safe Plus (24V)"
+		CDB_ElectroActuator::OutputSignalIDs = SIG_0-10V \ SIG_2-10V \ SIG_0-20mA \ SIG_4-20mA
+		CDB_ElectroActuator::FailSafeType = #eElectronicFailSafe
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+		CDB_ElectroActuator::DefaultReturnPosition = #eDRP_Configurable
+	}
+}
+
+//////////////////////////////////
+// TA-Slider 1600 Fail-safe Plus HV
+// Input signal: 0(2)-10 VDC, 0(4)-20 mA, 3-point, on-off
+// With binary input, with relays, with mA output
+//////////////////////////////////
+new:CDB_ElectroActuator(SLIDER1600-FSADHV) -> ACTUATOR_TAB
+{	Inherited(SLIDER1600-STD-HV)
+	{
+		CDB_Thing::SortInt = 1
+		CDB_Product::Reference	=				"322228-40319"
+		CDB_Product::Name		=				"TA-Slider 1600 Fail-safe Plus (HV)"
+		CDB_ElectroActuator::OutputSignalIDs = SIG_0-10V \ SIG_2-10V \ SIG_0-20mA \ SIG_4-20mA
+		CDB_ElectroActuator::FailSafeType = #eElectronicFailSafe
+		CDB_ElectroActuator::RelayID = RELAY_220V
+		CDB_ElectroActuator::BinaryInput = 1
+		CDB_ElectroActuator::DefaultReturnPosition = #eDRP_Configurable
+	}
+}
+
+////////////////////////////////////////////////////////////////
+//
+//		ROOT TABLE identification
+//
+////////////////////////////////////////////////////////////////
+
+ROOT_TABLE(ROOT_TABLE)

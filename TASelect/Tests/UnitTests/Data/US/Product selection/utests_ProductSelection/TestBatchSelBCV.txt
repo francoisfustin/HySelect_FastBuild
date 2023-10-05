@@ -1,0 +1,1084 @@
+#Start of test definition
+
+StartTechnicalParameters
+ApplicationType = 1
+AvailablePMPanels = 7
+BreakTankRequiredForWaterMakeUp = 1
+CVDefKvReynard = 1
+CVMaxDispDp = 200000
+CVMaxDpProp = 65000
+CVMinAuthCstFlow = 0.5
+CVMinAuthor = 0.25
+CVMinDpOnoff = 3000
+CVMinDpProp = 10000
+CVUseDpCPBand = 0
+CanChangePressureVolumeLimit = 0
+CurrencyID = CURRENCY_EUR
+DefaultCalculationNorm = PM_NORM_EN12828
+DefaultCoolingTps = 7
+DefaultFillTemperature = 15
+DefaultHeatingTps = 50
+DefaultISCoolingAdditID = WATER
+DefaultISCoolingDT = 20
+DefaultISCoolingPcWeight = 0
+DefaultISCoolingTps = 60
+DefaultISHeatingAdditID = WATER
+DefaultISHeatingDT = 5
+DefaultISHeatingPcWeight = 0
+DefaultISHeatingTps = 80
+DefaultISSolarAdditID = WATER
+DefaultISSolarDT = 20
+DefaultISSolarPcWeight = 0
+DefaultISSolarTps = 70
+DefaultMaxTempInCooling = 45
+DefaultMinTempInHeating = 5
+DefaultMinTempInSolar = 5
+DefaultPipeSerieID = STEEL_DIN2440
+DefaultPrjCoolingAdditID = WATER
+DefaultPrjCoolingDT = 5
+DefaultPrjCoolingPcWeight = 0
+DefaultPrjHeatingAdditID = WATER
+DefaultPrjHeatingDT = 5
+DefaultPrjHeatingPcWeight = 0
+DefaultSafetyPressureResponseValve = 300000
+DefaultStaticPressureOfWaterNetwork = 400000
+DefaultTAZ = 100
+DefaultWaterHardness = 1.78324958
+DefaultWaterMakeUpTemp = 15
+DegassingWaterReserveForVessel = 0.002
+DpCBCVDpcmin = 3000
+DpCBCVDplmin = 5000
+DpCHide = 0
+DpCHminFullyOpenMv = 0
+DpCMinDp = 5000
+DpCMvLocation = 0
+DpCMvWithSameSizeOnly = 0
+FixedOrificeMaxDp = 6000
+FixedOrificeMinDp = 2000
+FlowDeviationMinus = -0.1
+FlowDeviationPlus = 0.1
+FluidTempLimitEN12953 = 105
+InitialPressureMargin = 30000
+MaxNumberOfAdditionalVesselsInParallel = 4
+MaxNumberOfVentoInParallel = 2
+MaxSafetyValveInParallel = 3
+MaxSizeShift = 4
+MinPressureMargin = 20000
+PICvHide = 0
+PICvMinDp = 1000
+PSetupCompresso = 10000
+PSetupTransfero = 20000
+PipeMaxDp = 200
+PipeMaxVelocity = 2
+PipeMinDp = 10
+PipeMinVelocity = 0.3
+PipeTargetDp = 150
+PipeTargetVelocity = 1
+PipeTargetVelosityUsed = 0
+PressureVolumeLimit = 300000
+ProjectType = 1
+SafetyTempLimiterLimitEN12953 = 110
+SizeShiftAbove = 0
+SizeShiftBelow = -2
+TrvDefDpTotal = 10000
+TrvDefRoomTemperature = 20
+TrvDefSupplyTemperature = 80
+TrvMaxDp = 30000
+TrvMinDpRatio = 0.25
+UseDefaultFreezingPointAsMinTemperature = 1
+UseSimplyPst = 0
+UseVesselPressureVolumeLimit = 0
+ValveMaxDp = 200000
+ValveMin2Dp = 6000
+ValveMinDp = 3000
+VenturiMaxDp = 10000
+VenturiMinDp = 2000
+VesselSelectionRangePercentage = 0
+EndTechnicalParameters
+
+Test number = 0
+
+SelectionMode = Batch
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = RVTYPE_BVC
+ComboFamilyBelow65ID = FAM_TBV-CM
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADN
+ComboVersionBelow65ID = VERS_STD
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = RVTYPE_BVC
+ComboFamilyAbove50ID = FAM_FUSION_C
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_4
+CtrlTypeStrictChecked = false
+CV2w3w = CV2w
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = Yes
+ComboActuatorDefaultReturnPos = Closing
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ;FindOneSolution;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;6.90197;10000;6063.39;15282;-20/120;3/8" (10);76.0132;0.226354;TAACT_M_NC_24_3;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 1;5.555555554e-05; ; ; ;FindOneSolution;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;24235.3;61008.6;-20/120;1/2" (15);79.2937;0.276311;TAACT_M_NC_24_3;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 2;8.333333331e-05; ; ; ;FindOneSolution;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;54515.7;137180;-20/120;1/2" (15);167.605;0.414466;TAACT_M_NC_24_3;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 3;0.00013888888885; ; ; ;FindOneSolution;TBV-CM15NFC_TV;TBV-CM 1/2"(15NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;24232.9;78969.8;-20/120;3/4" (20);96.5521;0.379027;TAACT_M_NC_24_3;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 4;0.00022222222216; ; ; ;FindOneSolution;TBV-CM20NFC_TV;TBV-CM 3/4"(20NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;3/4" (20);-;0;0.004;EqualPc;PushToClose;10.001;10000;15519.5;72151.9;-20/120;1" (25);73.1796;0.382437;TAACT_M_NC_24_3;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 5;0.00036111111101; ; ; ;FindOneSolution;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;EqualPc;PushToClose;10.001;10000;10264.6;36542;-20/120;1" (25);181.946;0.62146;TAACT_M_NC_24_3;TA-ACTM 24/NC;962500;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 6;0.00058333333317; ; ; ;FindOneSolution;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;EqualPc;PushToClose;10.001;10000;26785.2;95355.1;-20/120;1 1/4" (32);111.135;0.576286;TAACT_M_NC_24_3;TA-ACTM 24/NC;962500;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 7;0.00094444444418; ; ; ;FindOneSolutionWithAlternative;FUSION_C32C;TA-FUSION-C 1 1/4";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/4" (32);>100;0;0.02;EqualPc;PushToClose;8.68721;10000;6750.8;38957.1;-20/120;1 1/2" (40);128.52;0.688231;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 8;0.00152777777735; ; ; ;FindOneSolutionWithAlternative;FUSION_C40C;TA-FUSION-C 1 1/2";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/2" (40);>100;0;0.02;EqualPc;PushToClose;9.59038;10000;8589.32;58811.7;-20/120;2" (50);96.6832;0.692498;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 9;0.00247222222153; ; ; ;FindOneSolution;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;7.897;10000;1861.81;72557.5;-20/120;2 1/2" (65);64.7506;0.664999;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 10;0.00399999999888; ; ; ;FindOneSolution;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;9.16666;10000;4873.94;189945;-20/120;2 1/2" (65);162.614;1.07595;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 11;0.00647222222041; ; ; ;FindOneSolution;FUSION_C80C_2;TA-FUSION-C 3"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);>100;0;0.02;EqualPc;PushToClose;9.23257;10000;5275.81;189172;-20/120;3" (80);181.506;1.26224;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 12;0.01047222221929; ; ; ;FindOneSolution;FUSION_C100C;TA-FUSION-C 4";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;9.3348;10000;5395.35;231996;-20/120;4" (100);121.137;1.2094;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 13;0.0169444444397; ; ; ;FindOneSolution;FUSION_C125C;TA-FUSION-C 5";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);>100;0;0.02;EqualPc;PushToClose;9.23996;10000;4960.31;208954;-20/120;5" (125);103.599;1.27659;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 14;0.02741666665899; ; ; ;FindOneSolution;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.42525;10000;5916.86;240811;-20/120;6" (150);107.49;1.45299;MC100FSE-24;TA-MC 100FSE/24;576415;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 15;0.04436111109869; ; ; ;FindOneSolution;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;10000;15490.5;630451;-20/120;8" (200);62.6734;1.31817;MC100FSE-24;TA-MC 100FSE/24;576415;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 16;0.07177777775768; ; ; ;FindOneSolution;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;10000;40554.8;1.65054e+06;-20/120;10" (250);49.9982;1.35193;MC100FSE-24;TA-MC 100FSE/24;576415;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 1
+
+SelectionMode = Batch
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = RVTYPE_BVC
+ComboFamilyBelow65ID = FAM_TBV-CM
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADN
+ComboVersionBelow65ID = VERS_STD
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = RVTYPE_BVC
+ComboFamilyAbove50ID = FAM_FUSION_C
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_4
+CtrlTypeStrictChecked = false
+CV2w3w = CV2w
+CVCtrlType = 3points
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ;FindOneSolution;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;6.90197;10000;6063.39;15282;-20/120;3/8" (10);76.0132;0.226354;MC15C-24;TA-MC 15-C/24;820000;-;60;40;24 VAC/24 VDC;3-point/0(2)-10 V;-;No;None
+Result number = 1;5.555555554e-05; ; ; ;FindOneSolution;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;24235.3;61008.6;-20/120;1/2" (15);79.2937;0.276311;MC15C-24;TA-MC 15-C/24;820000;-;60;40;24 VAC/24 VDC;3-point/0(2)-10 V;-;No;None
+Result number = 2;8.333333331e-05; ; ; ;FindOneSolution;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;54515.7;137180;-20/120;1/2" (15);167.605;0.414466;MC15C-24;TA-MC 15-C/24;820000;-;60;40;24 VAC/24 VDC;3-point/0(2)-10 V;-;No;None
+Result number = 3;0.00013888888885; ; ; ;FindOneSolution;TBV-CM15NFC_TV;TBV-CM 1/2"(15NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;24232.9;78969.8;-20/120;3/4" (20);96.5521;0.379027;MC15C-24;TA-MC 15-C/24;820000;-;60;40;24 VAC/24 VDC;3-point/0(2)-10 V;-;No;None
+Result number = 4;0.00022222222216; ; ; ;FindOneSolution;TBV-CM20NFC_TV;TBV-CM 3/4"(20NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;3/4" (20);-;0;0.004;EqualPc;PushToClose;10.001;10000;15519.5;72151.9;-20/120;1" (25);73.1796;0.382437;MC15C-24;TA-MC 15-C/24;820000;-;60;40;24 VAC/24 VDC;3-point/0(2)-10 V;-;No;None
+Result number = 5;0.00036111111101; ; ; ;FindOneSolution;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;EqualPc;PushToClose;10.001;10000;10264.6;36542;-20/120;1" (25);181.946;0.62146;MC15C-24;TA-MC 15-C/24;2.35e+06;-;60;40;24 VAC/24 VDC;3-point/0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ; ;FindOneSolution;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;EqualPc;PushToClose;10.001;10000;26785.2;95355.1;-20/120;1 1/4" (32);111.135;0.576286;MC15C-24;TA-MC 15-C/24;2.35e+06;-;60;40;24 VAC/24 VDC;3-point/0(2)-10 V;-;No;None
+Result number = 7;0.00094444444418; ; ; ;FindOneSolutionWithAlternative;FUSION_C32C;TA-FUSION-C 1 1/4";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/4" (32);>100;0;0.02;EqualPc;PushToClose;8.68721;10000;6750.8;38957.1;-20/120;1 1/2" (40);128.52;0.688231;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 8;0.00152777777735; ; ; ;FindOneSolutionWithAlternative;FUSION_C40C;TA-FUSION-C 1 1/2";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/2" (40);>100;0;0.02;EqualPc;PushToClose;9.59038;10000;8589.32;58811.7;-20/120;2" (50);96.6832;0.692498;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 9;0.00247222222153; ; ; ;FindOneSolution;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;7.897;10000;1861.81;72557.5;-20/120;2 1/2" (65);64.7506;0.664999;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 10;0.00399999999888; ; ; ;FindOneSolution;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;9.16666;10000;4873.94;189945;-20/120;2 1/2" (65);162.614;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ; ;FindOneSolution;FUSION_C80C_2;TA-FUSION-C 3"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);>100;0;0.02;EqualPc;PushToClose;9.23257;10000;5275.81;189172;-20/120;3" (80);181.506;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ; ;FindOneSolution;FUSION_C100C;TA-FUSION-C 4";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;9.3348;10000;5395.35;231996;-20/120;4" (100);121.137;1.2094;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ; ;FindOneSolution;FUSION_C125C;TA-FUSION-C 5";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);>100;0;0.02;EqualPc;PushToClose;9.23996;10000;4960.31;208954;-20/120;5" (125);103.599;1.27659;SLIDER750-STD-24;TA-Slider 750 (24V);639431;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ; ;FindOneSolution;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.42525;10000;5916.86;240811;-20/120;6" (150);107.49;1.45299;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ; ;FindOneSolution;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;10000;15490.5;630451;-20/120;8" (200);62.6734;1.31817;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ; ;FindOneSolution;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;10000;40554.8;1.65054e+06;-20/120;10" (250);49.9982;1.35193;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 2
+
+SelectionMode = Batch
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = RVTYPE_BVC
+ComboFamilyBelow65ID = FAM_TBV-C
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADN
+ComboVersionBelow65ID = VERS_STD
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = RVTYPE_BVC
+ComboFamilyAbove50ID = FAM_FUSION_C
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_4
+CtrlTypeStrictChecked = false
+CV2w3w = CV2w
+CVCtrlType = OnOff
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Closing
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ;FindOneSolutionWithAlternative;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;3000;6137.27;15479.2;-20/120;3/8" (10);80.9559;0.226354;EMO_T_NC_24_1;EMO T 24/NC (0.8m);380000;-;120;54;24 VAC/24 VDC;On-off;-;No;Extending
+Result number = 1;5.555555554e-05; ; ; ;FindOneSolution;TBV-C15LFI_TV;TBV-C 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;NotCharacterized;PushToClose;10.001;3000;4851.8;40453.3;-20/120;1/2" (15);84.0375;0.276311;EMO_T_NC_24_1;EMO T 24/NC (0.8m);390000;-;120;54;24 VAC/24 VDC;On-off;-;No;Extending
+Result number = 2;8.333333331e-05; ; ; ;FindOneSolution;TBV-C15LFI_TV;TBV-C 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;NotCharacterized;PushToClose;10.001;3000;10910.7;90909.2;-20/120;1/2" (15);176.268;0.414466;EMO_T_NC_24_1;EMO T 24/NC (0.8m);390000;-;120;54;24 VAC/24 VDC;On-off;-;No;Extending
+Result number = 3;0.00013888888885; ; ; ;FindOneSolution;TBV-C15LFE_TV;TBV-C 1/2"(15NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;NotCharacterized;PushToClose;10.001;3000;7573.59;68011.9;-20/120;3/4" (20);101.627;0.379027;EMO_T_NC_24_1;EMO T 24/NC (0.8m);390000;-;120;54;24 VAC/24 VDC;On-off;-;No;Extending
+Result number = 4;0.00022222222216; ; ; ;FindOneSolution;TBV-C20NFE_TV;TBV-C 3/4"(20NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;3/4" (20);-;0;0.004;NotCharacterized;PushToClose;10.001;3000;5439.49;59138.9;-20/120;1" (25);76.9655;0.382437;EMO_T_NC_24_1;EMO T 24/NC (0.8m);275000;-;120;54;24 VAC/24 VDC;On-off;-;No;Extending
+Result number = 5;0.00036111111101; ; ; ;FindOneSolution;TBV-C25NFE_TV;TBV-C 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;NotCharacterized;PushToClose;10.001;3000;3205.26;33413.3;-20/120;1" (25);189.754;0.62146;EMO_T_NC_24_1;EMO T 24/NC (0.8m);975000;-;120;54;24 VAC/24 VDC;On-off;-;No;Extending
+Result number = 6;0.00058333333317; ; ; ;FindOneSolution;TBV-C25NFE_TV;TBV-C 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;NotCharacterized;PushToClose;10.001;3000;8364.03;87190.8;-20/120;1 1/4" (32);115.995;0.576286;EMO_T_NC_24_1;EMO T 24/NC (0.8m);975000;-;120;54;24 VAC/24 VDC;On-off;-;No;Extending
+Result number = 7;0.00094444444418; ; ; ;FindOneSolution;TBV-C25NFE_TV;TBV-C 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;NotCharacterized;PushToClose;10.001;3000;21924.8;228555;-20/120;1 1/2" (40);133.723;0.688231;EMO_T_NC_24_1;EMO T 24/NC (0.8m);975000;-;120;54;24 VAC/24 VDC;On-off;-;No;Extending
+Result number = 8;0.00152777777735; ; ; ;FindOneSolutionWithAlternative;FUSION_C50C;TA-FUSION-C 2";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;2" (50);>100;0;0.02;EqualPc;PushToClose;9.39487;3000;2731.11;10291.3;-20/120;2" (50);100.554;0.692498;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 9;0.00247222222153; ; ; ;FindOneSolutionWithAlternative;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;9.45912;3000;1883.65;73408.7;-20/120;2 1/2" (65);67.3602;0.664999;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 10;0.00399999999888; ; ; ;FindOneSolutionWithAlternative;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;9.48115;3000;4931.11;192173;-20/120;2 1/2" (65);167.998;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ; ;FindOneSolutionWithAlternative;FUSION_C80C_2;TA-FUSION-C 3"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);>100;0;0.02;EqualPc;PushToClose;9.46233;3000;5337.69;191391;-20/120;3" (80);187.103;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ; ;FindOneSolutionWithAlternative;FUSION_C100C;TA-FUSION-C 4";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;9.51764;3000;5458.64;234717;-20/120;4" (100);124.918;1.2094;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ; ;FindOneSolutionWithAlternative;FUSION_C125C;TA-FUSION-C 5";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);>100;0;0.02;EqualPc;PushToClose;9.51476;3000;5018.5;211405;-20/120;5" (125);106.747;1.27659;SLIDER750-STD-24;TA-Slider 750 (24V);639431;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;3000;5986.27;243636;-20/120;6" (150);110.575;1.45299;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;3000;15672.3;637847;-20/120;8" (200);64.535;1.31817;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;3000;41030.5;1.66991e+06;-20/120;10" (250);51.4616;1.35193;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 3
+
+SelectionMode = Batch
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = RVTYPE_BVC
+ComboFamilyBelow65ID = FAM_TBV-CM
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADN
+ComboVersionBelow65ID = VERS_STD
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = RVTYPE_BVC
+ComboFamilyAbove50ID = FAM_FUSION_C
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_4
+CtrlTypeStrictChecked = false
+CV2w3w = CV2w
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = Yes
+ComboActuatorDefaultReturnPos = Opening
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ;FindOneSolution;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;6.98021;10000;6137.27;15479.2;-20/120;3/8" (10);80.9559;0.226354;TAACT_M_NO_24_3;TA-ACTM 24/NO;376000;-;8,89;20;24 VAC;0-10 V;-;Yes;Retracting
+Result number = 1;5.555555554e-05; ; ; ;FindOneSolution;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;24525.1;61760.2;-20/120;1/2" (15);84.0375;0.276311;TAACT_M_NO_24_3;TA-ACTM 24/NO;376000;-;8,89;20;24 VAC;0-10 V;-;Yes;Retracting
+Result number = 2;8.333333331e-05; ; ; ;FindOneSolution;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;55163.5;138843;-20/120;1/2" (15);176.268;0.414466;TAACT_M_NO_24_3;TA-ACTM 24/NO;376000;-;8,89;20;24 VAC;0-10 V;-;Yes;Retracting
+Result number = 3;0.00013888888885; ; ; ;FindOneSolution;TBV-CM15NFC_TV;TBV-CM 1/2"(15NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;24522.9;79917.4;-20/120;3/4" (20);101.627;0.379027;TAACT_M_NO_24_3;TA-ACTM 24/NO;376000;-;8,89;20;24 VAC;0-10 V;-;Yes;Retracting
+Result number = 4;0.00022222222216; ; ; ;FindOneSolution;TBV-CM20NFC_TV;TBV-CM 3/4"(20NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;3/4" (20);-;0;0.004;EqualPc;PushToClose;10.001;10000;15705.2;73008.9;-20/120;1" (25);76.9655;0.382437;TAACT_M_NO_24_3;TA-ACTM 24/NO;376000;-;8,89;20;24 VAC;0-10 V;-;Yes;Retracting
+Result number = 5;0.00036111111101; ; ; ;FindOneSolution;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;EqualPc;PushToClose;10.001;10000;10385;36970.6;-20/120;1" (25);189.754;0.62146;TAACT_M_NO_24_3;TA-ACTM 24/NO;962500;-;8,89;20;24 VAC;0-10 V;-;Yes;Retracting
+Result number = 6;0.00058333333317; ; ; ;FindOneSolution;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;EqualPc;PushToClose;10.001;10000;27099.4;96473.7;-20/120;1 1/4" (32);115.995;0.576286;TAACT_M_NO_24_3;TA-ACTM 24/NO;962500;-;8,89;20;24 VAC;0-10 V;-;Yes;Retracting
+Result number = 7;0.00094444444418; ; ; ;FindOneSolutionWithAlternative;FUSION_C32C;TA-FUSION-C 1 1/4";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/4" (32);>100;0;0.02;EqualPc;PushToClose;8.72722;10000;6829.99;39414.1;-20/120;1 1/2" (40);133.723;0.688231;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 8;0.00152777777735; ; ; ;FindOneSolutionWithAlternative;FUSION_C40C;TA-FUSION-C 1 1/2";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/2" (40);>100;0;0.02;EqualPc;PushToClose;9.62197;10000;8690.08;59501.6;-20/120;2" (50);100.554;0.692498;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 9;0.00247222222153; ; ; ;FindOneSolution;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;7.91329;10000;1883.65;73408.7;-20/120;2 1/2" (65);67.3602;0.664999;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 10;0.00399999999888; ; ; ;FindOneSolution;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;9.18019;10000;4931.11;192173;-20/120;2 1/2" (65);167.998;1.07595;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 11;0.00647222222041; ; ; ;FindOneSolution;FUSION_C80C_2;TA-FUSION-C 3"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);>100;0;0.02;EqualPc;PushToClose;9.24645;10000;5337.69;191391;-20/120;3" (80);187.103;1.26224;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 12;0.01047222221929; ; ; ;FindOneSolution;FUSION_C100C;TA-FUSION-C 4";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;9.3473;10000;5458.64;234717;-20/120;4" (100);124.918;1.2094;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 13;0.0169444444397; ; ; ;FindOneSolution;FUSION_C125C;TA-FUSION-C 5";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);>100;0;0.02;EqualPc;PushToClose;9.25258;10000;5018.5;211405;-20/120;5" (125);106.747;1.27659;MC100FSR-24;TA-MC 100FSR/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 14;0.02741666665899; ; ; ;FindOneSolution;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.43792;10000;5986.27;243636;-20/120;6" (150);110.575;1.45299;MC100FSR-24;TA-MC 100FSR/24;576415;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 15;0.04436111109869; ; ; ;FindOneSolution;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;10000;15672.3;637847;-20/120;8" (200);64.535;1.31817;MC100FSR-24;TA-MC 100FSR/24;576415;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+Result number = 16;0.07177777775768; ; ; ;FindOneSolution;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;10000;41030.5;1.66991e+06;-20/120;10" (250);51.4616;1.35193;MC100FSR-24;TA-MC 100FSR/24;576415;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Retracting
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 4
+
+SelectionMode = Batch
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = RVTYPE_BVC
+ComboFamilyBelow65ID = FAM_TBV-C
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADN
+ComboVersionBelow65ID = VERS_STD
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = RVTYPE_BVC
+ComboFamilyAbove50ID = FAM_FUSION_C
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_4
+CtrlTypeStrictChecked = false
+CV2w3w = CV2w
+CVCtrlType = OnOff
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_115VAC
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = Yes
+ComboActuatorDefaultReturnPos = Opening
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ;FindOneSolutionWithAlternative;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;3000;6137.27;15479.2;-20/120;3/8" (10);80.9559;0.226354;TAACT_M_NC_24_3;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 1;5.555555554e-05; ; ; ;FindOneSolution;TBV-C15LFI_TV;TBV-C 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;NotCharacterized;PushToClose;10.001;3000;4851.8;40453.3;-20/120;1/2" (15);84.0375;0.276311;TAACT_NO_110;TA-ACT 110/NO (36");360000;-;17,8;20;115 VAC;On-off;-;Yes;Retracting
+Result number = 2;8.333333331e-05; ; ; ;FindOneSolution;TBV-C15LFI_TV;TBV-C 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;NotCharacterized;PushToClose;10.001;3000;10910.7;90909.2;-20/120;1/2" (15);176.268;0.414466;TAACT_NO_110;TA-ACT 110/NO (36");360000;-;17,8;20;115 VAC;On-off;-;Yes;Retracting
+Result number = 3;0.00013888888885; ; ; ;FindOneSolution;TBV-C15LFE_TV;TBV-C 1/2"(15NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;NotCharacterized;PushToClose;10.001;3000;7573.59;68011.9;-20/120;3/4" (20);101.627;0.379027;TAACT_NO_110;TA-ACT 110/NO (36");360000;-;17,8;20;115 VAC;On-off;-;Yes;Retracting
+Result number = 4;0.00022222222216; ; ; ;FindOneSolution;TBV-C20NFE_TV;TBV-C 3/4"(20NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;3/4" (20);-;0;0.004;NotCharacterized;PushToClose;10.001;3000;5439.49;59138.9;-20/120;1" (25);76.9655;0.382437;TAACT_NO_110;TA-ACT 110/NO (36");250000;-;17,8;20;115 VAC;On-off;-;Yes;Retracting
+Result number = 5;0.00036111111101; ; ; ;FindOneSolution;TBV-C25NFE_TV;TBV-C 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;NotCharacterized;PushToClose;10.001;3000;3205.26;33413.3;-20/120;1" (25);189.754;0.62146;TAACT_NO_110;TA-ACT 110/NO (36");850000;-;17,8;20;115 VAC;On-off;-;Yes;Retracting
+Result number = 6;0.00058333333317; ; ; ;FindOneSolution;TBV-C25NFE_TV;TBV-C 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;NotCharacterized;PushToClose;10.001;3000;8364.03;87190.8;-20/120;1 1/4" (32);115.995;0.576286;TAACT_NO_110;TA-ACT 110/NO (36");850000;-;17,8;20;115 VAC;On-off;-;Yes;Retracting
+Result number = 7;0.00094444444418; ; ; ;FindOneSolution;TBV-C25NFE_TV;TBV-C 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;NotCharacterized;PushToClose;10.001;3000;21924.8;228555;-20/120;1 1/2" (40);133.723;0.688231;TAACT_NO_110;TA-ACT 110/NO (36");850000;-;17,8;20;115 VAC;On-off;-;Yes;Retracting
+Result number = 8;0.00152777777735; ; ; ;FindOneSolutionWithAlternative;FUSION_C50C;TA-FUSION-C 2";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;2" (50);>100;0;0.02;EqualPc;PushToClose;9.39487;3000;2731.11;10291.3;-20/120;2" (50);100.554;0.692498;SLIDER750-STD-HV;TA-Slider 750 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 9;0.00247222222153; ; ; ;FindOneSolutionWithAlternative;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;9.45912;3000;1883.65;73408.7;-20/120;2 1/2" (65);67.3602;0.664999;SLIDER750-STD-HV;TA-Slider 750 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 10;0.00399999999888; ; ; ;FindOneSolutionWithAlternative;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;9.48115;3000;4931.11;192173;-20/120;2 1/2" (65);167.998;1.07595;SLIDER750-STD-HV;TA-Slider 750 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ; ;FindOneSolutionWithAlternative;FUSION_C80C_2;TA-FUSION-C 3"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);>100;0;0.02;EqualPc;PushToClose;9.46233;3000;5337.69;191391;-20/120;3" (80);187.103;1.26224;SLIDER750-STD-HV;TA-Slider 750 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ; ;FindOneSolutionWithAlternative;FUSION_C100C;TA-FUSION-C 4";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;9.51764;3000;5458.64;234717;-20/120;4" (100);124.918;1.2094;SLIDER750-STD-HV;TA-Slider 750 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ; ;FindOneSolutionWithAlternative;FUSION_C125C;TA-FUSION-C 5";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);>100;0;0.02;EqualPc;PushToClose;9.51476;3000;5018.5;211405;-20/120;5" (125);106.747;1.27659;SLIDER750-STD-HV;TA-Slider 750 (HV);639431;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;3000;5986.27;243636;-20/120;6" (150);110.575;1.45299;SLIDER1250-STD-HV;TA-Slider 1250 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;3000;15672.3;637847;-20/120;8" (200);64.535;1.31817;SLIDER1250-STD-HV;TA-Slider 1250 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;3000;41030.5;1.66991e+06;-20/120;10" (250);51.4616;1.35193;SLIDER1250-STD-HV;TA-Slider 1250 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 5
+
+SelectionMode = Batch
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = RVTYPE_BVC
+ComboFamilyBelow65ID = FAM_TBV-CM
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADN
+ComboVersionBelow65ID = VERS_STD
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = RVTYPE_BVC
+ComboFamilyAbove50ID = FAM_FUSION_C
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_4
+CtrlTypeStrictChecked = false
+CV2w3w = CV2w
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_230VAC
+ComboActuatorInputSignalID = SIG_4-20mA
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Opening
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ;FindOneSolutionWithAlternative;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;6.98021;10000;6137.27;15479.2;-20/120;3/8" (10);80.9559;0.226354;EMO_T_NO_230_1;EMO T 230/NO (0.8m);380000;-;120;54;230 VAC;On-off;-;No;Retracting
+Result number = 1;5.555555554e-05; ; ; ;FindOneSolutionWithAlternative;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;24525.1;61760.2;-20/120;1/2" (15);84.0375;0.276311;EMO_T_NO_230_1;EMO T 230/NO (0.8m);380000;-;120;54;230 VAC;On-off;-;No;Retracting
+Result number = 2;8.333333331e-05; ; ; ;FindOneSolutionWithAlternative;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;55163.5;138843;-20/120;1/2" (15);176.268;0.414466;EMO_T_NO_230_1;EMO T 230/NO (0.8m);380000;-;120;54;230 VAC;On-off;-;No;Retracting
+Result number = 3;0.00013888888885; ; ; ;FindOneSolutionWithAlternative;TBV-CM15NFC_TV;TBV-CM 1/2"(15NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;24522.9;79917.4;-20/120;3/4" (20);101.627;0.379027;EMO_T_NO_230_1;EMO T 230/NO (0.8m);380000;-;120;54;230 VAC;On-off;-;No;Retracting
+Result number = 4;0.00022222222216; ; ; ;FindOneSolutionWithAlternative;TBV-CM20NFC_TV;TBV-CM 3/4"(20NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;3/4" (20);-;0;0.004;EqualPc;PushToClose;10.001;10000;15705.2;73008.9;-20/120;1" (25);76.9655;0.382437;EMO_T_NO_230_1;EMO T 230/NO (0.8m);380000;-;120;54;230 VAC;On-off;-;No;Retracting
+Result number = 5;0.00036111111101; ; ; ;FindOneSolutionWithAlternative;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;EqualPc;PushToClose;10.001;10000;10385;36970.6;-20/120;1" (25);189.754;0.62146;EMO_T_NO_230_1;EMO T 230/NO (0.8m);975000;-;120;54;230 VAC;On-off;-;No;Retracting
+Result number = 6;0.00058333333317; ; ; ;FindOneSolutionWithAlternative;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;EqualPc;PushToClose;10.001;10000;27099.4;96473.7;-20/120;1 1/4" (32);115.995;0.576286;EMO_T_NO_230_1;EMO T 230/NO (0.8m);975000;-;120;54;230 VAC;On-off;-;No;Retracting
+Result number = 7;0.00094444444418; ; ; ;FindOneSolutionWithAlternative;FUSION_C32C;TA-FUSION-C 1 1/4";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/4" (32);>100;0;0.02;EqualPc;PushToClose;8.72722;10000;6829.99;39414.1;-20/120;1 1/2" (40);133.723;0.688231;SLIDER750-STD-HV;TA-Slider 750 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 8;0.00152777777735; ; ; ;FindOneSolutionWithAlternative;FUSION_C40C;TA-FUSION-C 1 1/2";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/2" (40);>100;0;0.02;EqualPc;PushToClose;9.62197;10000;8690.08;59501.6;-20/120;2" (50);100.554;0.692498;SLIDER750-STD-HV;TA-Slider 750 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 9;0.00247222222153; ; ; ;FindOneSolutionWithAlternative;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;7.91329;10000;1883.65;73408.7;-20/120;2 1/2" (65);67.3602;0.664999;SLIDER750-STD-HV;TA-Slider 750 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 10;0.00399999999888; ; ; ;FindOneSolutionWithAlternative;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;9.18019;10000;4931.11;192173;-20/120;2 1/2" (65);167.998;1.07595;SLIDER750-STD-HV;TA-Slider 750 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ; ;FindOneSolutionWithAlternative;FUSION_C80C_2;TA-FUSION-C 3"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);>100;0;0.02;EqualPc;PushToClose;9.24645;10000;5337.69;191391;-20/120;3" (80);187.103;1.26224;SLIDER750-STD-HV;TA-Slider 750 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ; ;FindOneSolutionWithAlternative;FUSION_C100C;TA-FUSION-C 4";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;9.3473;10000;5458.64;234717;-20/120;4" (100);124.918;1.2094;SLIDER750-STD-HV;TA-Slider 750 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ; ;FindOneSolutionWithAlternative;FUSION_C125C;TA-FUSION-C 5";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);>100;0;0.02;EqualPc;PushToClose;9.25258;10000;5018.5;211405;-20/120;5" (125);106.747;1.27659;SLIDER750-STD-HV;TA-Slider 750 (HV);639431;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.43792;10000;5986.27;243636;-20/120;6" (150);110.575;1.45299;SLIDER1250-STD-HV;TA-Slider 1250 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;10000;15672.3;637847;-20/120;8" (200);64.535;1.31817;SLIDER1250-STD-HV;TA-Slider 1250 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;10000;41030.5;1.66991e+06;-20/120;10" (250);51.4616;1.35193;SLIDER1250-STD-HV;TA-Slider 1250 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 6
+
+SelectionMode = Batch
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = RVTYPE_BVC
+ComboFamilyBelow65ID = FAM_FUSION_C
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADNVIC
+ComboVersionBelow65ID = VERS_STD
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = RVTYPE_BVC
+ComboFamilyAbove50ID = FAM_FUSION_C
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_4
+CtrlTypeStrictChecked = false
+CV2w3w = CV2w
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_115VAC
+ComboActuatorInputSignalID = SIG_4-20mA
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ;FindOneSolutionWithAlternative;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;6.98021;10000;6137.27;15479.2;-20/120;3/8" (10);80.9559;0.226354;TAACT_M_NC_24_3;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 1;5.555555554e-05; ; ; ;FindOneSolutionWithAlternative;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;24525.1;61760.2;-20/120;1/2" (15);84.0375;0.276311;TAACT_M_NC_24_3;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 2;8.333333331e-05; ; ; ;FindOneSolutionWithAlternative;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;55163.5;138843;-20/120;1/2" (15);176.268;0.414466;TAACT_M_NC_24_3;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 3;0.00013888888885; ; ; ;FindOneSolutionWithAlternative;TBV-CM15NFC_TV;TBV-CM 1/2"(15NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;24522.9;79917.4;-20/120;3/4" (20);101.627;0.379027;TAACT_M_NC_24_3;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 4;0.00022222222216; ; ; ;FindOneSolutionWithAlternative;TBV-CM20NFC_TV;TBV-CM 3/4"(20NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;3/4" (20);-;0;0.004;EqualPc;PushToClose;10.001;10000;15705.2;73008.9;-20/120;1" (25);76.9655;0.382437;TAACT_M_NC_24_3;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 5;0.00036111111101; ; ; ;FindOneSolutionWithAlternative;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;EqualPc;PushToClose;10.001;10000;10385;36970.6;-20/120;1" (25);189.754;0.62146;TAACT_M_NC_24_3;TA-ACTM 24/NC;962500;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 6;0.00058333333317; ; ; ;FindOneSolution;FUSION_C32C;TA-FUSION-C 1 1/4";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/4" (32);>100;0;0.02;EqualPc;PushToClose;6.05794;10000;2605.56;15036;-20/120;1 1/4" (32);115.995;0.576286;SLIDER750-STD-HV;TA-Slider 750 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 7;0.00094444444418; ; ; ;FindOneSolution;FUSION_C32C;TA-FUSION-C 1 1/4";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/4" (32);>100;0;0.02;EqualPc;PushToClose;8.72722;10000;6829.99;39414.1;-20/120;1 1/2" (40);133.723;0.688231;SLIDER750-STD-HV;TA-Slider 750 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 8;0.00152777777735; ; ; ;FindOneSolution;FUSION_C40C;TA-FUSION-C 1 1/2";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/2" (40);>100;0;0.02;EqualPc;PushToClose;9.62197;10000;8690.08;59501.6;-20/120;2" (50);100.554;0.692498;SLIDER750-STD-HV;TA-Slider 750 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 9;0.00247222222153; ; ; ;FindOneSolution;FUSION_C50C;TA-FUSION-C 2";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;2" (50);>100;0;0.02;EqualPc;PushToClose;8.17633;10000;7151.45;26947.8;-20/120;2 1/2" (65);67.3602;0.664999;SLIDER750-STD-HV;TA-Slider 750 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 10;0.00399999999888; ; ; ;FindOneSolution;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;9.18019;10000;4931.11;192173;-20/120;2 1/2" (65);167.998;1.07595;SLIDER750-STD-HV;TA-Slider 750 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ; ;FindOneSolution;FUSION_C80C_2;TA-FUSION-C 3"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);>100;0;0.02;EqualPc;PushToClose;9.24645;10000;5337.69;191391;-20/120;3" (80);187.103;1.26224;SLIDER750-STD-HV;TA-Slider 750 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ; ;FindOneSolution;FUSION_C100C;TA-FUSION-C 4";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;9.3473;10000;5458.64;234717;-20/120;4" (100);124.918;1.2094;SLIDER750-STD-HV;TA-Slider 750 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ; ;FindOneSolution;FUSION_C125C;TA-FUSION-C 5";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);>100;0;0.02;EqualPc;PushToClose;9.25258;10000;5018.5;211405;-20/120;5" (125);106.747;1.27659;SLIDER750-STD-HV;TA-Slider 750 (HV);639431;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ; ;FindOneSolution;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.43792;10000;5986.27;243636;-20/120;6" (150);110.575;1.45299;SLIDER1250-STD-HV;TA-Slider 1250 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ; ;FindOneSolution;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;10000;15672.3;637847;-20/120;8" (200);64.535;1.31817;SLIDER1250-STD-HV;TA-Slider 1250 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ; ;FindOneSolution;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;10000;41030.5;1.66991e+06;-20/120;10" (250);51.4616;1.35193;SLIDER1250-STD-HV;TA-Slider 1250 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 7
+
+SelectionMode = Batch
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = RVTYPE_BVC
+ComboFamilyBelow65ID = FAM_TBV-CM
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADN
+ComboVersionBelow65ID = VERS_STD
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = RVTYPE_BVC
+ComboFamilyAbove50ID = FAM_FUSION_C
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_4
+CtrlTypeStrictChecked = false
+CV2w3w = CV2w
+CVCtrlType = 3points
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_115VAC
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ;FindOneSolutionWithAlternative;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;6.98021;10000;6137.27;15479.2;-20/120;3/8" (10);80.9559;0.226354;TAACT_M_NC_24_3;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 1;5.555555554e-05; ; ; ;FindOneSolutionWithAlternative;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;24525.1;61760.2;-20/120;1/2" (15);84.0375;0.276311;TAACT_M_NC_24_3;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 2;8.333333331e-05; ; ; ;FindOneSolutionWithAlternative;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;55163.5;138843;-20/120;1/2" (15);176.268;0.414466;TAACT_M_NC_24_3;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 3;0.00013888888885; ; ; ;FindOneSolutionWithAlternative;TBV-CM15NFC_TV;TBV-CM 1/2"(15NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;24522.9;79917.4;-20/120;3/4" (20);101.627;0.379027;TAACT_M_NC_24_3;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 4;0.00022222222216; ; ; ;FindOneSolutionWithAlternative;TBV-CM20NFC_TV;TBV-CM 3/4"(20NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;3/4" (20);-;0;0.004;EqualPc;PushToClose;10.001;10000;15705.2;73008.9;-20/120;1" (25);76.9655;0.382437;TAACT_M_NC_24_3;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 5;0.00036111111101; ; ; ;FindOneSolutionWithAlternative;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;EqualPc;PushToClose;10.001;10000;10385;36970.6;-20/120;1" (25);189.754;0.62146;TAACT_M_NC_24_3;TA-ACTM 24/NC;962500;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 6;0.00058333333317; ; ; ;FindOneSolutionWithAlternative;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;EqualPc;PushToClose;10.001;10000;27099.4;96473.7;-20/120;1 1/4" (32);115.995;0.576286;TAACT_M_NC_24_3;TA-ACTM 24/NC;962500;-;8,89;20;24 VAC;0-10 V;-;Yes;Extending
+Result number = 7;0.00094444444418; ; ; ;FindOneSolutionWithAlternative;FUSION_C32C;TA-FUSION-C 1 1/4";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/4" (32);>100;0;0.02;EqualPc;PushToClose;8.72722;10000;6829.99;39414.1;-20/120;1 1/2" (40);133.723;0.688231;SLIDER750-STD-HV;TA-Slider 750 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 8;0.00152777777735; ; ; ;FindOneSolutionWithAlternative;FUSION_C40C;TA-FUSION-C 1 1/2";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/2" (40);>100;0;0.02;EqualPc;PushToClose;9.62197;10000;8690.08;59501.6;-20/120;2" (50);100.554;0.692498;SLIDER750-STD-HV;TA-Slider 750 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 9;0.00247222222153; ; ; ;FindOneSolution;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;7.91329;10000;1883.65;73408.7;-20/120;2 1/2" (65);67.3602;0.664999;SLIDER750-STD-HV;TA-Slider 750 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 10;0.00399999999888; ; ; ;FindOneSolution;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;9.18019;10000;4931.11;192173;-20/120;2 1/2" (65);167.998;1.07595;SLIDER750-STD-HV;TA-Slider 750 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ; ;FindOneSolution;FUSION_C80C_2;TA-FUSION-C 3"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);>100;0;0.02;EqualPc;PushToClose;9.24645;10000;5337.69;191391;-20/120;3" (80);187.103;1.26224;SLIDER750-STD-HV;TA-Slider 750 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ; ;FindOneSolution;FUSION_C100C;TA-FUSION-C 4";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;9.3473;10000;5458.64;234717;-20/120;4" (100);124.918;1.2094;SLIDER750-STD-HV;TA-Slider 750 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ; ;FindOneSolution;FUSION_C125C;TA-FUSION-C 5";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);>100;0;0.02;EqualPc;PushToClose;9.25258;10000;5018.5;211405;-20/120;5" (125);106.747;1.27659;SLIDER750-STD-HV;TA-Slider 750 (HV);639431;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ; ;FindOneSolution;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.43792;10000;5986.27;243636;-20/120;6" (150);110.575;1.45299;SLIDER1250-STD-HV;TA-Slider 1250 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ; ;FindOneSolution;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;10000;15672.3;637847;-20/120;8" (200);64.535;1.31817;SLIDER1250-STD-HV;TA-Slider 1250 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ; ;FindOneSolution;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;10000;41030.5;1.66991e+06;-20/120;10" (250);51.4616;1.35193;SLIDER1250-STD-HV;TA-Slider 1250 (HV);800000;-;60/80/120/160/240/320*;54;115 VAC/230 VAC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 8
+
+SelectionMode = Batch
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = RVTYPE_BVC
+ComboFamilyBelow65ID = FAM_TBV-CM
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADN
+ComboVersionBelow65ID = VERS_STD
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = RVTYPE_BVC
+ComboFamilyAbove50ID = FAM_FUSION_C
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_4
+CtrlTypeStrictChecked = true
+CV2w3w = CV2w
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_5-0V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Closing
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ;FindOneSolutionWithAlternative;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;6.98021;10000;6137.27;15479.2;-20/120;3/8" (10);80.9559;0.226354;TAACT_M_NC_24_6;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;5-0 V;-;Yes;Extending
+Result number = 1;5.555555554e-05; ; ; ;FindOneSolutionWithAlternative;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;24525.1;61760.2;-20/120;1/2" (15);84.0375;0.276311;TAACT_M_NC_24_6;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;5-0 V;-;Yes;Extending
+Result number = 2;8.333333331e-05; ; ; ;FindOneSolutionWithAlternative;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;55163.5;138843;-20/120;1/2" (15);176.268;0.414466;TAACT_M_NC_24_6;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;5-0 V;-;Yes;Extending
+Result number = 3;0.00013888888885; ; ; ;FindOneSolutionWithAlternative;TBV-CM15NFC_TV;TBV-CM 1/2"(15NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;24522.9;79917.4;-20/120;3/4" (20);101.627;0.379027;TAACT_M_NC_24_6;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;5-0 V;-;Yes;Extending
+Result number = 4;0.00022222222216; ; ; ;FindOneSolutionWithAlternative;TBV-CM20NFC_TV;TBV-CM 3/4"(20NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;3/4" (20);-;0;0.004;EqualPc;PushToClose;10.001;10000;15705.2;73008.9;-20/120;1" (25);76.9655;0.382437;TAACT_M_NC_24_6;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;5-0 V;-;Yes;Extending
+Result number = 5;0.00036111111101; ; ; ;FindOneSolutionWithAlternative;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;EqualPc;PushToClose;10.001;10000;10385;36970.6;-20/120;1" (25);189.754;0.62146;TAACT_M_NC_24_6;TA-ACTM 24/NC;962500;-;8,89;20;24 VAC;5-0 V;-;Yes;Extending
+Result number = 6;0.00058333333317; ; ; ;FindOneSolutionWithAlternative;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;EqualPc;PushToClose;10.001;10000;27099.4;96473.7;-20/120;1 1/4" (32);115.995;0.576286;TAACT_M_NC_24_6;TA-ACTM 24/NC;962500;-;8,89;20;24 VAC;5-0 V;-;Yes;Extending
+Result number = 7;0.00094444444418; ; ; ;FindOneSolutionWithAlternative;FUSION_C32C;TA-FUSION-C 1 1/4";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/4" (32);>100;0;0.02;EqualPc;PushToClose;8.72722;10000;6829.99;39414.1;-20/120;1 1/2" (40);133.723;0.688231;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 8;0.00152777777735; ; ; ;FindOneSolutionWithAlternative;FUSION_C40C;TA-FUSION-C 1 1/2";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/2" (40);>100;0;0.02;EqualPc;PushToClose;9.62197;10000;8690.08;59501.6;-20/120;2" (50);100.554;0.692498;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 9;0.00247222222153; ; ; ;FindOneSolutionWithAlternative;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;7.91329;10000;1883.65;73408.7;-20/120;2 1/2" (65);67.3602;0.664999;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 10;0.00399999999888; ; ; ;FindOneSolutionWithAlternative;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;9.18019;10000;4931.11;192173;-20/120;2 1/2" (65);167.998;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ; ;FindOneSolutionWithAlternative;FUSION_C80C_2;TA-FUSION-C 3"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);>100;0;0.02;EqualPc;PushToClose;9.24645;10000;5337.69;191391;-20/120;3" (80);187.103;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ; ;FindOneSolutionWithAlternative;FUSION_C100C;TA-FUSION-C 4";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;9.3473;10000;5458.64;234717;-20/120;4" (100);124.918;1.2094;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ; ;FindOneSolutionWithAlternative;FUSION_C125C;TA-FUSION-C 5";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);>100;0;0.02;EqualPc;PushToClose;9.25258;10000;5018.5;211405;-20/120;5" (125);106.747;1.27659;SLIDER750-STD-24;TA-Slider 750 (24V);639431;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.43792;10000;5986.27;243636;-20/120;6" (150);110.575;1.45299;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;10000;15672.3;637847;-20/120;8" (200);64.535;1.31817;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;10000;41030.5;1.66991e+06;-20/120;10" (250);51.4616;1.35193;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 9
+
+SelectionMode = Batch
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = RVTYPE_BVC
+ComboFamilyBelow65ID = FAM_TBV-CM
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADN
+ComboVersionBelow65ID = VERS_STD
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = RVTYPE_BVC
+ComboFamilyAbove50ID = FAM_FUSION_C
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_4
+CtrlTypeStrictChecked = true
+CV2w3w = CV2w
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_10-2V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Opening
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ;FindOneSolutionWithAlternative;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;6.98021;10000;6137.27;15479.2;-20/120;3/8" (10);80.9559;0.226354;TAACT_M_NC_24_2;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;10-2 V;-;Yes;Extending
+Result number = 1;5.555555554e-05; ; ; ;FindOneSolutionWithAlternative;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;24525.1;61760.2;-20/120;1/2" (15);84.0375;0.276311;TAACT_M_NC_24_2;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;10-2 V;-;Yes;Extending
+Result number = 2;8.333333331e-05; ; ; ;FindOneSolutionWithAlternative;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;55163.5;138843;-20/120;1/2" (15);176.268;0.414466;TAACT_M_NC_24_2;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;10-2 V;-;Yes;Extending
+Result number = 3;0.00013888888885; ; ; ;FindOneSolutionWithAlternative;TBV-CM15NFC_TV;TBV-CM 1/2"(15NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;24522.9;79917.4;-20/120;3/4" (20);101.627;0.379027;TAACT_M_NC_24_2;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;10-2 V;-;Yes;Extending
+Result number = 4;0.00022222222216; ; ; ;FindOneSolutionWithAlternative;TBV-CM20NFC_TV;TBV-CM 3/4"(20NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;3/4" (20);-;0;0.004;EqualPc;PushToClose;10.001;10000;15705.2;73008.9;-20/120;1" (25);76.9655;0.382437;TAACT_M_NC_24_2;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;10-2 V;-;Yes;Extending
+Result number = 5;0.00036111111101; ; ; ;FindOneSolutionWithAlternative;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;EqualPc;PushToClose;10.001;10000;10385;36970.6;-20/120;1" (25);189.754;0.62146;TAACT_M_NC_24_2;TA-ACTM 24/NC;962500;-;8,89;20;24 VAC;10-2 V;-;Yes;Extending
+Result number = 6;0.00058333333317; ; ; ;FindOneSolutionWithAlternative;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;EqualPc;PushToClose;10.001;10000;27099.4;96473.7;-20/120;1 1/4" (32);115.995;0.576286;TAACT_M_NC_24_2;TA-ACTM 24/NC;962500;-;8,89;20;24 VAC;10-2 V;-;Yes;Extending
+Result number = 7;0.00094444444418; ; ; ;FindOneSolutionWithAlternative;FUSION_C32C;TA-FUSION-C 1 1/4";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/4" (32);>100;0;0.02;EqualPc;PushToClose;8.72722;10000;6829.99;39414.1;-20/120;1 1/2" (40);133.723;0.688231;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 8;0.00152777777735; ; ; ;FindOneSolutionWithAlternative;FUSION_C40C;TA-FUSION-C 1 1/2";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/2" (40);>100;0;0.02;EqualPc;PushToClose;9.62197;10000;8690.08;59501.6;-20/120;2" (50);100.554;0.692498;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 9;0.00247222222153; ; ; ;FindOneSolutionWithAlternative;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;7.91329;10000;1883.65;73408.7;-20/120;2 1/2" (65);67.3602;0.664999;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 10;0.00399999999888; ; ; ;FindOneSolutionWithAlternative;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;9.18019;10000;4931.11;192173;-20/120;2 1/2" (65);167.998;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ; ;FindOneSolutionWithAlternative;FUSION_C80C_2;TA-FUSION-C 3"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);>100;0;0.02;EqualPc;PushToClose;9.24645;10000;5337.69;191391;-20/120;3" (80);187.103;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ; ;FindOneSolutionWithAlternative;FUSION_C100C;TA-FUSION-C 4";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;9.3473;10000;5458.64;234717;-20/120;4" (100);124.918;1.2094;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ; ;FindOneSolutionWithAlternative;FUSION_C125C;TA-FUSION-C 5";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);>100;0;0.02;EqualPc;PushToClose;9.25258;10000;5018.5;211405;-20/120;5" (125);106.747;1.27659;SLIDER750-STD-24;TA-Slider 750 (24V);639431;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.43792;10000;5986.27;243636;-20/120;6" (150);110.575;1.45299;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;10000;15672.3;637847;-20/120;8" (200);64.535;1.31817;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;10000;41030.5;1.66991e+06;-20/120;10" (250);51.4616;1.35193;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 10
+
+SelectionMode = Batch
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = RVTYPE_BVC
+ComboFamilyBelow65ID = FAM_TBV-CM
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADN
+ComboVersionBelow65ID = VERS_STD
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = RVTYPE_BVC
+ComboFamilyAbove50ID = FAM_FUSION_C
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_4
+CtrlTypeStrictChecked = true
+CV2w3w = CV2w
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_5-10V
+ActuatorFailSafeFunction = Yes
+ComboActuatorDefaultReturnPos = Opening
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ;FindOneSolution;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;6.98021;10000;6137.27;15479.2;-20/120;3/8" (10);80.9559;0.226354;TAACT_M_NO_24_7;TA-ACTM 24/NO;376000;-;8,89;20;24 VAC;5-10 V;-;Yes;Retracting
+Result number = 1;5.555555554e-05; ; ; ;FindOneSolution;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;24525.1;61760.2;-20/120;1/2" (15);84.0375;0.276311;TAACT_M_NO_24_7;TA-ACTM 24/NO;376000;-;8,89;20;24 VAC;5-10 V;-;Yes;Retracting
+Result number = 2;8.333333331e-05; ; ; ;FindOneSolution;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;55163.5;138843;-20/120;1/2" (15);176.268;0.414466;TAACT_M_NO_24_7;TA-ACTM 24/NO;376000;-;8,89;20;24 VAC;5-10 V;-;Yes;Retracting
+Result number = 3;0.00013888888885; ; ; ;FindOneSolution;TBV-CM15NFC_TV;TBV-CM 1/2"(15NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;24522.9;79917.4;-20/120;3/4" (20);101.627;0.379027;TAACT_M_NO_24_7;TA-ACTM 24/NO;376000;-;8,89;20;24 VAC;5-10 V;-;Yes;Retracting
+Result number = 4;0.00022222222216; ; ; ;FindOneSolution;TBV-CM20NFC_TV;TBV-CM 3/4"(20NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;3/4" (20);-;0;0.004;EqualPc;PushToClose;10.001;10000;15705.2;73008.9;-20/120;1" (25);76.9655;0.382437;TAACT_M_NO_24_7;TA-ACTM 24/NO;376000;-;8,89;20;24 VAC;5-10 V;-;Yes;Retracting
+Result number = 5;0.00036111111101; ; ; ;FindOneSolution;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;EqualPc;PushToClose;10.001;10000;10385;36970.6;-20/120;1" (25);189.754;0.62146;TAACT_M_NO_24_7;TA-ACTM 24/NO;962500;-;8,89;20;24 VAC;5-10 V;-;Yes;Retracting
+Result number = 6;0.00058333333317; ; ; ;FindOneSolution;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;EqualPc;PushToClose;10.001;10000;27099.4;96473.7;-20/120;1 1/4" (32);115.995;0.576286;TAACT_M_NO_24_7;TA-ACTM 24/NO;962500;-;8,89;20;24 VAC;5-10 V;-;Yes;Retracting
+Result number = 7;0.00094444444418; ; ; ;FindOneSolutionWithAlternative;FUSION_C32C;TA-FUSION-C 1 1/4";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/4" (32);>100;0;0.02;EqualPc;PushToClose;8.72722;10000;6829.99;39414.1;-20/120;1 1/2" (40);133.723;0.688231;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 8;0.00152777777735; ; ; ;FindOneSolutionWithAlternative;FUSION_C40C;TA-FUSION-C 1 1/2";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/2" (40);>100;0;0.02;EqualPc;PushToClose;9.62197;10000;8690.08;59501.6;-20/120;2" (50);100.554;0.692498;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 9;0.00247222222153; ; ; ;FindOneSolutionWithAlternative;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;7.91329;10000;1883.65;73408.7;-20/120;2 1/2" (65);67.3602;0.664999;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 10;0.00399999999888; ; ; ;FindOneSolutionWithAlternative;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;9.18019;10000;4931.11;192173;-20/120;2 1/2" (65);167.998;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ; ;FindOneSolutionWithAlternative;FUSION_C80C_2;TA-FUSION-C 3"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);>100;0;0.02;EqualPc;PushToClose;9.24645;10000;5337.69;191391;-20/120;3" (80);187.103;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ; ;FindOneSolutionWithAlternative;FUSION_C100C;TA-FUSION-C 4";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;9.3473;10000;5458.64;234717;-20/120;4" (100);124.918;1.2094;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ; ;FindOneSolutionWithAlternative;FUSION_C125C;TA-FUSION-C 5";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);>100;0;0.02;EqualPc;PushToClose;9.25258;10000;5018.5;211405;-20/120;5" (125);106.747;1.27659;SLIDER750-STD-24;TA-Slider 750 (24V);639431;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.43792;10000;5986.27;243636;-20/120;6" (150);110.575;1.45299;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;10000;15672.3;637847;-20/120;8" (200);64.535;1.31817;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;10000;41030.5;1.66991e+06;-20/120;10" (250);51.4616;1.35193;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 11
+
+SelectionMode = Batch
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = RVTYPE_BVC
+ComboFamilyBelow65ID = FAM_TBV-CM
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADN
+ComboVersionBelow65ID = VERS_STD
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = RVTYPE_BVC
+ComboFamilyAbove50ID = FAM_FUSION_C
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_4
+CtrlTypeStrictChecked = true
+CV2w3w = CV2w
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_5-10V
+ActuatorFailSafeFunction = Yes
+ComboActuatorDefaultReturnPos = Closing
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ;FindOneSolution;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;6.98021;10000;6137.27;15479.2;-20/120;3/8" (10);80.9559;0.226354;TAACT_M_NC_24_7;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;5-10 V;-;Yes;Extending
+Result number = 1;5.555555554e-05; ; ; ;FindOneSolution;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;24525.1;61760.2;-20/120;1/2" (15);84.0375;0.276311;TAACT_M_NC_24_7;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;5-10 V;-;Yes;Extending
+Result number = 2;8.333333331e-05; ; ; ;FindOneSolution;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;55163.5;138843;-20/120;1/2" (15);176.268;0.414466;TAACT_M_NC_24_7;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;5-10 V;-;Yes;Extending
+Result number = 3;0.00013888888885; ; ; ;FindOneSolution;TBV-CM15NFC_TV;TBV-CM 1/2"(15NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;24522.9;79917.4;-20/120;3/4" (20);101.627;0.379027;TAACT_M_NC_24_7;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;5-10 V;-;Yes;Extending
+Result number = 4;0.00022222222216; ; ; ;FindOneSolution;TBV-CM20NFC_TV;TBV-CM 3/4"(20NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;3/4" (20);-;0;0.004;EqualPc;PushToClose;10.001;10000;15705.2;73008.9;-20/120;1" (25);76.9655;0.382437;TAACT_M_NC_24_7;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;5-10 V;-;Yes;Extending
+Result number = 5;0.00036111111101; ; ; ;FindOneSolution;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;EqualPc;PushToClose;10.001;10000;10385;36970.6;-20/120;1" (25);189.754;0.62146;TAACT_M_NC_24_7;TA-ACTM 24/NC;962500;-;8,89;20;24 VAC;5-10 V;-;Yes;Extending
+Result number = 6;0.00058333333317; ; ; ;FindOneSolution;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;EqualPc;PushToClose;10.001;10000;27099.4;96473.7;-20/120;1 1/4" (32);115.995;0.576286;TAACT_M_NC_24_7;TA-ACTM 24/NC;962500;-;8,89;20;24 VAC;5-10 V;-;Yes;Extending
+Result number = 7;0.00094444444418; ; ; ;FindOneSolutionWithAlternative;FUSION_C32C;TA-FUSION-C 1 1/4";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/4" (32);>100;0;0.02;EqualPc;PushToClose;8.72722;10000;6829.99;39414.1;-20/120;1 1/2" (40);133.723;0.688231;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 8;0.00152777777735; ; ; ;FindOneSolutionWithAlternative;FUSION_C40C;TA-FUSION-C 1 1/2";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/2" (40);>100;0;0.02;EqualPc;PushToClose;9.62197;10000;8690.08;59501.6;-20/120;2" (50);100.554;0.692498;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 9;0.00247222222153; ; ; ;FindOneSolutionWithAlternative;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;7.91329;10000;1883.65;73408.7;-20/120;2 1/2" (65);67.3602;0.664999;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 10;0.00399999999888; ; ; ;FindOneSolutionWithAlternative;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;9.18019;10000;4931.11;192173;-20/120;2 1/2" (65);167.998;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ; ;FindOneSolutionWithAlternative;FUSION_C80C_2;TA-FUSION-C 3"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);>100;0;0.02;EqualPc;PushToClose;9.24645;10000;5337.69;191391;-20/120;3" (80);187.103;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ; ;FindOneSolutionWithAlternative;FUSION_C100C;TA-FUSION-C 4";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;9.3473;10000;5458.64;234717;-20/120;4" (100);124.918;1.2094;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ; ;FindOneSolutionWithAlternative;FUSION_C125C;TA-FUSION-C 5";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);>100;0;0.02;EqualPc;PushToClose;9.25258;10000;5018.5;211405;-20/120;5" (125);106.747;1.27659;SLIDER750-STD-24;TA-Slider 750 (24V);639431;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.43792;10000;5986.27;243636;-20/120;6" (150);110.575;1.45299;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;10000;15672.3;637847;-20/120;8" (200);64.535;1.31817;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;10000;41030.5;1.66991e+06;-20/120;10" (250);51.4616;1.35193;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 12
+
+SelectionMode = Batch
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = RVTYPE_BVC
+ComboFamilyBelow65ID = FAM_TBV-CM
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADN
+ComboVersionBelow65ID = VERS_STD
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = RVTYPE_BVC
+ComboFamilyAbove50ID = FAM_FUSION_C
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_4
+CtrlTypeStrictChecked = false
+CV2w3w = CV2w
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_10-0V
+ActuatorFailSafeFunction = Yes
+ComboActuatorDefaultReturnPos = Closing
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ;FindOneSolution;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;6.98021;10000;6137.27;15479.2;-20/120;3/8" (10);80.9559;0.226354;TAACT_M_NC_24_4;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;10-0 V;-;Yes;Extending
+Result number = 1;5.555555554e-05; ; ; ;FindOneSolution;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;24525.1;61760.2;-20/120;1/2" (15);84.0375;0.276311;TAACT_M_NC_24_4;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;10-0 V;-;Yes;Extending
+Result number = 2;8.333333331e-05; ; ; ;FindOneSolution;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;55163.5;138843;-20/120;1/2" (15);176.268;0.414466;TAACT_M_NC_24_4;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;10-0 V;-;Yes;Extending
+Result number = 3;0.00013888888885; ; ; ;FindOneSolution;TBV-CM15NFC_TV;TBV-CM 1/2"(15NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;24522.9;79917.4;-20/120;3/4" (20);101.627;0.379027;TAACT_M_NC_24_4;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;10-0 V;-;Yes;Extending
+Result number = 4;0.00022222222216; ; ; ;FindOneSolution;TBV-CM20NFC_TV;TBV-CM 3/4"(20NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;3/4" (20);-;0;0.004;EqualPc;PushToClose;10.001;10000;15705.2;73008.9;-20/120;1" (25);76.9655;0.382437;TAACT_M_NC_24_4;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;10-0 V;-;Yes;Extending
+Result number = 5;0.00036111111101; ; ; ;FindOneSolution;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;EqualPc;PushToClose;10.001;10000;10385;36970.6;-20/120;1" (25);189.754;0.62146;TAACT_M_NC_24_4;TA-ACTM 24/NC;962500;-;8,89;20;24 VAC;10-0 V;-;Yes;Extending
+Result number = 6;0.00058333333317; ; ; ;FindOneSolution;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;EqualPc;PushToClose;10.001;10000;27099.4;96473.7;-20/120;1 1/4" (32);115.995;0.576286;TAACT_M_NC_24_4;TA-ACTM 24/NC;962500;-;8,89;20;24 VAC;10-0 V;-;Yes;Extending
+Result number = 7;0.00094444444418; ; ; ;FindOneSolutionWithAlternative;FUSION_C32C;TA-FUSION-C 1 1/4";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/4" (32);>100;0;0.02;EqualPc;PushToClose;8.72722;10000;6829.99;39414.1;-20/120;1 1/2" (40);133.723;0.688231;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 8;0.00152777777735; ; ; ;FindOneSolutionWithAlternative;FUSION_C40C;TA-FUSION-C 1 1/2";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/2" (40);>100;0;0.02;EqualPc;PushToClose;9.62197;10000;8690.08;59501.6;-20/120;2" (50);100.554;0.692498;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 9;0.00247222222153; ; ; ;FindOneSolutionWithAlternative;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;7.91329;10000;1883.65;73408.7;-20/120;2 1/2" (65);67.3602;0.664999;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 10;0.00399999999888; ; ; ;FindOneSolutionWithAlternative;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;9.18019;10000;4931.11;192173;-20/120;2 1/2" (65);167.998;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ; ;FindOneSolutionWithAlternative;FUSION_C80C_2;TA-FUSION-C 3"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);>100;0;0.02;EqualPc;PushToClose;9.24645;10000;5337.69;191391;-20/120;3" (80);187.103;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ; ;FindOneSolutionWithAlternative;FUSION_C100C;TA-FUSION-C 4";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;9.3473;10000;5458.64;234717;-20/120;4" (100);124.918;1.2094;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ; ;FindOneSolutionWithAlternative;FUSION_C125C;TA-FUSION-C 5";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);>100;0;0.02;EqualPc;PushToClose;9.25258;10000;5018.5;211405;-20/120;5" (125);106.747;1.27659;SLIDER750-STD-24;TA-Slider 750 (24V);639431;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.43792;10000;5986.27;243636;-20/120;6" (150);110.575;1.45299;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;10000;15672.3;637847;-20/120;8" (200);64.535;1.31817;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;10000;41030.5;1.66991e+06;-20/120;10" (250);51.4616;1.35193;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 13
+
+SelectionMode = Batch
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = RVTYPE_BVC
+ComboFamilyBelow65ID = FAM_TBV-CM
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADN
+ComboVersionBelow65ID = VERS_STD
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = RVTYPE_BVC
+ComboFamilyAbove50ID = FAM_FUSION_C
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_4
+CtrlTypeStrictChecked = false
+CV2w3w = CV2w
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_20-4mA
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Opening
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ;FindOneSolutionWithAlternative;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;6.98021;10000;6137.27;15479.2;-20/120;3/8" (10);80.9559;0.226354;TAACT_M_NC_24_10;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;20-4 mA;-;Yes;Extending
+Result number = 1;5.555555554e-05; ; ; ;FindOneSolutionWithAlternative;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;24525.1;61760.2;-20/120;1/2" (15);84.0375;0.276311;TAACT_M_NC_24_10;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;20-4 mA;-;Yes;Extending
+Result number = 2;8.333333331e-05; ; ; ;FindOneSolutionWithAlternative;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;55163.5;138843;-20/120;1/2" (15);176.268;0.414466;TAACT_M_NC_24_10;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;20-4 mA;-;Yes;Extending
+Result number = 3;0.00013888888885; ; ; ;FindOneSolutionWithAlternative;TBV-CM15NFC_TV;TBV-CM 1/2"(15NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;24522.9;79917.4;-20/120;3/4" (20);101.627;0.379027;TAACT_M_NC_24_10;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;20-4 mA;-;Yes;Extending
+Result number = 4;0.00022222222216; ; ; ;FindOneSolutionWithAlternative;TBV-CM20NFC_TV;TBV-CM 3/4"(20NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;3/4" (20);-;0;0.004;EqualPc;PushToClose;10.001;10000;15705.2;73008.9;-20/120;1" (25);76.9655;0.382437;TAACT_M_NC_24_10;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;20-4 mA;-;Yes;Extending
+Result number = 5;0.00036111111101; ; ; ;FindOneSolutionWithAlternative;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;EqualPc;PushToClose;10.001;10000;10385;36970.6;-20/120;1" (25);189.754;0.62146;TAACT_M_NC_24_10;TA-ACTM 24/NC;962500;-;8,89;20;24 VAC;20-4 mA;-;Yes;Extending
+Result number = 6;0.00058333333317; ; ; ;FindOneSolutionWithAlternative;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;EqualPc;PushToClose;10.001;10000;27099.4;96473.7;-20/120;1 1/4" (32);115.995;0.576286;TAACT_M_NC_24_10;TA-ACTM 24/NC;962500;-;8,89;20;24 VAC;20-4 mA;-;Yes;Extending
+Result number = 7;0.00094444444418; ; ; ;FindOneSolutionWithAlternative;FUSION_C32C;TA-FUSION-C 1 1/4";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/4" (32);>100;0;0.02;EqualPc;PushToClose;8.72722;10000;6829.99;39414.1;-20/120;1 1/2" (40);133.723;0.688231;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 8;0.00152777777735; ; ; ;FindOneSolutionWithAlternative;FUSION_C40C;TA-FUSION-C 1 1/2";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/2" (40);>100;0;0.02;EqualPc;PushToClose;9.62197;10000;8690.08;59501.6;-20/120;2" (50);100.554;0.692498;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 9;0.00247222222153; ; ; ;FindOneSolutionWithAlternative;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;7.91329;10000;1883.65;73408.7;-20/120;2 1/2" (65);67.3602;0.664999;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 10;0.00399999999888; ; ; ;FindOneSolutionWithAlternative;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;9.18019;10000;4931.11;192173;-20/120;2 1/2" (65);167.998;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ; ;FindOneSolutionWithAlternative;FUSION_C80C_2;TA-FUSION-C 3"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);>100;0;0.02;EqualPc;PushToClose;9.24645;10000;5337.69;191391;-20/120;3" (80);187.103;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ; ;FindOneSolutionWithAlternative;FUSION_C100C;TA-FUSION-C 4";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;9.3473;10000;5458.64;234717;-20/120;4" (100);124.918;1.2094;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ; ;FindOneSolutionWithAlternative;FUSION_C125C;TA-FUSION-C 5";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);>100;0;0.02;EqualPc;PushToClose;9.25258;10000;5018.5;211405;-20/120;5" (125);106.747;1.27659;SLIDER750-STD-24;TA-Slider 750 (24V);639431;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.43792;10000;5986.27;243636;-20/120;6" (150);110.575;1.45299;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;10000;15672.3;637847;-20/120;8" (200);64.535;1.31817;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;10000;41030.5;1.66991e+06;-20/120;10" (250);51.4616;1.35193;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 14
+
+SelectionMode = Batch
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = RVTYPE_BVC
+ComboFamilyBelow65ID = FAM_TBV-CM
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADN
+ComboVersionBelow65ID = VERS_STD
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = RVTYPE_BVC
+ComboFamilyAbove50ID = FAM_FUSION_C
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_4
+CtrlTypeStrictChecked = false
+CV2w3w = CV2w
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-5V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Closing
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ;FindOneSolutionWithAlternative;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;6.98021;10000;6137.27;15479.2;-20/120;3/8" (10);80.9559;0.226354;TAACT_M_NC_24_5;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;0-5 V;-;Yes;Extending
+Result number = 1;5.555555554e-05; ; ; ;FindOneSolutionWithAlternative;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;24525.1;61760.2;-20/120;1/2" (15);84.0375;0.276311;TAACT_M_NC_24_5;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;0-5 V;-;Yes;Extending
+Result number = 2;8.333333331e-05; ; ; ;FindOneSolutionWithAlternative;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;55163.5;138843;-20/120;1/2" (15);176.268;0.414466;TAACT_M_NC_24_5;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;0-5 V;-;Yes;Extending
+Result number = 3;0.00013888888885; ; ; ;FindOneSolutionWithAlternative;TBV-CM15NFC_TV;TBV-CM 1/2"(15NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;24522.9;79917.4;-20/120;3/4" (20);101.627;0.379027;TAACT_M_NC_24_5;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;0-5 V;-;Yes;Extending
+Result number = 4;0.00022222222216; ; ; ;FindOneSolutionWithAlternative;TBV-CM20NFC_TV;TBV-CM 3/4"(20NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;3/4" (20);-;0;0.004;EqualPc;PushToClose;10.001;10000;15705.2;73008.9;-20/120;1" (25);76.9655;0.382437;TAACT_M_NC_24_5;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;0-5 V;-;Yes;Extending
+Result number = 5;0.00036111111101; ; ; ;FindOneSolutionWithAlternative;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;EqualPc;PushToClose;10.001;10000;10385;36970.6;-20/120;1" (25);189.754;0.62146;TAACT_M_NC_24_5;TA-ACTM 24/NC;962500;-;8,89;20;24 VAC;0-5 V;-;Yes;Extending
+Result number = 6;0.00058333333317; ; ; ;FindOneSolutionWithAlternative;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;EqualPc;PushToClose;10.001;10000;27099.4;96473.7;-20/120;1 1/4" (32);115.995;0.576286;TAACT_M_NC_24_5;TA-ACTM 24/NC;962500;-;8,89;20;24 VAC;0-5 V;-;Yes;Extending
+Result number = 7;0.00094444444418; ; ; ;FindOneSolutionWithAlternative;FUSION_C32C;TA-FUSION-C 1 1/4";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/4" (32);>100;0;0.02;EqualPc;PushToClose;8.72722;10000;6829.99;39414.1;-20/120;1 1/2" (40);133.723;0.688231;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 8;0.00152777777735; ; ; ;FindOneSolutionWithAlternative;FUSION_C40C;TA-FUSION-C 1 1/2";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/2" (40);>100;0;0.02;EqualPc;PushToClose;9.62197;10000;8690.08;59501.6;-20/120;2" (50);100.554;0.692498;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 9;0.00247222222153; ; ; ;FindOneSolutionWithAlternative;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;7.91329;10000;1883.65;73408.7;-20/120;2 1/2" (65);67.3602;0.664999;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 10;0.00399999999888; ; ; ;FindOneSolutionWithAlternative;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;9.18019;10000;4931.11;192173;-20/120;2 1/2" (65);167.998;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ; ;FindOneSolutionWithAlternative;FUSION_C80C_2;TA-FUSION-C 3"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);>100;0;0.02;EqualPc;PushToClose;9.24645;10000;5337.69;191391;-20/120;3" (80);187.103;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ; ;FindOneSolutionWithAlternative;FUSION_C100C;TA-FUSION-C 4";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;9.3473;10000;5458.64;234717;-20/120;4" (100);124.918;1.2094;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ; ;FindOneSolutionWithAlternative;FUSION_C125C;TA-FUSION-C 5";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);>100;0;0.02;EqualPc;PushToClose;9.25258;10000;5018.5;211405;-20/120;5" (125);106.747;1.27659;SLIDER750-STD-24;TA-Slider 750 (24V);639431;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.43792;10000;5986.27;243636;-20/120;6" (150);110.575;1.45299;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;10000;15672.3;637847;-20/120;8" (200);64.535;1.31817;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;10000;41030.5;1.66991e+06;-20/120;10" (250);51.4616;1.35193;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 15
+
+SelectionMode = Batch
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = RVTYPE_BVC
+ComboFamilyBelow65ID = FAM_TBV-CM
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADN
+ComboVersionBelow65ID = VERS_STD
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = RVTYPE_BVC
+ComboFamilyAbove50ID = FAM_FUSION_C
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_4
+CtrlTypeStrictChecked = false
+CV2w3w = CV2w
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_10-5V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Opening
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ;FindOneSolutionWithAlternative;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;6.98021;10000;6137.27;15479.2;-20/120;3/8" (10);80.9559;0.226354;TAACT_M_NC_24_8;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;10-5 V;-;Yes;Extending
+Result number = 1;5.555555554e-05; ; ; ;FindOneSolutionWithAlternative;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;24525.1;61760.2;-20/120;1/2" (15);84.0375;0.276311;TAACT_M_NC_24_8;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;10-5 V;-;Yes;Extending
+Result number = 2;8.333333331e-05; ; ; ;FindOneSolutionWithAlternative;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;55163.5;138843;-20/120;1/2" (15);176.268;0.414466;TAACT_M_NC_24_8;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;10-5 V;-;Yes;Extending
+Result number = 3;0.00013888888885; ; ; ;FindOneSolutionWithAlternative;TBV-CM15NFC_TV;TBV-CM 1/2"(15NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;24522.9;79917.4;-20/120;3/4" (20);101.627;0.379027;TAACT_M_NC_24_8;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;10-5 V;-;Yes;Extending
+Result number = 4;0.00022222222216; ; ; ;FindOneSolutionWithAlternative;TBV-CM20NFC_TV;TBV-CM 3/4"(20NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;3/4" (20);-;0;0.004;EqualPc;PushToClose;10.001;10000;15705.2;73008.9;-20/120;1" (25);76.9655;0.382437;TAACT_M_NC_24_8;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;10-5 V;-;Yes;Extending
+Result number = 5;0.00036111111101; ; ; ;FindOneSolutionWithAlternative;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;EqualPc;PushToClose;10.001;10000;10385;36970.6;-20/120;1" (25);189.754;0.62146;TAACT_M_NC_24_8;TA-ACTM 24/NC;962500;-;8,89;20;24 VAC;10-5 V;-;Yes;Extending
+Result number = 6;0.00058333333317; ; ; ;FindOneSolutionWithAlternative;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;EqualPc;PushToClose;10.001;10000;27099.4;96473.7;-20/120;1 1/4" (32);115.995;0.576286;TAACT_M_NC_24_8;TA-ACTM 24/NC;962500;-;8,89;20;24 VAC;10-5 V;-;Yes;Extending
+Result number = 7;0.00094444444418; ; ; ;FindOneSolutionWithAlternative;FUSION_C32C;TA-FUSION-C 1 1/4";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/4" (32);>100;0;0.02;EqualPc;PushToClose;8.72722;10000;6829.99;39414.1;-20/120;1 1/2" (40);133.723;0.688231;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 8;0.00152777777735; ; ; ;FindOneSolutionWithAlternative;FUSION_C40C;TA-FUSION-C 1 1/2";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/2" (40);>100;0;0.02;EqualPc;PushToClose;9.62197;10000;8690.08;59501.6;-20/120;2" (50);100.554;0.692498;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 9;0.00247222222153; ; ; ;FindOneSolutionWithAlternative;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;7.91329;10000;1883.65;73408.7;-20/120;2 1/2" (65);67.3602;0.664999;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 10;0.00399999999888; ; ; ;FindOneSolutionWithAlternative;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;9.18019;10000;4931.11;192173;-20/120;2 1/2" (65);167.998;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ; ;FindOneSolutionWithAlternative;FUSION_C80C_2;TA-FUSION-C 3"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);>100;0;0.02;EqualPc;PushToClose;9.24645;10000;5337.69;191391;-20/120;3" (80);187.103;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ; ;FindOneSolutionWithAlternative;FUSION_C100C;TA-FUSION-C 4";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;9.3473;10000;5458.64;234717;-20/120;4" (100);124.918;1.2094;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ; ;FindOneSolutionWithAlternative;FUSION_C125C;TA-FUSION-C 5";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);>100;0;0.02;EqualPc;PushToClose;9.25258;10000;5018.5;211405;-20/120;5" (125);106.747;1.27659;SLIDER750-STD-24;TA-Slider 750 (24V);639431;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.43792;10000;5986.27;243636;-20/120;6" (150);110.575;1.45299;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;10000;15672.3;637847;-20/120;8" (200);64.535;1.31817;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ; ;FindOneSolutionWithAlternative;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;10000;41030.5;1.66991e+06;-20/120;10" (250);51.4616;1.35193;SLIDER1250-STD-24;TA-Slider 1250 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 16
+
+SelectionMode = Batch
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = RVTYPE_BVC
+ComboFamilyBelow65ID = FAM_TBV-CM
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADN
+ComboVersionBelow65ID = VERS_STD
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = RVTYPE_BVC
+ComboFamilyAbove50ID = FAM_FUSION_C
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_4
+CtrlTypeStrictChecked = false
+CV2w3w = CV2w
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_2-10V
+ActuatorFailSafeFunction = Yes
+ComboActuatorDefaultReturnPos = Closing
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ; ;FindOneSolution;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;6.98021;10000;6137.27;15479.2;-20/120;3/8" (10);80.9559;0.226354;TAACT_M_NC_24_1;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;2-10 V;-;Yes;Extending
+Result number = 1;5.555555554e-05; ; ; ;FindOneSolution;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;24525.1;61760.2;-20/120;1/2" (15);84.0375;0.276311;TAACT_M_NC_24_1;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;2-10 V;-;Yes;Extending
+Result number = 2;8.333333331e-05; ; ; ;FindOneSolution;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;55163.5;138843;-20/120;1/2" (15);176.268;0.414466;TAACT_M_NC_24_1;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;2-10 V;-;Yes;Extending
+Result number = 3;0.00013888888885; ; ; ;FindOneSolution;TBV-CM15NFC_TV;TBV-CM 1/2"(15NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1/2" (15);-;0;0.004;EqualPc;PushToClose;10.001;10000;24522.9;79917.4;-20/120;3/4" (20);101.627;0.379027;TAACT_M_NC_24_1;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;2-10 V;-;Yes;Extending
+Result number = 4;0.00022222222216; ; ; ;FindOneSolution;TBV-CM20NFC_TV;TBV-CM 3/4"(20NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;3/4" (20);-;0;0.004;EqualPc;PushToClose;10.001;10000;15705.2;73008.9;-20/120;1" (25);76.9655;0.382437;TAACT_M_NC_24_1;TA-ACTM 24/NC;376000;-;8,89;20;24 VAC;2-10 V;-;Yes;Extending
+Result number = 5;0.00036111111101; ; ; ;FindOneSolution;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;EqualPc;PushToClose;10.001;10000;10385;36970.6;-20/120;1" (25);189.754;0.62146;TAACT_M_NC_24_1;TA-ACTM 24/NC;962500;-;8,89;20;24 VAC;2-10 V;-;Yes;Extending
+Result number = 6;0.00058333333317; ; ; ;FindOneSolution;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1" (25);-;0;0.004;EqualPc;PushToClose;10.001;10000;27099.4;96473.7;-20/120;1 1/4" (32);115.995;0.576286;TAACT_M_NC_24_1;TA-ACTM 24/NC;962500;-;8,89;20;24 VAC;2-10 V;-;Yes;Extending
+Result number = 7;0.00094444444418; ; ; ;FindOneSolutionWithAlternative;FUSION_C32C;TA-FUSION-C 1 1/4";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/4" (32);>100;0;0.02;EqualPc;PushToClose;8.72722;10000;6829.99;39414.1;-20/120;1 1/2" (40);133.723;0.688231;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 8;0.00152777777735; ; ; ;FindOneSolutionWithAlternative;FUSION_C40C;TA-FUSION-C 1 1/2";Balancing and Control valve;Ametal(tm);NPT thread;Standard;250 psi;1 1/2" (40);>100;0;0.02;EqualPc;PushToClose;9.62197;10000;8690.08;59501.6;-20/120;2" (50);100.554;0.692498;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 9;0.00247222222153; ; ; ;FindOneSolution;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;7.91329;10000;1883.65;73408.7;-20/120;2 1/2" (65);67.3602;0.664999;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 10;0.00399999999888; ; ; ;FindOneSolution;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);>100;0;0.02;EqualPc;PushToClose;9.18019;10000;4931.11;192173;-20/120;2 1/2" (65);167.998;1.07595;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 11;0.00647222222041; ; ; ;FindOneSolution;FUSION_C80C_2;TA-FUSION-C 3"-2;Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;3" (80);>100;0;0.02;EqualPc;PushToClose;9.24645;10000;5337.69;191391;-20/120;3" (80);187.103;1.26224;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 12;0.01047222221929; ; ; ;FindOneSolution;FUSION_C100C;TA-FUSION-C 4";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;4" (100);>100;0;0.02;EqualPc;PushToClose;9.3473;10000;5458.64;234717;-20/120;4" (100);124.918;1.2094;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 13;0.0169444444397; ; ; ;FindOneSolution;FUSION_C125C;TA-FUSION-C 5";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;5" (125);>100;0;0.02;EqualPc;PushToClose;9.25258;10000;5018.5;211405;-20/120;5" (125);106.747;1.27659;MC100FSE-24;TA-MC 100FSE/24;800000;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 14;0.02741666665899; ; ; ;FindOneSolution;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.43792;10000;5986.27;243636;-20/120;6" (150);110.575;1.45299;MC100FSE-24;TA-MC 100FSE/24;576415;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 15;0.04436111109869; ; ; ;FindOneSolution;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;10000;15672.3;637847;-20/120;8" (200);64.535;1.31817;MC100FSE-24;TA-MC 100FSE/24;576415;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+Result number = 16;0.07177777775768; ; ; ;FindOneSolution;FUSION_C150C;TA-FUSION-C 6";Balancing and Control valve;Ductile iron;ANSI Flange;Standard;300 psi;6" (150);>100;0;0.02;EqualPc;PushToClose;9.51055;10000;41030.5;1.66991e+06;-20/120;10" (250);51.4616;1.35193;MC100FSE-24;TA-MC 100FSE/24;576415;-;40;54;24 VAC;3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V/0(4)-20 mA;Yes;Extending
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+

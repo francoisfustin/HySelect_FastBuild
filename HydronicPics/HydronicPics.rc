@@ -1,0 +1,576 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// GIF
+//
+
+GIF_TA_VSP              GIF                     "res\\TA_VSP.gif"
+
+GIF_TA_TRV              GIF                     "res\\TA_TRV.gif"
+
+GIF_TA_SHV              GIF                     "res\\TA_SHV.gif"
+
+GIF_TA_RV               GIF                     "res\\TA_RV.gif"
+
+GIF_TA_FO               GIF                     "res\\TA_FO.gif"
+
+GIF_TA_DRV_S            GIF                     "res\\TA_DRV_S.gif"
+
+GIF_TA_DRV_L            GIF                     "res\\TA_DRV_L.gif"
+
+GIF_TA_PICV_01_P        GIF                     "res\\TA_PICV_01_P.gif"
+
+GIF_TA_PICV_M_P         GIF                     "res\\TA_PICV_M_P.gif"
+
+GIF_TA_PICV_01_PPT      GIF                     "res\\TA_PICV_01_PPT.gif"
+
+GIF_TA_PICV_M_PPT       GIF                     "res\\TA_PICV_M_PPT.gif"
+
+GIF_TA_DPRV             GIF                     "res\\TA_DPRV.gif"
+
+GIF_TA_DPCF             GIF                     "res\\TA_DPCF.gif"
+
+GIF_TA_DPC              GIF                     "res\\TA_DPC.gif"
+
+GIF_TA_CSP              GIF                     "res\\TA_CSP.gif"
+
+GIF_TA_CS               GIF                     "res\\TA_CS.gif"
+
+GIF_TA_CHKV             GIF                     "res\\TA_CHKV.gif"
+
+GIF_TA_BV               GIF                     "res\\TA_BV.gif"
+
+GIF_TBV20NF_TBV         GIF                     "res\\TBV20NF_TBV.gif"
+
+GIF_STAP80_20_80        GIF                     "res\\STAP80_20-80.gif"
+
+GIF_STAP25_10_60        GIF                     "res\\STAP25_10-60.gif"
+
+GIF_STAG80_BV           GIF                     "res\\STAG80_BV.gif"
+
+GIF_STAG200_BV          GIF                     "res\\STAG200_BV.gif"
+
+GIF_STAF_SG200A_BV      GIF                     "res\\STAF-SG200A_BV.gif"
+
+GIF_STAF_SG080A_BV      GIF                     "res\\STAF-SG080A_BV.gif"
+
+GIF_STAF_SG025_BV       GIF                     "res\\STAF-SG025_BV.gif"
+
+GIF_STAF_R80_BV         GIF                     "res\\STAF-R80_BV.gif"
+
+GIF_STADC25B_BV         GIF                     "res\\STADC25B_BV.gif"
+
+GIF_STADC25A_BV         GIF                     "res\\STADC25A_BV.gif"
+
+GIF_STADA25C_BV         GIF                     "res\\STADA25C_BV.gif"
+
+GIF_STADA25B_BV         GIF                     "res\\STADA25B_BV.gif"
+
+GIF_STADA25A_BV         GIF                     "res\\STADA25A_BV.gif"
+
+GIF_STAD25C_BV          GIF                     "res\\STAD25C_BV.gif"
+
+GIF_STAD25B_BV          GIF                     "res\\STAD25B_BV.gif"
+
+GIF_STAD25A_BV          GIF                     "res\\STAD25A_BV.gif"
+
+GIF_DA516_80A           GIF                     "res\\DA516_80A.gif"
+
+GIF_DA516_25A           GIF                     "res\\DA516_25A.gif"
+
+GIF_DA50_80A            GIF                     "res\\DA50_80A.gif"
+
+GIF_DA50_32A            GIF                     "res\\DA50_32A.gif"
+
+GIF_DA50_200A           GIF                     "res\\DA50_200A.gif"
+
+GIF_CIRCSCHEME_SP       GIF                     "res\\CircScheme SP.gif"
+
+GIF_CIRCSCHEME_3W       GIF                     "res\\CircScheme 3W.gif"
+
+GIF_TOPARROWS           GIF                     "res\\CircScheme TOPARROWS.gif"
+
+GIF_BOTTOMDISTR         GIF                     "res\\CircScheme BOTTOMDISTR.gif"
+
+GIF_CIRCSCHEME_TU       GIF                     "res\\CircScheme TU.gif"
+
+GIF_STADR_25_BV         GIF                     "res\\STA-DR_25.gif"
+
+GIF_KTCM512_20          GIF                     "res\\KTCM512_20.gif"
+
+GIF_TBV_C_20            GIF                     "res\\TBV-C_20.gif"
+
+GIF_KT512_20            GIF                     "res\\KT512_20.gif"
+
+GIF_KTH512_25           GIF                     "res\\KTH512_25.gif"
+
+GIF_KTM512_25           GIF                     "res\\KTM512_25.gif"
+
+GIF_KTM512_80           GIF                     "res\\KTM512_80.gif"
+
+GIF_PILOT_R_80          GIF                     "res\\PILOT-R_80.gif"
+
+GIF_PILOT_R_150         GIF                     "res\\PILOT-R_150.gif"
+
+GIF_TBV_CMP_20          GIF                     "res\\TBV-CMP_20.gif"
+
+GIF_TA_2WCV_01          GIF                     "res\\TA_2WCV_01.gif"
+
+GIF_TA_2WCV_01_P        GIF                     "res\\TA_2WCV_01_P.gif"
+
+GIF_TA_2WCV_01_PPT      GIF                     "res\\TA_2WCV_01_PPT.gif"
+
+GIF_TA_2WCV_M           GIF                     "res\\TA_2WCV_M.gif"
+
+GIF_TA_2WCV_M_P         GIF                     "res\\TA_2WCV_M_P.gif"
+
+GIF_TA_2WCV_M_PPT       GIF                     "res\\TA_2WCV_M_PPT.gif"
+
+GIF_TA_3WCV_01          GIF                     "res\\TA_3WCV_01.gif"
+
+GIF_TA_3WCV_01_P        GIF                     "res\\TA_3WCV_01_P.gif"
+
+GIF_TA_3WCV_01_PPT      GIF                     "res\\TA_3WCV_01_PPT.gif"
+
+GIF_TA_3WCV_M           GIF                     "res\\TA_3WCV_M.gif"
+
+GIF_TA_3WCV_M_P         GIF                     "res\\TA_3WCV_M_P.gif"
+
+GIF_TA_3WCV_M_PPT       GIF                     "res\\TA_3WCV_M_PPT.gif"
+
+GIF_TA_VV               GIF                     "res\\TA_VV.gif"
+
+GIF_TA_RVT              GIF                     "res\\TA_RVT.gif"
+
+GIF_CIRCSCHEME_ONEPIPE  GIF                     "res\\CircScheme OnePipe.gif"
+
+GIF_ONEPIPETOPARROW     GIF                     "res\\CircScheme OnePipeTopArrow.gif"
+
+GIF_TOPPENDING          GIF                     "res\\CircScheme TOPPENDING.gif"
+
+GIF_CIRCSCHEME_2W_INJ   GIF                     "res\\CircScheme 2W-INJ.gif"
+
+GIF_BOTTOMDISTR_REV     GIF                     "res\\CircScheme BOTTOMDISTR_REV.gif"
+
+GIF_FUSION_C50A         GIF                     "res\\FUSION_C50A.gif"
+
+GIF_FUSION_C80A         GIF                     "res\\FUSION_C80A.gif"
+
+GIF_FUSION_C150A        GIF                     "res\\FUSION_C150A.gif"
+
+GIF_FUSION_P50A         GIF                     "res\\FUSION_P50A.gif"
+
+GIF_FUSION_P80A         GIF                     "res\\FUSION_P80A.gif"
+
+GIF_FUSION_P150A        GIF                     "res\\FUSION_P150A.gif"
+
+GIF_CIRCSCHEME_3W_INJ   GIF                     "res\\CircScheme 3W-INJ.gif"
+
+GIF_SEP_ZEK_80_F        GIF                     "res\\SEP_ZEK_80_F.gif"
+
+GIF_SEP_ZEK_80_S        GIF                     "res\\SEP_ZEK_80_S.gif"
+
+GIF_SEP_ZEK_200_F       GIF                     "res\\SEP_ZEK_200_F.gif"
+
+GIF_SEP_ZEK_200_S       GIF                     "res\\SEP_ZEK_200_S.gif"
+
+GIF_SEP_ZIK_80_F        GIF                     "res\\SEP_ZIK_80_F.gif"
+
+GIF_SEP_ZIK_80_S        GIF                     "res\\SEP_ZIK_80_S.gif"
+
+GIF_SEP_ZIK_200_F       GIF                     "res\\SEP_ZIK_200_F.gif"
+
+GIF_SEP_ZIK_200_S       GIF                     "res\\SEP_ZIK_200_S.gif"
+
+GIF_SEP_ZIO_80_F        GIF                     "res\\SEP_ZIO_80_F.gif"
+
+GIF_SEP_ZIO_80_S        GIF                     "res\\SEP_ZIO_80_S.gif"
+
+GIF_SEP_ZIO_200_F       GIF                     "res\\SEP_ZIO_200_F.gif"
+
+GIF_SEP_ZIO_200_S       GIF                     "res\\SEP_ZIO_200_S.gif"
+
+GIF_SEP_ZUK_25          GIF                     "res\\SEP_ZUK_25.gif"
+
+GIF_SEP_ZUKM_25         GIF                     "res\\SEP_ZUKM_25.gif"
+
+GIF_SEP_ZUV_25          GIF                     "res\\SEP_ZUV_25.gif"
+
+GIF_SEP_ZUVL_25         GIF                     "res\\SEP_ZUVL_25.gif"
+
+GIF_SEP_ZUC_25          GIF                     "res\\SEP_ZUC_25.gif"
+
+GIF_SEP_ZUCM_25         GIF                     "res\\SEP_ZUCM_25.gif"
+
+GIF_SEP_ZUD_25          GIF                     "res\\SEP_ZUD_25.gif"
+
+GIF_SEP_ZUDL_25         GIF                     "res\\SEP_ZUDL_25.gif"
+
+GIF_SEP_ZUM_25          GIF                     "res\\SEP_ZUM_25.gif"
+
+GIF_SEP_ZUML_25         GIF                     "res\\SEP_ZUML_25.gif"
+
+GIF_SEP_ZUR_25          GIF                     "res\\SEP_ZUR_25.gif"
+
+GIF_AIRV_ZUP            GIF                     "res\\AIRV_ZUP.gif"
+
+GIF_AIRV_ZUT25          GIF                     "res\\AIRV_ZUT25.gif"
+
+GIF_AIRV_ZUTX           GIF                     "res\\AIRV_ZUTX.gif"
+
+GIF_TA_COMPACT_15       GIF                     "res\\TA_COMPACTP_15.gif"
+
+GIF_TA_MODULATOR_40     GIF                     "res\\TA_MODULATOR_40-50.gif"
+
+GIF_TA_MODULATOR_65     GIF                     "res\\TA_MODULATOR_65-80.gif"
+
+GIF_TA_COMPACTDP_15     GIF                     "res\\TA_COMPACTDP_15.gif"
+
+GIF_TA_DPCBCV_M         GIF                     "res\\TA_DPCBCV_M.gif"
+
+GIF_TA_DPCBCV_01        GIF                     "res\\TA_DPCBCV_01.gif"
+
+GIF_STS15               GIF                     "res\\STS15.gif"
+
+GIF_SEP_ZG_65_F         GIF                     "res\\SEP_ZG_65_F.gif"
+
+GIF_SEP_ZG_65_S         GIF                     "res\\SEP_ZG_65_S.gif"
+
+GIF_TAMULTI20_CV        GIF                     "res\\TA_MULTI20_CV.gif"
+
+GIF_TAMULTI20_BV        GIF                     "res\\TA_MULTI20_BV.gif"
+
+GIF_TAMULTI20_DPC       GIF                     "res\\TA_MULTI20_DPC.gif"
+
+GIF_DSV_DGH_15_32       GIF                     "res\\DSV_DGH_15-32.gif"
+
+GIF_DSV_DGH_40_50       GIF                     "res\\DSV_DGH_40-50.gif"
+
+GIF_DSV_H_F_SOL         GIF                     "res\\DSV_H_F_SOL.gif"
+
+GIF_TA_DSV              GIF                     "res\\TA_DSV.gif"
+
+GIF_CV216_RGA_15_25     GIF                     "res\\CV216RGA_15_25.gif"
+
+GIF_CV316_RGA_15_25     GIF                     "res\\CV316RGA_15_25.gif"
+
+GIF_CV316_RGA_32_50     GIF                     "res\\CV316RGA_32_50.gif"
+
+GIF_CV216_MZ            GIF                     "res\\CV216MZ.gif"
+
+GIF_CV316_MZ            GIF                     "res\\CV316MZ.gif"
+
+GIF_CV206_GG_15         GIF                     "res\\CV206GG_15.gif"
+
+GIF_CV206_GG_20         GIF                     "res\\CV206GG_20.gif"
+
+GIF_CV206_GG_25         GIF                     "res\\CV206GG_25.gif"
+
+GIF_CV206_GG_32         GIF                     "res\\CV206GG_32.gif"
+
+GIF_CV206_GG_40         GIF                     "res\\CV206GG_40.gif"
+
+GIF_CV206_GG_50_65      GIF                     "res\\CV206GG_50_65.gif"
+
+GIF_CV206_GG_80_100     GIF                     "res\\CV206GG_80_100.gif"
+
+GIF_CV306_GG_15_25      GIF                     "res\\CV306GG_15_25.gif"
+
+GIF_CV216_GG_15         GIF                     "res\\CV216GG_15.gif"
+
+GIF_CV216_GG_20         GIF                     "res\\CV216GG_20.gif"
+
+GIF_CV216_GG_25_32      GIF                     "res\\CV216GG_25_32.gif"
+
+GIF_CV216_GG_40_50      GIF                     "res\\CV216GG_40_50.gif"
+
+GIF_CV216_GG_65         GIF                     "res\\CV216GG_65.gif"
+
+GIF_CV316_GG_25         GIF                     "res\\CV316GG_25.gif"
+
+GIF_CV216_GG_80_100     GIF                     "res\\CV216GG_80_100.gif"
+
+GIF_CV216_GG_125_200    GIF                     "res\\CV216GG_125_200.gif"
+
+GIF_CV316_GG_80_100     GIF                     "res\\CV316GG_80_100.gif"
+
+GIF_CV316_GG_125_200    GIF                     "res\\CV316GG_125_200.gif"
+
+GIF_CV216_125           GIF                     "res\\CV216_125.gif"
+
+GIF_CV316_125           GIF                     "res\\CV316_125.gif"
+
+GIF_CV225_240S_E_15     GIF                     "res\\CV225_240S_E_15.gif"
+
+GIF_CV325_15            GIF                     "res\\CV325_15.gif"
+
+GIF_CV225_20_40         GIF                     "res\\CV225_20_40.gif"
+
+GIF_CV325_20_40         GIF                     "res\\CV325_20_40.gif"
+
+GIF_CV225_50            GIF                     "res\\CV225_50.gif"
+
+GIF_CV325_50            GIF                     "res\\CV325_50.gif"
+
+GIF_CV225_65            GIF                     "res\\CV225_65.gif"
+
+GIF_CV325_65            GIF                     "res\\CV325_65.gif"
+
+GIF_CV225_80_125        GIF                     "res\\CV225_80_125.gif"
+
+GIF_CV325_80            GIF                     "res\\CV325_80.gif"
+
+GIF_CV325_100_125       GIF                     "res\\CV325_100_125.gif"
+
+GIF_CV225_150           GIF                     "res\\CV225_150.gif"
+
+GIF_CV325_150           GIF                     "res\\CV325_150.gif"
+
+GIF_CV225_200           GIF                     "res\\CV225_200.gif"
+
+GIF_CV225_250_300       GIF                     "res\\CV225_250_300.gif"
+
+GIF_CV325_250_300       GIF                     "res\\CV325_250_300.gif"
+
+GIF_CV325_200           GIF                     "res\\CV325_200.gif"
+
+GIF_CV216_RGA_32_50     GIF                     "res\\CV216RGA_32_50.gif"
+
+GIF_CV306_GG_32         GIF                     "res\\CV306GG_32.gif"
+
+GIF_CV306_GG_40_100     GIF                     "res\\CV306GG_40_100.gif"
+
+GIF_CV306_GG_125_150    GIF                     "res\\CV306GG_125_150.gif"
+
+GIF_CV316_150           GIF                     "res\\CV316_150.gif"
+
+GIF_CV316_200           GIF                     "res\\CV316_200.gif"
+
+GIF_CV316_250_300       GIF                     "res\\CV316_250_300.gif"
+
+GIF_CV216_150           GIF                     "res\\CV216_150.gif"
+
+GIF_CV216_200           GIF                     "res\\CV216_200.gif"
+
+GIF_CV216_250_300       GIF                     "res\\CV216_250_300.gif"
+
+GIF_CV240S_E_50         GIF                     "res\\CV240S_E_50.gif"
+
+GIF_CV240S_E_65         GIF                     "res\\CV240S_E_65.gif"
+
+GIF_CV240S_E_150        GIF                     "res\\CV240S_E_150.gif"
+
+GIF_CV240S_E_80         GIF                     "res\\CV240S_E_80.gif"
+
+GIF_CV240S_E_100        GIF                     "res\\CV240S_E_100.gif"
+
+GIF_CV240S_E_125        GIF                     "res\\CV240S_E_125.gif"
+
+GIF_CV240S_E_20_40      GIF                     "res\\CV240S_E_20_40.gif"
+
+GIF_CV240S_E_200        GIF                     "res\\CV240S_E_200.gif"
+
+GIF_CV240S_E_250_300    GIF                     "res\\CV240S_E_250_300.gif"
+
+GIF_CV340S_E_15         GIF                     "res\\CV340S_E_15.gif"
+
+GIF_CV340S_E_20_40      GIF                     "res\\CV340S_E_20_40.gif"
+
+GIF_CV340S_E_50         GIF                     "res\\CV340S_E_50.gif"
+
+GIF_CV340S_E_65         GIF                     "res\\CV340S_E_65.gif"
+
+GIF_CV340S_E_80         GIF                     "res\\CV340S_E_80.gif"
+
+GIF_CV340S_E_100        GIF                     "res\\CV340S_E_100.gif"
+
+GIF_CV340S_E_125        GIF                     "res\\CV340S_E_125.gif"
+
+GIF_CV340S_E_150        GIF                     "res\\CV340S_E_150.gif"
+
+GIF_CV340S_E_200        GIF                     "res\\CV340S_E_200.gif"
+
+GIF_CV340S_E_250_300    GIF                     "res\\CV340S_E_250_300.gif"
+
+GIF_CV316_GG_15         GIF                     "res\\CV316GG_15.gif"
+
+GIF_CV316_GG_20         GIF                     "res\\CV316GG_20.gif"
+
+GIF_CV316_GG_32         GIF                     "res\\CV316GG_32.gif"
+
+GIF_CV316_GG_40         GIF                     "res\\CV316GG_40.gif"
+
+GIF_CV316_GG_50         GIF                     "res\\CV316GG_50.gif"
+
+GIF_CV316_GG_65         GIF                     "res\\CV316GG_65.gif"
+
+GIF_SIMPLY_VENTO_V2_1_S GIF                     "res\\SIMPLY_VENTO_V2_1_S.gif"
+
+GIF_SIMPLY_VENTO_V2_1_SWME GIF                     "res\\SIMPLY_VENTO_V2_1_SWME.gif"
+
+GIF_VENTO_V_CONNECT     GIF                     "res\\VENTO_V_CONNECT.gif"
+
+GIF_VENTO_VI_CONNECT    GIF                     "res\\VENTO_VI_CONNECT.gif"
+
+GIF_VENTO_V_F_ECOEFFICIENT GIF                     "res\\VENTO_V_F_ECOEFFICIENT.gif"
+
+GIF_TASMART20_50        GIF                     "res\\TA_SMART_20-50.gif"
+
+GIF_TASMART65_150       GIF                     "res\\TA_SMART_65-150.gif"
+
+GIF_BR12WT_SET          GIF                     "res\\BR12WT_SET.gif"
+
+GIF_SEP_FCTYPE_80       GIF                     "res\\SEP_FCTYPE_80.gif"
+
+GIF_SEP_FCTYPE_150      GIF                     "res\\SEP_FCTYPE_150.gif"
+
+GIF_SEP_FCTYPE_273      GIF                     "res\\SEP_FCTYPE_273.gif"
+
+GIF_TA_SMART            GIF                     "res\\TA_SMART.gif"
+
+GIF_TEMP_SENSOR         GIF                     "res\\TA_TEMP_SENSOR.gif"
+
+GIF_EXTERNAL_TEMP_HOUSING GIF                     "res\\External_temp_housing.gif"
+
+GIF_STADSTART25_DPCSET  GIF                     "res\\STADstar25_DpcSet.gif"
+
+GIF_TA_SMART_DP         GIF                     "res\\TA_SMART.gif"
+
+GIF_TA_LINK             GIF                     "res\\TA_LINK.gif"
+
+GIF_TA_LINK_IMG         GIF                     "res\\TA_LINK_IMG.gif"
+
+GIF_CIRCSCHEME_2W_AUTOADAPTIVE GIF                     "res\\CircScheme 2W-AutoAdaptive.gif"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 4,4,0,1
+ PRODUCTVERSION 4,4,0,4
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "CompanyName", "IMI Hydronic Engineering SA"
+            VALUE "FileDescription", "Hydronic Dynamic Link Library"
+            VALUE "FileVersion", "4.4.0.5"
+            VALUE "InternalName", "Hydronic"
+            VALUE "LegalCopyright", "Copyright (c) 2001.  All rights reserved."
+            VALUE "OriginalFilename", "Hydronic.dll"
+            VALUE "ProductName", "Hydronic Dynamic Link Library"
+            VALUE "ProductVersion", "4.4.0.5"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral (Default) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUD)
+LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// GIF
+//
+
+GIF_AIRV_ZTV            GIF                     "res\\AIRV_ZTV.gif"
+
+GIF_SEP_ZTM             GIF                     "res\\SEP_ZTM.gif"
+
+GIF_SEP_ZTKM            GIF                     "res\\SEP_ZTKM.gif"
+
+#endif    // Neutral (Default) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// French (Belgium) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRB)
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH_BELGIAN
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // French (Belgium) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

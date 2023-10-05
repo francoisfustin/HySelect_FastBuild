@@ -1,0 +1,409 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//            FILTERTAB.TXT
+//
+//    Table listing the different edition and deletion filters to be applied on the
+//    "universal" TADB database.
+//
+//    There is one filter per line and their formats (DELETE and EDIT operations) are:
+//
+//    ClassName;Table_ID;ID;DELETE
+//    ClassName(CDB_TAProduct);Table_ID;ID;EDIT;FAM_ID;CONN_ID;VERS_ID;<=PN_ID;deleted,available,hidden,fixed,mask1,int1;Priority
+//
+//      Table_ID:    table to which the object of class ClassName belongs, may be blank
+//      ID:            ID of the object of class ClassName, may be blank
+//      FAM_ID:        Family for which CDB_TAProduct derived objects will be considered, may be blank
+//      CONN_ID:    Connection for which CDB_TAProduct derived objects will be considered, may be blank
+//      VERS_ID:    Version for which CDB_TAProduct derived objects will be considered, may be blank
+//      PN_ID:        PN for(==), above(>=) or below(<=) which CDB_TAProduct derived objects will be considered, may be blank
+//      available:    flag indicating if the object is available
+//      hidden:        flag indicating if the object is hidden            (string composed as d,a,h,f,m1,i1 may be blank)
+//      mask1:        mask for int1 (0x00000001 to change bit 0; 0x0000000C to change bits 2 and 3)
+//      int1:        integer for additional flagging (bit0 is InCBI flag; enter 0x00000001 to set it to one)
+//      Priority:    flag indicating if the object is deleted, may be blank
+//      -d [TA-Product ID]:     position 11, for debugging a line, will throw a debugbreak in hyselect when this line is applied; TA-Product ID is optional
+//////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// Deletions of reference to valves to be considered as potential measuring valves.
+// (It is the filter of the 'CData' class for deleting).
+//////////////////////////////////////////////////////////////////////////////////////////
+// ClassName                ; Table_ID             ; ID                   ; DELETE
+//----------------------------------------------------------------------------------------
+// 2018-06-13 - all old STAD valves are now deleted.
+CDB_StringID                ; MEASVALV_TAB         ; MVFAM_3              ; DELETE    // FAM_STAD VERS_DRAIN12
+CDB_StringID                ; MEASVALV_TAB         ; MVFAM_4              ; DELETE    // FAM_STAD VERS_DRAIN34
+CDB_StringID                ; MEASVALV_TAB         ; MVFAM_9              ; DELETE    // FAM_STAD VERS_NODRAIN (for Jpn only)
+CDB_StringID                ; MEASVALV_TAB         ; MVFAM_11             ; DELETE    // FAM_STAD VERS_DRAIN34 NPS
+
+CDB_StringID                ; MEASVALV_TAB         ; MVFAM_7              ; DELETE    // FAM_MD60
+CDB_StringID                ; MEASVALV_TAB         ; MVFAM_8              ; DELETE    // FAM_MDF3
+
+// We exclude STAD* Nordic version (drain 1/2").
+CDB_StringID                ; MEASVALV_TAB         ; MVFAM_15             ; DELETE    // FAM_STAD* VERS_DRAIN12
+
+// We exclude STAD* US Version (without drain).
+CDB_StringID                ; MEASVALV_TAB         ; MVFAM_16             ; DELETE    // FAM_STAD* VERS_NODRAIN
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// Hide pipe series (It is the filter of the 'CData' class for editing).
+//////////////////////////////////////////////////////////////////////////////////////////
+// ClassName                ; Table                ; ID                   ; EDIT ; a,h
+//---------------------------------------------------------------
+CTable                      ; PIPE_TAB             ; STEEL_AS             ; EDIT ; 1,1
+CTable                      ; PIPE_TAB             ; STEEL_NF1            ; EDIT ; 1,1
+CTable                      ; PIPE_TAB             ; STEEL_NF2            ; EDIT ; 1,1
+CTable                      ; PIPE_TAB             ; STEEL_SS1232         ; EDIT ; 1,1
+CTable                      ; PIPE_TAB             ; STEEL_SC40           ; EDIT ; 1,1
+CTable                      ; PIPE_TAB             ; STEEL_USST           ; EDIT ; 1,1
+CTable                      ; PIPE_TAB             ; CU_AS                ; EDIT ; 1,1
+CTable                      ; PIPE_TAB             ; CU_NF                ; EDIT ; 1,1
+CTable                      ; PIPE_TAB             ; CU_SUNE3741          ; EDIT ; 1,1
+CTable                      ; PIPE_TAB             ; CU_USTK              ; EDIT ; 1,1
+CTable                      ; PIPE_TAB             ; CU_USTL              ; EDIT ; 1,1
+CTable                      ; PIPE_TAB             ; CU_USTM              ; EDIT ; 1,1
+CTable                      ; PIPE_TAB             ; +GF+ABS              ; EDIT ; 1,1
+CTable                      ; PIPE_TAB             ; +GF+PE               ; EDIT ; 1,1
+CTable                      ; PIPE_TAB             ; +GF+PE100            ; EDIT ; 1,1
+CTable                      ; PIPE_TAB             ; CLIMAT_FASER         ; EDIT ; 1,1
+CTable                      ; PIPE_TAB             ; FUSIOT_FASER         ; EDIT ; 1,1
+CTable                      ; PIPE_TAB             ; STEEL_PN74200        ; EDIT ; 1,1
+CTable                      ; PIPE_TAB             ; STEEL_PN74219        ; EDIT ; 1,1
+CTable                      ; PIPE_TAB             ; STEEL_PN74244        ; EDIT ; 1,1
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// Editions/Deletions of valves (It is the filter of the 'CDB_TAProduct' class).
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ClassName                ; Table                ; ID                   ; EDIT ; FAM_ID               ; CONN_ID           ; VERS_ID         ; <=PN_ID ; a,h ; m1,i1                 ; Priority ; -d IDBROL
+//--------------------------------------------------------------------------------------------------------------------------------------
+// Exclude Nordic version.
+CDB_RegulatingValve         ; REGVALV_TAB          ; STAD*10B_BV          ; EDIT ;                      ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ; STAD*15B_BV          ; EDIT ;                      ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ; STAD*20B_BV          ; EDIT ;                      ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ; STAD*25B_BV          ; EDIT ;                      ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ; STAD*32B_BV          ; EDIT ;                      ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ; STAD*40B_BV          ; EDIT ;                      ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ; STAD*50B_BV          ; EDIT ;                      ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAD*            ;                   ; VERS_DRAIN12    ;         ; 0,0 ;                       ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAD-D*          ;                   ; VERS_DRAIN12    ;         ; 0,0 ;                       ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STADA*           ;                   ; VERS_DRAIN12    ;         ; 0,0 ;                       ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAD-R*          ;                   ; VERS_DRAIN12    ;         ; 0,0 ;                       ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAD*            ; CONN_SMTHEND      ; VERS_DRAIN12    ;         ; 0,0 ;                       ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAD*Z           ;                   ; VERS_DRAIN12    ;         ; 0,0 ;                       ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAD*            ; CONN_THREADJ      ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAD*            ; CONN_UN_THRNPT    ;                 ;         ; 0,0 ;                       ;          ;
+
+// Priorities
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAD-D*          ;                   ;                 ;         ;     ;                       ; 4        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAD-R*          ;                   ;                 ;         ; 1,1 ;                       ; 9        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAD-B*          ;                   ;                 ;         ; 1,0 ;                       ; 5        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STADA*           ;                   ;                 ;         ; 1,1 ;                       ; 6        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STADA*           ;                   ; VERS_NODRAIN    ;         ; 1,1 ;                       ; 5        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STADA*           ;                   ; VERS_DRAIN34    ;         ; 1,1 ;                       ; 6        ;
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAD*            ; CONN_THREADN      ;                 ;         ; 1,1 ;                       ; 3        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAD*            ;                   ; VERS_DRAIN_UNS  ;         ; 1,0 ;                       ; 4        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAD*            ; CONN_SMTHEND      ;                 ;         ;     ;                       ; 7        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAD*            ;                   ; VERS_DRAIN34    ;         ;     ;                       ; 2        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAD*            ; CONN_SMTHEND      ; VERS_DRAIN34    ;         ;     ;                       ; 8        ; 
+
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAD-D           ;                   ;                 ;         ;     ;                       ; 4        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAD-C           ;                   ;                 ;         ;     ;                       ; 4        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAD-R           ;                   ; VERS_DRAIN34    ;         ; 1,1 ;                       ; 9        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAD             ;                   ; VERS_DRAIN34    ;         ;     ;                       ; 2        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAD             ; CONN_THREADN      ;                 ;         ; 1,1 ;                       ; 3        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAD             ; CONN_THREADJ      ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAD             ; CONN_UN_THRNPT    ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STADA            ;                   ; VERS_NODRAIN    ;         ; 1,1 ;                       ; 5        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STADA            ;                   ; VERS_DRAIN34    ;         ; 1,1 ;                       ; 6        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAD             ; CONN_SMTHEND      ;                 ;         ;     ;                       ; 7        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAD             ; CONN_SMTHEND      ; VERS_DRAIN34    ;         ;     ;                       ; 8        ; 
+
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_MULTI_BV         ;                   ;                 ;         ; 0,0 ;                       ;          ; // -d IDBROL
+CDB_DpController            ; DPCONTR_TAB          ;                      ; EDIT ; FAM_MULTI_DPC        ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_ControlValve            ; CTRLVALV_TAB         ;                      ; EDIT ; FAM_MULTI_CV         ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_MULTISET_BV      ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_DpController            ; DPCONTR_TAB          ;                      ; EDIT ; FAM_MULTISET_DPC     ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_MD62             ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAS             ;                   ;                 ;         ; 1,1 ;                       ; 7        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_TBV              ;                   ;                 ;         ; 1,1 ;                       ; 7        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_TBV-S            ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAF             ;                   ;                 ;         ; 1,0 ;                       ; 2        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAF*            ;                   ;                 ;         ;     ;                       ; 2        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAF-SG          ;                   ;                 ;         ; 1,0 ;                       ; 2        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAF-SG*_SG      ;                   ;                 ;         ;     ;                       ; 2        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAF-R           ;                   ;                 ;         ; 1,0 ;                       ; 5        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAF-R*          ;                   ;                 ;         ;     ;                       ; 5        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_MDF3             ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_MDF3SG           ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAG             ;                   ;                 ;         ; 1,0 ;                       ; 3        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAG*_G          ;                   ;                 ;         ;     ;                       ; 3        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STA              ;                   ;                 ;         ; 1,1 ;                       ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_MDF2             ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_MDF2SG           ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_MDF2GE           ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_RADITRIM         ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_RADITRIMA        ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STK              ;                   ;                 ;         ;     ;                       ; 1        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_TRIMK            ;                   ;                 ;         ;     ;                       ; 2        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_TRIMA            ;                   ;                 ;         ;     ;                       ; 3        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_TRIM             ;                   ;                 ;         ; 0,0 ;                       ; 2        ; 
+CDB_FixedOrifice            ; REGVALV_TAB          ;                      ; EDIT ; FAM_TALOOP           ;                   ;                 ;         ;     ;                       ; 5        ; 
+CDB_FixedOrifice            ; REGVALV_TAB          ;                      ; EDIT ; FAM_MD11             ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_FixedOrifice            ; REGVALV_TAB          ;                      ; EDIT ; FAM_MD12             ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_FixedOrifice            ; REGVALV_TAB          ;                      ; EDIT ; FAM_MD13             ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_VenturiValve            ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAV             ;                   ;                 ;         ; 1,1 ;                       ;          ; 
+CDB_CommissioningSet        ; REGVALV_TAB          ;                      ; EDIT ; FAM_MD41             ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_CommissioningSet        ; REGVALV_TAB          ;                      ; EDIT ; FAM_MD42             ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_CommissioningSet        ; REGVALV_TAB          ;                      ; EDIT ; FAM_MD43             ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_CommissioningSet        ; REGVALV_TAB          ;                      ; EDIT ; FAM_MDF4             ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_CommissioningSet        ; REGVALV_TAB          ;                      ; EDIT ; FAM_MDF4SG           ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_REGUTEC          ;                   ;                 ;         ; 1,0 ;                       ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_REGULUX          ;                   ;                 ;         ; 1,0 ;                       ; 3        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_VEKOLUX          ;                   ;                 ;         ; 1,0 ;                       ; 3        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_VEKOTEC          ;                   ;                 ;         ; 1,0 ;                       ;          ; 
+CDB_ThermostaticValve       ; TRVALV_TAB           ;                      ; EDIT ; FAM_TRV2             ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_ThermostaticValve       ; TRVALV_TAB           ;                      ; EDIT ; FAM_TRV2S            ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_ThermostaticValve       ; TRVALV_TAB           ;                      ; EDIT ; FAM_HEIMSTD          ;                   ;                 ;         ; 1,0 ;                       ; 3        ; 
+CDB_ThermostaticValve       ; TRVALV_TAB           ;                      ; EDIT ; FAM_HEIMLR           ;                   ;                 ;         ; 1,0 ;                       ; 5        ; 
+CDB_ThermostaticValve       ; TRVALV_TAB           ;                      ; EDIT ; FAM_HEIMRF           ;                   ;                 ;         ; 1,0 ;                       ; 7        ; 
+CDB_ThermostaticValve       ; TRVALV_TAB           ;                      ; EDIT ; FAM_HEIMRF_V         ;                   ;                 ;         ; 1,0 ;                       ; 7        ; 
+CDB_ThermostaticValve       ; TRVALV_TAB           ;                      ; EDIT ; FAM_HEIMRF_E         ;                   ;                 ;         ; 1,0 ;                       ; 7        ; 
+CDB_ThermostaticValve       ; TRVALV_TAB           ;                      ; EDIT ; FAM_MIKROTHERM       ;                   ;                 ;         ; 1,0 ;                       ;          ; 
+CDB_ThermostaticValve       ; TRVALV_TAB           ;                      ; EDIT ; FAM_VHV              ;                   ;                 ;         ; 1,0 ;                       ;          ; 
+CDB_ThermostaticValve       ; TRVALV_TAB           ;                      ; EDIT ; FAM_VHF              ;                   ;                 ;         ; 1,0 ;                       ;          ; 
+
+CDB_ThermostaticValve       ; TRVALV_TAB           ;                      ; EDIT ; FAM_CALYPSO          ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_ThermostaticValve       ; TRVALV_TAB           ;                      ; EDIT ; FAM_CALYEXACT        ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_ThermostaticValve       ; TRVALV_TAB           ;                      ; EDIT ; FAM_CALYPSOTRV3      ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_ThermostaticValve       ; TRVALV_TAB           ;                      ; EDIT ; FAM_CALYPSOZ         ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_FlowLimitedControlValve ; FLCTRLVALV_TAB       ;                      ; EDIT ; FAM_ECLIPSE          ;                   ;                 ;         ; 1,0 ;                       ;          ; 
+CDB_FlowLimitedControlValve ; FLCTRLVALV_TAB       ;                      ; EDIT ; FAM_ECLIPSEZ         ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_FlowLimitedControlValve ; FLCTRLVALV_TAB       ;                      ; EDIT ; FAM_ECLIPSE_F        ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_FlowLimitedControlValve ; FLCTRLVALV_TAB       ;                      ; EDIT ; FAM_ECLIPSE_S        ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_FlowLimitedControlValve ; FLCTRLVALV_TAB       ;                      ; EDIT ; FAM_ECLIPSE_SD       ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+
+CDB_DpController            ; DPCONTR_TAB          ;                      ; EDIT ; FAM_DA516            ;                   ;                 ;         ;     ;                       ; 5        ; 
+//CDB_DpController            ; DPCONTR_TAB          ;                      ; EDIT ; FAM_DA50             ;                   ;                 ;         ;     ;                       ; 7        ;  ** Deleted**
+
+CDB_ControlValve            ; BALCTRLVALV_TAB      ;                      ; EDIT ; FAM_TBV-C            ; CONN_SMTHEND      ;                 ;         ;     ;                       ; 6        ; 
+CDB_ControlValve            ; BALCTRLVALV_TAB      ;                      ; EDIT ; FAM_TBV-C            ; CONN_THREADN      ;                 ;         ; 1,1 ;                       ; 7        ; 
+CDB_ControlValve            ; BALCTRLVALV_TAB      ;                      ; EDIT ; FAM_TBV-CM           ; CONN_THREADN      ; VERS_STD        ;         ; 1,1 ;                       ; 7        ; 
+CDB_ControlValve            ; BALCTRLVALV_TAB      ;                      ; EDIT ; FAM_TBV-CM           ; CONN_THREADN      ; VERS_US         ;         ; 0,0 ;                       ; 7        ; 
+CDB_PIControlValve          ; PICTRLVALV_TAB       ;                      ; EDIT ; FAM_TBV-CMP          ; CONN_THREADN      ;                 ;         ; 1,1 ;                       ; 7        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_TBV              ; CONN_THREADN      ;                 ;         ; 1,1 ;                       ; 9        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_TBV              ; CONN_SOLDER       ;                 ;         ; 1,1 ;                       ; 9        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAF-SG          ;                   ;                 ; >=PN_5  ;     ;                       ; 3        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAF-SG*_SG      ;                   ;                 ; >=PN_5  ;     ;                       ; 3        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAF-SG          ; CONN_ANSIFL       ;                 ;         ; 0,0 ;                       ; 6        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAF-SG*_SG      ; CONN_ANSIFL       ;                 ;         ; 0,0 ;                       ; 6        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAG*_G          ;                   ; VERS_US         ;         ; 0,0 ;                       ; 7        ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAG             ;                   ; VERS_US         ;         ; 0,0 ;                       ; 7        ; 
+CDB_FixedOrifice            ; REGVALV_TAB          ;                      ; EDIT ; FAM_MD01             ;                   ; VERS_PT90       ;         ; 1,1 ;                       ; 3        ; 
+CDB_FixedOrifice            ; REGVALV_TAB          ;                      ; EDIT ; FAM_MD02             ;                   ; VERS_PT90       ;         ; 1,1 ;                       ; 3        ; 
+CDB_FixedOrifice            ; REGVALV_TAB          ;                      ; EDIT ; FAM_MD03             ;                   ; VERS_PT90       ;         ; 1,1 ;                       ; 3        ; 
+CDB_FixedOrifice            ; REGVALV_TAB          ;                      ; EDIT ; FAM_MDF0             ;                   ; VERS_PT90       ;         ; 1,1 ;                       ; 3        ; 
+
+CDB_DpController            ; DPCONTR_TAB          ;                      ; EDIT ; FAM_STAP             ; CONN_SMTHEND      ;                 ;         ;     ;                       ; 3        ; 
+CDB_DpController            ; DPCONTR_TAB          ;                      ; EDIT ; FAM_STAP             ; CONN_THREADN      ;                 ;         ; 1,1 ;                       ; 3        ; 
+CDB_DpController            ; DPCONTR_TAB          ;                      ; EDIT ; FAM_STAP             ; CONN_THREADJ      ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_DpController            ; DPCONTR_TAB          ;                      ; EDIT ; FAM_STAP             ; CONN_ANSIFL       ;                 ;         ; 1,1 ;                       ; 3        ; 
+//CDB_DpController            ; DPCONTR_TAB          ;                      ; EDIT ; FAM_DA50             ; CONN_ANSIFL       ;                 ;         ; 1,1 ;                   ; 8        ;   ** Deleted **      
+CDB_DpController            ; DPCONTR_TAB          ;                      ; EDIT ; FAM_DA516            ; CONN_ANSIFL       ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_DpController            ; DPCONTR_TAB          ;                      ; EDIT ; FAM_DA516            ; CONN_THREADN      ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_DpController            ; DPCONTR_TAB          ;                      ; EDIT ; FAM_DAF516           ; CONN_ANSIFL       ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_DpController            ; DPCONTR_TAB          ;                      ; EDIT ; FAM_DAF516           ; CONN_THREADN      ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_DpController            ; DPCONTR_TAB          ;                      ; EDIT ; FAM_PILOT_R          ; CONN_ANSIFL       ;                 ;         ; 1,1 ;                       ; 7        ; 
+CDB_DpReliefValve           ; DPCONTR_TAB          ;                      ; EDIT ; FAM_BPV              ; CONN_THREADN      ;                 ;         ; 1,1 ;                       ;          ; 
+CDB_DpController            ; DPCONTR_TAB          ; STAP32_10-40         ; EDIT ;                      ;                   ;                 ;         ; 1,1 ;                       ;          ; 
+CDB_DpController            ; DPCONTR_TAB          ; STAP40_10-40         ; EDIT ;                      ;                   ;                 ;         ; 1,1 ;                       ;          ; 
+CDB_DpController            ; DPCONTR_TAB          ; STAP32D_10-40        ; EDIT ;                      ;                   ;                 ;         ; 1,1 ;                       ;          ; 
+CDB_DpController            ; DPCONTR_TAB          ; STAP40D_10-40        ; EDIT ;                      ;                   ;                 ;         ; 1,1 ;                       ;          ; 
+CDB_DpReliefValve           ; DPCONTR_TAB          ;                      ; EDIT ; FAM_DAB50            ; CONN_ANSIFL       ; VERS_STD        ;         ; 1,0 ;                       ;          ; 
+CDB_DpReliefValve           ; DPCONTR_TAB          ;                      ; EDIT ; FAM_DAB50            ; CONN_ANSIFL       ; VERS_US         ;         ; 0,0 ;                       ;          ; 
+
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ;                      ;                   ; VERS_DRAIN12    ;         ; 0,0 ;                       ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ;                      ;                   ; VERS_VITON      ;         ; 0,0 ;                       ;          ; 
+
+// HYS-1526 : TA-Fusion-P should be displayed on "Show other available product" section.
+CDB_PIControlValve          ; PICTRLVALV_TAB       ;                      ; EDIT ; FAM_FUSION_P         ;                   ;                 ;         ; 1,0 ;                       ; 3        ; 
+CDB_ControlValve            ; BALCTRLVALV_TAB      ;                      ; EDIT ; FAM_FUSION_C         ; CONN_THREADN      ;                 ;         ; 1,1 ;                       ; 7        ; 
+CDB_PIControlValve          ; PICTRLVALV_TAB       ;                      ; EDIT ; FAM_FUSION_P         ; CONN_THREADN      ;                 ;         ; 1,1 ;                       ; 7        ; 
+CDB_ControlValve            ; BALCTRLVALV_TAB      ;                      ; EDIT ; FAM_FUSION_C         ; CONN_ANSIFL       ;                 ;         ; 1,1 ;                       ; 7        ; 
+CDB_PIControlValve          ; PICTRLVALV_TAB       ;                      ; EDIT ; FAM_FUSION_P         ; CONN_ANSIFL       ;                 ;         ; 1,1 ;                       ; 7        ; 
+CDB_ControlValve            ; BALCTRLVALV_TAB      ;                      ; EDIT ; FAM_FUSION_C         ; CONN_THREADNVIC   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_PIControlValve          ; PICTRLVALV_TAB       ;                      ; EDIT ; FAM_FUSION_P         ; CONN_THREADNVIC   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_ControlValve            ; BALCTRLVALV_TAB      ;                      ; EDIT ; FAM_FUSION_C         ; CONN_THREAD       ;                 ;         ; 1,0 ;                       ;          ; 
+CDB_PIControlValve          ; PICTRLVALV_TAB       ;                      ; EDIT ; FAM_FUSION_P         ; CONN_THREAD       ;                 ;         ; 1,0 ;                       ;          ; 
+CDB_ControlValve            ; BALCTRLVALV_TAB      ;                      ; EDIT ; FAM_FUSION_C         ; CONN_FLANGE       ;                 ;         ; 1,0 ;                       ;          ; 
+CDB_PIControlValve          ; PICTRLVALV_TAB       ;                      ; EDIT ; FAM_FUSION_P         ; CONN_FLANGE       ;                 ;         ; 1,0 ;                       ;          ; 
+
+CDB_PIControlValve          ; PICTRLVALV_TAB       ;                      ; EDIT ; FAM_COMPACT_P        ;                   ; VERS_STD        ;         ; 1,0 ;                       ;          ; 
+CDB_PIControlValve          ; PICTRLVALV_TAB       ;                      ; EDIT ; FAM_COMPACT_P        ;                   ; VERS_US         ;         ; 0,0 ;                       ;          ; 
+
+CDB_DpCBCValve              ; DPCBALCTRLVALV_TAB   ;                      ; EDIT ; FAM_COMPACT_DP       ;                   ; VERS_STD        ;         ; 1,0 ;                       ;          ; 
+CDB_DpCBCValve              ; DPCBALCTRLVALV_TAB   ;                      ; EDIT ; FAM_COMPACT_DP       ;                   ; VERS_US         ;         ; 0,0 ;                       ;          ; 
+
+// HYS-1598: Pay attention that we don't have TA-Modulator DN 15-50 with NPT thread for US and international version. It's the same valve for normal, international
+// and US version. We just have the article number that is different for the US version.
+// See JIRA card for more details and accessory filter below.
+CDB_PIControlValve          ; PICTRLVALV_TAB       ;                      ; EDIT ; FAM_MODULATOR_P      ; CONN_THREADM      ; VERS_STD        ;         ; 1,0 ;                       ;          ; 
+CDB_PIControlValve          ; PICTRLVALV_TAB       ;                      ; EDIT ; FAM_MODULATOR_P      ; CONN_THREADM      ; VERS_US         ;         ; 0,0 ;                       ;          ;
+
+// TA-Modulator DN65-150.
+// HYS-1596: TA-Modulator ANSI flange must be displayed in "Show other available product" section.
+CDB_PIControlValve          ; PICTRLVALV_TAB       ;                      ; EDIT ; FAM_MODULATOR_P      ; CONN_FLANGE       ;                 ;         ; 1,0 ;                       ;          ; 
+CDB_PIControlValve          ; PICTRLVALV_TAB       ;                      ; EDIT ; FAM_MODULATOR_P      ; CONN_ANSIFL       ; VERS_STD        ;         ; 1,0 ;                       ; 7        ; 
+CDB_PIControlValve          ; PICTRLVALV_TAB       ;                      ; EDIT ; FAM_MODULATOR_P      ; CONN_ANSIFL       ; VERS_US         ;         ; 0,0 ;                       ;          ; 
+
+HYS-1596: TA-smart thread NPT and ANSI flange must be displayed in "Show other available product" section.
+CDB_SmartControlValve       ; SMARTCONTROLVALVE_TAB;                      ; EDIT ; FAM_TASMART_VALVE    ; CONN_THREADM      ; VERS_STD        ;         ; 1,0 ;                       ;          ; 
+CDB_SmartControlValve       ; SMARTCONTROLVALVE_TAB;                      ; EDIT ; FAM_TASMART_VALVE    ; CONN_THREADN      ; VERS_STD        ;         ; 1,0 ;                       ; 7        ; 
+CDB_SmartControlValve       ; SMARTCONTROLVALVE_TAB;                      ; EDIT ; FAM_TASMART_VALVE    ; CONN_FLANGE       ; VERS_STD        ;         ; 1,0 ;                       ;          ; 
+CDB_SmartControlValve       ; SMARTCONTROLVALVE_TAB;                      ; EDIT ; FAM_TASMART_VALVE    ; CONN_ANSIFL       ; VERS_STD        ;         ; 1,0 ;                       ; 7        ; 
+
+CDB_PIControlValve          ; PICTRLVALV_TAB       ;                      ; EDIT ; FAM_KTM512           ; CONN_ANSIFL       ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_PIControlValve          ; PICTRLVALV_TAB       ;                      ; EDIT ; FAM_KTM512           ; CONN_THREADN      ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_PIControlValve          ; PICTRLVALV_TAB       ;                      ; EDIT ; FAM_KTM512           ; CONN_FLANGESTL    ;                 ;         ; 0,0 ;                       ;          ; 
+//CDB_PIControlValve          ; PICTRLVALV_TAB       ;                      ; EDIT ; FAM_KTM50            ; CONN_ANSIFL       ;                 ;         ; 1,1 ;                       ; 9        ; **Deleted**
+
+CDB_ControlValve            ; CTRLVALV_TAB         ;                      ; EDIT ; FAM_216MZ            ;                   ;                 ;         ; 1,0 ;                       ; 2        ; 
+CDB_ControlValve            ; CTRLVALV_TAB         ;                      ; EDIT ; FAM_316MZ            ;                   ;                 ;         ; 1,0 ;                       ; 2        ; 
+CDB_ControlValve            ; CTRLVALV_TAB         ;                      ; EDIT ; FAM_216RGA           ;                   ;                 ;         ; 1,0 ;                       ; 1        ; 
+CDB_ControlValve            ; CTRLVALV_TAB         ;                      ; EDIT ; FAM_316RGA           ;                   ;                 ;         ; 1,0 ;                       ; 1        ; 
+CDB_ControlValve            ; CTRLVALV_TAB         ;                      ; EDIT ; FAM_216RGA           ; CONN_THREADN      ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_ControlValve            ; CTRLVALV_TAB         ;                      ; EDIT ; FAM_316RGA           ; CONN_THREADN      ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_ControlValve            ; CTRLVALV_TAB         ;                      ; EDIT ; FAM_206GG            ;                   ;                 ;         ; 1,0 ;                       ; 3        ; 
+CDB_ControlValve            ; CTRLVALV_TAB         ;                      ; EDIT ; FAM_306GG            ;                   ;                 ;         ; 1,0 ;                       ; 3        ; 
+CDB_ControlValve            ; CTRLVALV_TAB         ;                      ; EDIT ; FAM_216GG            ;                   ;                 ;         ; 1,0 ;                       ; 4        ; 
+CDB_ControlValve            ; CTRLVALV_TAB         ;                      ; EDIT ; FAM_316GG            ;                   ;                 ;         ; 1,0 ;                       ; 4        ; 
+CDB_ControlValve            ; CTRLVALV_TAB         ;                      ; EDIT ; FAM_216              ;                   ;                 ;         ; 1,0 ;                       ; 5        ; 
+CDB_ControlValve            ; CTRLVALV_TAB         ;                      ; EDIT ; FAM_316              ;                   ;                 ;         ; 1,0 ;                       ; 5        ; 
+CDB_ControlValve            ; CTRLVALV_TAB         ;                      ; EDIT ; FAM_225              ;                   ;                 ;         ; 1,0 ;                       ; 6        ; 
+CDB_ControlValve            ; CTRLVALV_TAB         ;                      ; EDIT ; FAM_325              ;                   ;                 ;         ; 1,0 ;                       ; 6        ; 
+CDB_ControlValve            ; CTRLVALV_TAB         ;                      ; EDIT ; FAM_240S             ;                   ;                 ;         ; 1,0 ;                       ; 7        ; 
+CDB_ControlValve            ; CTRLVALV_TAB         ;                      ; EDIT ; FAM_340S             ;                   ;                 ;         ; 1,0 ;                       ; 7        ; 
+CDB_ControlValve            ; CTRLVALV_TAB         ;                      ; EDIT ; FAM_240E             ;                   ;                 ;         ; 1,0 ;                       ; 8        ; 
+CDB_ControlValve            ; CTRLVALV_TAB         ;                      ; EDIT ; FAM_340E             ;                   ;                 ;         ; 1,0 ;                       ; 8        ; 
+CDB_ControlValve            ; CTRLVALV_TAB         ;                      ; EDIT ; FAM_DR16EVS          ;                   ;                 ;         ; 1,0 ;                       ; 7        ; 
+CDB_ControlValve            ; CTRLVALV_TAB         ;                      ; EDIT ; FAM_DR16EVSAR        ;                   ;                 ;         ; 1,0 ;                       ; 8        ; 
+
+CDB_ControlValve            ; CTRLVALV_TAB         ;                      ; EDIT ; FAM_TAV2             ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_ControlValve            ; CTRLVALV_TAB         ;                      ; EDIT ; FAM_TAV3             ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+
+// HYS-1429
+CDB_6WayValve               ; 6WAYCTRLVALV_TAB     ;                      ; EDIT ; FAM_6WAY_VALVE       ;  CONN_THREADN     ;                 ;         ; 0,0 ;                       ;          ; 
+
+// HYS-1503
+CDB_SmartControlValve       ; SMARTCONTROLVALVE_TAB;                      ; EDIT ; FAM_TASMART_VALVE    ;  CONN_THREADN     ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_SmartControlValve       ; SMARTCONTROLVALVE_TAB;                      ; EDIT ; FAM_TASMART_VALVE    ;  CONN_ANSIFL      ;                 ;         ; 0,0 ;                       ;          ; 
+
+// We exclude Nordic version.
+CDB_ShutoffValve            ; SHUTOFF_TAB          ;                      ; EDIT ; FAM_STS*             ;                   ; VERS_DRAIN12    ;         ; 0,0 ;                       ; 6        ; 
+
+CDB_ShutoffValve            ; SHUTOFF_TAB          ;                      ; EDIT ; FAM_STS              ;                   ; VERS_DRAIN34    ;         ; 1,0 ;                       ; 7        ; 
+CDB_ShutoffValve            ; SHUTOFF_TAB          ;                      ; EDIT ; FAM_STS              ;                   ; VERS_NODRAIN    ;         ; 1,0 ;                       ; 7        ; 
+CDB_ShutoffValve            ; SHUTOFF_TAB          ;                      ; EDIT ; FAM_STS              ;                   ; VERS_US         ;         ; 1,0 ;                       ; 8        ; 
+CDB_ShutoffValve            ; SHUTOFF_TAB          ;                      ; EDIT ; FAM_GLOBOH           ;                   ;                 ;         ; 1,0 ;                       ;          ; 
+CDB_ShutoffValve            ; SHUTOFF_TAB          ;                      ; EDIT ; FAM_GLOBOP           ;                   ;                 ;         ; 1,0 ;                       ;          ; 
+CDB_ShutoffValve            ; SHUTOFF_TAB          ;                      ; EDIT ; FAM_GLOBOS           ;                   ;                 ;         ; 1,0 ;                       ;          ; 
+CDB_ShutoffValve            ; SHUTOFF_TAB          ;                      ; EDIT ; FAM_GLOBOD           ;                   ;                 ;         ; 1,0 ;                       ;          ; 
+CDB_ShutoffValve            ; SHUTOFF_TAB          ;                      ; EDIT ; FAM_GLOBOD-SB        ;                   ;                 ;         ; 0,0 ;                       ;          ; 
+CDB_ShutoffValve            ; SHUTOFF_TAB          ;                      ; EDIT ; FAM_TA400            ;                   ;                 ;         ; 1,0 ;                       ;          ; 
+CDB_ShutoffValve            ; SHUTOFF_TAB          ;                      ; EDIT ; FAM_TA400A           ;                   ;                 ;         ; 1,0 ;                       ;          ; 
+CDB_ShutoffValve            ; SHUTOFF_TAB          ;                      ; EDIT ; FAM_TA500            ;                   ;                 ;         ; 1,0 ;                       ;          ; 
+CDB_ShutoffValve            ; SHUTOFF_TAB          ;                      ; EDIT ; FAM_TA500S           ;                   ;                 ;         ; 1,0 ;                       ;          ; 
+CDB_ShutoffValve            ; SHUTOFF_TAB          ;                      ; EDIT ; FAM_TA900            ;                   ;                 ;         ; 1,0 ;                       ;          ; 
+CDB_ShutoffValve            ; SHUTOFF_TAB          ;                      ; EDIT ; FAM_TA900U           ;                   ;                 ;         ; 1,0 ;                       ;          ; 
+CDB_ShutoffValve            ; SHUTOFF_TAB          ;                      ; EDIT ; FAM_TABAV            ;                   ;                 ;         ; 1,0 ;                       ;          ; 
+CDB_ShutoffValve            ; SHUTOFF_TAB          ;                      ; EDIT ; FAM_TA60             ;                   ;                 ;         ; 1,0 ;                       ;          ; 
+CDB_ShutoffValve            ; SHUTOFF_TAB          ;                      ; EDIT ; FAM_TAGAV            ;                   ;                 ;         ; 1,0 ;                       ;          ; 
+CDB_ShutoffValve            ; SHUTOFF_TAB          ;                      ; EDIT ; FAM_TABTV_LEVER      ;                   ;                 ;         ; 1,0 ;                       ;          ; 
+CDB_ShutoffValve            ; SHUTOFF_TAB          ;                      ; EDIT ; FAM_TABTV_GEARB      ;                   ;                 ;         ; 1,0 ;                       ;          ; 
+
+//////////////////////////////////////////////////////////////////////////////////////////
+/// Editions of accessories (It is the filter of the 'CDB_Product' class).
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ClassName                ; Table                ; ID                   ; EDIT ; FAM_ID               ; VERS_ID           ; a,h ; m1,i1                  ; 
+//-------------------------------------------------------------------------------------------------------------------------
+
+CDB_Product                 ; CONACCESSOR_TAB      ;                      ; EDIT ; ACCFAM_FTHREADCON    ;                   ; 1,0 ;                        ; 
+CDB_Product                 ; CONACCESSOR_TAB      ;                      ; EDIT ; ACCFAM_FTHREADNPTCON ;                   ; 1,0 ;                        ; 
+CDB_Product                 ; CONACCESSOR_TAB      ;                      ; EDIT ; ACCFAM_MTHREADCON    ;                   ; 1,0 ;                        ; 
+CDB_Product                 ; CONACCESSOR_TAB      ;                      ; EDIT ; ACCFAM_MTHREADNPTCON ;                   ; 1,0 ;                        ; 
+CDB_Product                 ; CONACCESSOR_TAB      ;                      ; EDIT ; ACCFAM_SOLDERCON     ;                   ; 1,0 ;                        ; 
+CDB_Product                 ; CONACCESSOR_TAB      ;                      ; EDIT ; ACCFAM_SOLDANSICON   ;                   ; 1,0 ;                        ; 
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// Editions of actuators (It is the filter of the 'CDB_Product' class).
+//////////////////////////////////////////////////////////////////////////////////////////
+// ClassName                ; Table                ; ID                   ; EDIT ; FAM_ID               ; VERS_ID           ; a,h ; m1,i1                  ; Priority
+//----------------------------------------------------------------------------------------------------------------------------------
+CDB_ThermostaticActuator    ; ACTUATOR_TAB         ;                      ; EDIT ; ACTFAM_TRV300_HD_BI  ;                   ; 0,0 ;                        ; 
+CDB_ThermostaticActuator    ; ACTUATOR_TAB         ;                      ; EDIT ; ACTFAM_TRV300_HD_RMT ;                   ; 0,0 ;                        ; 
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// Editions of actuators (It is the filter of the 'CDB_ElectroActuator' class).
+//////////////////////////////////////////////////////////////////////////////////////////
+// ClassName                ; Table                ; ID                   ; EDIT ; FAM_ID               ; VERS_ID           ;POWER_ID         ; a,h ; m1,i1                  ; Priority
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CDB_ElectroActuator         ; ACTUATOR_TAB         ;                      ; EDIT ; ACTFAM_EMO35         ;                   ;                 ; 0,0 ;                        ; 
+CDB_ElectroActuator         ; ACTUATOR_TAB         ;                      ; EDIT ; ACTFAM_EMO85         ;                   ;                 ; 0,0 ;                        ; 
+CDB_ElectroActuator         ; ACTUATOR_TAB         ;                      ; EDIT ; ACTFAM_424824        ;                   ;                 ; 0,0 ;                        ; 
+CDB_ElectroActuator         ; ACTUATOR_TAB         ;                      ; EDIT ; ACTFAM_ABC85         ;                   ;                 ; 0,0 ;                        ; 
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// Editions for Pressurisation (It is the filter of the 'CDB_Product' class).
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ClassName                ; Table                ; ID                   ; EDIT ; FAM_ID               ; VERS_ID           ; a,h ; m1,i1                  ; Priority
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+CDB_Vessel                  ; VSSL_TAB             ;                      ; EDIT ; VSSLFAM_MN           ;                   ; 0,0 ;                        ; 
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// Exclusion from CBI US DB (It is the filter of the 'CDB_TAProduct' class).
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ClassName                ; Table                ; ID                   ; EDIT ; FAM_ID               ; CONN_ID           ; VERS_ID         ; <=PN_ID ; a,h ; m1,i1                 ; Priority ; -d IDBROL
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_MD62             ;                   ;                 ;         ;     ; 0x00000001,0x00000000 ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_MD30             ;                   ;                 ;         ;     ; 0x00000001,0x00000000 ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_MD32             ;                   ;                 ;         ;     ; 0x00000001,0x00000000 ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_MDF3             ;                   ;                 ;         ;     ; 0x00000001,0x00000000 ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_MDF3SG           ;                   ;                 ;         ;     ; 0x00000001,0x00000000 ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_MDF3GE           ;                   ;                 ;         ;     ; 0x00000001,0x00000000 ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_MD22             ;                   ;                 ;         ;     ; 0x00000001,0x00000000 ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_MDF2             ;                   ;                 ;         ;     ; 0x00000001,0x00000000 ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_MDF2SG           ;                   ;                 ;         ;     ; 0x00000001,0x00000000 ;          ; 
+CDB_RegulatingValve         ; REGVALV_TAB          ;                      ; EDIT ; FAM_MDF2GE           ;                   ;                 ;         ;     ; 0x00000001,0x00000000 ;          ; 
+CDB_FixedOrifice            ; REGVALV_TAB          ;                      ; EDIT ; FAM_MD11             ;                   ;                 ;         ;     ; 0x00000001,0x00000000 ;          ; 
+CDB_FixedOrifice            ; REGVALV_TAB          ;                      ; EDIT ; FAM_MD12             ;                   ;                 ;         ;     ; 0x00000001,0x00000000 ;          ; 
+CDB_FixedOrifice            ; REGVALV_TAB          ;                      ; EDIT ; FAM_MD13             ;                   ;                 ;         ;     ; 0x00000001,0x00000000 ;          ; 
+CDB_FixedOrifice            ; REGVALV_TAB          ;                      ; EDIT ; FAM_MD501            ;                   ;                 ;         ;     ; 0x00000001,0x00000000 ;          ; 
+CDB_FixedOrifice            ; REGVALV_TAB          ;                      ; EDIT ; FAM_MD502            ;                   ;                 ;         ;     ; 0x00000001,0x00000000 ;          ; 
+CDB_FixedOrifice            ; REGVALV_TAB          ;                      ; EDIT ; FAM_MD503            ;                   ;                 ;         ;     ; 0x00000001,0x00000000 ;          ; 
+CDB_FixedOrifice            ; REGVALV_TAB          ;                      ; EDIT ; FAM_MDF1             ;                   ;                 ;         ;     ; 0x00000001,0x00000000 ;          ; 
+CDB_VenturiValve            ; REGVALV_TAB          ;                      ; EDIT ; FAM_STAV             ;                   ;                 ;         ;     ; 0x00000001,0x00000000 ;          ; 
+CDB_CommissioningSet        ; REGVALV_TAB          ;                      ; EDIT ; FAM_MD41             ;                   ;                 ;         ;     ; 0x00000001,0x00000000 ;          ; 
+CDB_CommissioningSet        ; REGVALV_TAB          ;                      ; EDIT ; FAM_MD42             ;                   ;                 ;         ;     ; 0x00000001,0x00000000 ;          ; 
+CDB_CommissioningSet        ; REGVALV_TAB          ;                      ; EDIT ; FAM_MD43             ;                   ;                 ;         ;     ; 0x00000001,0x00000000 ;          ; 
+CDB_CommissioningSet        ; REGVALV_TAB          ;                      ; EDIT ; FAM_MDF4             ;                   ;                 ;         ;     ; 0x00000001,0x00000000 ;          ; 
+CDB_CommissioningSet        ; REGVALV_TAB          ;                      ; EDIT ; FAM_MDF4SG           ;                   ;                 ;         ;     ; 0x00000001,0x00000000 ;          ; 
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// Editions for Pressurisation (It is the filter of the 'CDB_Product' class).
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ClassName                ; Table                ; ID                   ; EDIT ; FAM_ID               ; VERS_ID           ; a,h ; m1,i1                  ; Priority
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+CDB_TBPlenoVento            ; TECBOX_TAB           ; VENTO_V_2_1_F        ; EDIT ; TBXFAM_VENTO_V       ;                   ; 1,0 ;                        ; 
+CDB_TBPlenoVento            ; TECBOX_TAB           ; VENTO_V_2_1_FN       ; EDIT ; TBXFAM_VENTO_V       ;                   ; 0,0 ;                        ; 
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// Exclusion for CDB_Set
+//////////////////////////////////////////////////////////////////////////////////////////
+// ClassName                ; Table                ; ID                   ; EDIT ; Parameter            ; a,h
+//--------------------------------------------------------------------------------------
+CDB_Set                     ; BCVACTSET_TAB        ;                      ; EDIT ; USA-VICTAULIC        ; 0,1
+CDB_Set                     ; PICVACTSET_TAB       ;                      ; EDIT ; USA-VICTAULIC        ; 0,1
+
+// Exclude STAP-STAD* Nordic version sets.
+CDB_Set                     ; DPCMVSET_TAB         ;                      ; EDIT ; NORDIC               ; 0,1

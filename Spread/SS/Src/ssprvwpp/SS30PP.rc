@@ -1,0 +1,404 @@
+//Microsoft Developer Studio generated resource script.
+//
+
+#ifdef SPREAD_JPN
+#include "ss30ppj.rc"
+#else
+
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""SS30PP.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+#ifdef SS_V80
+VS_VERSION_INFO VERSIONINFO
+//VERSION_NUMBER_8
+ FILEVERSION 8,0,0,13
+//VERSION_NUMBER_8
+ PRODUCTVERSION 8,0,0,13
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "SS80PP Module\0"
+//VERSION_NUMBER_8
+            VALUE "FileVersion", "8.0.13\0"
+            VALUE "InternalName", "SS80PP\0"
+            VALUE "LegalCopyright", "Copyright 2008-2010\0"
+            VALUE "OriginalFilename", "SS80PP.DLL\0"
+            VALUE "ProductName", "SS80PP Module\0"
+//VERSION_NUMBER_8
+            VALUE "ProductVersion", "8.0.13\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#elif SS_V70
+
+VS_VERSION_INFO VERSIONINFO
+//VERSION_NUMBER_7
+ FILEVERSION 7,0,0,55
+//VERSION_NUMBER_7
+ PRODUCTVERSION 7,0,0,55
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "SS70PP Module\0"
+//VERSION_NUMBER_7
+            VALUE "FileVersion", "7.0.55\0"
+            VALUE "InternalName", "SS70PP\0"
+            VALUE "LegalCopyright", "Copyright 2004-2010\0"
+            VALUE "OriginalFilename", "SS70PP.DLL\0"
+            VALUE "ProductName", "SS70PP Module\0"
+//VERSION_NUMBER_7
+            VALUE "ProductVersion", "7.0.55\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#elif defined SS_V40
+
+VS_VERSION_INFO VERSIONINFO
+//VERSION_NUMBER_6
+ FILEVERSION 6,0,0,57
+//VERSION_NUMBER_6
+ PRODUCTVERSION 6,0,0,57
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "SS60PP Module\0"
+//VERSION_NUMBER_6
+            VALUE "FileVersion", "6.0.57\0"
+            VALUE "InternalName", "SS60PP\0"
+            VALUE "LegalCopyright", "Copyright 2004-2008\0"
+            VALUE "OriginalFilename", "SS60PP.DLL\0"
+            VALUE "ProductName", "SS60PP Module\0"
+//VERSION_NUMBER_6
+            VALUE "ProductVersion", "6.0.57\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#elif SS_V35
+
+VS_VERSION_INFO VERSIONINFO
+//VERSION_NUMBER_35
+ FILEVERSION 3,5,0,10
+//VERSION_NUMBER_35
+ PRODUCTVERSION 3,5,0,10
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "SS35PP Module\0"
+//VERSION_NUMBER_35
+            VALUE "FileVersion", "3.5.10\0"
+            VALUE "InternalName", "SS35PP\0"
+            VALUE "LegalCopyright", "Copyright 2008\0"
+            VALUE "OriginalFilename", "SS35PP.DLL\0"
+            VALUE "ProductName", "SS35PP Module\0"
+//VERSION_NUMBER_35
+            VALUE "ProductVersion", "3.5.10\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#else
+
+VS_VERSION_INFO VERSIONINFO
+//VERSION_NUMBER_30
+ FILEVERSION 3,0,0,55
+//VERSION_NUMBER_30
+ PRODUCTVERSION 3,0,0,55
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "SS30PP Module\0"
+//VERSION_NUMBER_30
+            VALUE "FileVersion", "3.0.55\0"
+            VALUE "InternalName", "SS30PP\0"
+            VALUE "LegalCopyright", "Copyright 1998-2008\0"
+            VALUE "OriginalFilename", "SS30PP.DLL\0"
+            VALUE "ProductName", "SS30PP Module\0"
+//VERSION_NUMBER_30
+            VALUE "ProductVersion", "3.0.55\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+#ifdef SS_V80
+IDR_PPGENERAL           REGISTRY DISCARDABLE    "PPGeneral80.rgs"
+IDR_PPPAGE              REGISTRY DISCARDABLE    "PPPage80.rgs"
+#elif SS_V70
+IDR_PPGENERAL           REGISTRY DISCARDABLE    "PPGeneral70.rgs"
+IDR_PPPAGE              REGISTRY DISCARDABLE    "PPPage70.rgs"
+#elif SS_V40
+IDR_PPGENERAL           REGISTRY DISCARDABLE    "PPGeneral60.rgs"
+IDR_PPPAGE              REGISTRY DISCARDABLE    "PPPage60.rgs"
+#elif SS_V35
+IDR_PPGENERAL           REGISTRY DISCARDABLE    "PPGeneral35.rgs"
+IDR_PPPAGE              REGISTRY DISCARDABLE    "PPPage35.rgs"
+#else
+IDR_PPGENERAL           REGISTRY DISCARDABLE    "PPGeneral.rgs"
+IDR_PPPAGE              REGISTRY DISCARDABLE    "PPPage.rgs"
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PPGENERAL DIALOG DISCARDABLE  0, 0, 271, 105
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Allow &Zoom with Mouse",IDC_ALLOWUSERZOOM,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,6,6,91,10
+    CONTROL         "&Enabled",IDC_ENABLED,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,6,20,91,10
+    LTEXT           "&Border Style",IDC_STATIC,6,37,46,8
+    COMBOBOX        IDC_BORDERSTYLE,6,48,69,40,CBS_DROPDOWNLIST | WS_TABSTOP
+    LTEXT           "&Mouse Pointer",IDC_STATIC,6,65,46,8
+    COMBOBOX        IDC_MOUSEPOINTER,6,76,69,50,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Scroll Bars",IDC_STATIC,103,6,152,73
+    LTEXT           "&Horizontal",IDC_STATIC,109,18,38,8
+    COMBOBOX        IDC_SCROLLBARH,109,28,65,50,CBS_DROPDOWNLIST | 
+                    WS_TABSTOP
+    LTEXT           "&Increment",IDC_STATIC,183,18,66,9
+    EDITTEXT        IDC_SCROLLINCH,183,28,65,12,ES_AUTOHSCROLL
+    LTEXT           "&Vertical",IDC_STATIC,109,50,43,9
+    COMBOBOX        IDC_SCROLLBARV,109,60,65,50,CBS_DROPDOWNLIST | 
+                    WS_TABSTOP
+    LTEXT           "I&ncrement",IDC_STATIC,183,50,64,9
+    EDITTEXT        IDC_SCROLLINCV,183,60,65,12,ES_AUTOHSCROLL
+END
+
+IDD_PPPAGE DIALOG DISCARDABLE  0, 0, 271, 105
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Page &View",IDC_STATIC,6,5,65,8
+    COMBOBOX        IDC_PAGEVIEWTYPE,6,15,65,72,CBS_DROPDOWNLIST | 
+                    WS_TABSTOP
+    LTEXT           "P&ercent View",IDC_STATIC_PAGEVIEWPERCENTAGE,6,29,65,8
+    EDITTEXT        IDC_PAGEVIEWPERCENTAGE,6,39,65,12,ES_AUTOHSCROLL
+    LTEXT           "Page &Border Width",IDC_STATIC,6,53,65,8
+    EDITTEXT        IDC_PAGEBORDERWIDTH,6,63,65,12,ES_AUTOHSCROLL
+    LTEXT           "Page &Shadow Width",IDC_STATIC,6,77,65,8
+    EDITTEXT        IDC_PAGESHADOWWIDTH,6,87,65,12,ES_AUTOHSCROLL
+    GROUPBOX        "Page Gutters",IDC_STATIC_PAGEGUTTERS,75,5,97,61
+    LTEXT           "&Horizontal",IDC_STATIC_PAGEGUTTERH,81,14,85,8
+    EDITTEXT        IDC_PAGEGUTTERH,81,24,85,12,ES_AUTOHSCROLL
+    LTEXT           "Ve&rtical",IDC_STATIC_PAGEGUTTERV,81,40,85,8
+    EDITTEXT        IDC_PAGEGUTTERV,81,49,85,12,ES_AUTOHSCROLL
+    GROUPBOX        "Pages in View",IDC_STATIC_PAGESINVIEW,75,67,97,34
+    LTEXT           "H&orizontal",IDC_STATIC_PAGEMULTICNTH,81,76,32,8
+    EDITTEXT        IDC_PAGEMULTICNTH,81,85,40,12,ES_AUTOHSCROLL
+    LTEXT           "Ver&tical",IDC_STATIC_PAGEMULTICNTV,129,76,24,8
+    EDITTEXT        IDC_PAGEMULTICNTV,127,85,40,12,ES_AUTOHSCROLL
+    GROUPBOX        "Gray Area Margins",IDC_STATIC,175,5,91,96
+    LTEXT           "T&ype",IDC_STATIC,179,18,84,8
+    COMBOBOX        IDC_GRAYAREAMARGINTYPE,179,29,84,40,CBS_DROPDOWNLIST | 
+                    WS_TABSTOP
+    LTEXT           "Hori&zontal",IDC_STATIC,179,44,84,8
+    EDITTEXT        IDC_GRAYAREAMARGINH,179,55,84,12,ES_AUTOHSCROLL
+    LTEXT           "Vertica&l",IDC_STATIC,179,70,84,8
+    EDITTEXT        IDC_GRAYAREAMARGINV,179,81,84,12,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "SS30PP"
+    IDS_TITLEPPGeneral      "General"
+    IDS_TITLEPPPage         "Page"
+#ifdef SS_V80
+    IDS_HELPFILEPPGeneral   "Spread80.chm"
+    IDS_DOCSTRINGPPGeneral  "Spread 8.0 Print Preview General Property Page"
+    IDS_HELPFILEPPPage      "Spread80.chm"
+    IDS_DOCSTRINGPPPage     "Spread 8.0 Print Preview Page Property Page"
+#elif SS_V70
+    IDS_HELPFILEPPGeneral   "Spread70.chm"
+    IDS_DOCSTRINGPPGeneral  "Spread 7.0 Print Preview General Property Page"
+    IDS_HELPFILEPPPage      "Spread70.chm"
+    IDS_DOCSTRINGPPPage     "Spread 7.0 Print Preview Page Property Page"
+#elif SS_V40
+    IDS_HELPFILEPPGeneral   "Spread60.chm"
+    IDS_DOCSTRINGPPGeneral  "Spread 6.0 Print Preview General Property Page"
+    IDS_HELPFILEPPPage      "Spread60.chm"
+    IDS_DOCSTRINGPPPage     "Spread 6.0 Print Preview Page Property Page"
+#elif SS_V35
+    IDS_HELPFILEPPGeneral   "Spread35.chm"
+    IDS_DOCSTRINGPPGeneral  "Spread 3.5 Print Preview General Property Page"
+    IDS_HELPFILEPPPage      "Spread35.chm"
+    IDS_DOCSTRINGPPPage     "Spread 3.5 Print Preview Page Property Page"
+#else
+    IDS_HELPFILEPPGeneral   "Spread30.hlp"
+    IDS_DOCSTRINGPPGeneral  "Spread 3.0 Print Preview General Property Page"
+    IDS_HELPFILEPPPage      "Spread30.hlp"
+    IDS_DOCSTRINGPPPage     "Spread 3.0 Print Preview Page Property Page"
+#endif
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "SS30PP.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
+#endif // SPREAD_JPN

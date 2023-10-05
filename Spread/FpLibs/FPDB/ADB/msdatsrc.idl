@@ -1,0 +1,59 @@
+// Generated .IDL file (by the OLE/COM Object Viewer)
+// 
+// typelib filename: msdatsrc.tlb
+
+[
+  uuid(7C0FFAB0-CD84-11D0-949A-00A0C91110ED),
+  version(1.0),
+  helpstring("Microsoft Data Source Interfaces")
+]
+library MSDATASRC
+{
+    // TLib :     // TLib : OLE Automation : {00020430-0000-0000-C000-000000000046}
+    importlib("STDOLE2.TLB");
+
+    // Forward declare all types defined in this typelib
+    interface DataSourceListener;
+    interface DataSource;
+
+    typedef [uuid(7C0FFAB1-CD84-11D0-949A-00A0C91110ED), public]
+    BSTR DataMember;
+
+    [
+      odl,
+      uuid(7C0FFAB2-CD84-11D0-949A-00A0C91110ED),
+      hidden,
+      oleautomation
+    ]
+    interface DataSourceListener : IUnknown {
+        [hidden]
+        HRESULT _stdcall dataMemberChanged([in] DataMember bstrDM);
+        [hidden]
+        HRESULT _stdcall dataMemberAdded([in] DataMember bstrDM);
+        [hidden]
+        HRESULT _stdcall dataMemberRemoved([in] DataMember bstrDM);
+    };
+
+    [
+      odl,
+      uuid(7C0FFAB3-CD84-11D0-949A-00A0C91110ED),
+      oleautomation
+    ]
+    interface DataSource : IUnknown {
+        [restricted, hidden]
+        HRESULT _stdcall getDataMember(
+                        [in] DataMember bstrDM, 
+                        [in] GUID* riid, 
+                        [out, retval] IUnknown** ppunk);
+        [hidden]
+        HRESULT _stdcall getDataMemberName(
+                        [in] long lIndex, 
+                        [out, retval] DataMember* pbstrDM);
+        [hidden]
+        HRESULT _stdcall getDataMemberCount([out, retval] long* plCount);
+        [hidden]
+        HRESULT _stdcall addDataSourceListener([in] DataSourceListener* pDSL);
+        [hidden]
+        HRESULT _stdcall removeDataSourceListener([in] DataSourceListener* pDSL);
+    };
+};

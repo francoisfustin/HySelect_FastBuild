@@ -1,0 +1,10 @@
+#include "windows.h"
+#include "vbssprvw.h"
+
+IDBMP_FPSSPREVIEW      BITMAP  DISCARDABLE "..\\ssprvw\\ssprvwup.bmp"
+IDBMP_FPSSPREVIEWDOWN  BITMAP  DISCARDABLE "..\\ssprvw\\ssprvwdn.bmp"
+IDBMP_FPSSPREVIEWMONO  BITMAP  DISCARDABLE "..\\ssprvw\\ssprvwup.bmp"
+IDBMP_FPSSPREVIEWEGA   BITMAP  DISCARDABLE "..\\ssprvw\\ssprvwup.bmp"
+
+SSPREVIEWZOOMINCURSOR  CURSOR  DISCARDABLE "..\\ssprvw\\zoomin.cur"
+SSPREVIEWZOOMOUTCURSOR CURSOR  DISCARDABLE "..\\ssprvw\\zoomout.cur"

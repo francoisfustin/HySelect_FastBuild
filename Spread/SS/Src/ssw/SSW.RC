@@ -1,0 +1,67 @@
+#include <windows.h>
+#include "..\sssrc\dialog.h"
+#include "..\excel\src\resource.h"
+
+// 96' 5/20 Add #ifndef By BOC Gao. for not include "ssw.rc2".
+#ifndef APSTUDIO_INVOKED
+#include "ssw.rc2"
+#endif
+
+ssrwbmp   BITMAP "ss_rwde.bmp"
+rcinclude ss_rwde.dlg
+
+tbCB_Up           BITMAP "..\\sssrc\\classes\\cbrsv1.bmp"
+tbCB_Down         BITMAP "..\\sssrc\\classes\\cbrsv2.bmp"
+tbCB_Gray         BITMAP "..\\sssrc\\classes\\cbrsv3.bmp"
+tbCB_FocusUp      BITMAP "..\\sssrc\\classes\\cbrsv4.bmp"
+tbCB_FocusDown    BITMAP "..\\sssrc\\classes\\cbrsv5.bmp"
+tbCB_FocusGray    BITMAP "..\\sssrc\\classes\\cbrsv6.bmp"
+tbCB_DisabledUp   BITMAP "..\\sssrc\\classes\\cbrsv7.bmp"
+tbCB_DisabledDown BITMAP "..\\sssrc\\classes\\cbrsv8.bmp"
+tbCB_DisabledGray BITMAP "..\\sssrc\\classes\\cbrsv9.bmp"
+
+sbrhome  BITMAP "..\\sssrc\\spread\\sbrhome.bmp"
+sbrup    BITMAP "..\\sssrc\\spread\\sbrup.bmp"
+sbrdn    BITMAP "..\\sssrc\\spread\\sbrdn.bmp"
+sbrend   BITMAP "..\\sssrc\\spread\\sbrend.bmp"
+sbrpgdn  BITMAP "..\\sssrc\\spread\\sbrpgdn.bmp"
+sbrpgup  BITMAP "..\\sssrc\\spread\\sbrpgup.bmp"
+sbrhomed BITMAP "..\\sssrc\\spread\\sbrhomed.bmp"
+sbrupd   BITMAP "..\\sssrc\\spread\\sbrupd.bmp"
+sbrdnd   BITMAP "..\\sssrc\\spread\\sbrdnd.bmp"
+sbrendd  BITMAP "..\\sssrc\\spread\\sbrendd.bmp"
+sbrpgdnd BITMAP "..\\sssrc\\spread\\sbrpgdnd.bmp"
+sbrpgupd BITMAP "..\\sssrc\\spread\\sbrpgupd.bmp"
+
+sbrhomeh  BITMAP "..\\sssrc\\spread\\sbrhomeh.bmp"
+sbrlf    BITMAP "..\\sssrc\\spread\\sbrlf.bmp"
+sbrrt    BITMAP "..\\sssrc\\spread\\sbrrt.bmp"
+sbrendh   BITMAP "..\\sssrc\\spread\\sbrendh.bmp"
+sbrpgrt  BITMAP "..\\sssrc\\spread\\sbrpgrt.bmp"
+sbrpglf  BITMAP "..\\sssrc\\spread\\sbrpglf.bmp"
+sbrhomehd BITMAP "..\\sssrc\\spread\\sbrhomehd.bmp"
+sbrlfd   BITMAP "..\\sssrc\\spread\\sbrlfd.bmp"
+sbrrtd   BITMAP "..\\sssrc\\spread\\sbrrtd.bmp"
+sbrendhd  BITMAP "..\\sssrc\\spread\\sbrendhd.bmp"
+sbrpgrtd BITMAP "..\\sssrc\\spread\\sbrpgrtd.bmp"
+sbrpglfd BITMAP "..\\sssrc\\spread\\sbrpglfd.bmp"
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+SSPREVIEWZOOMINCURSOR   CURSOR  DISCARDABLE     "..\\ssprvw\\zoomin.cur"
+SSPREVIEWZOOMOUTCURSOR  CURSOR  DISCARDABLE     "..\\ssprvw\\zoomout.cur"
+
+rcinclude ssw.dlg
+
+#include "..\vbx\stringrc.rc"
+#include "..\vbx\splash.rc"
+#ifndef SPREAD_JPN
+#include "..\excel\src\xl.rc"
+#include "..\web\src\web.rc"
+#else
+#include "..\excel\src\xlj.rc"
+#include "..\web\src\webj.rc"
+#endif
+

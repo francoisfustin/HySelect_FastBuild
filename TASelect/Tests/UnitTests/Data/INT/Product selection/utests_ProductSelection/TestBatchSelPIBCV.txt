@@ -1,0 +1,1565 @@
+#Start of test definition
+
+StartTechnicalParameters
+ApplicationType = 1
+AvailablePMPanels = 7
+BreakTankRequiredForWaterMakeUp = 1
+CVDefKvReynard = 1
+CVMaxDispDp = 200000
+CVMaxDpProp = 65000
+CVMinAuthCstFlow = 0.5
+CVMinAuthor = 0.25
+CVMinDpOnoff = 3000
+CVMinDpProp = 10000
+CVUseDpCPBand = 0
+CanChangePressureVolumeLimit = 0
+CurrencyID = CURRENCY_EUR
+DefaultCalculationNorm = PM_NORM_EN12828
+DefaultCoolingTps = 7
+DefaultFillTemperature = 15
+DefaultHeatingTps = 50
+DefaultISChangeOverCoolingSideAdditFamilyID = WATER_ADDIT
+DefaultISChangeOverCoolingSideAdditID = WATER
+DefaultISChangeOverCoolingSideDT = 6
+DefaultISChangeOverCoolingSidePcWeight = 0
+DefaultISChangeOverCoolingSideTps = 6
+DefaultISChangeOverHeatingSideAdditFamilyID = WATER_ADDIT
+DefaultISChangeOverHeatingSideAdditID = WATER
+DefaultISChangeOverHeatingSideDT = 20
+DefaultISChangeOverHeatingSidePcWeight = 0
+DefaultISChangeOverHeatingSideTps = 75
+DefaultISCoolingAdditFamilyID = WATER_ADDIT
+DefaultISCoolingAdditID = WATER
+DefaultISCoolingDT = 2
+DefaultISCoolingPcWeight = 0
+DefaultISCoolingTps = 10
+DefaultISHeatingAdditFamilyID = WATER_ADDIT
+DefaultISHeatingAdditID = WATER
+DefaultISHeatingDT = 5
+DefaultISHeatingPcWeight = 0
+DefaultISHeatingTps = 90
+DefaultISSolarAdditFamilyID = WATER_ADDIT
+DefaultISSolarAdditID = WATER
+DefaultISSolarDT = 20
+DefaultISSolarPcWeight = 0
+DefaultISSolarTps = 70
+DefaultMaxTempInCooling = 45
+DefaultMinTempInHeating = 5
+DefaultMinTempInSolar = 5
+DefaultPipeSerieID = STEEL_DIN2440
+DefaultPrjCoolingAdditID = WATER
+DefaultPrjCoolingDT = 5
+DefaultPrjCoolingPcWeight = 0
+DefaultPrjHeatingAdditID = WATER
+DefaultPrjHeatingDT = 5
+DefaultPrjHeatingPcWeight = 0
+DefaultSafetyPressureResponseValve = 300000
+DefaultSecondaryPumpHMin = 25000
+DefaultSmartCVLocation = 1
+DefaultStaticPressureOfWaterNetwork = 400000
+DefaultTAZ = 100
+DefaultWaterHardness = 1.78324958
+DefaultWaterMakeUpTemp = 15
+DegassingWaterReserveForVessel = 0.002
+DpCBCVDpcmin = 5000
+DpCBCVDplmin = 5000
+DpCHide = 0
+DpCHminFullyOpenMv = 0
+DpCMinDp = 5000
+DpCMvLocation = 0
+DpCMvWithSameSizeOnly = 0
+DpRefForBest6Way = 3000
+FixedOrificeMaxDp = 6000
+FixedOrificeMinDp = 2000
+FlowDeviationMinus = -0.1
+FlowDeviationPlus = 0.1
+FluidTempLimitEN12953 = 105
+InitialPressureMargin = 30000
+MaxNumberOfAdditionalVesselsInParallel = 4
+MaxNumberOfVentoInParallel = 2
+MaxSafetyValveInParallel = 3
+MaxSizeShift = 4
+MinPressureMargin = 20000
+PICvHide = 0
+PICvMinDp = 1000
+PSetupCompresso = 10000
+PSetupTransfero = 20000
+PipeMaxDp = 200
+PipeMaxVelocity = 2
+PipeMinDp = 10
+PipeMinVelocity = 0.3
+PipeTargetDp = 150
+PipeTargetVelocity = 1
+PipeTargetVelosityUsed = 0
+PressureVolumeLimit = 300000
+ProjectType = 1
+SafetyTempLimiterLimitEN12953 = 110
+SizeShiftAbove = 0
+SizeShiftBelow = -2
+SmartValveDpMaxForBestSuggestion = 20000
+TrvDefDpTotal = 10000
+TrvDefRoomTemperature = 20
+TrvDefSupplyTemperature = 80
+TrvMaxDp = 30000
+TrvMinDpRatio = 0.25
+UseDefaultFreezingPointAsMinTemperature = 1
+UseSimplyPst = 0
+UseVesselPressureVolumeLimit = 0
+ValveMaxDp = 200000
+ValveMin2Dp = 6000
+ValveMinDp = 3000
+VenturiMaxDp = 10000
+VenturiMinDp = 2000
+VesselSelectionRangePercentage = 0
+EndTechnicalParameters
+
+Test number = 0
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_STD
+ComboFamilyBelow65ID = FAM_FUSION_P
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREAD
+ComboVersionBelow65ID = VERS_STD
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = PICVTYPE_STD
+ComboFamilyAbove50ID = FAM_FUSION_P
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_FLANGE
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolutionWithAlternative;COMPACT_P_10A;TA-Compact-P 10;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;10 (3/8");>50;0.0001;0.004;Linear;PushToClose;7.12333;7 (0.25);13550;-10/90;10 (3/8");73.8602;0.226354;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 1;5.555555554e-05; ; ;FindOneSolutionWithAlternative;COMPACT_P_15LFA;TA-Compact-P 15LF;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;15 (1/2");>50;0.0001;0.004;Linear;PushToClose;7.4908;7.5 (0.25);13931.6;-10/90;15 (1/2");77.2178;0.276311;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 2;8.333333331e-05; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_15A;TA-Modulator 15;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;15 (1/2");>75;0.0001;0.00402;EqualPc;PushToClose;6.59339;6.5 (0.5);14480.3;-10/90;15 (1/2");163.796;0.414466;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40.2;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 3;0.00013888888885; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_20A;TA-Modulator 20;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;20 (3/4");>75;0.0001;0.00404;EqualPc;PushToClose;4.38442;4.5 (0.5);13944.9;-10/90;20 (3/4");94.3163;0.379027;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40.4;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 4;0.00022222222216; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_20A;TA-Modulator 20;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;20 (3/4");>75;0.0001;0.00404;EqualPc;PushToClose;7.35151;7.5 (0.5);14644.5;-10/90;25 (1");71.5077;0.382437;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40.4;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 5;0.00036111111101; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_25A;TA-Modulator 25;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;25 (1");>75;0.0001;0.00651;EqualPc;PushToClose;6.66667;6.5 (0.5);18588.5;-10/90;25 (1");178.468;0.62146;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;65.1;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ;FindOneSolutionWithAlternative;COMPACT_P_25A;TA-Compact-P 25;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;25 (1");>50;0.0001;0.004;Linear;PushToClose;9.40371;9.5 (0.25);22403.7;-10/90;32 (1 1/4");108.968;0.576286;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 7;0.00094444444418; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_32A;TA-Modulator 32;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;32 (1 1/4");>75;0.0001;0.00656;EqualPc;PushToClose;9.08557;9 (0.5);22357.8;-20/120;40 (1 1/2");126.187;0.688231;SLIDER160-STD1M;TA-Slider 160 (1m);600000;-;65.6;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 8;0.00152777777735; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_40A;TA-Modulator 40;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;40 (1 1/2");>125;0.0001;0.015;EqualPc;PushToClose;1.84698;1.85 (0.05);23830.5;-10/90;50 (2");94.9446;0.692498;SLIDER500-STD1M;TA-Slider 500 (1m);400000;-;150/300*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_50A;TA-Modulator 50;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;50 (2");>125;0.0001;0.015;EqualPc;PushToClose;1.71076;1.7 (0.05);24084.1;-10/90;65 (2 1/2");63.5773;0.664999;SLIDER500-STD1M;TA-Slider 500 (1m);400000;-;150/300*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.08752;4.09 (0.01);24792.5;-10/120;65 (2 1/2");160.155;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.91904;4.92* (0.01);27731.5;-10/120;80 (3");178.93;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_80HFA;TA-Modulator 80 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;80 (3");>125;0.0001;0.02;Linear;PushToClose;4.04136;4.04 (0.01);33872;-10/120;100 (4");119.397;1.2094;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_125NFB;TA-Modulator 125 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;125 (5");>150;0.0001;0.0198;EqualPc;PushToClose;4.34099;4.34 (0.01);25940.7;-10/120;125 (5");102.146;1.27659;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;59.4/79.2/119/158/238/317*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_150NFB;TA-Modulator 150 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;150 (6");>150;0.0001;0.0298;EqualPc;PushToClose;10.2088;10.21 (0.01);26742.5;-10/120;150 (6");106.055;1.45299;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;89.4*/119/179/238/358/477;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200NFB;TA-Modulator 200 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;200 (8");>125;0.0001;0.0325;EqualPc;PushToClose;10.0724;10 (0.5);29015;-10/120;200 (8");61.8105;1.31817;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.5*/130/195/260/390/520;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200HFA;TA-Modulator 200 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;200 (8");>125;0.0001;0.0324;Linear;PushToClose;9.30378;9.5 (0.5);57000;-10/120;250 (10");49.3182;1.35193;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.2*/130/194/259/389/518;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 1
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_STD
+ComboFamilyBelow65ID = FAM_FUSION_P
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADM
+ComboVersionBelow65ID = VERS_STD
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = PICVTYPE_STD
+ComboFamilyAbove50ID = FAM_FUSION_P
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_FLANGE
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolutionWithAlternative;COMPACT_P_10A;TA-Compact-P 10;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;10 (3/8");>50;0.0001;0.004;Linear;PushToClose;7.12333;7 (0.25);13550;-10/90;10 (3/8");73.8602;0.226354;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 1;5.555555554e-05; ; ;FindOneSolutionWithAlternative;COMPACT_P_15LFA;TA-Compact-P 15LF;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;15 (1/2");>50;0.0001;0.004;Linear;PushToClose;7.4908;7.5 (0.25);13931.6;-10/90;15 (1/2");77.2178;0.276311;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 2;8.333333331e-05; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_15A;TA-Modulator 15;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;15 (1/2");>75;0.0001;0.00402;EqualPc;PushToClose;6.59339;6.5 (0.5);14480.3;-10/90;15 (1/2");163.796;0.414466;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40.2;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 3;0.00013888888885; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_20A;TA-Modulator 20;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;20 (3/4");>75;0.0001;0.00404;EqualPc;PushToClose;4.38442;4.5 (0.5);13944.9;-10/90;20 (3/4");94.3163;0.379027;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40.4;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 4;0.00022222222216; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_20A;TA-Modulator 20;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;20 (3/4");>75;0.0001;0.00404;EqualPc;PushToClose;7.35151;7.5 (0.5);14644.5;-10/90;25 (1");71.5077;0.382437;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40.4;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 5;0.00036111111101; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_25A;TA-Modulator 25;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;25 (1");>75;0.0001;0.00651;EqualPc;PushToClose;6.66667;6.5 (0.5);18588.5;-10/90;25 (1");178.468;0.62146;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;65.1;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ;FindOneSolutionWithAlternative;COMPACT_P_25A;TA-Compact-P 25;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;25 (1");>50;0.0001;0.004;Linear;PushToClose;9.40371;9.5 (0.25);22403.7;-10/90;32 (1 1/4");108.968;0.576286;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 7;0.00094444444418; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_32A;TA-Modulator 32;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;32 (1 1/4");>75;0.0001;0.00656;EqualPc;PushToClose;9.08557;9 (0.5);22357.8;-20/120;40 (1 1/2");126.187;0.688231;SLIDER160-STD1M;TA-Slider 160 (1m);600000;-;65.6;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 8;0.00152777777735; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_40A;TA-Modulator 40;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;40 (1 1/2");>125;0.0001;0.015;EqualPc;PushToClose;1.84698;1.85 (0.05);23830.5;-10/90;50 (2");94.9446;0.692498;SLIDER500-STD1M;TA-Slider 500 (1m);400000;-;150/300*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_50A;TA-Modulator 50;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;50 (2");>125;0.0001;0.015;EqualPc;PushToClose;1.71076;1.7 (0.05);24084.1;-10/90;65 (2 1/2");63.5773;0.664999;SLIDER500-STD1M;TA-Slider 500 (1m);400000;-;150/300*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.08752;4.09 (0.01);24792.5;-10/120;65 (2 1/2");160.155;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.91904;4.92* (0.01);27731.5;-10/120;80 (3");178.93;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_80HFA;TA-Modulator 80 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;80 (3");>125;0.0001;0.02;Linear;PushToClose;4.04136;4.04 (0.01);33872;-10/120;100 (4");119.397;1.2094;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_125NFB;TA-Modulator 125 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;125 (5");>150;0.0001;0.0198;EqualPc;PushToClose;4.34099;4.34 (0.01);25940.7;-10/120;125 (5");102.146;1.27659;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;59.4/79.2/119/158/238/317*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_150NFB;TA-Modulator 150 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;150 (6");>150;0.0001;0.0298;EqualPc;PushToClose;10.2088;10.21 (0.01);26742.5;-10/120;150 (6");106.055;1.45299;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;89.4*/119/179/238/358/477;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200NFB;TA-Modulator 200 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;200 (8");>125;0.0001;0.0325;EqualPc;PushToClose;10.0724;10 (0.5);29015;-10/120;200 (8");61.8105;1.31817;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.5*/130/195/260/390/520;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200HFA;TA-Modulator 200 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;200 (8");>125;0.0001;0.0324;Linear;PushToClose;9.30378;9.5 (0.5);57000;-10/120;250 (10");49.3182;1.35193;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.2*/130/194/259/389/518;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 2
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_STD
+ComboFamilyBelow65ID = FAM_FUSION_P
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADN
+ComboVersionBelow65ID = VERS_US
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = PICVTYPE_STD
+ComboFamilyAbove50ID = FAM_FUSION_P
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_FLANGE
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolutionWithAlternative;COMPACT_P_10A;TA-Compact-P 10;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;10 (3/8");>50;0.0001;0.004;Linear;PushToClose;7.12333;7 (0.25);13550;-10/90;10 (3/8");73.8602;0.226354;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 1;5.555555554e-05; ; ;FindOneSolutionWithAlternative;COMPACT_P_15LFA;TA-Compact-P 15LF;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;15 (1/2");>50;0.0001;0.004;Linear;PushToClose;7.4908;7.5 (0.25);13931.6;-10/90;15 (1/2");77.2178;0.276311;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 2;8.333333331e-05; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_15A;TA-Modulator 15;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;15 (1/2");>75;0.0001;0.00402;EqualPc;PushToClose;6.59339;6.5 (0.5);14480.3;-10/90;15 (1/2");163.796;0.414466;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40.2;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 3;0.00013888888885; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_20A;TA-Modulator 20;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;20 (3/4");>75;0.0001;0.00404;EqualPc;PushToClose;4.38442;4.5 (0.5);13944.9;-10/90;20 (3/4");94.3163;0.379027;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40.4;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 4;0.00022222222216; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_20A;TA-Modulator 20;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;20 (3/4");>75;0.0001;0.00404;EqualPc;PushToClose;7.35151;7.5 (0.5);14644.5;-10/90;25 (1");71.5077;0.382437;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40.4;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 5;0.00036111111101; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_25A;TA-Modulator 25;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;25 (1");>75;0.0001;0.00651;EqualPc;PushToClose;6.66667;6.5 (0.5);18588.5;-10/90;25 (1");178.468;0.62146;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;65.1;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ;FindOneSolutionWithAlternative;COMPACT_P_25A;TA-Compact-P 25;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;25 (1");>50;0.0001;0.004;Linear;PushToClose;9.40371;9.5 (0.25);22403.7;-10/90;32 (1 1/4");108.968;0.576286;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 7;0.00094444444418; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_32A;TA-Modulator 32;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;32 (1 1/4");>75;0.0001;0.00656;EqualPc;PushToClose;9.08557;9 (0.5);22357.8;-20/120;40 (1 1/2");126.187;0.688231;SLIDER160-STD1M;TA-Slider 160 (1m);600000;-;65.6;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 8;0.00152777777735; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_40A;TA-Modulator 40;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;40 (1 1/2");>125;0.0001;0.015;EqualPc;PushToClose;1.84698;1.85 (0.05);23830.5;-10/90;50 (2");94.9446;0.692498;SLIDER500-STD1M;TA-Slider 500 (1m);400000;-;150/300*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_50A;TA-Modulator 50;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;50 (2");>125;0.0001;0.015;EqualPc;PushToClose;1.71076;1.7 (0.05);24084.1;-10/90;65 (2 1/2");63.5773;0.664999;SLIDER500-STD1M;TA-Slider 500 (1m);400000;-;150/300*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.08752;4.09 (0.01);24792.5;-10/120;65 (2 1/2");160.155;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.91904;4.92* (0.01);27731.5;-10/120;80 (3");178.93;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_80HFA;TA-Modulator 80 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;80 (3");>125;0.0001;0.02;Linear;PushToClose;4.04136;4.04 (0.01);33872;-10/120;100 (4");119.397;1.2094;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_125NFB;TA-Modulator 125 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;125 (5");>150;0.0001;0.0198;EqualPc;PushToClose;4.34099;4.34 (0.01);25940.7;-10/120;125 (5");102.146;1.27659;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;59.4/79.2/119/158/238/317*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_150NFB;TA-Modulator 150 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;150 (6");>150;0.0001;0.0298;EqualPc;PushToClose;10.2088;10.21 (0.01);26742.5;-10/120;150 (6");106.055;1.45299;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;89.4*/119/179/238/358/477;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200NFB;TA-Modulator 200 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;200 (8");>125;0.0001;0.0325;EqualPc;PushToClose;10.0724;10 (0.5);29015;-10/120;200 (8");61.8105;1.31817;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.5*/130/195/260/390/520;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200HFA;TA-Modulator 200 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;200 (8");>125;0.0001;0.0324;Linear;PushToClose;9.30378;9.5 (0.5);57000;-10/120;250 (10");49.3182;1.35193;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.2*/130/194/259/389/518;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 3
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_STD
+ComboFamilyBelow65ID = FAM_COMPACT_P
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADM
+ComboVersionBelow65ID = VERS_STD
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = PICVTYPE_STD
+ComboFamilyAbove50ID = FAM_FUSION_P
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_FLANGE
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;COMPACT_P_10A;TA-Compact-P 10;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;10 (3/8");>50;0.0001;0.004;Linear;PushToClose;7.12333;7 (0.25);13550;-10/90;10 (3/8");73.8602;0.226354;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;COMPACT_P_15LFA;TA-Compact-P 15LF;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;15 (1/2");>50;0.0001;0.004;Linear;PushToClose;7.4908;7.5 (0.25);13931.6;-10/90;15 (1/2");77.2178;0.276311;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;COMPACT_P_15A;TA-Compact-P 15;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;15 (1/2");>50;0.0001;0.004;Linear;PushToClose;5.10861;5 (0.25);14119;-10/90;15 (1/2");163.796;0.414466;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 3;0.00013888888885; ; ;FindOneSolution;COMPACT_P_20A;TA-Compact-P 20;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;20 (3/4");>50;0.0001;0.004;Linear;PushToClose;3.3381;3.25 (0.25);13380.9;-10/90;20 (3/4");94.3163;0.379027;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 4;0.00022222222216; ; ;FindOneSolution;COMPACT_P_20A;TA-Compact-P 20;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;20 (3/4");>50;0.0001;0.004;Linear;PushToClose;6.18614;6.25 (0.25);14554.1;-10/90;25 (1");71.5077;0.382437;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 5;0.00036111111101; ; ;FindOneSolution;COMPACT_P_25A;TA-Compact-P 25;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;25 (1");>50;0.0001;0.004;Linear;PushToClose;5.13673;5.25 (0.25);18136.7;-10/90;25 (1");178.468;0.62146;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ;FindOneSolution;COMPACT_P_25A;TA-Compact-P 25;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;25 (1");>50;0.0001;0.004;Linear;PushToClose;9.40371;9.5 (0.25);22403.7;-10/90;32 (1 1/4");108.968;0.576286;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 7;0.00094444444418; ; ;FindOneSolution;COMPACT_P_32A;TA-Compact-P 32;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;32 (1 1/4");>50;0.0001;0.004;Linear;PushToClose;8.22172;8.25 (0.25);22110.9;-10/90;40 (1 1/2");126.187;0.688231;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 8;0.00152777777735; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_40A;TA-Modulator 40;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;40 (1 1/2");>125;0.0001;0.015;EqualPc;PushToClose;1.84698;1.85 (0.05);23830.5;-10/90;50 (2");94.9446;0.692498;SLIDER500-STD1M;TA-Slider 500 (1m);400000;-;150/300*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_50A;TA-Modulator 50;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;50 (2");>125;0.0001;0.015;EqualPc;PushToClose;1.71076;1.7 (0.05);24084.1;-10/90;65 (2 1/2");63.5773;0.664999;SLIDER500-STD1M;TA-Slider 500 (1m);400000;-;150/300*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.08752;4.09 (0.01);24792.5;-10/120;65 (2 1/2");160.155;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.91904;4.92* (0.01);27731.5;-10/120;80 (3");178.93;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_80HFA;TA-Modulator 80 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;80 (3");>125;0.0001;0.02;Linear;PushToClose;4.04136;4.04 (0.01);33872;-10/120;100 (4");119.397;1.2094;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_125NFB;TA-Modulator 125 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;125 (5");>150;0.0001;0.0198;EqualPc;PushToClose;4.34099;4.34 (0.01);25940.7;-10/120;125 (5");102.146;1.27659;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;59.4/79.2/119/158/238/317*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_150NFB;TA-Modulator 150 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;150 (6");>150;0.0001;0.0298;EqualPc;PushToClose;10.2088;10.21 (0.01);26742.5;-10/120;150 (6");106.055;1.45299;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;89.4*/119/179/238/358/477;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200NFB;TA-Modulator 200 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;200 (8");>125;0.0001;0.0325;EqualPc;PushToClose;10.0724;10 (0.5);29015;-10/120;200 (8");61.8105;1.31817;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.5*/130/195/260/390/520;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200HFA;TA-Modulator 200 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;200 (8");>125;0.0001;0.0324;Linear;PushToClose;9.30378;9.5 (0.5);57000;-10/120;250 (10");49.3182;1.35193;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.2*/130/194/259/389/518;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 4
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_STD
+ComboFamilyBelow65ID = FAM_MODULATOR_P
+ComboMaterialBelow65ID = BDY_AMETAL
+ComboConnectBelow65ID = CONN_THREADM
+ComboVersionBelow65ID = VERS_STD
+ComboPNBelow65ID = PN_3
+ComboTypeAbove50ID = PICVTYPE_STD
+ComboFamilyAbove50ID = FAM_FUSION_P
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_FLANGE
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;TA_MODULATOR_15A;TA-Modulator 15;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;15 (1/2");>75;0.0001;0.00402;EqualPc;PushToClose;1.1759;1 (0.5);13701.2;-10/90;10 (3/8");73.8602;0.226354;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40.2;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;TA_MODULATOR_15A;TA-Modulator 15;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;15 (1/2");>75;0.0001;0.00402;EqualPc;PushToClose;4.77983;5 (0.5);14063.6;-10/90;15 (1/2");77.2178;0.276311;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40.2;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;TA_MODULATOR_15A;TA-Modulator 15;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;15 (1/2");>75;0.0001;0.00402;EqualPc;PushToClose;6.59339;6.5 (0.5);14480.3;-10/90;15 (1/2");163.796;0.414466;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40.2;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 3;0.00013888888885; ; ;FindOneSolution;TA_MODULATOR_20A;TA-Modulator 20;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;20 (3/4");>75;0.0001;0.00404;EqualPc;PushToClose;4.38442;4.5 (0.5);13944.9;-10/90;20 (3/4");94.3163;0.379027;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40.4;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 4;0.00022222222216; ; ;FindOneSolution;TA_MODULATOR_20A;TA-Modulator 20;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;20 (3/4");>75;0.0001;0.00404;EqualPc;PushToClose;7.35151;7.5 (0.5);14644.5;-10/90;25 (1");71.5077;0.382437;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;40.4;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 5;0.00036111111101; ; ;FindOneSolution;TA_MODULATOR_25A;TA-Modulator 25;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;25 (1");>75;0.0001;0.00651;EqualPc;PushToClose;6.66667;6.5 (0.5);18588.5;-10/90;25 (1");178.468;0.62146;SLIDER160-STD1M;TA-Slider 160 (1m);400000;-;65.1;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ;FindOneSolution;TA_MODULATOR_32A;TA-Modulator 32;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;32 (1 1/4");>75;0.0001;0.00656;EqualPc;PushToClose;4.87257;5 (0.5);19535.2;-20/120;32 (1 1/4");108.968;0.576286;SLIDER160-STD1M;TA-Slider 160 (1m);600000;-;65.6;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 7;0.00094444444418; ; ;FindOneSolution;TA_MODULATOR_32A;TA-Modulator 32;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;32 (1 1/4");>75;0.0001;0.00656;EqualPc;PushToClose;9.08557;9 (0.5);22357.8;-20/120;40 (1 1/2");126.187;0.688231;SLIDER160-STD1M;TA-Slider 160 (1m);600000;-;65.6;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 8;0.00152777777735; ; ;FindOneSolution;TA_MODULATOR_40A;TA-Modulator 40;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;40 (1 1/2");>125;0.0001;0.015;EqualPc;PushToClose;1.84698;1.85 (0.05);23830.5;-10/90;50 (2");94.9446;0.692498;SLIDER500-STD1M;TA-Slider 500 (1m);400000;-;150/300*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolution;TA_MODULATOR_50A;TA-Modulator 50;-1;PIBCV-Std HVAC;Ametal(tm);Thread male;Standard;16;50 (2");>125;0.0001;0.015;EqualPc;PushToClose;1.71076;1.7 (0.05);24084.1;-10/90;65 (2 1/2");63.5773;0.664999;SLIDER500-STD1M;TA-Slider 500 (1m);400000;-;150/300*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.08752;4.09 (0.01);24792.5;-10/120;65 (2 1/2");160.155;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.91904;4.92* (0.01);27731.5;-10/120;80 (3");178.93;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_80HFA;TA-Modulator 80 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;80 (3");>125;0.0001;0.02;Linear;PushToClose;4.04136;4.04 (0.01);33872;-10/120;100 (4");119.397;1.2094;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_125NFB;TA-Modulator 125 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;125 (5");>150;0.0001;0.0198;EqualPc;PushToClose;4.34099;4.34 (0.01);25940.7;-10/120;125 (5");102.146;1.27659;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;59.4/79.2/119/158/238/317*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_150NFB;TA-Modulator 150 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;150 (6");>150;0.0001;0.0298;EqualPc;PushToClose;10.2088;10.21 (0.01);26742.5;-10/120;150 (6");106.055;1.45299;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;89.4*/119/179/238/358/477;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200NFB;TA-Modulator 200 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;200 (8");>125;0.0001;0.0325;EqualPc;PushToClose;10.0724;10 (0.5);29015;-10/120;200 (8");61.8105;1.31817;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.5*/130/195/260/390/520;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200HFA;TA-Modulator 200 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;200 (8");>125;0.0001;0.0324;Linear;PushToClose;9.30378;9.5 (0.5);57000;-10/120;250 (10");49.3182;1.35193;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.2*/130/194/259/389/518;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 5
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_HIDP
+ComboFamilyBelow65ID = FAM_KTCM512
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_THREAD
+ComboVersionBelow65ID = VERS_PT90
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = PICVTYPE_STD
+ComboFamilyAbove50ID = FAM_FUSION_P
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_FLANGE
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolutionWithAlternative;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.341367;0.35 (0.05);12186.5;-10/120;10 (3/8");73.8602;0.226354;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 1;5.555555554e-05; ; ;FindOneSolutionWithAlternative;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.690239;0.7 (0.05);12784.7;-10/120;15 (1/2");77.2178;0.276311;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 2;8.333333331e-05; ; ;FindOneSolutionWithAlternative;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;1.02181;1 (0.05);13659.6;-10/120;15 (1/2");163.796;0.414466;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 3;0.00013888888885; ; ;FindOneSolutionWithAlternative;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;2.08847;2.1 (0.05);16593.6;-10/120;20 (3/4");94.3163;0.379027;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 4;0.00022222222216; ; ;FindOneSolutionWithAlternative;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;5.0005;5* (0.05);24200;-10/120;25 (1");71.5077;0.382437;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 5;0.00036111111101; ; ;FindOneSolutionWithAlternative;KTM512_25GTCTC;KTM 512 DN25/32 LF;-1;PIBCV-High Dp;Ductile iron;Thread;Without meas. point;25;25 (1");-;0;0.01;EqualPc;PushToClose;2.2389;2.25 (0.05);14082.1;-10/150;25 (1");178.468;0.62146;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ;FindOneSolutionWithAlternative;KTM512_25ATCTC;KTM 512 DN25/32 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;3.13926;3.15 (0.05);17509.5;-10/120;32 (1 1/4");108.968;0.576286;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 7;0.00094444444418; ; ;FindOneSolutionWithAlternative;KTM512_40GTETE;KTM 512 DN40/50 LF;-1;PIBCV-High Dp;Ductile iron;Thread;Without meas. point;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;4.92221;4.9 (0.05);14401.8;-10/150;40 (1 1/2");126.187;0.688231;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 8;0.00152777777735; ; ;FindOneSolutionWithAlternative;KTM512_40ATETE;KTM 512 DN40/50 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;6.07873;6.1 (0.05);18450;-10/120;50 (2");94.9446;0.692498;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolutionWithAlternative;KTM512_40HTETE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Thread;Without meas. point;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;7.74669;7.75 (0.05);37375.5;-10/150;65 (2 1/2");63.5773;0.664999;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.08752;4.09 (0.01);24792.5;-10/120;65 (2 1/2");160.155;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.91904;4.92* (0.01);27731.5;-10/120;80 (3");178.93;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_80HFA;TA-Modulator 80 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;80 (3");>125;0.0001;0.02;Linear;PushToClose;4.04136;4.04 (0.01);33872;-10/120;100 (4");119.397;1.2094;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_125NFB;TA-Modulator 125 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;125 (5");>150;0.0001;0.0198;EqualPc;PushToClose;4.34099;4.34 (0.01);25940.7;-10/120;125 (5");102.146;1.27659;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;59.4/79.2/119/158/238/317*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_150NFB;TA-Modulator 150 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;150 (6");>150;0.0001;0.0298;EqualPc;PushToClose;10.2088;10.21 (0.01);26742.5;-10/120;150 (6");106.055;1.45299;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;89.4*/119/179/238/358/477;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200NFB;TA-Modulator 200 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;200 (8");>125;0.0001;0.0325;EqualPc;PushToClose;10.0724;10 (0.5);29015;-10/120;200 (8");61.8105;1.31817;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.5*/130/195/260/390/520;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200HFA;TA-Modulator 200 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;200 (8");>125;0.0001;0.0324;Linear;PushToClose;9.30378;9.5 (0.5);57000;-10/120;250 (10");49.3182;1.35193;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.2*/130/194/259/389/518;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 6
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_HIDP
+ComboFamilyBelow65ID = FAM_KTCM512
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_THREADM
+ComboVersionBelow65ID = VERS_PT90
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = PICVTYPE_STD
+ComboFamilyAbove50ID = FAM_FUSION_P
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_FLANGE
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolutionWithAlternative;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.341367;0.35 (0.05);12186.5;-10/120;10 (3/8");73.8602;0.226354;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 1;5.555555554e-05; ; ;FindOneSolutionWithAlternative;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.690239;0.7 (0.05);12784.7;-10/120;15 (1/2");77.2178;0.276311;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 2;8.333333331e-05; ; ;FindOneSolutionWithAlternative;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;1.02181;1 (0.05);13659.6;-10/120;15 (1/2");163.796;0.414466;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 3;0.00013888888885; ; ;FindOneSolutionWithAlternative;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;2.08847;2.1 (0.05);16593.6;-10/120;20 (3/4");94.3163;0.379027;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 4;0.00022222222216; ; ;FindOneSolutionWithAlternative;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;5.0005;5* (0.05);24200;-10/120;25 (1");71.5077;0.382437;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 5;0.00036111111101; ; ;FindOneSolutionWithAlternative;KTM512_25GTCTC;KTM 512 DN25/32 LF;-1;PIBCV-High Dp;Ductile iron;Thread;Without meas. point;25;25 (1");-;0;0.01;EqualPc;PushToClose;2.2389;2.25 (0.05);14082.1;-10/150;25 (1");178.468;0.62146;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ;FindOneSolutionWithAlternative;KTM512_25ATCTC;KTM 512 DN25/32 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;3.13926;3.15 (0.05);17509.5;-10/120;32 (1 1/4");108.968;0.576286;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 7;0.00094444444418; ; ;FindOneSolutionWithAlternative;KTM512_40GTETE;KTM 512 DN40/50 LF;-1;PIBCV-High Dp;Ductile iron;Thread;Without meas. point;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;4.92221;4.9 (0.05);14401.8;-10/150;40 (1 1/2");126.187;0.688231;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 8;0.00152777777735; ; ;FindOneSolutionWithAlternative;KTM512_40ATETE;KTM 512 DN40/50 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;6.07873;6.1 (0.05);18450;-10/120;50 (2");94.9446;0.692498;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolutionWithAlternative;KTM512_40HTETE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Thread;Without meas. point;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;7.74669;7.75 (0.05);37375.5;-10/150;65 (2 1/2");63.5773;0.664999;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.08752;4.09 (0.01);24792.5;-10/120;65 (2 1/2");160.155;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.91904;4.92* (0.01);27731.5;-10/120;80 (3");178.93;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_80HFA;TA-Modulator 80 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;80 (3");>125;0.0001;0.02;Linear;PushToClose;4.04136;4.04 (0.01);33872;-10/120;100 (4");119.397;1.2094;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_125NFB;TA-Modulator 125 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;125 (5");>150;0.0001;0.0198;EqualPc;PushToClose;4.34099;4.34 (0.01);25940.7;-10/120;125 (5");102.146;1.27659;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;59.4/79.2/119/158/238/317*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_150NFB;TA-Modulator 150 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;150 (6");>150;0.0001;0.0298;EqualPc;PushToClose;10.2088;10.21 (0.01);26742.5;-10/120;150 (6");106.055;1.45299;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;89.4*/119/179/238/358/477;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200NFB;TA-Modulator 200 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;200 (8");>125;0.0001;0.0325;EqualPc;PushToClose;10.0724;10 (0.5);29015;-10/120;200 (8");61.8105;1.31817;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.5*/130/195/260/390/520;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200HFA;TA-Modulator 200 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;200 (8");>125;0.0001;0.0324;Linear;PushToClose;9.30378;9.5 (0.5);57000;-10/120;250 (10");49.3182;1.35193;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.2*/130/194/259/389/518;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 7
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_HIDP
+ComboFamilyBelow65ID = FAM_KTCM512
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_WELDING
+ComboVersionBelow65ID = VERS_PT90
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = PICVTYPE_STD
+ComboFamilyAbove50ID = FAM_FUSION_P
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_FLANGE
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolutionWithAlternative;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.341367;0.35 (0.05);12186.5;-10/120;10 (3/8");73.8602;0.226354;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 1;5.555555554e-05; ; ;FindOneSolutionWithAlternative;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.690239;0.7 (0.05);12784.7;-10/120;15 (1/2");77.2178;0.276311;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 2;8.333333331e-05; ; ;FindOneSolutionWithAlternative;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;1.02181;1 (0.05);13659.6;-10/120;15 (1/2");163.796;0.414466;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 3;0.00013888888885; ; ;FindOneSolutionWithAlternative;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;2.08847;2.1 (0.05);16593.6;-10/120;20 (3/4");94.3163;0.379027;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 4;0.00022222222216; ; ;FindOneSolutionWithAlternative;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;5.0005;5* (0.05);24200;-10/120;25 (1");71.5077;0.382437;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 5;0.00036111111101; ; ;FindOneSolutionWithAlternative;KTM512_25GTCTC;KTM 512 DN25/32 LF;-1;PIBCV-High Dp;Ductile iron;Thread;Without meas. point;25;25 (1");-;0;0.01;EqualPc;PushToClose;2.2389;2.25 (0.05);14082.1;-10/150;25 (1");178.468;0.62146;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ;FindOneSolutionWithAlternative;KTM512_25ATCTC;KTM 512 DN25/32 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;3.13926;3.15 (0.05);17509.5;-10/120;32 (1 1/4");108.968;0.576286;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 7;0.00094444444418; ; ;FindOneSolutionWithAlternative;KTM512_40GTETE;KTM 512 DN40/50 LF;-1;PIBCV-High Dp;Ductile iron;Thread;Without meas. point;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;4.92221;4.9 (0.05);14401.8;-10/150;40 (1 1/2");126.187;0.688231;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 8;0.00152777777735; ; ;FindOneSolutionWithAlternative;KTM512_40ATETE;KTM 512 DN40/50 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;6.07873;6.1 (0.05);18450;-10/120;50 (2");94.9446;0.692498;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolutionWithAlternative;KTM512_40HTETE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Thread;Without meas. point;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;7.74669;7.75 (0.05);37375.5;-10/150;65 (2 1/2");63.5773;0.664999;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.08752;4.09 (0.01);24792.5;-10/120;65 (2 1/2");160.155;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.91904;4.92* (0.01);27731.5;-10/120;80 (3");178.93;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_80HFA;TA-Modulator 80 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;80 (3");>125;0.0001;0.02;Linear;PushToClose;4.04136;4.04 (0.01);33872;-10/120;100 (4");119.397;1.2094;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_125NFB;TA-Modulator 125 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;125 (5");>150;0.0001;0.0198;EqualPc;PushToClose;4.34099;4.34 (0.01);25940.7;-10/120;125 (5");102.146;1.27659;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;59.4/79.2/119/158/238/317*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_150NFB;TA-Modulator 150 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;150 (6");>150;0.0001;0.0298;EqualPc;PushToClose;10.2088;10.21 (0.01);26742.5;-10/120;150 (6");106.055;1.45299;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;89.4*/119/179/238/358/477;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200NFB;TA-Modulator 200 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;200 (8");>125;0.0001;0.0325;EqualPc;PushToClose;10.0724;10 (0.5);29015;-10/120;200 (8");61.8105;1.31817;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.5*/130/195/260/390/520;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200HFA;TA-Modulator 200 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;200 (8");>125;0.0001;0.0324;Linear;PushToClose;9.30378;9.5 (0.5);57000;-10/120;250 (10");49.3182;1.35193;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.2*/130/194/259/389/518;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 8
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_HIDP
+ComboFamilyBelow65ID = FAM_KTM512
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_THREAD
+ComboVersionBelow65ID = VERS_PT90
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = PICVTYPE_STD
+ComboFamilyAbove50ID = FAM_FUSION_P
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_FLANGE
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.341367;0.35 (0.05);12186.5;-10/120;10 (3/8");73.8602;0.226354;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.690239;0.7 (0.05);12784.7;-10/120;15 (1/2");77.2178;0.276311;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;1.02181;1 (0.05);13659.6;-10/120;15 (1/2");163.796;0.414466;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 3;0.00013888888885; ; ;FindOneSolution;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;2.08847;2.1 (0.05);16593.6;-10/120;20 (3/4");94.3163;0.379027;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 4;0.00022222222216; ; ;FindOneSolution;KTM512_15ATATA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;5.0005;5* (0.05);24200;-10/120;25 (1");71.5077;0.382437;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 5;0.00036111111101; ; ;FindOneSolution;KTM512_25CTCTC;KTM 512 DN25/32 NF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;1.74879;1.75 (0.05);22321.1;-10/120;25 (1");178.468;0.62146;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ;FindOneSolution;KTM512_25ATCTC;KTM 512 DN25/32 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;3.13926;3.15 (0.05);17509.5;-10/120;32 (1 1/4");108.968;0.576286;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 7;0.00094444444418; ; ;FindOneSolution;KTM512_40CTETE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;4.6654;4.65 (0.05);22500.2;-10/120;40 (1 1/2");126.187;0.688231;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 8;0.00152777777735; ; ;FindOneSolution;KTM512_40ATETE;KTM 512 DN40/50 LF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;6.07873;6.1 (0.05);18450;-10/120;50 (2");94.9446;0.692498;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolution;KTM512_40CTETE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Thread;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;7.74669;7.75 (0.05);37375.5;-10/120;65 (2 1/2");63.5773;0.664999;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.08752;4.09 (0.01);24792.5;-10/120;65 (2 1/2");160.155;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.91904;4.92* (0.01);27731.5;-10/120;80 (3");178.93;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_80HFA;TA-Modulator 80 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;80 (3");>125;0.0001;0.02;Linear;PushToClose;4.04136;4.04 (0.01);33872;-10/120;100 (4");119.397;1.2094;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_125NFB;TA-Modulator 125 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;125 (5");>150;0.0001;0.0198;EqualPc;PushToClose;4.34099;4.34 (0.01);25940.7;-10/120;125 (5");102.146;1.27659;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;59.4/79.2/119/158/238/317*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_150NFB;TA-Modulator 150 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;150 (6");>150;0.0001;0.0298;EqualPc;PushToClose;10.2088;10.21 (0.01);26742.5;-10/120;150 (6");106.055;1.45299;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;89.4*/119/179/238/358/477;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200NFB;TA-Modulator 200 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;200 (8");>125;0.0001;0.0325;EqualPc;PushToClose;10.0724;10 (0.5);29015;-10/120;200 (8");61.8105;1.31817;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.5*/130/195/260/390/520;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200HFA;TA-Modulator 200 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;200 (8");>125;0.0001;0.0324;Linear;PushToClose;9.30378;9.5 (0.5);57000;-10/120;250 (10");49.3182;1.35193;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.2*/130/194/259/389/518;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 9
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_HIDP
+ComboFamilyBelow65ID = FAM_KTM512
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_THREADM
+ComboVersionBelow65ID = VERS_PT90
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = PICVTYPE_STD
+ComboFamilyAbove50ID = FAM_FUSION_P
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_FLANGE
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;KTM512_15AMAMA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread male;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.341367;0.35 (0.05);12186.5;-10/120;10 (3/8");73.8602;0.226354;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;KTM512_15AMAMA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread male;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.690239;0.7 (0.05);12784.7;-10/120;15 (1/2");77.2178;0.276311;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;KTM512_15AMAMA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread male;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;1.02181;1 (0.05);13659.6;-10/120;15 (1/2");163.796;0.414466;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 3;0.00013888888885; ; ;FindOneSolution;KTM512_15AMAMA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread male;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;2.08847;2.1 (0.05);16593.6;-10/120;20 (3/4");94.3163;0.379027;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 4;0.00022222222216; ; ;FindOneSolution;KTM512_15AMAMA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Thread male;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;5.0005;5* (0.05);24200;-10/120;25 (1");71.5077;0.382437;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 5;0.00036111111101; ; ;FindOneSolution;KTM512_25CMCMC;KTM 512 DN25/32 NF;-1;PIBCV-High Dp;Ductile iron;Thread male;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;1.74879;1.75 (0.05);22321.1;-10/120;25 (1");178.468;0.62146;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ;FindOneSolution;KTM512_25AMCMC;KTM 512 DN25/32 LF;-1;PIBCV-High Dp;Ductile iron;Thread male;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;3.13926;3.15 (0.05);17509.5;-10/120;32 (1 1/4");108.968;0.576286;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 7;0.00094444444418; ; ;FindOneSolution;KTM512_40CMEME;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Thread male;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;4.6654;4.65 (0.05);22500.2;-10/120;40 (1 1/2");126.187;0.688231;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 8;0.00152777777735; ; ;FindOneSolution;KTM512_40AMEME;KTM 512 DN40/50 LF;-1;PIBCV-High Dp;Ductile iron;Thread male;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;6.07873;6.1 (0.05);18450;-10/120;50 (2");94.9446;0.692498;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolution;KTM512_40CMEME;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Thread male;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;7.74669;7.75 (0.05);37375.5;-10/120;65 (2 1/2");63.5773;0.664999;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.08752;4.09 (0.01);24792.5;-10/120;65 (2 1/2");160.155;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.91904;4.92* (0.01);27731.5;-10/120;80 (3");178.93;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_80HFA;TA-Modulator 80 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;80 (3");>125;0.0001;0.02;Linear;PushToClose;4.04136;4.04 (0.01);33872;-10/120;100 (4");119.397;1.2094;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_125NFB;TA-Modulator 125 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;125 (5");>150;0.0001;0.0198;EqualPc;PushToClose;4.34099;4.34 (0.01);25940.7;-10/120;125 (5");102.146;1.27659;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;59.4/79.2/119/158/238/317*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_150NFB;TA-Modulator 150 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;150 (6");>150;0.0001;0.0298;EqualPc;PushToClose;10.2088;10.21 (0.01);26742.5;-10/120;150 (6");106.055;1.45299;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;89.4*/119/179/238/358/477;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200NFB;TA-Modulator 200 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;200 (8");>125;0.0001;0.0325;EqualPc;PushToClose;10.0724;10 (0.5);29015;-10/120;200 (8");61.8105;1.31817;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.5*/130/195/260/390/520;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200HFA;TA-Modulator 200 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;200 (8");>125;0.0001;0.0324;Linear;PushToClose;9.30378;9.5 (0.5);57000;-10/120;250 (10");49.3182;1.35193;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.2*/130/194/259/389/518;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 10
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_HIDP
+ComboFamilyBelow65ID = FAM_KTM512
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_FLANGE
+ComboVersionBelow65ID = VERS_PT90
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = PICVTYPE_STD
+ComboFamilyAbove50ID = FAM_FUSION_P
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_FLANGE
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;KTM512_15AIAIA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Flange;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.341367;0.35 (0.05);12186.5;-10/120;10 (3/8");73.8602;0.226354;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;KTM512_15AIAIA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Flange;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.690239;0.7 (0.05);12784.7;-10/120;15 (1/2");77.2178;0.276311;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;KTM512_15AIAIA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Flange;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;1.02181;1 (0.05);13659.6;-10/120;15 (1/2");163.796;0.414466;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 3;0.00013888888885; ; ;FindOneSolution;KTM512_15AIAIA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Flange;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;2.08847;2.1 (0.05);16593.6;-10/120;20 (3/4");94.3163;0.379027;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 4;0.00022222222216; ; ;FindOneSolution;KTM512_15AIAIA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Flange;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;5.0005;5* (0.05);24200;-10/120;25 (1");71.5077;0.382437;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 5;0.00036111111101; ; ;FindOneSolution;KTM512_25CICIC;KTM 512 DN25/32 NF;-1;PIBCV-High Dp;Ductile iron;Flange;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;1.74879;1.75 (0.05);22321.1;-10/120;25 (1");178.468;0.62146;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ;FindOneSolution;KTM512_25AICIC;KTM 512 DN25/32 LF;-1;PIBCV-High Dp;Ductile iron;Flange;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;3.13926;3.15 (0.05);17509.5;-10/120;32 (1 1/4");108.968;0.576286;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 7;0.00094444444418; ; ;FindOneSolution;KTM512_40CIEIE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Flange;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;4.6654;4.65 (0.05);22500.2;-10/120;40 (1 1/2");126.187;0.688231;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 8;0.00152777777735; ; ;FindOneSolution;KTM512_40AIEIE;KTM 512 DN40/50 LF;-1;PIBCV-High Dp;Ductile iron;Flange;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;6.07873;6.1 (0.05);18450;-10/120;50 (2");94.9446;0.692498;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolution;KTM512_40CIEIE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Flange;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;7.74669;7.75 (0.05);37375.5;-10/120;65 (2 1/2");63.5773;0.664999;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.08752;4.09 (0.01);24792.5;-10/120;65 (2 1/2");160.155;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.91904;4.92* (0.01);27731.5;-10/120;80 (3");178.93;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_80HFA;TA-Modulator 80 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;80 (3");>125;0.0001;0.02;Linear;PushToClose;4.04136;4.04 (0.01);33872;-10/120;100 (4");119.397;1.2094;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_125NFB;TA-Modulator 125 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;125 (5");>150;0.0001;0.0198;EqualPc;PushToClose;4.34099;4.34 (0.01);25940.7;-10/120;125 (5");102.146;1.27659;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;59.4/79.2/119/158/238/317*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_150NFB;TA-Modulator 150 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;150 (6");>150;0.0001;0.0298;EqualPc;PushToClose;10.2088;10.21 (0.01);26742.5;-10/120;150 (6");106.055;1.45299;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;89.4*/119/179/238/358/477;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200NFB;TA-Modulator 200 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;200 (8");>125;0.0001;0.0325;EqualPc;PushToClose;10.0724;10 (0.5);29015;-10/120;200 (8");61.8105;1.31817;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.5*/130/195/260/390/520;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200HFA;TA-Modulator 200 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;200 (8");>125;0.0001;0.0324;Linear;PushToClose;9.30378;9.5 (0.5);57000;-10/120;250 (10");49.3182;1.35193;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.2*/130/194/259/389/518;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 11
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_HIDP
+ComboFamilyBelow65ID = FAM_KTM512
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_ANSIFL
+ComboVersionBelow65ID = VERS_PT90
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = PICVTYPE_STD
+ComboFamilyAbove50ID = FAM_FUSION_P
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_FLANGE
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;KTM512_15AAIAAIA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;ANSI Flange;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.341367;0.35 (0.05);12186.5;-10/120;10 (3/8");73.8602;0.226354;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;KTM512_15AAIAAIA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;ANSI Flange;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.690239;0.7 (0.05);12784.7;-10/120;15 (1/2");77.2178;0.276311;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;KTM512_15AAIAAIA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;ANSI Flange;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;1.02181;1 (0.05);13659.6;-10/120;15 (1/2");163.796;0.414466;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 3;0.00013888888885; ; ;FindOneSolution;KTM512_15AAIAAIA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;ANSI Flange;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;2.08847;2.1 (0.05);16593.6;-10/120;20 (3/4");94.3163;0.379027;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 4;0.00022222222216; ; ;FindOneSolution;KTM512_15AAIAAIA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;ANSI Flange;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;5.0005;5* (0.05);24200;-10/120;25 (1");71.5077;0.382437;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 5;0.00036111111101; ; ;FindOneSolution;KTM512_25CAICAIC;KTM 512 DN25/32 NF;-1;PIBCV-High Dp;Ductile iron;ANSI Flange;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;1.74879;1.75 (0.05);22321.1;-10/120;25 (1");178.468;0.62146;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ;FindOneSolution;KTM512_25AAICAIC;KTM 512 DN25/32 LF;-1;PIBCV-High Dp;Ductile iron;ANSI Flange;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;3.13926;3.15 (0.05);17509.5;-10/120;32 (1 1/4");108.968;0.576286;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 7;0.00094444444418; ; ;FindOneSolution;KTM512_40CAIEAIE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;ANSI Flange;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;4.6654;4.65 (0.05);22500.2;-10/120;40 (1 1/2");126.187;0.688231;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 8;0.00152777777735; ; ;FindOneSolution;KTM512_40AAIEAIE;KTM 512 DN40/50 LF;-1;PIBCV-High Dp;Ductile iron;ANSI Flange;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;6.07873;6.1 (0.05);18450;-10/120;50 (2");94.9446;0.692498;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolution;KTM512_40CAIEAIE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;ANSI Flange;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;7.74669;7.75 (0.05);37375.5;-10/120;65 (2 1/2");63.5773;0.664999;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.08752;4.09 (0.01);24792.5;-10/120;65 (2 1/2");160.155;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.91904;4.92* (0.01);27731.5;-10/120;80 (3");178.93;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_80HFA;TA-Modulator 80 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;80 (3");>125;0.0001;0.02;Linear;PushToClose;4.04136;4.04 (0.01);33872;-10/120;100 (4");119.397;1.2094;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_125NFB;TA-Modulator 125 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;125 (5");>150;0.0001;0.0198;EqualPc;PushToClose;4.34099;4.34 (0.01);25940.7;-10/120;125 (5");102.146;1.27659;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;59.4/79.2/119/158/238/317*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_150NFB;TA-Modulator 150 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;150 (6");>150;0.0001;0.0298;EqualPc;PushToClose;10.2088;10.21 (0.01);26742.5;-10/120;150 (6");106.055;1.45299;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;89.4*/119/179/238/358/477;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200NFB;TA-Modulator 200 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;200 (8");>125;0.0001;0.0325;EqualPc;PushToClose;10.0724;10 (0.5);29015;-10/120;200 (8");61.8105;1.31817;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.5*/130/195/260/390/520;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200HFA;TA-Modulator 200 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;200 (8");>125;0.0001;0.0324;Linear;PushToClose;9.30378;9.5 (0.5);57000;-10/120;250 (10");49.3182;1.35193;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.2*/130/194/259/389/518;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 12
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_HIDP
+ComboFamilyBelow65ID = FAM_KTM512
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_WELDING
+ComboVersionBelow65ID = VERS_PT90
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = PICVTYPE_STD
+ComboFamilyAbove50ID = FAM_FUSION_P
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_FLANGE
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.341367;0.35 (0.05);12186.5;-10/120;10 (3/8");73.8602;0.226354;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.690239;0.7 (0.05);12784.7;-10/120;15 (1/2");77.2178;0.276311;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;1.02181;1 (0.05);13659.6;-10/120;15 (1/2");163.796;0.414466;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 3;0.00013888888885; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;2.08847;2.1 (0.05);16593.6;-10/120;20 (3/4");94.3163;0.379027;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 4;0.00022222222216; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;5.0005;5* (0.05);24200;-10/120;25 (1");71.5077;0.382437;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 5;0.00036111111101; ; ;FindOneSolution;KTM512_25CWCWC;KTM 512 DN25/32 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;1.74879;1.75 (0.05);22321.1;-10/120;25 (1");178.468;0.62146;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ;FindOneSolution;KTM512_25AWCWC;KTM 512 DN25/32 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;3.13926;3.15 (0.05);17509.5;-10/120;32 (1 1/4");108.968;0.576286;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 7;0.00094444444418; ; ;FindOneSolution;KTM512_40CWEWE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;4.6654;4.65 (0.05);22500.2;-10/120;40 (1 1/2");126.187;0.688231;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 8;0.00152777777735; ; ;FindOneSolution;KTM512_40AWEWE;KTM 512 DN40/50 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;6.07873;6.1 (0.05);18450;-10/120;50 (2");94.9446;0.692498;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolution;KTM512_40CWEWE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;7.74669;7.75 (0.05);37375.5;-10/120;65 (2 1/2");63.5773;0.664999;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.08752;4.09 (0.01);24792.5;-10/120;65 (2 1/2");160.155;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.91904;4.92* (0.01);27731.5;-10/120;80 (3");178.93;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_80HFA;TA-Modulator 80 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;80 (3");>125;0.0001;0.02;Linear;PushToClose;4.04136;4.04 (0.01);33872;-10/120;100 (4");119.397;1.2094;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_125NFB;TA-Modulator 125 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;125 (5");>150;0.0001;0.0198;EqualPc;PushToClose;4.34099;4.34 (0.01);25940.7;-10/120;125 (5");102.146;1.27659;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;59.4/79.2/119/158/238/317*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_150NFB;TA-Modulator 150 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;150 (6");>150;0.0001;0.0298;EqualPc;PushToClose;10.2088;10.21 (0.01);26742.5;-10/120;150 (6");106.055;1.45299;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;89.4*/119/179/238/358/477;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200NFB;TA-Modulator 200 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;200 (8");>125;0.0001;0.0325;EqualPc;PushToClose;10.0724;10 (0.5);29015;-10/120;200 (8");61.8105;1.31817;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.5*/130/195/260/390/520;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200HFA;TA-Modulator 200 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;200 (8");>125;0.0001;0.0324;Linear;PushToClose;9.30378;9.5 (0.5);57000;-10/120;250 (10");49.3182;1.35193;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.2*/130/194/259/389/518;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 13
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_HIDP
+ComboFamilyBelow65ID = FAM_KTM512
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_WELDING
+ComboVersionBelow65ID = VERS_PT90
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = PICVTYPE_STD
+ComboFamilyAbove50ID = FAM_FUSION_P
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_FLANGE
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_5
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.341367;0.35 (0.05);12186.5;-10/120;10 (3/8");73.8602;0.226354;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.690239;0.7 (0.05);12784.7;-10/120;15 (1/2");77.2178;0.276311;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;1.02181;1 (0.05);13659.6;-10/120;15 (1/2");163.796;0.414466;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 3;0.00013888888885; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;2.08847;2.1 (0.05);16593.6;-10/120;20 (3/4");94.3163;0.379027;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 4;0.00022222222216; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;5.0005;5* (0.05);24200;-10/120;25 (1");71.5077;0.382437;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 5;0.00036111111101; ; ;FindOneSolution;KTM512_25CWCWC;KTM 512 DN25/32 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;1.74879;1.75 (0.05);22321.1;-10/120;25 (1");178.468;0.62146;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ;FindOneSolution;KTM512_25AWCWC;KTM 512 DN25/32 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;3.13926;3.15 (0.05);17509.5;-10/120;32 (1 1/4");108.968;0.576286;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 7;0.00094444444418; ; ;FindOneSolution;KTM512_40CWEWE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;4.6654;4.65 (0.05);22500.2;-10/120;40 (1 1/2");126.187;0.688231;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 8;0.00152777777735; ; ;FindOneSolution;KTM512_40AWEWE;KTM 512 DN40/50 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;6.07873;6.1 (0.05);18450;-10/120;50 (2");94.9446;0.692498;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolution;KTM512_40CWEWE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;7.74669;7.75 (0.05);37375.5;-10/120;65 (2 1/2");63.5773;0.664999;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.08752;4.09 (0.01);24792.5;-10/120;65 (2 1/2");160.155;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.91904;4.92* (0.01);27731.5;-10/120;80 (3");178.93;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_80HFA;TA-Modulator 80 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;80 (3");>125;0.0001;0.02;Linear;PushToClose;4.04136;4.04 (0.01);33872;-10/120;100 (4");119.397;1.2094;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_125NFB;TA-Modulator 125 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;125 (5");>150;0.0001;0.0198;EqualPc;PushToClose;4.34099;4.34 (0.01);25940.7;-10/120;125 (5");102.146;1.27659;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;59.4/79.2/119/158/238/317*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_150NFB;TA-Modulator 150 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;150 (6");>150;0.0001;0.0298;EqualPc;PushToClose;10.2088;10.21 (0.01);26742.5;-10/120;150 (6");106.055;1.45299;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;89.4*/119/179/238/358/477;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200NFB;TA-Modulator 200 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;200 (8");>125;0.0001;0.0325;EqualPc;PushToClose;10.0724;10 (0.5);29015;-10/120;200 (8");61.8105;1.31817;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.5*/130/195/260/390/520;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200HFA;TA-Modulator 200 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;200 (8");>125;0.0001;0.0324;Linear;PushToClose;9.30378;9.5 (0.5);57000;-10/120;250 (10");49.3182;1.35193;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.2*/130/194/259/389/518;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 14
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_HIDP
+ComboFamilyBelow65ID = FAM_KTM512
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_WELDING
+ComboVersionBelow65ID = VERS_PT90
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = PICVTYPE_STD
+ComboFamilyAbove50ID = FAM_FUSION_P
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_US
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.341367;0.35 (0.05);12186.5;-10/120;10 (3/8");73.8602;0.226354;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.690239;0.7 (0.05);12784.7;-10/120;15 (1/2");77.2178;0.276311;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;1.02181;1 (0.05);13659.6;-10/120;15 (1/2");163.796;0.414466;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 3;0.00013888888885; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;2.08847;2.1 (0.05);16593.6;-10/120;20 (3/4");94.3163;0.379027;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 4;0.00022222222216; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;5.0005;5* (0.05);24200;-10/120;25 (1");71.5077;0.382437;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 5;0.00036111111101; ; ;FindOneSolution;KTM512_25CWCWC;KTM 512 DN25/32 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;1.74879;1.75 (0.05);22321.1;-10/120;25 (1");178.468;0.62146;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ;FindOneSolution;KTM512_25AWCWC;KTM 512 DN25/32 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;3.13926;3.15 (0.05);17509.5;-10/120;32 (1 1/4");108.968;0.576286;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 7;0.00094444444418; ; ;FindOneSolution;KTM512_40CWEWE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;4.6654;4.65 (0.05);22500.2;-10/120;40 (1 1/2");126.187;0.688231;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 8;0.00152777777735; ; ;FindOneSolution;KTM512_40AWEWE;KTM 512 DN40/50 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;6.07873;6.1 (0.05);18450;-10/120;50 (2");94.9446;0.692498;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolution;KTM512_40CWEWE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;7.74669;7.75 (0.05);37375.5;-10/120;65 (2 1/2");63.5773;0.664999;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.08752;4.09 (0.01);24792.5;-10/120;65 (2 1/2");160.155;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.91904;4.92* (0.01);27731.5;-10/120;80 (3");178.93;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_80HFA;TA-Modulator 80 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;80 (3");>125;0.0001;0.02;Linear;PushToClose;4.04136;4.04 (0.01);33872;-10/120;100 (4");119.397;1.2094;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_125NFB;TA-Modulator 125 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;125 (5");>150;0.0001;0.0198;EqualPc;PushToClose;4.34099;4.34 (0.01);25940.7;-10/120;125 (5");102.146;1.27659;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;59.4/79.2/119/158/238/317*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_150NFB;TA-Modulator 150 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;150 (6");>150;0.0001;0.0298;EqualPc;PushToClose;10.2088;10.21 (0.01);26742.5;-10/120;150 (6");106.055;1.45299;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;89.4*/119/179/238/358/477;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200NFB;TA-Modulator 200 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;200 (8");>125;0.0001;0.0325;EqualPc;PushToClose;10.0724;10 (0.5);29015;-10/120;200 (8");61.8105;1.31817;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.5*/130/195/260/390/520;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200HFA;TA-Modulator 200 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;200 (8");>125;0.0001;0.0324;Linear;PushToClose;9.30378;9.5 (0.5);57000;-10/120;250 (10");49.3182;1.35193;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.2*/130/194/259/389/518;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 15
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_HIDP
+ComboFamilyBelow65ID = FAM_KTM512
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_WELDING
+ComboVersionBelow65ID = VERS_PT90
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = PICVTYPE_STD
+ComboFamilyAbove50ID = FAM_FUSION_P
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_US
+ComboPNAbove50ID = PN_4
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.341367;0.35 (0.05);12186.5;-10/120;10 (3/8");73.8602;0.226354;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.690239;0.7 (0.05);12784.7;-10/120;15 (1/2");77.2178;0.276311;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;1.02181;1 (0.05);13659.6;-10/120;15 (1/2");163.796;0.414466;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 3;0.00013888888885; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;2.08847;2.1 (0.05);16593.6;-10/120;20 (3/4");94.3163;0.379027;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 4;0.00022222222216; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;5.0005;5* (0.05);24200;-10/120;25 (1");71.5077;0.382437;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 5;0.00036111111101; ; ;FindOneSolution;KTM512_25CWCWC;KTM 512 DN25/32 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;1.74879;1.75 (0.05);22321.1;-10/120;25 (1");178.468;0.62146;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ;FindOneSolution;KTM512_25AWCWC;KTM 512 DN25/32 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;3.13926;3.15 (0.05);17509.5;-10/120;32 (1 1/4");108.968;0.576286;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 7;0.00094444444418; ; ;FindOneSolution;KTM512_40CWEWE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;4.6654;4.65 (0.05);22500.2;-10/120;40 (1 1/2");126.187;0.688231;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 8;0.00152777777735; ; ;FindOneSolution;KTM512_40AWEWE;KTM 512 DN40/50 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;6.07873;6.1 (0.05);18450;-10/120;50 (2");94.9446;0.692498;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolution;KTM512_40CWEWE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;7.74669;7.75 (0.05);37375.5;-10/120;65 (2 1/2");63.5773;0.664999;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.08752;4.09 (0.01);24792.5;-10/120;65 (2 1/2");160.155;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.91904;4.92* (0.01);27731.5;-10/120;80 (3");178.93;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_80HFA;TA-Modulator 80 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;80 (3");>125;0.0001;0.02;Linear;PushToClose;4.04136;4.04 (0.01);33872;-10/120;100 (4");119.397;1.2094;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_125NFB;TA-Modulator 125 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;125 (5");>150;0.0001;0.0198;EqualPc;PushToClose;4.34099;4.34 (0.01);25940.7;-10/120;125 (5");102.146;1.27659;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;59.4/79.2/119/158/238/317*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_150NFB;TA-Modulator 150 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;150 (6");>150;0.0001;0.0298;EqualPc;PushToClose;10.2088;10.21 (0.01);26742.5;-10/120;150 (6");106.055;1.45299;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;89.4*/119/179/238/358/477;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200NFB;TA-Modulator 200 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;200 (8");>125;0.0001;0.0325;EqualPc;PushToClose;10.0724;10 (0.5);29015;-10/120;200 (8");61.8105;1.31817;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.5*/130/195/260/390/520;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200HFA;TA-Modulator 200 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;200 (8");>125;0.0001;0.0324;Linear;PushToClose;9.30378;9.5 (0.5);57000;-10/120;250 (10");49.3182;1.35193;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.2*/130/194/259/389/518;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 16
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_HIDP
+ComboFamilyBelow65ID = FAM_KTM512
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_WELDING
+ComboVersionBelow65ID = VERS_PT90
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = PICVTYPE_STD
+ComboFamilyAbove50ID = FAM_FUSION_P
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_US
+ComboPNAbove50ID = PN_5
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.341367;0.35 (0.05);12186.5;-10/120;10 (3/8");73.8602;0.226354;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.690239;0.7 (0.05);12784.7;-10/120;15 (1/2");77.2178;0.276311;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;1.02181;1 (0.05);13659.6;-10/120;15 (1/2");163.796;0.414466;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 3;0.00013888888885; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;2.08847;2.1 (0.05);16593.6;-10/120;20 (3/4");94.3163;0.379027;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 4;0.00022222222216; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;5.0005;5* (0.05);24200;-10/120;25 (1");71.5077;0.382437;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 5;0.00036111111101; ; ;FindOneSolution;KTM512_25CWCWC;KTM 512 DN25/32 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;1.74879;1.75 (0.05);22321.1;-10/120;25 (1");178.468;0.62146;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ;FindOneSolution;KTM512_25AWCWC;KTM 512 DN25/32 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;3.13926;3.15 (0.05);17509.5;-10/120;32 (1 1/4");108.968;0.576286;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 7;0.00094444444418; ; ;FindOneSolution;KTM512_40CWEWE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;4.6654;4.65 (0.05);22500.2;-10/120;40 (1 1/2");126.187;0.688231;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 8;0.00152777777735; ; ;FindOneSolution;KTM512_40AWEWE;KTM 512 DN40/50 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;6.07873;6.1 (0.05);18450;-10/120;50 (2");94.9446;0.692498;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolution;KTM512_40CWEWE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;7.74669;7.75 (0.05);37375.5;-10/120;65 (2 1/2");63.5773;0.664999;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.08752;4.09 (0.01);24792.5;-10/120;65 (2 1/2");160.155;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.91904;4.92* (0.01);27731.5;-10/120;80 (3");178.93;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_80HFA;TA-Modulator 80 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;80 (3");>125;0.0001;0.02;Linear;PushToClose;4.04136;4.04 (0.01);33872;-10/120;100 (4");119.397;1.2094;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_125NFB;TA-Modulator 125 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;125 (5");>150;0.0001;0.0198;EqualPc;PushToClose;4.34099;4.34 (0.01);25940.7;-10/120;125 (5");102.146;1.27659;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;59.4/79.2/119/158/238/317*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_150NFB;TA-Modulator 150 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;150 (6");>150;0.0001;0.0298;EqualPc;PushToClose;10.2088;10.21 (0.01);26742.5;-10/120;150 (6");106.055;1.45299;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;89.4*/119/179/238/358/477;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200NFB;TA-Modulator 200 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;200 (8");>125;0.0001;0.0325;EqualPc;PushToClose;10.0724;10 (0.5);29015;-10/120;200 (8");61.8105;1.31817;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.5*/130/195/260/390/520;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ;FindOneSolutionWithAlternative;TA_MODULATOR_200HFA;TA-Modulator 200 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;200 (8");>125;0.0001;0.0324;Linear;PushToClose;9.30378;9.5 (0.5);57000;-10/120;250 (10");49.3182;1.35193;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.2*/130/194/259/389/518;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 17
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_HIDP
+ComboFamilyBelow65ID = FAM_KTM512
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_WELDING
+ComboVersionBelow65ID = VERS_PT90
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = PICVTYPE_STD
+ComboFamilyAbove50ID = FAM_MODULATOR_P
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_FLANGE
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.341367;0.35 (0.05);12186.5;-10/120;10 (3/8");73.8602;0.226354;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.690239;0.7 (0.05);12784.7;-10/120;15 (1/2");77.2178;0.276311;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;1.02181;1 (0.05);13659.6;-10/120;15 (1/2");163.796;0.414466;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 3;0.00013888888885; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;2.08847;2.1 (0.05);16593.6;-10/120;20 (3/4");94.3163;0.379027;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 4;0.00022222222216; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;5.0005;5* (0.05);24200;-10/120;25 (1");71.5077;0.382437;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 5;0.00036111111101; ; ;FindOneSolution;KTM512_25CWCWC;KTM 512 DN25/32 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;1.74879;1.75 (0.05);22321.1;-10/120;25 (1");178.468;0.62146;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ;FindOneSolution;KTM512_25AWCWC;KTM 512 DN25/32 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;3.13926;3.15 (0.05);17509.5;-10/120;32 (1 1/4");108.968;0.576286;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 7;0.00094444444418; ; ;FindOneSolution;KTM512_40CWEWE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;4.6654;4.65 (0.05);22500.2;-10/120;40 (1 1/2");126.187;0.688231;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 8;0.00152777777735; ; ;FindOneSolution;KTM512_40AWEWE;KTM 512 DN40/50 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;6.07873;6.1 (0.05);18450;-10/120;50 (2");94.9446;0.692498;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolution;KTM512_40CWEWE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;7.74669;7.75 (0.05);37375.5;-10/120;65 (2 1/2");63.5773;0.664999;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 10;0.00399999999888; ; ;FindOneSolution;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.08752;4.09 (0.01);24792.5;-10/120;65 (2 1/2");160.155;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ;FindOneSolution;TA_MODULATOR_65A;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.91904;4.92* (0.01);27731.5;-10/120;80 (3");178.93;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ;FindOneSolution;TA_MODULATOR_80HFA;TA-Modulator 80 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;80 (3");>125;0.0001;0.02;Linear;PushToClose;4.04136;4.04 (0.01);33872;-10/120;100 (4");119.397;1.2094;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ;FindOneSolution;TA_MODULATOR_125NFA;TA-Modulator 125 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;125 (5");>150;0.0001;0.0198;EqualPc;PushToClose;4.34099;4.34 (0.01);25940.7;-10/120;125 (5");102.146;1.27659;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;59.4/79.2/119/158/238/317*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ;FindOneSolution;TA_MODULATOR_150NFA;TA-Modulator 150 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;150 (6");>150;0.0001;0.0298;EqualPc;PushToClose;10.2088;10.21 (0.01);26742.5;-10/120;150 (6");106.055;1.45299;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;89.4*/119/179/238/358/477;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ;FindOneSolution;TA_MODULATOR_200NFA;TA-Modulator 200 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;200 (8");>125;0.0001;0.0325;EqualPc;PushToClose;10.0724;10 (0.5);29015;-10/120;200 (8");61.8105;1.31817;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.5*/130/195/260/390/520;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ;FindOneSolution;TA_MODULATOR_200HFA;TA-Modulator 200 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;16;200 (8");>125;0.0001;0.0324;Linear;PushToClose;9.30378;9.5 (0.5);57000;-10/120;250 (10");49.3182;1.35193;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.2*/130/194/259/389/518;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 18
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_HIDP
+ComboFamilyBelow65ID = FAM_KTM512
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_WELDING
+ComboVersionBelow65ID = VERS_PT90
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = PICVTYPE_STD
+ComboFamilyAbove50ID = FAM_MODULATOR_P
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_FLANGE
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_5
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.341367;0.35 (0.05);12186.5;-10/120;10 (3/8");73.8602;0.226354;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.690239;0.7 (0.05);12784.7;-10/120;15 (1/2");77.2178;0.276311;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;1.02181;1 (0.05);13659.6;-10/120;15 (1/2");163.796;0.414466;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 3;0.00013888888885; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;2.08847;2.1 (0.05);16593.6;-10/120;20 (3/4");94.3163;0.379027;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 4;0.00022222222216; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;5.0005;5* (0.05);24200;-10/120;25 (1");71.5077;0.382437;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 5;0.00036111111101; ; ;FindOneSolution;KTM512_25CWCWC;KTM 512 DN25/32 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;1.74879;1.75 (0.05);22321.1;-10/120;25 (1");178.468;0.62146;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ;FindOneSolution;KTM512_25AWCWC;KTM 512 DN25/32 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;3.13926;3.15 (0.05);17509.5;-10/120;32 (1 1/4");108.968;0.576286;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 7;0.00094444444418; ; ;FindOneSolution;KTM512_40CWEWE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;4.6654;4.65 (0.05);22500.2;-10/120;40 (1 1/2");126.187;0.688231;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 8;0.00152777777735; ; ;FindOneSolution;KTM512_40AWEWE;KTM 512 DN40/50 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;6.07873;6.1 (0.05);18450;-10/120;50 (2");94.9446;0.692498;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolution;KTM512_40CWEWE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;7.74669;7.75 (0.05);37375.5;-10/120;65 (2 1/2");63.5773;0.664999;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 10;0.00399999999888; ; ;FindOneSolution;TA_MODULATOR_65B;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.08752;4.09 (0.01);24792.5;-10/120;65 (2 1/2");160.155;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ;FindOneSolution;TA_MODULATOR_65B;TA-Modulator 65;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;65 (2 1/2");>125;0.0001;0.02;EqualPc;PushToClose;4.91904;4.92* (0.01);27731.5;-10/120;80 (3");178.93;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ;FindOneSolution;TA_MODULATOR_80HFB;TA-Modulator 80 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;80 (3");>125;0.0001;0.02;Linear;PushToClose;4.04136;4.04 (0.01);33872;-10/120;100 (4");119.397;1.2094;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ;FindOneSolution;TA_MODULATOR_125NFB;TA-Modulator 125 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;125 (5");>150;0.0001;0.0198;EqualPc;PushToClose;4.34099;4.34 (0.01);25940.7;-10/120;125 (5");102.146;1.27659;SLIDER750-STD-24;TA-Slider 750 (24V);800000;-;59.4/79.2/119/158/238/317*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ;FindOneSolution;TA_MODULATOR_150NFB;TA-Modulator 150 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;150 (6");>150;0.0001;0.0298;EqualPc;PushToClose;10.2088;10.21 (0.01);26742.5;-10/120;150 (6");106.055;1.45299;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;89.4*/119/179/238/358/477;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 15;0.04436111109869; ; ;FindOneSolution;TA_MODULATOR_200NFB;TA-Modulator 200 NF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;200 (8");>125;0.0001;0.0325;EqualPc;PushToClose;10.0724;10 (0.5);29015;-10/120;200 (8");61.8105;1.31817;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.5*/130/195/260/390/520;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 16;0.07177777775768; ; ;FindOneSolution;TA_MODULATOR_200HFB;TA-Modulator 200 HF;-1;PIBCV-Std HVAC;Ductile iron;Flange;Standard;25;200 (8");>125;0.0001;0.0324;Linear;PushToClose;9.30378;9.5 (0.5);57000;-10/120;250 (10");49.3182;1.35193;SLIDER1600-STD-24;TA-Slider 1600 (24V);800000;-;97.2*/130/194/259/389/518;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 19
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_HIDP
+ComboFamilyBelow65ID = FAM_KTM512
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_WELDING
+ComboVersionBelow65ID = VERS_PT90
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = PICVTYPE_HIDP
+ComboFamilyAbove50ID = FAM_KTM512
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_FLANGE
+ComboVersionAbove50ID = VERS_PT90
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.341367;0.35 (0.05);12186.5;-10/120;10 (3/8");73.8602;0.226354;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.690239;0.7 (0.05);12784.7;-10/120;15 (1/2");77.2178;0.276311;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;1.02181;1 (0.05);13659.6;-10/120;15 (1/2");163.796;0.414466;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 3;0.00013888888885; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;2.08847;2.1 (0.05);16593.6;-10/120;20 (3/4");94.3163;0.379027;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 4;0.00022222222216; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;5.0005;5* (0.05);24200;-10/120;25 (1");71.5077;0.382437;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 5;0.00036111111101; ; ;FindOneSolution;KTM512_25CWCWC;KTM 512 DN25/32 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;1.74879;1.75 (0.05);22321.1;-10/120;25 (1");178.468;0.62146;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ;FindOneSolution;KTM512_25AWCWC;KTM 512 DN25/32 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;3.13926;3.15 (0.05);17509.5;-10/120;32 (1 1/4");108.968;0.576286;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 7;0.00094444444418; ; ;FindOneSolution;KTM512_40CWEWE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;4.6654;4.65 (0.05);22500.2;-10/120;40 (1 1/2");126.187;0.688231;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 8;0.00152777777735; ; ;FindOneSolution;KTM512_40AWEWE;KTM 512 DN40/50 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;6.07873;6.1 (0.05);18450;-10/120;50 (2");94.9446;0.692498;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolution;KTM512_40CWEWE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;7.74669;7.75 (0.05);37375.5;-10/120;65 (2 1/2");63.5773;0.664999;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 10;0.00399999999888; ; ;FindOneSolutionWithAlternative;KTM512_65A;KTM 512 DN65 LF;-1;PIBCV-High Dp;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");-;0;0.02;EqualPc;PushToClose;9.04163;9.04 (0.02);22278.4;-10/120;65 (2 1/2");160.155;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);-;2.5e+06;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;KTM512_65E;KTM 512 DN65 HF;-1;PIBCV-High Dp;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");-;0;0.02;EqualPc;PushToClose;7.79689;7.8 (0.02);64736.1;-10/120;80 (3");178.93;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);-;2.5e+06;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ;FindOneSolution;KTM512_100G;KTM 512 DN100 NF;-1;PIBCV-High Dp;Ductile iron;Flange;PT 90;16;100 (4");-;0;0.02;EqualPc;PushToClose;9.33487;9.34 (0.02);36640.6;-10/120;100 (4");119.397;1.2094;SLIDER1600-STD-24;TA-Slider 1600 (24V);-;2.5e+06;60*/80/120/160/240/320;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ;FindOneSolution;KTM512_125K;KTM 512 DN125 HF;-1;PIBCV-High Dp;Ductile iron;Flange;PT 90;16;125 (5");-;0;0.02;EqualPc;PushToClose;8.53016;8.54 (0.02);73262.3;-10/120;125 (5");102.146;1.27659;SLIDER1600-STD-24;TA-Slider 1600 (24V);-;2.5e+06;60*/80/120/160/240/320;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 15;0.04436111109869; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 16;0.07177777775768; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 20
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_HIDP
+ComboFamilyBelow65ID = FAM_KTM512
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_WELDING
+ComboVersionBelow65ID = VERS_PT90
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = PICVTYPE_HIDP
+ComboFamilyAbove50ID = FAM_KTM512
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_FLANGE
+ComboVersionAbove50ID = VERS_PT90
+ComboPNAbove50ID = PN_5
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.341367;0.35 (0.05);12186.5;-10/120;10 (3/8");73.8602;0.226354;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.690239;0.7 (0.05);12784.7;-10/120;15 (1/2");77.2178;0.276311;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;1.02181;1 (0.05);13659.6;-10/120;15 (1/2");163.796;0.414466;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 3;0.00013888888885; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;2.08847;2.1 (0.05);16593.6;-10/120;20 (3/4");94.3163;0.379027;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 4;0.00022222222216; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;5.0005;5* (0.05);24200;-10/120;25 (1");71.5077;0.382437;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 5;0.00036111111101; ; ;FindOneSolution;KTM512_25CWCWC;KTM 512 DN25/32 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;1.74879;1.75 (0.05);22321.1;-10/120;25 (1");178.468;0.62146;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ;FindOneSolution;KTM512_25AWCWC;KTM 512 DN25/32 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;3.13926;3.15 (0.05);17509.5;-10/120;32 (1 1/4");108.968;0.576286;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 7;0.00094444444418; ; ;FindOneSolution;KTM512_40CWEWE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;4.6654;4.65 (0.05);22500.2;-10/120;40 (1 1/2");126.187;0.688231;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 8;0.00152777777735; ; ;FindOneSolution;KTM512_40AWEWE;KTM 512 DN40/50 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;6.07873;6.1 (0.05);18450;-10/120;50 (2");94.9446;0.692498;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolution;KTM512_65C;KTM 512 DN65 NF;-1;PIBCV-High Dp;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");-;0;0.02;EqualPc;PushToClose;5.52863;5.52 (0.02);23305.9;-10/120;65 (2 1/2");63.5773;0.664999;SLIDER750-STD-24;TA-Slider 750 (24V);-;2.5e+06;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 10;0.00399999999888; ; ;FindOneSolution;KTM512_65A;KTM 512 DN65 LF;-1;PIBCV-High Dp;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");-;0;0.02;EqualPc;PushToClose;9.04163;9.04 (0.02);22278.4;-10/120;65 (2 1/2");160.155;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);-;2.5e+06;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ;FindOneSolution;KTM512_65E;KTM 512 DN65 HF;-1;PIBCV-High Dp;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");-;0;0.02;EqualPc;PushToClose;7.79689;7.8 (0.02);64736.1;-10/120;80 (3");178.93;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);-;2.5e+06;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ;FindOneSolution;KTM512_100E;KTM 512 DN100 NF;-1;PIBCV-High Dp;Ductile iron;Flange;PT 90;25;100 (4");-;0;0.02;EqualPc;PushToClose;9.33487;9.34 (0.02);36640.6;-10/120;100 (4");119.397;1.2094;SLIDER1600-STD-24;TA-Slider 1600 (24V);-;2.5e+06;60*/80/120/160/240/320;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ;FindOneSolution;KTM512_125I;KTM 512 DN125 HF;-1;PIBCV-High Dp;Ductile iron;Flange;PT 90;25;125 (5");-;0;0.02;EqualPc;PushToClose;8.53016;8.54 (0.02);73262.3;-10/120;125 (5");102.146;1.27659;SLIDER1600-STD-24;TA-Slider 1600 (24V);-;2.5e+06;60*/80/120/160/240/320;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 15;0.04436111109869; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 16;0.07177777775768; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 21
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_HIDP
+ComboFamilyBelow65ID = FAM_KTM512
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_WELDING
+ComboVersionBelow65ID = VERS_PT90
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = PICVTYPE_HIDP
+ComboFamilyAbove50ID = FAM_KTM512
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_PT90
+ComboPNAbove50ID = PN_4
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.341367;0.35 (0.05);12186.5;-10/120;10 (3/8");73.8602;0.226354;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.690239;0.7 (0.05);12784.7;-10/120;15 (1/2");77.2178;0.276311;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;1.02181;1 (0.05);13659.6;-10/120;15 (1/2");163.796;0.414466;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 3;0.00013888888885; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;2.08847;2.1 (0.05);16593.6;-10/120;20 (3/4");94.3163;0.379027;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 4;0.00022222222216; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;5.0005;5* (0.05);24200;-10/120;25 (1");71.5077;0.382437;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 5;0.00036111111101; ; ;FindOneSolution;KTM512_25CWCWC;KTM 512 DN25/32 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;1.74879;1.75 (0.05);22321.1;-10/120;25 (1");178.468;0.62146;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ;FindOneSolution;KTM512_25AWCWC;KTM 512 DN25/32 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;3.13926;3.15 (0.05);17509.5;-10/120;32 (1 1/4");108.968;0.576286;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 7;0.00094444444418; ; ;FindOneSolution;KTM512_40CWEWE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;4.6654;4.65 (0.05);22500.2;-10/120;40 (1 1/2");126.187;0.688231;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 8;0.00152777777735; ; ;FindOneSolution;KTM512_40AWEWE;KTM 512 DN40/50 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;6.07873;6.1 (0.05);18450;-10/120;50 (2");94.9446;0.692498;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolution;KTM512_65N;KTM 512 2 1/2"NF;-1;PIBCV-High Dp;Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");-;0;0.02;EqualPc;PushToClose;5.52863;5.52 (0.02);23305.9;-10/120;65 (2 1/2");63.5773;0.664999;SLIDER750-STD-24;TA-Slider 750 (24V);-;2.5e+06;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 10;0.00399999999888; ; ;FindOneSolution;KTM512_65M;KTM 512 2 1/2"LF;-1;PIBCV-High Dp;Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");-;0;0.02;EqualPc;PushToClose;9.04163;9.04 (0.02);22278.4;-10/120;65 (2 1/2");160.155;1.07595;SLIDER750-STD-24;TA-Slider 750 (24V);-;2.5e+06;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 11;0.00647222222041; ; ;FindOneSolution;KTM512_65O;KTM 512 2 1/2"HF;-1;PIBCV-High Dp;Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");-;0;0.02;EqualPc;PushToClose;7.79689;7.8 (0.02);64736.1;-10/120;80 (3");178.93;1.26224;SLIDER750-STD-24;TA-Slider 750 (24V);-;2.5e+06;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 12;0.01047222221929; ; ;FindOneSolution;KTM512_100N;KTM 512 4"NF;-1;PIBCV-High Dp;Ductile iron;ANSI Flange;PT 90;20;100 (4");-;0;0.02;EqualPc;PushToClose;9.33487;9.34 (0.02);36640.6;-10/120;100 (4");119.397;1.2094;SLIDER750-STD-24;TA-Slider 750 (24V);-;2.01048e+06;60/80/120/160/240/320*;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 13;0.0169444444397; ; ;FindOneSolution;KTM512_125O;KTM 512 5"HF;-1;PIBCV-High Dp;Ductile iron;ANSI Flange;PT 90;20;125 (5");-;0;0.02;EqualPc;PushToClose;8.53016;8.54 (0.02);73262.3;-10/120;125 (5");102.146;1.27659;SLIDER1600-STD-24;TA-Slider 1600 (24V);-;2.5e+06;60*/80/120/160/240/320;54;24 VAC/24 VDC;On-off/3-point/0(2)-10 V/0(4)-20 mA;0(2)-10 V;No;None
+Result number = 14;0.02741666665899; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 15;0.04436111109869; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 16;0.07177777775768; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 22
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_HIDP
+ComboFamilyBelow65ID = FAM_KTM512
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_WELDING
+ComboVersionBelow65ID = VERS_PT90
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = PICVTYPE_CLASSICAL
+ComboFamilyAbove50ID = FAM_KTM50
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_FLANGE
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_3
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.341367;0.35 (0.05);12186.5;-10/120;10 (3/8");73.8602;0.226354;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.690239;0.7 (0.05);12784.7;-10/120;15 (1/2");77.2178;0.276311;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;1.02181;1 (0.05);13659.6;-10/120;15 (1/2");163.796;0.414466;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 3;0.00013888888885; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;2.08847;2.1 (0.05);16593.6;-10/120;20 (3/4");94.3163;0.379027;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 4;0.00022222222216; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;5.0005;5* (0.05);24200;-10/120;25 (1");71.5077;0.382437;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 5;0.00036111111101; ; ;FindOneSolution;KTM512_25CWCWC;KTM 512 DN25/32 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;1.74879;1.75 (0.05);22321.1;-10/120;25 (1");178.468;0.62146;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ;FindOneSolution;KTM512_25AWCWC;KTM 512 DN25/32 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;3.13926;3.15 (0.05);17509.5;-10/120;32 (1 1/4");108.968;0.576286;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 7;0.00094444444418; ; ;FindOneSolution;KTM512_40CWEWE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;4.6654;4.65 (0.05);22500.2;-10/120;40 (1 1/2");126.187;0.688231;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 8;0.00152777777735; ; ;FindOneSolution;KTM512_40AWEWE;KTM 512 DN40/50 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;6.07873;6.1 (0.05);18450;-10/120;50 (2");94.9446;0.692498;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolution;KTM512_40CWEWE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;7.74669;7.75 (0.05);37375.5;-10/120;65 (2 1/2");63.5773;0.664999;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 10;0.00399999999888; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 11;0.00647222222041; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 12;0.01047222221929; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 13;0.0169444444397; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 14;0.02741666665899; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 15;0.04436111109869; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 16;0.07177777775768; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 23
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_HIDP
+ComboFamilyBelow65ID = FAM_KTM512
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_WELDING
+ComboVersionBelow65ID = VERS_PT90
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = PICVTYPE_CLASSICAL
+ComboFamilyAbove50ID = FAM_KTM50
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_FLANGE
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_5
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.341367;0.35 (0.05);12186.5;-10/120;10 (3/8");73.8602;0.226354;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.690239;0.7 (0.05);12784.7;-10/120;15 (1/2");77.2178;0.276311;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;1.02181;1 (0.05);13659.6;-10/120;15 (1/2");163.796;0.414466;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 3;0.00013888888885; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;2.08847;2.1 (0.05);16593.6;-10/120;20 (3/4");94.3163;0.379027;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 4;0.00022222222216; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;5.0005;5* (0.05);24200;-10/120;25 (1");71.5077;0.382437;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 5;0.00036111111101; ; ;FindOneSolution;KTM512_25CWCWC;KTM 512 DN25/32 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;1.74879;1.75 (0.05);22321.1;-10/120;25 (1");178.468;0.62146;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ;FindOneSolution;KTM512_25AWCWC;KTM 512 DN25/32 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;3.13926;3.15 (0.05);17509.5;-10/120;32 (1 1/4");108.968;0.576286;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 7;0.00094444444418; ; ;FindOneSolution;KTM512_40CWEWE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;4.6654;4.65 (0.05);22500.2;-10/120;40 (1 1/2");126.187;0.688231;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 8;0.00152777777735; ; ;FindOneSolution;KTM512_40AWEWE;KTM 512 DN40/50 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;6.07873;6.1 (0.05);18450;-10/120;50 (2");94.9446;0.692498;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolution;KTM512_40CWEWE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;7.74669;7.75 (0.05);37375.5;-10/120;65 (2 1/2");63.5773;0.664999;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 10;0.00399999999888; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 11;0.00647222222041; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 12;0.01047222221929; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 13;0.0169444444397; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 14;0.02741666665899; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 15;0.04436111109869; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 16;0.07177777775768; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 24
+
+SelectionMode = Batch
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = PICVTYPE_HIDP
+ComboFamilyBelow65ID = FAM_KTM512
+ComboMaterialBelow65ID = BDY_DUCTIRON
+ComboConnectBelow65ID = CONN_WELDING
+ComboVersionBelow65ID = VERS_PT90
+ComboPNBelow65ID = PN_5
+ComboTypeAbove50ID = PICVTYPE_CLASSICAL
+ComboFamilyAbove50ID = FAM_KTM50
+ComboMaterialAbove50ID = BDY_DUCTIRON
+ComboConnectAbove50ID = CONN_ANSIFL
+ComboVersionAbove50ID = VERS_STD
+ComboPNAbove50ID = PN_5
+CtrlTypeStrictChecked = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ActuatorSelectedAsSet = false
+ComboActuatorPowerSupplyID = POW_24VAC
+ComboActuatorInputSignalID = SIG_0-10V
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.341367;0.35 (0.05);12186.5;-10/120;10 (3/8");73.8602;0.226354;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;0.690239;0.7 (0.05);12784.7;-10/120;15 (1/2");77.2178;0.276311;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;1.02181;1 (0.05);13659.6;-10/120;15 (1/2");163.796;0.414466;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 3;0.00013888888885; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;2.08847;2.1 (0.05);16593.6;-10/120;20 (3/4");94.3163;0.379027;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 4;0.00022222222216; ; ;FindOneSolution;KTM512_15AWAWA;KTM 512 DN15/20 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;15 (1/2");-;0;0.01;EqualPc;PushToClose;5.0005;5* (0.05);24200;-10/120;25 (1");71.5077;0.382437;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 5;0.00036111111101; ; ;FindOneSolution;KTM512_25CWCWC;KTM 512 DN25/32 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;1.74879;1.75 (0.05);22321.1;-10/120;25 (1");178.468;0.62146;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 6;0.00058333333317; ; ;FindOneSolution;KTM512_25AWCWC;KTM 512 DN25/32 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;25 (1");-;0;0.01;EqualPc;PushToClose;3.13926;3.15 (0.05);17509.5;-10/120;32 (1 1/4");108.968;0.576286;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 7;0.00094444444418; ; ;FindOneSolution;KTM512_40CWEWE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;4.6654;4.65 (0.05);22500.2;-10/120;40 (1 1/2");126.187;0.688231;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 8;0.00152777777735; ; ;FindOneSolution;KTM512_40AWEWE;KTM 512 DN40/50 LF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;6.07873;6.1 (0.05);18450;-10/120;50 (2");94.9446;0.692498;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 9;0.00247222222153; ; ;FindOneSolution;KTM512_40CWEWE;KTM 512 DN40/50 NF;-1;PIBCV-High Dp;Ductile iron;Welding;PT 90;25;40 (1 1/2");-;0;0.01;EqualPc;PushToClose;7.74669;7.75 (0.05);37375.5;-10/120;65 (2 1/2");63.5773;0.664999;SLIDER500-STD1M;TA-Slider 500 (1m);-;2.5e+06;100/200*;54;24 VAC/24 VDC;0(2)-10 V;-;No;None
+Result number = 10;0.00399999999888; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 11;0.00647222222041; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 12;0.01047222221929; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 13;0.0169444444397; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 14;0.02741666665899; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 15;0.04436111109869; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 16;0.07177777775768; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+

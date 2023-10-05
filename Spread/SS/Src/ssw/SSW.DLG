@@ -1,0 +1,34 @@
+#ifndef SS_W
+#define SS_W
+#endif
+
+#include "..\sssrc\spread\spread.h"
+#include "..\sssrc\classes\wintools.h"
+
+Calendar DIALOG LOADONCALL MOVEABLE DISCARDABLE 80, 20, 129, 106
+CAPTION "Calendar"
+STYLE WS_CAPTION | WS_POPUP
+   {
+   CONTROL "OK", IDOK, "button", BS_DEFPUSHBUTTON | WS_TABSTOP | WS_CHILD,
+           23, 92, 38, 12
+   CONTROL "Cancel", IDCANCEL, "button", BS_PUSHBUTTON | WS_TABSTOP | WS_CHILD,
+           69, 92, 38, 12
+   CONTROL "DayList", IDD_DAYLIST, VA_CALENDAR_CLASS_NAME, WS_TABSTOP |
+           WS_CHILD, 0, 0, 129, 89
+   CONTROL "", 0, "static", SS_BLACKRECT | WS_CHILD, 0, 89, 129, 1
+   }
+
+#if SPREAD_JPN
+CALENDAR_JPN DIALOG LOADONCALL MOVEABLE DISCARDABLE 80, 20, 129, 106
+CAPTION "Calendar_jpn"
+STYLE WS_CAPTION | WS_POPUP
+{
+  CONTROL "DayList", IDD_DAYLIST, VA_CALENDAR_CLASS_NAME, WS_TABSTOP |
+          WS_CHILD, 0, 0, 129, 89
+  CONTROL "", 0, "Static", SS_BLACKRECT | WS_CHILD, 0, 89, 129, 1
+  CONTROL "OK", IDOK, "Button", BS_DEFPUSHBUTTON | WS_TABSTOP | WS_CHILD,
+          23, 92, 38, 12
+  CONTROL "·¬Ý¾Ù", IDCANCEL, "Button", BS_PUSHBUTTON | WS_TABSTOP | WS_CHILD,
+          69, 92, 38, 12
+}
+#endif

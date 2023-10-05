@@ -1,0 +1,22 @@
+HKCR
+{
+	PPGeneral.PPGeneral.1 = s 'PPGeneral Class'
+	{
+		CLSID = s '{FDB2724E-3DAE-11D2-B03D-0020AF131A57}'
+	}
+	PPGeneral.PPGeneral = s 'PPGeneral Class'
+	{
+		CurVer = s 'PPGeneral.PPGeneral.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {FDB2724E-3DAE-11D2-B03D-0020AF131A57} = s 'PPGeneral Class'
+		{
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

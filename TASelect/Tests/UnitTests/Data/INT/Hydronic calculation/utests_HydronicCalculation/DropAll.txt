@@ -1,0 +1,11 @@
+ADDBATCHFILE;.\2WInj\DropAll2WInj.txt
+ADDBATCHFILE;.\3WDiv\DropAll3WDiv.txt
+ADDBATCHFILE;.\3WInj\DropAll3WInj.txt
+ADDBATCHFILE;.\3WMix\DropAll3WMix.txt
+ADDBATCHFILE;.\AutoAdaptive\DropAllAutoAdaptive.txt
+ADDBATCHFILE;.\CV\DropAllCV.txt
+ADDBATCHFILE;.\DPC\DropAllDPC.txt
+ADDBATCHFILE;.\Failure\DropAllFailure.txt
+ADDBATCHFILE;.\Other\DropAllOther.txt
+ADDBATCHFILE;.\Pending\DropAllPending.txt
+ADDBATCHFILE;.\SmartControlValve\DropAllSmartControlValve.txt

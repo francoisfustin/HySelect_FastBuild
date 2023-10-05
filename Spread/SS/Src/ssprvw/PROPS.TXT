@@ -1,0 +1,61 @@
+
+(About)
+
+AllowUserZoom
+   Allow the user to zoom in and out by clicking the mouse
+
+GrayAreaColor
+   Set the color of the gray area
+
+GrayAreaMarginH
+
+GrayAreaMarginType
+  0 - BasedOnNormal
+  1 - Actual
+
+GrayAreaMarginV
+
+hWndSpread
+  At runtime, set the Window handle of the spread you wish to preview
+
+PageBorderColor
+   Set the color of the border around the page
+
+PageBorderWidth
+   Set the width of the border around the page
+
+PageCurrent
+   Set or retrieve the current page being previewed
+
+PageGutterH
+PageGutterV
+PageMultiCntH
+PageMultiCntV
+PageShadowColor
+PageShadowWidth
+PagesPerScreen
+   Set the number of pages per screen when PageViewType is set to 5
+
+PageViewPercentage
+   Set the zoom percentage when PageViewType is set to 2
+
+PageViewType
+  0 - Whole Page
+  1 - Normal Size
+  2 - Percentage
+  3 - Page Width
+  4 - Page Height
+  5 - Multiple Pages
+ScrollBars
+  0 - None
+  1 - Horizontal
+  2 - Vertical
+  3 - Both
+ScrollIncH
+ScrollIncV
+ShowMargins
+ZoomState
+  0 - Undefined
+  1 - In
+  2 - Out
+  3 - Switch

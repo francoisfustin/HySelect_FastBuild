@@ -1,0 +1,202 @@
+#Start of test definition
+
+StartTechnicalParameters
+ApplicationType = 2
+AvailablePMPanels = 7
+BreakTankRequiredForWaterMakeUp = 0
+CVDefKvReynard = 1
+CVMaxDispDp = 200000
+CVMaxDpProp = 65000
+CVMinAuthCstFlow = 0.5
+CVMinAuthor = 0.25
+CVMinDpOnoff = 3000
+CVMinDpProp = 10000
+CVUseDpCPBand = 0
+CanChangePressureVolumeLimit = 0
+CurrencyID = CURRENCY_EUR
+DefaultCalculationNorm = PM_NORM_NONE
+DefaultCoolingTps = 6
+DefaultFillTemperature = 10
+DefaultHeatingTps = 75
+DefaultISCoolingAdditID = WATER
+DefaultISCoolingDT = 6
+DefaultISCoolingPcWeight = 0
+DefaultISCoolingTps = 6
+DefaultISHeatingAdditID = WATER
+DefaultISHeatingDT = 20
+DefaultISHeatingPcWeight = 0
+DefaultISHeatingTps = 90
+DefaultISSolarAdditID = WATER
+DefaultISSolarDT = 20
+DefaultISSolarPcWeight = 0
+DefaultISSolarTps = 75
+DefaultMaxTempInCooling = 45
+DefaultMinTempInHeating = 5
+DefaultMinTempInSolar = 5
+DefaultPipeSerieID = STEEL_SC40
+DefaultPrjCoolingAdditID = WATER
+DefaultPrjCoolingDT = 6
+DefaultPrjCoolingPcWeight = 0
+DefaultPrjHeatingAdditID = WATER
+DefaultPrjHeatingDT = 20
+DefaultPrjHeatingPcWeight = 0
+DefaultSafetyPressureResponseValve = 300000
+DefaultStaticPressureOfWaterNetwork = 400000
+DefaultTAZ = 100
+DefaultWaterHardness = 1.78324958
+DefaultWaterMakeUpTemp = 10
+DegassingWaterReserveForVessel = 0.002
+DpCBCVDpcmin = 5000
+DpCBCVDplmin = 5000
+DpCHide = 0
+DpCHminFullyOpenMv = 0
+DpCMinDp = 5000
+DpCMvLocation = 0
+DpCMvWithSameSizeOnly = 0
+FixedOrificeMaxDp = 6000
+FixedOrificeMinDp = 2000
+FlowDeviationMinus = -0.1
+FlowDeviationPlus = 0.1
+FluidTempLimitEN12953 = 105
+InitialPressureMargin = 30000
+MaxNumberOfAdditionalVesselsInParallel = 2
+MaxNumberOfVentoInParallel = 2
+MaxSafetyValveInParallel = 3
+MaxSizeShift = 4
+MinPressureMargin = 20000
+PICvHide = 0
+PICvMinDp = 1000
+PSetupCompresso = 10000
+PSetupTransfero = 20000
+PipeMaxDp = 500
+PipeMaxVelocity = 4
+PipeMinDp = 10
+PipeMinVelocity = 0.3
+PipeTargetDp = 250
+PipeTargetVelocity = 1
+PipeTargetVelosityUsed = 0
+PressureVolumeLimit = 300000
+ProjectType = 1
+SafetyTempLimiterLimitEN12953 = 110
+SizeShiftAbove = 0
+SizeShiftBelow = -4
+TrvDefDpTotal = 10000
+TrvDefRoomTemperature = 20
+TrvDefSupplyTemperature = 80
+TrvMaxDp = 30000
+TrvMinDpRatio = 0.25
+UseDefaultFreezingPointAsMinTemperature = 1
+UseSimplyPst = 0
+UseVesselPressureVolumeLimit = 0
+ValveMaxDp = 200000
+ValveMin2Dp = 6000
+ValveMinDp = 3000
+VenturiMaxDp = 10000
+VenturiMinDp = 2000
+VesselSelectionRangePercentage = 0
+EndTechnicalParameters
+
+Test number = 0
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00028888
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_GLOBE
+ComboFamilyID = FAM_STS*
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = 
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STS*20C;STS* 20;Ametal(tm);Thread;Without drain;350 psi;3/4" (20);2257.79;-20/120;3/4" (20);376.536;0.788352
+Result number = 1;STS*20D;STS* 20;Ametal(tm);Thread;With drain 3/4";350 psi;3/4" (20);2257.79;-20/120;3/4" (20);376.536;0.788352
+Result number = 2;STS*15C;STS* 15;Ametal(tm);Thread;Without drain;350 psi;1/2" (15);8522.48;-20/120;3/4" (20);376.536;0.788352
+Result number = 3;STS*15D;STS* 15;Ametal(tm);Thread;With drain 3/4";350 psi;1/2" (15);8522.48;-20/120;3/4" (20);376.536;0.788352
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 1
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00028888
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_GLOBE
+ComboFamilyID = FAM_STS*
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_DRAIN34
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STS*20D;STS* 20;Ametal(tm);Thread;With drain 3/4";350 psi;3/4" (20);2257.79;-20/120;3/4" (20);376.536;0.788352
+Result number = 1;STS*15D;STS* 15;Ametal(tm);Thread;With drain 3/4";350 psi;1/2" (15);8522.48;-20/120;3/4" (20);376.536;0.788352
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 2
+
+SelectionMode = Individual
+ProductCategory = SV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.008
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = SHUTTYPE_GLOBE
+ComboFamilyID = FAM_STS*
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_NODRAIN
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STS*50C;STS* 50;Ametal(tm);Thread;Without drain;350 psi;2" (50);44536.4;-20/120;3" (80);270.244;1.56019
+Result number = 1;STS*40C;STS* 40;Ametal(tm);Thread;Without drain;350 psi;1 1/2" (40);124102;-20/120;3" (80);270.244;1.56019
+Result number = 2;STS*32C;STS* 32;Ametal(tm);Thread;Without drain;350 psi;1 1/4" (32);239081;-20/120;3" (80);270.244;1.56019
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

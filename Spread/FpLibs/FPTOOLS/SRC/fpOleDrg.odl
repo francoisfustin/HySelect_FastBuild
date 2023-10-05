@@ -1,0 +1,138 @@
+/* // not needed for ButtonMaker.  uncomment if you need it. -scl
+    typedef [hidden, helpstring("Constants for the OLEDragMode property (but not the DragMode or OLEDropMode properties).")]
+    enum {
+        fpOLEDragManual = 0,
+        fpOLEDragAutomatic = 1
+    } OLEDragModeConstants;
+*/
+    typedef [hidden] enum 
+	{
+        [helpstring("None")]	fpOLEDropNone = 0,
+        [helpstring("Manual")]	fpOLEDropManual = 1
+    } OLEDropModeConstants;
+
+    typedef [hidden] enum 
+	{
+        [helpstring("Enter")]	fpEnter = 0,
+        [helpstring("Leave")]	fpLeave = 1,
+		[helpstring("Over")]	fpOver = 2
+    } OLEDragOverConstants;
+
+    typedef [hidden] enum 
+	{
+        [helpstring("Text")]		fpCFText = 1,
+        [helpstring("Bitmap")]		fpCFBitmap = 2,
+        [helpstring("Metafile")]	fpCFMetafile = 3,
+        [helpstring("DIB")]			fpCFDIB = 8,
+        [helpstring("Palette")]		fpCFPalette = 9,
+        [helpstring("Metafile")]	fpCFEMetafile = 14,
+        [helpstring("Files")]		fpCFFiles = 15,
+        [helpstring("Rich Text")]	fpCFRTF = -16639
+    } ClipFormatConstants;
+
+    typedef [hidden] enum 
+	{
+        [helpstring("None")]	fpOLEDropEffectNone = 0,
+        [helpstring("Copy")]	fpOLEDropEffectCopy = 1,
+        [helpstring("Move")]	fpOLEDropEffectMove = 2,
+        [helpstring("Scroll")]	fpOLEDropEffectScroll = 0x80000000
+    } OLEDropModeEffectConstants;
+
+    [
+      odl,
+      uuid(69310C25-4993-11d1-8905-0020AF131A57),
+	  hidden,
+	  nonextensible
+    ]
+    dispinterface IfpDataObjectFiles
+	{
+/*
+	properties:
+	methods:
+        [id(0), propget, helpstring("Returns a specific filename by index from the Files collection of a fpDataObject object (fpCFFiles format only).")] 
+		BSTR Item([in] long lIndex);
+        [id(1), propget, helpstring("Returns number of filenames in the collection.")]
+        long Count;
+        [id(2), helpstring("Adds a filename to the Files collection of a fpDataObject object (fpCFFiles format only).")]
+        void Add([in] BSTR bstrFilename, [in, optional] VARIANT vIndex);
+        [id(3), helpstring("Clears all filenames stored in the Files collection of a fpDataObject object (fpCFFiles format only).")]
+        void Clear();
+        [id(4), helpstring("Removes a filename from the Files collection of a fpDataObject object (fpCFFiles format only).")]
+        void Remove([in] VARIANT vIndex);
+        [id(0xfffffffc), propget, restricted]
+        IUnknown* _NewEnum;
+*/
+    properties:
+    methods:
+        [id(00000000), propget, helpstring("Returns a specific filename by index from the Files collection of a DataObject object (vbCFFiles format only)."), helpcontext(0x00033698)]
+        BSTR Item([in] long lIndex);
+        [id(0x00000001), propget, helpstring("Returns the number of filenames in the Files collection of a DataObject object (vbCFFiles format only)."), helpcontext(0x00033699)]
+        long Count();
+        [id(0x00000002), helpstring("Adds a filename to the Files collection of a DataObject object (vbCFFiles format only)."), helpcontext(0x0003369a)]
+        void Add(
+                        [in] BSTR bstrFilename, 
+                        [in, optional] VARIANT vIndex);
+        [id(0x00000003), helpstring("Clears all filenames stored in the Files collection of a DataObject object (vbCFFiles format only)."), helpcontext(0x0003369b)]
+        void Clear();
+        [id(0x00000004), helpstring("Removes a filename from the Files collection of a DataObject object (vbCFFiles format only)."), helpcontext(0x0003369c)]
+        void Remove([in] VARIANT vIndex);
+        [id(0xfffffffc), hidden]
+        IUnknown* _NewEnum();
+    };
+
+    [
+      uuid(69310C26-4993-11d1-8905-0020AF131A57), 
+      helpstring("A collection of strings which is the type of the Files property on the fpDataObject object.")
+    ]
+    coclass fpDataObjectFiles 
+	{
+        dispinterface IfpDataObjectFiles;
+    };
+
+    [
+      odl,
+      uuid(69310C27-4993-11d1-8905-0020AF131A57),
+	  hidden,
+	  nonextensible
+    ]
+    dispinterface IfpDataObject
+	{
+/*
+	properties:
+	methods:
+        [id(1), helpstring("Clears all data and formats in a fpDataObject object.")]
+        void Clear();
+        [id(2), helpstring("Retrieves data of a specified format from a fpDataObject object.")]
+        VARIANT GetData([in] short nFormat);
+        [id(3), helpstring("Determines if a specified clipboard format is supported by the fpDataObject object.")]
+        boolean GetFormat([in] short nFormat);
+        [id(4), helpstring("Adds a supported format and possibly its data to a fpDataObject object.")]
+        void SetData([in, optional] VARIANT vValue, [in, optional] VARIANT vFormat);
+        [id(5), propget, helpstring("A collection of filenames used by the fpCFFiles format.")]
+        IfpDataObjectFiles* Files;
+*/
+    properties:
+    methods:
+        [id(0x00000001), helpstring("Clears all data and formats in a DataObject object."), helpcontext(0x00033693)]
+        void Clear();
+        [id(0x00000002), helpstring("Retrieves data of a specified format from a DataObject object."), helpcontext(0x00033694)]
+        VARIANT GetData([in] short sFormat);
+        [id(0x00000003), helpstring("Determines if a specified clipboard format is supported by the DataObject object."), helpcontext(0x00033695)]
+        VARIANT_BOOL GetFormat([in] short sFormat);
+        [id(0x00000004), helpstring("Adds a supported format and possibly its data to a DataObject object."), helpcontext(0x00033696)]
+        void SetData(
+                        [in, optional] VARIANT vValue, 
+                        [in, optional] VARIANT vFormat);
+        [id(0x00000005), propget, helpstring("A collection of filenames used by the vbCFFiles format."), helpcontext(0x00033697)]
+//        IVBDataObjectFiles* Files();
+        IfpDataObjectFiles* Files();
+    };
+
+    [
+      uuid(69310C28-4993-11d1-8905-0020AF131A57),
+      helpstring("A container for data being transferred from a source to a target in an OLE drag/drop operation.")
+    ]
+    coclass fpDataObject 
+	{
+        dispinterface IfpDataObject;
+    };

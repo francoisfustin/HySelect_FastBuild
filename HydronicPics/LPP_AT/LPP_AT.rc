@@ -1,0 +1,90 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// French (Belgium) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRB)
+#ifdef _WIN32
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH_BELGIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// GIF
+//
+
+IDR_GIF1                GIF                     "res\\2WCV_01.gif"
+IDR_GIF2                GIF                     "res\\2WCV_M.gif"
+IDR_GIF3                GIF                     "res\\3WCV_01.gif"
+IDR_GIF4                GIF                     "res\\3WCV_M.gif"
+IDR_GIF5                GIF                     "res\\BV.gif"
+IDR_GIF6                GIF                     "res\\CHKV.gif"
+IDR_GIF7                GIF                     "res\\CS.gif"
+IDR_GIF8                GIF                     "res\\CSP.gif"
+IDR_GIF9                GIF                     "res\\DPC.gif"
+IDR_GIF10               GIF                     "res\\DPCF.gif"
+IDR_GIF11               GIF                     "res\\DPRV.gif"
+IDR_GIF12               GIF                     "res\\DPSCV.gif"
+IDR_GIF13               GIF                     "res\\DRV_L.gif"
+IDR_GIF14               GIF                     "res\\DRV_S.gif"
+IDR_GIF15               GIF                     "res\\FO.gif"
+IDR_GIF16               GIF                     "res\\RV.gif"
+IDR_GIF17               GIF                     "res\\SHV.gif"
+IDR_GIF18               GIF                     "res\\TBV-C.gif"
+IDR_GIF19               GIF                     "res\\TBV-CM.gif"
+IDR_GIF20               GIF                     "res\\TRV.gif"
+IDR_GIF21               GIF                     "res\\VSP.gif"
+#endif    // French (Belgium) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

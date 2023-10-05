@@ -1,0 +1,185 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// GIF
+//
+
+GIF_VERTICALWHITELINE   GIF                     "res\\VerticalWhiteLine.gif"
+GIF_DIGIT1              GIF                     "res\\Digit1.gif"
+GIF_DIGIT2              GIF                     "res\\Digit2.gif"
+GIF_DIGIT3              GIF                     "res\\Digit3.gif"
+GIF_DIGIT5              GIF                     "res\\Digit5.gif"
+GIF_DIGIT6              GIF                     "res\\Digit6.gif"
+GIF_DIGIT7              GIF                     "res\\Digit7.gif"
+GIF_DIGIT8              GIF                     "res\\Digit8.gif"
+GIF_DIGIT4              GIF                     "res\\Digit4.gif"
+GIF_INLET_ISI_ISI_25    GIF                     "res\\Inlet_ISI_ISI_25.gif"
+GIF_INLET_ISI_ISI_32    GIF                     "res\\Inlet_ISI_ISI_32.gif"
+GIF_INLET_ISI_STAD_25   GIF                     "res\\Inlet_ISI_STAD_25.gif"
+GIF_INLET_ISI_STAD_32   GIF                     "res\\Inlet_ISI_STAD_32.gif"
+GIF_INLET_ISI_STAV_25   GIF                     "res\\Inlet_ISI_STAV_25.gif"
+GIF_INLET_ISI_STAV_32   GIF                     "res\\Inlet_ISI_STAV_32.gif"
+GIF_INLET_STADPRIM_STAP_25 GIF                     "res\\Inlet_STADprim_STAP_25.gif"
+GIF_INLET_STADSEC_STAP_25 GIF                     "res\\Inlet_STADsec_STAP_25.gif"
+GIF_INLET_STADPRIM_STAP_32 GIF                     "res\\Inlet_STADprim_STAP_32.gif"
+GIF_INLET_STADSEC_STAP_32 GIF                     "res\\Inlet_STADsec_STAP_32.gif"
+GIF_STATION_PLUG        GIF                     "res\\Station_PLUG.gif"
+GIF_STATION_STAD15      GIF                     "res\\Station_STAD15.gif"
+GIF_STATION_STAD15_EXT  GIF                     "res\\Station_STAD15_Ext.gif"
+GIF_STATION_STAD20      GIF                     "res\\Station_STAD20.gif"
+GIF_STATION_STAD20_EXT  GIF                     "res\\Station_STAD20_Ext.gif"
+GIF_STATION_STAV15      GIF                     "res\\Station_STAV15.gif"
+GIF_STATION_STAV15_EXT  GIF                     "res\\Station_STAV15_Ext.gif"
+GIF_STATION_STAV20      GIF                     "res\\Station_STAV20.gif"
+GIF_STATION_STAV20_EXT  GIF                     "res\\Station_STAV20_Ext.gif"
+GIF_STATION_TBVC15      GIF                     "res\\Station_TBVC15.gif"
+GIF_STATION_TBVC15_EXT  GIF                     "res\\Station_TBVC15_Ext.gif"
+GIF_STATION_TBVC15_TSE  GIF                     "res\\Station_TBVC15_TSE.gif"
+GIF_STATION_TBVC15_TSE_EXT GIF                     "res\\Station_TBVC15_TSE_Ext.gif"
+GIF_STATION_TBVC15_TSEM GIF                     "res\\Station_TBVC15_TSEM.gif"
+GIF_STATION_TBVC15_TSEM_EXT GIF                     "res\\Station_TBVC15_TSEM_Ext.gif"
+GIF_STATION_TBVC20      GIF                     "res\\Station_TBVC20.gif"
+GIF_STATION_TBVC20_EXT  GIF                     "res\\Station_TBVC20_Ext.gif"
+GIF_STATION_TBVC20_TSE  GIF                     "res\\Station_TBVC20_TSE.gif"
+GIF_STATION_TBVC20_TSE_EXT GIF                     "res\\Station_TBVC20_TSE_Ext.gif"
+GIF_STATION_TBVC20_TSEM GIF                     "res\\Station_TBVC20_TSEM.gif"
+GIF_STATION_TBVC20_TSEM_EXT GIF                     "res\\Station_TBVC20_TSEM_Ext.gif"
+GIF_STATION_TBV15       GIF                     "res\\Station_TBV15.gif"
+GIF_STATION_TBV15_EXT   GIF                     "res\\Station_TBV15_Ext.gif"
+GIF_STATION_TBV20       GIF                     "res\\Station_TBV20.gif"
+GIF_STATION_TBV20_EXT   GIF                     "res\\Station_TBV20_Ext.gif"
+GIF_END                 GIF                     "res\\End.gif"
+GIF_BOX_4_ARROWS        GIF                     "res\\Box_4_Arrows.gif"
+GIF_BOX_6_ARROWS        GIF                     "res\\Box_6_Arrows.gif"
+GIF_BOX_8_ARROWS        GIF                     "res\\Box_8_Arrows.gif"
+GIF_LABELTAHUB          GIF                     "res\\Label_TA-HUB_8.gif"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 4,4,0,1
+ PRODUCTVERSION 4,4,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004e4"
+        BEGIN
+            VALUE "CompanyName", "IMI Hydronic Engineering SA"
+            VALUE "FileDescription", "HySelect HubSchemes DLL"
+            VALUE "FileVersion", "4.4.0.1"
+            VALUE "InternalName", "HubSchemes.dll"
+            VALUE "LegalCopyright", "Copyright (c) 2001.  All rights reserved."
+            VALUE "OriginalFilename", "HubSchemes.dll"
+            VALUE "ProductName", "HySelect Application"
+            VALUE "ProductVersion", "4.4.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1252
+    END
+END
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// French (Belgium) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRB)
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH_BELGIAN
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRB)\r\n"
+    "LANGUAGE 12, 2\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\HubSchemes.rc2""  // non_Microsoft Visual C__ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // French (Belgium) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRB)
+LANGUAGE 12, 2
+#pragma code_page(1252)
+#include "res\HubSchemes.rc2"  // non_Microsoft Visual C__ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,17 @@
+/*********
+* VBMSG.H
+**********/
+
+#define SSM_GETINFOFROMDESIGNER    0x0600
+#define SSM_SAVEINFOTODESIGNER     0x0601
+#define SSM_FIREEVENTPRINTABORT    0x0602
+#define SSM_POSTDATACHANGE         0x0603
+#define SSM_POSTADDNEW             0x0604
+#define SSM_BOUNDCLICK             0x0605
+#define SSM_LOADED                 0x0606
+#define SSM_FIREEVENTPRINTMSGOPEN  0x0607
+#define SSM_FIREEVENTPRINTMSGCLOSE 0x0608
+
+#ifdef FP_ADB
+#define SSM_FPDB_POSTMSG           0x0609
+#endif

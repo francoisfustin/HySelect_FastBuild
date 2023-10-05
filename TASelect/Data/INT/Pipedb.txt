@@ -1,0 +1,6389 @@
+////////////////////////////////////////////////////////////////
+//
+//		Pipedb.txt : Complement to Tadb.txt containing
+//					 pipe series and pipes definitions	
+//
+////////////////////////////////////////////////////////////////
+
+new:CTable(PIPE_TAB\1) -> ROOT_TABLE
+{
+	"Pipes"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+////////////////////////////////////////////////////////////////
+//
+//		Table PIPE_TAB : pipes
+//
+////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////
+//
+//	The pipes are organised as follows :
+//	-----------------------------------
+//
+//	in root table :
+//	CTable(Pipe)____CTable(CU AS ...)____CDB_Pipe(size1)
+//		      |			|__CDB_Pipe(size2)
+//		      |			|__ ...
+//		      |
+//		      |__CTable(CU BS ...)_____CDB_Pipe(size1)
+//		      |			|__CDB_Pipe(size2)
+//		      |			|__ ...
+//		      |
+//		      |__CTable(PEX)____CDB_Pipe(size1)
+//		      |	     |__CDB_Pipe(size2)
+//		      |		     |__ ...
+//			  .
+//			  .
+//
+//	How to write a pipe information ?
+//	--------------------------------- 
+//
+//	new:CDB_Pipe(ID)->tableID	Common CData syntax
+//	{
+//		{
+//			{
+//				0			isDeleted
+//				1			isAvailable
+//				0			isHidden
+//				1			isFix
+//				0			Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation )
+//				0			Free integer (bit 0: NotForIndSel, bit 1: NotForDirSel, bit 2: NotForHMCalc)
+//      		0			Sort integer (Allow to show a group of articles in the order defined with this variable).
+//			}
+//			Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+//			PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+//			Tmax in °C
+//			Tmin in °C
+//		}
+//		"Name"				Name of the pipe
+//		SizeID				Identifier of the corresp. valve size
+//		Di					Internal diameter in m
+//		Roughness			Roughness in m
+//	}
+// Inherited Fields
+//	CDB_Thing::Deleted
+//	CDB_Thing::Available
+//	CDB_Thing::Hidden
+//	CDB_Thing::Fixed
+//	CDB_Thing::FreeInt1
+//	CDB_Thing::FreeInt2
+//	CDB_Thing::SortInt
+//	CDB_Hydrothing::Tmin
+//	CDB_Hydrothing::Tmax
+//	CDB_Hydrothing::Pmax
+//	CDB_Hydrothing::PNRange
+//	CDB_Pipe::Name
+//	CDB_Pipe::SizeID
+//	CDB_Pipe::Di
+//	CDB_Pipe::Roughness
+//
+////////////////////////////////////////////////////////////////
+
+
+//****************************
+// Generic Steel Pipes series
+//****************************
+new:CTable(STEEL_GEN\1) -> PIPE_TAB
+{
+	"IDS_STEEL_GEN"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(STEEL_GEN_10\1) -> STEEL_GEN 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 2.0e+6
+		NO_ID
+		120.0
+		-273.0
+	}
+	"IDS_STEEL_GEN_10"
+	DN_10
+	1.25e-2
+	5.0e-5
+}
+
+new:CDB_Pipe(STEEL_GEN_15) -> STEEL_GEN 
+{ Inherited(STEEL_GEN_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_15"
+		CDB_Pipe::SizeID =	DN_15
+		CDB_Pipe::Di =		1.6e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_GEN_20) -> STEEL_GEN 
+{ Inherited(STEEL_GEN_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_20"
+		CDB_Pipe::SizeID =	DN_20
+		CDB_Pipe::Di =		2.16e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_GEN_25) -> STEEL_GEN 
+{ Inherited(STEEL_GEN_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_25"
+		CDB_Pipe::SizeID =	DN_25
+		CDB_Pipe::Di =		2.72e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_GEN_32) -> STEEL_GEN 
+{ Inherited(STEEL_GEN_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_32"
+		CDB_Pipe::SizeID =	DN_32
+		CDB_Pipe::Di =		3.59e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_GEN_40) -> STEEL_GEN 
+{ Inherited(STEEL_GEN_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_40"
+		CDB_Pipe::SizeID =	DN_40
+		CDB_Pipe::Di =		4.18e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_GEN_50) -> STEEL_GEN 
+{ Inherited(STEEL_GEN_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_50"
+		CDB_Pipe::SizeID =	DN_50
+		CDB_Pipe::Di =		5.3e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_GEN_65) -> STEEL_GEN 
+{ Inherited(STEEL_GEN_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_65"
+		CDB_Pipe::SizeID =	DN_65
+		CDB_Pipe::Di =		6.88e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_GEN_80) -> STEEL_GEN 
+{ Inherited(STEEL_GEN_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_80"
+		CDB_Pipe::SizeID =	DN_80
+		CDB_Pipe::Di =		8.08e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_GEN_100) -> STEEL_GEN 
+{ Inherited(STEEL_GEN_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_100"
+		CDB_Pipe::SizeID =	DN_100
+		CDB_Pipe::Di =		1.05e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_GEN_125) -> STEEL_GEN 
+{ Inherited(STEEL_GEN_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_125"
+		CDB_Pipe::SizeID =	DN_125
+		CDB_Pipe::Di =		1.3e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_GEN_150) -> STEEL_GEN 
+{ Inherited(STEEL_GEN_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_150"
+		CDB_Pipe::SizeID =	DN_150
+		CDB_Pipe::Di =		1.55e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_GEN_200) -> STEEL_GEN 
+{ Inherited(STEEL_GEN_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_200"
+		CDB_Pipe::SizeID =	DN_200
+		CDB_Pipe::Di =		2.07e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_GEN_250) -> STEEL_GEN 
+{ Inherited(STEEL_GEN_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_250"
+		CDB_Pipe::SizeID =	DN_250
+		CDB_Pipe::Di =		2.6e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_GEN_300) -> STEEL_GEN 
+{ Inherited(STEEL_GEN_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_300"
+		CDB_Pipe::SizeID =	DN_300
+		CDB_Pipe::Di =		3.1e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_GEN_350) -> STEEL_GEN 
+{ Inherited(STEEL_GEN_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_350"
+		CDB_Pipe::SizeID =	DN_350
+		CDB_Pipe::Di =		3.4e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_GEN_400) -> STEEL_GEN 
+{ Inherited(STEEL_GEN_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_400"
+		CDB_Pipe::SizeID =	DN_400
+		CDB_Pipe::Di =		3.89e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_GEN_450) -> STEEL_GEN 
+{ Inherited(STEEL_GEN_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_450"
+		CDB_Pipe::SizeID =	DN_450
+		CDB_Pipe::Di =		4.38e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_GEN_500) -> STEEL_GEN 
+{ Inherited(STEEL_GEN_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_500"
+		CDB_Pipe::SizeID =	DN_500
+		CDB_Pipe::Di =		4.89e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_GEN_600) -> STEEL_GEN 
+{ Inherited(STEEL_GEN_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_600"
+		CDB_Pipe::SizeID =	DN_600
+		CDB_Pipe::Di =		5.91e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_GEN_700) -> STEEL_GEN 
+{ Inherited(STEEL_GEN_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_700"
+		CDB_Pipe::SizeID =	DN_700
+		CDB_Pipe::Di =		6.92e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_GEN_800) -> STEEL_GEN 
+{ Inherited(STEEL_GEN_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_800"
+		CDB_Pipe::SizeID =	DN_800
+		CDB_Pipe::Di =		7.94e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_GEN_900) -> STEEL_GEN 
+{ Inherited(STEEL_GEN_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_900"
+		CDB_Pipe::SizeID =	DN_900
+		CDB_Pipe::Di =		8.95e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_GEN_1000) -> STEEL_GEN 
+{ Inherited(STEEL_GEN_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_1000"
+		CDB_Pipe::SizeID =	DN_1000
+		CDB_Pipe::Di =		9.97e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_GEN_1100) -> STEEL_GEN 
+{ Inherited(STEEL_GEN_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_1100"
+		CDB_Pipe::SizeID =	DN_1100
+		CDB_Pipe::Di =		1.099e+0
+	}
+}
+
+new:CDB_Pipe(STEEL_GEN_1200) -> STEEL_GEN 
+{ Inherited(STEEL_GEN_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_1200"
+		CDB_Pipe::SizeID =	DN_1200
+		CDB_Pipe::Di =		1.200e+0
+	}
+}
+
+//****************************
+// PN - 74200 Polish steel pipe
+//****************************
+new:CTable(STEEL_PN74200\1) -> PIPE_TAB
+{
+	"IDS_STEEL_PN74200"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(STEEL_PN74200_10\1) -> STEEL_PN74200 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 2.0e+6
+		NO_ID
+		120.0
+		-273.0
+	}
+	"IDS_STEEL_GEN_10"
+	DN_10
+	1.25e-2
+	1.0e-4
+}
+
+new:CDB_Pipe(STEEL_PN74200_15) -> STEEL_PN74200 
+{ Inherited(STEEL_PN74200_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_15"
+		CDB_Pipe::SizeID =	DN_15
+		CDB_Pipe::Di =		1.6e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74200_20) -> STEEL_PN74200 
+{ Inherited(STEEL_PN74200_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_20"
+		CDB_Pipe::SizeID =	DN_20
+		CDB_Pipe::Di =		2.16e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74200_25) -> STEEL_PN74200 
+{ Inherited(STEEL_PN74200_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_25"
+		CDB_Pipe::SizeID =	DN_25
+		CDB_Pipe::Di =		2.72e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74200_32) -> STEEL_PN74200 
+{ Inherited(STEEL_PN74200_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_32"
+		CDB_Pipe::SizeID =	DN_32
+		CDB_Pipe::Di =		3.59e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74200_40) -> STEEL_PN74200 
+{ Inherited(STEEL_PN74200_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_40"
+		CDB_Pipe::SizeID =	DN_40
+		CDB_Pipe::Di =		4.18e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74200_50) -> STEEL_PN74200 
+{ Inherited(STEEL_PN74200_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_50"
+		CDB_Pipe::SizeID =	DN_50
+		CDB_Pipe::Di =		5.3e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74200_65) -> STEEL_PN74200 
+{ Inherited(STEEL_PN74200_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_65"
+		CDB_Pipe::SizeID =	DN_65
+		CDB_Pipe::Di =		6.88e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74200_80) -> STEEL_PN74200 
+{ Inherited(STEEL_PN74200_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_80"
+		CDB_Pipe::SizeID =	DN_80
+		CDB_Pipe::Di =		8.08e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74200_100) -> STEEL_PN74200 
+{ Inherited(STEEL_PN74200_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_100"
+		CDB_Pipe::SizeID =	DN_100
+		CDB_Pipe::Di =		1.053e-1
+	}
+}
+
+//****************************
+// PN - 74219 Polish steel pipe
+//****************************
+new:CTable(STEEL_PN74219\1) -> PIPE_TAB
+{
+	"IDS_STEEL_PN74219"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(STEEL_PN74219_15\1) -> STEEL_PN74219 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 2.0e+6
+		NO_ID
+		120.0
+		-273.0
+	}
+	"IDS_STEEL_GEN_15"
+	DN_15
+	1.61e-2
+	1.e-4
+}
+
+new:CDB_Pipe(STEEL_PN74219_20) -> STEEL_PN74219 
+{ Inherited(STEEL_PN74219_15)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_20"
+		CDB_Pipe::SizeID =	DN_20
+		CDB_Pipe::Di =		2.17e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74219_25) -> STEEL_PN74219 
+{ Inherited(STEEL_PN74219_15)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_25"
+		CDB_Pipe::SizeID =	DN_25
+		CDB_Pipe::Di =		2.73e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74219_32) -> STEEL_PN74219 
+{ Inherited(STEEL_PN74219_15)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_32"
+		CDB_Pipe::SizeID =	DN_32
+		CDB_Pipe::Di =		3.6e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74219_40) -> STEEL_PN74219 
+{ Inherited(STEEL_PN74219_15)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_40"
+		CDB_Pipe::SizeID =	DN_40
+		CDB_Pipe::Di =		4.19e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74219_50) -> STEEL_PN74219 
+{ Inherited(STEEL_PN74219_15)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_50"
+		CDB_Pipe::SizeID =	DN_50
+		CDB_Pipe::Di =		5.31e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74219_65) -> STEEL_PN74219 
+{ Inherited(STEEL_PN74219_15)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_65"
+		CDB_Pipe::SizeID =	DN_65
+		CDB_Pipe::Di =		6.89e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74219_80) -> STEEL_PN74219 
+{ Inherited(STEEL_PN74219_15)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_80"
+		CDB_Pipe::SizeID =	DN_80
+		CDB_Pipe::Di =		8.09e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74219_100) -> STEEL_PN74219 
+{ Inherited(STEEL_PN74219_15)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_100"
+		CDB_Pipe::SizeID =	DN_100
+		CDB_Pipe::Di =		1.053e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74219_125) -> STEEL_PN74219 
+{ Inherited(STEEL_PN74219_15)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_125"
+		CDB_Pipe::SizeID =	DN_125
+		CDB_Pipe::Di =		1.297e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74219_150) -> STEEL_PN74219 
+{ Inherited(STEEL_PN74219_15)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_150"
+		CDB_Pipe::SizeID =	DN_150
+		CDB_Pipe::Di =		1.571e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74219_200) -> STEEL_PN74219 
+{ Inherited(STEEL_PN74219_15)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_200"
+		CDB_Pipe::SizeID =	DN_200
+		CDB_Pipe::Di =		2.049e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74219_250) -> STEEL_PN74219 
+{ Inherited(STEEL_PN74219_15)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_250"
+		CDB_Pipe::SizeID =	DN_250
+		CDB_Pipe::Di =		2.57e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74219_300) -> STEEL_PN74219 
+{ Inherited(STEEL_PN74219_15)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_300"
+		CDB_Pipe::SizeID =	DN_300
+		CDB_Pipe::Di =		3.079e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74219_350) -> STEEL_PN74219 
+{ Inherited(STEEL_PN74219_15)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_350"
+		CDB_Pipe::SizeID =	DN_350
+		CDB_Pipe::Di =		3.396e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74219_400) -> STEEL_PN74219 
+{ Inherited(STEEL_PN74219_15)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_400"
+		CDB_Pipe::SizeID =	DN_400
+		CDB_Pipe::Di =		3.888e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74219_450) -> STEEL_PN74219 
+{ Inherited(STEEL_PN74219_15)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_450"
+		CDB_Pipe::SizeID =	DN_450
+		CDB_Pipe::Di =		4.394e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74219_500) -> STEEL_PN74219 
+{ Inherited(STEEL_PN74219_15)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_500"
+		CDB_Pipe::SizeID =	DN_500
+		CDB_Pipe::Di =		4.904e-1
+	}
+}
+
+//****************************
+// PN - 74244 Polish steel pipe
+//****************************
+new:CTable(STEEL_PN74244\1) -> PIPE_TAB
+{
+	"IDS_STEEL_PN74244"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(STEEL_PN74244_10\1) -> STEEL_PN74244 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 2.0e+6
+		NO_ID
+		120.0
+		-273.0
+	}
+	"IDS_STEEL_GEN_10"
+	DN_10
+	1.26e-2
+	1.e-4
+}
+
+new:CDB_Pipe(STEEL_PN74244_15) -> STEEL_PN74244 
+{ Inherited(STEEL_PN74244_10)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_15"
+		CDB_Pipe::SizeID =	DN_15
+		CDB_Pipe::Di =		1.61e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74244_20) -> STEEL_PN74244 
+{ Inherited(STEEL_PN74244_15)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_20"
+		CDB_Pipe::SizeID =	DN_20
+		CDB_Pipe::Di =		2.17e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74244_25) -> STEEL_PN74244 
+{ Inherited(STEEL_PN74244_15)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_25"
+		CDB_Pipe::SizeID =	DN_25
+		CDB_Pipe::Di =		2.73e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74244_32) -> STEEL_PN74244 
+{ Inherited(STEEL_PN74244_15)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_32"
+		CDB_Pipe::SizeID =	DN_32
+		CDB_Pipe::Di =		3.6e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74244_40) -> STEEL_PN74244 
+{ Inherited(STEEL_PN74244_15)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_40"
+		CDB_Pipe::SizeID =	DN_40
+		CDB_Pipe::Di =		4.19e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74244_50) -> STEEL_PN74244 
+{ Inherited(STEEL_PN74244_15)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_50"
+		CDB_Pipe::SizeID =	DN_50
+		CDB_Pipe::Di =		5.31e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74244_65) -> STEEL_PN74244 
+{ Inherited(STEEL_PN74244_15)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_65"
+		CDB_Pipe::SizeID =	DN_65
+		CDB_Pipe::Di =		6.89e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74244_80) -> STEEL_PN74244 
+{ Inherited(STEEL_PN74244_15)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_80"
+		CDB_Pipe::SizeID =	DN_80
+		CDB_Pipe::Di =		8.09e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74244_100) -> STEEL_PN74244 
+{ Inherited(STEEL_PN74244_15)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_100"
+		CDB_Pipe::SizeID =	DN_100
+		CDB_Pipe::Di =		1.053e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74244_125) -> STEEL_PN74244 
+{ Inherited(STEEL_PN74244_15)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_125"
+		CDB_Pipe::SizeID =	DN_125
+		CDB_Pipe::Di =		1.297e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74244_150) -> STEEL_PN74244  
+{ Inherited(STEEL_PN74244_15)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_150"
+		CDB_Pipe::SizeID =	DN_150
+		CDB_Pipe::Di =		1.571e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74244_200) -> STEEL_PN74244  
+{ Inherited(STEEL_PN74244_15)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_200"
+		CDB_Pipe::SizeID =	DN_200
+		CDB_Pipe::Di =		2.049e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_PN74244_250) -> STEEL_PN74244  
+{ Inherited(STEEL_PN74244_15)
+	{
+		CDB_Pipe::Name =	"IDS_STEEL_GEN_250"
+		CDB_Pipe::SizeID =	DN_250
+		CDB_Pipe::Di =		2.57e-1
+	}
+}
+
+//****************************
+// Copper AS 1432-1990 series
+//****************************
+new:CTable(CU_AS\1) -> PIPE_TAB
+{
+	"IDS_CU_AS"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(CU_AS__6\1) -> CU_AS 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 8.0e+6
+		NO_ID
+		100.0
+		-273.0
+	}
+	"  6"
+	DN_10
+	5.0e-3
+	1.5e-6
+}
+
+new:CDB_Pipe(CU_AS__8) -> CU_AS 
+{ Inherited(CU_AS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 6.0e+6
+		CDB_Pipe::Name			=	"  8"
+		CDB_Pipe::SizeID		=	DN_10
+		CDB_Pipe::Di			=	6.54e-3
+	}
+}
+
+new:CDB_Pipe(CU_AS_10) -> CU_AS 
+{ Inherited(CU_AS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 7.0e+6
+		CDB_Pipe::Name			=	" 10"
+		CDB_Pipe::SizeID		=	DN_10
+		CDB_Pipe::Di			=	7.7e-3
+	}
+}
+
+new:CDB_Pipe(CU_AS_15) -> CU_AS 
+{ Inherited(CU_AS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 5.0e+6
+		CDB_Pipe::Name			=	" 15"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.08e-2
+	}
+}
+
+new:CDB_Pipe(CU_AS_18) -> CU_AS 
+{ Inherited(CU_AS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 5.0e+6
+		CDB_Pipe::Name			=	" 18"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.38e-2
+	}
+}
+
+new:CDB_Pipe(CU_AS_20) -> CU_AS 
+{ Inherited(CU_AS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 4.0e+6
+		CDB_Pipe::Name			=	" 20"
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	1.7e-2
+	}
+}
+
+new:CDB_Pipe(CU_AS_25) -> CU_AS 
+{ Inherited(CU_AS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 3.0e+6
+		CDB_Pipe::Name			=	" 25"
+		CDB_Pipe::SizeID		=	DN_25
+		CDB_Pipe::Di			=	2.3e-2
+	}
+}
+
+new:CDB_Pipe(CU_AS_32) -> CU_AS 
+{ Inherited(CU_AS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.5e+6
+		CDB_Pipe::Name			=	" 32"
+		CDB_Pipe::SizeID		=	DN_32
+		CDB_Pipe::Di			=	2.95e-2
+	}
+}
+
+new:CDB_Pipe(CU_AS_40) -> CU_AS 
+{ Inherited(CU_AS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.0e+6
+		CDB_Pipe::Name			=	" 40"
+		CDB_Pipe::SizeID		=	DN_40
+		CDB_Pipe::Di			=	3.57e-2
+	}
+}
+
+new:CDB_Pipe(CU_AS_50) -> CU_AS 
+{ Inherited(CU_AS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.5e+6
+		CDB_Pipe::Name			=	" 50"
+		CDB_Pipe::SizeID		=	DN_50
+		CDB_Pipe::Di			=	4.84e-2
+	}
+}
+
+new:CDB_Pipe(CU_AS_65) -> CU_AS 
+{ Inherited(CU_AS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.0e+6
+		CDB_Pipe::Name			=	" 65"
+		CDB_Pipe::SizeID		=	DN_65
+		CDB_Pipe::Di			=	6.11e-2
+	}
+}
+
+new:CDB_Pipe(CU_AS_80) -> CU_AS 
+{ Inherited(CU_AS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.2e+6
+		CDB_Pipe::Name			=	" 80"
+		CDB_Pipe::SizeID		=	DN_80
+		CDB_Pipe::Di			=	7.3e-2
+	}
+}
+
+new:CDB_Pipe(CU_AS_90) -> CU_AS 
+{ Inherited(CU_AS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.0e+6
+		CDB_Pipe::Name			=	" 90"
+		CDB_Pipe::SizeID		=	DN_80
+		CDB_Pipe::Di			=	8.57e-2
+	}
+}
+
+new:CDB_Pipe(CU_AS100) -> CU_AS 
+{ Inherited(CU_AS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.0e+6
+		CDB_Pipe::Name			=	"100"
+		CDB_Pipe::SizeID		=	DN_100
+		CDB_Pipe::Di			=	9.84e-2
+	}
+}
+
+new:CDB_Pipe(CU_AS125) -> CU_AS 
+{ Inherited(CU_AS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 8.0e+5
+		CDB_Pipe::Name			=	"125"
+		CDB_Pipe::SizeID		=	DN_125
+		CDB_Pipe::Di			=	1.24e-1
+	}
+}
+
+new:CDB_Pipe(CU_AS150) -> CU_AS 
+{ Inherited(CU_AS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 8.0e+5
+		CDB_Pipe::Name			=	"150"
+		CDB_Pipe::SizeID		=	DN_150
+		CDB_Pipe::Di			=	1.48e-1
+	}
+}
+
+new:CDB_Pipe(CU_AS200) -> CU_AS 
+{ Inherited(CU_AS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 6.0e+5
+		CDB_Pipe::Name			=	"200"
+		CDB_Pipe::SizeID		=	DN_200
+		CDB_Pipe::Di			=	1.99e-1
+	}
+}
+
+//****************************
+// Copper NF A 51 series
+//****************************
+new:CTable(CU_NF\1) -> PIPE_TAB
+{
+	"IDS_CU_NF"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+new:CTable(CU_NF_08\1) -> PIPE_TAB
+{
+	"IDS_CU_NF_08"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(CU_NF12x0.8\1) -> CU_NF_08 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 6.2e+6
+		NO_ID
+		110.0
+		-273.0
+	}
+	"12x0.8"
+	DN_10
+	1.04e-2
+	1.5e-6
+}
+
+new:CDB_Pipe(CU_NF14x0.8) -> CU_NF_08
+{ Inherited(CU_NF12x0.8)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 5.2e+6
+		CDB_Pipe::Name			=	"14x0.8"
+		CDB_Pipe::SizeID		=	DN_10
+		CDB_Pipe::Di			=	1.24e-2
+	}
+}
+
+new:CDB_Pipe(CU_NF15x0.8) -> CU_NF_08
+{ Inherited(CU_NF12x0.8)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 4.8e+6
+		CDB_Pipe::Name			=	"15x0.8"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.34e-2
+	}
+}
+
+new:CDB_Pipe(CU_NF16x0.8) -> CU_NF_08
+{ Inherited(CU_NF12x0.8)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 4.5e+6
+		CDB_Pipe::Name			=	"16x0.8"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.44e-2
+	}
+}
+
+new:CDB_Pipe(CU_NF18x0.8) -> CU_NF_08
+{ Inherited(CU_NF12x0.8)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 3.9e+6
+		CDB_Pipe::Name			=	"18x0.8"
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	1.64e-2
+	}
+}
+
+// HYS-1612: Above 18mm the norm stops !
+
+/////////////////////////////////////////////////
+//  1 mm
+/////////////////////////////////////////////////
+new:CDB_Pipe(CU_NF12x1) -> CU_NF 
+{ Inherited(CU_NF12x0.8)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 8.0e+6
+		CDB_Pipe::Name			=	"12x1"
+		CDB_Pipe::SizeID		=	DN_10
+		CDB_Pipe::Di			=	1.0e-2
+	}
+}
+
+new:CDB_Pipe(CU_NF14x1) -> CU_NF 
+{ Inherited(CU_NF12x0.8)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 6.7e+6
+		CDB_Pipe::Name			=	"14x1"
+		CDB_Pipe::SizeID		=	DN_10
+		CDB_Pipe::Di			=	1.2e-2
+	}
+}
+
+new:CDB_Pipe(CU_NF15x1) -> CU_NF 
+{ Inherited(CU_NF12x0.8)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 6.2e+6
+		CDB_Pipe::Name			=	"15x1"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.3e-2
+	}
+}
+
+new:CDB_Pipe(CU_NF16x1) -> CU_NF 
+{ Inherited(CU_NF12x0.8)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 5.7e+6
+		CDB_Pipe::Name			=	"16x1"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.4e-2
+	}
+}
+
+new:CDB_Pipe(CU_NF18x1) -> CU_NF 
+{ Inherited(CU_NF12x0.8)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 5.0e+6
+		CDB_Pipe::Name			=	"18x1"
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	1.6e-2
+	}
+}
+
+new:CDB_Pipe(CU_NF22x1) -> CU_NF 
+{ Inherited(CU_NF12x0.8)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 4.0e+6
+		CDB_Pipe::Name			=	"22x1"
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	2.0e-2
+	}
+}
+
+new:CDB_Pipe(CU_NF25x1) -> CU_NF 
+{ Inherited(CU_NF12x0.8)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 3.5e+6
+		CDB_Pipe::Name			=	"25x1"
+		CDB_Pipe::SizeID		=	DN_25
+		CDB_Pipe::Di			=	2.3e-2
+	}
+}
+
+new:CDB_Pipe(CU_NF28x1) -> CU_NF 
+{ Inherited(CU_NF12x0.8)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 3.1e+6
+		CDB_Pipe::Name			=	"28x1"
+		CDB_Pipe::SizeID		=	DN_25
+		CDB_Pipe::Di			=	2.6e-2
+	}
+}
+
+new:CDB_Pipe(CU_NF32x1) -> CU_NF 
+{ Inherited(CU_NF12x0.8)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.4e+6
+		CDB_Pipe::Name			=	"32x1"
+		CDB_Pipe::SizeID		=	DN_32
+		CDB_Pipe::Di			=	3.0e-2
+	}
+}
+
+new:CDB_Pipe(CU_NF35x1) -> CU_NF 
+{ Inherited(CU_NF12x0.8)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.4e+6
+		CDB_Pipe::Name			=	"35x1"
+		CDB_Pipe::SizeID		=	DN_32
+		CDB_Pipe::Di			=	3.3e-2
+	}
+}
+
+new:CDB_Pipe(CU_NF40x1) -> CU_NF 
+{ Inherited(CU_NF12x0.8)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.1e+6
+		CDB_Pipe::Name			=	"40x1"
+		CDB_Pipe::SizeID		=	DN_40
+		CDB_Pipe::Di			=	3.8e-2
+	}
+}
+
+new:CDB_Pipe(CU_NF42x1) -> CU_NF 
+{ Inherited(CU_NF12x0.8)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.0e+6
+		CDB_Pipe::Name			=	"42x1"
+		CDB_Pipe::SizeID		=	DN_40
+		CDB_Pipe::Di			=	4.0e-2
+	}
+}
+
+new:CDB_Pipe(CU_NF52x1) -> CU_NF 
+{ Inherited(CU_NF12x0.8)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.5e+6
+		CDB_Pipe::Name			=	"52x1"
+		CDB_Pipe::SizeID		=	DN_50
+		CDB_Pipe::Di			=	5.0e-2
+	}
+}
+
+new:CDB_Pipe(CU_NF54x1) -> CU_NF 
+{ Inherited(CU_NF12x0.8)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.5e+6
+		CDB_Pipe::Name			=	"54x1"
+		CDB_Pipe::SizeID		=	DN_50
+		CDB_Pipe::Di			=	5.2e-2
+	}
+}
+
+//****************************
+// Copper NF A 49-111 tarif 10 
+//
+// HYS-1621: It is in reality "Steel NF A 49-111 (T10)".
+// Remark: the norm has been replaced by "EN 10216-2 (T10)". But we keep "NF A 49-111 (T10)" to not disturb french peoples.
+// See in "Dropbox (eR-D)\eR-D\Tech Docs\Pipes\Series\" for more details.
+//
+//****************************
+
+// HYS-1621: It's not copper but well steel. But to not impact all old projects, we can't change the ID name and
+// we can't put it in deleted to create a new one. So, the ID name stay unchanged !
+// But "IDS_XXX" can be changed without problem.
+
+new:CTable(CU_NF_T10\1) -> PIPE_TAB
+{
+	"IDS_STEEL_NF_T10"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(CU_NFT10_33x2\1) -> CU_NF_T10
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 6.0e+6
+		NO_ID
+		300.0
+		-10.0
+	}
+	"33,7x2,6"
+	DN_25
+	2.85e-2
+	5.0e-5
+}
+
+new:CDB_Pipe(CU_NFT10_42x2) -> CU_NF_T10
+{ Inherited(CU_NFT10_33x2)
+	{
+		CDB_Pipe::Name			=	"42,4x2,6"
+		CDB_Pipe::SizeID		=	DN_32
+		CDB_Pipe::Di			=	3.72e-2
+	}
+}
+
+new:CDB_Pipe(CU_NFT10_48x2) -> CU_NF_T10
+{ Inherited(CU_NFT10_33x2)
+	{
+		CDB_Pipe::Name			=	"48,3x2,6"
+		CDB_Pipe::SizeID		=	DN_40
+		CDB_Pipe::Di			=	4.31e-2
+	}
+}
+
+new:CDB_Pipe(CU_NFT10_60x3) -> CU_NF_T10
+{ Inherited(CU_NFT10_33x2)
+	{
+		CDB_Pipe::Name			=	"60,3x2,9"
+		CDB_Pipe::SizeID		=	DN_50
+		CDB_Pipe::Di			=	5.45e-2
+	}
+}
+
+new:CDB_Pipe(CU_NFT10_70x3) -> CU_NF_T10
+{ Inherited(CU_NFT10_33x2)
+	{
+		CDB_Pipe::Name			=	"70x2,9"
+		CDB_Pipe::SizeID		=	DN_65
+		CDB_Pipe::Di			=	7.03e-2
+	}
+}
+
+new:CDB_Pipe(CU_NFT10_76x3) -> CU_NF_T10
+{ Inherited(CU_NFT10_33x2)
+	{
+		CDB_Pipe::Name			=	"76,1x2,9"
+		CDB_Pipe::SizeID		=	DN_65
+		CDB_Pipe::Di			=	7.03e-2
+	}
+}
+
+new:CDB_Pipe(CU_NFT10_88x3) -> CU_NF_T10
+{ Inherited(CU_NFT10_33x2)
+	{
+		CDB_Pipe::Name			=	"88,9x3,2"
+		CDB_Pipe::SizeID		=	DN_80
+		CDB_Pipe::Di			=	8.25e-2
+	}
+}
+
+new:CDB_Pipe(CU_NFT10_101x3) -> CU_NF_T10
+{ Inherited(CU_NFT10_33x2)
+	{
+		CDB_Pipe::Name			=	"101,6x3,6"
+		CDB_Pipe::SizeID		=	DN_100
+		CDB_Pipe::Di			=	9.44e-2
+	}
+}
+
+new:CDB_Pipe(CU_NFT10_114x3) -> CU_NF_T10
+{ Inherited(CU_NFT10_33x2)
+	{
+		CDB_Pipe::Name			=	"114,3x3,6"
+		CDB_Pipe::SizeID		=	DN_100
+		CDB_Pipe::Di			=	1.071e-1
+	}
+}
+
+new:CDB_Pipe(CU_NFT10_133x4) -> CU_NF_T10
+{ Inherited(CU_NFT10_33x2)
+	{
+		CDB_Pipe::Name			=	"133x4"
+		CDB_Pipe::SizeID		=	DN_125
+		CDB_Pipe::Di			=	1.25e-1
+	}
+}
+
+new:CDB_Pipe(CU_NFT10_139x4) -> CU_NF_T10
+{ Inherited(CU_NFT10_33x2)
+	{
+		CDB_Pipe::Name			=	"139,7x4"
+		CDB_Pipe::SizeID		=	DN_125
+		CDB_Pipe::Di			=	1.317e-1
+	}
+}
+
+new:CDB_Pipe(CU_NFT10_159x4) -> CU_NF_T10
+{ Inherited(CU_NFT10_33x2)
+	{
+		CDB_Pipe::Name			=	"159x4,5"
+		CDB_Pipe::SizeID		=	DN_150
+		CDB_Pipe::Di			=	1.50e-1
+	}
+}
+
+new:CDB_Pipe(CU_NFT10_168x4) -> CU_NF_T10
+{ Inherited(CU_NFT10_33x2)
+	{
+		CDB_Pipe::Name			=	"168,3x4,5"
+		CDB_Pipe::SizeID		=	DN_150
+		CDB_Pipe::Di			=	1.593e-1
+	}
+}
+
+new:CDB_Pipe(CU_NFT10_193x5) -> CU_NF_T10
+{ Inherited(CU_NFT10_33x2)
+	{
+		CDB_Pipe::Name			=	"193,7x5,4"
+		CDB_Pipe::SizeID		=	DN_150
+		CDB_Pipe::Di			=	1.829e-1
+	}
+}
+
+new:CDB_Pipe(CU_NFT10_219x6) -> CU_NF_T10
+{ Inherited(CU_NFT10_33x2)
+	{
+		CDB_Pipe::Name			=	"219,1x6,3"
+		CDB_Pipe::SizeID		=	DN_200
+		CDB_Pipe::Di			=	2.065e-1
+	}
+}
+
+new:CDB_Pipe(CU_NFT10_244x6) -> CU_NF_T10
+{ Inherited(CU_NFT10_33x2)
+	{
+		CDB_Pipe::Name			=	"244,5x6,3"
+		CDB_Pipe::SizeID		=	DN_200
+		CDB_Pipe::Di			=	2.319e-1
+	}
+}
+
+new:CDB_Pipe(CU_NFT10_273x6) -> CU_NF_T10
+{ Inherited(CU_NFT10_33x2)
+	{
+		CDB_Pipe::Name			=	"273x6,3"
+		CDB_Pipe::SizeID		=	DN_250
+		CDB_Pipe::Di			=	2.604e-1
+	}
+}
+
+new:CDB_Pipe(CU_NFT10_323x7) -> CU_NF_T10
+{ Inherited(CU_NFT10_33x2)
+	{
+		CDB_Pipe::Name			=	"323,9x7,1"
+		CDB_Pipe::SizeID		=	DN_300
+		CDB_Pipe::Di			=	3.097e-1
+	}
+}
+
+new:CDB_Pipe(CU_NFT10_355x8) -> CU_NF_T10
+{ Inherited(CU_NFT10_33x2)
+	{
+		CDB_Pipe::Name			=	"355,6x8"
+		CDB_Pipe::SizeID		=	DN_350
+		CDB_Pipe::Di			=	3.396e-1
+	}
+}
+
+new:CDB_Pipe(CU_NFT10_406x8) -> CU_NF_T10
+{ Inherited(CU_NFT10_33x2)
+	{
+		CDB_Pipe::Name			=	"406,4x8,8"
+		CDB_Pipe::SizeID		=	DN_400
+		CDB_Pipe::Di			=	3.888e-1
+	}
+}
+
+
+//****************************
+// Copper s/UNE 37/41 series
+//****************************
+new:CTable(CU_SUNE3741\1) -> PIPE_TAB
+{
+	"IDS_CU_SUNE3741"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(CU_SUNE3741_10\1) -> CU_SUNE3741 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 7.0e+6
+		NO_ID
+		100.0
+		-273.0
+	}
+	" 10"
+	DN_10
+	8.0e-3
+	1.5e-6
+}
+
+new:CDB_Pipe(CU_SUNE3741_12) -> CU_SUNE3741 
+{ Inherited(CU_SUNE3741_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 6.0e+6
+		CDB_Pipe::Name			=	" 12"
+		CDB_Pipe::SizeID		=	DN_10
+		CDB_Pipe::Di			=	1.0e-2
+	}
+}
+
+new:CDB_Pipe(CU_SUNE3741_15) -> CU_SUNE3741 
+{ Inherited(CU_SUNE3741_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 5.5e+6
+		CDB_Pipe::Name			=	" 15"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.3e-2
+	}
+}
+
+new:CDB_Pipe(CU_SUNE3741_18) -> CU_SUNE3741 
+{ Inherited(CU_SUNE3741_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 5.5e+6
+		CDB_Pipe::Name			=	" 18"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.6e-2
+	}
+}
+
+new:CDB_Pipe(CU_SUNE3741_22) -> CU_SUNE3741 
+{ Inherited(CU_SUNE3741_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 5.0e+6
+		CDB_Pipe::Name			=	" 22"
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	2.0e-2
+	}
+}
+
+new:CDB_Pipe(CU_SUNE3741_28) -> CU_SUNE3741 
+{ Inherited(CU_SUNE3741_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 4.0e+6
+		CDB_Pipe::Name			=	" 28"
+		CDB_Pipe::SizeID		=	DN_25
+		CDB_Pipe::Di			=	2.6e-2
+	}
+}
+
+new:CDB_Pipe(CU_SUNE3741_35) -> CU_SUNE3741 
+{ Inherited(CU_SUNE3741_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 3.5e+6
+		CDB_Pipe::Name			=	" 35"
+		CDB_Pipe::SizeID		=	DN_32
+		CDB_Pipe::Di			=	3.3e-2
+	}
+}
+
+new:CDB_Pipe(CU_SUNE3741_42) -> CU_SUNE3741 
+{ Inherited(CU_SUNE3741_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 3.0e+6
+		CDB_Pipe::Name			=	" 42"
+		CDB_Pipe::SizeID		=	DN_40
+		CDB_Pipe::Di			=	4.0e-2
+	}
+}
+
+new:CDB_Pipe(CU_SUNE3741_54) -> CU_SUNE3741 
+{ Inherited(CU_SUNE3741_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.5e+6
+		CDB_Pipe::Name			=	" 54"
+		CDB_Pipe::SizeID		=	DN_50
+		CDB_Pipe::Di			=	5.16e-2
+	}
+}
+
+//****************************
+// Copper EN 1057 X series 
+// (formerly BS 2871)
+//****************************
+new:CTable(CU_XBS\1) -> PIPE_TAB
+{
+	"IDS_CU_XBS"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(CU_XBS__6\1) -> CU_XBS
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 1.33e+7
+		NO_ID
+		100.0
+		-273.0
+	}
+	"  6"
+	DN_10
+	4.8e-3
+	1.5e-6
+}
+
+new:CDB_Pipe(CU_XBS__8) -> CU_XBS 
+{ Inherited(CU_XBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 9.7e+6
+		CDB_Pipe::Name			=	"  8"
+		CDB_Pipe::SizeID		=	DN_10
+		CDB_Pipe::Di			=	6.8e-3
+	}
+}
+
+new:CDB_Pipe(CU_XBS_10) -> CU_XBS 
+{ Inherited(CU_XBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 7.7e+6
+		CDB_Pipe::Name			=	" 10"
+		CDB_Pipe::SizeID		=	DN_10
+		CDB_Pipe::Di			=	8.8e-3
+	}
+}
+
+new:CDB_Pipe(CU_XBS_12) -> CU_XBS 
+{ Inherited(CU_XBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 6.3e+6
+		CDB_Pipe::Name			=	" 12"
+		CDB_Pipe::SizeID		=	DN_10
+		CDB_Pipe::Di			=	1.08e-2
+	}
+}
+
+new:CDB_Pipe(CU_XBS_15) -> CU_XBS 
+{ Inherited(CU_XBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 5.8e+6
+		CDB_Pipe::Name			=	" 15"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.36e-2
+	}
+}
+
+new:CDB_Pipe(CU_XBS_18) -> CU_XBS 
+{ Inherited(CU_XBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 5.6e+6
+		CDB_Pipe::Name			=	" 18"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.64e-2
+	}
+}
+
+new:CDB_Pipe(CU_XBS_22) -> CU_XBS 
+{ Inherited(CU_XBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 5.1e+6
+		CDB_Pipe::Name			=	" 22"
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	2.02e-2
+	}
+}
+
+new:CDB_Pipe(CU_XBS_28) -> CU_XBS 
+{ Inherited(CU_XBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 4.0e+6
+		CDB_Pipe::Name			=	" 28"
+		CDB_Pipe::SizeID		=	DN_25
+		CDB_Pipe::Di			=	2.62e-2
+	}
+}
+
+new:CDB_Pipe(CU_XBS_35) -> CU_XBS 
+{ Inherited(CU_XBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 4.2e+6
+		CDB_Pipe::Name			=	" 35"
+		CDB_Pipe::SizeID		=	DN_32
+		CDB_Pipe::Di			=	3.26e-2
+	}
+}
+
+new:CDB_Pipe(CU_XBS_42) -> CU_XBS 
+{ Inherited(CU_XBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 3.5e+6
+		CDB_Pipe::Name			=	" 42"
+		CDB_Pipe::SizeID		=	DN_40
+		CDB_Pipe::Di			=	3.96e-2
+	}
+}
+
+new:CDB_Pipe(CU_XBS_54) -> CU_XBS 
+{ Inherited(CU_XBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.7e+6
+		CDB_Pipe::Name			=	" 54"
+		CDB_Pipe::SizeID		=	DN_50
+		CDB_Pipe::Di			=	5.16e-2
+	}
+}
+
+new:CDB_Pipe(CU_XBS_67) -> CU_XBS 
+{ Inherited(CU_XBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.0e+6
+		CDB_Pipe::Name			=	" 66.7"
+		CDB_Pipe::SizeID		=	DN_65
+		CDB_Pipe::Di			=	6.43e-2
+	}
+}
+
+new:CDB_Pipe(CU_XBS_76.1) -> CU_XBS 
+{ Inherited(CU_XBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.4e+6
+		CDB_Pipe::Name			=	" 76.1"
+		CDB_Pipe::SizeID		=	DN_65
+		CDB_Pipe::Di			=	7.31e-2
+	}
+}
+
+new:CDB_Pipe(CU_XBS108) -> CU_XBS 
+{ Inherited(CU_XBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.7e+6
+		CDB_Pipe::Name			=	"108"
+		CDB_Pipe::SizeID		=	DN_100
+		CDB_Pipe::Di			=	1.05e-1
+	}
+}
+
+new:CDB_Pipe(CU_XBS133) -> CU_XBS 
+{ Inherited(CU_XBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.4e+6
+		CDB_Pipe::Name			=	"133"
+		CDB_Pipe::SizeID		=	DN_125
+		CDB_Pipe::Di			=	1.3e-1
+	}
+}
+
+new:CDB_Pipe(CU_XBS159) -> CU_XBS 
+{ Inherited(CU_XBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.5e+6
+		CDB_Pipe::Name			=	"159"
+		CDB_Pipe::SizeID		=	DN_150
+		CDB_Pipe::Di			=	1.55e-1
+	}
+}
+
+//****************************
+// Copper EN 1057 Y series 
+// (formerly BS 2871)
+//****************************
+new:CTable(CU_YBS\1) -> PIPE_TAB
+{
+	"IDS_CU_YBS"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(CU_YBS__6\1) -> CU_YBS 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 1.88e+7
+		NO_ID
+		100.0
+		-273.0
+	}
+	"  6"
+	DN_10
+	4.4e-3
+	1.5e-6
+}
+
+new:CDB_Pipe(CU_YBS__8) -> CU_YBS 
+{ Inherited(CU_YBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.36e+7
+		CDB_Pipe::Name			=	"  8"
+		CDB_Pipe::SizeID		=	DN_10
+		CDB_Pipe::Di			=	6.4e-3
+	}
+}
+
+new:CDB_Pipe(CU_YBS_10) -> CU_YBS 
+{ Inherited(CU_YBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.06e+7
+		CDB_Pipe::Name			=	" 10"
+		CDB_Pipe::SizeID		=	DN_10
+		CDB_Pipe::Di			=	8.4e-3
+	}
+}
+
+new:CDB_Pipe(CU_YBS_12) -> CU_YBS 
+{ Inherited(CU_YBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 8.7e+6
+		CDB_Pipe::Name			=	" 12"
+		CDB_Pipe::SizeID		=	DN_10
+		CDB_Pipe::Di			=	1.04e-2
+	}
+}
+
+new:CDB_Pipe(CU_YBS_15) -> CU_YBS 
+{ Inherited(CU_YBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 8.7e+6
+		CDB_Pipe::Name			=	" 15"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.3e-2
+	}
+}
+
+new:CDB_Pipe(CU_YBS_18) -> CU_YBS 
+{ Inherited(CU_YBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 7.2e+6
+		CDB_Pipe::Name			=	" 18"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.6e-2
+	}
+}
+
+new:CDB_Pipe(CU_YBS_22) -> CU_YBS 
+{ Inherited(CU_YBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 6.9e+6
+		CDB_Pipe::Name			=	" 22"
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	1.96e-2
+	}
+}
+
+new:CDB_Pipe(CU_YBS_28) -> CU_YBS 
+{ Inherited(CU_YBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 5.5e+6
+		CDB_Pipe::Name			=	" 28"
+		CDB_Pipe::SizeID		=	DN_25
+		CDB_Pipe::Di			=	2.56e-2
+	}
+}
+
+new:CDB_Pipe(CU_YBS_35) -> CU_YBS 
+{ Inherited(CU_YBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 5.4e+6
+		CDB_Pipe::Name			=	" 35"
+		CDB_Pipe::SizeID		=	DN_32
+		CDB_Pipe::Di			=	3.2e-2
+	}
+}
+
+new:CDB_Pipe(CU_YBS_42) -> CU_YBS 
+{ Inherited(CU_YBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 4.5e+6
+		CDB_Pipe::Name			=	" 42"
+		CDB_Pipe::SizeID		=	DN_40
+		CDB_Pipe::Di			=	3.9e-2
+	}
+}
+
+new:CDB_Pipe(CU_YBS_54) -> CU_YBS 
+{ Inherited(CU_YBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 4.7e+6
+		CDB_Pipe::Name			=	" 54"
+		CDB_Pipe::SizeID		=	DN_50
+		CDB_Pipe::Di			=	5.0e-2
+	}
+}
+
+new:CDB_Pipe(CU_YBS_67) -> CU_YBS 
+{ Inherited(CU_YBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 3.7e+6
+		CDB_Pipe::Name			=	" 67"
+		CDB_Pipe::SizeID		=	DN_65
+		CDB_Pipe::Di			=	6.27e-2
+	}
+}
+
+new:CDB_Pipe(CU_YBS_76.1) -> CU_YBS 
+{ Inherited(CU_YBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 3.3e+6
+		CDB_Pipe::Name			=	" 76.1"
+		CDB_Pipe::SizeID		=	DN_65
+		CDB_Pipe::Di			=	7.41e-2
+	}
+}
+
+new:CDB_Pipe(CU_YBS108) -> CU_YBS 
+{ Inherited(CU_YBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.9e+6
+		CDB_Pipe::Name			=	"108"
+		CDB_Pipe::SizeID		=	DN_100
+		CDB_Pipe::Di			=	1.03e-1
+	}
+}
+
+//****************************
+// Copper EN 1057 Z series 
+// (formerly BS 2871)
+//****************************
+new:CTable(CU_ZBS\1) -> PIPE_TAB
+{
+	"IDS_CU_ZBS"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(CU_ZBS__6\1) -> CU_ZBS 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 1.13e+7
+		NO_ID
+		100.0
+		-273.0
+	}
+	"  6"
+	DN_10
+	5.0e-3
+	1.5e-6
+}
+
+new:CDB_Pipe(CU_ZBS__8) -> CU_ZBS 
+{ Inherited(CU_ZBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 9.8e+6
+		CDB_Pipe::Name			=	"  8"
+		CDB_Pipe::SizeID		=	DN_10
+		CDB_Pipe::Di			=	7.0e-3
+	}
+}
+
+new:CDB_Pipe(CU_ZBS_10) -> CU_ZBS 
+{ Inherited(CU_ZBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 7.8e+6
+		CDB_Pipe::Name			=	" 10"
+		CDB_Pipe::SizeID		=	DN_10
+		CDB_Pipe::Di			=	9.0e-3
+	}
+}
+
+new:CDB_Pipe(CU_ZBS_12) -> CU_ZBS 
+{ Inherited(CU_ZBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 6.4e+6
+		CDB_Pipe::Name			=	" 12"
+		CDB_Pipe::SizeID		=	DN_10
+		CDB_Pipe::Di			=	1.1e-2
+	}
+}
+
+new:CDB_Pipe(CU_ZBS_15) -> CU_ZBS 
+{ Inherited(CU_ZBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 5.0e+6
+		CDB_Pipe::Name			=	" 15"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.4e-2
+	}
+}
+
+new:CDB_Pipe(CU_ZBS_18) -> CU_ZBS 
+{ Inherited(CU_ZBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 5.0e+6
+		CDB_Pipe::Name			=	" 18"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.68e-2
+	}
+}
+
+new:CDB_Pipe(CU_ZBS_22) -> CU_ZBS 
+{ Inherited(CU_ZBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 4.1e+6
+		CDB_Pipe::Name			=	" 22"
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	2.08e-2
+	}
+}
+
+new:CDB_Pipe(CU_ZBS_28) -> CU_ZBS 
+{ Inherited(CU_ZBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 3.2e+6
+		CDB_Pipe::Name			=	" 28"
+		CDB_Pipe::SizeID		=	DN_25
+		CDB_Pipe::Di			=	2.68e-2
+	}
+}
+
+new:CDB_Pipe(CU_ZBS_35) -> CU_ZBS 
+{ Inherited(CU_ZBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 3.0e+6
+		CDB_Pipe::Name			=	" 35"
+		CDB_Pipe::SizeID		=	DN_32
+		CDB_Pipe::Di			=	3.36e-2
+	}
+}
+
+new:CDB_Pipe(CU_ZBS_42) -> CU_ZBS 
+{ Inherited(CU_ZBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.8e+6
+		CDB_Pipe::Name			=	" 42"
+		CDB_Pipe::SizeID		=	DN_40
+		CDB_Pipe::Di			=	4.04e-2
+	}
+}
+
+new:CDB_Pipe(CU_ZBS_54) -> CU_ZBS 
+{ Inherited(CU_ZBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.5e+6
+		CDB_Pipe::Name			=	" 54"
+		CDB_Pipe::SizeID		=	DN_50
+		CDB_Pipe::Di			=	5.22e-2
+	}
+}
+
+new:CDB_Pipe(CU_ZBS_67) -> CU_ZBS 
+{ Inherited(CU_ZBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.0e+6
+		CDB_Pipe::Name			=	" 66.7"
+		CDB_Pipe::SizeID		=	DN_65
+		CDB_Pipe::Di			=	6.47e-2
+	}
+}
+
+new:CDB_Pipe(CU_ZBS_76.1) -> CU_ZBS 
+{ Inherited(CU_ZBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.9e+6
+		CDB_Pipe::Name			=	" 76.3"
+		CDB_Pipe::SizeID		=	DN_65
+		CDB_Pipe::Di			=	7.39e-2
+	}
+}
+
+new:CDB_Pipe(CU_ZBS108) -> CU_ZBS 
+{ Inherited(CU_ZBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.7e+6
+		CDB_Pipe::Name			=	"108"
+		CDB_Pipe::SizeID		=	DN_100
+		CDB_Pipe::Di			=	1.056e-1
+	}
+}
+
+new:CDB_Pipe(CU_ZBS133) -> CU_ZBS 
+{ Inherited(CU_ZBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.6e+6
+		CDB_Pipe::Name			=	"133"
+		CDB_Pipe::SizeID		=	DN_125
+		CDB_Pipe::Di			=	1.3e-1
+	}
+}
+
+new:CDB_Pipe(CU_ZBS159) -> CU_ZBS 
+{ Inherited(CU_ZBS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.5e+6
+		CDB_Pipe::Name			=	"159.5"
+		CDB_Pipe::SizeID		=	DN_150
+		CDB_Pipe::Di			=	1.565e-1
+	}
+}
+
+//*******************************
+// ISO 274, Copper DS 2110 series
+//*******************************
+new:CTable(CU_ISO274\1) -> PIPE_TAB
+{
+	"IDS_CU_ISO274"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(CU_ISO274___6\1) -> CU_ISO274 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 1.6e+6
+		NO_ID
+		110.0
+		-273.0
+	}
+	"  6x0.8"
+	DN_10
+	4.4e-3
+	1.5e-6
+}
+
+new:CDB_Pipe(CU_ISO274___8) -> CU_ISO274 
+{ Inherited(CU_ISO274___6)
+	{
+		CDB_Pipe::Name			=	"  8x0.8"
+		CDB_Pipe::SizeID		=	DN_10
+		CDB_Pipe::Di			=	6.4e-3
+	}
+}
+
+new:CDB_Pipe(CU_ISO274__10) -> CU_ISO274 
+{ Inherited(CU_ISO274___6)
+	{
+		CDB_Pipe::Name			=	" 10x0.8"
+		CDB_Pipe::SizeID		=	DN_10
+		CDB_Pipe::Di			=	8.4e-3
+	}
+}
+
+new:CDB_Pipe(CU_ISO274__12) -> CU_ISO274 
+{ Inherited(CU_ISO274___6)
+	{
+		CDB_Pipe::Name			=	" 12x1"
+		CDB_Pipe::SizeID		=	DN_10
+		CDB_Pipe::Di			=	1.0e-2
+	}
+}
+
+new:CDB_Pipe(CU_ISO274__15) -> CU_ISO274 
+{ Inherited(CU_ISO274___6)
+	{
+		CDB_Pipe::Name			=	" 15x1"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.3e-2
+	}
+}
+
+new:CDB_Pipe(CU_ISO274__18) -> CU_ISO274 
+{ Inherited(CU_ISO274___6)
+	{
+		CDB_Pipe::Name			=	" 18x1"
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	1.6e-2
+	}
+}
+
+new:CDB_Pipe(CU_ISO274__22) -> CU_ISO274 
+{ Inherited(CU_ISO274___6)
+	{
+		CDB_Pipe::Name			=	" 22x1"
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	2.0e-2
+	}
+}
+
+new:CDB_Pipe(CU_ISO274__28) -> CU_ISO274 
+{ Inherited(CU_ISO274___6)
+	{
+		CDB_Pipe::Name			=	" 28x1.2"
+		CDB_Pipe::SizeID		=	DN_25
+		CDB_Pipe::Di			=	2.56e-2
+	}
+}
+
+new:CDB_Pipe(CU_ISO274__35) -> CU_ISO274 
+{ Inherited(CU_ISO274___6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.0e+6
+		CDB_Pipe::Name			=	" 35x1.5"
+		CDB_Pipe::SizeID		=	DN_32
+		CDB_Pipe::Di			=	3.2e-2
+	}
+}
+
+new:CDB_Pipe(CU_ISO274__42) -> CU_ISO274 
+{ Inherited(CU_ISO274___6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.0e+6
+		CDB_Pipe::Name			=	" 42x1.5"
+		CDB_Pipe::SizeID		=	DN_40
+		CDB_Pipe::Di			=	3.9e-2
+	}
+}
+
+new:CDB_Pipe(CU_ISO274__54A) -> CU_ISO274 
+{ Inherited(CU_ISO274___6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.0e+6
+		CDB_Pipe::Name			=	" 54x1.5"
+		CDB_Pipe::SizeID		=	DN_50
+		CDB_Pipe::Di			=	5.1e-2
+	}
+}
+
+*new:CDB_Pipe(CU_ISO274__54B\1) -> CU_ISO274 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 1.0e+6
+		NO_ID
+		110.0
+		-273.0
+	}
+	" 54x0.8"
+	DN_50
+	5.24e-2
+	1.5e-6
+}
+
+new:CDB_Pipe(CU_ISO274__64) -> CU_ISO274 
+{ Inherited(CU_ISO274___6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.0e+6
+		CDB_Pipe::Name			=	" 64x2.0"
+		CDB_Pipe::SizeID		=	DN_50
+		CDB_Pipe::Di			=	6.0e-2
+	}
+}
+
+new:CDB_Pipe(CU_ISO274__76) -> CU_ISO274 
+{ Inherited(CU_ISO274___6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.0e+6
+		CDB_Pipe::Name			=	" 76.1x2.0"
+		CDB_Pipe::SizeID		=	DN_65
+		CDB_Pipe::Di			=	7.21e-2
+	}
+}
+
+new:CDB_Pipe(CU_ISO274__88) -> CU_ISO274 
+{ Inherited(CU_ISO274___6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.0e+6
+		CDB_Pipe::Name			=	" 88.9x2.0"
+		CDB_Pipe::SizeID		=	DN_80
+		CDB_Pipe::Di			=	8.49e-2
+	}
+}
+
+new:CDB_Pipe(CU_ISO274_108) -> CU_ISO274 
+{ Inherited(CU_ISO274___6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.0e+6
+		CDB_Pipe::Name			=	"108x2.0"
+		CDB_Pipe::SizeID		=	DN_100
+		CDB_Pipe::Di			=	1.04e-1
+	}
+}
+
+//****************************
+// Copper US Type K series
+//****************************
+new:CTable(CU_USTK\1) -> PIPE_TAB
+{
+	"IDS_CU_USTK"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(CU_USTK_10\1) -> CU_USTK 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 1.16e+7
+		NO_ID
+		121.1
+		-273.0
+	}
+	"3/8""
+	DN_10
+	1.02108e-2
+	1.5e-6
+}
+
+new:CDB_Pipe(CU_USTK_15) -> CU_USTK 
+{ Inherited(CU_USTK_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 9.25e+6
+		CDB_Pipe::Name			=	"1/2""
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.338580e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTK_18) -> CU_USTK 
+{ Inherited(CU_USTK_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 7.7e+6
+		CDB_Pipe::Name			=	"5/8""
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.65608e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTK_20) -> CU_USTK 
+{ Inherited(CU_USTK_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 8.76e+6
+		CDB_Pipe::Name			=	"3/4""
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	1.8923e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTK_25) -> CU_USTK 
+{ Inherited(CU_USTK_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 6.81e+6
+		CDB_Pipe::Name			=	"1""
+		CDB_Pipe::SizeID		=	DN_25
+		CDB_Pipe::Di			=	2.53746e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTK_32) -> CU_USTK 
+{ Inherited(CU_USTK_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 5.57e+6
+		CDB_Pipe::Name			=	" 1¼""
+		CDB_Pipe::SizeID		=	DN_32
+		CDB_Pipe::Di			=	3.1623e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTK_40) -> CU_USTK 
+{ Inherited(CU_USTK_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 5.23e+6
+		CDB_Pipe::Name			=	" 1½""
+		CDB_Pipe::SizeID		=	DN_40
+		CDB_Pipe::Di			=	3.76174e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTK_50) -> CU_USTK 
+{ Inherited(CU_USTK_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 4.61e+6
+		CDB_Pipe::Name			=	"2""
+		CDB_Pipe::SizeID		=	DN_50
+		CDB_Pipe::Di			=	4.97586e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTK_65) -> CU_USTK 
+{ Inherited(CU_USTK_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 4.27e+6
+		CDB_Pipe::Name			=	" 2½""
+		CDB_Pipe::SizeID		=	DN_65
+		CDB_Pipe::Di			=	6.1849e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTK_80) -> CU_USTK 
+{ Inherited(CU_USTK_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 4.11e+6
+		CDB_Pipe::Name			=	"3""
+		CDB_Pipe::SizeID		=	DN_80
+		CDB_Pipe::Di			=	7.38378e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTK_90) -> CU_USTK 
+{ Inherited(CU_USTK_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 3.9e+6
+		CDB_Pipe::Name			=	"3½""
+		CDB_Pipe::SizeID		=	DN_80
+		CDB_Pipe::Di			=	8.5979e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTK100) -> CU_USTK 
+{ Inherited(CU_USTK_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 3.83e+6
+		CDB_Pipe::Name			=	"4""
+		CDB_Pipe::SizeID		=	DN_100
+		CDB_Pipe::Di			=	9.79678e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTK125) -> CU_USTK 
+{ Inherited(CU_USTK_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 3.68e+6
+		CDB_Pipe::Name			=	"5""
+		CDB_Pipe::SizeID		=	DN_125
+		CDB_Pipe::Di			=	1.22047e-1
+	}
+}
+
+new:CDB_Pipe(CU_USTK150) -> CU_USTK 
+{ Inherited(CU_USTK_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 3.7e+6
+		CDB_Pipe::Name			=	"6""
+		CDB_Pipe::SizeID		=	DN_150
+		CDB_Pipe::Di			=	1.458214e-1
+	}
+}
+
+new:CDB_Pipe(CU_USTK200) -> CU_USTK 
+{ Inherited(CU_USTK_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 3.93e+6
+		CDB_Pipe::Name			=	"8""
+		CDB_Pipe::SizeID		=	DN_200
+		CDB_Pipe::Di			=	1.926082e-1
+	}
+}
+
+new:CDB_Pipe(CU_USTK250) -> CU_USTK 
+{ Inherited(CU_USTK_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 3.94e+6
+		CDB_Pipe::Name			=	"10""
+		CDB_Pipe::SizeID		=	DN_250
+		CDB_Pipe::Di			=	2.400046e-1
+	}
+}
+
+new:CDB_Pipe(CU_USTK300) -> CU_USTK 
+{ Inherited(CU_USTK_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 3.94e+6
+		CDB_Pipe::Name			=	"12""
+		CDB_Pipe::SizeID		=	DN_300
+		CDB_Pipe::Di			=	2.87401e-1
+	}
+}
+
+//****************************
+// Copper US Type L series
+//****************************
+new:CTable(CU_USTL\1) -> PIPE_TAB
+{
+	"IDS_CU_USTL"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(CU_USTL_10\1) -> CU_USTL 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 8.25e+6
+		NO_ID
+		121.1
+		-273.0
+	}
+	"3/8""
+	DN_10
+	1.0922e-2
+	1.5e-6
+}
+
+new:CDB_Pipe(CU_USTL_15) -> CU_USTL 
+{ Inherited(CU_USTL_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 7.54e+6
+		CDB_Pipe::Name			=	"1/2""
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.3843e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTL_18) -> CU_USTL 
+{ Inherited(CU_USTL_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 6.61e+6
+		CDB_Pipe::Name			=	"5/8""
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.69164e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTL_20) -> CU_USTL 
+{ Inherited(CU_USTL_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 6.06e+6
+		CDB_Pipe::Name			=	"3/4""
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	1.9939e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTL_25) -> CU_USTL 
+{ Inherited(CU_USTL_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 5.24e+6
+		CDB_Pipe::Name			=	"1""
+		CDB_Pipe::SizeID		=	DN_25
+		CDB_Pipe::Di			=	2.6035e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTL_32) -> CU_USTL 
+{ Inherited(CU_USTL_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 4.72e+6
+		CDB_Pipe::Name			=	" 1¼""
+		CDB_Pipe::SizeID		=	DN_32
+		CDB_Pipe::Di			=	3.2131e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTL_40) -> CU_USTL 
+{ Inherited(CU_USTL_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 4.35e+6
+		CDB_Pipe::Name			=	" 1½""
+		CDB_Pipe::SizeID		=	DN_40
+		CDB_Pipe::Di			=	3.8227e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTL_50) -> CU_USTL 
+{ Inherited(CU_USTL_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 3.95e+6
+		CDB_Pipe::Name			=	"2""
+		CDB_Pipe::SizeID		=	DN_50
+		CDB_Pipe::Di			=	5.0419e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTL_65) -> CU_USTL 
+{ Inherited(CU_USTL_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 3.59e+6
+		CDB_Pipe::Name			=	" 2½""
+		CDB_Pipe::SizeID		=	DN_65
+		CDB_Pipe::Di			=	6.2611e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTL_80) -> CU_USTL 
+{ Inherited(CU_USTL_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 3.39e+6
+		CDB_Pipe::Name			=	"3""
+		CDB_Pipe::SizeID		=	DN_80
+		CDB_Pipe::Di			=	7.4803e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTL_90) -> CU_USTL 
+{ Inherited(CU_USTL_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 3.25e+6
+		CDB_Pipe::Name			=	"3½""
+		CDB_Pipe::SizeID		=	DN_80
+		CDB_Pipe::Di			=	8.6995e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTL100) -> CU_USTL 
+{ Inherited(CU_USTL_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 3.14e+6
+		CDB_Pipe::Name			=	"4""
+		CDB_Pipe::SizeID		=	DN_100
+		CDB_Pipe::Di			=	9.9187e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTL125) -> CU_USTL 
+{ Inherited(CU_USTL_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.88e+6
+		CDB_Pipe::Name			=	"5""
+		CDB_Pipe::SizeID		=	DN_125
+		CDB_Pipe::Di			=	1.23825e-1
+	}
+}
+
+new:CDB_Pipe(CU_USTL150) -> CU_USTL 
+{ Inherited(CU_USTL_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.7e+6
+		CDB_Pipe::Name			=	"6""
+		CDB_Pipe::SizeID		=	DN_150
+		CDB_Pipe::Di			=	1.48463e-1
+	}
+}
+
+new:CDB_Pipe(CU_USTL200) -> CU_USTL 
+{ Inherited(CU_USTL_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.9e+6
+		CDB_Pipe::Name			=	"8""
+		CDB_Pipe::SizeID		=	DN_200
+		CDB_Pipe::Di			=	1.96215e-1
+	}
+}
+
+new:CDB_Pipe(CU_USTL250) -> CU_USTL 
+{ Inherited(CU_USTL_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.91e+6
+		CDB_Pipe::Name			=	"10""
+		CDB_Pipe::SizeID		=	DN_250
+		CDB_Pipe::Di			=	2.44475e-1
+	}
+}
+
+new:CDB_Pipe(CU_USTL300) -> CU_USTL 
+{ Inherited(CU_USTL_10)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.72e+6
+		CDB_Pipe::Name			=	"12""
+		CDB_Pipe::SizeID		=	DN_300
+		CDB_Pipe::Di			=	2.93751e-1
+	}
+}
+
+//****************************
+// Copper US Type M series
+//****************************
+
+new:CTable(CU_USTM\1)->PIPE_TAB
+{
+	"IDS_CU_USTM"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(CU_USTM_10\1)->CU_USTM
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.00 \ 3.14e+6
+		NO_ID
+		121.1
+		-50.0
+	}
+	"3/8""
+	DN_10
+	1.143e-2
+	1.5e-6
+}
+
+new:CDB_Pipe(CU_USTM_15) -> CU_USTM 
+{ Inherited(CU_USTM_10)
+	{
+		CDB_HydroThing::Pmax	=	0.00 \ 2.723e+6
+		CDB_Pipe::Name		=	"1/2""
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.445e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTM_20) -> CU_USTM 
+{ Inherited(CU_USTM_10)
+	{
+		CDB_HydroThing::Pmax	=	0.00 \ 2.248e+6
+		CDB_Pipe::Name		=	"3/4""
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	2.06e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTM_25) -> CU_USTM 
+{ Inherited(CU_USTM_10)
+	{
+		CDB_HydroThing::Pmax	=	0.00 \ 1.862e+6
+		CDB_Pipe::Name		=	"1""
+		CDB_Pipe::SizeID		=	DN_25
+		CDB_Pipe::Di			=	2.68e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTM_32) -> CU_USTM 
+{ Inherited(CU_USTM_10)
+	{
+		CDB_HydroThing::Pmax	=	0.00 \ 1.868e+6
+		CDB_Pipe::Name		=	"1¼""
+		CDB_Pipe::SizeID		=	DN_32
+		CDB_Pipe::Di			=	3.279e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTM_40) -> CU_USTM 
+{ Inherited(CU_USTM_10)
+	{
+		CDB_HydroThing::Pmax	=	0.00 \ 1.827e+6
+		CDB_Pipe::Name		=	"1½""
+		CDB_Pipe::SizeID		=	DN_40
+		CDB_Pipe::Di			=	3.879e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTM_50) -> CU_USTM 
+{ Inherited(CU_USTM_10)
+	{
+		CDB_HydroThing::Pmax	=	0.00 \ 1.648e+6
+		CDB_Pipe::Name		=	"2""
+		CDB_Pipe::SizeID		=	DN_50
+		CDB_Pipe::Di			=	5.103e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTM_65) -> CU_USTM 
+{ Inherited(CU_USTM_10)
+	{
+		CDB_HydroThing::Pmax	=	0.00 \ 1.51e+6
+		CDB_Pipe::Name		=	"2½""
+		CDB_Pipe::SizeID		=	DN_65
+		CDB_Pipe::Di			=	6.337e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTM_80) -> CU_USTM 
+{ Inherited(CU_USTM_10)
+	{
+		CDB_HydroThing::Pmax	=	0.00 \ 1.40e+6
+		CDB_Pipe::Name		=	"3""
+		CDB_Pipe::SizeID		=	DN_80
+		CDB_Pipe::Di			=	7.572e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTM_90) -> CU_USTM 
+{ Inherited(CU_USTM_10)
+	{
+		CDB_HydroThing::Pmax	=	0.00 \ 1.393e+6
+		CDB_Pipe::Name		=	"3½""
+		CDB_Pipe::SizeID		=	DN_80
+		CDB_Pipe::Di			=	8.786e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTM_100) -> CU_USTM 
+{ Inherited(CU_USTM_10)
+	{
+		CDB_HydroThing::Pmax	=	0.00 \ 1.386e+6
+		CDB_Pipe::Name		=	"4""
+		CDB_Pipe::SizeID		=	DN_100
+		CDB_Pipe::Di			=	9.995e-2
+	}
+}
+
+new:CDB_Pipe(CU_USTM_125) -> CU_USTM 
+{ Inherited(CU_USTM_10)
+	{
+		CDB_HydroThing::Pmax	=	0.00 \ 1.282e+6
+		CDB_Pipe::Name		=	"5""
+		CDB_Pipe::SizeID		=	DN_125
+		CDB_Pipe::Di			=	1.246e-1
+	}
+}
+
+new:CDB_Pipe(CU_USTM_150) -> CU_USTM 
+{ Inherited(CU_USTM_10)
+	{
+		CDB_HydroThing::Pmax	=	0.00 \ 1.207e+6
+		CDB_Pipe::Name		=	"6""
+		CDB_Pipe::SizeID		=	DN_150
+		CDB_Pipe::Di			=	1.494e-1
+	}
+}
+
+new:CDB_Pipe(CU_USTM_200) -> CU_USTM 
+{ Inherited(CU_USTM_10)
+	{
+		CDB_HydroThing::Pmax	=	0.00 \ 1.262e+6
+		CDB_Pipe::Name		=	"8""
+		CDB_Pipe::SizeID		=	DN_200
+		CDB_Pipe::Di			=	1.977e-1
+	}
+}
+
+new:CDB_Pipe(CU_USTM_250) -> CU_USTM 
+{ Inherited(CU_USTM_10)
+	{
+		CDB_HydroThing::Pmax	=	0.00 \ 1.269e+6
+		CDB_Pipe::Name		=	"10""
+		CDB_Pipe::SizeID		=	DN_250
+		CDB_Pipe::Di			=	2.464e-1
+	}
+}
+
+new:CDB_Pipe(CU_USTM_300) -> CU_USTM 
+{ Inherited(CU_USTM_10)
+	{
+		CDB_HydroThing::Pmax	=	0.00 \ 1.269e+6
+		CDB_Pipe::Name		=	"12""
+		CDB_Pipe::SizeID		=	DN_300
+		CDB_Pipe::Di			=	2.951e-1
+	}
+}
+
+//****************************
+// PEX series
+//****************************
+new:CTable(PEX\1) -> PIPE_TAB
+{
+	"IDS_PEX"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(PEX12x1.7\1) -> PEX 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 6.0e+5
+		NO_ID
+		95.0
+		-273.0
+	}
+	" 12x1.7"
+	DN_10
+	8.6e-3
+	5.0e-7
+}
+
+new:CDB_Pipe(PEX12x1.1) -> PEX 
+{ Inherited(PEX12x1.7)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 6.0e+5
+		CDB_Pipe::Name			=	" 12x1.1"
+		CDB_Pipe::SizeID		=	DN_10
+		CDB_Pipe::Di			=	9.8e-3
+	}
+}
+
+new:CDB_Pipe(PEX12x2.0) -> PEX 
+{ Inherited(PEX12x1.7)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 6.0e+5
+		CDB_Pipe::Name			=	" 12x2.0"
+		CDB_Pipe::SizeID		=	DN_10
+		CDB_Pipe::Di			=	8.0e-3
+	}
+}
+
+new:CDB_Pipe(PEX14x2.0) -> PEX 
+{ Inherited(PEX12x1.7)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 6.0e+5
+		CDB_Pipe::Name			=	" 14x2.0"
+		CDB_Pipe::SizeID		=	DN_10
+		CDB_Pipe::Di			=	1.0e-2
+	}
+}
+
+new:CDB_Pipe(PEX15x2.5) -> PEX 
+{ Inherited(PEX12x1.7)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.0e+6
+		CDB_Pipe::Name			=	" 15x2.5"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.0e-2
+	}
+}
+
+new:CDB_Pipe(PEX16x1.5) -> PEX 
+{ Inherited(PEX12x1.7)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 6.0e+5
+		CDB_Pipe::Name			=	" 16x1.5"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.3e-2
+	}
+}
+
+new:CDB_Pipe(PEX16x2.0) -> PEX 
+{ Inherited(PEX12x1.7)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 6.0e+5
+		CDB_Pipe::Name			=	" 16x2.0"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.2e-2
+	}
+}
+
+new:CDB_Pipe(PEX16x2.2) -> PEX 
+{ Inherited(PEX12x1.7)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.0e+6
+		CDB_Pipe::Name			=	" 16x2.2"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.15e-2
+		CDB_Pipe::Roughness		=	5.0e-7
+	}
+}
+
+new:CDB_Pipe(PEX17x2.0) -> PEX 
+{ Inherited(PEX12x1.7)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 6.0e+5
+		CDB_Pipe::Name			=	" 17x2.0"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.3e-2
+	}
+}
+
+new:CDB_Pipe(PEX18x2.0) -> PEX 
+{ Inherited(PEX12x1.7)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 6.0e+5
+		CDB_Pipe::Name			=	" 18x2.0"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.4e-2
+	}
+}
+
+new:CDB_Pipe(PEX20x2.0) -> PEX 
+{ Inherited(PEX12x1.7)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 6.0e+5
+		CDB_Pipe::Name			=	" 20x2.0"
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	1.6e-2
+	}
+}
+
+new:CDB_Pipe(PEX20x2.8) -> PEX 
+{ Inherited(PEX12x1.7)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.0e+6
+		CDB_Pipe::Name			=	" 20x2.8"
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	1.43e-2
+		CDB_Pipe::Roughness		=	5.0e-7
+	}
+}
+
+new:CDB_Pipe(PEX22x3.0) -> PEX 
+{ Inherited(PEX12x1.7)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.0e+6
+		CDB_Pipe::Name			=	" 22x3.0"
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	1.6e-2
+	}
+}
+
+new:CDB_Pipe(PEX25x2.3) -> PEX 
+{ Inherited(PEX12x1.7)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 6.0e+5
+		CDB_Pipe::Name			=	" 25x2.3"
+		CDB_Pipe::SizeID		=	DN_25
+		CDB_Pipe::Di			=	2.04e-2
+	}
+}
+
+new:CDB_Pipe(PEX25x2.5) -> PEX 
+{ Inherited(PEX12x1.7)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.0e+6
+		CDB_Pipe::Name			=	" 25x2.5"
+		CDB_Pipe::SizeID		=	DN_25
+		CDB_Pipe::Di			=	2.0e-2
+	}
+}
+
+new:CDB_Pipe(PEX28x4.0) -> PEX 
+{ Inherited(PEX12x1.7)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.0e+6
+		CDB_Pipe::Name			=	" 28x4.0"
+		CDB_Pipe::SizeID		=	DN_25
+		CDB_Pipe::Di			=	2.0e-2
+	}
+}
+
+new:CDB_Pipe(PEX32x2.9) -> PEX 
+{ Inherited(PEX12x1.7)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 6.0e+5
+		CDB_Pipe::Name			=	" 32x2.9"
+		CDB_Pipe::SizeID		=	DN_32
+		CDB_Pipe::Di			=	2.62e-2
+	}
+}
+
+new:CDB_Pipe(PEX40x3.7) -> PEX 
+{ Inherited(PEX12x1.7)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 6.0e+5
+		CDB_Pipe::Name			=	" 40x3.7"
+		CDB_Pipe::SizeID		=	DN_40
+		CDB_Pipe::Di			=	3.26e-2
+	}
+}
+
+new:CDB_Pipe(PEX50x4.6) -> PEX 
+{ Inherited(PEX12x1.7)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 6.0e+5
+		CDB_Pipe::Name			=	" 50x4.6"
+		CDB_Pipe::SizeID		=	DN_50
+		CDB_Pipe::Di			=	4.08e-2
+	}
+}
+
+new:CDB_Pipe(PEX63x5.8) -> PEX 
+{ Inherited(PEX12x1.7)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 6.0e+5
+		CDB_Pipe::Name			=	" 63x5.8"
+		CDB_Pipe::SizeID		=	DN_50
+		CDB_Pipe::Di			=	5.14e-2
+	}
+}
+
+new:CDB_Pipe(PEX75x6.8) -> PEX 
+{ Inherited(PEX12x1.7)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 6.0e+5
+		CDB_Pipe::Name			=	" 75x6.8"
+		CDB_Pipe::SizeID		=	DN_65
+		CDB_Pipe::Di			=	6.12e-2
+	}
+}
+
+new:CDB_Pipe(PEX90x8.2) -> PEX 
+{ Inherited(PEX12x1.7)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 6.0e+5
+		CDB_Pipe::Name			=	" 90x8.2"
+		CDB_Pipe::SizeID		=	DN_80
+		CDB_Pipe::Di			=	7.36e-2
+	}
+}
+
+new:CDB_Pipe(PEX110x10) -> PEX 
+{ Inherited(PEX12x1.7)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 6.0e+5
+		CDB_Pipe::Name			=	"110x10"
+		CDB_Pipe::SizeID		=	DN_100
+		CDB_Pipe::Di			=	9.0e-2
+	}
+}
+
+//****************************
+// Henco PEX series
+//****************************
+new:CTable(HENCO\1) -> PIPE_TAB
+{
+	"IDS_HENCO"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(HENCO14\1) -> HENCO 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 10.0e+5
+		NO_ID
+		95.0
+		-273.0
+	}
+	"14"
+	DN_10
+	10.0e-3
+	7.0e-6
+}
+
+new:CDB_Pipe(HENCO16) -> HENCO 
+{ Inherited(HENCO14)
+	{
+		CDB_Pipe::Name			=	"16"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	12.0e-3
+	}
+}
+
+new:CDB_Pipe(HENCO18) -> HENCO 
+{ Inherited(HENCO14)
+	{
+		CDB_Pipe::Name			=	"18"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	14.0e-3
+	}
+}
+
+new:CDB_Pipe(HENCO20) -> HENCO 
+{ Inherited(HENCO14)
+	{
+		CDB_Pipe::Name			=	"20"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	16.0e-3
+	}
+}
+
+new:CDB_Pipe(HENCO26) -> HENCO 
+{ Inherited(HENCO14)
+	{
+		CDB_Pipe::Name			=	"26"
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	20.0e-3
+	}
+}
+
+new:CDB_Pipe(HENCO32) -> HENCO 
+{ Inherited(HENCO14)
+	{
+		CDB_Pipe::Name			=	"32"
+		CDB_Pipe::SizeID		=	DN_25
+		CDB_Pipe::Di			=	26.0e-3
+	}
+}
+
+new:CDB_Pipe(HENCO40) -> HENCO 
+{ Inherited(HENCO14)
+	{
+		CDB_Pipe::Name			=	"40"
+		CDB_Pipe::SizeID		=	DN_32
+		CDB_Pipe::Di			=	33.0e-3
+	}
+}
+
+new:CDB_Pipe(HENCO50) -> HENCO 
+{ Inherited(HENCO14)
+	{
+		CDB_Pipe::Name			=	"50"
+		CDB_Pipe::SizeID		=	DN_40
+		CDB_Pipe::Di			=	42.0e-3
+	}
+}
+
+new:CDB_Pipe(HENCO63) -> HENCO 
+{ Inherited(HENCO14)
+	{
+		CDB_Pipe::Name			=	"63"
+		CDB_Pipe::SizeID		=	DN_50
+		CDB_Pipe::Di			=	54.0e-3
+	}
+}
+
+//*************************
+// Mapress Stainless Steel 
+//*************************
+new:CTable(MAPRESS_E\1) -> PIPE_TAB
+{
+	"IDS_MAPRESS_E"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(MAPRESS_E_15\1) -> MAPRESS_E 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 1.6e+6
+		NO_ID
+		120.0
+		-273.0
+	}
+	" 15x1.0"
+	DN_15
+	1.3e-2
+	1.5e-6
+}
+
+new:CDB_Pipe(MAPRESS_E_18) -> MAPRESS_E 
+{ Inherited(MAPRESS_E_15)
+	{
+		CDB_Pipe::Name			=	" 18x1.0"
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	1.6e-2
+	}
+}
+
+new:CDB_Pipe(MAPRESS_E_22) -> MAPRESS_E 
+{ Inherited(MAPRESS_E_15)
+	{
+		CDB_Pipe::Name			=	" 22x1.2"
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	1.96e-2
+	}
+}
+
+new:CDB_Pipe(MAPRESS_E_28) -> MAPRESS_E 
+{ Inherited(MAPRESS_E_15)
+	{
+		CDB_Pipe::Name			=	" 28x1.2"
+		CDB_Pipe::SizeID		=	DN_25
+		CDB_Pipe::Di			=	2.56e-2
+	}
+}
+
+new:CDB_Pipe(MAPRESS_E_35) -> MAPRESS_E 
+{ Inherited(MAPRESS_E_15)
+	{
+		CDB_Pipe::Name			=	" 35x1.5"
+		CDB_Pipe::SizeID		=	DN_32
+		CDB_Pipe::Di			=	3.20e-2
+	}
+}
+
+new:CDB_Pipe(MAPRESS_E_42) -> MAPRESS_E 
+{ Inherited(MAPRESS_E_15)
+	{
+		CDB_Pipe::Name			=	" 42x1.5"
+		CDB_Pipe::SizeID		=	DN_40
+		CDB_Pipe::Di			=	3.90e-2
+	}
+}
+
+new:CDB_Pipe(MAPRESS_E_54) -> MAPRESS_E 
+{ Inherited(MAPRESS_E_15)
+	{
+		CDB_Pipe::Name			=	" 54x1.5"
+		CDB_Pipe::SizeID		=	DN_50
+		CDB_Pipe::Di			=	5.1e-2
+	}
+}
+
+new:CDB_Pipe(MAPRESS_E_76) -> MAPRESS_E 
+{ Inherited(MAPRESS_E_15)
+	{
+		CDB_Pipe::Name			=	" 76x2.0"
+		CDB_Pipe::SizeID		=	DN_65
+		CDB_Pipe::Di			=	7.21e-2
+	}
+}
+
+new:CDB_Pipe(MAPRESS_E_88) -> MAPRESS_E 
+{ Inherited(MAPRESS_E_15)
+	{
+		CDB_Pipe::Name			=	" 88.9x2.0"
+		CDB_Pipe::SizeID		=	DN_80
+		CDB_Pipe::Di			=	8.49e-2
+	}
+}
+
+new:CDB_Pipe(MAPRESS_E_108) -> MAPRESS_E 
+{ Inherited(MAPRESS_E_15)
+	{
+		CDB_Pipe::Name			=	"108x2.0"
+		CDB_Pipe::SizeID		=	DN_100
+		CDB_Pipe::Di			=	1.04e-1
+	}
+}
+
+//*******************************************
+// Mapress Carbon Steel & Super Size Heating
+//*******************************************
+new:CTable(MAPRESS_C\1) -> PIPE_TAB
+{
+	"IDS_MAPRESS_C"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(MAPRESS_C_12\1) -> MAPRESS_C 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 1.6e+6
+		NO_ID
+		120.0
+		-273.0
+	}
+	" 12x1.2"
+	DN_10
+	9.6e-3
+	1.0e-5
+}
+
+new:CDB_Pipe(MAPRESS_C_15) -> MAPRESS_C 
+{ Inherited(MAPRESS_C_12)
+	{
+		CDB_Pipe::Name			=	" 15x1.2"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.26e-2
+	}
+}
+
+new:CDB_Pipe(MAPRESS_C_18) -> MAPRESS_C 
+{ Inherited(MAPRESS_C_12)
+	{
+		CDB_Pipe::Name			=	" 18x1.2"
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	1.56e-2
+	}
+}
+
+new:CDB_Pipe(MAPRESS_C_22) -> MAPRESS_C 
+{ Inherited(MAPRESS_C_12)
+	{
+		CDB_Pipe::Name			=	" 22x1.5"
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	1.9e-2
+	}
+}
+
+new:CDB_Pipe(MAPRESS_C_28) -> MAPRESS_C 
+{ Inherited(MAPRESS_C_12)
+	{
+		CDB_Pipe::Name			=	" 28x1.5"
+		CDB_Pipe::SizeID		=	DN_25
+		CDB_Pipe::Di			=	2.5e-2
+	}
+}
+
+new:CDB_Pipe(MAPRESS_C_35) -> MAPRESS_C 
+{ Inherited(MAPRESS_C_12)
+	{
+		CDB_Pipe::Name			=	" 35x1.5"
+		CDB_Pipe::SizeID		=	DN_32
+		CDB_Pipe::Di			=	3.20e-2
+	}
+}
+
+new:CDB_Pipe(MAPRESS_C_42) -> MAPRESS_C 
+{ Inherited(MAPRESS_C_12)
+	{
+		CDB_Pipe::Name			=	" 42x1.5"
+		CDB_Pipe::SizeID		=	DN_40
+		CDB_Pipe::Di			=	3.90e-2
+	}
+}
+
+new:CDB_Pipe(MAPRESS_C_54) -> MAPRESS_C 
+{ Inherited(MAPRESS_C_12)
+	{
+		CDB_Pipe::Name			=	" 54x1.5"
+		CDB_Pipe::SizeID		=	DN_50
+		CDB_Pipe::Di			=	5.1e-2
+	}
+}
+
+new:CDB_Pipe(MAPRESS_C_76) -> MAPRESS_C 
+{ Inherited(MAPRESS_C_12)
+	{
+		CDB_Pipe::Name			=	" 76x1.5"
+		CDB_Pipe::SizeID		=	DN_65
+		CDB_Pipe::Di			=	7.31e-2
+		CDB_Pipe::Roughness		=	1.5e-6
+	}
+}
+
+new:CDB_Pipe(MAPRESS_C_88) -> MAPRESS_C 
+{ Inherited(MAPRESS_C_12)
+	{
+		CDB_Pipe::Name			=	" 88.9x1.5"
+		CDB_Pipe::SizeID		=	DN_80
+		CDB_Pipe::Di			=	8.59e-2
+		CDB_Pipe::Roughness		=	1.5e-6
+	}
+}
+
+new:CDB_Pipe(MAPRESS_C_108) -> MAPRESS_C 
+{ Inherited(MAPRESS_C_12)
+	{
+		CDB_Pipe::Name			=	"108x2.0"
+		CDB_Pipe::SizeID		=	DN_100
+		CDB_Pipe::Di			=	1.04e-1
+		CDB_Pipe::Roughness		=	1.5e-6
+	}
+}
+
+//**********************************
+// Steel DIN 2440, ISO 65
+//**********************************
+new:CTable(STEEL_DIN2440\1) -> PIPE_TAB
+{
+	"IDS_STEEL_DIN2440"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(ST_DIN2440_10\1) -> STEEL_DIN2440 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 1.0e+6
+		NO_ID
+		100.0
+		-273.0
+	}
+	" 10"
+	DN_10
+	1.25e-2
+	5.0e-5
+}
+
+new:CDB_Pipe(ST_DIN2440_15) -> STEEL_DIN2440 
+{ Inherited(ST_DIN2440_10)
+	{
+		CDB_Pipe::Name			=	" 15"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.6e-2
+	}
+}
+
+new:CDB_Pipe(ST_DIN2440_20) -> STEEL_DIN2440 
+{ Inherited(ST_DIN2440_10)
+	{
+		CDB_Pipe::Name			=	" 20"
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	2.16e-2
+	}
+}
+
+new:CDB_Pipe(ST_DIN2440_25) -> STEEL_DIN2440 
+{ Inherited(ST_DIN2440_10)
+	{
+		CDB_Pipe::Name			=	" 25"
+		CDB_Pipe::SizeID		=	DN_25
+		CDB_Pipe::Di			=	2.72e-2
+	}
+}
+
+new:CDB_Pipe(ST_DIN2440_32) -> STEEL_DIN2440 
+{ Inherited(ST_DIN2440_10)
+	{
+		CDB_Pipe::Name			=	" 32"
+		CDB_Pipe::SizeID		=	DN_32
+		CDB_Pipe::Di			=	3.59e-2
+	}
+}
+
+new:CDB_Pipe(ST_DIN2440_40) -> STEEL_DIN2440 
+{ Inherited(ST_DIN2440_10)
+	{
+		CDB_Pipe::Name			=	" 40"
+		CDB_Pipe::SizeID		=	DN_40
+		CDB_Pipe::Di			=	4.18e-2
+	}
+}
+
+new:CDB_Pipe(ST_DIN2440_50) -> STEEL_DIN2440 
+{ Inherited(ST_DIN2440_10)
+	{
+		CDB_Pipe::Name			=	" 50"
+		CDB_Pipe::SizeID		=	DN_50
+		CDB_Pipe::Di			=	5.3e-2
+	}
+}
+
+new:CDB_Pipe(ST_DIN2440_65) -> STEEL_DIN2440 
+{ Inherited(ST_DIN2440_10)
+	{
+		CDB_Pipe::Name			=	" 65"
+		CDB_Pipe::SizeID		=	DN_65
+		CDB_Pipe::Di			=	6.88e-2
+	}
+}
+
+new:CDB_Pipe(ST_DIN2440_80) -> STEEL_DIN2440 
+{ Inherited(ST_DIN2440_10)
+	{
+		CDB_Pipe::Name			=	" 80"
+		CDB_Pipe::SizeID		=	DN_80
+		CDB_Pipe::Di			=	8.08e-2
+	}
+}
+
+new:CDB_Pipe(ST_DIN2440_100) -> STEEL_DIN2440 
+{ Inherited(ST_DIN2440_10)
+	{
+		CDB_Pipe::Name			=	"100"
+		CDB_Pipe::SizeID		=	DN_100
+		CDB_Pipe::Di			=	1.05e-1
+	}
+}
+
+new:CDB_Pipe(ST_DIN2440_125) -> STEEL_DIN2440 
+{ Inherited(ST_DIN2440_10)
+	{
+		CDB_Pipe::Name			=	"125"
+		CDB_Pipe::SizeID		=	DN_125
+		CDB_Pipe::Di			=	1.3e-1
+	}
+}
+
+new:CDB_Pipe(ST_DIN2440_150) -> STEEL_DIN2440 
+{ Inherited(ST_DIN2440_10)
+	{
+		CDB_Pipe::Name			=	"150"
+		CDB_Pipe::SizeID		=	DN_150
+		CDB_Pipe::Di			=	1.55e-1
+	}
+}
+
+new:CDB_Pipe(ST_DIN2440_200) -> STEEL_DIN2440 
+{ Inherited(ST_DIN2440_10)
+	{
+		CDB_Pipe::Name			=	"200"
+		CDB_Pipe::SizeID		=	DN_200
+		CDB_Pipe::Di			=	2.07e-1
+	}
+}
+
+new:CDB_Pipe(ST_DIN2440_250) -> STEEL_DIN2440 
+{ Inherited(ST_DIN2440_10)
+	{
+		CDB_Pipe::Name			=	"250"
+		CDB_Pipe::SizeID		=	DN_250
+		CDB_Pipe::Di			=	2.6e-1
+	}
+}
+
+new:CDB_Pipe(ST_DIN2440_300) -> STEEL_DIN2440 
+{ Inherited(ST_DIN2440_10)
+	{
+		CDB_Pipe::Name			=	"300"
+		CDB_Pipe::SizeID		=	DN_300
+		CDB_Pipe::Di			=	3.1e-1
+	}
+}
+
+new:CDB_Pipe(ST_DIN2440_350) -> STEEL_DIN2440 
+{ Inherited(ST_DIN2440_10)
+	{
+		CDB_Pipe::Name			=	"350"
+		CDB_Pipe::SizeID		=	DN_350
+		CDB_Pipe::Di			=	3.4e-1
+	}
+}
+
+new:CDB_Pipe(ST_DIN2440_400) -> STEEL_DIN2440 
+{ Inherited(ST_DIN2440_10)
+	{
+		CDB_Pipe::Name			=	"400"
+		CDB_Pipe::SizeID		=	DN_400
+		CDB_Pipe::Di			=	3.89e-1
+	}
+}
+
+//****************************
+// Steel BS 3600 series
+//****************************
+new:CTable(STEEL_BS1\1) -> PIPE_TAB
+{
+	"IDS_STEEL_BS1"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(STEEL_BS1_200\1) -> STEEL_BS1 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 1.6e+6
+		NO_ID
+		120.0
+		-273.0
+	}
+	"200"
+	DN_200
+	2.07e-1
+	4.7e-5
+}
+
+new:CDB_Pipe(STEEL_BS1_250) -> STEEL_BS1 
+{ Inherited(STEEL_BS1_200)
+	{
+		CDB_Pipe::Name			=	"250"
+		CDB_Pipe::SizeID		=	DN_250
+		CDB_Pipe::Di			=	2.6e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_BS1_300) -> STEEL_BS1 
+{ Inherited(STEEL_BS1_200)
+	{
+		CDB_Pipe::Name			=	"300"
+		CDB_Pipe::SizeID		=	DN_300
+		CDB_Pipe::Di			=	3.11e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_BS1_350) -> STEEL_BS1 
+{ Inherited(STEEL_BS1_200)
+	{
+		CDB_Pipe::Name			=	"350"
+		CDB_Pipe::SizeID		=	DN_350
+		CDB_Pipe::Di			=	3.41e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_BS1_400) -> STEEL_BS1 
+{ Inherited(STEEL_BS1_200)
+	{
+		CDB_Pipe::Name			=	"400"
+		CDB_Pipe::SizeID		=	DN_400
+		CDB_Pipe::Di			=	3.92e-1
+	}
+}
+
+//*********************************
+// Steel Galvanised BS 1387 series
+//*********************************
+new:CTable(STEEL_BS2\1) -> PIPE_TAB
+{
+	"IDS_STEEL_BS2"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(STEEL_BS2__10\1) -> STEEL_BS2 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 1.6e+6
+		NO_ID
+		120.0
+		-273.0
+	}
+	" 10"
+	DN_10
+	1.08e-2
+	1.5e-4
+}
+
+new:CDB_Pipe(STEEL_BS2__15) -> STEEL_BS2 
+{ Inherited(STEEL_BS2__10)
+	{
+		CDB_Pipe::Name			=	" 15"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.44e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_BS2__20) -> STEEL_BS2 
+{ Inherited(STEEL_BS2__10)
+	{
+		CDB_Pipe::Name			=	" 20"
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	1.99e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_BS2__25) -> STEEL_BS2 
+{ Inherited(STEEL_BS2__10)
+	{
+		CDB_Pipe::Name			=	" 25"
+		CDB_Pipe::SizeID		=	DN_25
+		CDB_Pipe::Di			=	2.52e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_BS2__32) -> STEEL_BS2 
+{ Inherited(STEEL_BS2__10)
+	{
+		CDB_Pipe::Name			=	" 32"
+		CDB_Pipe::SizeID		=	DN_32
+		CDB_Pipe::Di			=	3.39e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_BS2__40) -> STEEL_BS2 
+{ Inherited(STEEL_BS2__10)
+	{
+		CDB_Pipe::Name			=	" 40"
+		CDB_Pipe::SizeID		=	DN_40
+		CDB_Pipe::Di			=	3.98e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_BS2__50) -> STEEL_BS2 
+{ Inherited(STEEL_BS2__10)
+	{
+		CDB_Pipe::Name			=	" 50"
+		CDB_Pipe::SizeID		=	DN_50
+		CDB_Pipe::Di			=	5.08e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_BS2__65) -> STEEL_BS2 
+{ Inherited(STEEL_BS2__10)
+	{
+		CDB_Pipe::Name			=	" 65"
+		CDB_Pipe::SizeID		=	DN_65
+		CDB_Pipe::Di			=	6.65e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_BS2__80) -> STEEL_BS2 
+{ Inherited(STEEL_BS2__10)
+	{
+		CDB_Pipe::Name			=	" 80"
+		CDB_Pipe::SizeID		=	DN_80
+		CDB_Pipe::Di			=	7.86e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_BS2_100) -> STEEL_BS2 
+{ Inherited(STEEL_BS2__10)
+	{
+		CDB_Pipe::Name			=	"100"
+		CDB_Pipe::SizeID		=	DN_100
+		CDB_Pipe::Di			=	1.03e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_BS2_125) -> STEEL_BS2 
+{ Inherited(STEEL_BS2__10)
+	{
+		CDB_Pipe::Name			=	"125"
+		CDB_Pipe::SizeID		=	DN_125
+		CDB_Pipe::Di			=	1.28e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_BS2_150) -> STEEL_BS2 
+{ Inherited(STEEL_BS2__10)
+	{
+		CDB_Pipe::Name			=	"150"
+		CDB_Pipe::SizeID		=	DN_150
+		CDB_Pipe::Di			=	1.54e-1
+	}
+}
+
+//****************************
+// Steel Heavy BS 1387 series
+//****************************
+new:CTable(STEEL_BS3\1) -> PIPE_TAB
+{
+	"IDS_STEEL_BS3"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(STEEL_BS3__10\1) -> STEEL_BS3 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 2.5e+6
+		NO_ID
+		120.0
+		-273.0
+	}
+	" 10"
+	DN_10
+	1.13e-2
+	4.6e-5
+}
+
+new:CDB_Pipe(STEEL_BS3__15) -> STEEL_BS3 
+{ Inherited(STEEL_BS3__10)
+	{
+		CDB_Pipe::Name			=	" 15"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.43e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_BS3__20) -> STEEL_BS3 
+{ Inherited(STEEL_BS3__10)
+	{
+		CDB_Pipe::Name			=	" 20"
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	2.04e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_BS3__25) -> STEEL_BS3 
+{ Inherited(STEEL_BS3__10)
+	{
+		CDB_Pipe::Name			=	" 25"
+		CDB_Pipe::SizeID		=	DN_25
+		CDB_Pipe::Di			=	2.57e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_BS3__32) -> STEEL_BS3 
+{ Inherited(STEEL_BS3__10)
+	{
+		CDB_Pipe::Name			=	" 32"
+		CDB_Pipe::SizeID		=	DN_32
+		CDB_Pipe::Di			=	3.44e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_BS3__40) -> STEEL_BS3 
+{ Inherited(STEEL_BS3__10)
+	{
+		CDB_Pipe::Name			=	" 40"
+		CDB_Pipe::SizeID		=	DN_40
+		CDB_Pipe::Di			=	4.03e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_BS3__50) -> STEEL_BS3 
+{ Inherited(STEEL_BS3__10)
+	{
+		CDB_Pipe::Name			=	" 50"
+		CDB_Pipe::SizeID		=	DN_50
+		CDB_Pipe::Di			=	5.13e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_BS3__65) -> STEEL_BS3 
+{ Inherited(STEEL_BS3__10)
+	{
+		CDB_Pipe::Name			=	" 65"
+		CDB_Pipe::SizeID		=	DN_65
+		CDB_Pipe::Di			=	6.7e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_BS3__80) -> STEEL_BS3 
+{ Inherited(STEEL_BS3__10)
+	{
+		CDB_Pipe::Name			=	" 80"
+		CDB_Pipe::SizeID		=	DN_80
+		CDB_Pipe::Di			=	7.91e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_BS3_100) -> STEEL_BS3 
+{ Inherited(STEEL_BS3__10)
+	{
+		CDB_Pipe::Name			=	"100"
+		CDB_Pipe::SizeID		=	DN_100
+		CDB_Pipe::Di			=	1.04e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_BS3_125) -> STEEL_BS3 
+{ Inherited(STEEL_BS3__10)
+	{
+		CDB_Pipe::Name			=	"125"
+		CDB_Pipe::SizeID		=	DN_125
+		CDB_Pipe::Di			=	1.29e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_BS3_150) -> STEEL_BS3 
+{ Inherited(STEEL_BS3__10)
+	{
+		CDB_Pipe::Name			=	"150"
+		CDB_Pipe::SizeID		=	DN_150
+		CDB_Pipe::Di			=	1.54e-1
+	}
+}
+
+//****************************
+// Steel Medium BS 1387 series
+//****************************
+new:CTable(STEEL_BS4\1) -> PIPE_TAB
+{
+	"IDS_STEEL_BS4"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(STEEL_BS4__10\1) -> STEEL_BS4 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 2.0e+6
+		NO_ID
+		120.0
+		-273.0
+	}
+	" 10"
+	DN_10
+	1.24e-2
+	4.6e-5
+}
+
+new:CDB_Pipe(STEEL_BS4__15) -> STEEL_BS4 
+{ Inherited(STEEL_BS4__10)
+	{
+		CDB_Pipe::Name			=	" 15"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.61e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_BS4__20) -> STEEL_BS4 
+{ Inherited(STEEL_BS4__10)
+	{
+		CDB_Pipe::Name			=	" 20"
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	2.16e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_BS4__25) -> STEEL_BS4 
+{ Inherited(STEEL_BS4__10)
+	{
+		CDB_Pipe::Name			=	" 25"
+		CDB_Pipe::SizeID		=	DN_25
+		CDB_Pipe::Di			=	2.73e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_BS4__32) -> STEEL_BS4 
+{ Inherited(STEEL_BS4__10)
+	{
+		CDB_Pipe::Name			=	" 32"
+		CDB_Pipe::SizeID		=	DN_32
+		CDB_Pipe::Di			=	3.6e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_BS4__40) -> STEEL_BS4 
+{ Inherited(STEEL_BS4__10)
+	{
+		CDB_Pipe::Name			=	" 40"
+		CDB_Pipe::SizeID		=	DN_40
+		CDB_Pipe::Di			=	4.19e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_BS4__50) -> STEEL_BS4 
+{ Inherited(STEEL_BS4__10)
+	{
+		CDB_Pipe::Name			=	" 50"
+		CDB_Pipe::SizeID		=	DN_50
+		CDB_Pipe::Di			=	5.3e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_BS4__65) -> STEEL_BS4 
+{ Inherited(STEEL_BS4__10)
+	{
+		CDB_Pipe::Name			=	" 65"
+		CDB_Pipe::SizeID		=	DN_65
+		CDB_Pipe::Di			=	6.87e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_BS4__80) -> STEEL_BS4 
+{ Inherited(STEEL_BS4__10)
+	{
+		CDB_Pipe::Name			=	" 80"
+		CDB_Pipe::SizeID		=	DN_80
+		CDB_Pipe::Di			=	8.07e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_BS4_100) -> STEEL_BS4 
+{ Inherited(STEEL_BS4__10)
+	{
+		CDB_Pipe::Name			=	"100"
+		CDB_Pipe::SizeID		=	DN_100
+		CDB_Pipe::Di			=	1.05e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_BS4_125) -> STEEL_BS4 
+{ Inherited(STEEL_BS4__10)
+	{
+		CDB_Pipe::Name			=	"125"
+		CDB_Pipe::SizeID		=	DN_125
+		CDB_Pipe::Di			=	1.3e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_BS4_150) -> STEEL_BS4 
+{ Inherited(STEEL_BS4__10)
+	{
+		CDB_Pipe::Name			=	"150"
+		CDB_Pipe::SizeID		=	DN_150
+		CDB_Pipe::Di			=	1.55e-1
+	}
+}
+
+//*****************************
+// Steel Medium AS 1074 series
+//*****************************
+new:CTable(STEEL_AS\1) -> PIPE_TAB
+{
+	"IDS_STEEL_AS"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(STEEL_AS__6\1) -> STEEL_AS 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 1.2e+6
+		NO_ID
+		100.0
+		-273.0
+	}
+	"  6"
+	DN_10
+	6.3e-3
+	5.0e-5
+}
+
+new:CDB_Pipe(STEEL_AS__8) -> STEEL_AS 
+{ Inherited(STEEL_AS__6)
+	{
+		CDB_Pipe::Name			=	"  8"
+		CDB_Pipe::SizeID		=	DN_10
+		CDB_Pipe::Di			=	8.9e-3
+	}
+}
+
+new:CDB_Pipe(STEEL_AS_10) -> STEEL_AS 
+{ Inherited(STEEL_AS__6)
+	{
+		CDB_Pipe::Name			=	" 10"
+		CDB_Pipe::SizeID		=	DN_10
+		CDB_Pipe::Di			=	1.26e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_AS_15) -> STEEL_AS 
+{ Inherited(STEEL_AS__6)
+	{
+		CDB_Pipe::Name			=	" 15"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.61e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_AS_20) -> STEEL_AS 
+{ Inherited(STEEL_AS__6)
+	{
+		CDB_Pipe::Name			=	" 20"
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	2.17e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_AS_25) -> STEEL_AS 
+{ Inherited(STEEL_AS__6)
+	{
+		CDB_Pipe::Name			=	" 25"
+		CDB_Pipe::SizeID		=	DN_25
+		CDB_Pipe::Di			=	2.73e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_AS_32) -> STEEL_AS 
+{ Inherited(STEEL_AS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.0e+6
+		CDB_Pipe::Name			=	" 32"
+		CDB_Pipe::SizeID		=	DN_32
+		CDB_Pipe::Di			=	3.6e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_AS_40) -> STEEL_AS 
+{ Inherited(STEEL_AS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.0e+6
+		CDB_Pipe::Name			=	" 40"
+		CDB_Pipe::SizeID		=	DN_40
+		CDB_Pipe::Di			=	4.19e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_AS_50) -> STEEL_AS 
+{ Inherited(STEEL_AS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 8.6e+5
+		CDB_Pipe::Name			=	" 50"
+		CDB_Pipe::SizeID		=	DN_50
+		CDB_Pipe::Di			=	5.31e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_AS_65) -> STEEL_AS 
+{ Inherited(STEEL_AS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 8.6e+5
+		CDB_Pipe::Name			=	" 65"
+		CDB_Pipe::SizeID		=	DN_65
+		CDB_Pipe::Di			=	6.89e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_AS_80) -> STEEL_AS 
+{ Inherited(STEEL_AS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 8.6e+5
+		CDB_Pipe::Name			=	" 80"
+		CDB_Pipe::SizeID		=	DN_80
+		CDB_Pipe::Di			=	8.49e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_AS100) -> STEEL_AS 
+{ Inherited(STEEL_AS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 6.8e+5
+		CDB_Pipe::Name			=	"100"
+		CDB_Pipe::SizeID		=	DN_100
+		CDB_Pipe::Di			=	1.05e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_AS125) -> STEEL_AS 
+{ Inherited(STEEL_AS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 6.8e+5
+		CDB_Pipe::Name			=	"125"
+		CDB_Pipe::SizeID		=	DN_125
+		CDB_Pipe::Di			=	1.3e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_AS150) -> STEEL_AS 
+{ Inherited(STEEL_AS__6)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 6.0e+5
+		CDB_Pipe::Name			=	"150"
+		CDB_Pipe::SizeID		=	DN_150
+		CDB_Pipe::Di			=	1.56e-1
+	}
+}
+
+//****************************
+// Steel NBN A25-103/104 series
+//****************************
+new:CTable(STEEL_NBN\1) -> PIPE_TAB
+{
+	"IDS_STEEL_NBN"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(STEEL_NBN_10\1) -> STEEL_NBN 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 2.0e+6
+		NO_ID
+		120.0
+		-273.0
+	}
+	" 10"
+	DN_10
+	1.25e-2
+	5.0e-5
+}
+
+new:CDB_Pipe(STEEL_NBN_15) -> STEEL_NBN 
+{ Inherited(STEEL_NBN_10)
+	{
+		CDB_Pipe::Name			=	" 15"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.6e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_NBN_20) -> STEEL_NBN 
+{ Inherited(STEEL_NBN_10)
+	{
+		CDB_Pipe::Name			=	" 20"
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	2.16e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_NBN_25) -> STEEL_NBN 
+{ Inherited(STEEL_NBN_10)
+	{
+		CDB_Pipe::Name			=	" 25"
+		CDB_Pipe::SizeID		=	DN_25
+		CDB_Pipe::Di			=	2.72e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_NBN_32) -> STEEL_NBN 
+{ Inherited(STEEL_NBN_10)
+	{
+		CDB_Pipe::Name			=	" 32"
+		CDB_Pipe::SizeID		=	DN_32
+		CDB_Pipe::Di			=	3.59e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_NBN_40) -> STEEL_NBN 
+{ Inherited(STEEL_NBN_10)
+	{
+		CDB_Pipe::Name			=	" 40"
+		CDB_Pipe::SizeID		=	DN_40
+		CDB_Pipe::Di			=	4.18e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_NBN_50) -> STEEL_NBN 
+{ Inherited(STEEL_NBN_10)
+	{
+		CDB_Pipe::Name			=	" 50"
+		CDB_Pipe::SizeID		=	DN_50
+		CDB_Pipe::Di			=	5.45e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_NBN_65) -> STEEL_NBN 
+{ Inherited(STEEL_NBN_10)
+	{
+		CDB_Pipe::Name			=	" 65"
+		CDB_Pipe::SizeID		=	DN_65
+		CDB_Pipe::Di			=	7.03e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_NBN_80) -> STEEL_NBN 
+{ Inherited(STEEL_NBN_10)
+	{
+		CDB_Pipe::Name			=	" 80"
+		CDB_Pipe::SizeID		=	DN_80
+		CDB_Pipe::Di			=	8.25e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_NBN100) -> STEEL_NBN 
+{ Inherited(STEEL_NBN_10)
+	{
+		CDB_Pipe::Name			=	"100"
+		CDB_Pipe::SizeID		=	DN_100
+		CDB_Pipe::Di			=	1.07e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_NBN125) -> STEEL_NBN 
+{ Inherited(STEEL_NBN_10)
+	{
+		CDB_Pipe::Name			=	"125"
+		CDB_Pipe::SizeID		=	DN_125
+		CDB_Pipe::Di			=	1.32e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_NBN150) -> STEEL_NBN 
+{ Inherited(STEEL_NBN_10)
+	{
+		CDB_Pipe::Name			=	"150"
+		CDB_Pipe::SizeID		=	DN_150
+		CDB_Pipe::Di			=	1.59e-1
+	}
+}
+
+//*******************************
+// Steel TARIF 1,2 49.145 series
+//
+// HYS-1621: This series is exactly the same as "Steel NF A 49-145 (T1)".
+// Remark: the norm has been replaced by "EN 10255 (T1)". But we keep "NF A 49-145 (T1)" to not disturb french peoples.
+// See in "Dropbox (eR-D)\eR-D\Tech Docs\Pipes\Series\" for more details.
+//
+// Here we change the name (IDS_STEEL_NF_T1) into "Steel NF A 49-145 (T1)".
+// And the "CU_NF_T1" will inherit from this series.
+//
+//*******************************
+new:CTable(STEEL_NF1\1) -> PIPE_TAB
+{
+	"IDS_STEEL_NF_T1"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+// HYS-1621: Add DN 8 size that it exists in the norm.
+new:CDB_Pipe(STEEL_NF1__8\1) -> STEEL_NF1
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 5.0e+6
+		NO_ID
+		110.0
+		-10.0
+	}
+	"13,5x2,0"
+	DN_8
+	9.5e-3											// Internal diameter
+	5.0e-5
+}
+
+new:CDB_Pipe(STEEL_NF1__10) -> STEEL_NF1
+{ Inherited(STEEL_NF1__8)
+	{
+		CDB_Pipe::Name			=	"17,2x2,0"
+		CDB_Pipe::SizeID		=	DN_10
+		CDB_Pipe::Di			=	1.32e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_NF1__15) -> STEEL_NF1 
+{ Inherited(STEEL_NF1__10)
+	{
+		CDB_Pipe::Name			=	"21,3x2,3"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.67e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_NF1__20) -> STEEL_NF1 
+{ Inherited(STEEL_NF1__10)
+	{
+		CDB_Pipe::Name			=	"26,9x2,3"
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	2.23e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_NF1__25) -> STEEL_NF1 
+{ Inherited(STEEL_NF1__10)
+	{
+		CDB_Pipe::Name			=	"33,7x2,9"
+		CDB_Pipe::SizeID		=	DN_25
+		CDB_Pipe::Di			=	2.79e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_NF1__32) -> STEEL_NF1 
+{ Inherited(STEEL_NF1__10)
+	{
+		CDB_Pipe::Name			=	"42,4x2,9"
+		CDB_Pipe::SizeID		=	DN_32
+		CDB_Pipe::Di			=	3.66e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_NF1__40) -> STEEL_NF1 
+{ Inherited(STEEL_NF1__10)
+	{
+		CDB_Pipe::Name			=	"48,3x2,9"
+		CDB_Pipe::SizeID		=	DN_40
+		CDB_Pipe::Di			=	4.25e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_NF1__50) -> STEEL_NF1 
+{ Inherited(STEEL_NF1__10)
+	{
+		CDB_Pipe::Name			=	"60,3x3,2"
+		CDB_Pipe::SizeID		=	DN_50
+		CDB_Pipe::Di			=	5.39e-2
+	}
+}
+
+// HYS-1621: DN 60 is not encoded in HySelect.
+
+new:CDB_Pipe(STEEL_NF1__65) -> STEEL_NF1 
+{ Inherited(STEEL_NF1__10)
+	{
+		CDB_Pipe::Name			=	"76,1x3,2"
+		CDB_Pipe::SizeID		=	DN_65
+		CDB_Pipe::Di			=	6.97e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_NF1__80) -> STEEL_NF1 
+{ Inherited(STEEL_NF1__10)
+	{
+		CDB_Pipe::Name			=	"88,9x3,2"
+		CDB_Pipe::SizeID		=	DN_80
+		CDB_Pipe::Di			=	8.25e-2
+	}
+}
+
+// HYS-1621: DN 90 is not encoded in HySelect.
+
+new:CDB_Pipe(STEEL_NF1_100) -> STEEL_NF1 
+{ Inherited(STEEL_NF1__10)
+	{
+		CDB_Pipe::Name			=	"114,3x3,6"
+		CDB_Pipe::SizeID		=	DN_100
+		CDB_Pipe::Di			=	1.071e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_NF1_125) -> STEEL_NF1 
+{ Inherited(STEEL_NF1__10)
+	{
+		CDB_Pipe::Name			=	"139,7x4,5"
+		CDB_Pipe::SizeID		=	DN_125
+		CDB_Pipe::Di			=	1.307e-1
+	}
+}
+
+//*****************************
+// Steel TARIF 3 49.115 series
+//
+// HYS-1621: name changed into Steel NF A 49-115 (T3).
+//
+//*****************************
+
+new:CTable(STEEL_NF2\1) -> PIPE_TAB
+{
+	"IDS_STEEL_NF2"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+// HYS-1621: Add this size.
+new:CDB_Pipe(STEEL_NF2__8\1) -> STEEL_NF2 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 6.0e+6
+		NO_ID
+		110.0
+		-10.0
+	}
+	"13,5x2,3"
+	DN_8
+	8.9e-3
+	5.0e-5
+}
+
+new:CDB_Pipe(STEEL_NF2__10) -> STEEL_NF2 
+{ Inherited(STEEL_NF2__8)
+	{
+		CDB_Pipe::Name			=	"17,2x2,3"
+		CDB_Pipe::SizeID		=	DN_10
+		CDB_Pipe::Di			=	1.26e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_NF2__15) -> STEEL_NF2 
+{ Inherited(STEEL_NF2__10)
+	{
+		CDB_Pipe::Name			=	"21,3x2,6"
+		CDB_Pipe::SizeID		=	DN_15
+		CDB_Pipe::Di			=	1.61e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_NF2__20) -> STEEL_NF2 
+{ Inherited(STEEL_NF2__10)
+	{
+		CDB_Pipe::Name			=	"26,9x2,6"
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	2.17e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_NF2__25) -> STEEL_NF2 
+{ Inherited(STEEL_NF2__10)
+	{
+	CDB_Pipe::Name			=	"33,7x3,2"
+		CDB_Pipe::SizeID		=	DN_25
+		CDB_Pipe::Di			=	2.73e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_NF2__32) -> STEEL_NF2 
+{ Inherited(STEEL_NF2__10)
+	{
+		CDB_Pipe::Name			=	"42,4x3,2"
+		CDB_Pipe::SizeID		=	DN_32
+		CDB_Pipe::Di			=	3.6e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_NF2__40) -> STEEL_NF2 
+{ Inherited(STEEL_NF2__10)
+	{
+		CDB_Pipe::Name			=	"48,3x3,2"
+		CDB_Pipe::SizeID		=	DN_40
+		CDB_Pipe::Di			=	4.19e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_NF2__50) -> STEEL_NF2 
+{ Inherited(STEEL_NF2__10)
+	{
+		CDB_Pipe::Name			=	"60,3x3,6"
+		CDB_Pipe::SizeID		=	DN_50
+		CDB_Pipe::Di			=	5.31e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_NF2__60) -> STEEL_NF2 
+{ Inherited(STEEL_NF2__10)
+	{
+		CDB_Pipe::Name			=	"70,0x3,6"
+		CDB_Pipe::SizeID		=	DN_65
+		CDB_Pipe::Di			=	6.29e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_NF2__65) -> STEEL_NF2 
+{ Inherited(STEEL_NF2__10)
+	{
+		CDB_Pipe::Name			=	"76,1x3,6"
+		CDB_Pipe::SizeID		=	DN_65
+		CDB_Pipe::Di			=	6.89e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_NF2__80) -> STEEL_NF2 
+{ Inherited(STEEL_NF2__10)
+	{
+		CDB_Pipe::Name			=	"88,9x4"
+		CDB_Pipe::SizeID		=	DN_80
+		CDB_Pipe::Di			=	8.09e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_NF2__90) -> STEEL_NF2 
+{ Inherited(STEEL_NF2__10)
+	{
+		CDB_Pipe::Name			=	"101,6x4"
+		CDB_Pipe::SizeID		=	DN_100
+		CDB_Pipe::Di			=	9.36e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_NF2_100) -> STEEL_NF2 
+{ Inherited(STEEL_NF2__10)
+	{
+		CDB_Pipe::Name			=	"114,3x4,5"
+		CDB_Pipe::SizeID		=	DN_100
+		CDB_Pipe::Di			=	1.053e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_NF2_125) -> STEEL_NF2 
+{ Inherited(STEEL_NF2__10)
+	{
+		CDB_Pipe::Name			=	"139,7x4,5"
+		CDB_Pipe::SizeID		=	DN_125
+		CDB_Pipe::Di			=	1.307e-1
+	}
+}
+
+//**********************************
+// Steel SS 1232-06
+//**********************************
+new:CTable(STEEL_SS1232\1) -> PIPE_TAB
+{
+	"IDS_STEEL_SS1232"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(ST_SS1232_20\1) -> STEEL_SS1232 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 1.6e+6
+		NO_ID
+		120.0
+		-273.0
+	}
+	" 20"
+	DN_20
+	2.23e-2
+	5.0e-5
+}
+
+new:CDB_Pipe(ST_SS1232_25) -> STEEL_SS1232 
+{ Inherited(ST_SS1232_20)
+	{
+		CDB_Pipe::Name			=	" 25"
+		CDB_Pipe::SizeID		=	DN_25
+		CDB_Pipe::Di			=	2.85e-2
+	}
+}
+
+new:CDB_Pipe(ST_SS1232_32) -> STEEL_SS1232 
+{ Inherited(ST_SS1232_20)
+	{
+		CDB_Pipe::Name			=	" 32"
+		CDB_Pipe::SizeID		=	DN_32
+		CDB_Pipe::Di			=	3.72e-2
+	}
+}
+
+new:CDB_Pipe(ST_SS1232_40) -> STEEL_SS1232 
+{ Inherited(ST_SS1232_20)
+	{
+		CDB_Pipe::Name			=	" 40"
+		CDB_Pipe::SizeID		=	DN_40
+		CDB_Pipe::Di			=	4.31e-2
+	}
+}
+
+new:CDB_Pipe(ST_SS1232_50) -> STEEL_SS1232 
+{ Inherited(ST_SS1232_20)
+	{
+		CDB_Pipe::Name			=	" 50"
+		CDB_Pipe::SizeID		=	DN_50
+		CDB_Pipe::Di			=	5.45e-2
+	}
+}
+
+new:CDB_Pipe(ST_SS1232_65) -> STEEL_SS1232 
+{ Inherited(ST_SS1232_20)
+	{
+		CDB_Pipe::Name			=	" 65"
+		CDB_Pipe::SizeID		=	DN_65
+		CDB_Pipe::Di			=	7.03e-2
+	}
+}
+
+new:CDB_Pipe(ST_SS1232_80) -> STEEL_SS1232 
+{ Inherited(ST_SS1232_20)
+	{
+		CDB_Pipe::Name			=	" 80"
+		CDB_Pipe::SizeID		=	DN_80
+		CDB_Pipe::Di			=	8.24e-2
+	}
+}
+
+new:CDB_Pipe(ST_SS1232_100) -> STEEL_SS1232 
+{ Inherited(ST_SS1232_20)
+	{
+		CDB_Pipe::Name			=	"100"
+		CDB_Pipe::SizeID		=	DN_100
+		CDB_Pipe::Di			=	1.071e-1
+	}
+}
+
+//****************************
+// Steel Schedule 40
+//****************************
+new:CTable(STEEL_SC40\1) -> PIPE_TAB
+{
+	"IDS_STEEL_SC40"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(STEEL_SC40_15\1) -> STEEL_SC40 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 1.48e+6
+		NO_ID
+		121.1
+		-273.0
+	}
+	"1/2""
+	DN_15
+	1.57988e-2
+	5.0e-5
+}
+
+new:CDB_Pipe(STEEL_SC40_20) -> STEEL_SC40
+{ Inherited(STEEL_SC40_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.50e+6
+		CDB_Pipe::Name			=	"3/4""
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	2.09296e-2
+	}
+} 
+
+new:CDB_Pipe(STEEL_SC40_25) -> STEEL_SC40 
+{ Inherited(STEEL_SC40_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.56e+6
+		CDB_Pipe::Name			=	"  1""
+		CDB_Pipe::SizeID		=	DN_25
+		CDB_Pipe::Di			=	2.66446e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_SC40_32) -> STEEL_SC40 
+{ Inherited(STEEL_SC40_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.58e+6
+		CDB_Pipe::Name			=	" 1 1/4""
+		CDB_Pipe::SizeID		=	DN_32
+		CDB_Pipe::Di			=	3.5052e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_SC40_40) -> STEEL_SC40 
+{ Inherited(STEEL_SC40_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.59e+6
+		CDB_Pipe::Name			=	" 1 1/2""
+		CDB_Pipe::SizeID		=	DN_40
+		CDB_Pipe::Di			=	4.0894e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_SC40_50) -> STEEL_SC40 
+{ Inherited(STEEL_SC40_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.59e+6
+		CDB_Pipe::Name			=	"  2""
+		CDB_Pipe::SizeID		=	DN_50
+		CDB_Pipe::Di			=	5.25018e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_SC40_65) -> STEEL_SC40 
+{ Inherited(STEEL_SC40_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 3.68e+6
+		CDB_Pipe::Name			=	" 2 1/2""
+		CDB_Pipe::SizeID		=	DN_65
+		CDB_Pipe::Di			=	6.27126e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_SC40_80) -> STEEL_SC40 
+{ Inherited(STEEL_SC40_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 3.32e+6
+		CDB_Pipe::Name			=	"  3""
+		CDB_Pipe::SizeID		=	DN_80
+		CDB_Pipe::Di			=	7.79272e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_SC40_100) -> STEEL_SC40 
+{ Inherited(STEEL_SC40_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.96e+6
+		CDB_Pipe::Name			=	"  4""
+		CDB_Pipe::SizeID		=	DN_100
+		CDB_Pipe::Di			=	1.022604e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_SC40_125) -> STEEL_SC40 
+{ Inherited(STEEL_SC40_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.96e+6
+		CDB_Pipe::Name			=	"  5""
+		CDB_Pipe::SizeID		=	DN_125
+		CDB_Pipe::Di			=	1.281938e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_SC40_150) -> STEEL_SC40 
+{ Inherited(STEEL_SC40_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 4.80e+6
+		CDB_Pipe::Name			=	"  6""
+		CDB_Pipe::SizeID		=	DN_150
+		CDB_Pipe::Di			=	1.54051e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_SC40_200) -> STEEL_SC40 
+{ Inherited(STEEL_SC40_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 4.43e+6
+		CDB_Pipe::Name			=	"  8""
+		CDB_Pipe::SizeID		=	DN_200
+		CDB_Pipe::Di			=	2.027174e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_SC40_250) -> STEEL_SC40 
+{ Inherited(STEEL_SC40_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 4.18e+6
+		CDB_Pipe::Name			=	" 10""
+		CDB_Pipe::SizeID		=	DN_250
+		CDB_Pipe::Di			=	2.54508e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_SC40_300) -> STEEL_SC40 
+{ Inherited(STEEL_SC40_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 4.02e+6
+		CDB_Pipe::Name			=	" 12""
+		CDB_Pipe::SizeID		=	DN_300
+		CDB_Pipe::Di			=	3.032252e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_SC40_350) -> STEEL_SC40 
+{ Inherited(STEEL_SC40_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 4.00e+6
+		CDB_Pipe::Name			=	" 14""
+		CDB_Pipe::SizeID		=	DN_350
+		CDB_Pipe::Di			=	3.334004e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_SC40_400) -> STEEL_SC40 
+{ Inherited(STEEL_SC40_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 4.11e+6
+		CDB_Pipe::Name			=	" 16""
+		CDB_Pipe::SizeID		=	DN_400
+		CDB_Pipe::Di			=	3.81e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_SC40_450) -> STEEL_SC40 
+{ Inherited(STEEL_SC40_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 4.19e+6
+		CDB_Pipe::Name			=	" 18""
+		CDB_Pipe::SizeID		=	DN_450
+		CDB_Pipe::Di			=	4.286504e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_SC40_500) -> STEEL_SC40 
+{ Inherited(STEEL_SC40_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 4.01e+6
+		CDB_Pipe::Name			=	" 20""
+		CDB_Pipe::SizeID		=	DN_500
+		CDB_Pipe::Di			=	4.778756e-1
+	}
+}
+
+//****************************
+// Steel US Std schedule
+//****************************
+new:CTable(STEEL_USST\1) -> PIPE_TAB
+{
+	"IDS_STEEL_USST"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(STEEL_USST_15\1) -> STEEL_USST 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 1.48e+6
+		NO_ID
+		121.1
+		-273.0
+	}
+	"1/2""
+	DN_15
+	1.57988e-2
+	5.0e-5
+}
+
+new:CDB_Pipe(STEEL_USST_20) -> STEEL_USST
+{ Inherited(STEEL_USST_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.50e+6
+		CDB_Pipe::Name			=	"3/4""
+		CDB_Pipe::SizeID		=	DN_20
+		CDB_Pipe::Di			=	2.09296e-2
+	}
+} 
+
+new:CDB_Pipe(STEEL_USST_25) -> STEEL_USST 
+{ Inherited(STEEL_USST_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.56e+6
+		CDB_Pipe::Name			=	"  1""
+		CDB_Pipe::SizeID		=	DN_25
+		CDB_Pipe::Di			=	2.66446e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_USST_32) -> STEEL_USST 
+{ Inherited(STEEL_USST_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.58e+6
+		CDB_Pipe::Name			=	" 1 1/4""
+		CDB_Pipe::SizeID		=	DN_32
+		CDB_Pipe::Di			=	3.5052e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_USST_40) -> STEEL_USST 
+{ Inherited(STEEL_USST_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.59e+6
+		CDB_Pipe::Name			=	" 1 1/2""
+		CDB_Pipe::SizeID		=	DN_40
+		CDB_Pipe::Di			=	4.0894e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_USST_50) -> STEEL_USST 
+{ Inherited(STEEL_USST_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.59e+6
+		CDB_Pipe::Name			=	"  2""
+		CDB_Pipe::SizeID		=	DN_50
+		CDB_Pipe::Di			=	5.25018e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_USST_65) -> STEEL_USST 
+{ Inherited(STEEL_USST_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 3.68e+6
+		CDB_Pipe::Name			=	" 2 1/2""
+		CDB_Pipe::SizeID		=	DN_65
+		CDB_Pipe::Di			=	6.27126e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_USST_80) -> STEEL_USST 
+{ Inherited(STEEL_USST_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 3.32e+6
+		CDB_Pipe::Name			=	"  3""
+		CDB_Pipe::SizeID		=	DN_80
+		CDB_Pipe::Di			=	7.79272e-2
+	}
+}
+
+new:CDB_Pipe(STEEL_USST_100) -> STEEL_USST 
+{ Inherited(STEEL_USST_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.96e+6
+		CDB_Pipe::Name			=	"  4""
+		CDB_Pipe::SizeID		=	DN_100
+		CDB_Pipe::Di			=	1.022604e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_USST_125) -> STEEL_USST 
+{ Inherited(STEEL_USST_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.96e+6
+		CDB_Pipe::Name			=	"  5""
+		CDB_Pipe::SizeID		=	DN_125
+		CDB_Pipe::Di			=	1.281938e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_USST_150) -> STEEL_USST 
+{ Inherited(STEEL_USST_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 4.80e+6
+		CDB_Pipe::Name			=	"  6""
+		CDB_Pipe::SizeID		=	DN_150
+		CDB_Pipe::Di			=	1.54051e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_USST_200) -> STEEL_USST 
+{ Inherited(STEEL_USST_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 4.43e+6
+		CDB_Pipe::Name			=	"  8""
+		CDB_Pipe::SizeID		=	DN_200
+		CDB_Pipe::Di			=	2.027174e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_USST_250) -> STEEL_USST 
+{ Inherited(STEEL_USST_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 4.18e+6
+		CDB_Pipe::Name			=	" 10""
+		CDB_Pipe::SizeID		=	DN_250
+		CDB_Pipe::Di			=	2.54508e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_USST_300) -> STEEL_USST 
+{ Inherited(STEEL_USST_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 3.64e+6
+		CDB_Pipe::Name			=	" 12""
+		CDB_Pipe::SizeID		=	DN_300
+		CDB_Pipe::Di			=	3.0480e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_USST_350) -> STEEL_USST 
+{ Inherited(STEEL_USST_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 3.32e+6
+		CDB_Pipe::Name			=	" 14""
+		CDB_Pipe::SizeID		=	DN_350
+		CDB_Pipe::Di			=	3.3655e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_USST_400) -> STEEL_USST 
+{ Inherited(STEEL_USST_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.90e+6
+		CDB_Pipe::Name			=	" 16""
+		CDB_Pipe::SizeID		=	DN_400
+		CDB_Pipe::Di			=	3.8735e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_USST_450) -> STEEL_USST 
+{ Inherited(STEEL_USST_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.58e+6
+		CDB_Pipe::Name			=	" 18""
+		CDB_Pipe::SizeID		=	DN_450
+		CDB_Pipe::Di			=	4.3815e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_USST_500) -> STEEL_USST 
+{ Inherited(STEEL_USST_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.32e+6
+		CDB_Pipe::Name			=	" 20""
+		CDB_Pipe::SizeID		=	DN_500
+		CDB_Pipe::Di			=	4.8895e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_USST_600) -> STEEL_USST 
+{ Inherited(STEEL_USST_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.97e+6
+		CDB_Pipe::Name			=	" 24""
+		CDB_Pipe::SizeID		=	DN_600
+		CDB_Pipe::Di			=	5.9055e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_USST_700) -> STEEL_USST 
+{ Inherited(STEEL_USST_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.71e+6
+		CDB_Pipe::Name			=	" 28""
+		CDB_Pipe::SizeID		=	DN_700
+		CDB_Pipe::Di			=	6.9215e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_USST_800) -> STEEL_USST 
+{ Inherited(STEEL_USST_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.51e+6
+		CDB_Pipe::Name			=	" 32""
+		CDB_Pipe::SizeID		=	DN_800
+		CDB_Pipe::Di			=	7.9375e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_USST_900) -> STEEL_USST 
+{ Inherited(STEEL_USST_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.35e+6
+		CDB_Pipe::Name			=	" 36""
+		CDB_Pipe::SizeID		=	DN_900
+		CDB_Pipe::Di			=	8.9535e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_USST_1000) -> STEEL_USST 
+{ Inherited(STEEL_USST_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.22e+6
+		CDB_Pipe::Name			=	" 40""
+		CDB_Pipe::SizeID		=	DN_1000
+		CDB_Pipe::Di			=	9.9695e-1
+	}
+}
+
+new:CDB_Pipe(STEEL_USST_1100) -> STEEL_USST 
+{ Inherited(STEEL_USST_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.12e+6
+		CDB_Pipe::Name			=	" 44""
+		CDB_Pipe::SizeID		=	DN_1100
+		CDB_Pipe::Di			=	1.09855e+0
+	}
+}
+
+new:CDB_Pipe(STEEL_USST_1200) -> STEEL_USST 
+{ Inherited(STEEL_USST_15)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.03e+6
+		CDB_Pipe::Name			=	" 48""
+		CDB_Pipe::SizeID		=	DN_1200
+		CDB_Pipe::Di			=	1.20015e+0
+	}
+}
+
+//****************************
+// Steel DIN 2448/1629 series
+//****************************
+new:CTable(STDIN2448\1) -> PIPE_TAB
+{
+	"IDS_STDIN2448"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(STDIN2448_33\1) ->STDIN2448
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 6.40e+6
+		NO_ID
+		300.0
+		-50.0
+	}
+	" 33.7"
+	DN_32
+	0.0285
+	 5.00e-5
+}
+
+new:CDB_Pipe(STDIN2448_38)->STDIN2448
+{ Inherited(STDIN2448_33)
+	{
+		CDB_Pipe::Name =	" 38.0"
+		CDB_Pipe::SizeID =	DN_32
+		CDB_Pipe::Di =		0.0328
+	}
+}
+
+new:CDB_Pipe(STDIN2448_42)->STDIN2448
+{ Inherited(STDIN2448_33)
+	{
+		CDB_Pipe::Name =	" 42.4"
+		CDB_Pipe::SizeID =	DN_40
+		CDB_Pipe::Di =		0.0372
+	}
+}
+
+new:CDB_Pipe(STDIN2448_48)->STDIN2448
+{ Inherited(STDIN2448_33)
+	{
+		CDB_Pipe::Name =	" 48.3"
+		CDB_Pipe::SizeID =	DN_40
+		CDB_Pipe::Di =		0.0431
+	}
+}
+
+new:CDB_Pipe(STDIN2448_60)->STDIN2448
+{ Inherited(STDIN2448_33)
+	{
+		CDB_Pipe::Name =	" 60.3"
+		CDB_Pipe::SizeID =	DN_50
+		CDB_Pipe::Di =		0.0545
+	}
+}
+
+new:CDB_Pipe(STDIN2448_70)->STDIN2448
+{ Inherited(STDIN2448_33)
+	{
+		CDB_Pipe::Name =	" 70.0"
+		CDB_Pipe::SizeID =	DN_65
+		CDB_Pipe::Di =		0.0642
+	}
+}
+
+new:CDB_Pipe(STDIN2448_76)->STDIN2448
+{ Inherited(STDIN2448_33)
+	{
+		CDB_Pipe::Name =	" 76.1"
+		CDB_Pipe::SizeID =	DN_65
+		CDB_Pipe::Di =		0.0703
+	}
+}
+
+new:CDB_Pipe(STDIN2448_88)->STDIN2448
+{ Inherited(STDIN2448_33)
+	{
+		CDB_Pipe::Name =	" 88.9"
+		CDB_Pipe::SizeID =	DN_80
+		CDB_Pipe::Di =		0.0825
+	}
+}
+
+new:CDB_Pipe(STDIN2448_101)->STDIN2448
+{ Inherited(STDIN2448_33)
+	{
+		CDB_Pipe::Name =	"101.6"
+		CDB_Pipe::SizeID =	DN_100
+		CDB_Pipe::Di =		0.0944
+	}
+}
+
+new:CDB_Pipe(STDIN2448_108)->STDIN2448
+{ Inherited(STDIN2448_33)
+	{
+		CDB_Pipe::Name =	"108.0"
+		CDB_Pipe::SizeID =	DN_100
+		CDB_Pipe::Di =		0.1008
+	}
+}
+
+new:CDB_Pipe(STDIN2448_114)->STDIN2448
+{ Inherited(STDIN2448_33)
+	{
+		CDB_Pipe::Name =	"114.3"
+		CDB_Pipe::SizeID =	DN_100
+		CDB_Pipe::Di =		0.1071
+	}
+}
+
+new:CDB_Pipe(STDIN2448_133)->STDIN2448
+{ Inherited(STDIN2448_33)
+	{
+		CDB_Pipe::Name =	"133.0"
+		CDB_Pipe::SizeID =	DN_125
+		CDB_Pipe::Di =		0.1250
+	}
+}
+
+new:CDB_Pipe(STDIN2448_139)->STDIN2448
+{ Inherited(STDIN2448_33)
+	{
+		CDB_Pipe::Name =	"139.7"
+		CDB_Pipe::SizeID =	DN_150
+		CDB_Pipe::Di =		0.1317
+	}
+}
+
+new:CDB_Pipe(STDIN2448_159)->STDIN2448
+{ Inherited(STDIN2448_33)
+	{
+		CDB_Pipe::Name =	"159.0"
+		CDB_Pipe::SizeID =	DN_150
+		CDB_Pipe::Di =		0.1500
+	}
+}
+
+new:CDB_Pipe(STDIN2448_168)->STDIN2448
+{ Inherited(STDIN2448_33)
+	{
+		CDB_Pipe::Name =	"168.3"
+		CDB_Pipe::SizeID =	DN_150
+		CDB_Pipe::Di =		0.1593
+	}
+}
+
+new:CDB_Pipe(STDIN2448_193)->STDIN2448
+{ Inherited(STDIN2448_33)
+	{
+		CDB_Pipe::Name =	"193.7"
+		CDB_Pipe::SizeID =	DN_200
+		CDB_Pipe::Di =		0.1825
+	}
+}
+
+new:CDB_Pipe(STDIN2448_219)->STDIN2448
+{ Inherited(STDIN2448_33)
+	{
+		CDB_Pipe::Name =	"219.1"
+		CDB_Pipe::SizeID =	DN_200
+		CDB_Pipe::Di =		0.2065
+	}
+}
+
+new:CDB_Pipe(STDIN2448_244)->STDIN2448
+{ Inherited(STDIN2448_33)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.5e+6
+		CDB_Pipe::Name =	"244.5"
+		CDB_Pipe::SizeID =	DN_250
+		CDB_Pipe::Di =		0.2319
+	}
+}
+
+new:CDB_Pipe(STDIN2448_273)->STDIN2448
+{ Inherited(STDIN2448_33)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.5e+6
+		CDB_Pipe::Name =	"273.0"
+		CDB_Pipe::SizeID =	DN_300
+		CDB_Pipe::Di =		0.2604
+	}
+}
+
+new:CDB_Pipe(STDIN2448_323)->STDIN2448
+{ Inherited(STDIN2448_33)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.5e+6
+		CDB_Pipe::Name =	"323.9"
+		CDB_Pipe::SizeID =	DN_300
+		CDB_Pipe::Di =		0.3097
+	}
+}
+
+new:CDB_Pipe(STDIN2448_355)->STDIN2448
+{ Inherited(STDIN2448_33)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.5e+6
+		CDB_Pipe::Name =	"355.6"
+		CDB_Pipe::SizeID =	DN_350
+		CDB_Pipe::Di =		0.3396
+	}
+}
+
+new:CDB_Pipe(STDIN2448_406)->STDIN2448
+{ Inherited(STDIN2448_33)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.5e+6
+		CDB_Pipe::Name =	"406.4"
+		CDB_Pipe::SizeID =	DN_400
+		CDB_Pipe::Di =		0.3888
+	}
+}
+
+new:CDB_Pipe(STDIN2448_457)->STDIN2448
+{ Inherited(STDIN2448_33)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.5e+6
+		CDB_Pipe::Name =	"457.0"
+		CDB_Pipe::SizeID =	DN_450
+		CDB_Pipe::Di =		0.4370
+	}
+}
+
+new:CDB_Pipe(STDIN2448_508)->STDIN2448
+{ Inherited(STDIN2448_33)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 2.5e+6
+		CDB_Pipe::Name =	"508.0"
+		CDB_Pipe::SizeID =	DN_500
+		CDB_Pipe::Di =		0.4860
+	}
+}
+
+//****************************
+// Climatherm Faser series
+//****************************
+new:CTable(CLIMAT_FASER\1) ->PIPE_TAB
+{
+	"IDS_CLIMAT_FASER"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(CLIMAT_20\1) ->CLIMAT_FASER
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 2.00e+6
+		NO_ID
+		90.0
+		-50.0
+	}
+	"20 x 2.8"
+	DN_15
+	0.01440
+	7.0000e-6
+}
+
+new:CDB_Pipe(CLIMAT_25)->CLIMAT_FASER
+{ Inherited(CLIMAT_20)
+	{
+		CDB_Pipe::Name =	"25 x 3.5"
+		CDB_Pipe::SizeID =	DN_20
+		CDB_Pipe::Di =		0.01800
+	}
+}
+
+new:CDB_Pipe(CLIMAT_32)->CLIMAT_FASER
+{ Inherited(CLIMAT_20)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.0e+6
+		CDB_Pipe::Name =	"32 x 2.9"
+		CDB_Pipe::SizeID =	DN_25
+		CDB_Pipe::Di =		0.02620
+	}
+}
+
+new:CDB_Pipe(CLIMAT_40)->CLIMAT_FASER
+{ Inherited(CLIMAT_20)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.0e+6
+		CDB_Pipe::Name =	"40 x 3.7"
+		CDB_Pipe::SizeID =	DN_32
+		CDB_Pipe::Di =		0.03260
+	}
+}
+
+new:CDB_Pipe(CLIMAT_50)->CLIMAT_FASER
+{ Inherited(CLIMAT_20)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.0e+6
+		CDB_Pipe::Name =	"50 x 4.6"
+		CDB_Pipe::SizeID =	DN_40
+		CDB_Pipe::Di =		0.04080
+	}
+}
+
+new:CDB_Pipe(CLIMAT_63)->CLIMAT_FASER
+{ Inherited(CLIMAT_20)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.0e+6
+		CDB_Pipe::Name =	"63 x 5.8"
+		CDB_Pipe::SizeID =	DN_50
+		CDB_Pipe::Di =		0.05140
+	}
+}
+
+new:CDB_Pipe(CLIMAT_75)->CLIMAT_FASER
+{ Inherited(CLIMAT_20)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.0e+6
+		CDB_Pipe::Name =	"75 x 6.9"
+		CDB_Pipe::SizeID =	DN_65
+		CDB_Pipe::Di =		0.06120
+	}
+}
+
+new:CDB_Pipe(CLIMAT_90)->CLIMAT_FASER
+{ Inherited(CLIMAT_20)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.0e+6
+		CDB_Pipe::Name =	"90 x 8.2"
+		CDB_Pipe::SizeID =	DN_80
+		CDB_Pipe::Di =		0.07360
+	}
+}
+
+new:CDB_Pipe(CLIMAT_110)->CLIMAT_FASER
+{ Inherited(CLIMAT_20)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.0e+6
+		CDB_Pipe::Name =	"110 x 10"
+		CDB_Pipe::SizeID =	DN_100
+		CDB_Pipe::Di =		0.09000
+	}
+}
+
+new:CDB_Pipe(CLIMAT_125)->CLIMAT_FASER
+{ Inherited(CLIMAT_20)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.0e+6
+		CDB_Pipe::Name =	"125 x 11.4"
+		CDB_Pipe::SizeID =	DN_125
+		CDB_Pipe::Di =		0.1022
+	}
+}
+
+new:CDB_Pipe(CLIMAT_160)->CLIMAT_FASER
+{ Inherited(CLIMAT_20)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.0e+6
+		CDB_Pipe::Name =	"160 x 14.6"
+		CDB_Pipe::SizeID =	DN_150
+		CDB_Pipe::Di =		0.1308
+	}
+}
+
+new:CDB_Pipe(CLIMAT_200)->CLIMAT_FASER
+{ Inherited(CLIMAT_20)
+	{
+		CDB_Pipe::Name =	"200 x 18.2"
+		CDB_Pipe::SizeID =	DN_200
+		CDB_Pipe::Di =		0.1636
+	}
+}
+
+new:CDB_Pipe(CLIMAT_250)->CLIMAT_FASER
+{ Inherited(CLIMAT_20)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.0e+6
+		CDB_Pipe::Name =	"250 x 22.7"
+		CDB_Pipe::SizeID =	DN_250
+		CDB_Pipe::Di =		0.2046
+	}
+}
+
+//****************************
+// Fusiotherm Faser series
+//****************************
+new:CTable(FUSIOT_FASER\1) ->PIPE_TAB
+{
+	"IDS_FUSIOT_FASER"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(FUSIOT_20\1) ->FUSIOT_FASER
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 2.00e+6
+		NO_ID
+		90.0
+		-50.0
+	}
+	"20 x 2.8"
+	DN_15
+	0.01440
+	7.0000e-6
+}
+
+new:CDB_Pipe(FUSIOT_25)->FUSIOT_FASER
+{ Inherited(FUSIOT_20)
+	{
+		CDB_Pipe::Name =	"25 x 3.5"
+		CDB_Pipe::SizeID =	DN_20
+		CDB_Pipe::Di =		0.01800
+	}
+}
+
+new:CDB_Pipe(FUSIOT_32)->FUSIOT_FASER
+{ Inherited(FUSIOT_20)
+	{
+		CDB_Pipe::Name =	"32 x 4.4"
+		CDB_Pipe::SizeID =	DN_25
+		CDB_Pipe::Di =		0.02320
+	}
+}
+
+new:CDB_Pipe(FUSIOT_40)->FUSIOT_FASER
+{ Inherited(FUSIOT_20)
+	{
+		CDB_Pipe::Name =	"40 x 5.5"
+		CDB_Pipe::SizeID =	DN_32
+		CDB_Pipe::Di =		0.02900
+	}
+}
+
+new:CDB_Pipe(FUSIOT_50)->FUSIOT_FASER
+{ Inherited(FUSIOT_20)
+	{
+		CDB_Pipe::Name =	"50 x 6.9"
+		CDB_Pipe::SizeID =	DN_40
+		CDB_Pipe::Di =		0.03620
+	}
+}
+
+new:CDB_Pipe(FUSIOT_63)->FUSIOT_FASER
+{ Inherited(FUSIOT_20)
+	{
+		CDB_Pipe::Name =	"63 x 8.6"
+		CDB_Pipe::SizeID =	DN_50
+		CDB_Pipe::Di =		0.04580
+	}
+}
+
+new:CDB_Pipe(FUSIOT_75)->FUSIOT_FASER
+{ Inherited(FUSIOT_20)
+	{
+		CDB_Pipe::Name =	"75 x 10.3"
+		CDB_Pipe::SizeID =	DN_65
+		CDB_Pipe::Di =		0.05440
+	}
+}
+
+new:CDB_Pipe(FUSIOT_90)->FUSIOT_FASER
+{ Inherited(FUSIOT_20)
+	{
+		CDB_Pipe::Name =	"90 x 12.3"
+		CDB_Pipe::SizeID =	DN_80
+		CDB_Pipe::Di =		0.06540
+	}
+}
+
+new:CDB_Pipe(FUSIOT_110)->FUSIOT_FASER
+{ Inherited(FUSIOT_20)
+	{
+		CDB_Pipe::Name =	"110 x 15.1"
+		CDB_Pipe::SizeID =	DN_100
+		CDB_Pipe::Di =		0.07980
+	}
+}
+
+new:CDB_Pipe(FUSIOT_125)->FUSIOT_FASER
+{ Inherited(FUSIOT_20)
+	{
+		CDB_Pipe::Name =	"125 x 17.1"
+		CDB_Pipe::SizeID =	DN_125
+		CDB_Pipe::Di =		0.0908
+	}
+}
+
+new:CDB_Pipe(FUSIOT_160)->FUSIOT_FASER
+{ Inherited(FUSIOT_20)
+	{
+		CDB_HydroThing::Pmax	=	0.0e+6 \ 1.0e+6
+		CDB_Pipe::Name =	"160 x 21.9"
+		CDB_Pipe::SizeID =	DN_150
+		CDB_Pipe::Di =		0.1162
+	}
+}
+
+new:CDB_Pipe(FUSIOT_200)->FUSIOT_FASER
+{ Inherited(FUSIOT_20)
+	{
+		CDB_Pipe::Name =	"200 x 27.4"
+		CDB_Pipe::SizeID =	DN_200
+		CDB_Pipe::Di =		0.1452
+	}
+}
+
+new:CDB_Pipe(FUSIOT_250)->FUSIOT_FASER
+{ Inherited(FUSIOT_20)
+	{
+		CDB_Pipe::Name =	"250 x 34.2"
+		CDB_Pipe::SizeID =	DN_250
+		CDB_Pipe::Di =		0.1816
+	}
+}
+
+//****************************
+// PE100 SDR 11 (PN16)
+//****************************
+new:CTable(PE100_SDR_11\1) ->PIPE_TAB
+{
+	"IDS_PE100_SRD_11"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(PE100SDR11_20\1) ->PE100_SDR_11
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 1.60e+6
+		NO_ID
+		80.0
+		-50.0
+	}
+	"20"						// Name of the pipe
+	DN_15               		// Identifier of the corresp. valve size
+	0.016             			// Internal diameter in m
+	8.5000e-6           		// Roughness in m
+}
+
+new:CDB_Pipe(PE100SDR11_25)->PE100_SDR_11
+{ Inherited(PE100SDR11_20)
+	{
+		CDB_Pipe::Name =	"25"
+		CDB_Pipe::SizeID =	DN_20
+		CDB_Pipe::Di =		0.0204
+	}
+}
+
+new:CDB_Pipe(PE100SDR11_32)->PE100_SDR_11
+{ Inherited(PE100SDR11_20)
+	{
+		CDB_Pipe::Name =	"32"
+		CDB_Pipe::SizeID =	DN_25
+		CDB_Pipe::Di =		0.0262
+	}
+}
+
+new:CDB_Pipe(PE100SDR11_40)->PE100_SDR_11
+{ Inherited(PE100SDR11_20)
+	{
+		CDB_Pipe::Name =	"40"
+		CDB_Pipe::SizeID =	DN_32
+		CDB_Pipe::Di =		0.0326
+	}
+}
+
+new:CDB_Pipe(PE100SDR11_50)->PE100_SDR_11
+{ Inherited(PE100SDR11_20)
+	{
+		CDB_Pipe::Name =	"50"
+		CDB_Pipe::SizeID =	DN_40
+		CDB_Pipe::Di =		0.0408
+	}
+}
+
+new:CDB_Pipe(PE100SDR11_63)->PE100_SDR_11
+{ Inherited(PE100SDR11_20)
+	{
+		CDB_Pipe::Name =	"63"
+		CDB_Pipe::SizeID =	DN_50
+		CDB_Pipe::Di =		0.0514
+	}
+}
+
+new:CDB_Pipe(PE100SDR11_75)->PE100_SDR_11
+{ Inherited(PE100SDR11_20)
+	{
+		CDB_Pipe::Name =	"75"
+		CDB_Pipe::SizeID =	DN_65
+		CDB_Pipe::Di =		0.0614
+	}
+}
+
+new:CDB_Pipe(PE100SDR11_90)->PE100_SDR_11
+{ Inherited(PE100SDR11_20)
+	{
+		CDB_Pipe::Name =	"90"
+		CDB_Pipe::SizeID =	DN_80
+		CDB_Pipe::Di =		0.0736
+	}
+}
+
+new:CDB_Pipe(PE100SDR11_110)->PE100_SDR_11
+{ Inherited(PE100SDR11_20)
+	{
+		CDB_Pipe::Name =	"110"
+		CDB_Pipe::SizeID =	DN_100
+		CDB_Pipe::Di =		0.09
+	}
+}
+
+new:CDB_Pipe(PE100SDR11_125)->PE100_SDR_11
+{ Inherited(PE100SDR11_20)
+	{
+		CDB_Pipe::Name =	"125"
+		CDB_Pipe::SizeID =	DN_100
+		CDB_Pipe::Di =		0.1022
+	}
+}
+
+new:CDB_Pipe(PE100SDR11_140)->PE100_SDR_11
+{ Inherited(PE100SDR11_20)
+	{
+		CDB_Pipe::Name =	"140"
+		CDB_Pipe::SizeID =	DN_125
+		CDB_Pipe::Di =		0.1146
+	}
+}
+
+new:CDB_Pipe(PE100SDR11_160)->PE100_SDR_11
+{ Inherited(PE100SDR11_20)
+	{
+		CDB_Pipe::Name =	"160"
+		CDB_Pipe::SizeID =	DN_150
+		CDB_Pipe::Di =		0.1308
+	}
+}
+
+new:CDB_Pipe(PE100SDR11_180)->PE100_SDR_11
+{ Inherited(PE100SDR11_20)
+	{
+		CDB_Pipe::Name =	"180"
+		CDB_Pipe::SizeID =	DN_150
+		CDB_Pipe::Di =		0.1472
+	}
+}
+
+new:CDB_Pipe(PE100SDR11_200)->PE100_SDR_11
+{ Inherited(PE100SDR11_20)
+	{
+		CDB_Pipe::Name =	"200"
+		CDB_Pipe::SizeID =	DN_200
+		CDB_Pipe::Di =		0.1636
+	}
+}
+
+new:CDB_Pipe(PE100SDR11_é25)->PE100_SDR_11
+{ Inherited(PE100SDR11_20)
+	{
+		CDB_Pipe::Name =	"225"
+		CDB_Pipe::SizeID =	DN_200
+		CDB_Pipe::Di =		0.184
+	}
+}
+
+new:CDB_Pipe(PE100SDR11_250)->PE100_SDR_11
+{ Inherited(PE100SDR11_20)
+	{
+		CDB_Pipe::Name =	"250"
+		CDB_Pipe::SizeID =	DN_250
+		CDB_Pipe::Di =		0.2046
+	}
+}
+
+new:CDB_Pipe(PE100SDR11_280)->PE100_SDR_11
+{ Inherited(PE100SDR11_20)
+	{
+		CDB_Pipe::Name =	"280"
+		CDB_Pipe::SizeID =	DN_250
+		CDB_Pipe::Di =		0.2292
+	}
+}
+
+new:CDB_Pipe(PE100SDR11_315)->PE100_SDR_11
+{ Inherited(PE100SDR11_20)
+	{
+		CDB_Pipe::Name =	"315"
+		CDB_Pipe::SizeID =	DN_300
+		CDB_Pipe::Di =		0.2578
+	}
+}
+
+new:CDB_Pipe(PE100SDR11_355)->PE100_SDR_11
+{ Inherited(PE100SDR11_20)
+	{
+		CDB_Pipe::Name =	"355"
+		CDB_Pipe::SizeID =	DN_350
+		CDB_Pipe::Di =		0.2906
+	}
+}
+
+new:CDB_Pipe(PE100SDR11_400)->PE100_SDR_11
+{ Inherited(PE100SDR11_20)
+	{
+		CDB_Pipe::Name =	"400"
+		CDB_Pipe::SizeID =	DN_400
+		CDB_Pipe::Di =		0.3274
+	}
+}
+
+new:CDB_Pipe(PE100SDR11_450)->PE100_SDR_11
+{ Inherited(PE100SDR11_20)
+	{
+		CDB_Pipe::Name =	"450"
+		CDB_Pipe::SizeID =	DN_450
+		CDB_Pipe::Di =		0.3682
+	}
+}
+
+new:CDB_Pipe(PE100SDR11_500)->PE100_SDR_11
+{ Inherited(PE100SDR11_20)
+	{
+		CDB_Pipe::Name =	"500"
+		CDB_Pipe::SizeID =	DN_500
+		CDB_Pipe::Di =		0.4092
+	}
+}
+
+new:CDB_Pipe(PE100SDR11_560)->PE100_SDR_11
+{ Inherited(PE100SDR11_20)
+	{
+		CDB_Pipe::Name =	"560"
+		CDB_Pipe::SizeID =	DN_500
+		CDB_Pipe::Di =		0.4584
+	}
+}
+
+new:CDB_Pipe(PE100SDR11_630)->PE100_SDR_11
+{ Inherited(PE100SDR11_20)
+	{
+		CDB_Pipe::Name =	"630"
+		CDB_Pipe::SizeID =	DN_600
+		CDB_Pipe::Di =		0.5156
+	}
+}
+
+//****************************
+// PE100 SDR 17 (PN10)
+//****************************
+new:CTable(PE100_SDR_17\1) ->PIPE_TAB
+{
+	"IDS_PE100_SRD_17"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(PE100SDR17_40\1) ->PE100_SDR_17
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 1.60e+6
+		NO_ID
+		80.0
+		-50.0
+	}
+	"40"						// Name of the pipe
+	DN_32               		// Identifier of the corresp. valve size
+	0.0352             			// Internal diameter in m
+	8.5000e-6           		// Roughness in m
+}
+
+new:CDB_Pipe(PE100SDR17_50)->PE100_SDR_17
+{ Inherited(PE100SDR17_40)
+	{
+		CDB_Pipe::Name =	"50"
+		CDB_Pipe::SizeID =	DN_40
+		CDB_Pipe::Di =		0.044
+	}
+}
+
+new:CDB_Pipe(PE100SDR17_63)->PE100_SDR_17
+{ Inherited(PE100SDR17_40)
+	{
+		CDB_Pipe::Name =	"63"
+		CDB_Pipe::SizeID =	DN_50
+		CDB_Pipe::Di =		0.0554
+	}
+}
+
+new:CDB_Pipe(PE100SDR17_75)->PE100_SDR_17
+{ Inherited(PE100SDR17_40)
+	{
+		CDB_Pipe::Name =	"75"
+		CDB_Pipe::SizeID =	DN_65
+		CDB_Pipe::Di =		0.066
+	}
+}
+
+new:CDB_Pipe(PE100SDR17_90)->PE100_SDR_17
+{ Inherited(PE100SDR17_40)
+	{
+		CDB_Pipe::Name =	"90"
+		CDB_Pipe::SizeID =	DN_80
+		CDB_Pipe::Di =		0.0792
+	}
+}
+
+new:CDB_Pipe(PE100SDR17_110)->PE100_SDR_17
+{ Inherited(PE100SDR17_40)
+	{
+		CDB_Pipe::Name =	"110"
+		CDB_Pipe::SizeID =	DN_100
+		CDB_Pipe::Di =		0.0968
+	}
+}
+
+new:CDB_Pipe(PE100SDR17_125)->PE100_SDR_17
+{ Inherited(PE100SDR17_40)
+	{
+		CDB_Pipe::Name =	"125"
+		CDB_Pipe::SizeID =	DN_100
+		CDB_Pipe::Di =		0.1102
+	}
+}
+
+new:CDB_Pipe(PE100SDR17_140)->PE100_SDR_17
+{ Inherited(PE100SDR17_40)
+	{
+		CDB_Pipe::Name =	"140"
+		CDB_Pipe::SizeID =	DN_125
+		CDB_Pipe::Di =		0.1234
+	}
+}
+
+new:CDB_Pipe(PE100SDR17_160)->PE100_SDR_17
+{ Inherited(PE100SDR17_40)
+	{
+		CDB_Pipe::Name =	"160"
+		CDB_Pipe::SizeID =	DN_150
+		CDB_Pipe::Di =		0.141
+	}
+}
+
+new:CDB_Pipe(PE100SDR17_180)->PE100_SDR_17
+{ Inherited(PE100SDR17_40)
+	{
+		CDB_Pipe::Name =	"180"
+		CDB_Pipe::SizeID =	DN_150
+		CDB_Pipe::Di =		0.1586
+	}
+}
+
+new:CDB_Pipe(PE100SDR17_200)->PE100_SDR_17
+{ Inherited(PE100SDR17_40)
+	{
+		CDB_Pipe::Name =	"200"
+		CDB_Pipe::SizeID =	DN_200
+		CDB_Pipe::Di =		0.1762
+	}
+}
+
+new:CDB_Pipe(PE100SDR17_225)->PE100_SDR_17
+{ Inherited(PE100SDR17_40)
+	{
+		CDB_Pipe::Name =	"225"
+		CDB_Pipe::SizeID =	DN_200
+		CDB_Pipe::Di =		0.1982
+	}
+}
+
+new:CDB_Pipe(PE100SDR17_250)->PE100_SDR_17
+{ Inherited(PE100SDR17_40)
+	{
+		CDB_Pipe::Name =	"250"
+		CDB_Pipe::SizeID =	DN_250
+		CDB_Pipe::Di =		0.2204
+	}
+}
+
+new:CDB_Pipe(PE100SDR17_280)->PE100_SDR_17
+{ Inherited(PE100SDR17_40)
+	{
+		CDB_Pipe::Name =	"280"
+		CDB_Pipe::SizeID =	DN_250
+		CDB_Pipe::Di =		0.2468
+	}
+}
+
+new:CDB_Pipe(PE100SDR17_315)->PE100_SDR_17
+{ Inherited(PE100SDR17_40)
+	{
+		CDB_Pipe::Name =	"315"
+		CDB_Pipe::SizeID =	DN_300
+		CDB_Pipe::Di =		0.2776
+	}
+}
+
+new:CDB_Pipe(PE100SDR17_355)->PE100_SDR_17
+{ Inherited(PE100SDR17_40)
+	{
+		CDB_Pipe::Name =	"355"
+		CDB_Pipe::SizeID =	DN_350
+		CDB_Pipe::Di =		0.3128
+	}
+}
+
+new:CDB_Pipe(PE100SDR17_400)->PE100_SDR_17
+{ Inherited(PE100SDR17_40)
+	{
+		CDB_Pipe::Name =	"400"
+		CDB_Pipe::SizeID =	DN_400
+		CDB_Pipe::Di =		0.3526
+	}
+}
+
+new:CDB_Pipe(PE100SDR17_450)->PE100_SDR_17
+{ Inherited(PE100SDR17_40)
+	{
+		CDB_Pipe::Name =	"450"
+		CDB_Pipe::SizeID =	DN_450
+		CDB_Pipe::Di =		0.3966
+	}
+}
+
+new:CDB_Pipe(PE100SDR17_500)->PE100_SDR_17
+{ Inherited(PE100SDR17_40)
+	{
+		CDB_Pipe::Name =	"500"
+		CDB_Pipe::SizeID =	DN_500
+		CDB_Pipe::Di =		0.4406
+	}
+}
+
+new:CDB_Pipe(PE100SDR17_560)->PE100_SDR_17
+{ Inherited(PE100SDR17_40)
+	{
+		CDB_Pipe::Name =	"560"
+		CDB_Pipe::SizeID =	DN_500
+		CDB_Pipe::Di =		0.4936
+	}
+}
+
+new:CDB_Pipe(PE100SDR17_630)->PE100_SDR_17
+{ Inherited(PE100SDR17_40)
+	{
+		CDB_Pipe::Name =	"630"
+		CDB_Pipe::SizeID =	DN_600
+		CDB_Pipe::Di =		0.5552
+	}
+}
+
+new:CDB_Pipe(PE100SDR17_710)->PE100_SDR_17
+{ Inherited(PE100SDR17_40)
+	{
+		CDB_Pipe::Name =	"710"
+		CDB_Pipe::SizeID =	DN_700
+		CDB_Pipe::Di =		0.6258
+	}
+}
+
+new:CDB_Pipe(PE100SDR17_800)->PE100_SDR_17
+{ Inherited(PE100SDR17_40)
+	{
+		CDB_Pipe::Name =	"800"
+		CDB_Pipe::SizeID =	DN_800
+		CDB_Pipe::Di =		0.7052
+	}
+}
+
+//***************************************
+// TECEflex composite pipe PE-Xc/Al/PE-RT
+//***************************************
+new:CTable(TECEFLEX_PEXCALPERT\1) -> PIPE_TAB
+{
+	"IDS_TECEFLEX_PE-XC_AL_PE-RT"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(TECEFLEX_PEXCALPERT_14\1) -> TECEFLEX_PEXCALPERT 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 1.0e+6
+		NO_ID
+		80.0
+		-273.0
+	}
+	"14"
+	DN_15
+	9.8e-3
+	7.e-6
+}
+
+new:CDB_Pipe(TECEFLEX_PEXCALPERT_16) -> TECEFLEX_PEXCALPERT 
+{ Inherited(TECEFLEX_PEXCALPERT_14)
+	{
+		CDB_Pipe::Name = "16"
+		CDB_Pipe::Di = 1.15e-2
+	}
+}
+
+new:CDB_Pipe(TECEFLEX_PEXCALPERT_20) -> TECEFLEX_PEXCALPERT 
+{ Inherited(TECEFLEX_PEXCALPERT_14)
+	{
+		CDB_Pipe::Name = "20"
+		CDB_Pipe::SizeID = DN_20
+		CDB_Pipe::Di = 1.41e-2
+	}
+}
+
+new:CDB_Pipe(TECEFLEX_PEXCALPERT_25) -> TECEFLEX_PEXCALPERT
+{ Inherited(TECEFLEX_PEXCALPERT_14)
+	{
+		CDB_Pipe::Name = "25"
+		CDB_Pipe::SizeID = DN_25
+		CDB_Pipe::Di = 1.8e-2
+	}
+}
+
+new:CDB_Pipe(TECEFLEX_PEXCALPERT_32) -> TECEFLEX_PEXCALPERT
+{ Inherited(TECEFLEX_PEXCALPERT_14)
+	{
+		CDB_Pipe::Name = "32"
+		CDB_Pipe::SizeID = DN_32
+		CDB_Pipe::Di = 2.4e-2
+	}
+}
+
+new:CDB_Pipe(TECEFLEX_PEXCALPERT_40) -> TECEFLEX_PEXCALPERT
+{ Inherited(TECEFLEX_PEXCALPERT_14)
+	{
+		CDB_Pipe::Name = "40"
+		CDB_Pipe::SizeID = DN_40
+		CDB_Pipe::Di = 3.2e-2
+	}
+}
+
+new:CDB_Pipe(TECEFLEX_PEXCALPERT_50) -> TECEFLEX_PEXCALPERT
+{ Inherited(TECEFLEX_PEXCALPERT_14)
+	{
+		CDB_Pipe::Name = "50"
+		CDB_Pipe::SizeID = DN_50
+		CDB_Pipe::Di = 4.1e-2
+	}
+}
+
+new:CDB_Pipe(TECEFLEX_PEXCALPERT_63) -> TECEFLEX_PEXCALPERT
+{ Inherited(TECEFLEX_PEXCALPERT_14)
+	{
+		CDB_Pipe::Name = "65"
+		CDB_Pipe::SizeID = DN_65
+		CDB_Pipe::Di = 5.1e-2
+	}
+}
+
+//***********************
+// TECEflex PE-Xc 5S pipe
+//***********************
+new:CTable(TECEFLEX_PEXC5S\1) -> PIPE_TAB
+{
+	"IDS_TECEFLEX_PE-XC_5S"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(TECEFLEX_PEXC5S_16\1) -> TECEFLEX_PEXC5S 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 4.0e+5
+		NO_ID
+		80.0
+		-273.0
+	}
+	"16"
+	DN_15
+	1.2e-2
+	7.e-6
+}
+
+new:CDB_Pipe(TECEFLEX_PEXC5S_20) -> TECEFLEX_PEXC5S 
+{ Inherited(TECEFLEX_PEXC5S_16)
+	{
+		CDB_Pipe::Name = "20"
+		CDB_Pipe::SizeID = DN_20
+		CDB_Pipe::Di = 1.44e-2
+	}
+}
+
+//********************************************
+// TECEflex PE-MDXc 5S underfloor heating pipe
+//********************************************
+new:CTable(TECEFLEX_PEMDXC5S\1) -> PIPE_TAB
+{
+	"IDS_TECEFLEX_PE-MDXC_5S"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CDB_Pipe(TECEFLEX_PEMDXC_16\1) -> TECEFLEX_PEMDXC5S 
+{
+	{
+		{
+			0
+			1
+			0
+			1
+			0
+			0
+			0               				// Sort integer (Allow to show a group of articles in the order defined with this variable).
+		}
+		0.0e+6 \ 1.0e+6
+		NO_ID
+		70.0
+		-273.0
+	}
+	"16"
+	DN_15
+	1.16e-2
+	7.e-6
+}
+
+new:CDB_Pipe(TECEFLEX_PEMDXC_20) -> TECEFLEX_PEMDXC5S 
+{ Inherited(TECEFLEX_PEMDXC_16)
+	{
+		CDB_Pipe::Name = "20"
+		CDB_Pipe::SizeID = DN_20
+		CDB_Pipe::Di = 1.44e-2
+	}
+}
+
+////////////////////////////////////////////////////////////////
+//
+//		ROOT TABLE identification
+//
+////////////////////////////////////////////////////////////////
+
+ROOT_TABLE(ROOT_TABLE)

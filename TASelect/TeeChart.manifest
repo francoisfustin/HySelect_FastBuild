@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+	<file name="TeeChart2018.ocx">
+		<comClass clsid="{CC0427C7-2124-4770-8847-F9EF4C50CDC2}" threadingModel="Both" />
+	</file>
+</assembly>

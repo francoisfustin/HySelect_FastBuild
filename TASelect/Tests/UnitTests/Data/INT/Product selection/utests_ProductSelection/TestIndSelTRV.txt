@@ -1,0 +1,5957 @@
+#Start of test definition
+
+StartTechnicalParameters
+ApplicationType = 2
+AvailablePMPanels = 7
+BreakTankRequiredForWaterMakeUp = 1
+CVDefKvReynard = 1
+CVMaxDispDp = 200000
+CVMaxDpProp = 65000
+CVMinAuthCstFlow = 0.5
+CVMinAuthor = 0.25
+CVMinDpOnoff = 3000
+CVMinDpProp = 10000
+CVUseDpCPBand = 0
+CanChangePressureVolumeLimit = 0
+CurrencyID = CURRENCY_EUR
+DefaultCalculationNorm = PM_NORM_EN12828
+DefaultCoolingTps = 7
+DefaultFillTemperature = 15
+DefaultHeatingTps = 50
+DefaultISChangeOverCoolingSideAdditFamilyID = WATER_ADDIT
+DefaultISChangeOverCoolingSideAdditID = WATER
+DefaultISChangeOverCoolingSideDT = 6
+DefaultISChangeOverCoolingSidePcWeight = 0
+DefaultISChangeOverCoolingSideTps = 6
+DefaultISChangeOverHeatingSideAdditFamilyID = WATER_ADDIT
+DefaultISChangeOverHeatingSideAdditID = WATER
+DefaultISChangeOverHeatingSideDT = 20
+DefaultISChangeOverHeatingSidePcWeight = 0
+DefaultISChangeOverHeatingSideTps = 75
+DefaultISCoolingAdditFamilyID = WATER_ADDIT
+DefaultISCoolingAdditID = WATER
+DefaultISCoolingDT = 20
+DefaultISCoolingPcWeight = 0
+DefaultISCoolingTps = 60
+DefaultISHeatingAdditFamilyID = WATER_ADDIT
+DefaultISHeatingAdditID = WATER
+DefaultISHeatingDT = 5
+DefaultISHeatingPcWeight = 0
+DefaultISHeatingTps = 80
+DefaultISSolarAdditFamilyID = WATER_ADDIT
+DefaultISSolarAdditID = WATER
+DefaultISSolarDT = 20
+DefaultISSolarPcWeight = 0
+DefaultISSolarTps = 70
+DefaultMaxTempInCooling = 45
+DefaultMinTempInHeating = 5
+DefaultMinTempInSolar = 5
+DefaultPipeSerieID = STEEL_DIN2440
+DefaultPrjCoolingAdditID = WATER
+DefaultPrjCoolingDT = 5
+DefaultPrjCoolingPcWeight = 0
+DefaultPrjHeatingAdditID = WATER
+DefaultPrjHeatingDT = 5
+DefaultPrjHeatingPcWeight = 0
+DefaultSafetyPressureResponseValve = 300000
+DefaultSecondaryPumpHMin = 25000
+DefaultSmartCVLocation = 1
+DefaultStaticPressureOfWaterNetwork = 400000
+DefaultTAZ = 100
+DefaultWaterHardness = 1.78324958
+DefaultWaterMakeUpTemp = 15
+DegassingWaterReserveForVessel = 0.002
+DpCBCVDpcmin = 5000
+DpCBCVDplmin = 5000
+DpCHide = 0
+DpCHminFullyOpenMv = 0
+DpCMinDp = 5000
+DpCMvLocation = 0
+DpCMvWithSameSizeOnly = 0
+DpRefForBest6Way = 3000
+FixedOrificeMaxDp = 6000
+FixedOrificeMinDp = 2000
+FlowDeviationMinus = -0.1
+FlowDeviationPlus = 0.1
+FluidTempLimitEN12953 = 105
+InitialPressureMargin = 30000
+MaxNumberOfAdditionalVesselsInParallel = 4
+MaxNumberOfVentoInParallel = 2
+MaxSafetyValveInParallel = 3
+MaxSizeShift = 4
+MinPressureMargin = 20000
+PICvHide = 0
+PICvMinDp = 1000
+PSetupCompresso = 10000
+PSetupTransfero = 20000
+PipeMaxDp = 200
+PipeMaxVelocity = 2
+PipeMinDp = 10
+PipeMinVelocity = 0.3
+PipeTargetDp = 150
+PipeTargetVelocity = 1
+PipeTargetVelosityUsed = 0
+PressureVolumeLimit = 300000
+ProjectType = 1
+SafetyTempLimiterLimitEN12953 = 110
+SizeShiftAbove = 2
+SizeShiftBelow = -2
+SmartValveDpMaxForBestSuggestion = 20000
+TrvDefDpTotal = 10000
+TrvDefRoomTemperature = 20
+TrvDefSupplyTemperature = 80
+TrvMaxDp = 30000
+TrvMinDpRatio = 0.25
+UseDefaultFreezingPointAsMinTemperature = 1
+UseSimplyPst = 0
+UseVesselPressureVolumeLimit = 0
+ValveMaxDp = 200000
+ValveMin2Dp = 6000
+ValveMinDp = 3000
+VenturiMaxDp = 10000
+VenturiMinDp = 2000
+VesselSelectionRangePercentage = 0
+EndTechnicalParameters
+
+Test number = 0
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_CALYFEXACT
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = 
+ComboRVFamilyID = FAM_TRIM
+ComboRVConnectID = CONN_SWNUT_THRM
+ComboRVVersionID = VERS_STRAIGHT
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;CALYPSOFEXACT_15A_TRV;Calypso F-exact 15;Rad. union/Thread;Straight;10;15 (1/2");8;8* (0.5);14544.4;14544.4;0.52;2/120;15 (1/2");83.9387;0.276311
+Result number = 1;CALYPSOFEXACT_15B_TRV;Calypso F-exact 15;Rad. union/Thread;Angle;10;15 (1/2");8;8* (0.5);14544.4;14544.4;0.52;2/120;15 (1/2");83.9387;0.276311
+Result number = 2;CALYPSOFEXACT_15C_TRV;Calypso F-exact 15;Rad. union/Thread;Reverse angle;10;15 (1/2");8;8* (0.5);14544.4;14544.4;0.52;2/120;15 (1/2");83.9387;0.276311
+Result number = 3;CALYPSOFEXACT_10A_TRV;Calypso F-exact 10;Rad. union/Thread;Straight;10;10 (3/8");8;8* (0.5);14544.4;14544.4;0.52;2/120;15 (1/2");83.9387;0.276311
+Result number = 4;CALYPSOFEXACT_10B_TRV;Calypso F-exact 10;Rad. union/Thread;Angle;10;10 (3/8");8;8* (0.5);14544.4;14544.4;0.52;2/120;15 (1/2");83.9387;0.276311
+Result number = 5;CALYPSOFEXACT_10C_TRV;Calypso F-exact 10;Rad. union/Thread;Reverse angle;10;10 (3/8");8;8* (0.5);14544.4;14544.4;0.52;2/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 1
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_CALYFEXACT
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_STRAIGHT
+ComboRVFamilyID = FAM_TRIM
+ComboRVConnectID = CONN_SWNUT_THRM
+ComboRVVersionID = VERS_STRAIGHT
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;CALYPSOFEXACT_15A_TRV;Calypso F-exact 15;Rad. union/Thread;Straight;10;15 (1/2");8;8* (0.5);14544.4;14544.4;0.52;2/120;15 (1/2");83.9387;0.276311
+Result number = 1;CALYPSOFEXACT_10A_TRV;Calypso F-exact 10;Rad. union/Thread;Straight;10;10 (3/8");8;8* (0.5);14544.4;14544.4;0.52;2/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 2
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_CALYFEXACT
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_ANGLE
+ComboRVFamilyID = FAM_TRIM
+ComboRVConnectID = CONN_SWNUT_THRM
+ComboRVVersionID = VERS_STRAIGHT
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;CALYPSOFEXACT_15B_TRV;Calypso F-exact 15;Rad. union/Thread;Angle;10;15 (1/2");8;8* (0.5);14544.4;14544.4;0.52;2/120;15 (1/2");83.9387;0.276311
+Result number = 1;CALYPSOFEXACT_10B_TRV;Calypso F-exact 10;Rad. union/Thread;Angle;10;10 (3/8");8;8* (0.5);14544.4;14544.4;0.52;2/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 3
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_CALYFEXACT
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_TRIM
+ComboRVConnectID = CONN_SWNUT_THRM
+ComboRVVersionID = VERS_STRAIGHT
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;CALYPSOFEXACT_15C_TRV;Calypso F-exact 15;Rad. union/Thread;Reverse angle;10;15 (1/2");8;8* (0.5);14544.4;14544.4;0.52;2/120;15 (1/2");83.9387;0.276311
+Result number = 1;CALYPSOFEXACT_10C_TRV;Calypso F-exact 10;Rad. union/Thread;Reverse angle;10;10 (3/8");8;8* (0.5);14544.4;14544.4;0.52;2/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 4
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_CALYFEXACT
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_TRIMA
+ComboRVConnectID = 
+ComboRVVersionID = 
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;CALYPSOFEXACT_15C_TRV;Calypso F-exact 15;Rad. union/Thread;Reverse angle;10;15 (1/2");8;8* (0.5);14544.4;14544.4;0.52;2/120;15 (1/2");83.9387;0.276311
+Result number = 1;CALYPSOFEXACT_10C_TRV;Calypso F-exact 10;Rad. union/Thread;Reverse angle;10;10 (3/8");8;8* (0.5);14544.4;14544.4;0.52;2/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 5
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_TRIMA
+ComboRVConnectID = CONN_THREAD
+ComboRVVersionID = VERS_STRAIGHT
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 6
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_TRIMA
+ComboRVConnectID = CONN_THRM_THR
+ComboRVVersionID = 
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 7
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_TRIMA
+ComboRVConnectID = CONN_THRM_THR
+ComboRVVersionID = VERS_STRAIGHT
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 8
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_TRIMA
+ComboRVConnectID = CONN_THRM_THR
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 9
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_TRIMA
+ComboRVConnectID = CONN_RADUN_THR
+ComboRVVersionID = 
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 10
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_TRIMA
+ComboRVConnectID = CONN_RADUN_THR
+ComboRVVersionID = VERS_STRAIGHT
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 11
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_TRIMA
+ComboRVConnectID = CONN_RADUN_THR
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 12
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_RADITRIM
+ComboRVConnectID = 
+ComboRVVersionID = 
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 13
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_RADITRIM
+ComboRVConnectID = CONN_THREAD
+ComboRVVersionID = VERS_STRAIGHT
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 14
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_RADITRIM
+ComboRVConnectID = CONN_THRM_THR
+ComboRVVersionID = 
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 15
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_RADITRIM
+ComboRVConnectID = CONN_THRM_THR
+ComboRVVersionID = VERS_STRAIGHT
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 16
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_RADITRIM
+ComboRVConnectID = CONN_THRM_THR
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 17
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_RADITRIM
+ComboRVConnectID = CONN_RADUN_THR
+ComboRVVersionID = 
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 18
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_RADITRIM
+ComboRVConnectID = CONN_RADUN_THR
+ComboRVVersionID = VERS_STRAIGHT
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 19
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_RADITRIM
+ComboRVConnectID = CONN_RADUN_THR
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 20
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_STK
+ComboRVConnectID = CONN_THREAD
+ComboRVVersionID = VERS_STRAIGHT
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 21
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_REGUTEC
+ComboRVConnectID = 
+ComboRVVersionID = 
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 22
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_REGUTEC
+ComboRVConnectID = CONN_RADUN_THR
+ComboRVVersionID = 
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 23
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_REGUTEC
+ComboRVConnectID = CONN_RADUN_THR
+ComboRVVersionID = VERS_STRAIGHT
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 24
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_REGUTEC
+ComboRVConnectID = CONN_RADUN_THR
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 25
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_REGUTEC
+ComboRVConnectID = CONN_RADUN_THRM
+ComboRVVersionID = 
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 26
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_REGUTEC
+ComboRVConnectID = CONN_RADUN_THRM
+ComboRVVersionID = VERS_STRAIGHT
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 27
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_REGUTEC
+ComboRVConnectID = CONN_RADUN_THRM
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 28
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_REGUTEC
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = 
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 29
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_REGUTEC
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_STRAIGHT
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 30
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_REGUTEC
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 31
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_REGULUX
+ComboRVConnectID = 
+ComboRVVersionID = 
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 32
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_REGULUX
+ComboRVConnectID = 
+ComboRVVersionID = 
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 33
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_REGULUX
+ComboRVConnectID = CONN_RADUN_THR
+ComboRVVersionID = 
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 34
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_REGULUX
+ComboRVConnectID = CONN_RADUN_THR
+ComboRVVersionID = VERS_STRAIGHT
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 35
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_REGULUX
+ComboRVConnectID = CONN_RADUN_THR
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 36
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_REGULUX
+ComboRVConnectID = CONN_RADUN_THRM
+ComboRVVersionID = 
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 37
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_REGULUX
+ComboRVConnectID = CONN_RADUN_THRM
+ComboRVVersionID = VERS_STRAIGHT
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 38
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_REGULUX
+ComboRVConnectID = CONN_RADUN_THRM
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 39
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_REGULUX
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = 
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 40
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_REGULUX
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_STRAIGHT
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 41
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = IMI
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = FAM_REGULUX
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 42
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_CALYPSO
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 43
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_HEIMSTD
+ComboSVConnectID = 
+ComboSVVersionID = 
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;HEIMSTD_25D;Standard 25(1");Rad. union/Thread;Straight;10;25 (1");1;1* (1);2157.91;2157.91;1.35;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;HEIMSTD_25A;Standard 25(1");Rad. union/Thread;Angle;10;25 (1");1;1* (1);2157.91;2157.91;1.35;-10/120;15 (1/2");83.9387;0.276311
+Result number = 2;HEIMSTD_20D;Standard 20(3/4");Rad. union/Thread;Straight;10;20 (3/4");1;1* (1);6301.55;6301.55;0.79;-10/120;15 (1/2");83.9387;0.276311
+Result number = 3;HEIMSTD_20A;Standard 20(3/4");Rad. union/Thread;Angle;10;20 (3/4");1;1* (1);6301.55;6301.55;0.79;-10/120;15 (1/2");83.9387;0.276311
+Result number = 4;HEIMSTD_15GC;Standard 15(1/2");Flat Sealing;Straight;10;15 (1/2");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+Result number = 5;HEIMSTD_15D;Standard 15(1/2");Rad. union/Thread;Straight;10;15 (1/2");1;1* (1);6301.55;6301.55;0.79;-10/120;15 (1/2");83.9387;0.276311
+Result number = 6;HEIMSTD_15A;Standard 15(1/2");Rad. union/Thread;Angle;10;15 (1/2");1;1* (1);6301.55;6301.55;0.79;-10/120;15 (1/2");83.9387;0.276311
+Result number = 7;HEIMSTD_15G;Standard 15(1/2");Flat Sealing;Straight;10;15 (1/2");1;1* (1);6301.55;6301.55;0.79;-10/120;15 (1/2");83.9387;0.276311
+Result number = 8;HEIMSTD_10A;Standard 10(3/8");Rad. union/Thread;Angle;10;10 (3/8");1;1* (1);6301.55;6301.55;0.79;-10/120;15 (1/2");83.9387;0.276311
+Result number = 9;HEIMSTD_10D;Standard 10(3/8");Rad. union/Thread;Straight;10;10 (3/8");1;1* (1);6301.55;6301.55;0.79;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 44
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_HEIMSTD
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = 
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;HEIMSTD_25D;Standard 25(1");Rad. union/Thread;Straight;10;25 (1");1;1* (1);2157.91;2157.91;1.35;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;HEIMSTD_25A;Standard 25(1");Rad. union/Thread;Angle;10;25 (1");1;1* (1);2157.91;2157.91;1.35;-10/120;15 (1/2");83.9387;0.276311
+Result number = 2;HEIMSTD_20D;Standard 20(3/4");Rad. union/Thread;Straight;10;20 (3/4");1;1* (1);6301.55;6301.55;0.79;-10/120;15 (1/2");83.9387;0.276311
+Result number = 3;HEIMSTD_20A;Standard 20(3/4");Rad. union/Thread;Angle;10;20 (3/4");1;1* (1);6301.55;6301.55;0.79;-10/120;15 (1/2");83.9387;0.276311
+Result number = 4;HEIMSTD_15D;Standard 15(1/2");Rad. union/Thread;Straight;10;15 (1/2");1;1* (1);6301.55;6301.55;0.79;-10/120;15 (1/2");83.9387;0.276311
+Result number = 5;HEIMSTD_15A;Standard 15(1/2");Rad. union/Thread;Angle;10;15 (1/2");1;1* (1);6301.55;6301.55;0.79;-10/120;15 (1/2");83.9387;0.276311
+Result number = 6;HEIMSTD_10A;Standard 10(3/8");Rad. union/Thread;Angle;10;10 (3/8");1;1* (1);6301.55;6301.55;0.79;-10/120;15 (1/2");83.9387;0.276311
+Result number = 7;HEIMSTD_10D;Standard 10(3/8");Rad. union/Thread;Straight;10;10 (3/8");1;1* (1);6301.55;6301.55;0.79;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 45
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_HEIMSTD
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_STRAIGHT
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;HEIMSTD_25D;Standard 25(1");Rad. union/Thread;Straight;10;25 (1");1;1* (1);2157.91;2157.91;1.35;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;HEIMSTD_20D;Standard 20(3/4");Rad. union/Thread;Straight;10;20 (3/4");1;1* (1);6301.55;6301.55;0.79;-10/120;15 (1/2");83.9387;0.276311
+Result number = 2;HEIMSTD_15D;Standard 15(1/2");Rad. union/Thread;Straight;10;15 (1/2");1;1* (1);6301.55;6301.55;0.79;-10/120;15 (1/2");83.9387;0.276311
+Result number = 3;HEIMSTD_10D;Standard 10(3/8");Rad. union/Thread;Straight;10;10 (3/8");1;1* (1);6301.55;6301.55;0.79;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 46
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_HEIMSTD
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_ANGLE
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;HEIMSTD_25A;Standard 25(1");Rad. union/Thread;Angle;10;25 (1");1;1* (1);2157.91;2157.91;1.35;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;HEIMSTD_20A;Standard 20(3/4");Rad. union/Thread;Angle;10;20 (3/4");1;1* (1);6301.55;6301.55;0.79;-10/120;15 (1/2");83.9387;0.276311
+Result number = 2;HEIMSTD_15A;Standard 15(1/2");Rad. union/Thread;Angle;10;15 (1/2");1;1* (1);6301.55;6301.55;0.79;-10/120;15 (1/2");83.9387;0.276311
+Result number = 3;HEIMSTD_10A;Standard 10(3/8");Rad. union/Thread;Angle;10;10 (3/8");1;1* (1);6301.55;6301.55;0.79;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 47
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_HEIMSTD
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 48
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_HEIMSTD
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_DANGLE_L
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 49
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_HEIMSTD
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_DANGLE_R
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 50
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_HEIMSTD
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_ANGLE_RL
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 51
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_HEIMSTD
+ComboSVConnectID = CONN_RADUN_THRM
+ComboSVVersionID = 
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 52
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_HEIMSTD
+ComboSVConnectID = CONN_RADUN_THRM
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 53
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_HEIMSTD
+ComboSVConnectID = CONN_RADUN_THRM
+ComboSVVersionID = VERS_DANGLE_L
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 54
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_HEIMSTD
+ComboSVConnectID = CONN_RADUN_THRM
+ComboSVVersionID = VERS_DANGLE_R
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 55
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_HEIMSTD
+ComboSVConnectID = CONN_RADELB_THR
+ComboSVVersionID = VERS_STRAIGHT
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 56
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_HEIMSTD
+ComboSVConnectID = CONN_FLATSEAL_M
+ComboSVVersionID = VERS_STRAIGHT
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;HEIMSTD_15GC;Standard 15(1/2");Flat Sealing;Straight;10;15 (1/2");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;HEIMSTD_15G;Standard 15(1/2");Flat Sealing;Straight;10;15 (1/2");1;1* (1);6301.55;6301.55;0.79;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 57
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_HEIMLR
+ComboSVConnectID = 
+ComboSVVersionID = 
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;HEIMLR_20A;LR 20(3/4");Rad. union/Thread;Angle;10;20 (3/4");1;1* (1);2157.91;2157.91;1.35;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;HEIMLR_20D;LR 20(3/4");Rad. union/Thread;Straight;10;20 (3/4");1;1* (1);2157.91;2157.91;1.35;-10/120;15 (1/2");83.9387;0.276311
+Result number = 2;HEIMLR_15A;LR 15(1/2");Rad. union/Thread;Angle;10;15 (1/2");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+Result number = 3;HEIMLR_15D;LR 15(1/2");Rad. union/Thread;Straight;10;15 (1/2");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+Result number = 4;HEIMLR_15I;LR 15(1/2");Rad. union/Thread;Reverse angle;10;15 (1/2");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+Result number = 5;HEIMLR_15H;LR 15(1/2");Rad. elbow/Thread;Straight;10;15 (1/2");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+Result number = 6;HEIMLR_15K;LR 15(1/2");Rad. union/Thread;Double angle, left;10;15 (1/2");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+Result number = 7;HEIMLR_15M;LR 15(1/2");Rad. union/Thread;Double angle, right;10;15 (1/2");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+Result number = 8;HEIMLR_15L;LR 15(1/2");Rad. union/Thread male;Double angle, left;10;15 (1/2");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+Result number = 9;HEIMLR_15N;LR 15(1/2");Rad. union/Thread male;Double angle, right;10;15 (1/2");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+Result number = 10;HEIMLR_10A;LR 10(3/8");Rad. union/Thread;Angle;10;10 (3/8");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+Result number = 11;HEIMLR_10D;LR 10(3/8");Rad. union/Thread;Straight;10;10 (3/8");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+Result number = 12;HEIMLR_10I;LR 10(3/8");Rad. union/Thread;Reverse angle;10;10 (3/8");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+Result number = 13;HEIMLR_10K;LR 10(3/8");Rad. union/Thread;Double angle, left;10;10 (3/8");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+Result number = 14;HEIMLR_10M;LR 10(3/8");Rad. union/Thread;Double angle, right;10;10 (3/8");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 58
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_HEIMLR
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = 
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;HEIMLR_20A;LR 20(3/4");Rad. union/Thread;Angle;10;20 (3/4");1;1* (1);2157.91;2157.91;1.35;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;HEIMLR_20D;LR 20(3/4");Rad. union/Thread;Straight;10;20 (3/4");1;1* (1);2157.91;2157.91;1.35;-10/120;15 (1/2");83.9387;0.276311
+Result number = 2;HEIMLR_15A;LR 15(1/2");Rad. union/Thread;Angle;10;15 (1/2");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+Result number = 3;HEIMLR_15D;LR 15(1/2");Rad. union/Thread;Straight;10;15 (1/2");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+Result number = 4;HEIMLR_15I;LR 15(1/2");Rad. union/Thread;Reverse angle;10;15 (1/2");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+Result number = 5;HEIMLR_15K;LR 15(1/2");Rad. union/Thread;Double angle, left;10;15 (1/2");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+Result number = 6;HEIMLR_15M;LR 15(1/2");Rad. union/Thread;Double angle, right;10;15 (1/2");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+Result number = 7;HEIMLR_10A;LR 10(3/8");Rad. union/Thread;Angle;10;10 (3/8");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+Result number = 8;HEIMLR_10D;LR 10(3/8");Rad. union/Thread;Straight;10;10 (3/8");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+Result number = 9;HEIMLR_10I;LR 10(3/8");Rad. union/Thread;Reverse angle;10;10 (3/8");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+Result number = 10;HEIMLR_10K;LR 10(3/8");Rad. union/Thread;Double angle, left;10;10 (3/8");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+Result number = 11;HEIMLR_10M;LR 10(3/8");Rad. union/Thread;Double angle, right;10;10 (3/8");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 59
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_HEIMLR
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_STRAIGHT
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;HEIMLR_20D;LR 20(3/4");Rad. union/Thread;Straight;10;20 (3/4");1;1* (1);2157.91;2157.91;1.35;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;HEIMLR_15D;LR 15(1/2");Rad. union/Thread;Straight;10;15 (1/2");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+Result number = 2;HEIMLR_10D;LR 10(3/8");Rad. union/Thread;Straight;10;10 (3/8");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 60
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_HEIMLR
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_ANGLE
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;HEIMLR_20A;LR 20(3/4");Rad. union/Thread;Angle;10;20 (3/4");1;1* (1);2157.91;2157.91;1.35;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;HEIMLR_15A;LR 15(1/2");Rad. union/Thread;Angle;10;15 (1/2");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+Result number = 2;HEIMLR_10A;LR 10(3/8");Rad. union/Thread;Angle;10;10 (3/8");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 61
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_HEIMLR
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;HEIMLR_15I;LR 15(1/2");Rad. union/Thread;Reverse angle;10;15 (1/2");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;HEIMLR_10I;LR 10(3/8");Rad. union/Thread;Reverse angle;10;10 (3/8");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 62
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_HEIMLR
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_DANGLE_L
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;HEIMLR_15K;LR 15(1/2");Rad. union/Thread;Double angle, left;10;15 (1/2");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;HEIMLR_10K;LR 10(3/8");Rad. union/Thread;Double angle, left;10;10 (3/8");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 63
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_HEIMLR
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_DANGLE_R
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;HEIMLR_15M;LR 15(1/2");Rad. union/Thread;Double angle, right;10;15 (1/2");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;HEIMLR_10M;LR 10(3/8");Rad. union/Thread;Double angle, right;10;10 (3/8");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 64
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_HEIMLR
+ComboSVConnectID = CONN_RADUN_THRM
+ComboSVVersionID = 
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;HEIMLR_15L;LR 15(1/2");Rad. union/Thread male;Double angle, left;10;15 (1/2");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;HEIMLR_15N;LR 15(1/2");Rad. union/Thread male;Double angle, right;10;15 (1/2");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 65
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_HEIMLR
+ComboSVConnectID = CONN_RADUN_THRM
+ComboSVVersionID = VERS_DANGLE_L
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;HEIMLR_15L;LR 15(1/2");Rad. union/Thread male;Double angle, left;10;15 (1/2");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 66
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_HEIMLR
+ComboSVConnectID = CONN_RADUN_THRM
+ComboSVVersionID = VERS_DANGLE_R
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;HEIMLR_15N;LR 15(1/2");Rad. union/Thread male;Double angle, right;10;15 (1/2");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 67
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_NOPRSET
+ComboSVFamilyID = FAM_HEIMLR
+ComboSVConnectID = CONN_RADELB_THR
+ComboSVVersionID = VERS_STRAIGHT
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;HEIMLR_15H;LR 15(1/2");Rad. elbow/Thread;Straight;10;15 (1/2");1;1* (1);4646.5;4646.5;0.92;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 68
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Presettable
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_HEIMRF_V
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = 
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;HEIMRF_15C;RF V-exact II 15(1/2");Rad. union/Thread;Straight;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;HEIMRF_15B;RF V-exact II 15(1/2");Rad. union/Thread;Angle;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 2;HEIMRF_10C;RF V-exact II 10(3/8");Rad. union/Thread;Straight;10;10 (3/8");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 3;HEIMRF_10B;RF V-exact II 10(3/8");Rad. union/Thread;Angle;10;10 (3/8");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 69
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 4.166666666e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = WithFlowLimitation
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_FLOWLIMITED
+ComboSVFamilyID = FAM_HEIMRF_E
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_STRAIGHT
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;HEIMRF_15F;RF Eclipse 15(1/2");Rad. union/Thread;Straight;10;15 (1/2");15.001;15* (0.5);-1;2.77778e-06/4.16667e-05;-10/120;10 (3/8");168.342;0.339531
+Result number = 1;HEIMRF_10F;RF Eclipse 10(3/8");Rad. union/Thread;Straight;10;10 (3/8");15.001;15* (0.5);-1;2.77778e-06/4.16667e-05;-10/120;10 (3/8");168.342;0.339531
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 70
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Standard
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_HEIMRF_V
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_ANGLE
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;HEIMRF_15B;RF V-exact II 15(1/2");Rad. union/Thread;Angle;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;HEIMRF_10B;RF V-exact II 10(3/8");Rad. union/Thread;Angle;10;10 (3/8");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 71
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Presettable
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_VEXACT2
+ComboSVConnectID = 
+ComboSVVersionID = 
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;VEXACT2_20D;V-exact II 20(3/4");Rad. union/Thread;Straight;10;20 (3/4");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;VEXACT2_20A;V-exact II 20(3/4");Rad. union/Thread;Angle;10;20 (3/4");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 2;VEXACT2_15D;V-exact II 15(1/2");Rad. union/Thread;Straight;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 3;VEXACT2_15A;V-exact II 15(1/2");Rad. union/Thread;Angle;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 4;VEXACT2_15I;V-exact II 15(1/2");Rad. union/Thread;Reverse angle;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 5;VEXACT2_15K;V-exact II 15(1/2");Rad. union/Thread;Double angle, left;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 6;VEXACT2_15M;V-exact II 15(1/2");Rad. union/Thread;Double angle, right;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 7;VEXACT2_15P;V-exact II 15(1/2");Rad. union/Thread male;Straight;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 8;VEXACT2_15O;V-exact II 15(1/2");Rad. union/Thread male;Angle;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 9;VEXACT2_15J;V-exact II 15(1/2");Rad. union/Thread male;Reverse angle;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 10;VEXACT2_15L;V-exact II 15(1/2");Rad. union/Thread male;Double angle, left;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 11;VEXACT2_15N;V-exact II 15(1/2");Rad. union/Thread male;Double angle, right;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 12;VEXACT2_15E;V-exact II 15(1/2");Rad. union/PressFit;Straight;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 13;VEXACT2_15B;V-exact II 15(1/2");Rad. union/PressFit;Angle;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 14;VEXACT2_15H;V-exact II 15(1/2");Rad. elbow/Thread;Straight;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 15;VEXACT2_10D;V-exact II 10(3/8");Rad. union/Thread;Straight;10;10 (3/8");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 16;VEXACT2_10A;V-exact II 10(3/8");Rad. union/Thread;Angle;10;10 (3/8");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 17;VEXACT2_10I;V-exact II 10(3/8");Rad. union/Thread;Reverse angle;10;10 (3/8");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 18;VEXACT2_10K;V-exact II 10(3/8");Rad. union/Thread;Double angle, left;10;10 (3/8");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 19;VEXACT2_10M;V-exact II 10(3/8");Rad. union/Thread;Double angle, right;10;10 (3/8");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 72
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Presettable
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_VEXACT2
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = 
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;VEXACT2_20D;V-exact II 20(3/4");Rad. union/Thread;Straight;10;20 (3/4");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;VEXACT2_20A;V-exact II 20(3/4");Rad. union/Thread;Angle;10;20 (3/4");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 2;VEXACT2_15D;V-exact II 15(1/2");Rad. union/Thread;Straight;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 3;VEXACT2_15A;V-exact II 15(1/2");Rad. union/Thread;Angle;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 4;VEXACT2_15I;V-exact II 15(1/2");Rad. union/Thread;Reverse angle;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 5;VEXACT2_15K;V-exact II 15(1/2");Rad. union/Thread;Double angle, left;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 6;VEXACT2_15M;V-exact II 15(1/2");Rad. union/Thread;Double angle, right;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 7;VEXACT2_10D;V-exact II 10(3/8");Rad. union/Thread;Straight;10;10 (3/8");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 8;VEXACT2_10A;V-exact II 10(3/8");Rad. union/Thread;Angle;10;10 (3/8");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 9;VEXACT2_10I;V-exact II 10(3/8");Rad. union/Thread;Reverse angle;10;10 (3/8");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 10;VEXACT2_10K;V-exact II 10(3/8");Rad. union/Thread;Double angle, left;10;10 (3/8");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 11;VEXACT2_10M;V-exact II 10(3/8");Rad. union/Thread;Double angle, right;10;10 (3/8");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 73
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Presettable
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_VEXACT2
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_STRAIGHT
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;VEXACT2_20D;V-exact II 20(3/4");Rad. union/Thread;Straight;10;20 (3/4");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;VEXACT2_15D;V-exact II 15(1/2");Rad. union/Thread;Straight;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 2;VEXACT2_10D;V-exact II 10(3/8");Rad. union/Thread;Straight;10;10 (3/8");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 74
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Presettable
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_VEXACT2
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_ANGLE
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;VEXACT2_20A;V-exact II 20(3/4");Rad. union/Thread;Angle;10;20 (3/4");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;VEXACT2_15A;V-exact II 15(1/2");Rad. union/Thread;Angle;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 2;VEXACT2_10A;V-exact II 10(3/8");Rad. union/Thread;Angle;10;10 (3/8");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 75
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Presettable
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_VEXACT2
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;VEXACT2_15I;V-exact II 15(1/2");Rad. union/Thread;Reverse angle;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;VEXACT2_10I;V-exact II 10(3/8");Rad. union/Thread;Reverse angle;10;10 (3/8");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 76
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Presettable
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_VEXACT2
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_DANGLE_L
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;VEXACT2_15K;V-exact II 15(1/2");Rad. union/Thread;Double angle, left;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;VEXACT2_10K;V-exact II 10(3/8");Rad. union/Thread;Double angle, left;10;10 (3/8");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 77
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Presettable
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_VEXACT2
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_DANGLE_R
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;VEXACT2_15M;V-exact II 15(1/2");Rad. union/Thread;Double angle, right;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;VEXACT2_10M;V-exact II 10(3/8");Rad. union/Thread;Double angle, right;10;10 (3/8");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 78
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Presettable
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_VEXACT2
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_STRAIGHT_RL
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 79
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Presettable
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_VEXACT2
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_ANGLE_RL
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 80
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Presettable
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_VEXACT2
+ComboSVConnectID = CONN_RADUN_THRM
+ComboSVVersionID = 
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;VEXACT2_15P;V-exact II 15(1/2");Rad. union/Thread male;Straight;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;VEXACT2_15O;V-exact II 15(1/2");Rad. union/Thread male;Angle;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 2;VEXACT2_15J;V-exact II 15(1/2");Rad. union/Thread male;Reverse angle;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 3;VEXACT2_15L;V-exact II 15(1/2");Rad. union/Thread male;Double angle, left;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 4;VEXACT2_15N;V-exact II 15(1/2");Rad. union/Thread male;Double angle, right;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 81
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Presettable
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_VEXACT2
+ComboSVConnectID = CONN_RADUN_THRM
+ComboSVVersionID = VERS_STRAIGHT
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;VEXACT2_15P;V-exact II 15(1/2");Rad. union/Thread male;Straight;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 82
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Presettable
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_VEXACT2
+ComboSVConnectID = CONN_RADUN_THRM
+ComboSVVersionID = VERS_ANGLE
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;VEXACT2_15O;V-exact II 15(1/2");Rad. union/Thread male;Angle;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 83
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Presettable
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_VEXACT2
+ComboSVConnectID = CONN_RADUN_THRM
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;VEXACT2_15J;V-exact II 15(1/2");Rad. union/Thread male;Reverse angle;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 84
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Presettable
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_VEXACT2
+ComboSVConnectID = CONN_RADUN_THRM
+ComboSVVersionID = VERS_DANGLE_L
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;VEXACT2_15L;V-exact II 15(1/2");Rad. union/Thread male;Double angle, left;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 85
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Presettable
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_VEXACT2
+ComboSVConnectID = CONN_RADUN_THRM
+ComboSVVersionID = VERS_DANGLE_R
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;VEXACT2_15N;V-exact II 15(1/2");Rad. union/Thread male;Double angle, right;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 86
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Presettable
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_VEXACT2
+ComboSVConnectID = CONN_RADUN_PFIT
+ComboSVVersionID = 
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;VEXACT2_15E;V-exact II 15(1/2");Rad. union/PressFit;Straight;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+Result number = 1;VEXACT2_15B;V-exact II 15(1/2");Rad. union/PressFit;Angle;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 87
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Presettable
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_VEXACT2
+ComboSVConnectID = CONN_RADUN_PFIT
+ComboSVVersionID = VERS_STRAIGHT
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;VEXACT2_15E;V-exact II 15(1/2");Rad. union/PressFit;Straight;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 88
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Presettable
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_VEXACT2
+ComboSVConnectID = CONN_RADUN_PFIT
+ComboSVVersionID = VERS_ANGLE
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;VEXACT2_15B;V-exact II 15(1/2");Rad. union/PressFit;Angle;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 89
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Presettable
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_VEXACT2
+ComboSVConnectID = CONN_RADELB_THR
+ComboSVVersionID = VERS_STRAIGHT
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;VEXACT2_15H;V-exact II 15(1/2");Rad. elbow/Thread;Straight;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;-10/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 90
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Presettable
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_FEXAKT
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = 
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 91
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Presettable
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_FEXAKT
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_STRAIGHT
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 92
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Presettable
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_FEXAKT
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_ANGLE
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 93
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Presettable
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_FEXAKT
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 94
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Presettable
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_CALYEXACT
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = 
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;CALYEXACT_20B;Calypso exact 20(3/4");Rad. union/Thread;Straight;10;20 (3/4");8;8* (0.5);8760.97;8760.97;0.67;2/120;15 (1/2");83.9387;0.276311
+Result number = 1;CALYEXACT_20A;Calypso exact 20(3/4");Rad. union/Thread;Angle;10;20 (3/4");8;8* (0.5);8760.97;8760.97;0.67;2/120;15 (1/2");83.9387;0.276311
+Result number = 2;CALYEXACT_20C;Calypso exact 20(3/4");Rad. union/Thread;Reverse angle;10;20 (3/4");8;8* (0.5);8760.97;8760.97;0.67;2/120;15 (1/2");83.9387;0.276311
+Result number = 3;CALYEXACT_15B;Calypso exact 15(1/2");Rad. union/Thread;Straight;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;2/120;15 (1/2");83.9387;0.276311
+Result number = 4;CALYEXACT_15A;Calypso exact 15(1/2");Rad. union/Thread;Angle;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;2/120;15 (1/2");83.9387;0.276311
+Result number = 5;CALYEXACT_15C;Calypso exact 15(1/2");Rad. union/Thread;Reverse angle;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;2/120;15 (1/2");83.9387;0.276311
+Result number = 6;CALYEXACT_10B;Calypso exact 10(3/8");Rad. union/Thread;Straight;10;10 (3/8");8;8* (0.5);8760.97;8760.97;0.67;2/120;15 (1/2");83.9387;0.276311
+Result number = 7;CALYEXACT_10A;Calypso exact 10(3/8");Rad. union/Thread;Angle;10;10 (3/8");8;8* (0.5);8760.97;8760.97;0.67;2/120;15 (1/2");83.9387;0.276311
+Result number = 8;CALYEXACT_10C;Calypso exact 10(3/8");Rad. union/Thread;Reverse angle;10;10 (3/8");8;8* (0.5);8760.97;8760.97;0.67;2/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 95
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Presettable
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_CALYEXACT
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_STRAIGHT
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;CALYEXACT_20B;Calypso exact 20(3/4");Rad. union/Thread;Straight;10;20 (3/4");8;8* (0.5);8760.97;8760.97;0.67;2/120;15 (1/2");83.9387;0.276311
+Result number = 1;CALYEXACT_15B;Calypso exact 15(1/2");Rad. union/Thread;Straight;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;2/120;15 (1/2");83.9387;0.276311
+Result number = 2;CALYEXACT_10B;Calypso exact 10(3/8");Rad. union/Thread;Straight;10;10 (3/8");8;8* (0.5);8760.97;8760.97;0.67;2/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 96
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Presettable
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_CALYEXACT
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_ANGLE
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;CALYEXACT_20A;Calypso exact 20(3/4");Rad. union/Thread;Angle;10;20 (3/4");8;8* (0.5);8760.97;8760.97;0.67;2/120;15 (1/2");83.9387;0.276311
+Result number = 1;CALYEXACT_15A;Calypso exact 15(1/2");Rad. union/Thread;Angle;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;2/120;15 (1/2");83.9387;0.276311
+Result number = 2;CALYEXACT_10A;Calypso exact 10(3/8");Rad. union/Thread;Angle;10;10 (3/8");8;8* (0.5);8760.97;8760.97;0.67;2/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 97
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.555555554e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Presettable
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_PRESET
+ComboSVFamilyID = FAM_CALYEXACT
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;CALYEXACT_20C;Calypso exact 20(3/4");Rad. union/Thread;Reverse angle;10;20 (3/4");8;8* (0.5);8760.97;8760.97;0.67;2/120;15 (1/2");83.9387;0.276311
+Result number = 1;CALYEXACT_15C;Calypso exact 15(1/2");Rad. union/Thread;Reverse angle;10;15 (1/2");8;8* (0.5);8760.97;8760.97;0.67;2/120;15 (1/2");83.9387;0.276311
+Result number = 2;CALYEXACT_10C;Calypso exact 10(3/8");Rad. union/Thread;Reverse angle;10;10 (3/8");8;8* (0.5);8760.97;8760.97;0.67;2/120;15 (1/2");83.9387;0.276311
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 98
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 2.777777777e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = WithFlowLimitation
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_FLOWLIMITED
+ComboSVFamilyID = FAM_ECLIPSE_F
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = 
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_SWNUT_THRM
+ComboRVVersionID = VERS_STRAIGHT
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;ECLIPSEF_20B;Eclipse F 20(3/4");Rad. union/Thread;Straight;10;20 (3/4");10.001;10 (0.5);15000;2.77778e-06/4.16667e-05;-10/120;10 (3/8");80.851;0.226354
+Result number = 1;ECLIPSEF_20A;Eclipse F 20(3/4");Rad. union/Thread;Angle;10;20 (3/4");10.001;10 (0.5);15000;2.77778e-06/4.16667e-05;-10/120;10 (3/8");80.851;0.226354
+Result number = 2;ECLIPSEF_20C;Eclipse F 20(3/4");Rad. union/Thread;Reverse angle;10;20 (3/4");10.001;10 (0.5);15000;2.77778e-06/4.16667e-05;-10/120;10 (3/8");80.851;0.226354
+Result number = 3;ECLIPSEF_15B;Eclipse F 15(1/2");Rad. union/Thread;Straight;10;15 (1/2");10.001;10 (0.5);15000;2.77778e-06/4.16667e-05;-10/120;10 (3/8");80.851;0.226354
+Result number = 4;ECLIPSEF_15A;Eclipse F 15(1/2");Rad. union/Thread;Angle;10;15 (1/2");10.001;10 (0.5);15000;2.77778e-06/4.16667e-05;-10/120;10 (3/8");80.851;0.226354
+Result number = 5;ECLIPSEF_15C;Eclipse F 15(1/2");Rad. union/Thread;Reverse angle;10;15 (1/2");10.001;10 (0.5);15000;2.77778e-06/4.16667e-05;-10/120;10 (3/8");80.851;0.226354
+Result number = 6;ECLIPSEF_10B;Eclipse F 10(3/8");Rad. union/Thread;Straight;10;10 (3/8");10.001;10 (0.5);15000;2.77778e-06/4.16667e-05;-10/120;10 (3/8");80.851;0.226354
+Result number = 7;ECLIPSEF_10A;Eclipse F 10(3/8");Rad. union/Thread;Angle;10;10 (3/8");10.001;10 (0.5);15000;2.77778e-06/4.16667e-05;-10/120;10 (3/8");80.851;0.226354
+Result number = 8;ECLIPSEF_10C;Eclipse F 10(3/8");Rad. union/Thread;Reverse angle;10;10 (3/8");10.001;10 (0.5);15000;2.77778e-06/4.16667e-05;-10/120;10 (3/8");80.851;0.226354
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 99
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 2.777777777e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = WithFlowLimitation
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_FLOWLIMITED
+ComboSVFamilyID = FAM_ECLIPSE_F
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_STRAIGHT
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_SWNUT_THRM
+ComboRVVersionID = VERS_STRAIGHT
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;ECLIPSEF_20B;Eclipse F 20(3/4");Rad. union/Thread;Straight;10;20 (3/4");10.001;10 (0.5);15000;2.77778e-06/4.16667e-05;-10/120;10 (3/8");80.851;0.226354
+Result number = 1;ECLIPSEF_15B;Eclipse F 15(1/2");Rad. union/Thread;Straight;10;15 (1/2");10.001;10 (0.5);15000;2.77778e-06/4.16667e-05;-10/120;10 (3/8");80.851;0.226354
+Result number = 2;ECLIPSEF_10B;Eclipse F 10(3/8");Rad. union/Thread;Straight;10;10 (3/8");10.001;10 (0.5);15000;2.77778e-06/4.16667e-05;-10/120;10 (3/8");80.851;0.226354
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 100
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 2.777777777e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = WithFlowLimitation
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_FLOWLIMITED
+ComboSVFamilyID = FAM_ECLIPSE_F
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_ANGLE
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_SWNUT_THRM
+ComboRVVersionID = VERS_STRAIGHT
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;ECLIPSEF_20A;Eclipse F 20(3/4");Rad. union/Thread;Angle;10;20 (3/4");10.001;10 (0.5);15000;2.77778e-06/4.16667e-05;-10/120;10 (3/8");80.851;0.226354
+Result number = 1;ECLIPSEF_15A;Eclipse F 15(1/2");Rad. union/Thread;Angle;10;15 (1/2");10.001;10 (0.5);15000;2.77778e-06/4.16667e-05;-10/120;10 (3/8");80.851;0.226354
+Result number = 2;ECLIPSEF_10A;Eclipse F 10(3/8");Rad. union/Thread;Angle;10;10 (3/8");10.001;10 (0.5);15000;2.77778e-06/4.16667e-05;-10/120;10 (3/8");80.851;0.226354
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 101
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 2.777777777e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = false
+ValveType = WithFlowLimitation
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_FLOWLIMITED
+ComboSVFamilyID = FAM_ECLIPSE_F
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_SWNUT_THRM
+ComboRVVersionID = VERS_STRAIGHT
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;ECLIPSEF_20C;Eclipse F 20(3/4");Rad. union/Thread;Reverse angle;10;20 (3/4");10.001;10 (0.5);15000;2.77778e-06/4.16667e-05;-10/120;10 (3/8");80.851;0.226354
+Result number = 1;ECLIPSEF_15C;Eclipse F 15(1/2");Rad. union/Thread;Reverse angle;10;15 (1/2");10.001;10 (0.5);15000;2.77778e-06/4.16667e-05;-10/120;10 (3/8");80.851;0.226354
+Result number = 2;ECLIPSEF_10C;Eclipse F 10(3/8");Rad. union/Thread;Reverse angle;10;10 (3/8");10.001;10 (0.5);15000;2.77778e-06/4.16667e-05;-10/120;10 (3/8");80.851;0.226354
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 102
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 2.777777777e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Inserts
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_FLOWLIMITED
+ComboSVFamilyID = FAM_ECLIPSE_F
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = 
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;THM_HEIMINSERT_G12B_VHV;Thermostatic insert VHV8S;Thread male G1/2;Straight;10;15 (1/2");8;8* (0.5);1747.91;1747.91;0.75;2/120;10 (3/8");80.851;0.226354
+Result number = 1;THM_HEIMINSERT_G12E_VHV;Thermostatic insert VHV8S;Thread male G1/2;Straight;10;15 (1/2");8;8* (0.5);1747.91;1747.91;0.75;2/120;10 (3/8");80.851;0.226354
+Result number = 2;THM_HEIMINSERT_G12F_VHV;Thermostatic insert VHV8S;Thread male G1/2;Straight;10;15 (1/2");8;8* (0.5);1747.91;1747.91;0.75;2/120;10 (3/8");80.851;0.226354
+Result number = 3;THM_HEIMINSERT_G12A_VHV;Thermostatic insert VHV;Thread male G1/2;Straight;10;15 (1/2");6;6* (1);1393.42;1393.42;0.84;2/120;10 (3/8");80.851;0.226354
+Result number = 4;THM_HEIMINSERT_G12C_VHV;Thermostatic insert VHV;Thread male G1/2;Straight;10;15 (1/2");6;6* (1);1393.42;1393.42;0.84;2/120;10 (3/8");80.851;0.226354
+Result number = 5;THM_HEIMINSERT_G12D_VHV;Thermostatic insert VHV;Thread male G1/2;Straight;10;15 (1/2");6;6* (1);1393.42;1393.42;0.84;2/120;10 (3/8");80.851;0.226354
+Result number = 6;THM_HEIMINSERT_M22A_VHV;Thermostatic insert VHV;Thread male M22x1,5;Straight;10;15 (1/2");6;6* (1);1393.42;1393.42;0.84;2/120;10 (3/8");80.851;0.226354
+Result number = 7;THM_HEIMINSERT_G12C_VHF;Thermostatic insert VHF8S;Thread male G1/2;Straight;10;15 (1/2");8;8* (0.5);14544.4;14544.4;0.26;2/120;10 (3/8");80.851;0.226354
+Result number = 8;THM_HEIMINSERT_G12D_VHF;Thermostatic insert VHF8S;Thread male G1/2;Straight;10;15 (1/2");8;8* (0.5);14544.4;14544.4;0.26;2/120;10 (3/8");80.851;0.226354
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 103
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 2.777777777e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Inserts
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_FLOWLIMITED
+ComboSVFamilyID = FAM_ECLIPSE_F
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = FAM_VEKOTEC
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;THM_HEIMINSERT_G12B_VHV;Thermostatic insert VHV8S;Thread male G1/2;Straight;10;15 (1/2");8;8* (0.5);1747.91;1747.91;0.75;2/120;10 (3/8");80.851;0.226354
+Result number = 1;THM_HEIMINSERT_G12E_VHV;Thermostatic insert VHV8S;Thread male G1/2;Straight;10;15 (1/2");8;8* (0.5);1747.91;1747.91;0.75;2/120;10 (3/8");80.851;0.226354
+Result number = 2;THM_HEIMINSERT_G12F_VHV;Thermostatic insert VHV8S;Thread male G1/2;Straight;10;15 (1/2");8;8* (0.5);1747.91;1747.91;0.75;2/120;10 (3/8");80.851;0.226354
+Result number = 3;THM_HEIMINSERT_G12A_VHV;Thermostatic insert VHV;Thread male G1/2;Straight;10;15 (1/2");6;6* (1);1393.42;1393.42;0.84;2/120;10 (3/8");80.851;0.226354
+Result number = 4;THM_HEIMINSERT_G12C_VHV;Thermostatic insert VHV;Thread male G1/2;Straight;10;15 (1/2");6;6* (1);1393.42;1393.42;0.84;2/120;10 (3/8");80.851;0.226354
+Result number = 5;THM_HEIMINSERT_G12D_VHV;Thermostatic insert VHV;Thread male G1/2;Straight;10;15 (1/2");6;6* (1);1393.42;1393.42;0.84;2/120;10 (3/8");80.851;0.226354
+Result number = 6;THM_HEIMINSERT_M22A_VHV;Thermostatic insert VHV;Thread male M22x1,5;Straight;10;15 (1/2");6;6* (1);1393.42;1393.42;0.84;2/120;10 (3/8");80.851;0.226354
+Result number = 7;THM_HEIMINSERT_G12C_VHF;Thermostatic insert VHF8S;Thread male G1/2;Straight;10;15 (1/2");8;8* (0.5);14544.4;14544.4;0.26;2/120;10 (3/8");80.851;0.226354
+Result number = 8;THM_HEIMINSERT_G12D_VHF;Thermostatic insert VHF8S;Thread male G1/2;Straight;10;15 (1/2");8;8* (0.5);14544.4;14544.4;0.26;2/120;10 (3/8");80.851;0.226354
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 104
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 2.777777777e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Inserts
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_FLOWLIMITED
+ComboSVFamilyID = FAM_ECLIPSE_F
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = 
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = FAM_VEKOLUX
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;THM_HEIMINSERT_G12B_VHV;Thermostatic insert VHV8S;Thread male G1/2;Straight;10;15 (1/2");8;8* (0.5);1747.91;1747.91;0.75;2/120;10 (3/8");80.851;0.226354
+Result number = 1;THM_HEIMINSERT_G12E_VHV;Thermostatic insert VHV8S;Thread male G1/2;Straight;10;15 (1/2");8;8* (0.5);1747.91;1747.91;0.75;2/120;10 (3/8");80.851;0.226354
+Result number = 2;THM_HEIMINSERT_G12F_VHV;Thermostatic insert VHV8S;Thread male G1/2;Straight;10;15 (1/2");8;8* (0.5);1747.91;1747.91;0.75;2/120;10 (3/8");80.851;0.226354
+Result number = 3;THM_HEIMINSERT_G12A_VHV;Thermostatic insert VHV;Thread male G1/2;Straight;10;15 (1/2");6;6* (1);1393.42;1393.42;0.84;2/120;10 (3/8");80.851;0.226354
+Result number = 4;THM_HEIMINSERT_G12C_VHV;Thermostatic insert VHV;Thread male G1/2;Straight;10;15 (1/2");6;6* (1);1393.42;1393.42;0.84;2/120;10 (3/8");80.851;0.226354
+Result number = 5;THM_HEIMINSERT_G12D_VHV;Thermostatic insert VHV;Thread male G1/2;Straight;10;15 (1/2");6;6* (1);1393.42;1393.42;0.84;2/120;10 (3/8");80.851;0.226354
+Result number = 6;THM_HEIMINSERT_M22A_VHV;Thermostatic insert VHV;Thread male M22x1,5;Straight;10;15 (1/2");6;6* (1);1393.42;1393.42;0.84;2/120;10 (3/8");80.851;0.226354
+Result number = 7;THM_HEIMINSERT_G12C_VHF;Thermostatic insert VHF8S;Thread male G1/2;Straight;10;15 (1/2");8;8* (0.5);14544.4;14544.4;0.26;2/120;10 (3/8");80.851;0.226354
+Result number = 8;THM_HEIMINSERT_G12D_VHF;Thermostatic insert VHF8S;Thread male G1/2;Straight;10;15 (1/2");8;8* (0.5);14544.4;14544.4;0.26;2/120;10 (3/8");80.851;0.226354
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 105
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 2.777777777e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Inserts
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_FLOWLIMITED
+ComboSVFamilyID = FAM_ECLIPSE_F
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = FAM_VHV
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = FAM_VEKOLUX
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;THM_HEIMINSERT_G12B_VHV;Thermostatic insert VHV8S;Thread male G1/2;Straight;10;15 (1/2");8;8* (0.5);1747.91;1747.91;0.75;2/120;10 (3/8");80.851;0.226354
+Result number = 1;THM_HEIMINSERT_G12E_VHV;Thermostatic insert VHV8S;Thread male G1/2;Straight;10;15 (1/2");8;8* (0.5);1747.91;1747.91;0.75;2/120;10 (3/8");80.851;0.226354
+Result number = 2;THM_HEIMINSERT_G12F_VHV;Thermostatic insert VHV8S;Thread male G1/2;Straight;10;15 (1/2");8;8* (0.5);1747.91;1747.91;0.75;2/120;10 (3/8");80.851;0.226354
+Result number = 3;THM_HEIMINSERT_G12A_VHV;Thermostatic insert VHV;Thread male G1/2;Straight;10;15 (1/2");6;6* (1);1393.42;1393.42;0.84;2/120;10 (3/8");80.851;0.226354
+Result number = 4;THM_HEIMINSERT_G12C_VHV;Thermostatic insert VHV;Thread male G1/2;Straight;10;15 (1/2");6;6* (1);1393.42;1393.42;0.84;2/120;10 (3/8");80.851;0.226354
+Result number = 5;THM_HEIMINSERT_G12D_VHV;Thermostatic insert VHV;Thread male G1/2;Straight;10;15 (1/2");6;6* (1);1393.42;1393.42;0.84;2/120;10 (3/8");80.851;0.226354
+Result number = 6;THM_HEIMINSERT_M22A_VHV;Thermostatic insert VHV;Thread male M22x1,5;Straight;10;15 (1/2");6;6* (1);1393.42;1393.42;0.84;2/120;10 (3/8");80.851;0.226354
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 106
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 2.777777777e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Inserts
+InsertType = Heimeier
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 0
+SVTypeID = TRVTYPE_FLOWLIMITED
+ComboSVFamilyID = FAM_ECLIPSE_F
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = heimeier insert
+ComboSVInsertFamilyID = FAM_VHF
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = FAM_VEKOLUX
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;THM_HEIMINSERT_G12C_VHF;Thermostatic insert VHF8S;Thread male G1/2;Straight;10;15 (1/2");8;8* (0.5);14544.4;14544.4;0.26;2/120;10 (3/8");80.851;0.226354
+Result number = 1;THM_HEIMINSERT_G12D_VHF;Thermostatic insert VHF8S;Thread male G1/2;Straight;10;15 (1/2");8;8* (0.5);14544.4;14544.4;0.26;2/120;10 (3/8");80.851;0.226354
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 107
+
+SelectionMode = Individual
+ProductCategory = TRV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 2.777777777e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = 
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+IsTrvTypePreset = true
+ValveType = Inserts
+InsertType = ByKv
+ReturnValveMode = Nothing
+HeadType = Thermostatic
+InsertKvValue = 10
+SVTypeID = TRVTYPE_FLOWLIMITED
+ComboSVFamilyID = FAM_ECLIPSE_F
+ComboSVConnectID = CONN_RADUN_THR
+ComboSVVersionID = VERS_RANGLE
+ComboRVFamilyID = NOTHING_ID
+ComboRVConnectID = CONN_RADUN_PFIT
+ComboRVVersionID = VERS_ANGLE
+ComboSVInsertName = other insert
+ComboSVInsertFamilyID = FAM_VHF
+ComboSVInsertTypeID = TRVTYPE_INSERT_PRESET
+ComboRVInsertFamilyID = FAM_VEKOLUX
+ComboActuatorTypeID = 
+ComboActuatorFamilyID = 
+ComboActuatorVersionID = 
+EndInputs
+
+StartOutputs
+Result number = 0;10;9.832
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+

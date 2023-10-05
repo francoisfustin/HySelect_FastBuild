@@ -1,0 +1,694 @@
+<?xml version="1.0"?>
+<CDataSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Modified>false</Modified>
+  <Mnfr>
+    <ID>MNFR_283005260314</ID>
+    <Name>Broen</Name>
+    <FamTab>
+      <ID>FAMTAB_183005260314</ID>
+      <Name>Alien family table</Name>
+      <List>
+        <CDataFamily>
+          <ID>FAM_483005260314</ID>
+          <Name>Balorex Venturi</Name>
+          <Order>0</Order>
+        </CDataFamily>
+        <CDataFamily>
+          <ID>FAM_355205260314</ID>
+          <Name>Balorex Vario</Name>
+          <Order>1</Order>
+        </CDataFamily>
+        <CDataFamily>
+          <ID>FAM_420506260314</ID>
+          <Name>Balorex Dynamic</Name>
+          <Order>2</Order>
+        </CDataFamily>
+        <CDataFamily>
+          <ID>FAM_000607260314</ID>
+          <Name>Balorex Basic</Name>
+          <Order>3</Order>
+        </CDataFamily>
+      </List>
+    </FamTab>
+    <CharTab>
+      <ID>CHARTAB_183005260314</ID>
+      <Name>Alien char table</Name>
+      <List>
+        <CDataChar>
+          <List>
+            <KVP>
+              <O>0</O>
+              <KV>0.07</KV>
+            </KVP>
+            <KVP>
+              <O>1</O>
+              <KV>0.11</KV>
+            </KVP>
+            <KVP>
+              <O>2</O>
+              <KV>0.25</KV>
+            </KVP>
+            <KVP>
+              <O>3</O>
+              <KV>0.39</KV>
+            </KVP>
+            <KVP>
+              <O>4</O>
+              <KV>0.54</KV>
+            </KVP>
+            <KVP>
+              <O>5</O>
+              <KV>0.7</KV>
+            </KVP>
+            <KVP>
+              <O>6</O>
+              <KV>0.88</KV>
+            </KVP>
+            <KVP>
+              <O>7</O>
+              <KV>1.09</KV>
+            </KVP>
+            <KVP>
+              <O>8</O>
+              <KV>1.29</KV>
+            </KVP>
+            <KVP>
+              <O>9</O>
+              <KV>1.48</KV>
+            </KVP>
+            <KVP>
+              <O>10</O>
+              <KV>1.61</KV>
+            </KVP>
+          </List>
+          <ID>CHAR_065305260314</ID>
+          <Discrete>true</Discrete>
+          <MultiTurn>true</MultiTurn>
+          <NbrCurves>1</NbrCurves>
+        </CDataChar>
+        <CDataChar>
+          <List>
+            <KVP>
+              <O>0</O>
+              <KV>0.12</KV>
+            </KVP>
+            <KVP>
+              <O>1</O>
+              <KV>0.32</KV>
+            </KVP>
+            <KVP>
+              <O>2</O>
+              <KV>0.63</KV>
+            </KVP>
+            <KVP>
+              <O>3</O>
+              <KV>0.96</KV>
+            </KVP>
+            <KVP>
+              <O>4</O>
+              <KV>1.29</KV>
+            </KVP>
+            <KVP>
+              <O>5</O>
+              <KV>1.64</KV>
+            </KVP>
+            <KVP>
+              <O>6</O>
+              <KV>2.03</KV>
+            </KVP>
+            <KVP>
+              <O>7</O>
+              <KV>2.46</KV>
+            </KVP>
+            <KVP>
+              <O>8</O>
+              <KV>2.96</KV>
+            </KVP>
+            <KVP>
+              <O>9</O>
+              <KV>3.53</KV>
+            </KVP>
+            <KVP>
+              <O>10</O>
+              <KV>4.15</KV>
+            </KVP>
+          </List>
+          <ID>CHAR_315505260314</ID>
+          <Discrete>true</Discrete>
+          <MultiTurn>true</MultiTurn>
+          <NbrCurves>1</NbrCurves>
+        </CDataChar>
+        <CDataChar>
+          <List>
+            <KVP>
+              <O>0</O>
+              <KV>0.35</KV>
+            </KVP>
+            <KVP>
+              <O>1</O>
+              <KV>0.48</KV>
+            </KVP>
+            <KVP>
+              <O>2</O>
+              <KV>0.95</KV>
+            </KVP>
+            <KVP>
+              <O>3</O>
+              <KV>1.55</KV>
+            </KVP>
+            <KVP>
+              <O>4</O>
+              <KV>2.17</KV>
+            </KVP>
+            <KVP>
+              <O>5</O>
+              <KV>2.78</KV>
+            </KVP>
+            <KVP>
+              <O>6</O>
+              <KV>3.45</KV>
+            </KVP>
+            <KVP>
+              <O>7</O>
+              <KV>4.29</KV>
+            </KVP>
+            <KVP>
+              <O>8</O>
+              <KV>5.31</KV>
+            </KVP>
+            <KVP>
+              <O>9</O>
+              <KV>6.3</KV>
+            </KVP>
+            <KVP>
+              <O>10</O>
+              <KV>6.66</KV>
+            </KVP>
+          </List>
+          <ID>CHAR_225705260314</ID>
+          <Discrete>true</Discrete>
+          <MultiTurn>true</MultiTurn>
+          <NbrCurves>1</NbrCurves>
+        </CDataChar>
+        <CDataChar>
+          <List>
+            <KVP>
+              <O>0</O>
+              <KV>1.81</KV>
+            </KVP>
+            <KVP>
+              <O>1</O>
+              <KV>2.42</KV>
+            </KVP>
+            <KVP>
+              <O>2</O>
+              <KV>3.21</KV>
+            </KVP>
+            <KVP>
+              <O>3</O>
+              <KV>4.06</KV>
+            </KVP>
+            <KVP>
+              <O>4</O>
+              <KV>5</KV>
+            </KVP>
+            <KVP>
+              <O>5</O>
+              <KV>6</KV>
+            </KVP>
+            <KVP>
+              <O>6</O>
+              <KV>7.1</KV>
+            </KVP>
+            <KVP>
+              <O>7</O>
+              <KV>8.3</KV>
+            </KVP>
+            <KVP>
+              <O>8</O>
+              <KV>9.5</KV>
+            </KVP>
+            <KVP>
+              <O>9</O>
+              <KV>10.8</KV>
+            </KVP>
+            <KVP>
+              <O>10</O>
+              <KV>12</KV>
+            </KVP>
+          </List>
+          <ID>CHAR_445805260314</ID>
+          <Discrete>true</Discrete>
+          <MultiTurn>true</MultiTurn>
+          <NbrCurves>1</NbrCurves>
+        </CDataChar>
+        <CDataChar>
+          <List>
+            <KVP>
+              <O>0</O>
+              <KV>2.61</KV>
+            </KVP>
+            <KVP>
+              <O>1</O>
+              <KV>3.5</KV>
+            </KVP>
+            <KVP>
+              <O>2</O>
+              <KV>4.9</KV>
+            </KVP>
+            <KVP>
+              <O>3</O>
+              <KV>6.4</KV>
+            </KVP>
+            <KVP>
+              <O>4</O>
+              <KV>8</KV>
+            </KVP>
+            <KVP>
+              <O>5</O>
+              <KV>9.7</KV>
+            </KVP>
+            <KVP>
+              <O>6</O>
+              <KV>11.4</KV>
+            </KVP>
+            <KVP>
+              <O>7</O>
+              <KV>13.3</KV>
+            </KVP>
+            <KVP>
+              <O>8</O>
+              <KV>15.5</KV>
+            </KVP>
+            <KVP>
+              <O>9</O>
+              <KV>18</KV>
+            </KVP>
+            <KVP>
+              <O>10</O>
+              <KV>20.6</KV>
+            </KVP>
+          </List>
+          <ID>CHAR_210006260314</ID>
+          <Discrete>true</Discrete>
+          <MultiTurn>true</MultiTurn>
+          <NbrCurves>1</NbrCurves>
+        </CDataChar>
+        <CDataChar>
+          <List>
+            <KVP>
+              <O>0</O>
+              <KV>5.5</KV>
+            </KVP>
+            <KVP>
+              <O>1</O>
+              <KV>6.9</KV>
+            </KVP>
+            <KVP>
+              <O>2</O>
+              <KV>8.9</KV>
+            </KVP>
+            <KVP>
+              <O>3</O>
+              <KV>11.1</KV>
+            </KVP>
+            <KVP>
+              <O>4</O>
+              <KV>13.3</KV>
+            </KVP>
+            <KVP>
+              <O>5</O>
+              <KV>15.7</KV>
+            </KVP>
+            <KVP>
+              <O>6</O>
+              <KV>18.2</KV>
+            </KVP>
+            <KVP>
+              <O>7</O>
+              <KV>20.9</KV>
+            </KVP>
+            <KVP>
+              <O>8</O>
+              <KV>23.6</KV>
+            </KVP>
+            <KVP>
+              <O>9</O>
+              <KV>26.4</KV>
+            </KVP>
+            <KVP>
+              <O>10</O>
+              <KV>29.6</KV>
+            </KVP>
+          </List>
+          <ID>CHAR_540106260314</ID>
+          <Discrete>true</Discrete>
+          <MultiTurn>true</MultiTurn>
+          <NbrCurves>1</NbrCurves>
+        </CDataChar>
+      </List>
+    </CharTab>
+    <ValveTab>
+      <ID>VALVTAB_183005260314</ID>
+      <Name>Alien valve table</Name>
+      <List>
+        <CValve>
+          <ID>VALV_183105260314</ID>
+          <Name>Balorex Venturi DN 15U</Name>
+          <FamID>FAM_483005260314</FamID>
+          <DNID>DN_15</DNID>
+          <CharID />
+          <KvsSignal>0.16</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_363605260314</ID>
+          <Name>Balorex Venturi DN 15L</Name>
+          <FamID>FAM_483005260314</FamID>
+          <DNID>DN_15</DNID>
+          <CharID />
+          <KvsSignal>0.36</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_143705260314</ID>
+          <Name>Balorex Venturi DN 15S</Name>
+          <FamID>FAM_483005260314</FamID>
+          <DNID>DN_15</DNID>
+          <CharID />
+          <KvsSignal>0.75</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_474505260314</ID>
+          <Name>Balorex Venturi DN 15H</Name>
+          <FamID>FAM_483005260314</FamID>
+          <DNID>DN_15</DNID>
+          <CharID />
+          <KvsSignal>1.56</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_144605260314</ID>
+          <Name>Balorex Venturi DN 20L</Name>
+          <FamID>FAM_483005260314</FamID>
+          <DNID>DN_20</DNID>
+          <CharID />
+          <KvsSignal>0.75</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_274605260314</ID>
+          <Name>Balorex Venturi DN 20S</Name>
+          <FamID>FAM_483005260314</FamID>
+          <DNID>DN_20</DNID>
+          <CharID />
+          <KvsSignal>1.56</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_434605260314</ID>
+          <Name>Balorex Venturi DN 20H</Name>
+          <FamID>FAM_483005260314</FamID>
+          <DNID>DN_20</DNID>
+          <CharID />
+          <KvsSignal>2.95</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_544605260314</ID>
+          <Name>Balorex Venturi DN 25S</Name>
+          <FamID>FAM_483005260314</FamID>
+          <DNID>DN_25</DNID>
+          <CharID />
+          <KvsSignal>2.95</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_084705260314</ID>
+          <Name>Balorex Venturi DN 25H</Name>
+          <FamID>FAM_483005260314</FamID>
+          <DNID>DN_25</DNID>
+          <CharID />
+          <KvsSignal>12.1</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_374705260314</ID>
+          <Name>Balorex Venturi DN 32</Name>
+          <FamID>FAM_483005260314</FamID>
+          <DNID>DN_32</DNID>
+          <CharID />
+          <KvsSignal>6.01</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_534705260314</ID>
+          <Name>Balorex Venturi DN 40</Name>
+          <FamID>FAM_483005260314</FamID>
+          <DNID>DN_40</DNID>
+          <CharID />
+          <KvsSignal>9.20</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_144805260314</ID>
+          <Name>Balorex Venturi DN 50</Name>
+          <FamID>FAM_483005260314</FamID>
+          <DNID>DN_50</DNID>
+          <CharID />
+          <KvsSignal>17.10</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_384805260314</ID>
+          <Name>Balorex Venturi DN 65</Name>
+          <FamID>FAM_483005260314</FamID>
+          <DNID>DN_65</DNID>
+          <CharID />
+          <KvsSignal>37.40</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_594805260314</ID>
+          <Name>Balorex Venturi DN 80</Name>
+          <FamID>FAM_483005260314</FamID>
+          <DNID>DN_80</DNID>
+          <CharID />
+          <KvsSignal>72.90</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_244905260314</ID>
+          <Name>Balorex Venturi DN 100</Name>
+          <FamID>FAM_483005260314</FamID>
+          <DNID>DN_100</DNID>
+          <CharID />
+          <KvsSignal>129</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_414905260314</ID>
+          <Name>Balorex Venturi DN 125</Name>
+          <FamID>FAM_483005260314</FamID>
+          <DNID>DN_125</DNID>
+          <CharID />
+          <KvsSignal>190</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_025005260314</ID>
+          <Name>Balorex Venturi DN 150</Name>
+          <FamID>FAM_483005260314</FamID>
+          <DNID>DN_150</DNID>
+          <CharID />
+          <KvsSignal>348</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_215005260314</ID>
+          <Name>Balorex Venturi DN 200</Name>
+          <FamID>FAM_483005260314</FamID>
+          <DNID>DN_200</DNID>
+          <CharID />
+          <KvsSignal>586</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_395005260314</ID>
+          <Name>Balorex Venturi DN 250</Name>
+          <FamID>FAM_483005260314</FamID>
+          <DNID>DN_250</DNID>
+          <CharID />
+          <KvsSignal>861</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_005105260314</ID>
+          <Name>Balorex Venturi DN 300</Name>
+          <FamID>FAM_483005260314</FamID>
+          <DNID>DN_300</DNID>
+          <CharID />
+          <KvsSignal>1513</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_065305260314</ID>
+          <Name>Balorex Vario DN 15</Name>
+          <FamID>FAM_355205260314</FamID>
+          <DNID>DN_15</DNID>
+          <CharID>CHAR_065305260314</CharID>
+          <KvsSignal>-1</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_315505260314</ID>
+          <Name>Balorex Vario DN 20</Name>
+          <FamID>FAM_355205260314</FamID>
+          <DNID>DN_20</DNID>
+          <CharID>CHAR_315505260314</CharID>
+          <KvsSignal>-1</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_225705260314</ID>
+          <Name>Balorex Vario DN 25</Name>
+          <FamID>FAM_355205260314</FamID>
+          <DNID>DN_25</DNID>
+          <CharID>CHAR_225705260314</CharID>
+          <KvsSignal>-1</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_445805260314</ID>
+          <Name>Balorex Vario DN 32</Name>
+          <FamID>FAM_355205260314</FamID>
+          <DNID>DN_32</DNID>
+          <CharID>CHAR_445805260314</CharID>
+          <KvsSignal>-1</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_210006260314</ID>
+          <Name>Balorex Vario DN 40</Name>
+          <FamID>FAM_355205260314</FamID>
+          <DNID>DN_40</DNID>
+          <CharID>CHAR_210006260314</CharID>
+          <KvsSignal>-1</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_540106260314</ID>
+          <Name>Balorex Vario DN 50</Name>
+          <FamID>FAM_355205260314</FamID>
+          <DNID>DN_50</DNID>
+          <CharID>CHAR_540106260314</CharID>
+          <KvsSignal>-1</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_160606260314</ID>
+          <Name>Balorex Dynamic DN 15L</Name>
+          <FamID>FAM_420506260314</FamID>
+          <DNID>DN_15</DNID>
+          <CharID />
+          <KvsSignal>0.23</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_440606260314</ID>
+          <Name>Balorex Dynamic DN 15S</Name>
+          <FamID>FAM_420506260314</FamID>
+          <DNID>DN_15</DNID>
+          <CharID />
+          <KvsSignal>0.48</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_550606260314</ID>
+          <Name>Balorex Dynamic DN 15H</Name>
+          <FamID>FAM_420506260314</FamID>
+          <DNID>DN_15</DNID>
+          <CharID />
+          <KvsSignal>2.5</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_090706260314</ID>
+          <Name>Balorex Dynamic DN 20S</Name>
+          <FamID>FAM_420506260314</FamID>
+          <DNID>DN_20</DNID>
+          <CharID />
+          <KvsSignal>1.9</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_380706260314</ID>
+          <Name>Balorex Dynamic DN 20H</Name>
+          <FamID>FAM_420506260314</FamID>
+          <DNID>DN_20</DNID>
+          <CharID />
+          <KvsSignal>4.7</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_433206260314</ID>
+          <Name>Balorex Dynamic DN 25S</Name>
+          <FamID>FAM_420506260314</FamID>
+          <DNID>DN_25</DNID>
+          <CharID />
+          <KvsSignal>5.05</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_543206260314</ID>
+          <Name>Balorex Dynamic DN 25H</Name>
+          <FamID>FAM_420506260314</FamID>
+          <DNID>DN_25</DNID>
+          <CharID />
+          <KvsSignal>8.25</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_063306260314</ID>
+          <Name>Balorex Dynamic DN 32H</Name>
+          <FamID>FAM_420506260314</FamID>
+          <DNID>DN_32</DNID>
+          <CharID />
+          <KvsSignal>8.35</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_183306260314</ID>
+          <Name>Balorex Dynamic DN 40S</Name>
+          <FamID>FAM_420506260314</FamID>
+          <DNID>DN_40</DNID>
+          <CharID />
+          <KvsSignal>17.5</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_303306260314</ID>
+          <Name>Balorex Dynamic DN 50H</Name>
+          <FamID>FAM_420506260314</FamID>
+          <DNID>DN_50</DNID>
+          <CharID />
+          <KvsSignal>29.5</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_190607260314</ID>
+          <Name>Balorex Basic DN 15</Name>
+          <FamID>FAM_000607260314</FamID>
+          <DNID>DN_15</DNID>
+          <CharID />
+          <KvsSignal>1.7</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_370607260314</ID>
+          <Name>Balorex Basic DN 20</Name>
+          <FamID>FAM_000607260314</FamID>
+          <DNID>DN_15</DNID>
+          <CharID />
+          <KvsSignal>4.2</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_480607260314</ID>
+          <Name>Balorex Basic DN 25</Name>
+          <FamID>FAM_000607260314</FamID>
+          <DNID>DN_25</DNID>
+          <CharID />
+          <KvsSignal>6.65</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_570607260314</ID>
+          <Name>Balorex Basic DN 32</Name>
+          <FamID>FAM_000607260314</FamID>
+          <DNID>DN_32</DNID>
+          <CharID />
+          <KvsSignal>13.4</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_020707260314</ID>
+          <Name>Balorex Basic DN 40</Name>
+          <FamID>FAM_000607260314</FamID>
+          <DNID>DN_40</DNID>
+          <CharID />
+          <KvsSignal>21.1</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_070707260314</ID>
+          <Name>Balorex Basic DN 50</Name>
+          <FamID>FAM_000607260314</FamID>
+          <DNID>DN_50</DNID>
+          <CharID />
+          <KvsSignal>35.7</KvsSignal>
+        </CValve>
+      </List>
+    </ValveTab>
+  </Mnfr>
+</CDataSet>

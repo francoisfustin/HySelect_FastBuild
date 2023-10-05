@@ -1,0 +1,87 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "fpabout.h"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+#ifndef SPREAD_JPN
+IDD_ABOUTBOX DIALOG DISCARDABLE  18, 20, 217, 206
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION ""
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            "",IDC_PRODUCT_ICON,28,5,21,20
+    LTEXT           "",IDC_PRODUCT,54,10,132,18
+    CTEXT           "",IDC_COPYRIGHT,18,30,177,9
+    CTEXT           "",IDC_SERIALNUMBER,18,42,177,9
+    CTEXT           "FarPoint invites you to try our other award-winning products:",-1,8,54,201,10
+    CONTROL         "",-1,"Static",SS_BLACKFRAME,4,65,209,66
+    CONTROL         "",IDC_MARQUEE,"Button", BS_OWNERDRAW,6,67,205,62
+    LTEXT           "Web Site:",IDC_WEBSITE,6,132,41,11
+    LTEXT           "email: fpsupport@fpoint.com",IDC_EMAIL,6,142,97,11
+    LTEXT           "CompuServe:             GO FARPOINT lib 12",IDC_COMPUSERVE,134,134,78,17
+    RTEXT           "Sales:  (800) 645-5913",IDC_SALES,52,168,76,10
+    RTEXT           "Main:  (919) 460-4551",IDC_MAIN,52,183,76,10
+    RTEXT           "Fax:  (919) 460-7606",IDC_FAX,52,193,76,10
+    RTEXT           "Technical Support:  (919) 460-1887",IDC_TECHSUPPORT,10,158,118,10
+    DEFPUSHBUTTON   "OK",IDOK,152,162,50,14 
+    PUSHBUTTON      "Purchase...",IDC_PURCHASE_BTN,152,180,50,14 
+    
+END
+#else
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  18, 20, 214, 145
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    ICON            "",IDC_PRODUCT_ICON,9,6,18,21
+    LTEXT           "",IDC_PRODUCT,45,11,132,10
+    CTEXT           "",IDC_COPYRIGHT,18,30,177,9, WS_VISIBLE
+    CTEXT           "",IDC_SERIALNUMBER,18,42,177,9,NOT WS_VISIBLE
+	CONTROL         "",-1,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,504,65,209,66
+    CONTROL         "",IDC_MARQUEE,"Button", BS_OWNERDRAW | NOT WS_VISIBLE,506,67,205,62
+    DEFPUSHBUTTON   "OK",IDOK,162,121,41,14
+//GAB 8/9/04
+//    LTEXT           "http://www.grapecity.com/",IDC_STATIC,68,108,120,11
+    LTEXT           "http://www.grapecity.com/",IDC_STATIC,68,98,120,11
+    LTEXT           "日本語版開発 : グレープシティ株式会社(GrapeCity inc.)",
+                    IDC_STATIC,20,74,176,11
+    LTEXT           "仙台市泉区紫山3-1-4",IDC_STATIC,67,86,120,11
+//GAB 8/9/04 Changed at Okuda's request
+//    LTEXT           "TEL.022-777-8211  FAX.022-777-8233",IDC_STATIC,68,98,
+//                    118,9
+    LTEXT           "開発元 : FarPoint Technologies, Inc.",IDC_STATIC,20,60,
+                    176,11
+END
+#endif
+       
+STRINGTABLE
+BEGIN
+    IDS_WEBADDR             "http://www.fpoint.com"
+    IDS_WEBSITE             "Web Site:"
+    IDS_EMAIL               "email: fpsupport@fpoint.com"
+    IDS_SALES               "Sales:  (800) 645-5913"
+    IDS_MAIN                "Main:  (919) 460-4551"
+    IDS_FAX                 "Fax:  (919) 460-7606"
+    IDS_TECHSUPPORT         "Technical Support:  (919) 460-1887"
+   IDS_CALOBJX      "Calendar ObjX - Display customizable calendars, clocks, and pictures in your applications.\nNow including:\nDaily PlanIt - A customizable daily planner that adds unique scheduling capabilities to your applications."
+   IDS_BMAKER       "Button Objx - Create objects of any shape or add customizable help balloons."
+//   IDS_DPLANIT      "Daily PlanIt - A customizable daily planner that adds unique scheduling capabilities to your applications."
+   IDS_LISTPRO      "List Pro - Flexible combo box and list box controls that break the 64K limit."
+   IDS_TABPRO       "Tab Pro - The 'tab of choice' to organize your interface with familiar tab or notebook formats; the included Imprint control provides 3-D frames."
+   IDS_INPUTPRO     "Input Pro - Eight controls to help you create professional forms that provide data validation."
+   IDS_SPREAD       "Spread - The most powerful spreadsheet/grid control you can buy."
+   IDS_SPREADWEB    "Spread for Web Forms - The most powerful spreadsheet/grid control you can buy is now available as a .NET Web Forms component."
+   IDS_SPREADWIN    "Spread for Windows Forms - The most powerful spreadsheet/grid control you can buy is now available as a .NET Windows Forms component."
+   IDS_INPUTPROWIN  "Input Pro for Windows Forms - Eight controls to help you create professional forms for your .NET Windows Forms application that provide data validation."
+END
+       
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_FPLINK              CURSOR  DISCARDABLE     "..\\..\\..\\fplibs\\fptools\\src\\H_POINT.CUR"
+

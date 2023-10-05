@@ -1,0 +1,2 @@
+EXTERN_C const CLSID CLSID_PPGeneral;
+EXTERN_C const CLSID CLSID_PPPage;

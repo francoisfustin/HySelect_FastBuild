@@ -1,0 +1,1566 @@
+#Start of test definition
+
+StartTechnicalParameters
+ApplicationType = 1
+AvailablePMPanels = 7
+BreakTankRequiredForWaterMakeUp = 1
+CVDefKvReynard = 1
+CVMaxDispDp = 200000
+CVMaxDpProp = 65000
+CVMinAuthCstFlow = 0.5
+CVMinAuthor = 0.25
+CVMinDpOnoff = 3000
+CVMinDpProp = 10000
+CVUseDpCPBand = 0
+CanChangePressureVolumeLimit = 0
+CurrencyID = CURRENCY_GBP
+DefaultCalculationNorm = PM_NORM_EN12828
+DefaultCoolingTps = 6
+DefaultFillTemperature = 10
+DefaultHeatingTps = 70
+DefaultISChangeOverCoolingSideAdditFamilyID = WATER_ADDIT
+DefaultISChangeOverCoolingSideAdditID = WATER
+DefaultISChangeOverCoolingSideDT = 6
+DefaultISChangeOverCoolingSidePcWeight = 0
+DefaultISChangeOverCoolingSideTps = 6
+DefaultISChangeOverHeatingSideAdditFamilyID = WATER_ADDIT
+DefaultISChangeOverHeatingSideAdditID = WATER
+DefaultISChangeOverHeatingSideDT = 20
+DefaultISChangeOverHeatingSidePcWeight = 0
+DefaultISChangeOverHeatingSideTps = 70
+DefaultISCoolingAdditFamilyID = WATER_ADDIT
+DefaultISCoolingAdditID = WATER
+DefaultISCoolingDT = 6
+DefaultISCoolingPcWeight = 0
+DefaultISCoolingTps = 6
+DefaultISHeatingAdditFamilyID = WATER_ADDIT
+DefaultISHeatingAdditID = WATER
+DefaultISHeatingDT = 20
+DefaultISHeatingPcWeight = 0
+DefaultISHeatingTps = 75
+DefaultISSolarAdditFamilyID = WATER_ADDIT
+DefaultISSolarAdditID = WATER
+DefaultISSolarDT = 20
+DefaultISSolarPcWeight = 0
+DefaultISSolarTps = 70
+DefaultMaxTempInCooling = 35
+DefaultMinTempInHeating = 0
+DefaultMinTempInSolar = 0
+DefaultPipeSerieID = STEEL_GEN
+DefaultPrjCoolingAdditID = WATER
+DefaultPrjCoolingDT = 6
+DefaultPrjCoolingPcWeight = 0
+DefaultPrjHeatingAdditID = WATER
+DefaultPrjHeatingDT = 20
+DefaultPrjHeatingPcWeight = 0
+DefaultSafetyPressureResponseValve = 350000
+DefaultStaticPressureOfWaterNetwork = 200000
+DefaultTAZ = 90
+DefaultWaterHardness = 1.78324958
+DefaultWaterMakeUpTemp = 10
+DegassingWaterReserveForVessel = 0.002
+DpCBCVDpcmin = 5000
+DpCBCVDplmin = 5000
+DpCHide = 0
+DpCHminFullyOpenMv = 0
+DpCMinDp = 5000
+DpCMvLocation = 1
+DpCMvWithSameSizeOnly = 0
+DpRefForBest6Way = 3000
+FixedOrificeMaxDp = 4600
+FixedOrificeMinDp = 1000
+FlowDeviationMinus = -0.1
+FlowDeviationPlus = 0.1
+FluidTempLimitEN12953 = 105
+InitialPressureMargin = 30000
+MaxNumberOfAdditionalVesselsInParallel = 4
+MaxNumberOfVentoInParallel = 2
+MaxSafetyValveInParallel = 3
+MaxSizeShift = 4
+MinPressureMargin = 20000
+PICvHide = 0
+PICvMinDp = 1000
+PSetupCompresso = 10000
+PSetupTransfero = 20000
+PipeMaxDp = 400
+PipeMaxVelocity = 2
+PipeMinDp = 10
+PipeMinVelocity = 0.3
+PipeTargetDp = 200
+PipeTargetVelocity = 1
+PipeTargetVelosityUsed = 0
+PressureVolumeLimit = 300000
+ProjectType = 2
+SafetyTempLimiterLimitEN12953 = 110
+SizeShiftAbove = 0
+SizeShiftBelow = -2
+TrvDefDpTotal = 10000
+TrvDefRoomTemperature = 20
+TrvDefSupplyTemperature = 82
+TrvMaxDp = 30000
+TrvMinDpRatio = 0.25
+UseDefaultFreezingPointAsMinTemperature = 1
+UseSimplyPst = 0
+UseVesselPressureVolumeLimit = 0
+ValveMaxDp = 200000
+ValveMin2Dp = 6000
+ValveMinDp = 3000
+VenturiMaxDp = 10000
+VenturiMinDp = 1000
+VesselSelectionRangePercentage = 0
+EndTechnicalParameters
+
+Test number = 1
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 1.6e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV15A_VV;STAV 15;Ametal(tm);Thread;Standard;20;15 (1/2");4;105.606;206.988;105.606;991.959;-20/120;10 (3/8");28.7345;0.13038
+Result number = 1;STAV15LFA_VV;STAV 15LF;Ametal(tm);Thread;Standard;20;15 (1/2");4;479.822;1109.12;479.822;4125.25;-20/120;10 (3/8");28.7345;0.13038
+Result number = 2;STAV15ULFA_VV;STAV 15ULF;Ametal(tm);Thread;Standard;20;15 (1/2");4;3178.23;7475.49;3178.23;6868.26;-20/120;10 (3/8");28.7345;0.13038
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 2
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 1.7e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV15A_VV;STAV 15;Ametal(tm);Thread;Standard;20;15 (1/2");4;119.22;233.671;119.22;1119.83;-20/120;10 (3/8");31.9884;0.138528
+Result number = 1;STAV15LFA_VV;STAV 15LF;Ametal(tm);Thread;Standard;20;15 (1/2");4;541.674;1252.09;541.674;4657.02;-20/120;10 (3/8");31.9884;0.138528
+Result number = 2;STAV15ULFA_VV;STAV 15ULF;Ametal(tm);Thread;Standard;20;15 (1/2");4;3587.92;8439.12;3587.92;7753.62;-20/120;10 (3/8");31.9884;0.138528
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 3
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 4.1e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV15A_VV;STAV 15;Ametal(tm);Thread;Standard;20;15 (1/2");4;693.454;1359.17;693.454;6513.61;-20/120;10 (3/8");156.678;0.334098
+Result number = 1;STAV15LFA_VV;STAV 15LF;Ametal(tm);Thread;Standard;20;15 (1/2");4;3150.7;7282.93;3150.7;27088;-20/120;10 (3/8");156.678;0.334098
+Result number = 2;STAV15ULFA_VV;STAV 15ULF;Ametal(tm);Thread;Standard;20;15 (1/2");4;20869.5;49087.1;20869.5;45099.8;-20/120;10 (3/8");156.678;0.334098
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 4
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 4.2e-05
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV15A_VV;STAV 15;Ametal(tm);Thread;Standard;20;15 (1/2");4;727.694;1426.28;727.694;6835.22;-20/120;10 (3/8");163.777;0.342247
+Result number = 1;STAV15LFA_VV;STAV 15LF;Ametal(tm);Thread;Standard;20;15 (1/2");4;3306.27;7642.53;3306.27;28425.5;-20/120;10 (3/8");163.777;0.342247
+Result number = 2;STAV15ULFA_VV;STAV 15ULF;Ametal(tm);Thread;Standard;20;15 (1/2");4;21900;51510.8;21900;47326.6;-20/120;10 (3/8");163.777;0.342247
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 5
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.000118
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV15A_VV;STAV 15;Ametal(tm);Thread;Standard;20;15 (1/2");4;5743.99;11258.2;5743.99;53953.3;-20/120;15 (1/2");324.576;0.586884
+Result number = 1;STAV15LFA_VV;STAV 15LF;Ametal(tm);Thread;Standard;20;15 (1/2");4;26097.8;60325.7;26097.8;224375;-20/120;15 (1/2");324.576;0.586884
+Result number = 2;STAV15ULFA_VV;STAV 15ULF;Ametal(tm);Thread;Standard;20;15 (1/2");4;172866;406596;172866;373569;-20/120;15 (1/2");324.576;0.586884
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 6
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.000119
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV20A_VV;STAV 20;Ametal(tm);Thread;Standard;20;20 (3/4");4;1129.42;2454.1;1129.42;5521.73;-20/120;20 (3/4");73.3664;0.32475
+Result number = 1;STAV15A_VV;STAV 15;Ametal(tm);Thread;Standard;20;15 (1/2");4;5841.76;11449.9;5841.76;54871.6;-20/120;20 (3/4");73.3664;0.32475
+Result number = 2;STAV15LFA_VV;STAV 15LF;Ametal(tm);Thread;Standard;20;15 (1/2");4;26542;61352.5;26542;228194;-20/120;20 (3/4");73.3664;0.32475
+Result number = 3;STAV15ULFA_VV;STAV 15ULF;Ametal(tm);Thread;Standard;20;15 (1/2");4;175808;413517;175808;379927;-20/120;20 (3/4");73.3664;0.32475
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 7
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.000254
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV20A_VV;STAV 20;Ametal(tm);Thread;Standard;20;20 (3/4");4;5145.5;11180.6;5145.5;25156.4;-20/120;20 (3/4");302.557;0.693165
+Result number = 1;STAV15A_VV;STAV 15;Ametal(tm);Thread;Standard;20;15 (1/2");4;26614.4;52164.3;26614.4;249989;-20/120;20 (3/4");302.557;0.693165
+Result number = 2;STAV15LFA_VV;STAV 15LF;Ametal(tm);Thread;Standard;20;15 (1/2");4;120923;279516;120923;1.03963e+06;-20/120;20 (3/4");302.557;0.693165
+Result number = 3;STAV15ULFA_VV;STAV 15ULF;Ametal(tm);Thread;Standard;20;15 (1/2");4;800962;1.88394e+06;800962;1.73091e+06;-20/120;20 (3/4");302.557;0.693165
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 8
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.000255
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV25A_VV;STAV 25;Ametal(tm);Thread;Standard;20;25 (1");4;1968.53;3285.99;1968.53;6303.65;-20/120;25 (1");95.5602;0.438846
+Result number = 1;STAV20A_VV;STAV 20;Ametal(tm);Thread;Standard;20;20 (3/4");4;5186.09;11268.8;5186.09;25354.9;-20/120;25 (1");95.5602;0.438846
+Result number = 2;STAV15A_VV;STAV 15;Ametal(tm);Thread;Standard;20;15 (1/2");4;26824.4;52575.9;26824.4;251962;-20/120;25 (1");95.5602;0.438846
+Result number = 3;STAV15LFA_VV;STAV 15LF;Ametal(tm);Thread;Standard;20;15 (1/2");4;121877;281721;121877;1.04783e+06;-20/120;25 (1");95.5602;0.438846
+Result number = 4;STAV15ULFA_VV;STAV 15ULF;Ametal(tm);Thread;Standard;20;15 (1/2");4;807282;1.8988e+06;807282;1.74456e+06;-20/120;25 (1");95.5602;0.438846
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 9
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.000484
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV25A_VV;STAV 25;Ametal(tm);Thread;Standard;20;25 (1");4;7091.72;11838;7091.72;22709.2;-20/120;25 (1");320.071;0.832948
+Result number = 1;STAV20A_VV;STAV 20;Ametal(tm);Thread;Standard;20;20 (3/4");4;18683.2;40596.6;18683.2;91342.3;-20/120;25 (1");320.071;0.832948
+Result number = 2;STAV15A_VV;STAV 15;Ametal(tm);Thread;Standard;20;15 (1/2");4;96636.4;189407;96636.4;907705;-20/120;25 (1");320.071;0.832948
+Result number = 3;STAV15LFA_VV;STAV 15LF;Ametal(tm);Thread;Standard;20;15 (1/2");4;439067;1.01491e+06;439067;3.77486e+06;-20/120;25 (1");320.071;0.832948
+Result number = 4;STAV15ULFA_VV;STAV 15ULF;Ametal(tm);Thread;Standard;20;15 (1/2");4;2.90827e+06;6.84054e+06;2.90827e+06;6.28489e+06;-20/120;25 (1");320.071;0.832948
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 10
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.000485
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV32A_VV;STAV 32;Ametal(tm);Thread;Standard;20;32 (1 1/4");4;2274.66;2747.53;2274.66;13684.8;-20/120;32 (1 1/4");79.2852;0.479141
+Result number = 1;STAV25A_VV;STAV 25;Ametal(tm);Thread;Standard;20;25 (1");4;7121.06;11886.9;7121.06;22803.2;-20/120;32 (1 1/4");79.2852;0.479141
+Result number = 2;STAV20A_VV;STAV 20;Ametal(tm);Thread;Standard;20;20 (3/4");4;18760.5;40764.5;18760.5;91720.1;-20/120;32 (1 1/4");79.2852;0.479141
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 11
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.000932
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV32A_VV;STAV 32;Ametal(tm);Thread;Standard;20;32 (1 1/4");4;8399.73;10145.9;8399.73;50534.3;-20/120;32 (1 1/4");273.152;0.92074
+Result number = 1;STAV25A_VV;STAV 25;Ametal(tm);Thread;Standard;20;25 (1");4;26296.2;43895.3;26296.2;84206.1;-20/120;32 (1 1/4");273.152;0.92074
+Result number = 2;STAV20A_VV;STAV 20;Ametal(tm);Thread;Standard;20;20 (3/4");4;69277.4;150533;69277.4;338698;-20/120;32 (1 1/4");273.152;0.92074
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 12
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.000933
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV40A_VV;STAV 40;Ametal(tm);Thread;Standard;20;40 (1 1/2");4;4405.3;4518.98;4405.3;29554.9;-20/120;40 (1 1/2");126.669;0.679891
+Result number = 1;STAV32A_VV;STAV 32;Ametal(tm);Thread;Standard;20;32 (1 1/4");4;8417.77;10167.7;8417.77;50642.8;-20/120;40 (1 1/2");126.669;0.679891
+Result number = 2;STAV25A_VV;STAV 25;Ametal(tm);Thread;Standard;20;25 (1");4;26352.7;43989.5;26352.7;84386.9;-20/120;40 (1 1/2");126.669;0.679891
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 13
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.001484
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV40A_VV;STAV 40;Ametal(tm);Thread;Standard;20;40 (1 1/2");4;11145;11432.6;11145;74771.2;-20/120;40 (1 1/2");307.294;1.08141
+Result number = 1;STAV32A_VV;STAV 32;Ametal(tm);Thread;Standard;20;32 (1 1/4");4;21296.2;25723.3;21296.2;128122;-20/120;40 (1 1/2");307.294;1.08141
+Result number = 2;STAV25A_VV;STAV 25;Ametal(tm);Thread;Standard;20;25 (1");4;66669.8;111289;66669.8;213491;-20/120;40 (1 1/2");307.294;1.08141
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 14
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.001485
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV50A_VV;STAV 50;Ametal(tm);Thread;Standard;20;50 (2");4;3245.22;3158.39;3245.22;20704.4;-20/120;50 (2");92.3957;0.673108
+Result number = 1;STAV40A_VV;STAV 40;Ametal(tm);Thread;Standard;20;40 (1 1/2");4;11160;11448;11160;74872;-20/120;50 (2");92.3957;0.673108
+Result number = 2;STAV32A_VV;STAV 32;Ametal(tm);Thread;Standard;20;32 (1 1/4");4;21324.9;25758;21324.9;128294;-20/120;50 (2");92.3957;0.673108
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 0
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 1.5e-05
+Power = 0
+DT = 0
+DpEnabled = true
+Dp = 3000
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV15A_VV;STAV 15;Ametal(tm);Thread;Standard;20;15 (1/2");1.48228;3000;181.923;92.8181; ;-20/120;10 (3/8");25.6411;0.122231
+Result number = 1;STAV15LFA_VV;STAV 15LF;Ametal(tm);Thread;Standard;20;15 (1/2");2.08141;3000;974.812;421.718; ;-20/120;10 (3/8");25.6411;0.122231
+Result number = 2;STAV15ULFA_VV;STAV 15ULF;Ametal(tm);Thread;Standard;20;15 (1/2");3.11013;3000;6570.25;2793.36; ;-20/120;10 (3/8");25.6411;0.122231
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 1
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 1.6e-05
+Power = 0
+DT = 0
+DpEnabled = true
+Dp = 3000
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV15A_VV;STAV 15;Ametal(tm);Thread;Standard;20;15 (1/2");1.53782;3000;206.988;105.606; ;-20/120;10 (3/8");28.7345;0.13038
+Result number = 1;STAV15LFA_VV;STAV 15LF;Ametal(tm);Thread;Standard;20;15 (1/2");2.13881;3000;1109.12;479.822; ;-20/120;10 (3/8");28.7345;0.13038
+Result number = 2;STAV15ULFA_VV;STAV 15ULF;Ametal(tm);Thread;Standard;20;15 (1/2");4;3178.23;7475.49;3178.23; ;-20/120;10 (3/8");28.7345;0.13038
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 2
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 3.8e-05
+Power = 0
+DT = 0
+DpEnabled = true
+Dp = 3000
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV15A_VV;STAV 15;Ametal(tm);Thread;Standard;20;15 (1/2");2.36848;3000;1167.54;595.686; ;-20/120;10 (3/8");136.284;0.309652
+Result number = 1;STAV15LFA_VV;STAV 15LF;Ametal(tm);Thread;Standard;20;15 (1/2");3.41992;3000;6256.13;2706.49; ;-20/120;10 (3/8");136.284;0.309652
+Result number = 2;STAV15ULFA_VV;STAV 15ULF;Ametal(tm);Thread;Standard;20;15 (1/2");4;17927.2;42166.4;17927.2; ;-20/120;10 (3/8");136.284;0.309652
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 3
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 3.9e-05
+Power = 0
+DT = 0
+DpEnabled = true
+Dp = 3000
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV15A_VV;STAV 15;Ametal(tm);Thread;Standard;20;15 (1/2");2.40221;3000;1229.8;627.45; ;-20/120;10 (3/8");142.931;0.317801
+Result number = 1;STAV15LFA_VV;STAV 15LF;Ametal(tm);Thread;Standard;20;15 (1/2");3.60243;3000;6589.73;2850.81; ;-20/120;10 (3/8");142.931;0.317801
+Result number = 2;STAV15ULFA_VV;STAV 15ULF;Ametal(tm);Thread;Standard;20;15 (1/2");4;18883.1;44414.9;18883.1; ;-20/120;10 (3/8");142.931;0.317801
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 4
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 8.5e-05
+Power = 0
+DT = 0
+DpEnabled = true
+Dp = 3000
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV15A_VV;STAV 15;Ametal(tm);Thread;Standard;20;15 (1/2");3.9793;3000;5841.76;2980.49; ;-20/120;15 (1/2");175.771;0.422755
+Result number = 1;STAV15LFA_VV;STAV 15LF;Ametal(tm);Thread;Standard;20;15 (1/2");4;13541.8;31302.3;13541.8; ;-20/120;15 (1/2");175.771;0.422755
+Result number = 2;STAV15ULFA_VV;STAV 15ULF;Ametal(tm);Thread;Standard;20;15 (1/2");4;89698;210978;89698; ;-20/120;15 (1/2");175.771;0.422755
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 5
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.000119
+Power = 0
+DT = 0
+DpEnabled = true
+Dp = 3000
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV20A_VV;STAV 20;Ametal(tm);Thread;Standard;20;20 (3/4");2.48747;3000;2454.1;1129.42; ;-20/120;20 (3/4");73.3664;0.32475
+Result number = 1;STAV15A_VV;STAV 15;Ametal(tm);Thread;Standard;20;15 (1/2");4;5841.76;11449.9;5841.76; ;-20/120;20 (3/4");73.3664;0.32475
+Result number = 2;STAV15LFA_VV;STAV 15LF;Ametal(tm);Thread;Standard;20;15 (1/2");4;26542;61352.5;26542; ;-20/120;20 (3/4");73.3664;0.32475
+Result number = 3;STAV15ULFA_VV;STAV 15ULF;Ametal(tm);Thread;Standard;20;15 (1/2");4;175808;413517;175808; ;-20/120;20 (3/4");73.3664;0.32475
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 6
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.000255
+Power = 0
+DT = 0
+DpEnabled = true
+Dp = 3000
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV25A_VV;STAV 25;Ametal(tm);Thread;Standard;20;25 (1");2.9112;3000;3285.99;1968.53; ;-20/120;25 (1");95.5602;0.438846
+Result number = 1;STAV20A_VV;STAV 20;Ametal(tm);Thread;Standard;20;20 (3/4");4;5186.09;11268.8;5186.09; ;-20/120;25 (1");95.5602;0.438846
+Result number = 2;STAV15A_VV;STAV 15;Ametal(tm);Thread;Standard;20;15 (1/2");4;26824.4;52575.9;26824.4; ;-20/120;25 (1");95.5602;0.438846
+Result number = 3;STAV15LFA_VV;STAV 15LF;Ametal(tm);Thread;Standard;20;15 (1/2");4;121877;281721;121877; ;-20/120;25 (1");95.5602;0.438846
+Result number = 4;STAV15ULFA_VV;STAV 15ULF;Ametal(tm);Thread;Standard;20;15 (1/2");4;807282;1.8988e+06;807282; ;-20/120;25 (1");95.5602;0.438846
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 7
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.000484
+Power = 0
+DT = 0
+DpEnabled = true
+Dp = 3000
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV25A_VV;STAV 25;Ametal(tm);Thread;Standard;20;25 (1");4;7091.72;11838;7091.72; ;-20/120;25 (1");320.071;0.832948
+Result number = 1;STAV20A_VV;STAV 20;Ametal(tm);Thread;Standard;20;20 (3/4");4;18683.2;40596.6;18683.2; ;-20/120;25 (1");320.071;0.832948
+Result number = 2;STAV15A_VV;STAV 15;Ametal(tm);Thread;Standard;20;15 (1/2");4;96636.4;189407;96636.4; ;-20/120;25 (1");320.071;0.832948
+Result number = 3;STAV15LFA_VV;STAV 15LF;Ametal(tm);Thread;Standard;20;15 (1/2");4;439067;1.01491e+06;439067; ;-20/120;25 (1");320.071;0.832948
+Result number = 4;STAV15ULFA_VV;STAV 15ULF;Ametal(tm);Thread;Standard;20;15 (1/2");4;2.90827e+06;6.84054e+06;2.90827e+06; ;-20/120;25 (1");320.071;0.832948
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 8
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.000485
+Power = 0
+DT = 0
+DpEnabled = true
+Dp = 3000
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV32A_VV;STAV 32;Ametal(tm);Thread;Standard;20;32 (1 1/4");3.49742;3000;2747.53;2274.66; ;-20/120;32 (1 1/4");79.2852;0.479141
+Result number = 1;STAV25A_VV;STAV 25;Ametal(tm);Thread;Standard;20;25 (1");4;7121.06;11886.9;7121.06; ;-20/120;32 (1 1/4");79.2852;0.479141
+Result number = 2;STAV20A_VV;STAV 20;Ametal(tm);Thread;Standard;20;20 (3/4");4;18760.5;40764.5;18760.5; ;-20/120;32 (1 1/4");79.2852;0.479141
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 9
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.000932
+Power = 0
+DT = 0
+DpEnabled = true
+Dp = 3000
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV32A_VV;STAV 32;Ametal(tm);Thread;Standard;20;32 (1 1/4");4;8399.73;10145.9;8399.73; ;-20/120;32 (1 1/4");273.152;0.92074
+Result number = 1;STAV25A_VV;STAV 25;Ametal(tm);Thread;Standard;20;25 (1");4;26296.2;43895.3;26296.2; ;-20/120;32 (1 1/4");273.152;0.92074
+Result number = 2;STAV20A_VV;STAV 20;Ametal(tm);Thread;Standard;20;20 (3/4");4;69277.4;150533;69277.4; ;-20/120;32 (1 1/4");273.152;0.92074
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 10
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.000933
+Power = 0
+DT = 0
+DpEnabled = true
+Dp = 3000
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV40A_VV;STAV 40;Ametal(tm);Thread;Standard;20;40 (1 1/2");4;4405.3;4518.98;4405.3; ;-20/120;40 (1 1/2");126.669;0.679891
+Result number = 1;STAV32A_VV;STAV 32;Ametal(tm);Thread;Standard;20;32 (1 1/4");4;8417.77;10167.7;8417.77; ;-20/120;40 (1 1/2");126.669;0.679891
+Result number = 2;STAV25A_VV;STAV 25;Ametal(tm);Thread;Standard;20;25 (1");4;26352.7;43989.5;26352.7; ;-20/120;40 (1 1/2");126.669;0.679891
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 11
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.001484
+Power = 0
+DT = 0
+DpEnabled = true
+Dp = 3000
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV40A_VV;STAV 40;Ametal(tm);Thread;Standard;20;40 (1 1/2");4;11145;11432.6;11145; ;-20/120;40 (1 1/2");307.294;1.08141
+Result number = 1;STAV32A_VV;STAV 32;Ametal(tm);Thread;Standard;20;32 (1 1/4");4;21296.2;25723.3;21296.2; ;-20/120;40 (1 1/2");307.294;1.08141
+Result number = 2;STAV25A_VV;STAV 25;Ametal(tm);Thread;Standard;20;25 (1");4;66669.8;111289;66669.8; ;-20/120;40 (1 1/2");307.294;1.08141
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 12
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.001485
+Power = 0
+DT = 0
+DpEnabled = true
+Dp = 3000
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV50A_VV;STAV 50;Ametal(tm);Thread;Standard;20;50 (2");4;3245.22;3158.39;3245.22; ;-20/120;50 (2");92.3957;0.673108
+Result number = 1;STAV40A_VV;STAV 40;Ametal(tm);Thread;Standard;20;40 (1 1/2");4;11160;11448;11160; ;-20/120;50 (2");92.3957;0.673108
+Result number = 2;STAV32A_VV;STAV 32;Ametal(tm);Thread;Standard;20;32 (1 1/4");4;21324.9;25758;21324.9; ;-20/120;50 (2");92.3957;0.673108
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 0
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 2.1e-05
+Power = 0
+DT = 0
+DpEnabled = true
+Dp = 6000
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV15A_VV;STAV 15;Ametal(tm);Thread;Standard;20;15 (1/2");1.473;6000;356.57;181.923; ;-20/120;10 (3/8");46.5908;0.171123
+Result number = 1;STAV15LFA_VV;STAV 15LF;Ametal(tm);Thread;Standard;20;15 (1/2");2.07258;6000;1910.63;826.568; ;-20/120;10 (3/8");46.5908;0.171123
+Result number = 2;STAV15ULFA_VV;STAV 15ULF;Ametal(tm);Thread;Standard;20;15 (1/2");3.01895;6000;12877.7;5474.99; ;-20/120;10 (3/8");46.5908;0.171123
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 1
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 2.2e-05
+Power = 0
+DT = 0
+DpEnabled = true
+Dp = 6000
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV15A_VV;STAV 15;Ametal(tm);Thread;Standard;20;15 (1/2");1.51427;6000;391.337;199.662; ;-20/120;10 (3/8");50.6345;0.179272
+Result number = 1;STAV15LFA_VV;STAV 15LF;Ametal(tm);Thread;Standard;20;15 (1/2");2.11357;6000;2096.93;907.163; ;-20/120;10 (3/8");50.6345;0.179272
+Result number = 2;STAV15ULFA_VV;STAV 15ULF;Ametal(tm);Thread;Standard;20;15 (1/2");4;6008.83;14133.3;6008.83; ;-20/120;10 (3/8");50.6345;0.179272
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 2
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.5e-05
+Power = 0
+DT = 0
+DpEnabled = true
+Dp = 6000
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV15A_VV;STAV 15;Ametal(tm);Thread;Standard;20;15 (1/2");2.39856;6000;2445.86;1247.89; ;-20/120;10 (3/8");269.724;0.44818
+Result number = 1;STAV15LFA_VV;STAV 15LF;Ametal(tm);Thread;Standard;20;15 (1/2");3.55936;6000;13105.8;5669.77; ;-20/120;10 (3/8");269.724;0.44818
+Result number = 2;STAV15ULFA_VV;STAV 15ULF;Ametal(tm);Thread;Standard;20;15 (1/2");4;37555.2;88333.4;37555.2; ;-20/120;10 (3/8");269.724;0.44818
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 3
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 5.6e-05
+Power = 0
+DT = 0
+DpEnabled = true
+Dp = 6000
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV15A_VV;STAV 15;Ametal(tm);Thread;Standard;20;15 (1/2");2.42211;6000;2535.61;1293.68; ;-20/120;10 (3/8");278.921;0.456329
+Result number = 1;STAV15LFA_VV;STAV 15LF;Ametal(tm);Thread;Standard;20;15 (1/2");3.83841;6000;13586.7;5877.81; ;-20/120;10 (3/8");278.921;0.456329
+Result number = 2;STAV15ULFA_VV;STAV 15ULF;Ametal(tm);Thread;Standard;20;15 (1/2");4;38933.3;91574.7;38933.3; ;-20/120;10 (3/8");278.921;0.456329
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 4
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00012
+Power = 0
+DT = 0
+DpEnabled = true
+Dp = 6000
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV20A_VV;STAV 20;Ametal(tm);Thread;Standard;20;20 (3/4");1.95398;6000;2495.52;1148.48; ;-20/120;20 (3/4");74.5065;0.327479
+Result number = 1;STAV15A_VV;STAV 15;Ametal(tm);Thread;Standard;20;15 (1/2");3.96865;6000;11643.1;5940.36; ;-20/120;20 (3/4");74.5065;0.327479
+Result number = 2;STAV15LFA_VV;STAV 15LF;Ametal(tm);Thread;Standard;20;15 (1/2");4;26990;62388;26990; ;-20/120;20 (3/4");74.5065;0.327479
+Result number = 3;STAV15ULFA_VV;STAV 15ULF;Ametal(tm);Thread;Standard;20;15 (1/2");4;178775;420496;178775; ;-20/120;20 (3/4");74.5065;0.327479
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 5
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.000121
+Power = 0
+DT = 0
+DpEnabled = true
+Dp = 6000
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV20A_VV;STAV 20;Ametal(tm);Thread;Standard;20;20 (3/4");1.96532;6000;2537.29;1167.7; ;-20/120;20 (3/4");75.655;0.330208
+Result number = 1;STAV15A_VV;STAV 15;Ametal(tm);Thread;Standard;20;15 (1/2");4;6039.77;11838;6039.77; ;-20/120;20 (3/4");75.655;0.330208
+Result number = 2;STAV15LFA_VV;STAV 15LF;Ametal(tm);Thread;Standard;20;15 (1/2");4;27441.7;63432.1;27441.7; ;-20/120;20 (3/4");75.655;0.330208
+Result number = 3;STAV15ULFA_VV;STAV 15ULF;Ametal(tm);Thread;Standard;20;15 (1/2");4;181767;427534;181767; ;-20/120;20 (3/4");75.655;0.330208
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 6
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.000271
+Power = 0
+DT = 0
+DpEnabled = true
+Dp = 6000
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV25A_VV;STAV 25;Ametal(tm);Thread;Standard;20;25 (1");2.13112;6000;3711.29;2223.31; ;-20/120;25 (1");107.061;0.466382
+Result number = 1;STAV20A_VV;STAV 20;Ametal(tm);Thread;Standard;20;20 (3/4");3.84234;6000;12727.3;5857.31; ;-20/120;25 (1");107.061;0.466382
+Result number = 2;STAV15A_VV;STAV 15;Ametal(tm);Thread;Standard;20;15 (1/2");4;30296.2;59380.6;30296.2; ;-20/120;25 (1");107.061;0.466382
+Result number = 3;STAV15LFA_VV;STAV 15LF;Ametal(tm);Thread;Standard;20;15 (1/2");4;137651;318183;137651; ;-20/120;25 (1");107.061;0.466382
+Result number = 4;STAV15ULFA_VV;STAV 15ULF;Ametal(tm);Thread;Standard;20;15 (1/2");4;911766;2.14456e+06;911766; ;-20/120;25 (1");107.061;0.466382
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 7
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.000272
+Power = 0
+DT = 0
+DpEnabled = true
+Dp = 6000
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV25A_VV;STAV 25;Ametal(tm);Thread;Standard;20;25 (1");2.13733;6000;3738.73;2239.75; ;-20/120;25 (1");107.801;0.468103
+Result number = 1;STAV20A_VV;STAV 20;Ametal(tm);Thread;Standard;20;20 (3/4");3.8823;6000;12821.4;5900.62; ;-20/120;25 (1");107.801;0.468103
+Result number = 2;STAV15A_VV;STAV 15;Ametal(tm);Thread;Standard;20;15 (1/2");4;30520.2;59819.7;30520.2; ;-20/120;25 (1");107.801;0.468103
+Result number = 3;STAV15LFA_VV;STAV 15LF;Ametal(tm);Thread;Standard;20;15 (1/2");4;138668;320536;138668; ;-20/120;25 (1");107.801;0.468103
+Result number = 4;STAV15ULFA_VV;STAV 15ULF;Ametal(tm);Thread;Standard;20;15 (1/2");4;918507;2.16042e+06;918507; ;-20/120;25 (1");107.801;0.468103
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 8
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.000484
+Power = 0
+DT = 0
+DpEnabled = true
+Dp = 6000
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV25A_VV;STAV 25;Ametal(tm);Thread;Standard;20;25 (1");4;7091.72;11838;7091.72; ;-20/120;25 (1");320.071;0.832948
+Result number = 1;STAV20A_VV;STAV 20;Ametal(tm);Thread;Standard;20;20 (3/4");4;18683.2;40596.6;18683.2; ;-20/120;25 (1");320.071;0.832948
+Result number = 2;STAV15A_VV;STAV 15;Ametal(tm);Thread;Standard;20;15 (1/2");4;96636.4;189407;96636.4; ;-20/120;25 (1");320.071;0.832948
+Result number = 3;STAV15LFA_VV;STAV 15LF;Ametal(tm);Thread;Standard;20;15 (1/2");4;439067;1.01491e+06;439067; ;-20/120;25 (1");320.071;0.832948
+Result number = 4;STAV15ULFA_VV;STAV 15ULF;Ametal(tm);Thread;Standard;20;15 (1/2");4;2.90827e+06;6.84054e+06;2.90827e+06; ;-20/120;25 (1");320.071;0.832948
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 9
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.000485
+Power = 0
+DT = 0
+DpEnabled = true
+Dp = 6000
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV32A_VV;STAV 32;Ametal(tm);Thread;Standard;20;32 (1 1/4");2.57966;6000;2747.53;2274.66; ;-20/120;32 (1 1/4");79.2852;0.479141
+Result number = 1;STAV25A_VV;STAV 25;Ametal(tm);Thread;Standard;20;25 (1");4;7121.06;11886.9;7121.06; ;-20/120;32 (1 1/4");79.2852;0.479141
+Result number = 2;STAV20A_VV;STAV 20;Ametal(tm);Thread;Standard;20;20 (3/4");4;18760.5;40764.5;18760.5; ;-20/120;32 (1 1/4");79.2852;0.479141
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 10
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.000932
+Power = 0
+DT = 0
+DpEnabled = true
+Dp = 6000
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV32A_VV;STAV 32;Ametal(tm);Thread;Standard;20;32 (1 1/4");4;8399.73;10145.9;8399.73; ;-20/120;32 (1 1/4");273.152;0.92074
+Result number = 1;STAV25A_VV;STAV 25;Ametal(tm);Thread;Standard;20;25 (1");4;26296.2;43895.3;26296.2; ;-20/120;32 (1 1/4");273.152;0.92074
+Result number = 2;STAV20A_VV;STAV 20;Ametal(tm);Thread;Standard;20;20 (3/4");4;69277.4;150533;69277.4; ;-20/120;32 (1 1/4");273.152;0.92074
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 11
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.000933
+Power = 0
+DT = 0
+DpEnabled = true
+Dp = 6000
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV40A_VV;STAV 40;Ametal(tm);Thread;Standard;20;40 (1 1/2");3.41052;6000;4518.98;4405.3; ;-20/120;40 (1 1/2");126.669;0.679891
+Result number = 1;STAV32A_VV;STAV 32;Ametal(tm);Thread;Standard;20;32 (1 1/4");4;8417.77;10167.7;8417.77; ;-20/120;40 (1 1/2");126.669;0.679891
+Result number = 2;STAV25A_VV;STAV 25;Ametal(tm);Thread;Standard;20;25 (1");4;26352.7;43989.5;26352.7; ;-20/120;40 (1 1/2");126.669;0.679891
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 12
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.001484
+Power = 0
+DT = 0
+DpEnabled = true
+Dp = 6000
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV40A_VV;STAV 40;Ametal(tm);Thread;Standard;20;40 (1 1/2");4;11145;11432.6;11145; ;-20/120;40 (1 1/2");307.294;1.08141
+Result number = 1;STAV32A_VV;STAV 32;Ametal(tm);Thread;Standard;20;32 (1 1/4");4;21296.2;25723.3;21296.2; ;-20/120;40 (1 1/2");307.294;1.08141
+Result number = 2;STAV25A_VV;STAV 25;Ametal(tm);Thread;Standard;20;25 (1");4;66669.8;111289;66669.8; ;-20/120;40 (1 1/2");307.294;1.08141
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 13
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.001485
+Power = 0
+DT = 0
+DpEnabled = true
+Dp = 6000
+ComboTypeID = RVTYPE_VV
+ComboFamilyID = FAM_STAV
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAV50A_VV;STAV 50;Ametal(tm);Thread;Standard;20;50 (2");3.10703;6000;3158.39;3245.22; ;-20/120;50 (2");92.3957;0.673108
+Result number = 1;STAV40A_VV;STAV 40;Ametal(tm);Thread;Standard;20;40 (1 1/2");4;11160;11448;11160; ;-20/120;50 (2");92.3957;0.673108
+Result number = 2;STAV32A_VV;STAV 32;Ametal(tm);Thread;Standard;20;32 (1 1/4");4;21324.9;25758;21324.9; ;-20/120;50 (2");92.3957;0.673108
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+

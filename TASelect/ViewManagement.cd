@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CDlgLeftTabProject" Collapsed="true">
+    <Position X="1.75" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>gqIBCitMAxWMAEAiihFCCAAYxABghgIBQVjEgKCISBI=</HashCode>
+      <FileName>DlgLeftTabProject.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDlgSelectionBaseMng" Collapsed="true">
+    <Position X="1.75" Y="6.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQACAEAAAEQAAACAhBSAAAAAAAEggEAEAAQBAAQAAg=</HashCode>
+      <FileName>DlgLeftTabSelManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDlgLeftTabSelP" Collapsed="true">
+    <Position X="1.75" Y="17.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>EDAICAGEhBACCADMShBHJGBRxEBhkQWCAgDCAEAAADA=</HashCode>
+      <FileName>DlgLeftTabSelP.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDlgLeftTabInfo" Collapsed="true">
+    <Position X="1.75" Y="20" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BABACAEYAAGAAAAAYhFCAIAYAAAAhAAAQKhAAAAAAAA=</HashCode>
+      <FileName>DlgLeftTabInfo.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSSheetGen" Collapsed="true">
+    <Position X="4.5" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AABQkQAAEAABAAACCGEIAFAAAAAAAEAQAAACAAAADAI=</HashCode>
+      <FileName>SSheetGen.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSSheetHMSumm" Collapsed="true">
+    <Position X="8.5" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AABAEAAABAABAAAAAiBIgAAAAAAAAEQQAAAAgAAABAA=</HashCode>
+      <FileName>ssheethmsumm.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSSheetHMProj" Collapsed="true">
+    <Position X="16.5" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ABBAEAIABAABAQACACAMBQAAADCAAEYQAIAAgAAABAA=</HashCode>
+      <FileName>SSheetHMProj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSSheetLDSumm" Collapsed="true">
+    <Position X="10.5" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AABAEAAABAABAAAAACBIAAAAAAAAAUQQAAAAgAAABAA=</HashCode>
+      <FileName>SSheetLDSumm.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSSheetLogData" Collapsed="true">
+    <Position X="12.5" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AQBAEAAABAABAAACACAMAAAAASCAAEQQAAgAgAAABAA=</HashCode>
+      <FileName>SSheetLogData.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSSheetQuickMeas" Collapsed="true">
+    <Position X="14.5" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIBAEAAABAABAAAAkCIIAAAUAARAIEQQAAAQAQIAhAA=</HashCode>
+      <FileName>SSheetQuickMeas.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSheetHMCalc" Collapsed="true">
+    <Position X="6.5" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>UAFACAAGOtaisTIRCglIAQAC4X8EamRFEIAaI4okcGE=</HashCode>
+      <FileName>SheetHMCalc.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSheet" Collapsed="true">
+    <Position X="6.5" Y="13" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>QAEAGAAEEQAAAABACoAAAAAAKAAAAGAAAAAAAIAACEI=</HashCode>
+      <FileName>Sheet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSheetSSel" Collapsed="true">
+    <Position X="6.5" Y="14.25" Width="1.75" />
+    <InheritanceLine Type="CSheet" ManuallyRouted="true">
+      <Path>
+        <Point X="7.375" Y="13.691" />
+        <Point X="7.375" Y="14.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AICAAJAhRAAAgCAQAAggEgAQQIAACEIAKBAAAAggCBE=</HashCode>
+      <FileName>SheetSSel.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSSheetSSelCtrl" Collapsed="true">
+    <Position X="12.25" Y="14.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ABIEADBwAAAgBBiBAAFRAAJBIQmABADCJ4AABIQASAA=</HashCode>
+      <FileName>SSheetSSelCtrl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSSheetSSelCV" Collapsed="true">
+    <Position X="11" Y="15.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAEACAAAAAgAAAAAAAAAAAAQAAAAAAAAAAACIAAQAA=</HashCode>
+      <FileName>SSheetSSelCV.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSSheetSSelPICV" Collapsed="true">
+    <Position X="13.5" Y="15.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAEAGAAQAAgAACAAAAABAACBAAAAAAAIAAAgIAAQAA=</HashCode>
+      <FileName>SSheetSSelPICV.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSheetSSelSpread" Collapsed="true">
+    <Position X="12.25" Y="13" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ABAEACgg0AiBEgqBAAhQGAAAGAQBAAAAgACAJQgAiAE=</HashCode>
+      <FileName>SheetSSelSpread.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSSheetTAHub" Collapsed="true">
+    <Position X="17" Y="13" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>QAlMGAgUKLACoTABCAFABIABIAcAAGdBBAA6IgIgUSk=</HashCode>
+      <FileName>SSheetHub.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSSheet" Collapsed="true">
+    <Position X="21.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BJvCGAASKQIAIgJihoAJGwKiSGVIQUEIsAMCFEBiKiA=</HashCode>
+      <FileName>SSheet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDlgIndSelBv" Collapsed="true">
+    <Position X="4.5" Y="8.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AwAZiA0NCEAsQILGglLAQABc8AQgxxOOkMxARAQgobQ=</HashCode>
+      <FileName>DlgIndSelBv.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDlgSelectionBaseDpC" Collapsed="true">
+    <Position X="6.5" Y="8.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>MwFNGA0doAEsQKrWijLmVmHe8IT0QxOGmE4BAkwooTc=</HashCode>
+      <FileName>DlgIndSelDpC.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDlgIndSelTrv" Collapsed="true">
+    <Position X="8.5" Y="8.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AkGrDF0viAEoQcrkgn7ORZg28IUgQ1uWvdKIZB+oISI=</HashCode>
+      <FileName>DlgIndSelTrv.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDlgSelectionBaseHub" Collapsed="true">
+    <Position X="17" Y="8.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIFBCAVEIAIIGRjAAhJixCIU1AJoMjVEEkAASUAAISA=</HashCode>
+      <FileName>DlgIndSelHub.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDlgSelectionBaseCv" Collapsed="true">
+    <Position X="11" Y="8.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>EihFAAmMqACAUoBGRhJBM4TcwEQpRiigNJ5pQRAYwIE=</HashCode>
+      <FileName>DlgIndSelCv.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDlgSelectionBasePICv" Collapsed="true">
+    <Position X="13.5" Y="8.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>EihFAAkIgACAUgBGApBBIYBc0AUiRgiANJwIQBAIyIA=</HashCode>
+      <FileName>DlgIndSelPICv.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDlgLeftTabBase" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAEECAAAAAAAAAhBCAAAAAAAAAgAgEAAQEAAAAAA=</HashCode>
+      <FileName>DlgLeftTabBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSSheetSelProd" Collapsed="true">
+    <Position X="4.25" Y="18.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAgAGAJMEAIAABJADnCABQAgEQBhAECAAAAAIICEACQ=</HashCode>
+      <FileName>SSheetSelProd.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CRViewSSelBv" Collapsed="true">
+    <Position X="4.5" Y="11.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAwAAAAAAAAAAAhRAAAAAAAAAAACAAAAEEAQAIAA=</HashCode>
+      <FileName>RViewSSelBv.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CRViewSSelDpC" Collapsed="true">
+    <Position X="6.5" Y="11.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAEAAAAAAAAhRAAgBAAgAAAAAAAAAEAAAAACA=</HashCode>
+      <FileName>RViewSSelDpC.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CRViewChart" Collapsed="true">
+    <Position X="18.5" Y="3.5" Width="1.75" />
+    <InheritanceLine Type="CRScrollView" ManuallyRouted="true">
+      <Path>
+        <Point X="18.5" Y="1.32" />
+        <Point X="18.5" Y="3.125" />
+        <Point X="19.375" Y="3.125" />
+        <Point X="19.375" Y="3.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>CpAAk0BTCRNCQhAhDgBDhQCggIAgAkYK8SwYmKAIMQA=</HashCode>
+      <FileName>RViewChart.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CRViewGen" Collapsed="true">
+    <Position X="4.5" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AACAAQAAAQEAAAAQCgBAgCAABAAAAkAAEAAAAABAAAA=</HashCode>
+      <FileName>RViewGen.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CRViewHMCalc" Collapsed="true">
+    <Position X="6.5" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>QAFBSQhIIRMAhDAAih1AjAAAKYJAAsTAekIZAIQ4ICE=</HashCode>
+      <FileName>RViewHMCalc.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CRViewHMSumm" Collapsed="true">
+    <Position X="8.5" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAQAQAAEAAAAAKgBAgAAAAEAgAkAAEAAAAABAEAA=</HashCode>
+      <FileName>RViewHMSumm.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CRViewInfo" Collapsed="true">
+    <Position X="4.25" Y="20" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>CACAAAACAAAQACAAEwBAAAAAAAACAgAAEAgAAQAAAAA=</HashCode>
+      <FileName>RViewInfo.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CRViewLDSumm" Collapsed="true">
+    <Position X="10.5" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAGAAQAAABEAAAAACgBAgAAAAAAgAkQAEAAAIABAAgA=</HashCode>
+      <FileName>RViewLDSumm.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CRViewLogData" Collapsed="true">
+    <Position X="12.5" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AASAAwBQAAEAAAAACgBAgAAAIAAgAkAAUAgAAABAAAA=</HashCode>
+      <FileName>RViewLogData.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CRViewProj" Collapsed="true">
+    <Position X="16.5" Y="3.5" Width="1.75" />
+    <InheritanceLine Type="CRScrollView" ManuallyRouted="true">
+      <Path>
+        <Point X="18.5" Y="1.32" />
+        <Point X="18.5" Y="3.125" />
+        <Point X="17.375" Y="3.125" />
+        <Point X="17.375" Y="3.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>WBMQUQDCIFLwsNgAPwB4gZhiZCF0Al4yvY0aBCB5KQg=</HashCode>
+      <FileName>RViewProj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CRViewQuickMeas" Collapsed="true">
+    <Position X="14.5" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AACAAQBAAAMAAAAAigBggAAAAAAgAkQAMAAAAABAIAI=</HashCode>
+      <FileName>rviewquickmeas.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CRViewSelProd" Collapsed="true">
+    <Position X="4.25" Y="17.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AACAmQBAMoOAACAQSlFggAAAgGQAg06AMUgBACCIKAQ=</HashCode>
+      <FileName>RViewSelProd.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CRViewSSelF1" Collapsed="true">
+    <Position X="6.5" Y="9.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>QACAAAhEBEEAAGgZKhRhmAgAHEBBKsYQIhgNQAjAICA=</HashCode>
+      <FileName>RViewSSelF1.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CRViewSSelHub" Collapsed="true">
+    <Position X="17" Y="9.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAGCHVFmAKFUQAwYmlBBpIAAIQmQEvSCOAMlQIAJoRI=</HashCode>
+      <FileName>RViewSSelHub.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CRViewSSelSS" Collapsed="true">
+    <Position X="12.25" Y="9.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ABGEAQhIIBMEAEiAChBAgIAACCAEAEQAIAAJAAEQKAA=</HashCode>
+      <FileName>RViewSSelSS.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CRViewSSelTrv" Collapsed="true">
+    <Position X="8.5" Y="11.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAgAAQCAAAAAAAAAAhRAAAAAIAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>RViewSSelTrv.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CFormViewEx" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAgAGjLChMBAAAAAIgAAMACQAAAAAAA=</HashCode>
+      <FileName>FormViewEx.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CLoggedDataChart" Collapsed="true">
+    <Position X="18.5" Y="5" Width="1.75" />
+    <InheritanceLine Type="CTChart">
+      <InheritanceModifierLabel ManuallyPlaced="true">
+        <Position X="0.349" Y="0.121" />
+      </InheritanceModifierLabel>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>IEAKcEQ0ggRgEvsAmCQAQpIhDFwAAcBLUVBAAMQDBDE=</HashCode>
+      <FileName>LoggedDataChart.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CRScrollView" Collapsed="true">
+    <Position X="17.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAABAAAAAGgBAgQAAAAAAAgAAEgwIAAAEAQA=</HashCode>
+      <FileName>RScrollView.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CTChart" Collapsed="true">
+    <Position X="19.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gXANcUkUCSSMIwMIqVqolAJCBMyUAkgUkZNRBkQKMM0=</HashCode>
+      <FileName>TeeChart\tchart.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDlgSelectionBase" Collapsed="true">
+    <Position X="10.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACABDEQNgAAAAACACBABQIAAkiAAAgUAlAAARAQAIAA=</HashCode>
+      <FileName>DlgSelectionBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

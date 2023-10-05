@@ -1,0 +1,655 @@
+#Start of test definition
+
+StartTechnicalParameters
+ApplicationType = 2
+AvailablePMPanels = 7
+BreakTankRequiredForWaterMakeUp = 1
+CVDefKvReynard = 1
+CVMaxDispDp = 200000
+CVMaxDpProp = 65000
+CVMinAuthCstFlow = 0.5
+CVMinAuthor = 0.25
+CVMinDpOnoff = 3000
+CVMinDpProp = 10000
+CVUseDpCPBand = 0
+CanChangePressureVolumeLimit = 0
+CurrencyID = CURRENCY_EUR
+DefaultCalculationNorm = PM_NORM_EN12828
+DefaultCoolingTps = 7
+DefaultFillTemperature = 15
+DefaultHeatingTps = 50
+DefaultISCoolingAdditID = WATER
+DefaultISCoolingDT = 20
+DefaultISCoolingPcWeight = 0
+DefaultISCoolingTps = 60
+DefaultISHeatingAdditID = WATER
+DefaultISHeatingDT = 5
+DefaultISHeatingPcWeight = 0
+DefaultISHeatingTps = 80
+DefaultISSolarAdditID = WATER
+DefaultISSolarDT = 20
+DefaultISSolarPcWeight = 0
+DefaultISSolarTps = 70
+DefaultMaxTempInCooling = 45
+DefaultMinTempInHeating = 5
+DefaultMinTempInSolar = 5
+DefaultPipeSerieID = STEEL_DIN2440
+DefaultPrjCoolingAdditID = WATER
+DefaultPrjCoolingDT = 5
+DefaultPrjCoolingPcWeight = 0
+DefaultPrjHeatingAdditID = WATER
+DefaultPrjHeatingDT = 5
+DefaultPrjHeatingPcWeight = 0
+DefaultSafetyPressureResponseValve = 300000
+DefaultStaticPressureOfWaterNetwork = 400000
+DefaultTAZ = 100
+DefaultWaterHardness = 1.78324958
+DefaultWaterMakeUpTemp = 15
+DegassingWaterReserveForVessel = 0.002
+DpCBCVDpcmin = 3000
+DpCBCVDplmin = 5000
+DpCHide = 0
+DpCHminFullyOpenMv = 0
+DpCMinDp = 5000
+DpCMvLocation = 0
+DpCMvWithSameSizeOnly = 0
+FixedOrificeMaxDp = 6000
+FixedOrificeMinDp = 2000
+FlowDeviationMinus = -0.1
+FlowDeviationPlus = 0.1
+FluidTempLimitEN12953 = 105
+InitialPressureMargin = 30000
+MaxNumberOfAdditionalVesselsInParallel = 4
+MaxNumberOfVentoInParallel = 2
+MaxSafetyValveInParallel = 3
+MaxSizeShift = 4
+MinPressureMargin = 20000
+PICvHide = 0
+PICvMinDp = 1000
+PSetupCompresso = 10000
+PSetupTransfero = 20000
+PipeMaxDp = 200
+PipeMaxVelocity = 2
+PipeMinDp = 10
+PipeMinVelocity = 0.3
+PipeTargetDp = 150
+PipeTargetVelocity = 1
+PipeTargetVelosityUsed = 0
+PressureVolumeLimit = 300000
+ProjectType = 1
+SafetyTempLimiterLimitEN12953 = 110
+SizeShiftAbove = 0
+SizeShiftBelow = -2
+TrvDefDpTotal = 10000
+TrvDefRoomTemperature = 20
+TrvDefSupplyTemperature = 80
+TrvMaxDp = 30000
+TrvMinDpRatio = 0.25
+UseDefaultFreezingPointAsMinTemperature = 1
+UseSimplyPst = 0
+UseVesselPressureVolumeLimit = 0
+ValveMaxDp = 200000
+ValveMin2Dp = 6000
+ValveMinDp = 3000
+VenturiMaxDp = 10000
+VenturiMinDp = 2000
+VesselSelectionRangePercentage = 0
+EndTechnicalParameters
+
+Test number = 0
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.011111111108
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_BV
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAG100_BV;STAG 100;Ductile iron;Groove;Standard;350 psi;4" (100);8;4278.34; ;4278.34;38913.6;-20/120;4" (100);133.978;1.28318
+Result number = 1;STAG80_BV;STAG 80;Ductile iron;Groove;Standard;350 psi;3" (80);8;10725.6; ;10725.6;183648;-20/120;4" (100);133.978;1.28318
+Result number = 2;STAG65-2A_BV;STAG 65-2;Ductile iron;Groove;US specific;350 psi;2 1/2" (65);8;21376.9; ;21376.9;123946;-20/120;4" (100);133.978;1.28318
+Result number = 3;STAF-SG100B_BV;STAF-SG 4";Ductile iron;ANSI Flange;Standard;300 psi;4" (100);8;4278.34; ;4278.34;38913.6;-20/120;4" (100);133.978;1.28318
+Result number = 4;STAF-SG080B_BV;STAF-SG 3";Ductile iron;ANSI Flange;Standard;300 psi;3" (80);8;10725.6; ;10725.6;183648;-20/120;4" (100);133.978;1.28318
+Result number = 5;STAF-SG0652B_BV;STAF-SG 2 1/2";Ductile iron;ANSI Flange;Standard;300 psi;2 1/2" (65);8;21376.9; ;21376.9;123946;-20/120;4" (100);133.978;1.28318
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 1
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_BV
+ComboFamilyID = FAM_STAD*
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADN
+ComboVersionID = VERS_DRAIN_UNS
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAD*50H_BV;STAD* 2";Ametal(tm);NPT thread;With drain UNS 1 1/6" x 11,5";350 psi;2" (50);3.62568;3000; ;2311.77;18528.7;-20/120;2" (50);79.2209;0.629544
+Result number = 1;STAD*40H_BV;STAD* 1 1/2";Ametal(tm);NPT thread;With drain UNS 1 1/6" x 11,5";350 psi;1 1/2" (40);4;6466.84; ;6466.84;61486.6;-20/120;2" (50);79.2209;0.629544
+Result number = 2;STAD*32H_BV;STAD* 1 1/4";Ametal(tm);NPT thread;With drain UNS 1 1/6" x 11,5";350 psi;1 1/4" (32);4;11947.1; ;11947.1;88220.2;-20/120;2" (50);79.2209;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 2
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_BV
+ComboFamilyID = FAM_STAD*
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADN
+ComboVersionID = VERS_NODRAIN
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAD*50G_BV;STAD* 2";Ametal(tm);NPT thread;Without drain;350 psi;2" (50);3.62568;3000; ;2311.77;18528.7;-20/120;2" (50);79.2209;0.629544
+Result number = 1;STAD*40G_BV;STAD* 1 1/2";Ametal(tm);NPT thread;Without drain;350 psi;1 1/2" (40);4;6466.84; ;6466.84;61486.6;-20/120;2" (50);79.2209;0.629544
+Result number = 2;STAD*32G_BV;STAD* 1 1/4";Ametal(tm);NPT thread;Without drain;350 psi;1 1/4" (32);4;11947.1; ;11947.1;88220.2;-20/120;2" (50);79.2209;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 3
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_BV
+ComboFamilyID = FAM_STAD-B*
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_DRAIN34
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAD-B*50A_BV;STAD-B* 50;Ametal(tm);Thread;With drain 3/4";350 psi;2" (50);3.67411;3000; ;2447.61;18569.2;-20/120;2" (50);79.2209;0.629544
+Result number = 1;STAD-B*40A_BV;STAD-B* 40;Ametal(tm);Thread;With drain 3/4";350 psi;1 1/2" (40);4;5973.24; ;5973.24;56249.6;-20/120;2" (50);79.2209;0.629544
+Result number = 2;STAD-B*32A_BV;STAD-B* 32;Ametal(tm);Thread;With drain 3/4";350 psi;1 1/4" (32);4;12857.6; ;12857.6;80067.8;-20/120;2" (50);79.2209;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 4
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_BV
+ComboFamilyID = FAM_STAS
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_SOLDER
+ComboVersionID = VERS_NODRAIN
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAS50_BV;STAS 2";Ametal(tm);Solder;Without drain;300 psi;2" (50);3.65471;3000; ;2214.79;17591.1;-20/120;2" (50);79.2209;0.629544
+Result number = 1;STAS40_BV;STAS 1 1/2";Ametal(tm);Solder;Without drain;300 psi;1 1/2" (40);4;6534.33; ;6534.33;64546.6;-20/120;2" (50);79.2209;0.629544
+Result number = 2;STAS32_BV;STAS 1 1/4";Ametal(tm);Solder;Without drain;300 psi;1 1/4" (32);4;11947.1; ;11947.1;110692;-20/120;2" (50);79.2209;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 5
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.016666666662
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_BV
+ComboFamilyID = FAM_STAF-SG
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_ANSIFL
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAF-SG125B_BV;STAF-SG 5";Ductile iron;ANSI Flange;Standard;300 psi;5" (125);8;3861.2; ;3861.2;50443.9;-20/120;5" (125);98.9574;1.25566
+Result number = 1;STAF-SG100B_BV;STAF-SG 4";Ductile iron;ANSI Flange;Standard;300 psi;4" (100);8;9626.26; ;9626.26;87555.6;-20/120;5" (125);98.9574;1.25566
+Result number = 2;STAF-SG080B_BV;STAF-SG 3";Ductile iron;ANSI Flange;Standard;300 psi;3" (80);8;24132.5; ;24132.5;413208;-20/120;5" (125);98.9574;1.25566
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 6
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.016666666662
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_BV
+ComboFamilyID = FAM_STAG
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_GROOVE
+ComboVersionID = VERS_US
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAG125B_BV;STAG 125;Ductile iron;Groove;US specific;350 psi;5" (125);8;3861.2; ;3861.2;50443.9;-20/120;5" (125);98.9574;1.25566
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 7
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.016666666662
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_BV
+ComboFamilyID = FAM_STAG
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_GROOVE
+ComboVersionID = VERS_STD
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STAG100_BV;STAG 100;Ductile iron;Groove;Standard;350 psi;4" (100);8;9626.26; ;9626.26;87555.6;-20/120;5" (125);98.9574;1.25566
+Result number = 1;STAG80_BV;STAG 80;Ductile iron;Groove;Standard;350 psi;3" (80);8;24132.5; ;24132.5;413208;-20/120;5" (125);98.9574;1.25566
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 8
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.011111111108
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_BVS
+ComboFamilyID = 
+ComboMaterialID = BDY_STEEL
+ComboConnectID = 
+ComboVersionID = VERS_FPM
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA143-100A_BVS;TA-BVS 143 DN100;Steel;Flange;FPM o-rings;250 psi;4" (100);9;3310.36; ;3310.36;120374;-30/200;4" (100);133.978;1.28318
+Result number = 1;TA140-100A_BVS;TA-BVS 140 DN100;Steel;Welding;FPM o-rings;350 psi;4" (100);9;3310.36; ;3310.36;120374;-30/200;4" (100);133.978;1.28318
+Result number = 2;TA143-80A_BVS;TA-BVS 143 DN80;Steel;Flange;FPM o-rings;250 psi;3" (80);9;13241.4; ;13241.4;284248;-30/200;4" (100);133.978;1.28318
+Result number = 3;TA140-80A_BVS;TA-BVS 140 DN80;Steel;Welding;FPM o-rings;350 psi;3" (80);9;13241.4; ;13241.4;284248;-30/200;4" (100);133.978;1.28318
+Result number = 4;TA143-65A_BVS;TA-BVS 143 DN65;Steel;Flange;FPM o-rings;250 psi;2 1/2" (65);9;41236.3; ;41236.3;771382;-30/200;4" (100);133.978;1.28318
+Result number = 5;TA140-65A_BVS;TA-BVS 140 DN65;Steel;Welding;FPM o-rings;350 psi;2 1/2" (65);9;41236.3; ;41236.3;771382;-30/200;4" (100);133.978;1.28318
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 9
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.011111111108
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_BVS
+ComboFamilyID = FAM_TA140
+ComboMaterialID = BDY_STEEL
+ComboConnectID = CONN_WELDING
+ComboVersionID = VERS_FPM
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA140-100A_BVS;TA-BVS 140 DN100;Steel;Welding;FPM o-rings;350 psi;4" (100);9;3310.36; ;3310.36;120374;-30/200;4" (100);133.978;1.28318
+Result number = 1;TA140-80A_BVS;TA-BVS 140 DN80;Steel;Welding;FPM o-rings;350 psi;3" (80);9;13241.4; ;13241.4;284248;-30/200;4" (100);133.978;1.28318
+Result number = 2;TA140-65A_BVS;TA-BVS 140 DN65;Steel;Welding;FPM o-rings;350 psi;2 1/2" (65);9;41236.3; ;41236.3;771382;-30/200;4" (100);133.978;1.28318
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 10
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.011111111108
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_BVS
+ComboFamilyID = FAM_TA143
+ComboMaterialID = BDY_STEEL
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_FPM
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA143-100A_BVS;TA-BVS 143 DN100;Steel;Flange;FPM o-rings;250 psi;4" (100);9;3310.36; ;3310.36;120374;-30/200;4" (100);133.978;1.28318
+Result number = 1;TA143-80A_BVS;TA-BVS 143 DN80;Steel;Flange;FPM o-rings;250 psi;3" (80);9;13241.4; ;13241.4;284248;-30/200;4" (100);133.978;1.28318
+Result number = 2;TA143-65A_BVS;TA-BVS 143 DN65;Steel;Flange;FPM o-rings;250 psi;2 1/2" (65);9;41236.3; ;41236.3;771382;-30/200;4" (100);133.978;1.28318
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 11
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = RVTYPE_DRV
+ComboFamilyID = FAM_STA*
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_DRAIN12
+ComboPNID = PN_5
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STA*50A_BV;STA* 50;Ametal(tm);Thread;With drain 1/2";350 psi;2" (50);3.62568;3000; ;2311.77;18528.7;-20/120;2" (50);79.2209;0.629544
+Result number = 1;STA*40A_BV;STA* 40;Ametal(tm);Thread;With drain 1/2";350 psi;1 1/2" (40);4;6466.84; ;6466.84;61486.6;-20/120;2" (50);79.2209;0.629544
+Result number = 2;STA*32A_BV;STA* 32;Ametal(tm);Thread;With drain 1/2";350 psi;1 1/4" (32);4;11947.1; ;11947.1;88220.2;-20/120;2" (50);79.2209;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 12
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = true
+Dp = 7000
+ComboTypeID = RVTYPE_BV
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STADC50A_BV;STAD-C 50;Ametal(tm);Thread male;Without drain;300 psi;2" (50);2.7256;7000; ;2214.79; ;-20/150;2" (50);79.2209;0.629544
+Result number = 1;STADC50B_BV;STAD-C 50;Ametal(tm);Solder;Without drain;300 psi;2" (50);2.7256;7000; ;2214.79; ;-20/150;2" (50);79.2209;0.629544
+Result number = 2;STAD*50I_BV;STAD* 2";Ametal(tm);NPT thread;Without drain;350 psi;2" (50);2.74768;7000; ;2311.77; ;-20/120;2" (50);79.2209;0.629544
+Result number = 3;STAD*50J_BV;STAD* 2";Ametal(tm);NPT thread;With drain UNS 1 1/6" x 11,5";350 psi;2" (50);2.74768;7000; ;2311.77; ;-20/120;2" (50);79.2209;0.629544
+Result number = 4;STAD*40I_BV;STAD* 1 1/2";Ametal(tm);NPT thread;Without drain;350 psi;1 1/2" (40);3.87442;7000; ;6466.84; ;-20/120;2" (50);79.2209;0.629544
+Result number = 5;STAD*40J_BV;STAD* 1 1/2";Ametal(tm);NPT thread;With drain UNS 1 1/6" x 11,5";350 psi;1 1/2" (40);3.87442;7000; ;6466.84; ;-20/120;2" (50);79.2209;0.629544
+Result number = 6;STADC40A_BV;STAD-C 40;Ametal(tm);Thread male;Without drain;300 psi;1 1/2" (40);3.89581;7000; ;6534.33; ;-20/150;2" (50);79.2209;0.629544
+Result number = 7;STADC40B_BV;STAD-C 40;Ametal(tm);Solder;Without drain;300 psi;1 1/2" (40);3.89581;7000; ;6534.33; ;-20/150;2" (50);79.2209;0.629544
+Result number = 8;STADC32A_BV;STAD-C 32;Ametal(tm);Thread male;Without drain;300 psi;1 1/4" (32);4;11947.1; ;11947.1; ;-20/150;2" (50);79.2209;0.629544
+Result number = 9;STADC32B_BV;STAD-C 32;Ametal(tm);Solder;Without drain;300 psi;1 1/4" (32);4;11947.1; ;11947.1; ;-20/150;2" (50);79.2209;0.629544
+Result number = 10;STAD*32I_BV;STAD* 1 1/4";Ametal(tm);NPT thread;Without drain;350 psi;1 1/4" (32);4;11947.1; ;11947.1; ;-20/120;2" (50);79.2209;0.629544
+Result number = 11;STAD*32J_BV;STAD* 1 1/4";Ametal(tm);NPT thread;With drain UNS 1 1/6" x 11,5";350 psi;1 1/4" (32);4;11947.1; ;11947.1; ;-20/120;2" (50);79.2209;0.629544
+Result number = 12;STAF-SG050B_BV;STAF-SG 2";Ductile iron;ANSI Flange;Standard;250 psi/350 psi;2" (50);2.7256;7000; ;2214.79; ;-20/120;2" (50);79.2209;0.629544
+Result number = 13;STAS50_BV;STAS 2";Ametal(tm);Solder;Without drain;300 psi;2" (50);2.7256;7000; ;2214.79; ;-20/120;2" (50);79.2209;0.629544
+Result number = 14;STAD*50G_BV;STAD* 2";Ametal(tm);NPT thread;Without drain;350 psi;2" (50);2.74768;7000; ;2311.77; ;-20/120;2" (50);79.2209;0.629544
+Result number = 15;STAD*50H_BV;STAD* 2";Ametal(tm);NPT thread;With drain UNS 1 1/6" x 11,5";350 psi;2" (50);2.74768;7000; ;2311.77; ;-20/120;2" (50);79.2209;0.629544
+Result number = 16;STAD-B*50A_BV;STAD-B* 50;Ametal(tm);Thread;With drain 3/4";350 psi;2" (50);2.77763;7000; ;2447.61; ;-20/120;2" (50);79.2209;0.629544
+Result number = 17;STAD-B*40A_BV;STAD-B* 40;Ametal(tm);Thread;With drain 3/4";350 psi;1 1/2" (40);3.75273;7000; ;5973.24; ;-20/120;2" (50);79.2209;0.629544
+Result number = 18;STAD*40G_BV;STAD* 1 1/2";Ametal(tm);NPT thread;Without drain;350 psi;1 1/2" (40);3.87442;7000; ;6466.84; ;-20/120;2" (50);79.2209;0.629544
+Result number = 19;STAD*40H_BV;STAD* 1 1/2";Ametal(tm);NPT thread;With drain UNS 1 1/6" x 11,5";350 psi;1 1/2" (40);3.87442;7000; ;6466.84; ;-20/120;2" (50);79.2209;0.629544
+Result number = 20;STAF-SG040B_BV;STAF-SG 1 1/2";Ductile iron;ANSI Flange;Standard;250 psi/350 psi;1 1/2" (40);3.89581;7000; ;6534.33; ;-20/120;2" (50);79.2209;0.629544
+Result number = 21;STAS40_BV;STAS 1 1/2";Ametal(tm);Solder;Without drain;300 psi;1 1/2" (40);3.89581;7000; ;6534.33; ;-20/120;2" (50);79.2209;0.629544
+Result number = 22;STAD*32G_BV;STAD* 1 1/4";Ametal(tm);NPT thread;Without drain;350 psi;1 1/4" (32);4;11947.1; ;11947.1; ;-20/120;2" (50);79.2209;0.629544
+Result number = 23;STAD*32H_BV;STAD* 1 1/4";Ametal(tm);NPT thread;With drain UNS 1 1/6" x 11,5";350 psi;1 1/4" (32);4;11947.1; ;11947.1; ;-20/120;2" (50);79.2209;0.629544
+Result number = 24;STAF-SG032B_BV;STAF-SG 1 1/4";Ductile iron;ANSI Flange;Standard;250 psi/350 psi;1 1/4" (32);4;11947.1; ;11947.1; ;-20/120;2" (50);79.2209;0.629544
+Result number = 25;STAS32_BV;STAS 1 1/4";Ametal(tm);Solder;Without drain;300 psi;1 1/4" (32);4;11947.1; ;11947.1; ;-20/120;2" (50);79.2209;0.629544
+Result number = 26;STAD-B*32A_BV;STAD-B* 32;Ametal(tm);Thread;With drain 3/4";350 psi;1 1/4" (32);4;12857.6; ;12857.6; ;-20/120;2" (50);79.2209;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 13
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = PowerDTMode
+Flow = 2.217247649194e-05
+Power = 900
+DT = 10
+DpEnabled = true
+Dp = 7000
+ComboTypeID = RVTYPE_BV
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;STADC15A_BV;STAD-C 15/14;Ametal(tm);Thread male;Without drain;300 psi;1/2" (15);1.43515;7000; ;97.2837; ;-20/150;3/8" (10);49.1406;0.180678
+Result number = 1;STADC15B_BV;STAD-C 15/14;Ametal(tm);Solder;Without drain;300 psi;1/2" (15);1.43515;7000; ;97.2837; ;-20/150;3/8" (10);49.1406;0.180678
+Result number = 2;STAD*15I_BV;STAD* 1/2";Ametal(tm);NPT thread;Without drain;350 psi;1/2" (15);1.32516;7000; ;94.277; ;-20/120;3/8" (10);49.1406;0.180678
+Result number = 3;STAD*15J_BV;STAD* 1/2";Ametal(tm);NPT thread;With drain UNS 1 1/6" x 11,5";350 psi;1/2" (15);1.32516;7000; ;94.277; ;-20/120;3/8" (10);49.1406;0.180678
+Result number = 4;STAD-B*10A_BV;STAD-B* 10;Ametal(tm);Thread;With drain 3/4";350 psi;3/8" (10);2.16554;7000; ;347.69; ;-20/120;3/8" (10);49.1406;0.180678
+Result number = 5;STAD*15G_BV;STAD* 1/2";Ametal(tm);NPT thread;Without drain;350 psi;1/2" (15);1.32516;7000; ;94.277; ;-20/120;3/8" (10);49.1406;0.180678
+Result number = 6;STAD*15H_BV;STAD* 1/2";Ametal(tm);NPT thread;With drain UNS 1 1/6" x 11,5";350 psi;1/2" (15);1.32516;7000; ;94.277; ;-20/120;3/8" (10);49.1406;0.180678
+Result number = 7;STAS15_BV;STAS 1/2";Ametal(tm);Solder;Without drain;300 psi;1/2" (15);1.43515;7000; ;97.2837; ;-20/120;3/8" (10);49.1406;0.180678
+Result number = 8;STAD-B*15A_BV;STAD-B* 15;Ametal(tm);Thread;With drain 3/4";350 psi;1/2" (15);1.60416;7000; ;114.267; ;-20/120;3/8" (10);49.1406;0.180678
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 14
+
+SelectionMode = Individual
+ProductCategory = BV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = PowerDTMode
+Flow = 2.217247649194e-05
+Power = 900
+DT = 10
+DpEnabled = true
+Dp = 7000
+ComboTypeID = RVTYPE_BVS
+ComboFamilyID = 
+ComboMaterialID = BDY_STEEL
+ComboConnectID = 
+ComboVersionID = VERS_FPM
+ComboPNID = 
+OnlyForSet = false
+EndInputs
+
+StartOutputs
+Result number = 0;TA143-15A_BVS;TA-BVS 143 DN15;Steel;Flange;FPM o-rings;550 psi;1/2" (15);2.55974;7000; ;18.095; ;-30/200;3/8" (10);49.1406;0.180678
+Result number = 1;TA140-15A_BVS;TA-BVS 140 DN15;Steel;Welding;FPM o-rings;550 psi;1/2" (15);2.55974;7000; ;18.095; ;-30/200;3/8" (10);49.1406;0.180678
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+

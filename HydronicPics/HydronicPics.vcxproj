@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D341E4B3-98FB-4007-A3C2-48F6E37161DE}</ProjectGuid>
+    <RootNamespace>HydronicPics</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\DocTA\Software\TAS Project\TASelect-AL\Vld\lib\Win32;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\DocTA\Software\TAS Project\TASelect-AL\Vld\lib\Win32;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir);C:\DocTA\Software\TAS Project\TASelect-AL\Vld\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;HYDRONICPICS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>
+      </MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <BrowseInformation>
+      </BrowseInformation>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Bscmake>
+      <OutputFile />
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir);C:\DocTA\Software\TAS Project\TASelect-AL\Vld\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WIN64;_DEBUG;_WINDOWS;_USRDLL;HYDRONICPICS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <BrowseInformation>
+      </BrowseInformation>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;HYDRONICPICS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FloatingPointExceptions>true</FloatingPointExceptions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <OutputFile />
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;HYDRONICPICS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <OmitFramePointers>false</OmitFramePointers>
+      <FloatingPointExceptions>true</FloatingPointExceptions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Use</PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="..\TASelect\EnBitmapAnchorPt.cpp">
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="..\TASelect\HydronicPic.cpp">
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="HydronicPicMng.cpp">
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\TASelect\EnBitmapAnchorPt.h" />
+    <ClInclude Include="..\TASelect\HydronicPic.h" />
+    <ClInclude Include="HydronicPicMng.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Docs\DescriptorID for each product type.xlsx" />
+    <None Include="Docs\Prod pics recipe.docx" />
+    <None Include="Docs\Specs for dynamic hydronic schemes.doc" />
+    <None Include="res\CircScheme 2W-INJ.gif" />
+    <None Include="res\CircScheme 3W-INJ.gif" />
+    <None Include="res\CircScheme 3W.gif" />
+    <None Include="res\CircScheme BOTTOMDISTR.gif" />
+    <None Include="res\CircScheme BOTTOMDISTR_REV.gif" />
+    <None Include="res\CircScheme OnePipe.gif" />
+    <None Include="res\CircScheme OnePipeTopArrow.gif" />
+    <None Include="res\CircScheme SP.gif" />
+    <None Include="res\CircScheme TOPARROWS.gif" />
+    <None Include="res\CircScheme TOPPENDING.gif" />
+    <None Include="res\CircScheme TU.gif" />
+    <None Include="res\DA50_200A.gif" />
+    <None Include="res\DA50_32A.gif" />
+    <None Include="res\DA50_80A.gif" />
+    <None Include="res\DA516_25A.gif" />
+    <None Include="res\DA516_80A.gif" />
+    <None Include="res\FUSION_C150A.gif" />
+    <None Include="res\FUSION_C50A.gif" />
+    <None Include="res\FUSION_C80A.gif" />
+    <None Include="res\FUSION_P150A.gif" />
+    <None Include="res\FUSION_P50A.gif" />
+    <None Include="res\FUSION_P80A.gif" />
+    <None Include="res\KT512_20.gif" />
+    <None Include="res\KTCM512_20.gif" />
+    <None Include="res\KTH512_25.gif" />
+    <None Include="res\KTM512_25.gif" />
+    <None Include="res\KTM512_80.gif" />
+    <None Include="res\PILOT-R_150.gif" />
+    <None Include="res\PILOT-R_80.gif" />
+    <None Include="res\STA-DR_25.gif" />
+    <None Include="res\STAD25A_BV.gif" />
+    <None Include="res\STAD25B_BV.gif" />
+    <None Include="res\STAD25C_BV.gif" />
+    <None Include="res\STADA25A_BV.gif" />
+    <None Include="res\STADA25B_BV.gif" />
+    <None Include="res\STADA25C_BV.gif" />
+    <None Include="res\STADC25A_BV.gif" />
+    <None Include="res\STADC25B_BV.gif" />
+    <None Include="res\STAF-R80_BV.gif" />
+    <None Include="res\STAF-SG025_BV.gif" />
+    <None Include="res\STAF-SG080A_BV.gif" />
+    <None Include="res\STAF-SG200A_BV.gif" />
+    <None Include="res\STAG200_BV.gif" />
+    <None Include="res\STAG80_BV.gif" />
+    <None Include="res\STAP25_10-60.gif" />
+    <None Include="res\STAP80_20-80.gif" />
+    <None Include="res\TA_2WCV_01.gif" />
+    <None Include="res\TA_2WCV_01_P.gif" />
+    <None Include="res\TA_2WCV_01_PPT.gif" />
+    <None Include="res\TA_2WCV_M.gif" />
+    <None Include="res\TA_2WCV_M_P.gif" />
+    <None Include="res\TA_2WCV_M_PPT.gif" />
+    <None Include="res\TA_3WCV_01.gif" />
+    <None Include="res\TA_3WCV_01_P.gif" />
+    <None Include="res\TA_3WCV_01_PPT.gif" />
+    <None Include="res\TA_3WCV_M.gif" />
+    <None Include="res\TA_3WCV_M_P.gif" />
+    <None Include="res\TA_3WCV_M_PPT.gif" />
+    <None Include="res\TA_BV.gif" />
+    <None Include="res\TA_CHKV.gif" />
+    <None Include="res\TA_CS.gif" />
+    <None Include="res\TA_CSP.gif" />
+    <None Include="res\TA_DPC.gif" />
+    <None Include="res\TA_DPCF.gif" />
+    <None Include="res\TA_DPRV.gif" />
+    <None Include="res\TA_DRV_L.gif" />
+    <None Include="res\TA_DRV_S.gif" />
+    <None Include="res\TA_FO.gif" />
+    <None Include="res\TA_PICV_01_P.gif" />
+    <None Include="res\TA_PICV_01_PPT.gif" />
+    <None Include="res\TA_PICV_M_P.gif" />
+    <None Include="res\TA_PICV_M_PPT.gif" />
+    <None Include="res\TA_RV.gif" />
+    <None Include="res\TA_RVT.gif" />
+    <None Include="res\TA_SHV.gif" />
+    <None Include="res\TA_TRV.gif" />
+    <None Include="res\TA_VSP.gif" />
+    <None Include="res\TA_VV.gif" />
+    <None Include="res\TBV-C_20.gif" />
+    <None Include="res\TBV-CMP_20.gif" />
+    <None Include="res\TBV20NF_TBV.gif" />
+    <None Include="res\SEP_ZEK_80_F.gif" />
+    <None Include="res\SEP_ZEK_80_S.gif" />
+    <None Include="res\SEP_ZEK_200_F.gif" />
+    <None Include="res\SEP_ZEK_200_S.gif" />
+    <None Include="res\SEP_ZIK_80_F.gif" />
+    <None Include="res\SEP_ZIK_80_S.gif" />
+    <None Include="res\SEP_ZIK_200_F.gif" />
+    <None Include="res\SEP_ZIK_200_S.gif" />
+    <None Include="res\SEP_ZIO_80_F.gif" />
+    <None Include="res\SEP_ZIO_80_S.gif" />
+    <None Include="res\SEP_ZIO_200_F.gif" />
+    <None Include="res\SEP_ZIO_200_S.gif" />
+    <None Include="res\SEP_ZUK_25.gif" />
+    <None Include="res\SEP_ZUKM_25.gif" />
+    <None Include="res\SEP_ZUV_25.gif" />
+    <None Include="res\SEP_ZUVL_25.gif" />
+    <None Include="res\SEP_ZUC_25.gif" />
+    <None Include="res\SEP_ZUCM_25.gif" />
+    <None Include="res\SEP_ZUD_25.gif" />
+    <None Include="res\SEP_ZUDL_25.gif" />
+    <None Include="res\SEP_ZUM_25.gif" />
+    <None Include="res\SEP_ZUML_25.gif" />
+    <None Include="res\SEP_ZUR_25.gif" />
+    <None Include="res\AIRV_ZUP.gif" />
+    <None Include="res\AIRV_ZUT25.gif" />
+    <None Include="res\AIRV_ZUTX.gif" />
+    <None Include="res\STS15.gif" />
+    <None Include="res\TA_COMPACTDP_15.gif" />
+    <None Include="res\TA_COMPACTP_15.gif" />
+    <None Include="res\TA_MULTI20_BV.gif" />
+    <None Include="res\TA_MULTI20_CV.gif" />
+    <None Include="res\TA_MULTI20_DPC.gif" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="HydronicPics.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\AIRV_ZTV.gif" />
+    <Image Include="res\BR12WT_SET.gif" />
+    <Image Include="res\CircScheme 2W-AutoAdaptive.gif" />
+    <Image Include="res\CV206GG_15.gif" />
+    <Image Include="res\CV206GG_20.gif" />
+    <Image Include="res\CV206GG_25.gif" />
+    <Image Include="res\CV206GG_32.gif" />
+    <Image Include="res\CV206GG_40.gif" />
+    <Image Include="res\CV206GG_50_65.gif" />
+    <Image Include="res\CV206GG_80_100.gif" />
+    <Image Include="res\CV216GG_125_200.gif" />
+    <Image Include="res\CV216GG_15.gif" />
+    <Image Include="res\CV216GG_20.gif" />
+    <Image Include="res\CV216GG_25_32.gif" />
+    <Image Include="res\CV216GG_40_50.gif" />
+    <Image Include="res\CV216GG_65.gif" />
+    <Image Include="res\CV216GG_80_100.gif" />
+    <Image Include="res\CV216MZ.gif" />
+    <Image Include="res\CV216RGA_15_25.gif" />
+    <Image Include="res\CV216RGA_32_50.gif" />
+    <Image Include="res\CV216_125.gif" />
+    <Image Include="res\CV216_150.gif" />
+    <Image Include="res\CV216_200.gif" />
+    <Image Include="res\CV216_250_300.gif" />
+    <Image Include="res\CV225_150.gif" />
+    <Image Include="res\CV225_200.gif" />
+    <Image Include="res\CV225_20_40.gif" />
+    <Image Include="res\CV225_240S_E_15.gif" />
+    <Image Include="res\CV225_250_300.gif" />
+    <Image Include="res\CV225_50.gif" />
+    <Image Include="res\CV225_65.gif" />
+    <Image Include="res\CV225_80_125.gif" />
+    <Image Include="res\CV240S_E_100.gif" />
+    <Image Include="res\CV240S_E_125.gif" />
+    <Image Include="res\CV240S_E_150.gif" />
+    <Image Include="res\CV240S_E_200.gif" />
+    <Image Include="res\CV240S_E_20_40.gif" />
+    <Image Include="res\CV240S_E_250_300.gif" />
+    <Image Include="res\CV240S_E_50.gif" />
+    <Image Include="res\CV240S_E_65.gif" />
+    <Image Include="res\CV240S_E_80.gif" />
+    <Image Include="res\CV306GG_125_150.gif" />
+    <Image Include="res\CV306GG_15_25.gif" />
+    <Image Include="res\CV306GG_32.gif" />
+    <Image Include="res\CV306GG_40_100.gif" />
+    <Image Include="res\CV316GG_125_200.gif" />
+    <Image Include="res\CV316GG_15.gif" />
+    <Image Include="res\CV316GG_20.gif" />
+    <Image Include="res\CV316GG_25.gif" />
+    <Image Include="res\CV316GG_32.gif" />
+    <Image Include="res\CV316GG_40.gif" />
+    <Image Include="res\CV316GG_50.gif" />
+    <Image Include="res\CV316GG_65.gif" />
+    <Image Include="res\CV316GG_80_100.gif" />
+    <Image Include="res\CV316MZ.gif" />
+    <Image Include="res\CV316RGA_15_25.gif" />
+    <Image Include="res\CV316RGA_32_50.gif" />
+    <Image Include="res\CV316_125.gif" />
+    <Image Include="res\CV316_150.gif" />
+    <Image Include="res\CV316_200.gif" />
+    <Image Include="res\CV316_250_300.gif" />
+    <Image Include="res\CV325_100_125.gif" />
+    <Image Include="res\CV325_15.gif" />
+    <Image Include="res\CV325_150.gif" />
+    <Image Include="res\CV325_200.gif" />
+    <Image Include="res\CV325_20_40.gif" />
+    <Image Include="res\CV325_250_300.gif" />
+    <Image Include="res\CV325_50.gif" />
+    <Image Include="res\CV325_65.gif" />
+    <Image Include="res\CV325_80.gif" />
+    <Image Include="res\CV340S_E_100.gif" />
+    <Image Include="res\CV340S_E_125.gif" />
+    <Image Include="res\CV340S_E_15.gif" />
+    <Image Include="res\CV340S_E_150.gif" />
+    <Image Include="res\CV340S_E_200.gif" />
+    <Image Include="res\CV340S_E_20_40.gif" />
+    <Image Include="res\CV340S_E_250_300.gif" />
+    <Image Include="res\CV340S_E_50.gif" />
+    <Image Include="res\CV340S_E_65.gif" />
+    <Image Include="res\CV340S_E_80.gif" />
+    <Image Include="res\DSV_DGH_15-32.gif" />
+    <Image Include="res\DSV_DGH_40-50.gif" />
+    <Image Include="res\DSV_H_F_SOL.gif" />
+    <Image Include="res\External_temp_housing.gif" />
+    <Image Include="res\SEP_FCTYPE_150.gif" />
+    <Image Include="res\SEP_FCTYPE_273.gif" />
+    <Image Include="res\SEP_FCTYPE_80.gif" />
+    <Image Include="res\SEP_ZG_65_F.gif" />
+    <Image Include="res\SEP_ZG_65_S.gif" />
+    <Image Include="res\SEP_ZTKM.gif" />
+    <Image Include="res\SEP_ZTM.gif" />
+    <Image Include="res\SIMPLY_VENTO_V2_1_S.gif" />
+    <Image Include="res\SIMPLY_VENTO_V2_1_SWME.gif" />
+    <Image Include="res\STADSTAR25_DPCSET.gif" />
+    <Image Include="res\TA_DPCBCV_01.gif" />
+    <Image Include="res\TA_DPCBCV_M.gif" />
+    <Image Include="res\TA_DSV.gif" />
+    <Image Include="res\TA_LINK.gif" />
+    <Image Include="res\TA_LINK_IMG.gif" />
+    <Image Include="res\TA_MODULATOR_40-50.gif" />
+    <Image Include="res\TA_MODULATOR_65-80.gif" />
+    <Image Include="res\TA_SMART.gif" />
+    <Image Include="res\TA_SMART_20-50.gif" />
+    <Image Include="res\TA_SMART_65-150.gif" />
+    <Image Include="res\TA_SMART_DP.gif" />
+    <Image Include="res\TA_TEMP_SENSOR.gif" />
+    <Image Include="res\VENTO_VI_CONNECT.gif" />
+    <Image Include="res\VENTO_V_CONNECT.gif" />
+    <Image Include="res\VENTO_V_F_ECOEFFICIENT.gif" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

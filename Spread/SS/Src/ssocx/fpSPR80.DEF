@@ -1,0 +1,13 @@
+; fpSPR80.def : Declares the module parameters.
+;LIBRARY      fpSPR80.OCX
+;jb
+LIBRARY		fpSPR80.OCX
+
+EXPORTS
+	DllCanUnloadNow     PRIVATE
+	DllGetClassObject   PRIVATE
+	DllRegisterServer   PRIVATE
+	DllUnregisterServer PRIVATE
+
+SECTIONS
+;   .SHARDATA   Read Write Shared

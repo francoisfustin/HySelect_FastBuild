@@ -1,0 +1,420 @@
+//
+// SSOCX.RC2 - resources App Studio does not edit directly 
+//
+
+#ifdef APSTUDIO_INVOKED
+    #error this file is not editable by App Studio
+#endif //APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+// #defines for the VS_VERSION_INFO structure -scl
+#ifdef SS_V80
+//VERSION_NUMBER_8
+#define SS_FILEVER          8,0,0,13
+//VERSION_NUMBER_8
+#define SS_PRODUCTVER       8,0,0,13
+//VERSION_NUMBER_8
+#define SS_FILEVERSION      "8.0.13"
+//VERSION_NUMBER_8
+#define SS_PRODUCTVERSION   "8.0.13"
+#elif SS_V70
+
+//VERSION_NUMBER_7
+#define SS_FILEVER          7,0,0,55
+//VERSION_NUMBER_7
+#define SS_PRODUCTVER       7,0,0,55
+//VERSION_NUMBER_7
+#define SS_FILEVERSION      "7.0.55"
+//VERSION_NUMBER_7
+#define SS_PRODUCTVERSION   "7.0.55"
+
+#elif SS_V40
+
+//VERSION_NUMBER_6
+#define SS_FILEVER          6,0,0,57
+//VERSION_NUMBER_6
+#define SS_PRODUCTVER       6,0,0,57
+//VERSION_NUMBER_6
+#define SS_FILEVERSION      "6.0.57"
+//VERSION_NUMBER_6
+#define SS_PRODUCTVERSION   "6.0.57"
+
+#elif SS_V35
+
+//VERSION_NUMBER_35
+#define SS_FILEVER          3,5,0,10
+//VERSION_NUMBER_35
+#define SS_PRODUCTVER       3,5,0,10
+//VERSION_NUMBER_35
+#define SS_FILEVERSION      "3.5.10"
+//VERSION_NUMBER_35
+#define SS_PRODUCTVERSION   "3.5.10"
+
+#elif SS_V30
+
+//VERSION_NUMBER_30
+#define SS_FILEVER          3,0,0,55
+//VERSION_NUMBER_30
+#define SS_PRODUCTVER       3,0,0,55
+//VERSION_NUMBER_30
+#define SS_FILEVERSION      "3.0.55"
+//VERSION_NUMBER_30
+#define SS_PRODUCTVERSION   "3.0.55"
+
+#else
+
+//VERSION_NUMBER_25
+#define SS_FILEVER		2,5,0,45
+//VERSION_NUMBER_25
+#define SS_PRODUCTVER		2,5,0,45
+//VERSION_NUMBER_25
+#define SS_FILEVERSION		"2.5.45"
+//VERSION_NUMBER_25
+#define SS_PRODUCTVERSION	"2.5.45"
+
+#endif // SS_V30
+
+// common to all versions -scl
+#define SS_COMPANYNAME		"GrapeCity, Inc.\0"
+#define SS_LEGALCOPYRIGHT   "Copyright \251 1991-2010\0"
+#define SS_LEGALTRADEMARKS	"\0"
+
+#ifdef SS_SPREADOCX
+#define SS_PRODUCTNAME		"Spread\0"
+#ifdef _UNICODE
+#ifdef SS_V80
+   #define SS_FILEDESCRIPTION	"FarPoint Unicode Spread Controls (OLEDB)"
+   #define SS_INTERNALNAME		"fpSprU80\0"
+   #define SS_ORIGINALFILENAME "fpSprU80.ocx\0"
+#elif SS_V40
+  #ifdef FP_UNICODE_TEST
+    #ifdef FP_ADB // ADO fpSpread 6.0 Unicode Test
+      #define SS_FILEDESCRIPTION	"FarPoint Spread (OLEDB) - UNICODE TEST"
+      #define SS_INTERNALNAME		"fpSprU70\0"
+      #define SS_ORIGINALFILENAME "fpSprU70.ocx\0"
+    #else // non-ADO fpSpread 6.0 Unicode Test
+      #define SS_FILEDESCRIPTION	"FarPoint Spread Controls - UNICODE TEST"
+      #define SS_INTERNALNAME		"Spr32xU60\0"
+      #define SS_ORIGINALFILENAME "Spr32xU60.ocx\0"
+    #endif // FP_ADB
+    #define UNICODE_TEST_EXPIRATION_DATE "This TEST version expires March 31, 2004."
+  #else // !(FP_UNICODE_TEST)
+    #ifdef FP_ADB // ADO fpSpraed 6.0 ANSI -scl
+      #define SS_FILEDESCRIPTION	"FarPoint Unicode Spread Controls (OLEDB)"
+      #define SS_INTERNALNAME		"fpSprU60\0"
+      #define SS_ORIGINALFILENAME "fpSprU60.ocx\0"
+    #else // non-ADO fpSpread 6.0 ANSI -scl
+      #define SS_FILEDESCRIPTION	"FarPoint Unicode Spread Controls"
+      #define SS_INTERNALNAME		"Spr32xU60\0"
+      #define SS_ORIGINALFILENAME "Spr32xU60.ocx\0"
+    #endif
+  #endif //FP_UNICODE_TEST
+#elif SS_V30
+#ifdef FP_ADB // ADO fpSpread 3.0 Unicode -scl
+#define SS_FILEDESCRIPTION	"FarPoint Spread Controls (OLEDB)"
+#define SS_INTERNALNAME		"fpSpr30u\0"
+#define SS_ORIGINALFILENAME "fpSpr30u.ocx\0"
+#else // non-ADO fpSpread 3.0 Unicode -scl
+#define SS_FILEDESCRIPTION	"FarPoint Spread Controls"
+#define SS_INTERNALNAME		"Spr32u30\0"
+#define SS_ORIGINALFILENAME "Spr32u30.ocx\0"
+#endif // FP_ADB
+#else // non-ADO vaSpread 2.5 Unicode -scl
+#define SS_FILEDESCRIPTION	"FarPoint Spread Control"
+#define SS_INTERNALNAME		"ss32u25\0"
+#define SS_ORIGINALFILENAME "ss32u25.ocx\0"
+#endif // SS_V30
+#else // not Unicode -scl
+
+#ifdef SS_V80
+
+#ifdef FP_ADB // ADO fpSpread 8.0 ANSI -scl
+#define SS_FILEDESCRIPTION	"FarPoint Spread Controls (OLEDB)"
+#define SS_INTERNALNAME		"fpSpr80\0"
+#define SS_ORIGINALFILENAME "fpSpr80.ocx\0"
+#else // non-ADO fpSpread 7.0 ANSI -scl
+#define SS_FILEDESCRIPTION	"FarPoint Spread Controls"
+#define SS_INTERNALNAME		"Spr32x80\0"
+#define SS_ORIGINALFILENAME "Spr32x80.ocx\0"
+#endif // FP_ADB
+
+#elif SS_V70
+
+#ifdef FP_ADB // ADO fpSpread 7.0 ANSI -scl
+#define SS_FILEDESCRIPTION	"FarPoint Spread Controls (OLEDB)"
+#define SS_INTERNALNAME		"fpSpr70\0"
+#define SS_ORIGINALFILENAME "fpSpr70.ocx\0"
+#else // non-ADO fpSpread 7.0 ANSI -scl
+#define SS_FILEDESCRIPTION	"FarPoint Spread Controls"
+#define SS_INTERNALNAME		"Spr32x70\0"
+#define SS_ORIGINALFILENAME "Spr32x70.ocx\0"
+#endif // FP_ADB
+
+#elif SS_V40
+
+#ifdef SYNERGEX_TRIAL
+
+#ifdef FP_ADB // ADO fpSpraed 6.0 ANSI Synergex trial -scl
+#define SS_FILEDESCRIPTION	"FarPoint Spread Controls (OLEDB) Synergex trial"
+#define SS_INTERNALNAME		"fpSpr40\0"
+#define SS_ORIGINALFILENAME "fpSpr40.ocx\0"
+#else // non-ADO fpSpread 6.0 ANSI -scl
+#define SS_FILEDESCRIPTION	"FarPoint Spread Controls Synergex trial"
+#define SS_INTERNALNAME		"Spr32x40\0"
+#define SS_ORIGINALFILENAME "Spr32x40.ocx\0"
+#endif // FP_ADB
+#define SYNERGEX_EXPIRATION_DATE "This trial version expires May 12, 2002."
+
+#else // !defined(SYNERGEX_TRIAL)
+
+#ifdef FP_ADB // ADO fpSpread 6.0 ANSI -scl
+#define SS_FILEDESCRIPTION	"FarPoint Spread Controls (OLEDB)"
+#define SS_INTERNALNAME		"fpSpr60\0"
+#define SS_ORIGINALFILENAME "fpSpr60.ocx\0"
+#else // non-ADO fpSpread 6.0 ANSI -scl
+#define SS_FILEDESCRIPTION	"FarPoint Spread Controls"
+#define SS_INTERNALNAME		"Spr32x60\0"
+#define SS_ORIGINALFILENAME "Spr32x60.ocx\0"
+#endif // FP_ADB
+
+#endif
+
+#elif SS_V35
+
+#ifdef SYNERGEX_TRIAL
+
+#ifdef FP_ADB // ADO fpSpread 3.5 ANSI Synergex trial -scl
+#define SS_FILEDESCRIPTION	"FarPoint Spread Controls (OLEDB) Synergex trial"
+#define SS_INTERNALNAME		"fpSpr35\0"
+#define SS_ORIGINALFILENAME "fpSpr35.ocx\0"
+#else // non-ADO fpSpread 3.0 ANSI -scl
+#define SS_FILEDESCRIPTION	"FarPoint Spread Controls Synergex trial"
+#define SS_INTERNALNAME		"Spr32x35\0"
+#define SS_ORIGINALFILENAME "Spr32x35.ocx\0"
+#endif // FP_ADB
+#define SYNERGEX_EXPIRATION_DATE "This trial version expires May 12, 2002."
+
+#else // !defined(SYNERGEX_TRIAL)
+
+#ifdef FP_ADB // ADO fpSpraed 3.5 ANSI -scl
+#define SS_FILEDESCRIPTION	"FarPoint Spread Controls (OLEDB)"
+#define SS_INTERNALNAME		"fpSpr35\0"
+#define SS_ORIGINALFILENAME "fpSpr35.ocx\0"
+#else // non-ADO fpSpread 3.0 ANSI -scl
+#define SS_FILEDESCRIPTION	"FarPoint Spread Controls"
+#define SS_INTERNALNAME		"Spr32x35\0"
+#define SS_ORIGINALFILENAME "Spr32x35.ocx\0"
+#endif // FP_ADB
+
+#endif
+
+#elif SS_V30
+#ifdef FP_ADB // ADO fpSpraed 3.0 ANSI -scl
+#define SS_FILEDESCRIPTION	"FarPoint Spread Controls (OLEDB)"
+#define SS_INTERNALNAME		"fpSpr30\0"
+#define SS_ORIGINALFILENAME "fpSpr30.ocx\0"
+#else // non-ADO fpSpread 3.0 ANSI -scl
+#define SS_FILEDESCRIPTION	"FarPoint Spread Controls"
+#ifdef _WIN32
+#define SS_INTERNALNAME		"Spr32x30\0"
+#define SS_ORIGINALFILENAME "Spr32x30.ocx\0"
+#else
+#define SS_INTERNALNAME		"Spr16x30\0"
+#define SS_ORIGINALFILENAME "Spr16x30.ocx\0"
+#endif // _WIN32
+#endif // FP_ADB
+#else // non-ADO vaSpread 2.5 ANSI -scl
+#define SS_FILEDESCRIPTION	"FarPoint Spread Control"
+#ifdef _WIN32
+#define SS_INTERNALNAME		"ss32x25\0"
+#define SS_ORIGINALFILENAME "ss32x25.ocx\0"
+#else
+#define SS_INTERNALNAME		"ss16x25\0"
+#define SS_ORIGINALFILENAME "ss16x25.ocx\0"
+#endif // _WIN32
+#endif // SS_V30
+#endif // _UNICODE
+#elif defined(SS_GRIDOCX)
+#define SS_PRODUCTNAME		"Grid\0"
+#ifdef SS_V30
+#ifdef FP_ADB // ADO fpGrid 3.0 ANSI -scl
+#define SS_FILEDESCRIPTION	"FarPoint Grid Controls (OLEDB)"
+#define SS_INTERNALNAME		"fpGrd30\0"
+#define SS_ORIGINALFILENAME "fpGrd30.ocx\0"
+#else // non-ADO fpGrid 3.0 ANSI -scl
+#define SS_FILEDESCRIPTION	"FarPoint Grid Controls"
+#ifdef _WIN32
+#define SS_INTERNALNAME		"grd32x30\0"
+#define SS_ORIGINALFILENAME "grd32x30.ocx\0"
+#else
+#define SS_INTERNALNAME		"grd16x30\0"
+#define SS_ORIGINALFILENAME "grd16x30.ocx\0"
+#endif // _WIN32
+#endif // FP_ADB
+#else // non-ADO vaGrid 2.5 ANSI -scl
+#define SS_FILEDESCRIPTION	"FarPoint Grid Control"
+#ifdef _WIN32
+#define SS_INTERNALNAME		"grd32x25\0"
+#define SS_ORIGINALFILENAME "grd32x25.ocx\0"
+#else
+#define SS_INTERNALNAME		"grd16x25\0"
+#define SS_ORIGINALFILENAME "grd16x25.ocx\0"
+#endif // _WIN32
+#endif // SS_V30
+#elif defined (SS_RSOCX)
+#define SS_PRODUCTNAME		"RSSpread\0"
+#ifdef SS_V30
+#ifdef FP_ADB // ADO RSSpread 3.0 ANSI -scl
+#define SS_FILEDESCRIPTION	"Rockwell Spread Controls (OLEDB)"
+#define SS_INTERNALNAME		"rsSpr30\0"
+#define SS_ORIGINALFILENAME "rsSpr30.ocx\0"
+#else // non-ADO RSSpread 3.0 ANSI -scl
+#define SS_FILEDESCRIPTION	"Rockwell Spread Controls"
+#ifdef _WIN32
+#define SS_INTERNALNAME		"rs32x30\0"
+#define SS_ORIGINALFILENAME "rs32x30.ocx\0"
+#else
+#define SS_INTERNALNAME		"rs16x30\0"
+#define SS_ORIGINALFILENAME "rs16x30.ocx\0"
+#endif // _WIN32
+#endif // FP_ADB
+#else // non-ADO RSSpread 2.5 ANSI -scl
+#define SS_FILEDESCRIPTION	"Rockwell Spread Control"
+#ifdef _WIN32
+#define SS_INTERNALNAME		"rs32x25\0"
+#define SS_ORIGINALFILENAME "rs32x25.ocx\0"
+#else
+#define SS_INTERNALNAME		"rs16x25\0"
+#define SS_ORIGINALFILENAME "rs16x25.ocx\0"
+#endif // _WIN32
+#endif // SS_V30
+#endif // SS_SPREADOCX
+
+/////////////////////////////////////////////////////////////////////////////
+// Version stamp for this DLL
+
+#ifdef _WIN32
+#include "winver.h"
+#else
+#include "ver.h"
+#endif
+
+VS_VERSION_INFO     VERSIONINFO
+  FILEVERSION       SS_FILEVER
+  PRODUCTVERSION    SS_PRODUCTVER
+  FILEFLAGSMASK     VS_FFI_FILEFLAGSMASK
+#ifdef _DEBUG
+  FILEFLAGS         VS_FF_DEBUG|VS_FF_PRIVATEBUILD|VS_FF_PRERELEASE
+#else
+  FILEFLAGS         0 // final version
+#endif
+#ifdef _WIN32
+  FILEOS            VOS__WINDOWS32
+#else
+  FILEOS            VOS__WINDOWS16
+#endif
+  FILETYPE          VFT_DLL
+  FILESUBTYPE       0   // not used
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+#ifdef _WIN32
+        BLOCK "040904B0" // Lang=US English, CharSet=Unicode
+#else
+        BLOCK "040904E4" // Lang=US English, CharSet=Windows Multilingual
+#endif
+        BEGIN
+            VALUE "CompanyName",		SS_COMPANYNAME
+            VALUE "FileDescription",	SS_FILEDESCRIPTION
+            VALUE "FileVersion",		SS_FILEVERSION
+            VALUE "InternalName",		SS_INTERNALNAME
+#ifdef FP_UNICODE_TEST
+            VALUE "Comments", "This is pre-release software - NOT INTENDED FOR DISTRIBUTION!"
+            VALUE "Expires", UNICODE_TEST_EXPIRATION_DATE
+#endif
+			VALUE "LegalCopyright",		SS_LEGALCOPYRIGHT
+			VALUE "LegalTrademarks",	SS_LEGALTRADEMARKS
+            VALUE "OriginalFilename",	SS_ORIGINALFILENAME
+            VALUE "ProductName",		SS_PRODUCTNAME
+            VALUE "ProductVersion",		SS_PRODUCTVERSION
+#ifdef SYNERGEX_TRIAL
+            VALUE "Trial Version Expiration", SYNERGEX_EXPIRATION_DATE
+#endif
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+#ifdef _WIN32
+        VALUE "Translation", 0x409, 1200
+            // English language (0x409) and the Unicode codepage (1200)
+#else
+        VALUE "Translation", 0x409, 1252
+            // English language (0x409) and the Windows ANSI codepage (1252)
+#endif
+    END
+END
+
+/////////////////////////////////////////////////////////////////////////////
+// Type library for controls in this DLL
+1 TYPELIB ssocx.tlb
+
+/////////////////////////////////////////////////////////////////////////////
+// Add additional manually edited resources here...
+
+tbCB_Up           BITMAP "..\\sssrc\\classes\\cbrsv1.bmp"
+tbCB_Down         BITMAP "..\\sssrc\\classes\\cbrsv2.bmp"
+tbCB_Gray         BITMAP "..\\sssrc\\classes\\cbrsv3.bmp"
+tbCB_FocusUp      BITMAP "..\\sssrc\\classes\\cbrsv4.bmp"
+tbCB_FocusDown    BITMAP "..\\sssrc\\classes\\cbrsv5.bmp"
+tbCB_FocusGray    BITMAP "..\\sssrc\\classes\\cbrsv6.bmp"
+tbCB_DisabledUp   BITMAP "..\\sssrc\\classes\\cbrsv7.bmp"
+tbCB_DisabledDown BITMAP "..\\sssrc\\classes\\cbrsv8.bmp"
+tbCB_DisabledGray BITMAP "..\\sssrc\\classes\\cbrsv9.bmp"
+
+sbrhome  BITMAP "..\\sssrc\\spread\\sbrhome.bmp"
+sbrup    BITMAP "..\\sssrc\\spread\\sbrup.bmp"
+sbrdn    BITMAP "..\\sssrc\\spread\\sbrdn.bmp"
+sbrend   BITMAP "..\\sssrc\\spread\\sbrend.bmp"
+sbrpgdn  BITMAP "..\\sssrc\\spread\\sbrpgdn.bmp"
+sbrpgup  BITMAP "..\\sssrc\\spread\\sbrpgup.bmp"
+sbrhomed BITMAP "..\\sssrc\\spread\\sbrhomed.bmp"
+sbrupd   BITMAP "..\\sssrc\\spread\\sbrupd.bmp"
+sbrdnd   BITMAP "..\\sssrc\\spread\\sbrdnd.bmp"
+sbrendd  BITMAP "..\\sssrc\\spread\\sbrendd.bmp"
+sbrpgdnd BITMAP "..\\sssrc\\spread\\sbrpgdnd.bmp"
+sbrpgupd BITMAP "..\\sssrc\\spread\\sbrpgupd.bmp"
+
+sbrhomeh  BITMAP "..\\sssrc\\spread\\sbrhomeh.bmp"
+sbrlf    BITMAP "..\\sssrc\\spread\\sbrlf.bmp"
+sbrrt    BITMAP "..\\sssrc\\spread\\sbrrt.bmp"
+sbrendh   BITMAP "..\\sssrc\\spread\\sbrendh.bmp"
+sbrpgrt  BITMAP "..\\sssrc\\spread\\sbrpgrt.bmp"
+sbrpglf  BITMAP "..\\sssrc\\spread\\sbrpglf.bmp"
+sbrhomehd BITMAP "..\\sssrc\\spread\\sbrhomehd.bmp"
+sbrlfd   BITMAP "..\\sssrc\\spread\\sbrlfd.bmp"
+sbrrtd   BITMAP "..\\sssrc\\spread\\sbrrtd.bmp"
+sbrendhd  BITMAP "..\\sssrc\\spread\\sbrendhd.bmp"
+sbrpgrtd BITMAP "..\\sssrc\\spread\\sbrpgrtd.bmp"
+sbrpglfd BITMAP "..\\sssrc\\spread\\sbrpglfd.bmp"
+
+
+//Add by BOC 99.4.23 (hyt)---------------------------
+//should be japanese 
+#ifdef SPREAD_JPN
+/////////////////////////////////////////////////////////////////////////////
+// Japanese resources
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+#endif
+#endif
+
+#include "ssocx.dlg"
+#include "..\..\vbx\stringrc.rc"
+
+
+/////////////////////////////////////////////////////////////////////////////
+

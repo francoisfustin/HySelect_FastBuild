@@ -1,0 +1,1087 @@
+#Start of test definition
+
+StartTechnicalParameters
+ApplicationType = 2
+AvailablePMPanels = 7
+BreakTankRequiredForWaterMakeUp = 1
+CVDefKvReynard = 1
+CVMaxDispDp = 200000
+CVMaxDpProp = 65000
+CVMinAuthCstFlow = 0.5
+CVMinAuthor = 0.25
+CVMinDpOnoff = 3000
+CVMinDpProp = 10000
+CVUseDpCPBand = 0
+CanChangePressureVolumeLimit = 0
+CurrencyID = CURRENCY_EUR
+DefaultCalculationNorm = PM_NORM_EN12828
+DefaultCoolingTps = 7
+DefaultFillTemperature = 15
+DefaultHeatingTps = 50
+DefaultISChangeOverCoolingSideAdditFamilyID = WATER_ADDIT
+DefaultISChangeOverCoolingSideAdditID = WATER
+DefaultISChangeOverCoolingSideDT = 6
+DefaultISChangeOverCoolingSidePcWeight = 0
+DefaultISChangeOverCoolingSideTps = 6
+DefaultISChangeOverHeatingSideAdditFamilyID = WATER_ADDIT
+DefaultISChangeOverHeatingSideAdditID = WATER
+DefaultISChangeOverHeatingSideDT = 20
+DefaultISChangeOverHeatingSidePcWeight = 0
+DefaultISChangeOverHeatingSideTps = 75
+DefaultISCoolingAdditFamilyID = WATER_ADDIT
+DefaultISCoolingAdditID = WATER
+DefaultISCoolingDT = 20
+DefaultISCoolingPcWeight = 0
+DefaultISCoolingTps = 60
+DefaultISHeatingAdditFamilyID = WATER_ADDIT
+DefaultISHeatingAdditID = WATER
+DefaultISHeatingDT = 5
+DefaultISHeatingPcWeight = 0
+DefaultISHeatingTps = 80
+DefaultISSolarAdditFamilyID = WATER_ADDIT
+DefaultISSolarAdditID = WATER
+DefaultISSolarDT = 20
+DefaultISSolarPcWeight = 0
+DefaultISSolarTps = 70
+DefaultMaxTempInCooling = 45
+DefaultMinTempInHeating = 5
+DefaultMinTempInSolar = 5
+DefaultPipeSerieID = STEEL_DIN2440
+DefaultPrjCoolingAdditID = WATER
+DefaultPrjCoolingDT = 5
+DefaultPrjCoolingPcWeight = 0
+DefaultPrjHeatingAdditID = WATER
+DefaultPrjHeatingDT = 5
+DefaultPrjHeatingPcWeight = 0
+DefaultSafetyPressureResponseValve = 300000
+DefaultSecondaryPumpHMin = 25000
+DefaultSmartCVLocation = 1
+DefaultStaticPressureOfWaterNetwork = 400000
+DefaultTAZ = 100
+DefaultWaterHardness = 1.78324958
+DefaultWaterMakeUpTemp = 15
+DegassingWaterReserveForVessel = 0.002
+DpCBCVDpcmin = 5000
+DpCBCVDplmin = 5000
+DpCHide = 0
+DpCHminFullyOpenMv = 0
+DpCMinDp = 5000
+DpCMvLocation = 0
+DpCMvWithSameSizeOnly = 0
+DpRefForBest6Way = 3000
+FixedOrificeMaxDp = 6000
+FixedOrificeMinDp = 2000
+FlowDeviationMinus = -0.1
+FlowDeviationPlus = 0.1
+FluidTempLimitEN12953 = 105
+InitialPressureMargin = 30000
+MaxNumberOfAdditionalVesselsInParallel = 4
+MaxNumberOfVentoInParallel = 2
+MaxSafetyValveInParallel = 3
+MaxSizeShift = 4
+MinPressureMargin = 20000
+PICvHide = 0
+PICvMinDp = 1000
+PSetupCompresso = 10000
+PSetupTransfero = 20000
+PipeMaxDp = 200
+PipeMaxVelocity = 2
+PipeMinDp = 10
+PipeMinVelocity = 0.3
+PipeTargetDp = 150
+PipeTargetVelocity = 1
+PipeTargetVelosityUsed = 0
+PressureVolumeLimit = 300000
+ProjectType = 1
+SafetyTempLimiterLimitEN12953 = 110
+SizeShiftAbove = 0
+SizeShiftBelow = -2
+SmartValveDpMaxForBestSuggestion = 20000
+TrvDefDpTotal = 10000
+TrvDefRoomTemperature = 20
+TrvDefSupplyTemperature = 80
+TrvMaxDp = 30000
+TrvMinDpRatio = 0.25
+UseDefaultFreezingPointAsMinTemperature = 1
+UseSimplyPst = 0
+UseVesselPressureVolumeLimit = 0
+ValveMaxDp = 200000
+ValveMin2Dp = 6000
+ValveMinDp = 3000
+VenturiMaxDp = 10000
+VenturiMinDp = 2000
+VesselSelectionRangePercentage = 0
+EndTechnicalParameters
+
+Test number = 0
+
+SelectionMode = Batch
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = 
+ComboFamilyBelow65ID = 
+ComboMaterialBelow65ID = 
+ComboConnectBelow65ID = 
+ComboVersionBelow65ID = 
+ComboPNBelow65ID = 
+ComboTypeAbove50ID = 
+ComboFamilyAbove50ID = 
+ComboMaterialAbove50ID = 
+ComboConnectAbove50ID = 
+ComboVersionAbove50ID = 
+ComboPNAbove50ID = 
+SeparatorComboTypeID = SEPTYPE_ZCD
+SeparatorComboFamilyID = FAM_ZG
+SeparatorComboConnectID = CONN_FLANGE
+SeparatorComboVersionID = VERS_STD
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 1;5.555555554e-05; ; ;FindOneSolutionWithAlternative;ZCD_20;ZCD 20;Cyclonic dirt separator;Brass;Thread;Standard;10;20 (3/4");112.979;-10/120;15 (1/2");83.9387;0.276311
+Result number = 2;8.333333331e-05; ; ;FindOneSolutionWithAlternative;ZCD_20;ZCD 20;Cyclonic dirt separator;Brass;Thread;Standard;10;20 (3/4");254.203;-10/120;15 (1/2");176.093;0.414466
+Result number = 3;0.00013888888885; ; ;FindOneSolutionWithAlternative;ZCD_20;ZCD 20;Cyclonic dirt separator;Brass;Thread;Standard;10;20 (3/4");706.119;-10/120;20 (3/4");101.525;0.379027
+Result number = 4;0.00022222222216; ; ;FindOneSolutionWithAlternative;ZCD_20;ZCD 20;Cyclonic dirt separator;Brass;Thread;Standard;10;20 (3/4");1807.66;-10/120;25 (1");76.8895;0.382437
+Result number = 5;0.00036111111101; ; ;FindOneSolutionWithAlternative;ZCD_25;ZCD 25;Cyclonic dirt separator;Brass;Thread;Standard;10;25 (1");4615.58;-10/120;25 (1");189.605;0.62146
+Result number = 6;0.00058333333317; ; ;FindOneSolutionWithAlternative;ZCD_32;ZCD 32;Cyclonic dirt separator;Brass;Thread;Standard;10;32 (1 1/4");2565.63;-10/120;32 (1 1/4");115.902;0.576286
+Result number = 7;0.00094444444418; ; ;FindOneSolutionWithAlternative;ZCD_40;ZCD 40;Cyclonic dirt separator;Brass;Thread;Standard;10;40 (1 1/2");3019.93;-10/120;40 (1 1/2");133.626;0.688231
+Result number = 8;0.00152777777735; ; ;FindOneSolutionWithAlternative;ZCD_50;ZCD 50;Cyclonic dirt separator;Brass;Thread;Standard;10;50 (2");3766.64;-10/120;50 (2");100.483;0.692498
+Result number = 9;0.00247222222153; ; ;FindOneSolution;ZG_65;ZG 65;Cyclonic dirt separator;Steel;Flange;Standard;16;65 (2 1/2");4096.84;-10/110;65 (2 1/2");67.3119;0.664999
+Result number = 10;0.00399999999888; ; ;FindOneSolution;ZG_65;ZG 65;Cyclonic dirt separator;Steel;Flange;Standard;16;65 (2 1/2");10724.9;-10/110;65 (2 1/2");167.907;1.07595
+Result number = 11;0.00647222222041; ; ;FindOneSolution;ZG_80;ZG 80;Cyclonic dirt separator;Steel;Flange;Standard;16;80 (3");13448.5;-10/110;80 (3");187.012;1.26224
+Result number = 12;0.01047222221929; ; ;FindOneSolution;ZG_100;ZG 100;Cyclonic dirt separator;Steel;Flange;Standard;16;100 (4");13172;-10/110;100 (4");124.856;1.2094
+Result number = 13;0.0169444444397; ; ;FindOneSolution;ZG_125;ZG 125;Cyclonic dirt separator;Steel;Flange;Standard;16;125 (5");13769.8;-10/110;125 (5");106.696;1.27659
+Result number = 14;0.02741666665899; ; ;FindOneSolution;ZG_150;ZG 150;Cyclonic dirt separator;Steel;Flange;Standard;16;150 (6");20914.6;-10/110;150 (6");110.527;1.45299
+Result number = 15;0.04436111109869; ; ;FindOneSolution;ZG_200;ZG 200;Cyclonic dirt separator;Steel;Flange;Standard;16;200 (8");18023.3;-10/110;200 (8");64.5053;1.31817
+Result number = 16;0.07177777775768; ; ;FindOneSolution;ZG_250;ZG 250;Cyclonic dirt separator;Steel;Flange;Standard;16;250 (10");23637.7;-10/110;250 (10");51.4385;1.35193
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 1
+
+SelectionMode = Batch
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = 
+ComboFamilyBelow65ID = 
+ComboMaterialBelow65ID = 
+ComboConnectBelow65ID = 
+ComboVersionBelow65ID = 
+ComboPNBelow65ID = 
+ComboTypeAbove50ID = 
+ComboFamilyAbove50ID = 
+ComboMaterialAbove50ID = 
+ComboConnectAbove50ID = 
+ComboVersionAbove50ID = 
+ComboPNAbove50ID = 
+SeparatorComboTypeID = SEPTYPE_ZCD
+SeparatorComboFamilyID = FAM_ZG
+SeparatorComboConnectID = CONN_WELDINGGROOVE
+SeparatorComboVersionID = VERS_STD
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 1;5.555555554e-05; ; ;FindOneSolutionWithAlternative;ZCD_20;ZCD 20;Cyclonic dirt separator;Brass;Thread;Standard;10;20 (3/4");112.979;-10/120;15 (1/2");83.9387;0.276311
+Result number = 2;8.333333331e-05; ; ;FindOneSolutionWithAlternative;ZCD_20;ZCD 20;Cyclonic dirt separator;Brass;Thread;Standard;10;20 (3/4");254.203;-10/120;15 (1/2");176.093;0.414466
+Result number = 3;0.00013888888885; ; ;FindOneSolutionWithAlternative;ZCD_20;ZCD 20;Cyclonic dirt separator;Brass;Thread;Standard;10;20 (3/4");706.119;-10/120;20 (3/4");101.525;0.379027
+Result number = 4;0.00022222222216; ; ;FindOneSolutionWithAlternative;ZCD_20;ZCD 20;Cyclonic dirt separator;Brass;Thread;Standard;10;20 (3/4");1807.66;-10/120;25 (1");76.8895;0.382437
+Result number = 5;0.00036111111101; ; ;FindOneSolutionWithAlternative;ZCD_25;ZCD 25;Cyclonic dirt separator;Brass;Thread;Standard;10;25 (1");4615.58;-10/120;25 (1");189.605;0.62146
+Result number = 6;0.00058333333317; ; ;FindOneSolutionWithAlternative;ZCD_32;ZCD 32;Cyclonic dirt separator;Brass;Thread;Standard;10;32 (1 1/4");2565.63;-10/120;32 (1 1/4");115.902;0.576286
+Result number = 7;0.00094444444418; ; ;FindOneSolutionWithAlternative;ZCD_40;ZCD 40;Cyclonic dirt separator;Brass;Thread;Standard;10;40 (1 1/2");3019.93;-10/120;40 (1 1/2");133.626;0.688231
+Result number = 8;0.00152777777735; ; ;FindOneSolutionWithAlternative;ZCD_50;ZCD 50;Cyclonic dirt separator;Brass;Thread;Standard;10;50 (2");3766.64;-10/120;50 (2");100.483;0.692498
+Result number = 9;0.00247222222153; ; ;FindOneSolution;ZG_65W;ZG 65 W;Cyclonic dirt separator;Steel;Welding and Groove;Standard;16;65 (2 1/2");4096.84;-10/110;65 (2 1/2");67.3119;0.664999
+Result number = 10;0.00399999999888; ; ;FindOneSolution;ZG_65W;ZG 65 W;Cyclonic dirt separator;Steel;Welding and Groove;Standard;16;65 (2 1/2");10724.9;-10/110;65 (2 1/2");167.907;1.07595
+Result number = 11;0.00647222222041; ; ;FindOneSolution;ZG_80W;ZG 80 W;Cyclonic dirt separator;Steel;Welding and Groove;Standard;16;80 (3");13448.5;-10/110;80 (3");187.012;1.26224
+Result number = 12;0.01047222221929; ; ;FindOneSolution;ZG_100W;ZG 100 W;Cyclonic dirt separator;Steel;Welding and Groove;Standard;16;100 (4");13172;-10/110;100 (4");124.856;1.2094
+Result number = 13;0.0169444444397; ; ;FindOneSolution;ZG_125W;ZG 125 W;Cyclonic dirt separator;Steel;Welding and Groove;Standard;16;125 (5");13769.8;-10/110;125 (5");106.696;1.27659
+Result number = 14;0.02741666665899; ; ;FindOneSolution;ZG_150W;ZG 150 W;Cyclonic dirt separator;Steel;Welding and Groove;Standard;16;150 (6");20914.6;-10/110;150 (6");110.527;1.45299
+Result number = 15;0.04436111109869; ; ;FindOneSolution;ZG_200W;ZG 200 W;Cyclonic dirt separator;Steel;Welding and Groove;Standard;16;200 (8");18023.3;-10/110;200 (8");64.5053;1.31817
+Result number = 16;0.07177777775768; ; ;FindOneSolution;ZG_250W;ZG 250 W;Cyclonic dirt separator;Steel;Welding and Groove;Standard;16;250 (10");23637.7;-10/110;250 (10");51.4385;1.35193
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 2
+
+SelectionMode = Batch
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = 
+ComboFamilyBelow65ID = 
+ComboMaterialBelow65ID = 
+ComboConnectBelow65ID = 
+ComboVersionBelow65ID = 
+ComboPNBelow65ID = 
+ComboTypeAbove50ID = 
+ComboFamilyAbove50ID = 
+ComboMaterialAbove50ID = 
+ComboConnectAbove50ID = 
+ComboVersionAbove50ID = 
+ComboPNAbove50ID = 
+SeparatorComboTypeID = SEPTYPE_ZCD
+SeparatorComboFamilyID = FAM_ZCD
+SeparatorComboConnectID = CONN_THREAD
+SeparatorComboVersionID = VERS_STD
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;ZCD_20;ZCD 20;Cyclonic dirt separator;Brass;Thread;Standard;10;20 (3/4");112.979;-10/120;15 (1/2");83.9387;0.276311
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;ZCD_20;ZCD 20;Cyclonic dirt separator;Brass;Thread;Standard;10;20 (3/4");254.203;-10/120;15 (1/2");176.093;0.414466
+Result number = 3;0.00013888888885; ; ;FindOneSolution;ZCD_20;ZCD 20;Cyclonic dirt separator;Brass;Thread;Standard;10;20 (3/4");706.119;-10/120;20 (3/4");101.525;0.379027
+Result number = 4;0.00022222222216; ; ;FindOneSolution;ZCD_20;ZCD 20;Cyclonic dirt separator;Brass;Thread;Standard;10;20 (3/4");1807.66;-10/120;25 (1");76.8895;0.382437
+Result number = 5;0.00036111111101; ; ;FindOneSolution;ZCD_25;ZCD 25;Cyclonic dirt separator;Brass;Thread;Standard;10;25 (1");4615.58;-10/120;25 (1");189.605;0.62146
+Result number = 6;0.00058333333317; ; ;FindOneSolution;ZCD_32;ZCD 32;Cyclonic dirt separator;Brass;Thread;Standard;10;32 (1 1/4");2565.63;-10/120;32 (1 1/4");115.902;0.576286
+Result number = 7;0.00094444444418; ; ;FindOneSolution;ZCD_40;ZCD 40;Cyclonic dirt separator;Brass;Thread;Standard;10;40 (1 1/2");3019.93;-10/120;40 (1 1/2");133.626;0.688231
+Result number = 8;0.00152777777735; ; ;FindOneSolution;ZCD_50;ZCD 50;Cyclonic dirt separator;Brass;Thread;Standard;10;50 (2");3766.64;-10/120;50 (2");100.483;0.692498
+Result number = 9;0.00247222222153; ; ;FindOneSolution;ZCD_50;ZCD 50;Cyclonic dirt separator;Brass;Thread;Standard;10;50 (2");9863;-10/120;65 (2 1/2");67.3119;0.664999
+Result number = 10;0.00399999999888; ; ;FindOneSolution;ZCD_50;ZCD 50;Cyclonic dirt separator;Brass;Thread;Standard;10;50 (2");25819.9;-10/120;65 (2 1/2");167.907;1.07595
+Result number = 11;0.00647222222041; ; ;FindOneSolutionWithAlternative;ZG_80;ZG 80;Cyclonic dirt separator;Steel;Flange;Standard;16;80 (3");13448.5;-10/110;80 (3");187.012;1.26224
+Result number = 12;0.01047222221929; ; ;FindOneSolutionWithAlternative;ZG_100;ZG 100;Cyclonic dirt separator;Steel;Flange;Standard;16;100 (4");13172;-10/110;100 (4");124.856;1.2094
+Result number = 13;0.0169444444397; ; ;FindOneSolutionWithAlternative;ZG_125;ZG 125;Cyclonic dirt separator;Steel;Flange;Standard;16;125 (5");13769.8;-10/110;125 (5");106.696;1.27659
+Result number = 14;0.02741666665899; ; ;FindOneSolutionWithAlternative;ZG_150;ZG 150;Cyclonic dirt separator;Steel;Flange;Standard;16;150 (6");20914.6;-10/110;150 (6");110.527;1.45299
+Result number = 15;0.04436111109869; ; ;FindOneSolutionWithAlternative;ZG_200;ZG 200;Cyclonic dirt separator;Steel;Flange;Standard;16;200 (8");18023.3;-10/110;200 (8");64.5053;1.31817
+Result number = 16;0.07177777775768; ; ;FindOneSolutionWithAlternative;ZG_250;ZG 250;Cyclonic dirt separator;Steel;Flange;Standard;16;250 (10");23637.7;-10/110;250 (10");51.4385;1.35193
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 3
+
+SelectionMode = Batch
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = 
+ComboFamilyBelow65ID = 
+ComboMaterialBelow65ID = 
+ComboConnectBelow65ID = 
+ComboVersionBelow65ID = 
+ComboPNBelow65ID = 
+ComboTypeAbove50ID = 
+ComboFamilyAbove50ID = 
+ComboMaterialAbove50ID = 
+ComboConnectAbove50ID = 
+ComboVersionAbove50ID = 
+ComboPNAbove50ID = 
+SeparatorComboTypeID = SEPTYPE_MB
+SeparatorComboFamilyID = FAM_ZUV
+SeparatorComboConnectID = CONN_THREAD
+SeparatorComboVersionID = VERS_STD
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;ZUV_20;ZUV 20;Micro-bubble separator;Brass;Thread;Standard;10;20 (3/4");9.09024;-10/110;10 (3/8");80.851;0.226354
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;ZUV_20;ZUV 20;Micro-bubble separator;Brass;Thread;Standard;10;20 (3/4");36.3609;-10/110;15 (1/2");83.9387;0.276311
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;ZUV_20;ZUV 20;Micro-bubble separator;Brass;Thread;Standard;10;20 (3/4");81.8121;-10/110;15 (1/2");176.093;0.414466
+Result number = 3;0.00013888888885; ; ;FindOneSolution;ZUV_20;ZUV 20;Micro-bubble separator;Brass;Thread;Standard;10;20 (3/4");227.256;-10/110;20 (3/4");101.525;0.379027
+Result number = 4;0.00022222222216; ; ;FindOneSolution;ZUV_20;ZUV 20;Micro-bubble separator;Brass;Thread;Standard;10;20 (3/4");581.775;-10/110;25 (1");76.8895;0.382437
+Result number = 5;0.00036111111101; ; ;FindOneSolution;ZUV_20;ZUV 20;Micro-bubble separator;Brass;Thread;Standard;10;20 (3/4");1536.25;-10/110;25 (1");189.605;0.62146
+Result number = 6;0.00058333333317; ; ;FindOneSolution;ZUV_25;ZUV 25;Micro-bubble separator;Brass;Thread;Standard;10;25 (1");1213.83;-10/110;32 (1 1/4");115.902;0.576286
+Result number = 7;0.00094444444418; ; ;FindOneSolution;ZUV_32;ZUV 32;Micro-bubble separator;Brass;Thread;Standard;10;32 (1 1/4");938.515;-10/110;40 (1 1/2");133.626;0.688231
+Result number = 8;0.00152777777735; ; ;FindOneSolution;ZUV_40;ZUV 40;Micro-bubble separator;Brass;Thread;Standard;10;40 (1 1/2");1399.48;-10/110;50 (2");100.483;0.692498
+Result number = 9;0.00247222222153; ; ;FindOneSolution;ZUV_40;ZUV 40;Micro-bubble separator;Brass;Thread;Standard;10;40 (1 1/2");3664.54;-10/110;65 (2 1/2");67.3119;0.664999
+Result number = 10;0.00399999999888; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 11;0.00647222222041; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 12;0.01047222221929; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 13;0.0169444444397; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 14;0.02741666665899; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 15;0.04436111109869; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 16;0.07177777775768; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 4
+
+SelectionMode = Batch
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = 
+ComboFamilyBelow65ID = 
+ComboMaterialBelow65ID = 
+ComboConnectBelow65ID = 
+ComboVersionBelow65ID = 
+ComboPNBelow65ID = 
+ComboTypeAbove50ID = 
+ComboFamilyAbove50ID = 
+ComboMaterialAbove50ID = 
+ComboConnectAbove50ID = 
+ComboVersionAbove50ID = 
+ComboPNAbove50ID = 
+SeparatorComboTypeID = SEPTYPE_MB
+SeparatorComboFamilyID = FAM_ZUV
+SeparatorComboConnectID = CONN_THREAD
+SeparatorComboVersionID = VERS_SOLAR
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;ZUVS_20;ZUVS 20;Micro-bubble separator;Brass;Thread;Solar;10;20 (3/4");9.09024;-10/160;10 (3/8");80.851;0.226354
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;ZUVS_20;ZUVS 20;Micro-bubble separator;Brass;Thread;Solar;10;20 (3/4");36.3609;-10/160;15 (1/2");83.9387;0.276311
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;ZUVS_20;ZUVS 20;Micro-bubble separator;Brass;Thread;Solar;10;20 (3/4");81.8121;-10/160;15 (1/2");176.093;0.414466
+Result number = 3;0.00013888888885; ; ;FindOneSolution;ZUVS_20;ZUVS 20;Micro-bubble separator;Brass;Thread;Solar;10;20 (3/4");227.256;-10/160;20 (3/4");101.525;0.379027
+Result number = 4;0.00022222222216; ; ;FindOneSolution;ZUVS_20;ZUVS 20;Micro-bubble separator;Brass;Thread;Solar;10;20 (3/4");581.775;-10/160;25 (1");76.8895;0.382437
+Result number = 5;0.00036111111101; ; ;FindOneSolution;ZUVS_20;ZUVS 20;Micro-bubble separator;Brass;Thread;Solar;10;20 (3/4");1536.25;-10/160;25 (1");189.605;0.62146
+Result number = 6;0.00058333333317; ; ;FindOneSolution;ZUVS_25;ZUVS 25;Micro-bubble separator;Brass;Thread;Solar;10;25 (1");1213.83;-10/160;32 (1 1/4");115.902;0.576286
+Result number = 7;0.00094444444418; ; ;FindOneSolution;ZUVS_32;ZUVS 32;Micro-bubble separator;Brass;Thread;Solar;10;32 (1 1/4");938.515;-10/160;40 (1 1/2");133.626;0.688231
+Result number = 8;0.00152777777735; ; ;FindOneSolution;ZUVS_40;ZUVS 40;Micro-bubble separator;Brass;Thread;Solar;10;40 (1 1/2");1399.48;-10/160;50 (2");100.483;0.692498
+Result number = 9;0.00247222222153; ; ;FindOneSolution;ZUVS_40;ZUVS 40;Micro-bubble separator;Brass;Thread;Solar;10;40 (1 1/2");3664.54;-10/160;65 (2 1/2");67.3119;0.664999
+Result number = 10;0.00399999999888; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 11;0.00647222222041; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 12;0.01047222221929; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 13;0.0169444444397; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 14;0.02741666665899; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 15;0.04436111109869; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 16;0.07177777775768; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 5
+
+SelectionMode = Batch
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = 
+ComboFamilyBelow65ID = 
+ComboMaterialBelow65ID = 
+ComboConnectBelow65ID = 
+ComboVersionBelow65ID = 
+ComboPNBelow65ID = 
+ComboTypeAbove50ID = 
+ComboFamilyAbove50ID = 
+ComboMaterialAbove50ID = 
+ComboConnectAbove50ID = 
+ComboVersionAbove50ID = 
+ComboPNAbove50ID = 
+SeparatorComboTypeID = SEPTYPE_MB
+SeparatorComboFamilyID = FAM_ZUV
+SeparatorComboConnectID = CONN_THREAD
+SeparatorComboVersionID = VERS_LATERALSOLAR
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolutionWithAlternative;ZUV_20;ZUV 20;Micro-bubble separator;Brass;Thread;Standard;10;20 (3/4");9.09024;-10/110;10 (3/8");80.851;0.226354
+Result number = 1;5.555555554e-05; ; ;FindOneSolutionWithAlternative;ZUV_20;ZUV 20;Micro-bubble separator;Brass;Thread;Standard;10;20 (3/4");36.3609;-10/110;15 (1/2");83.9387;0.276311
+Result number = 2;8.333333331e-05; ; ;FindOneSolutionWithAlternative;ZUV_20;ZUV 20;Micro-bubble separator;Brass;Thread;Standard;10;20 (3/4");81.8121;-10/110;15 (1/2");176.093;0.414466
+Result number = 3;0.00013888888885; ; ;FindOneSolutionWithAlternative;ZUV_20;ZUV 20;Micro-bubble separator;Brass;Thread;Standard;10;20 (3/4");227.256;-10/110;20 (3/4");101.525;0.379027
+Result number = 4;0.00022222222216; ; ;FindOneSolutionWithAlternative;ZUV_20;ZUV 20;Micro-bubble separator;Brass;Thread;Standard;10;20 (3/4");581.775;-10/110;25 (1");76.8895;0.382437
+Result number = 5;0.00036111111101; ; ;FindOneSolutionWithAlternative;ZUV_20;ZUV 20;Micro-bubble separator;Brass;Thread;Standard;10;20 (3/4");1536.25;-10/110;25 (1");189.605;0.62146
+Result number = 6;0.00058333333317; ; ;FindOneSolutionWithAlternative;ZUV_25;ZUV 25;Micro-bubble separator;Brass;Thread;Standard;10;25 (1");1213.83;-10/110;32 (1 1/4");115.902;0.576286
+Result number = 7;0.00094444444418; ; ;FindOneSolutionWithAlternative;ZUV_32;ZUV 32;Micro-bubble separator;Brass;Thread;Standard;10;32 (1 1/4");938.515;-10/110;40 (1 1/2");133.626;0.688231
+Result number = 8;0.00152777777735; ; ;FindOneSolutionWithAlternative;ZUV_40;ZUV 40;Micro-bubble separator;Brass;Thread;Standard;10;40 (1 1/2");1399.48;-10/110;50 (2");100.483;0.692498
+Result number = 9;0.00247222222153; ; ;FindOneSolutionWithAlternative;ZUV_40;ZUV 40;Micro-bubble separator;Brass;Thread;Standard;10;40 (1 1/2");3664.54;-10/110;65 (2 1/2");67.3119;0.664999
+Result number = 10;0.00399999999888; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 11;0.00647222222041; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 12;0.01047222221929; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 13;0.0169444444397; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 14;0.02741666665899; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 15;0.04436111109869; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 16;0.07177777775768; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 6
+
+SelectionMode = Batch
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = 
+ComboFamilyBelow65ID = 
+ComboMaterialBelow65ID = 
+ComboConnectBelow65ID = 
+ComboVersionBelow65ID = 
+ComboPNBelow65ID = 
+ComboTypeAbove50ID = 
+ComboFamilyAbove50ID = 
+ComboMaterialAbove50ID = 
+ComboConnectAbove50ID = 
+ComboVersionAbove50ID = 
+ComboPNAbove50ID = 
+SeparatorComboTypeID = SEPTYPE_MB
+SeparatorComboFamilyID = FAM_ZUV
+SeparatorComboConnectID = CONN_COMPRFIT
+SeparatorComboVersionID = VERS_SOLAR
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;ZUVS_22;ZUVS 22;Micro-bubble separator;Brass;Compression fitting;Solar;10;20 (3/4");9.09024;-10/160;10 (3/8");80.851;0.226354
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;ZUVS_22;ZUVS 22;Micro-bubble separator;Brass;Compression fitting;Solar;10;20 (3/4");36.3609;-10/160;15 (1/2");83.9387;0.276311
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;ZUVS_22;ZUVS 22;Micro-bubble separator;Brass;Compression fitting;Solar;10;20 (3/4");81.8121;-10/160;15 (1/2");176.093;0.414466
+Result number = 3;0.00013888888885; ; ;FindOneSolution;ZUVS_22;ZUVS 22;Micro-bubble separator;Brass;Compression fitting;Solar;10;20 (3/4");227.256;-10/160;20 (3/4");101.525;0.379027
+Result number = 4;0.00022222222216; ; ;FindOneSolution;ZUVS_22;ZUVS 22;Micro-bubble separator;Brass;Compression fitting;Solar;10;20 (3/4");581.775;-10/160;25 (1");76.8895;0.382437
+Result number = 5;0.00036111111101; ; ;FindOneSolution;ZUVS_22;ZUVS 22;Micro-bubble separator;Brass;Compression fitting;Solar;10;20 (3/4");1536.25;-10/160;25 (1");189.605;0.62146
+Result number = 6;0.00058333333317; ; ;FindOneSolution;ZUVS_22;ZUVS 22;Micro-bubble separator;Brass;Compression fitting;Solar;10;20 (3/4");4008.79;-10/160;32 (1 1/4");115.902;0.576286
+Result number = 7;0.00094444444418; ; ;FindOneSolutionWithAlternative;ZUV_32;ZUV 32;Micro-bubble separator;Brass;Thread;Standard;10;32 (1 1/4");938.515;-10/110;40 (1 1/2");133.626;0.688231
+Result number = 8;0.00152777777735; ; ;FindOneSolutionWithAlternative;ZUV_40;ZUV 40;Micro-bubble separator;Brass;Thread;Standard;10;40 (1 1/2");1399.48;-10/110;50 (2");100.483;0.692498
+Result number = 9;0.00247222222153; ; ;FindOneSolutionWithAlternative;ZUV_40;ZUV 40;Micro-bubble separator;Brass;Thread;Standard;10;40 (1 1/2");3664.54;-10/110;65 (2 1/2");67.3119;0.664999
+Result number = 10;0.00399999999888; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 11;0.00647222222041; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 12;0.01047222221929; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 13;0.0169444444397; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 14;0.02741666665899; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 15;0.04436111109869; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 16;0.07177777775768; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 7
+
+SelectionMode = Batch
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = 
+ComboFamilyBelow65ID = 
+ComboMaterialBelow65ID = 
+ComboConnectBelow65ID = 
+ComboVersionBelow65ID = 
+ComboPNBelow65ID = 
+ComboTypeAbove50ID = 
+ComboFamilyAbove50ID = 
+ComboMaterialAbove50ID = 
+ComboConnectAbove50ID = 
+ComboVersionAbove50ID = 
+ComboPNAbove50ID = 
+SeparatorComboTypeID = SEPTYPE_MB
+SeparatorComboFamilyID = FAM_ZUV
+SeparatorComboConnectID = CONN_COMPRFIT
+SeparatorComboVersionID = VERS_LATERALSOLAR
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolutionWithAlternative;ZUVS_22;ZUVS 22;Micro-bubble separator;Brass;Compression fitting;Solar;10;20 (3/4");9.09024;-10/160;10 (3/8");80.851;0.226354
+Result number = 1;5.555555554e-05; ; ;FindOneSolutionWithAlternative;ZUVS_22;ZUVS 22;Micro-bubble separator;Brass;Compression fitting;Solar;10;20 (3/4");36.3609;-10/160;15 (1/2");83.9387;0.276311
+Result number = 2;8.333333331e-05; ; ;FindOneSolutionWithAlternative;ZUVS_22;ZUVS 22;Micro-bubble separator;Brass;Compression fitting;Solar;10;20 (3/4");81.8121;-10/160;15 (1/2");176.093;0.414466
+Result number = 3;0.00013888888885; ; ;FindOneSolutionWithAlternative;ZUVS_22;ZUVS 22;Micro-bubble separator;Brass;Compression fitting;Solar;10;20 (3/4");227.256;-10/160;20 (3/4");101.525;0.379027
+Result number = 4;0.00022222222216; ; ;FindOneSolutionWithAlternative;ZUVS_22;ZUVS 22;Micro-bubble separator;Brass;Compression fitting;Solar;10;20 (3/4");581.775;-10/160;25 (1");76.8895;0.382437
+Result number = 5;0.00036111111101; ; ;FindOneSolutionWithAlternative;ZUVS_22;ZUVS 22;Micro-bubble separator;Brass;Compression fitting;Solar;10;20 (3/4");1536.25;-10/160;25 (1");189.605;0.62146
+Result number = 6;0.00058333333317; ; ;FindOneSolutionWithAlternative;ZUVS_22;ZUVS 22;Micro-bubble separator;Brass;Compression fitting;Solar;10;20 (3/4");4008.79;-10/160;32 (1 1/4");115.902;0.576286
+Result number = 7;0.00094444444418; ; ;FindOneSolutionWithAlternative;ZUV_32;ZUV 32;Micro-bubble separator;Brass;Thread;Standard;10;32 (1 1/4");938.515;-10/110;40 (1 1/2");133.626;0.688231
+Result number = 8;0.00152777777735; ; ;FindOneSolutionWithAlternative;ZUV_40;ZUV 40;Micro-bubble separator;Brass;Thread;Standard;10;40 (1 1/2");1399.48;-10/110;50 (2");100.483;0.692498
+Result number = 9;0.00247222222153; ; ;FindOneSolutionWithAlternative;ZUV_40;ZUV 40;Micro-bubble separator;Brass;Thread;Standard;10;40 (1 1/2");3664.54;-10/110;65 (2 1/2");67.3119;0.664999
+Result number = 10;0.00399999999888; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 11;0.00647222222041; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 12;0.01047222221929; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 13;0.0169444444397; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 14;0.02741666665899; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 15;0.04436111109869; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 16;0.07177777775768; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 8
+
+SelectionMode = Batch
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = 
+ComboFamilyBelow65ID = 
+ComboMaterialBelow65ID = 
+ComboConnectBelow65ID = 
+ComboVersionBelow65ID = 
+ComboPNBelow65ID = 
+ComboTypeAbove50ID = 
+ComboFamilyAbove50ID = 
+ComboMaterialAbove50ID = 
+ComboConnectAbove50ID = 
+ComboVersionAbove50ID = 
+ComboPNAbove50ID = 
+SeparatorComboTypeID = SEPTYPE_SP
+SeparatorComboFamilyID = FAM_ZUDZUM
+SeparatorComboConnectID = CONN_THREAD
+SeparatorComboVersionID = VERS_STD
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;ZUD_20;ZUD 20;Dirt separator;Brass;Thread;Standard;10;20 (3/4");9.09024;-10/110;10 (3/8");80.851;0.226354
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;ZUD_20;ZUD 20;Dirt separator;Brass;Thread;Standard;10;20 (3/4");36.3609;-10/110;15 (1/2");83.9387;0.276311
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;ZUD_20;ZUD 20;Dirt separator;Brass;Thread;Standard;10;20 (3/4");81.8121;-10/110;15 (1/2");176.093;0.414466
+Result number = 3;0.00013888888885; ; ;FindOneSolution;ZUD_20;ZUD 20;Dirt separator;Brass;Thread;Standard;10;20 (3/4");227.256;-10/110;20 (3/4");101.525;0.379027
+Result number = 4;0.00022222222216; ; ;FindOneSolution;ZUD_20;ZUD 20;Dirt separator;Brass;Thread;Standard;10;20 (3/4");581.775;-10/110;25 (1");76.8895;0.382437
+Result number = 5;0.00036111111101; ; ;FindOneSolution;ZUD_20;ZUD 20;Dirt separator;Brass;Thread;Standard;10;20 (3/4");1536.25;-10/110;25 (1");189.605;0.62146
+Result number = 6;0.00058333333317; ; ;FindOneSolution;ZUD_25;ZUD 25;Dirt separator;Brass;Thread;Standard;10;25 (1");1213.83;-10/110;32 (1 1/4");115.902;0.576286
+Result number = 7;0.00094444444418; ; ;FindOneSolution;ZUD_32;ZUD 32;Dirt separator;Brass;Thread;Standard;10;32 (1 1/4");938.515;-10/110;40 (1 1/2");133.626;0.688231
+Result number = 8;0.00152777777735; ; ;FindOneSolution;ZUD_40;ZUD 40;Dirt separator;Brass;Thread;Standard;10;40 (1 1/2");1399.48;-10/110;50 (2");100.483;0.692498
+Result number = 9;0.00247222222153; ; ;FindOneSolution;ZUD_40;ZUD 40;Dirt separator;Brass;Thread;Standard;10;40 (1 1/2");3664.54;-10/110;65 (2 1/2");67.3119;0.664999
+Result number = 10;0.00399999999888; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 11;0.00647222222041; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 12;0.01047222221929; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 13;0.0169444444397; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 14;0.02741666665899; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 15;0.04436111109869; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 16;0.07177777775768; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 9
+
+SelectionMode = Batch
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = 
+ComboFamilyBelow65ID = 
+ComboMaterialBelow65ID = 
+ComboConnectBelow65ID = 
+ComboVersionBelow65ID = 
+ComboPNBelow65ID = 
+ComboTypeAbove50ID = 
+ComboFamilyAbove50ID = 
+ComboMaterialAbove50ID = 
+ComboConnectAbove50ID = 
+ComboVersionAbove50ID = 
+ComboPNAbove50ID = 
+SeparatorComboTypeID = SEPTYPE_SP
+SeparatorComboFamilyID = FAM_ZUDZUM
+SeparatorComboConnectID = CONN_THREAD
+SeparatorComboVersionID = VERS_MAGNET
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;ZUM_20;ZUM 20;Dirt separator;Brass;Thread;Magnetic;10;20 (3/4");9.09024;-10/110;10 (3/8");80.851;0.226354
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;ZUM_20;ZUM 20;Dirt separator;Brass;Thread;Magnetic;10;20 (3/4");36.3609;-10/110;15 (1/2");83.9387;0.276311
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;ZUM_20;ZUM 20;Dirt separator;Brass;Thread;Magnetic;10;20 (3/4");81.8121;-10/110;15 (1/2");176.093;0.414466
+Result number = 3;0.00013888888885; ; ;FindOneSolution;ZUM_20;ZUM 20;Dirt separator;Brass;Thread;Magnetic;10;20 (3/4");227.256;-10/110;20 (3/4");101.525;0.379027
+Result number = 4;0.00022222222216; ; ;FindOneSolution;ZUM_20;ZUM 20;Dirt separator;Brass;Thread;Magnetic;10;20 (3/4");581.775;-10/110;25 (1");76.8895;0.382437
+Result number = 5;0.00036111111101; ; ;FindOneSolution;ZUM_20;ZUM 20;Dirt separator;Brass;Thread;Magnetic;10;20 (3/4");1536.25;-10/110;25 (1");189.605;0.62146
+Result number = 6;0.00058333333317; ; ;FindOneSolution;ZUM_25;ZUM 25;Dirt separator;Brass;Thread;Magnetic;10;25 (1");1213.83;-10/110;32 (1 1/4");115.902;0.576286
+Result number = 7;0.00094444444418; ; ;FindOneSolution;ZUM_32;ZUM 32;Dirt separator;Brass;Thread;Magnetic;10;32 (1 1/4");938.515;-10/110;40 (1 1/2");133.626;0.688231
+Result number = 8;0.00152777777735; ; ;FindOneSolution;ZUM_40;ZUM 40;Dirt separator;Brass;Thread;Magnetic;10;40 (1 1/2");1399.48;-10/110;50 (2");100.483;0.692498
+Result number = 9;0.00247222222153; ; ;FindOneSolution;ZUM_40;ZUM 40;Dirt separator;Brass;Thread;Magnetic;10;40 (1 1/2");3664.54;-10/110;65 (2 1/2");67.3119;0.664999
+Result number = 10;0.00399999999888; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 11;0.00647222222041; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 12;0.01047222221929; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 13;0.0169444444397; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 14;0.02741666665899; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 15;0.04436111109869; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 16;0.07177777775768; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 10
+
+SelectionMode = Batch
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = 
+ComboFamilyBelow65ID = 
+ComboMaterialBelow65ID = 
+ComboConnectBelow65ID = 
+ComboVersionBelow65ID = 
+ComboPNBelow65ID = 
+ComboTypeAbove50ID = 
+ComboFamilyAbove50ID = 
+ComboMaterialAbove50ID = 
+ComboConnectAbove50ID = 
+ComboVersionAbove50ID = 
+ComboPNAbove50ID = 
+SeparatorComboTypeID = SEPTYPE_MBSP
+SeparatorComboFamilyID = FAM_ZUK
+SeparatorComboConnectID = CONN_THREAD
+SeparatorComboVersionID = VERS_STD
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolutionWithAlternative;ZUKM_20;ZUKM 20;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;20 (3/4");9.09024;-10/110;10 (3/8");80.851;0.226354
+Result number = 1;5.555555554e-05; ; ;FindOneSolutionWithAlternative;ZUKM_20;ZUKM 20;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;20 (3/4");36.3609;-10/110;15 (1/2");83.9387;0.276311
+Result number = 2;8.333333331e-05; ; ;FindOneSolutionWithAlternative;ZUKM_20;ZUKM 20;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;20 (3/4");81.8121;-10/110;15 (1/2");176.093;0.414466
+Result number = 3;0.00013888888885; ; ;FindOneSolutionWithAlternative;ZUKM_20;ZUKM 20;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;20 (3/4");227.256;-10/110;20 (3/4");101.525;0.379027
+Result number = 4;0.00022222222216; ; ;FindOneSolutionWithAlternative;ZUKM_20;ZUKM 20;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;20 (3/4");581.775;-10/110;25 (1");76.8895;0.382437
+Result number = 5;0.00036111111101; ; ;FindOneSolutionWithAlternative;ZUKM_20;ZUKM 20;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;20 (3/4");1536.25;-10/110;25 (1");189.605;0.62146
+Result number = 6;0.00058333333317; ; ;FindOneSolutionWithAlternative;ZUKM_25;ZUKM 25;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;25 (1");1213.83;-10/110;32 (1 1/4");115.902;0.576286
+Result number = 7;0.00094444444418; ; ;FindOneSolutionWithAlternative;ZUKM_32;ZUKM 32;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;32 (1 1/4");938.515;-10/110;40 (1 1/2");133.626;0.688231
+Result number = 8;0.00152777777735; ; ;FindOneSolutionWithAlternative;ZUKM_40;ZUKM 40;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;40 (1 1/2");1399.48;-10/110;50 (2");100.483;0.692498
+Result number = 9;0.00247222222153; ; ;FindOneSolutionWithAlternative;ZUKM_40;ZUKM 40;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;40 (1 1/2");3664.54;-10/110;65 (2 1/2");67.3119;0.664999
+Result number = 10;0.00399999999888; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 11;0.00647222222041; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 12;0.01047222221929; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 13;0.0169444444397; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 14;0.02741666665899; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 15;0.04436111109869; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 16;0.07177777775768; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 11
+
+SelectionMode = Batch
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = 
+ComboFamilyBelow65ID = 
+ComboMaterialBelow65ID = 
+ComboConnectBelow65ID = 
+ComboVersionBelow65ID = 
+ComboPNBelow65ID = 
+ComboTypeAbove50ID = 
+ComboFamilyAbove50ID = 
+ComboMaterialAbove50ID = 
+ComboConnectAbove50ID = 
+ComboVersionAbove50ID = 
+ComboPNAbove50ID = 
+SeparatorComboTypeID = SEPTYPE_MBSP
+SeparatorComboFamilyID = FAM_ZUK
+SeparatorComboConnectID = CONN_THREAD
+SeparatorComboVersionID = VERS_MAGNET
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;ZUKM_20;ZUKM 20;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;20 (3/4");9.09024;-10/110;10 (3/8");80.851;0.226354
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;ZUKM_20;ZUKM 20;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;20 (3/4");36.3609;-10/110;15 (1/2");83.9387;0.276311
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;ZUKM_20;ZUKM 20;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;20 (3/4");81.8121;-10/110;15 (1/2");176.093;0.414466
+Result number = 3;0.00013888888885; ; ;FindOneSolution;ZUKM_20;ZUKM 20;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;20 (3/4");227.256;-10/110;20 (3/4");101.525;0.379027
+Result number = 4;0.00022222222216; ; ;FindOneSolution;ZUKM_20;ZUKM 20;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;20 (3/4");581.775;-10/110;25 (1");76.8895;0.382437
+Result number = 5;0.00036111111101; ; ;FindOneSolution;ZUKM_20;ZUKM 20;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;20 (3/4");1536.25;-10/110;25 (1");189.605;0.62146
+Result number = 6;0.00058333333317; ; ;FindOneSolution;ZUKM_25;ZUKM 25;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;25 (1");1213.83;-10/110;32 (1 1/4");115.902;0.576286
+Result number = 7;0.00094444444418; ; ;FindOneSolution;ZUKM_32;ZUKM 32;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;32 (1 1/4");938.515;-10/110;40 (1 1/2");133.626;0.688231
+Result number = 8;0.00152777777735; ; ;FindOneSolution;ZUKM_40;ZUKM 40;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;40 (1 1/2");1399.48;-10/110;50 (2");100.483;0.692498
+Result number = 9;0.00247222222153; ; ;FindOneSolution;ZUKM_40;ZUKM 40;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;40 (1 1/2");3664.54;-10/110;65 (2 1/2");67.3119;0.664999
+Result number = 10;0.00399999999888; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 11;0.00647222222041; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 12;0.01047222221929; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 13;0.0169444444397; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 14;0.02741666665899; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 15;0.04436111109869; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 16;0.07177777775768; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 12
+
+SelectionMode = Batch
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = 
+ComboFamilyBelow65ID = 
+ComboMaterialBelow65ID = 
+ComboConnectBelow65ID = 
+ComboVersionBelow65ID = 
+ComboPNBelow65ID = 
+ComboTypeAbove50ID = 
+ComboFamilyAbove50ID = 
+ComboMaterialAbove50ID = 
+ComboConnectAbove50ID = 
+ComboVersionAbove50ID = 
+ComboPNAbove50ID = 
+SeparatorComboTypeID = SEPTYPE_MBSP
+SeparatorComboFamilyID = FAM_ZUK
+SeparatorComboConnectID = CONN_COMPRFIT
+SeparatorComboVersionID = VERS_MAGNET
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;ZUKM_22;ZUKM 22;Micro-bubble & dirt separator;Brass;Compression fitting;Magnetic;10;20 (3/4");9.09024;-10/110;10 (3/8");80.851;0.226354
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;ZUKM_22;ZUKM 22;Micro-bubble & dirt separator;Brass;Compression fitting;Magnetic;10;20 (3/4");36.3609;-10/110;15 (1/2");83.9387;0.276311
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;ZUKM_22;ZUKM 22;Micro-bubble & dirt separator;Brass;Compression fitting;Magnetic;10;20 (3/4");81.8121;-10/110;15 (1/2");176.093;0.414466
+Result number = 3;0.00013888888885; ; ;FindOneSolution;ZUKM_22;ZUKM 22;Micro-bubble & dirt separator;Brass;Compression fitting;Magnetic;10;20 (3/4");227.256;-10/110;20 (3/4");101.525;0.379027
+Result number = 4;0.00022222222216; ; ;FindOneSolution;ZUKM_22;ZUKM 22;Micro-bubble & dirt separator;Brass;Compression fitting;Magnetic;10;20 (3/4");581.775;-10/110;25 (1");76.8895;0.382437
+Result number = 5;0.00036111111101; ; ;FindOneSolution;ZUKM_22;ZUKM 22;Micro-bubble & dirt separator;Brass;Compression fitting;Magnetic;10;20 (3/4");1536.25;-10/110;25 (1");189.605;0.62146
+Result number = 6;0.00058333333317; ; ;FindOneSolution;ZUKM_22;ZUKM 22;Micro-bubble & dirt separator;Brass;Compression fitting;Magnetic;10;20 (3/4");4008.79;-10/110;32 (1 1/4");115.902;0.576286
+Result number = 7;0.00094444444418; ; ;FindOneSolutionWithAlternative;ZUKM_32;ZUKM 32;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;32 (1 1/4");938.515;-10/110;40 (1 1/2");133.626;0.688231
+Result number = 8;0.00152777777735; ; ;FindOneSolutionWithAlternative;ZUKM_40;ZUKM 40;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;40 (1 1/2");1399.48;-10/110;50 (2");100.483;0.692498
+Result number = 9;0.00247222222153; ; ;FindOneSolutionWithAlternative;ZUKM_40;ZUKM 40;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;40 (1 1/2");3664.54;-10/110;65 (2 1/2");67.3119;0.664999
+Result number = 10;0.00399999999888; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 11;0.00647222222041; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 12;0.01047222221929; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 13;0.0169444444397; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 14;0.02741666665899; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 15;0.04436111109869; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 16;0.07177777775768; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 13
+
+SelectionMode = Batch
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = 
+ComboFamilyBelow65ID = 
+ComboMaterialBelow65ID = 
+ComboConnectBelow65ID = 
+ComboVersionBelow65ID = 
+ComboPNBelow65ID = 
+ComboTypeAbove50ID = 
+ComboFamilyAbove50ID = 
+ComboMaterialAbove50ID = 
+ComboConnectAbove50ID = 
+ComboVersionAbove50ID = 
+ComboPNAbove50ID = 
+SeparatorComboTypeID = SEPTYPE_MBSP
+SeparatorComboFamilyID = FAM_ZUC
+SeparatorComboConnectID = CONN_THREAD
+SeparatorComboVersionID = VERS_COLLECT
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;ZUC_20;ZUC 20;Micro-bubble & dirt separator;Brass;Thread;Low loss header;10;20 (3/4");9.09024;-10/110;10 (3/8");80.851;0.226354
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;ZUC_20;ZUC 20;Micro-bubble & dirt separator;Brass;Thread;Low loss header;10;20 (3/4");36.3609;-10/110;15 (1/2");83.9387;0.276311
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;ZUC_20;ZUC 20;Micro-bubble & dirt separator;Brass;Thread;Low loss header;10;20 (3/4");81.8121;-10/110;15 (1/2");176.093;0.414466
+Result number = 3;0.00013888888885; ; ;FindOneSolution;ZUC_20;ZUC 20;Micro-bubble & dirt separator;Brass;Thread;Low loss header;10;20 (3/4");227.256;-10/110;20 (3/4");101.525;0.379027
+Result number = 4;0.00022222222216; ; ;FindOneSolution;ZUC_20;ZUC 20;Micro-bubble & dirt separator;Brass;Thread;Low loss header;10;20 (3/4");581.775;-10/110;25 (1");76.8895;0.382437
+Result number = 5;0.00036111111101; ; ;FindOneSolution;ZUC_20;ZUC 20;Micro-bubble & dirt separator;Brass;Thread;Low loss header;10;20 (3/4");1536.25;-10/110;25 (1");189.605;0.62146
+Result number = 6;0.00058333333317; ; ;FindOneSolution;ZUC_25;ZUC 25;Micro-bubble & dirt separator;Brass;Thread;Low loss header;10;25 (1");1213.83;-10/110;32 (1 1/4");115.902;0.576286
+Result number = 7;0.00094444444418; ; ;FindOneSolution;ZUC_32;ZUC 32;Micro-bubble & dirt separator;Brass;Thread;Low loss header;10;32 (1 1/4");938.515;-10/110;40 (1 1/2");133.626;0.688231
+Result number = 8;0.00152777777735; ; ;FindOneSolution;ZUC_40;ZUC 40;Micro-bubble & dirt separator;Brass;Thread;Low loss header;10;40 (1 1/2");1399.48;-10/110;50 (2");100.483;0.692498
+Result number = 9;0.00247222222153; ; ;FindOneSolution;ZUC_40;ZUC 40;Micro-bubble & dirt separator;Brass;Thread;Low loss header;10;40 (1 1/2");3664.54;-10/110;65 (2 1/2");67.3119;0.664999
+Result number = 10;0.00399999999888; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 11;0.00647222222041; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 12;0.01047222221929; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 13;0.0169444444397; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 14;0.02741666665899; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 15;0.04436111109869; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 16;0.07177777775768; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 14
+
+SelectionMode = Batch
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = 
+ComboFamilyBelow65ID = 
+ComboMaterialBelow65ID = 
+ComboConnectBelow65ID = 
+ComboVersionBelow65ID = 
+ComboPNBelow65ID = 
+ComboTypeAbove50ID = 
+ComboFamilyAbove50ID = 
+ComboMaterialAbove50ID = 
+ComboConnectAbove50ID = 
+ComboVersionAbove50ID = 
+ComboPNAbove50ID = 
+SeparatorComboTypeID = SEPTYPE_MBSP
+SeparatorComboFamilyID = FAM_ZUC
+SeparatorComboConnectID = CONN_THREAD
+SeparatorComboVersionID = VERS_COLLECTMAGNET
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolution;ZUCM_20;ZUCM 20;Micro-bubble & dirt separator;Brass;Thread;Low loss header, magnetic;10;20 (3/4");9.09024;-10/110;10 (3/8");80.851;0.226354
+Result number = 1;5.555555554e-05; ; ;FindOneSolution;ZUCM_20;ZUCM 20;Micro-bubble & dirt separator;Brass;Thread;Low loss header, magnetic;10;20 (3/4");36.3609;-10/110;15 (1/2");83.9387;0.276311
+Result number = 2;8.333333331e-05; ; ;FindOneSolution;ZUCM_20;ZUCM 20;Micro-bubble & dirt separator;Brass;Thread;Low loss header, magnetic;10;20 (3/4");81.8121;-10/110;15 (1/2");176.093;0.414466
+Result number = 3;0.00013888888885; ; ;FindOneSolution;ZUCM_20;ZUCM 20;Micro-bubble & dirt separator;Brass;Thread;Low loss header, magnetic;10;20 (3/4");227.256;-10/110;20 (3/4");101.525;0.379027
+Result number = 4;0.00022222222216; ; ;FindOneSolution;ZUCM_20;ZUCM 20;Micro-bubble & dirt separator;Brass;Thread;Low loss header, magnetic;10;20 (3/4");581.775;-10/110;25 (1");76.8895;0.382437
+Result number = 5;0.00036111111101; ; ;FindOneSolution;ZUCM_20;ZUCM 20;Micro-bubble & dirt separator;Brass;Thread;Low loss header, magnetic;10;20 (3/4");1536.25;-10/110;25 (1");189.605;0.62146
+Result number = 6;0.00058333333317; ; ;FindOneSolution;ZUCM_25;ZUCM 25;Micro-bubble & dirt separator;Brass;Thread;Low loss header, magnetic;10;25 (1");1213.83;-10/110;32 (1 1/4");115.902;0.576286
+Result number = 7;0.00094444444418; ; ;FindOneSolution;ZUCM_32;ZUCM 32;Micro-bubble & dirt separator;Brass;Thread;Low loss header, magnetic;10;32 (1 1/4");938.515;-10/110;40 (1 1/2");133.626;0.688231
+Result number = 8;0.00152777777735; ; ;FindOneSolution;ZUCM_40;ZUCM 40;Micro-bubble & dirt separator;Brass;Thread;Low loss header, magnetic;10;40 (1 1/2");1399.48;-10/110;50 (2");100.483;0.692498
+Result number = 9;0.00247222222153; ; ;FindOneSolution;ZUCM_40;ZUCM 40;Micro-bubble & dirt separator;Brass;Thread;Low loss header, magnetic;10;40 (1 1/2");3664.54;-10/110;65 (2 1/2");67.3119;0.664999
+Result number = 10;0.00399999999888; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 11;0.00647222222041; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 12;0.01047222221929; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 13;0.0169444444397; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 14;0.02741666665899; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 15;0.04436111109869; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 16;0.07177777775768; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 15
+
+SelectionMode = Batch
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = 
+ComboFamilyBelow65ID = 
+ComboMaterialBelow65ID = 
+ComboConnectBelow65ID = 
+ComboVersionBelow65ID = 
+ComboPNBelow65ID = 
+ComboTypeAbove50ID = 
+ComboFamilyAbove50ID = 
+ComboMaterialAbove50ID = 
+ComboConnectAbove50ID = 
+ComboVersionAbove50ID = 
+ComboPNAbove50ID = 
+SeparatorComboTypeID = SEPTYPE_MBSP
+SeparatorComboFamilyID = FAM_ZIK
+SeparatorComboConnectID = CONN_FLANGE
+SeparatorComboVersionID = VERS_INDUSTR
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolutionWithAlternative;ZTKMI_20;ZTKMI 20;Micro-bubble & dirt separator;Brass;Thread;Turnable;10;20 (3/4");176.984;-10/110;10 (3/8");80.851;0.226354
+Result number = 1;5.555555554e-05; ; ;FindOneSolutionWithAlternative;ZTKMI_20;ZTKMI 20;Micro-bubble & dirt separator;Brass;Thread;Turnable;10;20 (3/4");176.984;-10/110;15 (1/2");83.9387;0.276311
+Result number = 2;8.333333331e-05; ; ;FindOneSolutionWithAlternative;ZTKMI_20;ZTKMI 20;Micro-bubble & dirt separator;Brass;Thread;Turnable;10;20 (3/4");176.984;-10/110;15 (1/2");176.093;0.414466
+Result number = 3;0.00013888888885; ; ;FindOneSolutionWithAlternative;ZTKMI_20;ZTKMI 20;Micro-bubble & dirt separator;Brass;Thread;Turnable;10;20 (3/4");333.845;-10/110;20 (3/4");101.525;0.379027
+Result number = 4;0.00022222222216; ; ;FindOneSolutionWithAlternative;ZTKMI_20;ZTKMI 20;Micro-bubble & dirt separator;Brass;Thread;Turnable;10;20 (3/4");773.819;-10/110;25 (1");76.8895;0.382437
+Result number = 5;0.00036111111101; ; ;FindOneSolutionWithAlternative;ZUKM_20;ZUKM 20;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;20 (3/4");1536.25;-10/110;25 (1");189.605;0.62146
+Result number = 6;0.00058333333317; ; ;FindOneSolutionWithAlternative;ZUKM_25;ZUKM 25;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;25 (1");1213.83;-10/110;32 (1 1/4");115.902;0.576286
+Result number = 7;0.00094444444418; ; ;FindOneSolutionWithAlternative;ZUKM_32;ZUKM 32;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;32 (1 1/4");938.515;-10/110;40 (1 1/2");133.626;0.688231
+Result number = 8;0.00152777777735; ; ;FindOneSolutionWithAlternative;ZUKM_40;ZUKM 40;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;40 (1 1/2");1399.48;-10/110;50 (2");100.483;0.692498
+Result number = 9;0.00247222222153; ; ;FindOneSolutionWithAlternative;ZUKM_40;ZUKM 40;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;40 (1 1/2");3664.54;-10/110;65 (2 1/2");67.3119;0.664999
+Result number = 10;0.00399999999888; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 11;0.00647222222041; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 12;0.01047222221929; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 13;0.0169444444397; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 14;0.02741666665899; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 15;0.04436111109869; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 16;0.07177777775768; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 16
+
+SelectionMode = Batch
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = 
+ComboFamilyBelow65ID = 
+ComboMaterialBelow65ID = 
+ComboConnectBelow65ID = 
+ComboVersionBelow65ID = 
+ComboPNBelow65ID = 
+ComboTypeAbove50ID = 
+ComboFamilyAbove50ID = 
+ComboMaterialAbove50ID = 
+ComboConnectAbove50ID = 
+ComboVersionAbove50ID = 
+ComboPNAbove50ID = 
+SeparatorComboTypeID = SEPTYPE_MBSP
+SeparatorComboFamilyID = FAM_ZIK
+SeparatorComboConnectID = CONN_WELDING
+SeparatorComboVersionID = VERS_INDUSTR
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindOneSolutionWithAlternative;ZTKMI_20;ZTKMI 20;Micro-bubble & dirt separator;Brass;Thread;Turnable;10;20 (3/4");176.984;-10/110;10 (3/8");80.851;0.226354
+Result number = 1;5.555555554e-05; ; ;FindOneSolutionWithAlternative;ZTKMI_20;ZTKMI 20;Micro-bubble & dirt separator;Brass;Thread;Turnable;10;20 (3/4");176.984;-10/110;15 (1/2");83.9387;0.276311
+Result number = 2;8.333333331e-05; ; ;FindOneSolutionWithAlternative;ZTKMI_20;ZTKMI 20;Micro-bubble & dirt separator;Brass;Thread;Turnable;10;20 (3/4");176.984;-10/110;15 (1/2");176.093;0.414466
+Result number = 3;0.00013888888885; ; ;FindOneSolutionWithAlternative;ZTKMI_20;ZTKMI 20;Micro-bubble & dirt separator;Brass;Thread;Turnable;10;20 (3/4");333.845;-10/110;20 (3/4");101.525;0.379027
+Result number = 4;0.00022222222216; ; ;FindOneSolutionWithAlternative;ZTKMI_20;ZTKMI 20;Micro-bubble & dirt separator;Brass;Thread;Turnable;10;20 (3/4");773.819;-10/110;25 (1");76.8895;0.382437
+Result number = 5;0.00036111111101; ; ;FindOneSolutionWithAlternative;ZUKM_20;ZUKM 20;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;20 (3/4");1536.25;-10/110;25 (1");189.605;0.62146
+Result number = 6;0.00058333333317; ; ;FindOneSolutionWithAlternative;ZUKM_25;ZUKM 25;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;25 (1");1213.83;-10/110;32 (1 1/4");115.902;0.576286
+Result number = 7;0.00094444444418; ; ;FindOneSolutionWithAlternative;ZUKM_32;ZUKM 32;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;32 (1 1/4");938.515;-10/110;40 (1 1/2");133.626;0.688231
+Result number = 8;0.00152777777735; ; ;FindOneSolutionWithAlternative;ZUKM_40;ZUKM 40;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;40 (1 1/2");1399.48;-10/110;50 (2");100.483;0.692498
+Result number = 9;0.00247222222153; ; ;FindOneSolutionWithAlternative;ZUKM_40;ZUKM 40;Micro-bubble & dirt separator;Brass;Thread;Magnetic;10;40 (1 1/2");3664.54;-10/110;65 (2 1/2");67.3119;0.664999
+Result number = 10;0.00399999999888; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 11;0.00647222222041; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 12;0.01047222221929; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 13;0.0169444444397; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 14;0.02741666665899; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 15;0.04436111109869; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 16;0.07177777775768; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 17
+
+SelectionMode = Batch
+ProductCategory = Separator
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+DpGroupChecked = false
+ComboTypeBelow65ID = 
+ComboFamilyBelow65ID = 
+ComboMaterialBelow65ID = 
+ComboConnectBelow65ID = 
+ComboVersionBelow65ID = 
+ComboPNBelow65ID = 
+ComboTypeAbove50ID = 
+ComboFamilyAbove50ID = 
+ComboMaterialAbove50ID = 
+ComboConnectAbove50ID = 
+ComboVersionAbove50ID = 
+ComboPNAbove50ID = 
+SeparatorComboTypeID = SEPTYPE_MBORSP
+SeparatorComboFamilyID = FAM_ZIO
+SeparatorComboConnectID = CONN_FLANGE
+SeparatorComboVersionID = VERS_INDUSTR
+EndInputs
+
+StartOutputs
+Result number = 0;2.777777777e-05; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 1;5.555555554e-05; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 2;8.333333331e-05; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 3;0.00013888888885; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 4;0.00022222222216; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 5;0.00036111111101; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 6;0.00058333333317; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 7;0.00094444444418; ; ;FindNoSolution; ; ; ; ; ; ; ; ; ; ; ; ; 
+Result number = 8;0.00152777777735; ; ;FindOneSolution;ZIOF_50;ZIO 50F;Micro-bubble or dirt separator;Steel;Flange;Industrial;10;50 (2");534.428;-10/110;50 (2");100.483;0.692498
+Result number = 9;0.00247222222153; ; ;FindOneSolution;ZIOF_50;ZIO 50F;Micro-bubble or dirt separator;Steel;Flange;Industrial;10;50 (2");1399.41;-10/110;65 (2 1/2");67.3119;0.664999
+Result number = 10;0.00399999999888; ; ;FindOneSolution;ZIOF_65;ZIO 65F;Micro-bubble or dirt separator;Steel;Flange;Industrial;10;65 (2 1/2");1385.62;-10/110;65 (2 1/2");167.907;1.07595
+Result number = 11;0.00647222222041; ; ;FindOneSolution;ZIOF_80;ZIO 80F;Micro-bubble or dirt separator;Steel;Flange;Industrial;10;80 (3");1800.06;-10/110;80 (3");187.012;1.26224
+Result number = 12;0.01047222221929; ; ;FindOneSolution;ZIOF_100;ZIO 100F;Micro-bubble or dirt separator;Steel;Flange;Industrial;10;100 (4");1220.29;-10/110;100 (4");124.856;1.2094
+Result number = 13;0.0169444444397; ; ;FindOneSolution;ZIOF_125;ZIO 125F;Micro-bubble or dirt separator;Steel;Flange;Industrial;10;125 (5");1728.96;-10/110;125 (5");106.696;1.27659
+Result number = 14;0.02741666665899; ; ;FindOneSolution;ZIOF_150;ZIO 150F;Micro-bubble or dirt separator;Steel;Flange;Industrial;10;150 (6");2435.58;-10/110;150 (6");110.527;1.45299
+Result number = 15;0.04436111109869; ; ;FindOneSolution;ZIOF_200;ZIO 200F;Micro-bubble or dirt separator;Steel;Flange;Industrial;10;200 (8");1554.69;-10/110;200 (8");64.5053;1.31817
+Result number = 16;0.07177777775768; ; ;FindOneSolution;ZIOF_250;ZIO 250F;Micro-bubble or dirt separator;Steel;Flange;Industrial;10;250 (10");2320.46;-10/110;250 (10");51.4385;1.35193
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+

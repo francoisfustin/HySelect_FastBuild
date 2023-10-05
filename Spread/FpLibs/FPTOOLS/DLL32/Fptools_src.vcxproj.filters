@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3f52e7e4-ed5d-438b-8206-a7fc5a9fd41e}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;hpj;bat;for;f90</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{8f613dc8-cbec-4e33-b647-3f51063b7c6d}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;fi;fd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{d947d0da-770d-4fd6-a4f7-d2eb8f845f24}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\SRC\FPASSERT.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPCONV3.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPDATE.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPDIB.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPDT.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPFILE.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPGRAPHC.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPHELP.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPHUGE.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\fpload.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPMEMMGR.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPNCPNT.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPNCPROP.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Fppict.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\fpsave.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPSTDPRP.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\fpstrtod.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTIME.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL01.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL02.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL03.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL04.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL05.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL06.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL07.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL08.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL09.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL10.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL11.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL12.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL14.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL15.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL16.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL17.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL19.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL20.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL21.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL22.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL25.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL27.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL29.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL30.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL31.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL32.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL40.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL41.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL42.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL43.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL44.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL45.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL46.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL47.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL50.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL51.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL52.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL53.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL54.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL55.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL56.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL57.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL58.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL59.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL60.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPTOOL62.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPVBX2.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPWAPI1.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPWAPI2.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPWAPI3.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPWAPI4.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\FPWAPI5.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\fpwapi6.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\VBDATETM.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SRC\VBNCPNT.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\SRC\fphuge.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SRC\FPMEMMGR.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SRC\FPNCPNT.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SRC\FPNCPROP.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\fpsave.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SRC\FPSTDPRP.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SRC\VBDATETM.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SRC\LARGEINT.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

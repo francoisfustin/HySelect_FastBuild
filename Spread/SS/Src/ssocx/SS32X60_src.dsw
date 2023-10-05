@@ -1,0 +1,89 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "FPDB32"=..\..\..\fplibs\FPDB\FPDB32_src.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "FPTOOL32"=..\..\..\FPLIBS\FPTOOLS\OCX\Fptool32_src.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "SS32X60"=.\SS32X60_src.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name FPDB32
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name FPTOOL32
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name XL32L60
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name jpeg32
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "XL32L60"=..\Excel\XL32L60_src.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "jpeg32"=..\..\..\FPLibs\FPTOOLS\JPEG\jpeg32.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

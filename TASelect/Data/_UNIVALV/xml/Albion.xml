@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<CDataSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Modified>true</Modified>
+  <Mnfr>
+    <ID>MNFR_025701080414</ID>
+    <Name>Albion</Name>
+    <FamTab>
+      <ID>FAMTAB_125601080414</ID>
+      <Name>Alien family table</Name>
+      <List>
+        <CDataFamily>
+          <ID>FAM_062009080514</ID>
+          <Name>ART 25 FO DRV</Name>
+          <Order>0</Order>
+        </CDataFamily>
+        <CDataFamily>
+          <ID>FAM_222009080514</ID>
+          <Name>ART 27 - FO</Name>
+          <Order>1</Order>
+        </CDataFamily>
+        <CDataFamily>
+          <ID>FAM_322009080514</ID>
+          <Name>ART 270 - FO</Name>
+          <Order>2</Order>
+        </CDataFamily>
+      </List>
+    </FamTab>
+    <CharTab>
+      <ID>CHARTAB_125601080414</ID>
+      <Name>Alien char table</Name>
+      <List />
+    </CharTab>
+    <ValveTab>
+      <ID>VALVTAB_125601080414</ID>
+      <Name>Alien valve table</Name>
+      <List>
+        <CValve>
+          <ID>VALV_110002080414</ID>
+          <Name>15mm ART 25 FODRV</Name>
+          <FamID>FAM_062009080514</FamID>
+          <DNID>DN_15</DNID>
+          <CharID />
+          <KvsSignal>1.8</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_140202080414</ID>
+          <Name>20mm ART 25 FODRV</Name>
+          <FamID>FAM_062009080514</FamID>
+          <DNID>DN_20</DNID>
+          <CharID />
+          <KvsSignal>4.1</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_310202080414</ID>
+          <Name>25mm ART 25 FODRV</Name>
+          <FamID>FAM_062009080514</FamID>
+          <DNID>DN_25</DNID>
+          <CharID />
+          <KvsSignal>7.5</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_460202080414</ID>
+          <Name>32mm ART 25 FODRV</Name>
+          <FamID>FAM_062009080514</FamID>
+          <DNID>DN_32</DNID>
+          <CharID />
+          <KvsSignal>16.6</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_010302080414</ID>
+          <Name>40mm ART 25 FODRV</Name>
+          <FamID>FAM_062009080514</FamID>
+          <DNID>DN_40</DNID>
+          <CharID />
+          <KvsSignal>23</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_170302080414</ID>
+          <Name>50mm ART 25 FODRV</Name>
+          <FamID>FAM_062009080514</FamID>
+          <DNID>DN_50</DNID>
+          <CharID />
+          <KvsSignal>47.4</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_190702080414</ID>
+          <Name>15mm ART 27 Orifice Plate</Name>
+          <FamID>FAM_222009080514</FamID>
+          <DNID>DN_15</DNID>
+          <CharID />
+          <KvsSignal>1.8</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_490702080414</ID>
+          <Name>20mm ART 27 Orifice Plate</Name>
+          <FamID>FAM_222009080514</FamID>
+          <DNID>DN_20</DNID>
+          <CharID />
+          <KvsSignal>4.1</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_260802080414</ID>
+          <Name>25mm ART 27 Orifice Plate</Name>
+          <FamID>FAM_222009080514</FamID>
+          <DNID>DN_25</DNID>
+          <CharID />
+          <KvsSignal>7.5</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_380802080414</ID>
+          <Name>32mm ART 27 Orifice Plate</Name>
+          <FamID>FAM_222009080514</FamID>
+          <DNID>DN_32</DNID>
+          <CharID />
+          <KvsSignal>16.6</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_500802080414</ID>
+          <Name>40mm ART 27 Orifice Plate</Name>
+          <FamID>FAM_222009080514</FamID>
+          <DNID>DN_40</DNID>
+          <CharID />
+          <KvsSignal>23</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_070902080414</ID>
+          <Name>50mm ART 27 Orifice Plate</Name>
+          <FamID>FAM_222009080514</FamID>
+          <DNID>DN_50</DNID>
+          <CharID />
+          <KvsSignal>47.4</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_361402080414</ID>
+          <Name>65mm ART 270 Orifice Plate</Name>
+          <FamID>FAM_322009080514</FamID>
+          <DNID>DN_65</DNID>
+          <CharID />
+          <KvsSignal>88.5</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_051802080414</ID>
+          <Name>80mm ART 270 Orifice Plate</Name>
+          <FamID>FAM_322009080514</FamID>
+          <DNID>DN_80</DNID>
+          <CharID />
+          <KvsSignal>150.6</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_211802080414</ID>
+          <Name>100mm ART 270 Orifice Plate</Name>
+          <FamID>FAM_322009080514</FamID>
+          <DNID>DN_100</DNID>
+          <CharID />
+          <KvsSignal>281.1</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_371802080414</ID>
+          <Name>125mm ART 270 Orifice Plate</Name>
+          <FamID>FAM_322009080514</FamID>
+          <DNID>DN_125</DNID>
+          <CharID />
+          <KvsSignal>328.8</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_521802080414</ID>
+          <Name>150mm ART 270 Orifice Plate</Name>
+          <FamID>FAM_322009080514</FamID>
+          <DNID>DN_150</DNID>
+          <CharID />
+          <KvsSignal>477.5</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_101902080414</ID>
+          <Name>200mm ART 270 Orifice Plate</Name>
+          <FamID>FAM_322009080514</FamID>
+          <DNID>DN_200</DNID>
+          <CharID />
+          <KvsSignal>826</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_331902080414</ID>
+          <Name>250mm ART 270 Orifice Plate</Name>
+          <FamID>FAM_322009080514</FamID>
+          <DNID>DN_250</DNID>
+          <CharID />
+          <KvsSignal>1218</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_471902080414</ID>
+          <Name>300mm ART 270 Orifice Plate</Name>
+          <FamID>FAM_322009080514</FamID>
+          <DNID>DN_250</DNID>
+          <CharID />
+          <KvsSignal>1794</KvsSignal>
+        </CValve>
+      </List>
+    </ValveTab>
+  </Mnfr>
+</CDataSet>

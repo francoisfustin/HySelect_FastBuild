@@ -1,0 +1,11 @@
+.DebugConfig = [ .Platform = 'Win32' .Config = 'Debug' ]
+
+VSProjectExternal()
+{
+  .ExternalProjectPath = 'DFU\DFUSe\STDFUFiles\STDFUFiles.vcxproj'
+  .ProjectGuid = '{D7F83E05-46DD-4BE7-B149-6ABAA7B298F4}'
+  .ProjectTypeGuid = '{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}'
+  
+  // Build Config Options
+  .ProjectConfigs = { .DebugConfig }
+}

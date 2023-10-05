@@ -1,0 +1,92 @@
+// SS30PP.idl : IDL source for SS30PP.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (SS30PP.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(FDB27241-3DAE-11D2-B03D-0020AF131A57),
+#ifdef SS_V80
+#ifdef SPREAD_JPN
+	version(8.0),
+	helpfile("spread80J.chm"),
+	helpstring("SS70PP 7.0 Type Library")
+#else
+	version(8.0),
+	helpfile("spread80.chm"),
+	helpstring("SS80PP 8.0 Type Library")
+#endif
+#elif SS_V70
+#ifdef SPREAD_JPN
+	version(7.0),
+	helpfile("spread70J.chm"),
+	helpstring("SS70PP 7.0 Type Library")
+#else
+	version(7.0),
+	helpfile("spread70.chm"),
+	helpstring("SS70PP 7.0 Type Library")
+#endif
+#elif SS_V40
+	version(6.0),
+// fix for 9717 -scl
+  helpfile("spread60.chm"), 
+	helpstring("SS60PP 6.0 Type Library")
+#elif SS_V35
+	version(3.5),
+  helpfile("spread35.chm"), 
+	helpstring("SS35PP 3.5 Type Library")
+#else
+	version(1.0),
+  helpfile("spread30.hlp"), 
+	helpstring("SS30PP 1.0 Type Library")
+#endif
+]
+library SS30PPLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	
+
+	[
+#ifdef SS_V80
+		uuid(12F0D61F-E79A-4879-B038-5781A2E4C0B8),
+#elif SS_V70
+		uuid(D5C0FFA2-EAA4-4ec1-AE33-780489348932),
+#elif SS_V40
+		uuid(D5C0FFA1-EAA4-4ec1-AE33-780489348932),
+#elif SS_V35
+		uuid(14B87422-0170-4258-8E13-D91149E12CD4),
+#else
+		uuid(FDB2724E-3DAE-11D2-B03D-0020AF131A57),
+#endif
+		helpstring("PPGeneral Class")
+	]
+	coclass PPGeneral
+	{
+		interface IUnknown;
+	};
+	
+
+	[
+#ifdef SS_V80
+		uuid(E409C3B7-1BF7-470a-B7FC-B4352A73310F),
+#elif SS_V70
+		uuid(77609164-4ACA-4e84-A8AE-995F3FFC5392),
+#elif SS_V40
+		uuid(77609163-4ACA-4e84-A8AE-995F3FFC5392),
+#elif SS_V35
+		uuid(E3469027-9040-47de-8E82-A4BB2E10ED7F),
+#else
+		uuid(FDB27269-3DAE-11D2-B03D-0020AF131A57),
+#endif
+		helpstring("PPPage Class")
+	]
+	coclass PPPage
+	{
+		interface IUnknown;
+	};
+};

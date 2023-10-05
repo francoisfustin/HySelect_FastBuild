@@ -1,0 +1,927 @@
+#Start of test definition
+
+StartTechnicalParameters
+ApplicationType = 1
+AvailablePMPanels = 7
+BreakTankRequiredForWaterMakeUp = 1
+CVDefKvReynard = 1
+CVMaxDispDp = 200000
+CVMaxDpProp = 65000
+CVMinAuthCstFlow = 0.5
+CVMinAuthor = 0.25
+CVMinDpOnoff = 3000
+CVMinDpProp = 10000
+CVUseDpCPBand = 0
+CanChangePressureVolumeLimit = 0
+CurrencyID = CURRENCY_EUR
+DefaultCalculationNorm = PM_NORM_EN12828
+DefaultCoolingTps = 10
+DefaultFillTemperature = 15
+DefaultHeatingTps = 80
+DefaultISChangeOverCoolingSideAdditFamilyID = WATER_ADDIT
+DefaultISChangeOverCoolingSideAdditID = WATER
+DefaultISChangeOverCoolingSideDT = 6
+DefaultISChangeOverCoolingSidePcWeight = 0
+DefaultISChangeOverCoolingSideTps = 6
+DefaultISChangeOverHeatingSideAdditFamilyID = WATER_ADDIT
+DefaultISChangeOverHeatingSideAdditID = WATER
+DefaultISChangeOverHeatingSideDT = 20
+DefaultISChangeOverHeatingSidePcWeight = 0
+DefaultISChangeOverHeatingSideTps = 75
+DefaultISCoolingAdditFamilyID = WATER_ADDIT
+DefaultISCoolingAdditID = WATER
+DefaultISCoolingDT = 6
+DefaultISCoolingPcWeight = 0
+DefaultISCoolingTps = 6
+DefaultISHeatingAdditFamilyID = WATER_ADDIT
+DefaultISHeatingAdditID = WATER
+DefaultISHeatingDT = 10
+DefaultISHeatingPcWeight = 0
+DefaultISHeatingTps = 75
+DefaultISSolarAdditFamilyID = WATER_ADDIT
+DefaultISSolarAdditID = WATER
+DefaultISSolarDT = 15
+DefaultISSolarPcWeight = 0
+DefaultISSolarTps = 90
+DefaultMaxTempInCooling = 45
+DefaultMinTempInHeating = 5
+DefaultMinTempInSolar = 5
+DefaultPipeSerieID = STEEL_DIN2440
+DefaultPrjCoolingAdditID = WATER
+DefaultPrjCoolingDT = 5
+DefaultPrjCoolingPcWeight = 0
+DefaultPrjHeatingAdditID = WATER
+DefaultPrjHeatingDT = 20
+DefaultPrjHeatingPcWeight = 30
+DefaultSafetyPressureResponseValve = 300000
+DefaultSecondaryPumpHMin = 25000
+DefaultSmartCVLocation = 1
+DefaultStaticPressureOfWaterNetwork = 400000
+DefaultTAZ = 100
+DefaultWaterHardness = 1.78324958
+DefaultWaterMakeUpTemp = 15
+DegassingWaterReserveForVessel = 0.002
+DpCBCVDpcmin = 5000
+DpCBCVDplmin = 5000
+DpCHide = 0
+DpCHminFullyOpenMv = 0
+DpCMinDp = 5000
+DpCMvLocation = 0
+DpCMvWithSameSizeOnly = 0
+DpRefForBest6Way = 3000
+FixedOrificeMaxDp = 6000
+FixedOrificeMinDp = 2000
+FlowDeviationMinus = -0.1
+FlowDeviationPlus = 0.1
+FluidTempLimitEN12953 = 105
+InitialPressureMargin = 30000
+MaxNumberOfAdditionalVesselsInParallel = 4
+MaxNumberOfVentoInParallel = 2
+MaxSafetyValveInParallel = 3
+MaxSizeShift = 4
+MinPressureMargin = 20000
+PICvHide = 0
+PICvMinDp = 1000
+PSetupCompresso = 10000
+PSetupTransfero = 20000
+PipeMaxDp = 200
+PipeMaxVelocity = 2
+PipeMinDp = 10
+PipeMinVelocity = 0.3
+PipeTargetDp = 150
+PipeTargetVelocity = 1
+PipeTargetVelosityUsed = 0
+PressureVolumeLimit = 300000
+ProjectType = 2
+SafetyTempLimiterLimitEN12953 = 110
+SizeShiftAbove = 0
+SizeShiftBelow = -2
+SmartValveDpMaxForBestSuggestion = 20000
+TrvDefDpTotal = 10000
+TrvDefRoomTemperature = 20
+TrvDefSupplyTemperature = 80
+TrvMaxDp = 30000
+TrvMinDpRatio = 0.25
+UseDefaultFreezingPointAsMinTemperature = 1
+UseSimplyPst = 0
+UseVesselPressureVolumeLimit = 0
+ValveMaxDp = 200000
+ValveMin2Dp = 6000
+ValveMinDp = 3000
+VenturiMaxDp = 10000
+VenturiMinDp = 2000
+VesselSelectionRangePercentage = 0
+EndTechnicalParameters
+
+Test number = 0
+
+SelectionMode = Individual
+ProductCategory = Safety valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+SystemApplicationType = Heating
+SystemHeatGeneratorTypeID = HEATGENTYPEDIR
+NormID = 
+InstalledPower = 100000
+InstalledCollector = 0
+SafetyValveFamilyID = 
+SafetyValveConnectionID = 
+UserSetPressureChoice = 200000
+EndInputs
+
+StartOutputs
+Result number = 0;DSV25_2.0_DGH;DSV 25-2.0 DGH;1;Gun metal;200000;Hot water;Diaphragm;Lifting lever;Thread;G 1" / G 1 1/2";100000;236000;-10/120
+Result number = 1;DSV20_2.0_DGH;DSV 20-2.0 DGH;1;Gun metal;200000;Hot water;Diaphragm;Lifting lever;Thread;G 3/4" / G 1 1/4";100000;152000;-10/120
+Result number = 2;DSV15_2.0_DGH;DSV 15-2.0 DGH;2;Gun metal;200000;Hot water;Diaphragm;Lifting lever;Thread;G 1/2" / G 1";100000;68000;-10/120
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 1
+
+SelectionMode = Individual
+ProductCategory = Safety valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+SystemApplicationType = Heating
+SystemHeatGeneratorTypeID = HEATGENTYPEDIR
+NormID = 
+InstalledPower = 100000
+InstalledCollector = 0
+SafetyValveFamilyID = 
+SafetyValveConnectionID = 
+UserSetPressureChoice = 900000
+EndInputs
+
+StartOutputs
+Result number = 0;DSV20_9.0_DGH;DSV 20-9.0 DGH;1;Gun metal;900000;Hot water;Diaphragm;Lifting lever;Thread;G 3/4" / G 1 1/4";100000;487000;-10/120
+Result number = 1;DSV15_9.0_DGH;DSV 15-9.0 DGH;1;Gun metal;900000;Hot water;Diaphragm;Lifting lever;Thread;G 1/2" / G 1";100000;206000;-10/120
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 2
+
+SelectionMode = Individual
+ProductCategory = Safety valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+SystemApplicationType = Heating
+SystemHeatGeneratorTypeID = HEATGENTYPEDIR
+NormID = 
+InstalledPower = 100000
+InstalledCollector = 0
+SafetyValveFamilyID = 
+SafetyValveConnectionID = 
+UserSetPressureChoice = 300000
+EndInputs
+
+StartOutputs
+Result number = 0;DSVH_25_3;DSV 25-3.0 H;1;Gun metal;300000;Hot water;Diaphragm;Twist-type;Thread;G 1" / G 1 1/4";100000;200000;-10/120
+Result number = 1;DSV25_3.0_DGH;DSV 25-3.0 DGH;1;Gun metal;300000;Hot water;Diaphragm;Lifting lever;Thread;G 1" / G 1 1/2";100000;320000;-10/120
+Result number = 2;DSVH_20_3;DSV 20-3.0 H;1;Gun metal;300000;Hot water;Diaphragm;Twist-type;Thread;G 3/4" / G 1";100000;100000;-10/120
+Result number = 3;DSV20_3.0_DGH;DSV 20-3.0 DGH;1;Gun metal;300000;Hot water;Diaphragm;Lifting lever;Thread;G 3/4" / G 1 1/4";100000;210000;-10/120
+Result number = 4;DSVH_15_3;DSV 15-3.0 H;2;Gun metal;300000;Hot water;Diaphragm;Twist-type;Thread;G 1/2" / G 3/4";100000;50000;-10/120
+Result number = 5;DSV15_3.0_DGH;DSV 15-3.0 DGH;2;Gun metal;300000;Hot water;Diaphragm;Lifting lever;Thread;G 1/2" / G 1";100000;89000;-10/120
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 3
+
+SelectionMode = Individual
+ProductCategory = Safety valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+SystemApplicationType = Heating
+SystemHeatGeneratorTypeID = HEATGENTYPEDIR
+NormID = 
+InstalledPower = 100000
+InstalledCollector = 0
+SafetyValveFamilyID = 
+SafetyValveConnectionID = CONN_THREAD
+UserSetPressureChoice = 200000
+EndInputs
+
+StartOutputs
+Result number = 0;DSV25_2.0_DGH;DSV 25-2.0 DGH;1;Gun metal;200000;Hot water;Diaphragm;Lifting lever;Thread;G 1" / G 1 1/2";100000;236000;-10/120
+Result number = 1;DSV20_2.0_DGH;DSV 20-2.0 DGH;1;Gun metal;200000;Hot water;Diaphragm;Lifting lever;Thread;G 3/4" / G 1 1/4";100000;152000;-10/120
+Result number = 2;DSV15_2.0_DGH;DSV 15-2.0 DGH;2;Gun metal;200000;Hot water;Diaphragm;Lifting lever;Thread;G 1/2" / G 1";100000;68000;-10/120
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 4
+
+SelectionMode = Individual
+ProductCategory = Safety valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+SystemApplicationType = Heating
+SystemHeatGeneratorTypeID = HEATGENTYPEDIR
+NormID = 
+InstalledPower = 100000
+InstalledCollector = 0
+SafetyValveFamilyID = 
+SafetyValveConnectionID = CONN_FLANGE
+UserSetPressureChoice = 300000
+EndInputs
+
+StartOutputs
+Result number = 0;DSV50_3.0_DGH;DSV 50-3.0 DGH;1;Ductile iron;300000;Hot water;Bellows;Lifting lever;Flange;DN50 / DN80;100000;1.6e+06;-10/120
+Result number = 1;DSV40_3.0_DGH;DSV 40-3.0 DGH;1;Ductile iron;300000;Hot water;Bellows;Lifting lever;Flange;DN40 / DN65;100000;1.04e+06;-10/120
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 5
+
+SelectionMode = Individual
+ProductCategory = Safety valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+SystemApplicationType = Heating
+SystemHeatGeneratorTypeID = HEATGENTYPEDIR
+NormID = 
+InstalledPower = 100000
+InstalledCollector = 0
+SafetyValveFamilyID = SFTYVFAM_H
+SafetyValveConnectionID = CONN_THREAD
+UserSetPressureChoice = 250000
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 6
+
+SelectionMode = Individual
+ProductCategory = Safety valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+SystemApplicationType = Heating
+SystemHeatGeneratorTypeID = HEATGENTYPEDIR
+NormID = 
+InstalledPower = 100000
+InstalledCollector = 0
+SafetyValveFamilyID = SFTYVFAM_H
+SafetyValveConnectionID = CONN_THREAD
+UserSetPressureChoice = 300000
+EndInputs
+
+StartOutputs
+Result number = 0;DSVH_25_3;DSV 25-3.0 H;1;Gun metal;300000;Hot water;Diaphragm;Twist-type;Thread;G 1" / G 1 1/4";100000;200000;-10/120
+Result number = 1;DSVH_20_3;DSV 20-3.0 H;1;Gun metal;300000;Hot water;Diaphragm;Twist-type;Thread;G 3/4" / G 1";100000;100000;-10/120
+Result number = 2;DSVH_15_3;DSV 15-3.0 H;2;Gun metal;300000;Hot water;Diaphragm;Twist-type;Thread;G 1/2" / G 3/4";100000;50000;-10/120
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 7
+
+SelectionMode = Individual
+ProductCategory = Safety valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+SystemApplicationType = Heating
+SystemHeatGeneratorTypeID = HEATGENTYPEDIR
+NormID = 
+InstalledPower = 100000
+InstalledCollector = 0
+SafetyValveFamilyID = SFTYVFAM_DGH
+SafetyValveConnectionID = 
+UserSetPressureChoice = 200000
+EndInputs
+
+StartOutputs
+Result number = 0;DSV25_2.0_DGH;DSV 25-2.0 DGH;1;Gun metal;200000;Hot water;Diaphragm;Lifting lever;Thread;G 1" / G 1 1/2";100000;236000;-10/120
+Result number = 1;DSV20_2.0_DGH;DSV 20-2.0 DGH;1;Gun metal;200000;Hot water;Diaphragm;Lifting lever;Thread;G 3/4" / G 1 1/4";100000;152000;-10/120
+Result number = 2;DSV15_2.0_DGH;DSV 15-2.0 DGH;2;Gun metal;200000;Hot water;Diaphragm;Lifting lever;Thread;G 1/2" / G 1";100000;68000;-10/120
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 8
+
+SelectionMode = Individual
+ProductCategory = Safety valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+SystemApplicationType = Heating
+SystemHeatGeneratorTypeID = HEATGENTYPEDIR
+NormID = 
+InstalledPower = 100000
+InstalledCollector = 0
+SafetyValveFamilyID = SFTYVFAM_DGH
+SafetyValveConnectionID = 
+UserSetPressureChoice = 900000
+EndInputs
+
+StartOutputs
+Result number = 0;DSV20_9.0_DGH;DSV 20-9.0 DGH;1;Gun metal;900000;Hot water;Diaphragm;Lifting lever;Thread;G 3/4" / G 1 1/4";100000;487000;-10/120
+Result number = 1;DSV15_9.0_DGH;DSV 15-9.0 DGH;1;Gun metal;900000;Hot water;Diaphragm;Lifting lever;Thread;G 1/2" / G 1";100000;206000;-10/120
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 9
+
+SelectionMode = Individual
+ProductCategory = Safety valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+SystemApplicationType = Heating
+SystemHeatGeneratorTypeID = HEATGENTYPEDIR
+NormID = 
+InstalledPower = 100000
+InstalledCollector = 0
+SafetyValveFamilyID = SFTYVFAM_DGH
+SafetyValveConnectionID = CONN_THREAD
+UserSetPressureChoice = 200000
+EndInputs
+
+StartOutputs
+Result number = 0;DSV25_2.0_DGH;DSV 25-2.0 DGH;1;Gun metal;200000;Hot water;Diaphragm;Lifting lever;Thread;G 1" / G 1 1/2";100000;236000;-10/120
+Result number = 1;DSV20_2.0_DGH;DSV 20-2.0 DGH;1;Gun metal;200000;Hot water;Diaphragm;Lifting lever;Thread;G 3/4" / G 1 1/4";100000;152000;-10/120
+Result number = 2;DSV15_2.0_DGH;DSV 15-2.0 DGH;2;Gun metal;200000;Hot water;Diaphragm;Lifting lever;Thread;G 1/2" / G 1";100000;68000;-10/120
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 10
+
+SelectionMode = Individual
+ProductCategory = Safety valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+SystemApplicationType = Heating
+SystemHeatGeneratorTypeID = HEATGENTYPEDIR
+NormID = 
+InstalledPower = 100000
+InstalledCollector = 0
+SafetyValveFamilyID = SFTYVFAM_DGH
+SafetyValveConnectionID = CONN_FLANGE
+UserSetPressureChoice = 200000
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 11
+
+SelectionMode = Individual
+ProductCategory = Safety valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+SystemApplicationType = Heating
+SystemHeatGeneratorTypeID = HEATGENTYPEINDIR
+NormID = 
+InstalledPower = 100000
+InstalledCollector = 0
+SafetyValveFamilyID = 
+SafetyValveConnectionID = 
+UserSetPressureChoice = 200000
+EndInputs
+
+StartOutputs
+Result number = 0;DSV20_2.0_DGH;DSV 20-2.0 DGH;1;Gun metal;200000;Hot water;Diaphragm;Lifting lever;Thread;G 3/4" / G 1 1/4";100000;1.04e+07;-10/120
+Result number = 1;DSV15_2.0_DGH;DSV 15-2.0 DGH;1;Gun metal;200000;Hot water;Diaphragm;Lifting lever;Thread;G 1/2" / G 1";100000;3.6e+06;-10/120
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 12
+
+SelectionMode = Individual
+ProductCategory = Safety valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+SystemApplicationType = Heating
+SystemHeatGeneratorTypeID = HEATGENTYPEINDIR
+NormID = 
+InstalledPower = 5000000
+InstalledCollector = 0
+SafetyValveFamilyID = 
+SafetyValveConnectionID = 
+UserSetPressureChoice = 200000
+EndInputs
+
+StartOutputs
+Result number = 0;DSV25_2.0_DGH;DSV 25-2.0 DGH;1;Gun metal;200000;Hot water;Diaphragm;Lifting lever;Thread;G 1" / G 1 1/2";5e+06;1.7e+07;-10/120
+Result number = 1;DSV20_2.0_DGH;DSV 20-2.0 DGH;1;Gun metal;200000;Hot water;Diaphragm;Lifting lever;Thread;G 3/4" / G 1 1/4";5e+06;1.04e+07;-10/120
+Result number = 2;DSV15_2.0_DGH;DSV 15-2.0 DGH;2;Gun metal;200000;Hot water;Diaphragm;Lifting lever;Thread;G 1/2" / G 1";5e+06;3.6e+06;-10/120
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 13
+
+SelectionMode = Individual
+ProductCategory = Safety valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+SystemApplicationType = Heating
+SystemHeatGeneratorTypeID = HEATGENTYPEINDIR
+NormID = 
+InstalledPower = 500000
+InstalledCollector = 0
+SafetyValveFamilyID = SFTYVFAM_DGH
+SafetyValveConnectionID = 
+UserSetPressureChoice = 200000
+EndInputs
+
+StartOutputs
+Result number = 0;DSV20_2.0_DGH;DSV 20-2.0 DGH;1;Gun metal;200000;Hot water;Diaphragm;Lifting lever;Thread;G 3/4" / G 1 1/4";500000;1.04e+07;-10/120
+Result number = 1;DSV15_2.0_DGH;DSV 15-2.0 DGH;1;Gun metal;200000;Hot water;Diaphragm;Lifting lever;Thread;G 1/2" / G 1";500000;3.6e+06;-10/120
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 14
+
+SelectionMode = Individual
+ProductCategory = Safety valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+SystemApplicationType = Heating
+SystemHeatGeneratorTypeID = HEATGENTYPEINDIR
+NormID = 
+InstalledPower = 500000
+InstalledCollector = 0
+SafetyValveFamilyID = SFTYVFAM_DGH
+SafetyValveConnectionID = 
+UserSetPressureChoice = 700000
+EndInputs
+
+StartOutputs
+Result number = 0;DSV20_7.0_DGH;DSV 20-7.0 DGH;1;Gun metal;700000;Hot water;Diaphragm;Lifting lever;Thread;G 3/4" / G 1 1/4";500000;1.94e+07;-10/120
+Result number = 1;DSV15_7.0_DGH;DSV 15-7.0 DGH;1;Gun metal;700000;Hot water;Diaphragm;Lifting lever;Thread;G 1/2" / G 1";500000;6.6e+06;-10/120
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 15
+
+SelectionMode = Individual
+ProductCategory = Safety valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+SystemApplicationType = Heating
+SystemHeatGeneratorTypeID = HEATGENTYPEINDIR
+NormID = 
+InstalledPower = 500000
+InstalledCollector = 0
+SafetyValveFamilyID = SFTYVFAM_DGH
+SafetyValveConnectionID = CONN_THREAD
+UserSetPressureChoice = 200000
+EndInputs
+
+StartOutputs
+Result number = 0;DSV20_2.0_DGH;DSV 20-2.0 DGH;1;Gun metal;200000;Hot water;Diaphragm;Lifting lever;Thread;G 3/4" / G 1 1/4";500000;1.04e+07;-10/120
+Result number = 1;DSV15_2.0_DGH;DSV 15-2.0 DGH;1;Gun metal;200000;Hot water;Diaphragm;Lifting lever;Thread;G 1/2" / G 1";500000;3.6e+06;-10/120
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 16
+
+SelectionMode = Individual
+ProductCategory = Safety valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+SystemApplicationType = Heating
+SystemHeatGeneratorTypeID = HEATGENTYPEINDIR
+NormID = 
+InstalledPower = 500000
+InstalledCollector = 0
+SafetyValveFamilyID = SFTYVFAM_DGH
+SafetyValveConnectionID = CONN_THREAD
+UserSetPressureChoice = 850000
+EndInputs
+
+StartOutputs
+Result number = 0;DSV20_8.5_DGH;DSV 20-8.5 DGH;1;Gun metal;850000;Hot water;Diaphragm;Lifting lever;Thread;G 3/4" / G 1 1/4";500000;2.14e+07;-10/120
+Result number = 1;DSV15_8.5_DGH;DSV 15-8.5 DGH;1;Gun metal;850000;Hot water;Diaphragm;Lifting lever;Thread;G 1/2" / G 1";500000;7.3e+06;-10/120
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 17
+
+SelectionMode = Individual
+ProductCategory = Safety valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+SystemApplicationType = Heating
+SystemHeatGeneratorTypeID = HEATGENTYPEINDIR
+NormID = 
+InstalledPower = 500000
+InstalledCollector = 0
+SafetyValveFamilyID = SFTYVFAM_DGH
+SafetyValveConnectionID = CONN_FLANGE
+UserSetPressureChoice = 200000
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 18
+
+SelectionMode = Individual
+ProductCategory = Safety valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 6
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+SystemApplicationType = Cooling
+SystemHeatGeneratorTypeID = 
+NormID = PM_NORM_EN12828
+InstalledPower = 500000
+InstalledCollector = 0
+SafetyValveFamilyID = SFTYVFAM_F
+SafetyValveConnectionID = CONN_THREAD
+UserSetPressureChoice = 300000
+EndInputs
+
+StartOutputs
+Result number = 0;DSV20_3.0_F;DSV 20-3.0 F;1;Gun metal;300000;Water, water-glycol mixture;Diaphragm;Twist-type;Thread;G 3/4" / G 3/4";500000;4.4e+06;-50/120
+Result number = 1;DSV15_3.0_F;DSV 15-3.0 F;1;Gun metal;300000;Water, water-glycol mixture;Diaphragm;Twist-type;Thread;G 1/2" / G 1/2";500000;2.6e+06;-50/120
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 19
+
+SelectionMode = Individual
+ProductCategory = Safety valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 6
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+SystemApplicationType = Cooling
+SystemHeatGeneratorTypeID = 
+NormID = PM_NORM_EN12828
+InstalledPower = 500000
+InstalledCollector = 0
+SafetyValveFamilyID = SFTYVFAM_F
+SafetyValveConnectionID = CONN_THREAD
+UserSetPressureChoice = 900000
+EndInputs
+
+StartOutputs
+Result number = 0;DSV20_9.0_F;DSV 20-9.0 F;1;Gun metal;900000;Water, water-glycol mixture;Diaphragm;Twist-type;Thread;G 3/4" / G 3/4";500000;7.7e+06;-50/120
+Result number = 1;DSV15_9.0_F;DSV 15-9.0 F;1;Gun metal;900000;Water, water-glycol mixture;Diaphragm;Twist-type;Thread;G 1/2" / G 1/2";500000;4.5e+06;-50/120
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 20
+
+SelectionMode = Individual
+ProductCategory = Safety valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 6
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+SystemApplicationType = Cooling
+SystemHeatGeneratorTypeID = 
+NormID = PM_NORM_NONE
+InstalledPower = 500000
+InstalledCollector = 0
+SafetyValveFamilyID = SFTYVFAM_F
+SafetyValveConnectionID = CONN_THREAD
+UserSetPressureChoice = 300000
+EndInputs
+
+StartOutputs
+Result number = 0;DSV20_3.0_F;DSV 20-3.0 F;1;Gun metal;300000;Water, water-glycol mixture;Diaphragm;Twist-type;Thread;G 3/4" / G 3/4";500000;1.14583e+07;-50/120
+Result number = 1;DSV15_3.0_F;DSV 15-3.0 F;1;Gun metal;300000;Water, water-glycol mixture;Diaphragm;Twist-type;Thread;G 1/2" / G 1/2";500000;6.7708e+06;-50/120
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 21
+
+SelectionMode = Individual
+ProductCategory = Safety valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 6
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+SystemApplicationType = Cooling
+SystemHeatGeneratorTypeID = 
+NormID = PM_NORM_NONE
+InstalledPower = 500000
+InstalledCollector = 0
+SafetyValveFamilyID = SFTYVFAM_F
+SafetyValveConnectionID = CONN_THREAD
+UserSetPressureChoice = 900000
+EndInputs
+
+StartOutputs
+Result number = 0;DSV20_9.0_F;DSV 20-9.0 F;1;Gun metal;900000;Water, water-glycol mixture;Diaphragm;Twist-type;Thread;G 3/4" / G 3/4";500000;2.00521e+07;-50/120
+Result number = 1;DSV15_9.0_F;DSV 15-9.0 F;1;Gun metal;900000;Water, water-glycol mixture;Diaphragm;Twist-type;Thread;G 1/2" / G 1/2";500000;1.17188e+07;-50/120
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 22
+
+SelectionMode = Individual
+ProductCategory = Safety valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+SystemApplicationType = Solar
+SystemHeatGeneratorTypeID = 
+NormID = 
+InstalledPower = 100000
+InstalledCollector = 100
+SafetyValveFamilyID = SFTYVFAM_SOL
+SafetyValveConnectionID = CONN_THREAD
+UserSetPressureChoice = 300000
+EndInputs
+
+StartOutputs
+Result number = 0;DSV25_3.0_SOL;DSV 25-3.0 SOL;1;Gun metal;300000;Solar hot water or mixture;Diaphragm;Twist-type;Thread;G 1" / G 1 1/4";100000;200000;-10/160
+Result number = 1;DSV20_3.0_SOL;DSV 20-3.0 SOL;1;Gun metal;300000;Solar hot water or mixture;Diaphragm;Twist-type;Thread;G 3/4" / G 1";100000;100000;-10/160
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 23
+
+SelectionMode = Individual
+ProductCategory = Safety valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 90
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+SystemApplicationType = Solar
+SystemHeatGeneratorTypeID = 
+NormID = 
+InstalledPower = 100000
+InstalledCollector = 100
+SafetyValveFamilyID = SFTYVFAM_SOL
+SafetyValveConnectionID = CONN_THREAD
+UserSetPressureChoice = 800000
+EndInputs
+
+StartOutputs
+Result number = 0;DSV25_8.0_SOL;DSV 25-8.0 SOL;1;Gun metal;800000;Solar hot water or mixture;Diaphragm;Twist-type;Thread;G 1" / G 1 1/4";100000;200000;-10/160
+Result number = 1;DSV20_8.0_SOL;DSV 20-8.0 SOL;1;Gun metal;800000;Solar hot water or mixture;Diaphragm;Twist-type;Thread;G 3/4" / G 1";100000;100000;-10/160
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 24
+
+SelectionMode = Individual
+ProductCategory = Safety valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+SystemApplicationType = Heating
+SystemHeatGeneratorTypeID = HEATGENTYPEDIR
+NormID = 
+InstalledPower = 300000
+InstalledCollector = 0
+SafetyValveFamilyID = 
+SafetyValveConnectionID = 
+UserSetPressureChoice = 200000
+EndInputs
+
+StartOutputs
+Result number = 0;DSV32_2.0_DGH;DSV 32-2.0 DGH;1;Gun metal;200000;Hot water;Diaphragm;Lifting lever;Thread;G 1 1/4" / G 2";300000;401000;-10/120
+Result number = 1;DSV25_2.0_DGH;DSV 25-2.0 DGH;2;Gun metal;200000;Hot water;Diaphragm;Lifting lever;Thread;G 1" / G 1 1/2";300000;236000;-10/120
+Result number = 2;DSV20_2.0_DGH;DSV 20-2.0 DGH;2;Gun metal;200000;Hot water;Diaphragm;Lifting lever;Thread;G 3/4" / G 1 1/4";300000;152000;-10/120
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 25
+
+SelectionMode = Individual
+ProductCategory = Safety valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+SystemApplicationType = Heating
+SystemHeatGeneratorTypeID = HEATGENTYPEDIR
+NormID = 
+InstalledPower = 800000
+InstalledCollector = 0
+SafetyValveFamilyID = 
+SafetyValveConnectionID = 
+UserSetPressureChoice = 200000
+EndInputs
+
+StartOutputs
+Result number = 0;DSV32_2.0_DGH;DSV 32-2.0 DGH;2;Gun metal;200000;Hot water;Diaphragm;Lifting lever;Thread;G 1 1/4" / G 2";800000;401000;-10/120
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 26
+
+SelectionMode = Individual
+ProductCategory = Safety valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+SystemApplicationType = Heating
+SystemHeatGeneratorTypeID = HEATGENTYPEDIR
+NormID = 
+InstalledPower = 1200000
+InstalledCollector = 0
+SafetyValveFamilyID = 
+SafetyValveConnectionID = 
+UserSetPressureChoice = 200000
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 27
+
+SelectionMode = Individual
+ProductCategory = Safety valve
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 75
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+SystemApplicationType = Heating
+SystemHeatGeneratorTypeID = HEATGENTYPEDIR
+NormID = 
+InstalledPower = 3570000
+InstalledCollector = 0
+SafetyValveFamilyID = 
+SafetyValveConnectionID = 
+UserSetPressureChoice = 200000
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+

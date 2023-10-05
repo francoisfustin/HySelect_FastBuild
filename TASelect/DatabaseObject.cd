@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CDB_RegulatingValve" Collapsed="true">
+    <Position X="49.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgBAAAAAAAAAAgAABAAgAgBAAiAEAIoAAAEAAGA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_TAProduct" Collapsed="true">
+    <Position X="47.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>Ai1N2JYiiUFAMIDNsRsW7KRucvHUBilGKU4DcQECLuI=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_HydroThing" Collapsed="true">
+    <Position X="46.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAAcAKAAAAAAAEAAUAAAIECxIwpAAiAAAipAAAEAACA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_Thing" Collapsed="true">
+    <Position X="44.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAACCFCzAAAAAwggDAgCAAAAgAAIEHACA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CData" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wAkYuIBQFAGQYGEBEhQQQABwBoGAQGgAkAgBAcEAECI=</HashCode>
+      <FileName>DataBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_Accessory" Collapsed="true">
+    <Position X="40.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAABAACAAAACCAAIAAAAAAigoBEASAAAAgIAAFIBiA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_Actuator" Collapsed="true">
+    <Position X="42.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAAEggAGAAAIKSAAABIEBINmwoLgCSEFkEgEuBVAlKo=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_AdditCharacteristic" Collapsed="true">
+    <Position X="1" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAgAApAAARAgQAAoQIAgACAAAAAAAAEABCA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_Characteristic" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAABAAAAAAgQgABACSAAEACAAEAACg=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_CircSchemeCateg" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIEAAAAAAAAgAAQAACAAAACABAGAAAA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_CircuitScheme" Collapsed="true">
+    <Position X="7" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAkAAAAAkBAIIQAIBYAAACgsIIECGAE0KACEAEAICA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_CloseOffChar" Collapsed="true">
+    <Position X="9" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAEIBgAAACAAgUAACgAAAAACAgAAAAAAEgACA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_CommissioningSet" Collapsed="true">
+    <Position X="41.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAACQAAAAAAgABAAQAAAAAAkAoBAAiAgCEgAAAEAACE=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_Component" Collapsed="true">
+    <Position X="43.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AiAAAAAAAAAAAAAAAAAAAAAgAgBAACAACAiBAAkAACA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_Connect" Collapsed="true">
+    <Position X="36" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAABAAAAAAAAAkAAAAAiAAAQAAAAECACA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_ControlProperties" Collapsed="true">
+    <Position X="11" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAhAQAACAAQAQAAARAAAAAgCAAAACAAAAACBIMQQCQ=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_ControlValve" Collapsed="true">
+    <Position X="48.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BwAAgAAAqRCAAAApAIgAAoAgCwhABCAkoApYAQETACA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_Currency" Collapsed="true">
+    <Position X="13" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAQAAEBAABAAQAAAAAAAgwAAAACAAAAAAAAEABCA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_CvActSet" Collapsed="true">
+    <Position X="44.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAABAQAACAAAAQAAAIgAoBAAKEAAAgAAAEIBCA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_DblInt" Collapsed="true">
+    <Position X="15" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAEAggAAABmAAAAAAAAEAACA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_DblString" Collapsed="true">
+    <Position X="17" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAsAAAAAAAAIAAAAAAAgAAAAADAAAAAAAAEAACA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_DefaultUnits" Collapsed="true">
+    <Position X="26.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_Doc" Collapsed="true">
+    <Position X="31" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAgAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_DpCCharacteristic" Collapsed="true">
+    <Position X="2" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAQABCAAAGABABEAAAAQAwCCABCGSAQwIBAAGBACA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_DpController" Collapsed="true">
+    <Position X="45.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAABABAAAQAAkgAiBAACAAAQoAAAERACA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_FixedOrifice" Collapsed="true">
+    <Position X="47.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACBAQAAAAAAAABAAAAAQAAAgAgBAAiAAAEoAAAMAACA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_FixOCharacteristic" Collapsed="true">
+    <Position X="19" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAhAAABACAAgEIAAEEAACA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_HubStaValv" Collapsed="true">
+    <Position X="21" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAGAABACYARAAACQAEAAABgAAAAACAAEAAAAAEABCE=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_HubSupRetLnk" Collapsed="true">
+    <Position X="23" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAABAQAAAAAAAAAAAAAAkAAAAACAAACAAQAEAASA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_HubValv" Collapsed="true">
+    <Position X="25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAACBAgQARCQAAQAAAAABgAAAAACAAAAAAEBEABCE=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_MultiPair" Collapsed="true">
+    <Position X="27" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAgAAACACAIABAAAAEAAAA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_MultiString" Collapsed="true">
+    <Position X="29" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAEAAEAEBAAkgAgAAGAAAAAAAAEAACA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_MultiStringExt" Collapsed="true">
+    <Position X="29" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_MultiStringOrdered" Collapsed="true">
+    <Position X="31" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAQAAAAAAAAAAAgQAAAACEAAAAAAAEAAAA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_PageField" Collapsed="true">
+    <Position X="38.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAgAAyEgAAAAAAAAAAACAAgAAAAAAAAAAAAAAEAACA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_PageSetup" Collapsed="true">
+    <Position X="38.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EqBgCAKAIAAAEACIAcAAECQgIwFJABAEAmIIYAEDBCQ=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_PIControlValve" Collapsed="true">
+    <Position X="48.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAABAAAAIAgAIAAAAAAgAihAACAAAAoAAAEUASA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_PICVChar" Collapsed="true">
+    <Position X="31" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIASAAAAQAAIAACIAAIACIgAAAACiAAAAIAAAOwUCg=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_Pipe" Collapsed="true">
+    <Position X="45.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAICAAQUQCAAgggBMACAgAAgAQhEARCA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_RadNomCond" Collapsed="true">
+    <Position X="33" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgEAAAAAAAAAAACAACAAIgAgAAACEAAAAAIAFABAA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_RuledTable" Collapsed="true">
+    <Position X="55.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAgEAAgCAAiCAAAAgACAgAgBAACAQAIgAAAEAQCA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_ShutoffValve" Collapsed="true">
+    <Position X="51.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAgAAAAAgAAEAAgBgBAAmAAAIpAAAEAACA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_Singularity" Collapsed="true">
+    <Position X="35" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAABHAIAAQAIAoACAAACAAEAEAAAFBACA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_String" Collapsed="true">
+    <Position X="37.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAACIAAAAEAABAAgAAAAACAAAAAAAAEAACA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_StringID" Collapsed="true">
+    <Position X="36" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAIAAAAAAAAEAgAAgAACAAAAAAAAkAACA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_ThermostaticValve" Collapsed="true">
+    <Position X="50.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAQAAAISAAAAgAghAACAkAAhAAQEAACA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_UserProduct" Collapsed="true">
+    <Position X="48.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAhAAgQABEAAAQAAgAAAAACAACggAQAEABAA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_ValveCharacteristic" Collapsed="true">
+    <Position X="4" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAgAAAEAAAAAABIEAQIgAgAgABQCSAkAOCAAFCACA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_VenturiCharacteristic" Collapsed="true">
+    <Position X="59" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAjAAAAACAAAEAAAAEAACA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDB_VenturiValve" Collapsed="true">
+    <Position X="53.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACQAAAAAAQABABAAAAgAAwAhBAAiAAAEiAgAEAACA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CTable" Collapsed="true">
+    <Position X="56.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAgBEAAAAAAABhAAiAADAAhAwAEASIAAggAQQEABCA=</HashCode>
+      <FileName>DataBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CTableActSet" Collapsed="true">
+    <Position X="57.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataBObj.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

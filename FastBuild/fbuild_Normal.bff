@@ -1,0 +1,22 @@
+.VS2022_BasePath = 'c:\Program Files\Microsoft Visual Studio\2022\Professional'
+.Root = '$VS2022_BasePath$\VC\Tools\MSVC\14.37.32822\bin\Hostx64\x86\'
+.Executable = '$Root$/cl.exe'
+
+ObjectList()
+{
+  ; options for compilation
+  .Compiler = '$Executable$'
+  .CompilerOptions   = '%1 /c /ifcOutput "DFU\DFUSe\STDFUFiles\Debug\" /FR"DFU\DFUSe\STDFUFiles\Debug\" /GS /analyze- /W3 /Zc:wchar_t /I"DFU\DFUSe\Includes\" /Zi /Gm- /Od /Fd"DFU\DFUSe\STDFUFiles\Debug\" /Zc:inline /fp:precise /D "WIN32" /D "_DEBUG" /D "_LIB" /D "_CRT_SECURE_NO_WARNINGS" /D "_VC80_UPGRADE=0x0600" /D "_UNICODE" /D "UNICODE" /errorReport:prompt /WX- /Zc:forScope /RTC1 /Gd /Oy- /MTd /FC /Fa"DFU\DFUSe\STDFUFiles\Debug\" /EHsc /nologo /Fo%2 /Fp"DFU\DFUSe\STDFUFiles\Debug\STDFUFiles.pch" /diagnostics:column'
+  .CompilerOutputPath= 'DFU\DFUSe\STDFUFiles\Debug\'
+
+  ; Specify inputs for compilation
+  .CompilerInputPath = 'DFU\DFUSe\STDFUFiles\'
+}
+
+;Library( 'STDFUFiles' )
+;
+;	.CompilerInputPath = 'DFU\DFUSe\STDFUFiles\'
+;	.CompilerOutputPath= 'DFU\DFUSe\STDFUFiles\Debug\'
+;	.LibrarianOutput   = 'DFU\DFUSe\STDFUFiles\Debug\STDFUFiles.lib'
+;	.Compiler = 'Visual Studio 2022'
+;}

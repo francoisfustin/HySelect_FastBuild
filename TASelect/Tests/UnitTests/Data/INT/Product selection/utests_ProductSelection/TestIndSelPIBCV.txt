@@ -1,0 +1,5178 @@
+#Start of test definition
+
+StartTechnicalParameters
+ApplicationType = 2
+AvailablePMPanels = 7
+BreakTankRequiredForWaterMakeUp = 1
+CVDefKvReynard = 1
+CVMaxDispDp = 200000
+CVMaxDpProp = 65000
+CVMinAuthCstFlow = 0.5
+CVMinAuthor = 0.25
+CVMinDpOnoff = 3000
+CVMinDpProp = 10000
+CVUseDpCPBand = 0
+CanChangePressureVolumeLimit = 0
+CurrencyID = CURRENCY_EUR
+DefaultCalculationNorm = PM_NORM_EN12828
+DefaultCoolingTps = 7
+DefaultFillTemperature = 15
+DefaultHeatingTps = 50
+DefaultISChangeOverCoolingSideAdditFamilyID = WATER_ADDIT
+DefaultISChangeOverCoolingSideAdditID = WATER
+DefaultISChangeOverCoolingSideDT = 6
+DefaultISChangeOverCoolingSidePcWeight = 0
+DefaultISChangeOverCoolingSideTps = 6
+DefaultISChangeOverHeatingSideAdditFamilyID = WATER_ADDIT
+DefaultISChangeOverHeatingSideAdditID = WATER
+DefaultISChangeOverHeatingSideDT = 20
+DefaultISChangeOverHeatingSidePcWeight = 0
+DefaultISChangeOverHeatingSideTps = 75
+DefaultISCoolingAdditFamilyID = WATER_ADDIT
+DefaultISCoolingAdditID = WATER
+DefaultISCoolingDT = 20
+DefaultISCoolingPcWeight = 0
+DefaultISCoolingTps = 60
+DefaultISHeatingAdditFamilyID = WATER_ADDIT
+DefaultISHeatingAdditID = WATER
+DefaultISHeatingDT = 5
+DefaultISHeatingPcWeight = 0
+DefaultISHeatingTps = 80
+DefaultISSolarAdditFamilyID = WATER_ADDIT
+DefaultISSolarAdditID = WATER
+DefaultISSolarDT = 20
+DefaultISSolarPcWeight = 0
+DefaultISSolarTps = 70
+DefaultMaxTempInCooling = 45
+DefaultMinTempInHeating = 5
+DefaultMinTempInSolar = 5
+DefaultPipeSerieID = STEEL_DIN2440
+DefaultPrjCoolingAdditID = WATER
+DefaultPrjCoolingDT = 5
+DefaultPrjCoolingPcWeight = 0
+DefaultPrjHeatingAdditID = WATER
+DefaultPrjHeatingDT = 5
+DefaultPrjHeatingPcWeight = 0
+DefaultSafetyPressureResponseValve = 300000
+DefaultSecondaryPumpHMin = 25000
+DefaultSmartCVLocation = 1
+DefaultStaticPressureOfWaterNetwork = 400000
+DefaultTAZ = 100
+DefaultWaterHardness = 1.78324958
+DefaultWaterMakeUpTemp = 15
+DegassingWaterReserveForVessel = 0.002
+DpCBCVDpcmin = 5000
+DpCBCVDplmin = 5000
+DpCHide = 0
+DpCHminFullyOpenMv = 0
+DpCMinDp = 5000
+DpCMvLocation = 0
+DpCMvWithSameSizeOnly = 0
+DpRefForBest6Way = 3000
+FixedOrificeMaxDp = 6000
+FixedOrificeMinDp = 2000
+FlowDeviationMinus = -0.1
+FlowDeviationPlus = 0.1
+FluidTempLimitEN12953 = 105
+InitialPressureMargin = 30000
+MaxNumberOfAdditionalVesselsInParallel = 4
+MaxNumberOfVentoInParallel = 2
+MaxSafetyValveInParallel = 3
+MaxSizeShift = 4
+MinPressureMargin = 20000
+PICvHide = 0
+PICvMinDp = 1000
+PSetupCompresso = 10000
+PSetupTransfero = 20000
+PipeMaxDp = 200
+PipeMaxVelocity = 2
+PipeMinDp = 10
+PipeMinVelocity = 0.3
+PipeTargetDp = 150
+PipeTargetVelocity = 1
+PipeTargetVelosityUsed = 0
+PressureVolumeLimit = 300000
+ProjectType = 1
+SafetyTempLimiterLimitEN12953 = 110
+SizeShiftAbove = 0
+SizeShiftBelow = -2
+SmartValveDpMaxForBestSuggestion = 20000
+TrvDefDpTotal = 10000
+TrvDefRoomTemperature = 20
+TrvDefSupplyTemperature = 80
+TrvMaxDp = 30000
+TrvMinDpRatio = 0.25
+UseDefaultFreezingPointAsMinTemperature = 1
+UseSimplyPst = 0
+UseVesselPressureVolumeLimit = 0
+ValveMaxDp = 200000
+ValveMin2Dp = 6000
+ValveMinDp = 3000
+VenturiMaxDp = 10000
+VenturiMinDp = 2000
+VesselSelectionRangePercentage = 0
+EndTechnicalParameters
+
+Test number = 0
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;TA_MODULATOR_50A;TA-Modulator 50;Ametal(tm);Thread male;Standard;16;50 (2");false;false;1.27782;1.3 (0.05);>125;0.01;22608.4;0.015;EqualPc;PushToClose;false;400000;-10/90;50 (2");83.9692;0.629544
+Result number = 1;TA_MODULATOR_40A;TA-Modulator 40;Ametal(tm);Thread male;Standard;16;40 (1 1/2");false;false;1.76878;1.75 (0.05);>125;0.01;23843.2;0.015;EqualPc;PushToClose;false;400000;-10/90;50 (2");83.9692;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 1
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;TA_MODULATOR_125HFA;TA-Modulator 125 HF;Ductile iron;Flange;Standard;16;125 (5");false;false;2.27197;2.27 (0.01);>125;0.01;38852.6;0.0198;Linear;PushToClose;false;800000;-10/120;125 (5");72.8493;1.04638
+Result number = 1;TA_MODULATOR_125NFA;TA-Modulator 125 NF;Ductile iron;Flange;Standard;16;125 (5");false;false;3.84749;3.85 (0.01);>150;0.01;24575.7;0.0198;EqualPc;PushToClose;false;800000;-10/120;125 (5");72.8493;1.04638
+Result number = 2;TA_MODULATOR_125HFB;TA-Modulator 125 HF;Ductile iron;Flange;Standard;25;125 (5");false;false;2.27197;2.27 (0.01);>125;0.01;38852.6;0.0198;Linear;PushToClose;false;800000;-10/120;125 (5");72.8493;1.04638
+Result number = 3;TA_MODULATOR_125NFB;TA-Modulator 125 NF;Ductile iron;Flange;Standard;25;125 (5");false;false;3.84749;3.85 (0.01);>150;0.01;24575.7;0.0198;EqualPc;PushToClose;false;800000;-10/120;125 (5");72.8493;1.04638
+Result number = 4;TA_MODULATOR_100HFA;TA-Modulator 100 HF;Ductile iron;Flange;Standard;16;100 (4");false;false;3.15185;3.15 (0.01);>125;0.01;40625.8;0.0198;Linear;PushToClose;false;800000;-10/120;125 (5");72.8493;1.04638
+Result number = 5;TA_MODULATOR_100NFA;TA-Modulator 100 NF;Ductile iron;Flange;Standard;16;100 (4");false;false;4.8145;4.81 (0.01);>150;0.01;30000;0.0198;EqualPc;PushToClose;false;800000;-10/120;125 (5");72.8493;1.04638
+Result number = 6;TA_MODULATOR_100HFB;TA-Modulator 100 HF;Ductile iron;Flange;Standard;25;100 (4");false;false;3.15185;3.15 (0.01);>125;0.01;40625.8;0.0198;Linear;PushToClose;false;800000;-10/120;125 (5");72.8493;1.04638
+Result number = 7;TA_MODULATOR_100NFB;TA-Modulator 100 NF;Ductile iron;Flange;Standard;25;100 (4");false;false;4.8145;4.81 (0.01);>150;0.01;30000;0.0198;EqualPc;PushToClose;false;800000;-10/120;125 (5");72.8493;1.04638
+Result number = 8;TA_MODULATOR_125HFD;TA-Modulator 5"HF;Ductile iron;ANSI Flange;Standard;25;125 (5");false;false;2.27197;2.27 (0.01);>125;0.01;38852.6;0.0198;Linear;PushToClose;false;800000;-10/120;125 (5");72.8493;1.04638
+Result number = 9;TA_MODULATOR_125NFD;TA-Modulator 5";Ductile iron;ANSI Flange;Standard;25;125 (5");false;false;3.84749;3.85 (0.01);>150;0.01;24575.7;0.0198;EqualPc;PushToClose;false;800000;-10/120;125 (5");72.8493;1.04638
+Result number = 10;TA_MODULATOR_100HFD;TA-Modulator 4"HF;Ductile iron;ANSI Flange;Standard;25;100 (4");false;false;3.15185;3.15 (0.01);>125;0.01;40625.8;0.0198;Linear;PushToClose;false;800000;-10/120;125 (5");72.8493;1.04638
+Result number = 11;TA_MODULATOR_100NFD;TA-Modulator 4";Ductile iron;ANSI Flange;Standard;25;100 (4");false;false;4.8145;4.81 (0.01);>150;0.01;30000;0.0198;EqualPc;PushToClose;false;800000;-10/120;125 (5");72.8493;1.04638
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 2
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.02777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;TA_MODULATOR_150HFA;TA-Modulator 150 HF;Ductile iron;Flange;Standard;16;150 (6");false;false;6.3954;6.4 (0.01);>125;0.01;41738.1;0.0299;Linear;PushToClose;false;800000;-10/120;150 (6");113.355;1.47212
+Result number = 1;TA_MODULATOR_150NFA;TA-Modulator 150 NF;Ductile iron;Flange;Standard;16;150 (6");false;false;10.2826;10.28 (0.01);>150;0.01;26895.7;0.0298;EqualPc;PushToClose;false;800000;-10/120;150 (6");113.355;1.47212
+Result number = 2;TA_MODULATOR_150HFB;TA-Modulator 150 HF;Ductile iron;Flange;Standard;25;150 (6");false;false;6.3954;6.4 (0.01);>125;0.01;41738.1;0.0299;Linear;PushToClose;false;800000;-10/120;150 (6");113.355;1.47212
+Result number = 3;TA_MODULATOR_150NFB;TA-Modulator 150 NF;Ductile iron;Flange;Standard;25;150 (6");false;false;10.2826;10.28 (0.01);>150;0.01;26895.7;0.0298;EqualPc;PushToClose;false;800000;-10/120;150 (6");113.355;1.47212
+Result number = 4;TA_MODULATOR_125HFA;TA-Modulator 125 HF;Ductile iron;Flange;Standard;16;125 (5");false;false;4.03926;4.04 (0.01);>125;0.01;43675.7;0.0198;Linear;PushToClose;false;800000;-10/120;150 (6");113.355;1.47212
+Result number = 5;TA_MODULATOR_125HFB;TA-Modulator 125 HF;Ductile iron;Flange;Standard;25;125 (5");false;false;4.03926;4.04 (0.01);>125;0.01;43675.7;0.0198;Linear;PushToClose;false;800000;-10/120;150 (6");113.355;1.47212
+Result number = 6;TA_MODULATOR_150HFD;TA-Modulator 6"HF;Ductile iron;ANSI Flange;Standard;25;150 (6");false;false;6.3954;6.4 (0.01);>125;0.01;41738.1;0.0299;Linear;PushToClose;false;800000;-10/120;150 (6");113.355;1.47212
+Result number = 7;TA_MODULATOR_150NFD;TA-Modulator 6";Ductile iron;ANSI Flange;Standard;25;150 (6");false;false;10.2826;10.28 (0.01);>150;0.01;26895.7;0.0298;EqualPc;PushToClose;false;800000;-10/120;150 (6");113.355;1.47212
+Result number = 8;TA_MODULATOR_125HFD;TA-Modulator 5"HF;Ductile iron;ANSI Flange;Standard;25;125 (5");false;false;4.03926;4.04 (0.01);>125;0.01;43675.7;0.0198;Linear;PushToClose;false;800000;-10/120;150 (6");113.355;1.47212
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 3
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 4
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 5
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 6
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 7
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADN
+ComboVersionID = VERS_US
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 8
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00538888
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 9
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00538888
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 10
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00538888
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_ANSIFL
+ComboVersionID = VERS_US
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 11
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_COMPACT_P
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;COMPACT_P_25A;TA-Compact-P 25;Ametal(tm);Thread male;Standard;16;25 (1");false;false;3.77273;3.75 (0.25);>50;0.01;16832.5;0.004;Linear;PushToClose;false;400000;-10/90;25 (1");116.19;0.478046
+Result number = 1;COMPACT_P_20A;TA-Compact-P 20;Ametal(tm);Thread male;Standard;16;20 (3/4");false;false;8.10532;8 (0.25);>50;0.01;14909.5;0.004;Linear;PushToClose;false;400000;-10/90;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 12
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_MODULATOR_P
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;TA_MODULATOR_25A;TA-Modulator 25;Ametal(tm);Thread male;Standard;16;25 (1");false;false;4.94879;5 (0.5);>75;0.01;17280.5;0.00651;EqualPc;PushToClose;false;400000;-10/90;25 (1");116.19;0.478046
+Result number = 1;TA_MODULATOR_25C;TA-Modulator 25;Ametal(tm);Thread male;Standard;16;25 (1");false;false;4.94879;5 (0.5);>75;0.01;17280.5;0.00651;EqualPc;PushToClose;false;600000;-20/120;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 13
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_MODULATOR_P
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;TA_MODULATOR_25A;TA-Modulator 25;Ametal(tm);Thread male;Standard;16;25 (1");false;false;4.94879;5 (0.5);>75;0.01;17280.5;0.00651;EqualPc;PushToClose;false;400000;-10/90;25 (1");116.19;0.478046
+Result number = 1;TA_MODULATOR_25C;TA-Modulator 25;Ametal(tm);Thread male;Standard;16;25 (1");false;false;4.94879;5 (0.5);>75;0.01;17280.5;0.00651;EqualPc;PushToClose;false;600000;-20/120;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 14
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_MODULATOR_P
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;TA_MODULATOR_65HFA;TA-Modulator 65 HF;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;1.55233;1.55 (0.01);>125;0.01;40971.6;0.02;Linear;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;TA_MODULATOR_65A;TA-Modulator 65;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;3.57487;3.57 (0.01);>125;0.01;23289.6;0.02;EqualPc;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 2;TA_MODULATOR_65HFB;TA-Modulator 65 HF;Ductile iron;Flange;Standard;25;65 (2 1/2");false;false;1.55233;1.55 (0.01);>125;0.01;40971.6;0.02;Linear;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 3;TA_MODULATOR_65B;TA-Modulator 65;Ductile iron;Flange;Standard;25;65 (2 1/2");false;false;3.57487;3.57 (0.01);>125;0.01;23289.6;0.02;EqualPc;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 15
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_MODULATOR_P
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;TA_MODULATOR_65HFA;TA-Modulator 65 HF;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;1.55233;1.55 (0.01);>125;0.01;40971.6;0.02;Linear;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;TA_MODULATOR_65A;TA-Modulator 65;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;3.57487;3.57 (0.01);>125;0.01;23289.6;0.02;EqualPc;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 16
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_MODULATOR_P
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;TA_MODULATOR_65HFB;TA-Modulator 65 HF;Ductile iron;Flange;Standard;25;65 (2 1/2");false;false;1.55233;1.55 (0.01);>125;0.01;40971.6;0.02;Linear;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;TA_MODULATOR_65B;TA-Modulator 65;Ductile iron;Flange;Standard;25;65 (2 1/2");false;false;3.57487;3.57 (0.01);>125;0.01;23289.6;0.02;EqualPc;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 17
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;TA_MODULATOR_65HFA;TA-Modulator 65 HF;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;1.55233;1.55 (0.01);>125;0.01;40971.6;0.02;Linear;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;TA_MODULATOR_65A;TA-Modulator 65;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;3.57487;3.57 (0.01);>125;0.01;23289.6;0.02;EqualPc;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 2;TA_MODULATOR_65HFB;TA-Modulator 65 HF;Ductile iron;Flange;Standard;25;65 (2 1/2");false;false;1.55233;1.55 (0.01);>125;0.01;40971.6;0.02;Linear;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 3;TA_MODULATOR_65B;TA-Modulator 65;Ductile iron;Flange;Standard;25;65 (2 1/2");false;false;3.57487;3.57 (0.01);>125;0.01;23289.6;0.02;EqualPc;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 4;TA_MODULATOR_50A;TA-Modulator 50;Ametal(tm);Thread male;Standard;16;50 (2");false;false;1.83128;1.85 (0.05);>125;0.01;25460.2;0.015;EqualPc;PushToClose;false;400000;-10/90;65 (2 1/2");83.8888;0.747189
+Result number = 5;TA_MODULATOR_65HFD;TA-Modulator 2 1/2"HF;Ductile iron;ANSI Flange;Standard;25;65 (2 1/2");false;false;1.55233;1.55 (0.01);>125;0.01;40971.6;0.02;Linear;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 6;TA_MODULATOR_65D;TA-Modulator 2 1/2";Ductile iron;ANSI Flange;Standard;25;65 (2 1/2");false;false;3.57487;3.57 (0.01);>125;0.01;23289.6;0.02;EqualPc;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 18
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 19
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 20
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 21
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 22
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADN
+ComboVersionID = VERS_US
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 23
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 24
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 25
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 26
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 27
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_ANSIFL
+ComboVersionID = VERS_US
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 28
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_ANSIFL
+ComboVersionID = VERS_US
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 29
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_ANSIFL
+ComboVersionID = VERS_US
+ComboPNID = PN_4
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 30
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_ANSIFL
+ComboVersionID = VERS_US
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 31
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_COMPACT_P
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;COMPACT_P_20A;TA-Compact-P 20;Ametal(tm);Thread male;Standard;16;20 (3/4");false;false;3.3381;3.25 (0.25);>50;0.01;13380.9;0.004;Linear;PushToClose;false;400000;-10/90;20 (3/4");101.525;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 32
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_MODULATOR_P
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;TA_MODULATOR_20A;TA-Modulator 20;Ametal(tm);Thread male;Standard;16;20 (3/4");false;false;4.38442;4.5 (0.5);>75;0.01;13944.9;0.00404;EqualPc;PushToClose;false;400000;-10/90;20 (3/4");101.525;0.379027
+Result number = 1;TA_MODULATOR_20C;TA-Modulator 20;Ametal(tm);Thread male;Standard;16;20 (3/4");false;false;4.38442;4.5 (0.5);>75;0.01;13944.9;0.00404;EqualPc;PushToClose;false;600000;-20/120;20 (3/4");101.525;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 33
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_MODULATOR_P
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;TA_MODULATOR_50A;TA-Modulator 50;Ametal(tm);Thread male;Standard;16;50 (2");false;false;1.83128;1.85 (0.05);>125;0.01;25460.2;0.015;EqualPc;PushToClose;false;400000;-10/90;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 34
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_MODULATOR_P
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;TA_MODULATOR_50A;TA-Modulator 50;Ametal(tm);Thread male;Standard;16;50 (2");false;false;1.83128;1.85 (0.05);>125;0.01;25460.2;0.015;EqualPc;PushToClose;false;400000;-10/90;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 35
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_MODULATOR_P
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;TA_MODULATOR_65HFA;TA-Modulator 65 HF;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;1.55233;1.55 (0.01);>125;0.01;40971.6;0.02;Linear;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;TA_MODULATOR_65A;TA-Modulator 65;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;3.57487;3.57 (0.01);>125;0.01;23289.6;0.02;EqualPc;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 2;TA_MODULATOR_65HFB;TA-Modulator 65 HF;Ductile iron;Flange;Standard;25;65 (2 1/2");false;false;1.55233;1.55 (0.01);>125;0.01;40971.6;0.02;Linear;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 3;TA_MODULATOR_65B;TA-Modulator 65;Ductile iron;Flange;Standard;25;65 (2 1/2");false;false;3.57487;3.57 (0.01);>125;0.01;23289.6;0.02;EqualPc;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 36
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_MODULATOR_P
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;TA_MODULATOR_65HFA;TA-Modulator 65 HF;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;1.55233;1.55 (0.01);>125;0.01;40971.6;0.02;Linear;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;TA_MODULATOR_65A;TA-Modulator 65;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;3.57487;3.57 (0.01);>125;0.01;23289.6;0.02;EqualPc;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 37
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_MODULATOR_P
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;TA_MODULATOR_65HFB;TA-Modulator 65 HF;Ductile iron;Flange;Standard;25;65 (2 1/2");false;false;1.55233;1.55 (0.01);>125;0.01;40971.6;0.02;Linear;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;TA_MODULATOR_65B;TA-Modulator 65;Ductile iron;Flange;Standard;25;65 (2 1/2");false;false;3.57487;3.57 (0.01);>125;0.01;23289.6;0.02;EqualPc;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 38
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;TA_MODULATOR_65HFA;TA-Modulator 65 HF;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;1.55233;1.55 (0.01);>125;0.01;40971.6;0.02;Linear;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;TA_MODULATOR_65A;TA-Modulator 65;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;3.57487;3.57 (0.01);>125;0.01;23289.6;0.02;EqualPc;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 2;TA_MODULATOR_65HFB;TA-Modulator 65 HF;Ductile iron;Flange;Standard;25;65 (2 1/2");false;false;1.55233;1.55 (0.01);>125;0.01;40971.6;0.02;Linear;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 3;TA_MODULATOR_65B;TA-Modulator 65;Ductile iron;Flange;Standard;25;65 (2 1/2");false;false;3.57487;3.57 (0.01);>125;0.01;23289.6;0.02;EqualPc;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 4;TA_MODULATOR_50A;TA-Modulator 50;Ametal(tm);Thread male;Standard;16;50 (2");false;false;1.83128;1.85 (0.05);>125;0.01;25460.2;0.015;EqualPc;PushToClose;false;400000;-10/90;65 (2 1/2");83.8888;0.747189
+Result number = 5;TA_MODULATOR_65HFD;TA-Modulator 2 1/2"HF;Ductile iron;ANSI Flange;Standard;25;65 (2 1/2");false;false;1.55233;1.55 (0.01);>125;0.01;40971.6;0.02;Linear;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 6;TA_MODULATOR_65D;TA-Modulator 2 1/2";Ductile iron;ANSI Flange;Standard;25;65 (2 1/2");false;false;3.57487;3.57 (0.01);>125;0.01;23289.6;0.02;EqualPc;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 39
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 40
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 41
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 42
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 43
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADN
+ComboVersionID = VERS_US
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 44
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 45
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 46
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 47
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 48
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_ANSIFL
+ComboVersionID = VERS_US
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 49
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_ANSIFL
+ComboVersionID = VERS_US
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 50
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_ANSIFL
+ComboVersionID = VERS_US
+ComboPNID = PN_4
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 51
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_FUSION_P
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_ANSIFL
+ComboVersionID = VERS_US
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 52
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_COMPACT_P
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;COMPACT_P_20A;TA-Compact-P 20;Ametal(tm);Thread male;Standard;16;20 (3/4");false;false;3.3381;3.25 (0.25);>50;0.01;13380.9;0.004;Linear;PushToClose;false;400000;-10/90;20 (3/4");101.525;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 53
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_MODULATOR_P
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;TA_MODULATOR_65HFA;TA-Modulator 65 HF;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;1.55233;1.55 (0.01);>125;0.01;40971.6;0.02;Linear;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;TA_MODULATOR_65A;TA-Modulator 65;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;3.57487;3.57 (0.01);>125;0.01;23289.6;0.02;EqualPc;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 2;TA_MODULATOR_65HFB;TA-Modulator 65 HF;Ductile iron;Flange;Standard;25;65 (2 1/2");false;false;1.55233;1.55 (0.01);>125;0.01;40971.6;0.02;Linear;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 3;TA_MODULATOR_65B;TA-Modulator 65;Ductile iron;Flange;Standard;25;65 (2 1/2");false;false;3.57487;3.57 (0.01);>125;0.01;23289.6;0.02;EqualPc;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 4;TA_MODULATOR_65HFD;TA-Modulator 2 1/2"HF;Ductile iron;ANSI Flange;Standard;25;65 (2 1/2");false;false;1.55233;1.55 (0.01);>125;0.01;40971.6;0.02;Linear;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 5;TA_MODULATOR_65D;TA-Modulator 2 1/2";Ductile iron;ANSI Flange;Standard;25;65 (2 1/2");false;false;3.57487;3.57 (0.01);>125;0.01;23289.6;0.02;EqualPc;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 54
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_MODULATOR_P
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;TA_MODULATOR_50A;TA-Modulator 50;Ametal(tm);Thread male;Standard;16;50 (2");false;false;1.83128;1.85 (0.05);>125;0.01;25460.2;0.015;EqualPc;PushToClose;false;400000;-10/90;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 55
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_MODULATOR_P
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;TA_MODULATOR_65HFA;TA-Modulator 65 HF;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;1.55233;1.55 (0.01);>125;0.01;40971.6;0.02;Linear;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;TA_MODULATOR_65A;TA-Modulator 65;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;3.57487;3.57 (0.01);>125;0.01;23289.6;0.02;EqualPc;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 2;TA_MODULATOR_65HFB;TA-Modulator 65 HF;Ductile iron;Flange;Standard;25;65 (2 1/2");false;false;1.55233;1.55 (0.01);>125;0.01;40971.6;0.02;Linear;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 3;TA_MODULATOR_65B;TA-Modulator 65;Ductile iron;Flange;Standard;25;65 (2 1/2");false;false;3.57487;3.57 (0.01);>125;0.01;23289.6;0.02;EqualPc;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 56
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_MODULATOR_P
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;TA_MODULATOR_65HFA;TA-Modulator 65 HF;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;1.55233;1.55 (0.01);>125;0.01;40971.6;0.02;Linear;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;TA_MODULATOR_65A;TA-Modulator 65;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;3.57487;3.57 (0.01);>125;0.01;23289.6;0.02;EqualPc;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 57
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_STD
+ComboFamilyID = FAM_MODULATOR_P
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;TA_MODULATOR_65HFB;TA-Modulator 65 HF;Ductile iron;Flange;Standard;25;65 (2 1/2");false;false;1.55233;1.55 (0.01);>125;0.01;40971.6;0.02;Linear;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;TA_MODULATOR_65B;TA-Modulator 65;Ductile iron;Flange;Standard;25;65 (2 1/2");false;false;3.57487;3.57 (0.01);>125;0.01;23289.6;0.02;EqualPc;PushToClose;false;800000;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 58
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = 
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = 
+ComboVersionID = VERS_PT90
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;KTM512_65A;KTM 512 DN65 LF;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");false;false;6.90121;6.9 (0.02);-;0;16946.9;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;KTM512_65C;KTM 512 DN65 NF;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");false;false;5.83584;5.84 (0.02);-;0;24178.3;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 2;KTM512_65E;KTM 512 DN65 HF;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");false;false;5.12862;5.12 (0.02);-;0;44604.3;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 3;KTM512_40ETFTF;KTM 512 DN40/50 HF;Ductile iron;Thread;PT 90;25;50 (2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 4;KTM512_40EMFMF;KTM 512 DN40/50 HF;Ductile iron;Thread male;PT 90;25;50 (2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 5;KTM512_40ETRFTRF;KTM 512 DN40/50 HF;Ductile iron;Thread ISO228 Female RC;PT 90;25;50 (2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 6;KTM512_40EIFIF;KTM 512 DN40/50 HF;Ductile iron;Flange;PT 90;25;50 (2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 7;KTM512_40EWFWF;KTM 512 DN40/50 HF;Ductile iron;Welding;PT 90;25;50 (2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 8;KTM512_40ETETE;KTM 512 DN40/50 HF;Ductile iron;Thread;PT 90;25;40 (1 1/2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 9;KTM512_40EMEME;KTM 512 DN40/50 HF;Ductile iron;Thread male;PT 90;25;40 (1 1/2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 10;KTM512_40ETRETRE;KTM 512 DN40/50 HF;Ductile iron;Thread ISO228 Female RC;PT 90;25;40 (1 1/2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 11;KTM512_40EIEIE;KTM 512 DN40/50 HF;Ductile iron;Flange;PT 90;25;40 (1 1/2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 12;KTM512_40EWEWE;KTM 512 DN40/50 HF;Ductile iron;Welding;PT 90;25;40 (1 1/2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 13;KTM512_65M;KTM 512 2 1/2"LF;Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");false;false;6.90121;6.9 (0.02);-;0;16946.9;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 14;KTM512_65N;KTM 512 2 1/2"NF;Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");false;false;5.83584;5.84 (0.02);-;0;24178.3;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 15;KTM512_65O;KTM 512 2 1/2"HF;Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");false;false;5.12862;5.12 (0.02);-;0;44604.3;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 16;KTM512_40ETNDTND;KTM 512 DN40/50 HF;Ductile iron;Thread NPT;PT 90;25;50 (2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 17;KTM512_40EAIFAIF;KTM 512 DN40/50 HF;Ductile iron;ANSI Flange;PT 90;25;50 (2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 18;KTM512_40ETNCTNC;KTM 512 DN40/50 HF;Ductile iron;Thread NPT;PT 90;25;40 (1 1/2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 19;KTM512_40EAIEAIE;KTM 512 DN40/50 HF;Ductile iron;ANSI Flange;PT 90;25;40 (1 1/2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 59
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTCM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = 
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 60
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTCM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 61
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTCM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 62
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTCM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_WELDING
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 63
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.016666666662
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = 
+ComboVersionID = VERS_PT90
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;KTM512_125K;KTM 512 DN125 HF;Ductile iron;Flange;PT 90;16;125 (5");false;false;8.32703;8.32 (0.02);-;0;72196;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;125 (5");103.357;1.25566
+Result number = 1;KTM512_125I;KTM 512 DN125 HF;Ductile iron;Flange;PT 90;25;125 (5");false;false;8.32703;8.32 (0.02);-;0;72196;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;125 (5");103.357;1.25566
+Result number = 2;KTM512_125O;KTM 512 5"HF;Ductile iron;ANSI Flange;PT 90;20;125 (5");false;false;8.32703;8.32 (0.02);-;0;72196;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;125 (5");103.357;1.25566
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 64
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;KTM512_40ATFTF;KTM 512 DN40/50 LF;Ductile iron;Thread;PT 90;25;50 (2");false;false;5.76994;5.75 (0.05);-;0;17387.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;50 (2");83.9692;0.629544
+Result number = 1;KTM512_40CTFTF;KTM 512 DN40/50 NF;Ductile iron;Thread;PT 90;25;50 (2");false;false;5.42132;5.4 (0.05);-;0;25533.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;50 (2");83.9692;0.629544
+Result number = 2;KTM512_40ETFTF;KTM 512 DN40/50 HF;Ductile iron;Thread;PT 90;25;50 (2");false;false;4.90551;4.9 (0.05);-;0;46218.7;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;50 (2");83.9692;0.629544
+Result number = 3;KTM512_40ATETE;KTM 512 DN40/50 LF;Ductile iron;Thread;PT 90;25;40 (1 1/2");false;false;5.76994;5.75 (0.05);-;0;17387.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;50 (2");83.9692;0.629544
+Result number = 4;KTM512_40CTETE;KTM 512 DN40/50 NF;Ductile iron;Thread;PT 90;25;40 (1 1/2");false;false;5.42132;5.4 (0.05);-;0;25533.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;50 (2");83.9692;0.629544
+Result number = 5;KTM512_40ETETE;KTM 512 DN40/50 HF;Ductile iron;Thread;PT 90;25;40 (1 1/2");false;false;4.90551;4.9 (0.05);-;0;46218.7;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;50 (2");83.9692;0.629544
+Result number = 6;KTM512_25ETDTD;KTM 512 DN25/32 HF;Ductile iron;Thread;PT 90;25;32 (1 1/4");false;false;5.31063;5.3 (0.05);-;0;74144.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;50 (2");83.9692;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 65
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;KTM512_40AMFMF;KTM 512 DN40/50 LF;Ductile iron;Thread male;PT 90;25;50 (2");false;false;5.76994;5.75 (0.05);-;0;17387.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;50 (2");83.9692;0.629544
+Result number = 1;KTM512_40CMFMF;KTM 512 DN40/50 NF;Ductile iron;Thread male;PT 90;25;50 (2");false;false;5.42132;5.4 (0.05);-;0;25533.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;50 (2");83.9692;0.629544
+Result number = 2;KTM512_40EMFMF;KTM 512 DN40/50 HF;Ductile iron;Thread male;PT 90;25;50 (2");false;false;4.90551;4.9 (0.05);-;0;46218.7;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;50 (2");83.9692;0.629544
+Result number = 3;KTM512_40AMEME;KTM 512 DN40/50 LF;Ductile iron;Thread male;PT 90;25;40 (1 1/2");false;false;5.76994;5.75 (0.05);-;0;17387.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;50 (2");83.9692;0.629544
+Result number = 4;KTM512_40CMEME;KTM 512 DN40/50 NF;Ductile iron;Thread male;PT 90;25;40 (1 1/2");false;false;5.42132;5.4 (0.05);-;0;25533.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;50 (2");83.9692;0.629544
+Result number = 5;KTM512_40EMEME;KTM 512 DN40/50 HF;Ductile iron;Thread male;PT 90;25;40 (1 1/2");false;false;4.90551;4.9 (0.05);-;0;46218.7;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;50 (2");83.9692;0.629544
+Result number = 6;KTM512_25EMDMD;KTM 512 DN25/32 HF;Ductile iron;Thread male;PT 90;25;32 (1 1/4");false;false;5.31063;5.3 (0.05);-;0;74144.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;50 (2");83.9692;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 66
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_PT90
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;KTM512_40AIFIF;KTM 512 DN40/50 LF;Ductile iron;Flange;PT 90;25;50 (2");false;false;5.76994;5.75 (0.05);-;0;17387.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;50 (2");83.9692;0.629544
+Result number = 1;KTM512_40CIFIF;KTM 512 DN40/50 NF;Ductile iron;Flange;PT 90;25;50 (2");false;false;5.42132;5.4 (0.05);-;0;25533.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;50 (2");83.9692;0.629544
+Result number = 2;KTM512_40EIFIF;KTM 512 DN40/50 HF;Ductile iron;Flange;PT 90;25;50 (2");false;false;4.90551;4.9 (0.05);-;0;46218.7;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;50 (2");83.9692;0.629544
+Result number = 3;KTM512_40AIEIE;KTM 512 DN40/50 LF;Ductile iron;Flange;PT 90;25;40 (1 1/2");false;false;5.76994;5.75 (0.05);-;0;17387.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;50 (2");83.9692;0.629544
+Result number = 4;KTM512_40CIEIE;KTM 512 DN40/50 NF;Ductile iron;Flange;PT 90;25;40 (1 1/2");false;false;5.42132;5.4 (0.05);-;0;25533.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;50 (2");83.9692;0.629544
+Result number = 5;KTM512_40EIEIE;KTM 512 DN40/50 HF;Ductile iron;Flange;PT 90;25;40 (1 1/2");false;false;4.90551;4.9 (0.05);-;0;46218.7;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;50 (2");83.9692;0.629544
+Result number = 6;KTM512_25EIDID;KTM 512 DN25/32 HF;Ductile iron;Flange;PT 90;25;32 (1 1/4");false;false;5.31063;5.3 (0.05);-;0;74144.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;50 (2");83.9692;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 67
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00838888
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_PT90
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;KTM512_100G;KTM 512 DN100 NF;Ductile iron;Flange;PT 90;16;100 (4");false;false;7.9498;7.94 (0.02);-;0;30685.1;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;100 (4");81.6461;0.968803
+Result number = 1;KTM512_100K;KTM 512 DN100 HF;Ductile iron;Flange;PT 90;16;100 (4");false;false;7.07719;7.08 (0.02);-;0;54190.6;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;100 (4");81.6461;0.968803
+Result number = 2;KTM512_80E;KTM 512 DN80 HF;Ductile iron;Flange;PT 90;16/25;80 (3");false;false;8.74202;8.74 (0.02);-;0;74472;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;100 (4");81.6461;0.968803
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 68
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;KTM512_65A;KTM 512 DN65 LF;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");false;false;6.90121;6.9 (0.02);-;0;16946.9;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;KTM512_65C;KTM 512 DN65 NF;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");false;false;5.83584;5.84 (0.02);-;0;24178.3;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 2;KTM512_65E;KTM 512 DN65 HF;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");false;false;5.12862;5.12 (0.02);-;0;44604.3;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 3;KTM512_40EIFIF;KTM 512 DN40/50 HF;Ductile iron;Flange;PT 90;25;50 (2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 4;KTM512_40EIEIE;KTM 512 DN40/50 HF;Ductile iron;Flange;PT 90;25;40 (1 1/2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 69
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_ANSIFL
+ComboVersionID = VERS_PT90
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;KTM512_65M;KTM 512 2 1/2"LF;Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");false;false;6.90121;6.9 (0.02);-;0;16946.9;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;KTM512_65N;KTM 512 2 1/2"NF;Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");false;false;5.83584;5.84 (0.02);-;0;24178.3;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 2;KTM512_65O;KTM 512 2 1/2"HF;Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");false;false;5.12862;5.12 (0.02);-;0;44604.3;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 3;KTM512_40EAIFAIF;KTM 512 DN40/50 HF;Ductile iron;ANSI Flange;PT 90;25;50 (2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 4;KTM512_40EAIEAIE;KTM 512 DN40/50 HF;Ductile iron;ANSI Flange;PT 90;25;40 (1 1/2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 70
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_PT90
+ComboPNID = PN_4
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 71
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;KTM512_40ETFTF;KTM 512 DN40/50 HF;Ductile iron;Thread;PT 90;25;50 (2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;KTM512_40ETETE;KTM 512 DN40/50 HF;Ductile iron;Thread;PT 90;25;40 (1 1/2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 72
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_WELDING
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;KTM512_40EWFWF;KTM 512 DN40/50 HF;Ductile iron;Welding;PT 90;25;50 (2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;KTM512_40EWEWE;KTM 512 DN40/50 HF;Ductile iron;Welding;PT 90;25;40 (1 1/2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 73
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = 
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = 
+ComboVersionID = VERS_PT90
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;KTM512_65A;KTM 512 DN65 LF;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");false;false;6.90121;6.9 (0.02);-;0;16946.9;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;KTM512_65C;KTM 512 DN65 NF;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");false;false;5.83584;5.84 (0.02);-;0;24178.3;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 2;KTM512_65E;KTM 512 DN65 HF;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");false;false;5.12862;5.12 (0.02);-;0;44604.3;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 3;KTM512_40ETFTF;KTM 512 DN40/50 HF;Ductile iron;Thread;PT 90;25;50 (2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 4;KTM512_40EMFMF;KTM 512 DN40/50 HF;Ductile iron;Thread male;PT 90;25;50 (2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 5;KTM512_40ETRFTRF;KTM 512 DN40/50 HF;Ductile iron;Thread ISO228 Female RC;PT 90;25;50 (2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 6;KTM512_40EIFIF;KTM 512 DN40/50 HF;Ductile iron;Flange;PT 90;25;50 (2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 7;KTM512_40EWFWF;KTM 512 DN40/50 HF;Ductile iron;Welding;PT 90;25;50 (2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 8;KTM512_40ETETE;KTM 512 DN40/50 HF;Ductile iron;Thread;PT 90;25;40 (1 1/2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 9;KTM512_40EMEME;KTM 512 DN40/50 HF;Ductile iron;Thread male;PT 90;25;40 (1 1/2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 10;KTM512_40ETRETRE;KTM 512 DN40/50 HF;Ductile iron;Thread ISO228 Female RC;PT 90;25;40 (1 1/2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 11;KTM512_40EIEIE;KTM 512 DN40/50 HF;Ductile iron;Flange;PT 90;25;40 (1 1/2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 12;KTM512_40EWEWE;KTM 512 DN40/50 HF;Ductile iron;Welding;PT 90;25;40 (1 1/2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 13;KTM512_65M;KTM 512 2 1/2"LF;Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");false;false;6.90121;6.9 (0.02);-;0;16946.9;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 14;KTM512_65N;KTM 512 2 1/2"NF;Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");false;false;5.83584;5.84 (0.02);-;0;24178.3;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 15;KTM512_65O;KTM 512 2 1/2"HF;Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");false;false;5.12862;5.12 (0.02);-;0;44604.3;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 16;KTM512_40ETNDTND;KTM 512 DN40/50 HF;Ductile iron;Thread NPT;PT 90;25;50 (2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 17;KTM512_40EAIFAIF;KTM 512 DN40/50 HF;Ductile iron;ANSI Flange;PT 90;25;50 (2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 18;KTM512_40ETNCTNC;KTM 512 DN40/50 HF;Ductile iron;Thread NPT;PT 90;25;40 (1 1/2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 19;KTM512_40EAIEAIE;KTM 512 DN40/50 HF;Ductile iron;ANSI Flange;PT 90;25;40 (1 1/2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 74
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTCM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = 
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 75
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTCM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 76
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTCM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 77
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTCM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_WELDING
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 78
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = 
+ComboVersionID = VERS_PT90
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;KTM512_25ATCTC;KTM 512 DN25/32 LF;Ductile iron;Thread;PT 90;25;25 (1");false;false;1.8707;1.85 (0.05);-;0;13240.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 1;KTM512_25CTCTC;KTM 512 DN25/32 NF;Ductile iron;Thread;PT 90;25;25 (1");false;false;1.42211;1.4 (0.05);-;0;21400.2;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 2;KTM512_25ETCTC;KTM 512 DN25/32 HF;Ductile iron;Thread;PT 90;25;25 (1");false;false;1.19839;1.2 (0.05);-;0;41375.7;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 3;KTM512_25AMCMC;KTM 512 DN25/32 LF;Ductile iron;Thread male;PT 90;25;25 (1");false;false;1.8707;1.85 (0.05);-;0;13240.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 4;KTM512_25CMCMC;KTM 512 DN25/32 NF;Ductile iron;Thread male;PT 90;25;25 (1");false;false;1.42211;1.4 (0.05);-;0;21400.2;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 5;KTM512_25EMCMC;KTM 512 DN25/32 HF;Ductile iron;Thread male;PT 90;25;25 (1");false;false;1.19839;1.2 (0.05);-;0;41375.7;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 6;KTM512_25ATRCTRC;KTM 512 DN25/32 LF;Ductile iron;Thread ISO228 Female RC;PT 90;25;25 (1");false;false;1.8707;1.85 (0.05);-;0;13240.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 7;KTM512_25CTRCTRC;KTM 512 DN25/32 NF;Ductile iron;Thread ISO228 Female RC;PT 90;25;25 (1");false;false;1.42211;1.4 (0.05);-;0;21400.2;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 8;KTM512_25ETRCTRC;KTM 512 DN25/32 HF;Ductile iron;Thread ISO228 Female RC;PT 90;25;25 (1");false;false;1.19839;1.2 (0.05);-;0;41375.7;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 9;KTM512_25AICIC;KTM 512 DN25/32 LF;Ductile iron;Flange;PT 90;25;25 (1");false;false;1.8707;1.85 (0.05);-;0;13240.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 10;KTM512_25CICIC;KTM 512 DN25/32 NF;Ductile iron;Flange;PT 90;25;25 (1");false;false;1.42211;1.4 (0.05);-;0;21400.2;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 11;KTM512_25EICIC;KTM 512 DN25/32 HF;Ductile iron;Flange;PT 90;25;25 (1");false;false;1.19839;1.2 (0.05);-;0;41375.7;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 12;KTM512_25AWCWC;KTM 512 DN25/32 LF;Ductile iron;Welding;PT 90;25;25 (1");false;false;1.8707;1.85 (0.05);-;0;13240.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 13;KTM512_25CWCWC;KTM 512 DN25/32 NF;Ductile iron;Welding;PT 90;25;25 (1");false;false;1.42211;1.4 (0.05);-;0;21400.2;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 14;KTM512_25EWCWC;KTM 512 DN25/32 HF;Ductile iron;Welding;PT 90;25;25 (1");false;false;1.19839;1.2 (0.05);-;0;41375.7;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 15;KTM512_15CTBTB;KTM 512 DN15/20 NF;Ductile iron;Thread;PT 90;25;20 (3/4");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 16;KTM512_15ETBTB;KTM 512 DN15/20 HF;Ductile iron;Thread;PT 90;25;20 (3/4");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 17;KTM512_15CMBMB;KTM 512 DN15/20 NF;Ductile iron;Thread male;PT 90;25;20 (3/4");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 18;KTM512_15EMBMB;KTM 512 DN15/20 HF;Ductile iron;Thread male;PT 90;25;20 (3/4");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 19;KTM512_15CTRBTRB;KTM 512 DN15/20 NF;Ductile iron;Thread ISO228 Female RC;PT 90;25;20 (3/4");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 20;KTM512_15ETRBTRB;KTM 512 DN15/20 HF;Ductile iron;Thread ISO228 Female RC;PT 90;25;20 (3/4");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 21;KTM512_15CIBIB;KTM 512 DN15/20 NF;Ductile iron;Flange;PT 90;25;20 (3/4");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 22;KTM512_15EIBIB;KTM 512 DN15/20 HF;Ductile iron;Flange;PT 90;25;20 (3/4");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 23;KTM512_15CWBWB;KTM 512 DN15/20 NF;Ductile iron;Welding;PT 90;25;20 (3/4");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 24;KTM512_15EWBWB;KTM 512 DN15/20 HF;Ductile iron;Welding;PT 90;25;20 (3/4");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 25;KTM512_15CTATA;KTM 512 DN15/20 NF;Ductile iron;Thread;PT 90;25;15 (1/2");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 26;KTM512_15ETATA;KTM 512 DN15/20 HF;Ductile iron;Thread;PT 90;25;15 (1/2");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 27;KTM512_15CMAMA;KTM 512 DN15/20 NF;Ductile iron;Thread male;PT 90;25;15 (1/2");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 28;KTM512_15EMAMA;KTM 512 DN15/20 HF;Ductile iron;Thread male;PT 90;25;15 (1/2");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 29;KTM512_15CTRATRA;KTM 512 DN15/20 NF;Ductile iron;Thread ISO228 Female RC;PT 90;25;15 (1/2");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 30;KTM512_15ETRATRA;KTM 512 DN15/20 HF;Ductile iron;Thread ISO228 Female RC;PT 90;25;15 (1/2");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 31;KTM512_15CIAIA;KTM 512 DN15/20 NF;Ductile iron;Flange;PT 90;25;15 (1/2");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 32;KTM512_15EIAIA;KTM 512 DN15/20 HF;Ductile iron;Flange;PT 90;25;15 (1/2");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 33;KTM512_15CWAWA;KTM 512 DN15/20 NF;Ductile iron;Welding;PT 90;25;15 (1/2");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 34;KTM512_15EWAWA;KTM 512 DN15/20 HF;Ductile iron;Welding;PT 90;25;15 (1/2");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 35;KTM512_25ATNATNA;KTM 512 DN25/32 LF;Ductile iron;Thread NPT;PT 90;25;25 (1");false;false;1.8707;1.85 (0.05);-;0;13240.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 36;KTM512_25CTNATNA;KTM 512 DN25/32 NF;Ductile iron;Thread NPT;PT 90;25;25 (1");false;false;1.42211;1.4 (0.05);-;0;21400.2;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 37;KTM512_25ETNATNA;KTM 512 DN25/32 HF;Ductile iron;Thread NPT;PT 90;25;25 (1");false;false;1.19839;1.2 (0.05);-;0;41375.7;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 38;KTM512_25AAICAIC;KTM 512 DN25/32 LF;Ductile iron;ANSI Flange;PT 90;25;25 (1");false;false;1.8707;1.85 (0.05);-;0;13240.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 39;KTM512_25CAICAIC;KTM 512 DN25/32 NF;Ductile iron;ANSI Flange;PT 90;25;25 (1");false;false;1.42211;1.4 (0.05);-;0;21400.2;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 40;KTM512_25EAICAIC;KTM 512 DN25/32 HF;Ductile iron;ANSI Flange;PT 90;25;25 (1");false;false;1.19839;1.2 (0.05);-;0;41375.7;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 41;KTM512_15CAIBAIB;KTM 512 DN15/20 NF;Ductile iron;ANSI Flange;PT 90;25;20 (3/4");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 42;KTM512_15EAIBAIB;KTM 512 DN15/20 HF;Ductile iron;ANSI Flange;PT 90;25;20 (3/4");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 43;KTM512_15CAIAAIA;KTM 512 DN15/20 NF;Ductile iron;ANSI Flange;PT 90;25;15 (1/2");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 44;KTM512_15EAIAAIA;KTM 512 DN15/20 HF;Ductile iron;ANSI Flange;PT 90;25;15 (1/2");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 79
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;KTM512_25ATCTC;KTM 512 DN25/32 LF;Ductile iron;Thread;PT 90;25;25 (1");false;false;1.8707;1.85 (0.05);-;0;13240.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 1;KTM512_25CTCTC;KTM 512 DN25/32 NF;Ductile iron;Thread;PT 90;25;25 (1");false;false;1.42211;1.4 (0.05);-;0;21400.2;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 2;KTM512_25ETCTC;KTM 512 DN25/32 HF;Ductile iron;Thread;PT 90;25;25 (1");false;false;1.19839;1.2 (0.05);-;0;41375.7;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 3;KTM512_15CTBTB;KTM 512 DN15/20 NF;Ductile iron;Thread;PT 90;25;20 (3/4");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 4;KTM512_15ETBTB;KTM 512 DN15/20 HF;Ductile iron;Thread;PT 90;25;20 (3/4");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 5;KTM512_15CTATA;KTM 512 DN15/20 NF;Ductile iron;Thread;PT 90;25;15 (1/2");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 6;KTM512_15ETATA;KTM 512 DN15/20 HF;Ductile iron;Thread;PT 90;25;15 (1/2");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 80
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;KTM512_25AMCMC;KTM 512 DN25/32 LF;Ductile iron;Thread male;PT 90;25;25 (1");false;false;1.8707;1.85 (0.05);-;0;13240.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 1;KTM512_25CMCMC;KTM 512 DN25/32 NF;Ductile iron;Thread male;PT 90;25;25 (1");false;false;1.42211;1.4 (0.05);-;0;21400.2;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 2;KTM512_25EMCMC;KTM 512 DN25/32 HF;Ductile iron;Thread male;PT 90;25;25 (1");false;false;1.19839;1.2 (0.05);-;0;41375.7;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 3;KTM512_15CMBMB;KTM 512 DN15/20 NF;Ductile iron;Thread male;PT 90;25;20 (3/4");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 4;KTM512_15EMBMB;KTM 512 DN15/20 HF;Ductile iron;Thread male;PT 90;25;20 (3/4");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 5;KTM512_15CMAMA;KTM 512 DN15/20 NF;Ductile iron;Thread male;PT 90;25;15 (1/2");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 6;KTM512_15EMAMA;KTM 512 DN15/20 HF;Ductile iron;Thread male;PT 90;25;15 (1/2");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 81
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_PT90
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;KTM512_25AICIC;KTM 512 DN25/32 LF;Ductile iron;Flange;PT 90;25;25 (1");false;false;1.8707;1.85 (0.05);-;0;13240.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 1;KTM512_25CICIC;KTM 512 DN25/32 NF;Ductile iron;Flange;PT 90;25;25 (1");false;false;1.42211;1.4 (0.05);-;0;21400.2;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 2;KTM512_25EICIC;KTM 512 DN25/32 HF;Ductile iron;Flange;PT 90;25;25 (1");false;false;1.19839;1.2 (0.05);-;0;41375.7;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 3;KTM512_15CIBIB;KTM 512 DN15/20 NF;Ductile iron;Flange;PT 90;25;20 (3/4");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 4;KTM512_15EIBIB;KTM 512 DN15/20 HF;Ductile iron;Flange;PT 90;25;20 (3/4");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 5;KTM512_15CIAIA;KTM 512 DN15/20 NF;Ductile iron;Flange;PT 90;25;15 (1/2");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 6;KTM512_15EIAIA;KTM 512 DN15/20 HF;Ductile iron;Flange;PT 90;25;15 (1/2");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 82
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00838888
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_PT90
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;KTM512_100G;KTM 512 DN100 NF;Ductile iron;Flange;PT 90;16;100 (4");false;false;7.9498;7.94 (0.02);-;0;30685.1;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;100 (4");81.6461;0.968803
+Result number = 1;KTM512_100K;KTM 512 DN100 HF;Ductile iron;Flange;PT 90;16;100 (4");false;false;7.07719;7.08 (0.02);-;0;54190.6;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;100 (4");81.6461;0.968803
+Result number = 2;KTM512_80E;KTM 512 DN80 HF;Ductile iron;Flange;PT 90;16/25;80 (3");false;false;8.74202;8.74 (0.02);-;0;74472;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;100 (4");81.6461;0.968803
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 83
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.005555555554
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;KTM512_80C;KTM 512 DN80 NF;Ductile iron;Flange;PT 90;16/25;80 (3");false;false;8.47652;8.48 (0.02);-;0;35533;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;80 (3");139.525;1.08347
+Result number = 1;KTM512_80E;KTM 512 DN80 HF;Ductile iron;Flange;PT 90;16/25;80 (3");false;false;6.75642;6.76 (0.02);-;0;55103.2;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;80 (3");139.525;1.08347
+Result number = 2;KTM512_65C;KTM 512 DN65 NF;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");false;false;8.90968;8.9 (0.02);-;0;36898.9;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;80 (3");139.525;1.08347
+Result number = 3;KTM512_65E;KTM 512 DN65 HF;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");false;false;7.11509;7.12 (0.02);-;0;58134;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;80 (3");139.525;1.08347
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 84
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.005555555554
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_PT90
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 85
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.005555555554
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_WELDING
+ComboVersionID = VERS_PT90
+ComboPNID = PN_4
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 86
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;KTM512_40ETFTF;KTM 512 DN40/50 HF;Ductile iron;Thread;PT 90;25;50 (2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;KTM512_40ETETE;KTM 512 DN40/50 HF;Ductile iron;Thread;PT 90;25;40 (1 1/2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 87
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_WELDING
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;KTM512_40EWFWF;KTM 512 DN40/50 HF;Ductile iron;Welding;PT 90;25;50 (2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;KTM512_40EWEWE;KTM 512 DN40/50 HF;Ductile iron;Welding;PT 90;25;40 (1 1/2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 88
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = 
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = 
+ComboVersionID = VERS_PT90
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;KTM512_65A;KTM 512 DN65 LF;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");false;false;6.90121;6.9 (0.02);-;0;16946.9;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;KTM512_65C;KTM 512 DN65 NF;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");false;false;5.83584;5.84 (0.02);-;0;24178.3;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 2;KTM512_65E;KTM 512 DN65 HF;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");false;false;5.12862;5.12 (0.02);-;0;44604.3;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 3;KTM512_40ETFTF;KTM 512 DN40/50 HF;Ductile iron;Thread;PT 90;25;50 (2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 4;KTM512_40EMFMF;KTM 512 DN40/50 HF;Ductile iron;Thread male;PT 90;25;50 (2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 5;KTM512_40ETRFTRF;KTM 512 DN40/50 HF;Ductile iron;Thread ISO228 Female RC;PT 90;25;50 (2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 6;KTM512_40EIFIF;KTM 512 DN40/50 HF;Ductile iron;Flange;PT 90;25;50 (2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 7;KTM512_40EWFWF;KTM 512 DN40/50 HF;Ductile iron;Welding;PT 90;25;50 (2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 8;KTM512_40ETETE;KTM 512 DN40/50 HF;Ductile iron;Thread;PT 90;25;40 (1 1/2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 9;KTM512_40EMEME;KTM 512 DN40/50 HF;Ductile iron;Thread male;PT 90;25;40 (1 1/2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 10;KTM512_40ETRETRE;KTM 512 DN40/50 HF;Ductile iron;Thread ISO228 Female RC;PT 90;25;40 (1 1/2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 11;KTM512_40EIEIE;KTM 512 DN40/50 HF;Ductile iron;Flange;PT 90;25;40 (1 1/2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 12;KTM512_40EWEWE;KTM 512 DN40/50 HF;Ductile iron;Welding;PT 90;25;40 (1 1/2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 13;KTM512_65M;KTM 512 2 1/2"LF;Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");false;false;6.90121;6.9 (0.02);-;0;16946.9;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 14;KTM512_65N;KTM 512 2 1/2"NF;Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");false;false;5.83584;5.84 (0.02);-;0;24178.3;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 15;KTM512_65O;KTM 512 2 1/2"HF;Ductile iron;ANSI Flange;PT 90;20;65 (2 1/2");false;false;5.12862;5.12 (0.02);-;0;44604.3;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 16;KTM512_40ETNDTND;KTM 512 DN40/50 HF;Ductile iron;Thread NPT;PT 90;25;50 (2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 17;KTM512_40EAIFAIF;KTM 512 DN40/50 HF;Ductile iron;ANSI Flange;PT 90;25;50 (2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 18;KTM512_40ETNCTNC;KTM 512 DN40/50 HF;Ductile iron;Thread NPT;PT 90;25;40 (1 1/2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 19;KTM512_40EAIEAIE;KTM 512 DN40/50 HF;Ductile iron;ANSI Flange;PT 90;25;40 (1 1/2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 89
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTCM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = 
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 90
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTCM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 91
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTCM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 92
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTCM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_WELDING
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 93
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = 
+ComboVersionID = VERS_PT90
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;KTM512_25ATCTC;KTM 512 DN25/32 LF;Ductile iron;Thread;PT 90;25;25 (1");false;false;1.8707;1.85 (0.05);-;0;13240.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 1;KTM512_25CTCTC;KTM 512 DN25/32 NF;Ductile iron;Thread;PT 90;25;25 (1");false;false;1.42211;1.4 (0.05);-;0;21400.2;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 2;KTM512_25ETCTC;KTM 512 DN25/32 HF;Ductile iron;Thread;PT 90;25;25 (1");false;false;1.19839;1.2 (0.05);-;0;41375.7;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 3;KTM512_25AMCMC;KTM 512 DN25/32 LF;Ductile iron;Thread male;PT 90;25;25 (1");false;false;1.8707;1.85 (0.05);-;0;13240.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 4;KTM512_25CMCMC;KTM 512 DN25/32 NF;Ductile iron;Thread male;PT 90;25;25 (1");false;false;1.42211;1.4 (0.05);-;0;21400.2;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 5;KTM512_25EMCMC;KTM 512 DN25/32 HF;Ductile iron;Thread male;PT 90;25;25 (1");false;false;1.19839;1.2 (0.05);-;0;41375.7;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 6;KTM512_25ATRCTRC;KTM 512 DN25/32 LF;Ductile iron;Thread ISO228 Female RC;PT 90;25;25 (1");false;false;1.8707;1.85 (0.05);-;0;13240.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 7;KTM512_25CTRCTRC;KTM 512 DN25/32 NF;Ductile iron;Thread ISO228 Female RC;PT 90;25;25 (1");false;false;1.42211;1.4 (0.05);-;0;21400.2;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 8;KTM512_25ETRCTRC;KTM 512 DN25/32 HF;Ductile iron;Thread ISO228 Female RC;PT 90;25;25 (1");false;false;1.19839;1.2 (0.05);-;0;41375.7;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 9;KTM512_25AICIC;KTM 512 DN25/32 LF;Ductile iron;Flange;PT 90;25;25 (1");false;false;1.8707;1.85 (0.05);-;0;13240.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 10;KTM512_25CICIC;KTM 512 DN25/32 NF;Ductile iron;Flange;PT 90;25;25 (1");false;false;1.42211;1.4 (0.05);-;0;21400.2;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 11;KTM512_25EICIC;KTM 512 DN25/32 HF;Ductile iron;Flange;PT 90;25;25 (1");false;false;1.19839;1.2 (0.05);-;0;41375.7;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 12;KTM512_25AWCWC;KTM 512 DN25/32 LF;Ductile iron;Welding;PT 90;25;25 (1");false;false;1.8707;1.85 (0.05);-;0;13240.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 13;KTM512_25CWCWC;KTM 512 DN25/32 NF;Ductile iron;Welding;PT 90;25;25 (1");false;false;1.42211;1.4 (0.05);-;0;21400.2;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 14;KTM512_25EWCWC;KTM 512 DN25/32 HF;Ductile iron;Welding;PT 90;25;25 (1");false;false;1.19839;1.2 (0.05);-;0;41375.7;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 15;KTM512_15CTBTB;KTM 512 DN15/20 NF;Ductile iron;Thread;PT 90;25;20 (3/4");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 16;KTM512_15ETBTB;KTM 512 DN15/20 HF;Ductile iron;Thread;PT 90;25;20 (3/4");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 17;KTM512_15CMBMB;KTM 512 DN15/20 NF;Ductile iron;Thread male;PT 90;25;20 (3/4");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 18;KTM512_15EMBMB;KTM 512 DN15/20 HF;Ductile iron;Thread male;PT 90;25;20 (3/4");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 19;KTM512_15CTRBTRB;KTM 512 DN15/20 NF;Ductile iron;Thread ISO228 Female RC;PT 90;25;20 (3/4");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 20;KTM512_15ETRBTRB;KTM 512 DN15/20 HF;Ductile iron;Thread ISO228 Female RC;PT 90;25;20 (3/4");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 21;KTM512_15CIBIB;KTM 512 DN15/20 NF;Ductile iron;Flange;PT 90;25;20 (3/4");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 22;KTM512_15EIBIB;KTM 512 DN15/20 HF;Ductile iron;Flange;PT 90;25;20 (3/4");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 23;KTM512_15CWBWB;KTM 512 DN15/20 NF;Ductile iron;Welding;PT 90;25;20 (3/4");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 24;KTM512_15EWBWB;KTM 512 DN15/20 HF;Ductile iron;Welding;PT 90;25;20 (3/4");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 25;KTM512_15CTATA;KTM 512 DN15/20 NF;Ductile iron;Thread;PT 90;25;15 (1/2");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 26;KTM512_15ETATA;KTM 512 DN15/20 HF;Ductile iron;Thread;PT 90;25;15 (1/2");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 27;KTM512_15CMAMA;KTM 512 DN15/20 NF;Ductile iron;Thread male;PT 90;25;15 (1/2");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 28;KTM512_15EMAMA;KTM 512 DN15/20 HF;Ductile iron;Thread male;PT 90;25;15 (1/2");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 29;KTM512_15CTRATRA;KTM 512 DN15/20 NF;Ductile iron;Thread ISO228 Female RC;PT 90;25;15 (1/2");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 30;KTM512_15ETRATRA;KTM 512 DN15/20 HF;Ductile iron;Thread ISO228 Female RC;PT 90;25;15 (1/2");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 31;KTM512_15CIAIA;KTM 512 DN15/20 NF;Ductile iron;Flange;PT 90;25;15 (1/2");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 32;KTM512_15EIAIA;KTM 512 DN15/20 HF;Ductile iron;Flange;PT 90;25;15 (1/2");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 33;KTM512_15CWAWA;KTM 512 DN15/20 NF;Ductile iron;Welding;PT 90;25;15 (1/2");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 34;KTM512_15EWAWA;KTM 512 DN15/20 HF;Ductile iron;Welding;PT 90;25;15 (1/2");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 35;KTM512_25ATNATNA;KTM 512 DN25/32 LF;Ductile iron;Thread NPT;PT 90;25;25 (1");false;false;1.8707;1.85 (0.05);-;0;13240.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 36;KTM512_25CTNATNA;KTM 512 DN25/32 NF;Ductile iron;Thread NPT;PT 90;25;25 (1");false;false;1.42211;1.4 (0.05);-;0;21400.2;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 37;KTM512_25ETNATNA;KTM 512 DN25/32 HF;Ductile iron;Thread NPT;PT 90;25;25 (1");false;false;1.19839;1.2 (0.05);-;0;41375.7;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 38;KTM512_25AAICAIC;KTM 512 DN25/32 LF;Ductile iron;ANSI Flange;PT 90;25;25 (1");false;false;1.8707;1.85 (0.05);-;0;13240.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 39;KTM512_25CAICAIC;KTM 512 DN25/32 NF;Ductile iron;ANSI Flange;PT 90;25;25 (1");false;false;1.42211;1.4 (0.05);-;0;21400.2;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 40;KTM512_25EAICAIC;KTM 512 DN25/32 HF;Ductile iron;ANSI Flange;PT 90;25;25 (1");false;false;1.19839;1.2 (0.05);-;0;41375.7;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 41;KTM512_15CAIBAIB;KTM 512 DN15/20 NF;Ductile iron;ANSI Flange;PT 90;25;20 (3/4");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 42;KTM512_15EAIBAIB;KTM 512 DN15/20 HF;Ductile iron;ANSI Flange;PT 90;25;20 (3/4");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 43;KTM512_15CAIAAIA;KTM 512 DN15/20 NF;Ductile iron;ANSI Flange;PT 90;25;15 (1/2");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 44;KTM512_15EAIAAIA;KTM 512 DN15/20 HF;Ductile iron;ANSI Flange;PT 90;25;15 (1/2");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 94
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;KTM512_25ATCTC;KTM 512 DN25/32 LF;Ductile iron;Thread;PT 90;25;25 (1");false;false;1.8707;1.85 (0.05);-;0;13240.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 1;KTM512_25CTCTC;KTM 512 DN25/32 NF;Ductile iron;Thread;PT 90;25;25 (1");false;false;1.42211;1.4 (0.05);-;0;21400.2;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 2;KTM512_25ETCTC;KTM 512 DN25/32 HF;Ductile iron;Thread;PT 90;25;25 (1");false;false;1.19839;1.2 (0.05);-;0;41375.7;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 3;KTM512_15CTBTB;KTM 512 DN15/20 NF;Ductile iron;Thread;PT 90;25;20 (3/4");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 4;KTM512_15ETBTB;KTM 512 DN15/20 HF;Ductile iron;Thread;PT 90;25;20 (3/4");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 5;KTM512_15CTATA;KTM 512 DN15/20 NF;Ductile iron;Thread;PT 90;25;15 (1/2");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 6;KTM512_15ETATA;KTM 512 DN15/20 HF;Ductile iron;Thread;PT 90;25;15 (1/2");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 95
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;KTM512_25AMCMC;KTM 512 DN25/32 LF;Ductile iron;Thread male;PT 90;25;25 (1");false;false;1.8707;1.85 (0.05);-;0;13240.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 1;KTM512_25CMCMC;KTM 512 DN25/32 NF;Ductile iron;Thread male;PT 90;25;25 (1");false;false;1.42211;1.4 (0.05);-;0;21400.2;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 2;KTM512_25EMCMC;KTM 512 DN25/32 HF;Ductile iron;Thread male;PT 90;25;25 (1");false;false;1.19839;1.2 (0.05);-;0;41375.7;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 3;KTM512_15CMBMB;KTM 512 DN15/20 NF;Ductile iron;Thread male;PT 90;25;20 (3/4");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 4;KTM512_15EMBMB;KTM 512 DN15/20 HF;Ductile iron;Thread male;PT 90;25;20 (3/4");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 5;KTM512_15CMAMA;KTM 512 DN15/20 NF;Ductile iron;Thread male;PT 90;25;15 (1/2");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 6;KTM512_15EMAMA;KTM 512 DN15/20 HF;Ductile iron;Thread male;PT 90;25;15 (1/2");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 96
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_PT90
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;KTM512_25AICIC;KTM 512 DN25/32 LF;Ductile iron;Flange;PT 90;25;25 (1");false;false;1.8707;1.85 (0.05);-;0;13240.6;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 1;KTM512_25CICIC;KTM 512 DN25/32 NF;Ductile iron;Flange;PT 90;25;25 (1");false;false;1.42211;1.4 (0.05);-;0;21400.2;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 2;KTM512_25EICIC;KTM 512 DN25/32 HF;Ductile iron;Flange;PT 90;25;25 (1");false;false;1.19839;1.2 (0.05);-;0;41375.7;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 3;KTM512_15CIBIB;KTM 512 DN15/20 NF;Ductile iron;Flange;PT 90;25;20 (3/4");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 4;KTM512_15EIBIB;KTM 512 DN15/20 HF;Ductile iron;Flange;PT 90;25;20 (3/4");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 5;KTM512_15CIAIA;KTM 512 DN15/20 NF;Ductile iron;Flange;PT 90;25;15 (1/2");false;false;4.99961;5* (0.05);-;0;39998.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+Result number = 6;KTM512_15EIAIA;KTM 512 DN15/20 HF;Ductile iron;Flange;PT 90;25;15 (1/2");false;false;2.83531;2.85 (0.05);-;0;60815.5;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;25 (1");116.19;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 97
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00838888
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_PT90
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;KTM512_100G;KTM 512 DN100 NF;Ductile iron;Flange;PT 90;16;100 (4");false;false;7.9498;7.94 (0.02);-;0;30685.1;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;100 (4");81.6461;0.968803
+Result number = 1;KTM512_100K;KTM 512 DN100 HF;Ductile iron;Flange;PT 90;16;100 (4");false;false;7.07719;7.08 (0.02);-;0;54190.6;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;100 (4");81.6461;0.968803
+Result number = 2;KTM512_80E;KTM 512 DN80 HF;Ductile iron;Flange;PT 90;16/25;80 (3");false;false;8.74202;8.74 (0.02);-;0;74472;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;100 (4");81.6461;0.968803
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 98
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0041666666655
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;KTM512_65A;KTM 512 DN65 LF;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");false;false;9.53795;9.54 (0.02);-;0;23106.3;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");181.554;1.12078
+Result number = 1;KTM512_65C;KTM 512 DN65 NF;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");false;false;7.17863;7.18 (0.02);-;0;29494.7;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");181.554;1.12078
+Result number = 2;KTM512_65E;KTM 512 DN65 HF;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");false;false;6.17049;6.18 (0.02);-;0;50269.9;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");181.554;1.12078
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 99
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0041666666655
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_PT90
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;KTM512_65A;KTM 512 DN65 LF;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");false;false;9.53795;9.54 (0.02);-;0;23106.3;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");181.554;1.12078
+Result number = 1;KTM512_65C;KTM 512 DN65 NF;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");false;false;7.17863;7.18 (0.02);-;0;29494.7;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");181.554;1.12078
+Result number = 2;KTM512_65E;KTM 512 DN65 HF;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");false;false;6.17049;6.18 (0.02);-;0;50269.9;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");181.554;1.12078
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 100
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0041666666655
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_PT90
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;KTM512_65A;KTM 512 DN65 LF;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");false;false;9.53795;9.54 (0.02);-;0;23106.3;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");181.554;1.12078
+Result number = 1;KTM512_65C;KTM 512 DN65 NF;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");false;false;7.17863;7.18 (0.02);-;0;29494.7;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");181.554;1.12078
+Result number = 2;KTM512_65E;KTM 512 DN65 HF;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");false;false;6.17049;6.18 (0.02);-;0;50269.9;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");181.554;1.12078
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 101
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;KTM512_65A;KTM 512 DN65 LF;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");false;false;6.90121;6.9 (0.02);-;0;16946.9;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;KTM512_65C;KTM 512 DN65 NF;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");false;false;5.83584;5.84 (0.02);-;0;24178.3;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 2;KTM512_65E;KTM 512 DN65 HF;Ductile iron;Flange;PT 90;16/25;65 (2 1/2");false;false;5.12862;5.12 (0.02);-;0;44604.3;0.02;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 3;KTM512_40EIFIF;KTM 512 DN40/50 HF;Ductile iron;Flange;PT 90;25;50 (2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 4;KTM512_40EIEIE;KTM 512 DN40/50 HF;Ductile iron;Flange;PT 90;25;40 (1 1/2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 102
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_HIDP
+ComboFamilyID = FAM_KTM512
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_WELDING
+ComboVersionID = VERS_PT90
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+Result number = 0;KTM512_40EWFWF;KTM 512 DN40/50 HF;Ductile iron;Welding;PT 90;25;50 (2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+Result number = 1;KTM512_40EWEWE;KTM 512 DN40/50 HF;Ductile iron;Welding;PT 90;25;40 (1 1/2");false;false;6.60146;6.6 (0.05);-;0;65228.8;0.01;EqualPc;PushToClose;false;1.6e+06;-10/120;65 (2 1/2");83.8888;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 103
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00838888
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_CLASSICAL
+ComboFamilyID = FAM_KTM50
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 104
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00838888
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_CLASSICAL
+ComboFamilyID = FAM_KTM50
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 105
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00838888
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_CLASSICAL
+ComboFamilyID = FAM_KTM50
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 106
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00838888
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_CLASSICAL
+ComboFamilyID = FAM_KTM50
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 107
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00838888
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_CLASSICAL
+ComboFamilyID = FAM_KTM50
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_ANSIFL
+ComboVersionID = VERS_STD
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 108
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00838888
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_CLASSICAL
+ComboFamilyID = FAM_KTM50
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 109
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00838888
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_CLASSICAL
+ComboFamilyID = FAM_KTM50
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 110
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00838888
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_CLASSICAL
+ComboFamilyID = FAM_KTM50
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 111
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00838888
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_CLASSICAL
+ComboFamilyID = FAM_KTM50
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 112
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00838888
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_CLASSICAL
+ComboFamilyID = FAM_KTM50
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_ANSIFL
+ComboVersionID = VERS_STD
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 113
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00838888
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_CLASSICAL
+ComboFamilyID = FAM_KTM50
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 114
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00838888
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_CLASSICAL
+ComboFamilyID = FAM_KTM50
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 115
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00838888
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_CLASSICAL
+ComboFamilyID = FAM_KTM50
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 116
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00838888
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_CLASSICAL
+ComboFamilyID = FAM_KTM50
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 117
+
+SelectionMode = Individual
+ProductCategory = PIBCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00838888
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 0
+ComboTypeID = PICVTYPE_CLASSICAL
+ComboFamilyID = FAM_KTM50
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_ANSIFL
+ComboVersionID = VERS_STD
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = Unknown
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+DpMaxChecked = false
+DpMax = 0
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+

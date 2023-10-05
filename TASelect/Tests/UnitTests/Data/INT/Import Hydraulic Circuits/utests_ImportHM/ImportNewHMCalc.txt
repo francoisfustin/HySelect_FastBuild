@@ -1,0 +1,64 @@
+# Input informations.
+Project to import = ImportNewHMCalc.tsp
+# Modules or circuits to import : Element to import => Parent => Insert in => Insert after
+*A => Untitled => Untitled =>
+
+# Output informations.
+
+HMCalc mode = true
+Menu button state before import = true
+Ribbon button state before import = true
+Menu button state after import = true
+Ribbon button state after import = true
+
+// Import result 
+Import result : ImportNewHMCalc.tsp in an empty project 
+*A; PUMP_BV;  HM; TU-Dp;20868.3 Pa
+*A; PUMP_BV;  HM; TU-Q;400 l/h
+*A; PUMP_BV;  HM; Dp;23868.3 Pa
+*A; PUMP_BV;  HM; FLOW;400 l/h
+*A; PUMP_BV;  HM; HAvail;23868.3 Pa
+*A; PUMP_BV;  BVP; BVNAME;STAD* 15
+*A; PUMP_BV;  BVP; Dp;3000 Pa
+*A; PUMP_BV;  BVP; Flow;400 l/h
+*A; PUMP_BV;  BVP; PRESET;3.73
+*A; PUMP_BV;  CIRCPIPE; Dp;0 Pa
+*A; PUMP_BV;  DISTSUPPIPE; Dp;0 Pa
+*A; PUMP_BV;  CIRCACC; Dp;0 Pa
+*A; PUMP_BV;  DISTSUPACC; Dp;0 Pa
+*A.1; 2WD_DPCBCV;  HM; TU-Dp;14870.6 Pa
+*A.1; 2WD_DPCBCV;  HM; TU-Q;400 l/h
+*A.1; 2WD_DPCBCV;  HM; Dp;20868.3 Pa
+*A.1; 2WD_DPCBCV;  HM; FLOW;400 l/h
+*A.1; 2WD_DPCBCV;  HM; HAvail;20868.3 Pa
+*A.1; 2WD_DPCBCV;  CV; CVNAME;TA-Compact-DP 20
+*A.1; 2WD_DPCBCV;  CV; PRESET;5.25
+*A.1; 2WD_DPCBCV;  CV; CVACTR;TA-Slider 160 (1m)
+*A.1; 2WD_DPCBCV;  CV; Kv;-1.00
+*A.1; 2WD_DPCBCV;  CV; KvsMax;0.000
+*A.1; 2WD_DPCBCV;  CV; Dp;5651.86 Pa
+*A.1; 2WD_DPCBCV;  CV; Flow;400 l/h
+*A.1; 2WD_DPCBCV;  CIRCPIPE; Dp;0 Pa
+*A.1; 2WD_DPCBCV;  DISTSUPPIPE; Dp;0 Pa
+*A.1; 2WD_DPCBCV;  CIRCACC; Dp;91.9192 Pa
+*A.1; 2WD_DPCBCV;  DISTSUPACC; Dp;0 Pa
+*A.1.1; 2WD_BV1;  HM; TU-Dp;1000 Pa
+*A.1.1; 2WD_BV1;  HM; TU-Q;400 l/h
+*A.1.1; 2WD_BV1;  HM; Dp;14691 Pa
+*A.1.1; 2WD_BV1;  HM; FLOW;400 l/h
+*A.1.1; 2WD_BV1;  HM; HAvail;14691 Pa
+*A.1.1; 2WD_BV1;  BVP; BVNAME;STAD* 15
+*A.1.1; 2WD_BV1;  BVP; Dp;3000 Pa
+*A.1.1; 2WD_BV1;  BVP; Flow;400 l/h
+*A.1.1; 2WD_BV1;  BVP; PRESET;3.73
+*A.1.1; 2WD_BV1;  CV; CVNAME;CV 216 RGA DN15
+*A.1.1; 2WD_BV1;  CV; CVACTR;TA-MC 55Y
+*A.1.1; 2WD_BV1;  CV; Kvs;1.25
+*A.1.1; 2WD_BV1;  CV; KvsMax;1.26
+*A.1.1; 2WD_BV1;  CV; Dp;10239.8 Pa
+*A.1.1; 2WD_BV1;  CV; Flow;400 l/h
+*A.1.1; 2WD_BV1;  CIRCPIPE; Dp;359.205 Pa
+*A.1.1; 2WD_BV1;  DISTSUPPIPE; Dp;179.603 Pa
+*A.1.1; 2WD_BV1;  CIRCACC; Dp;91.9192 Pa
+*A.1.1; 2WD_BV1;  DISTSUPACC; Dp;0 Pa
+Rem; --------------------->SUCCESS

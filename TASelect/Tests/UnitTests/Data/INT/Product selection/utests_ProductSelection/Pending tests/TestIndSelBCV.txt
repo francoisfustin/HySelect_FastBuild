@@ -1,0 +1,2674 @@
+#Start of test definition
+
+StartTechnicalParameters
+ApplicationType = 2
+AvailablePMPanels = 7
+BreakTankRequiredForWaterMakeUp = 1
+CVDefKvReynard = 1
+CVMaxDispDp = 200000
+CVMaxDpProp = 65000
+CVMinAuthCstFlow = 0.5
+CVMinAuthor = 0.25
+CVMinDpOnoff = 3000
+CVMinDpProp = 10000
+CVUseDpCPBand = 0
+CanChangePressureVolumeLimit = 0
+CurrencyID = CURRENCY_EUR
+DefaultCalculationNorm = PM_NORM_EN12828
+DefaultCoolingTps = 7
+DefaultFillTemperature = 15
+DefaultHeatingTps = 50
+DefaultISChangeOverCoolingSideAdditFamilyID = WATER_ADDIT
+DefaultISChangeOverCoolingSideAdditID = WATER
+DefaultISChangeOverCoolingSideDT = 6
+DefaultISChangeOverCoolingSidePcWeight = 0
+DefaultISChangeOverCoolingSideTps = 6
+DefaultISChangeOverHeatingSideAdditFamilyID = WATER_ADDIT
+DefaultISChangeOverHeatingSideAdditID = WATER
+DefaultISChangeOverHeatingSideDT = 20
+DefaultISChangeOverHeatingSidePcWeight = 0
+DefaultISChangeOverHeatingSideTps = 75
+DefaultISCoolingAdditFamilyID = WATER_ADDIT
+DefaultISCoolingAdditID = WATER
+DefaultISCoolingDT = 20
+DefaultISCoolingPcWeight = 0
+DefaultISCoolingTps = 60
+DefaultISHeatingAdditFamilyID = WATER_ADDIT
+DefaultISHeatingAdditID = WATER
+DefaultISHeatingDT = 5
+DefaultISHeatingPcWeight = 0
+DefaultISHeatingTps = 80
+DefaultISSolarAdditFamilyID = WATER_ADDIT
+DefaultISSolarAdditID = WATER
+DefaultISSolarDT = 20
+DefaultISSolarPcWeight = 0
+DefaultISSolarTps = 70
+DefaultMaxTempInCooling = 45
+DefaultMinTempInHeating = 5
+DefaultMinTempInSolar = 5
+DefaultPipeSerieID = STEEL_DIN2440
+DefaultPrjCoolingAdditID = WATER
+DefaultPrjCoolingDT = 5
+DefaultPrjCoolingPcWeight = 0
+DefaultPrjHeatingAdditID = WATER
+DefaultPrjHeatingDT = 5
+DefaultPrjHeatingPcWeight = 0
+DefaultSafetyPressureResponseValve = 300000
+DefaultStaticPressureOfWaterNetwork = 400000
+DefaultTAZ = 100
+DefaultWaterHardness = 1.78324958
+DefaultWaterMakeUpTemp = 15
+DegassingWaterReserveForVessel = 0.002
+DpCBCVDpcmin = 5000
+DpCBCVDplmin = 5000
+DpCHide = 0
+DpCHminFullyOpenMv = 0
+DpCMinDp = 5000
+DpCMvLocation = 0
+DpCMvWithSameSizeOnly = 0
+DpRefForBest6Way = 3000
+FixedOrificeMaxDp = 6000
+FixedOrificeMinDp = 2000
+FlowDeviationMinus = -0.1
+FlowDeviationPlus = 0.1
+FluidTempLimitEN12953 = 105
+InitialPressureMargin = 30000
+MaxNumberOfAdditionalVesselsInParallel = 4
+MaxNumberOfVentoInParallel = 2
+MaxSafetyValveInParallel = 3
+MaxSizeShift = 4
+MinPressureMargin = 20000
+PICvHide = 0
+PICvMinDp = 1000
+PSetupCompresso = 10000
+PSetupTransfero = 20000
+PipeMaxDp = 200
+PipeMaxVelocity = 2
+PipeMinDp = 10
+PipeMinVelocity = 0.3
+PipeTargetDp = 150
+PipeTargetVelocity = 1
+PipeTargetVelosityUsed = 0
+PressureVolumeLimit = 300000
+ProjectType = 1
+SafetyTempLimiterLimitEN12953 = 110
+SizeShiftAbove = 0
+SizeShiftBelow = -2
+TrvDefDpTotal = 10000
+TrvDefRoomTemperature = 20
+TrvDefSupplyTemperature = 80
+TrvMaxDp = 30000
+TrvMinDpRatio = 0.25
+UseDefaultFreezingPointAsMinTemperature = 1
+UseSimplyPst = 0
+UseVesselPressureVolumeLimit = 0
+ValveMaxDp = 200000
+ValveMin2Dp = 6000
+ValveMinDp = 3000
+VenturiMaxDp = 10000
+VenturiMinDp = 2000
+VesselSelectionRangePercentage = 0
+EndTechnicalParameters
+
+Test number = 0
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.011111111108
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;FUSION_C100A;TA-FUSION-C 100;Ductile iron;Flange;Standard;16;100 (4");false;false;>100;0;0.02;EqualPc;PushToClose;9.47411;10000;6145;264230;-20/120;100 (4");139.975;1.28318
+Result number = 1;FUSION_C100B;TA-FUSION-C 100;Ductile iron;Flange;Standard;25;100 (4");false;false;>100;0;0.02;EqualPc;PushToClose;9.47411;10000;6145;264230;-20/120;100 (4");139.975;1.28318
+Result number = 2;FUSION_C80A_2;TA-FUSION-C 80-2;Ductile iron;Flange;Standard;16;80 (3");false;false;>100;0;0.02;EqualPc;PushToClose;10;15731.2;15731.2;564065;-20/120;100 (4");139.975;1.28318
+Result number = 3;FUSION_C80B_2;TA-FUSION-C 80-2;Ductile iron;Flange;Standard;16/25;80 (3");false;false;>100;0;0.02;EqualPc;PushToClose;10;15731.2;15731.2;564065;-20/120;100 (4");139.975;1.28318
+Result number = 4;FUSION_C65A_2;TA-FUSION-C 65-2;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;10;38048.7;38048.7;1.48282e+06;-20/120;100 (4");139.975;1.28318
+Result number = 5;FUSION_C65B_2;TA-FUSION-C 65-2;Ductile iron;Flange;Standard;16/25;65 (2 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;10;38048.7;38048.7;1.48282e+06;-20/120;100 (4");139.975;1.28318
+Result number = 6;FUSION_C100C;TA-FUSION-C 4";Ductile iron;ANSI Flange;Standard;20;100 (4");false;false;>100;0;0.02;EqualPc;PushToClose;9.47411;10000;6145;264230;-20/120;100 (4");139.975;1.28318
+Result number = 7;FUSION_C80C_2;TA-FUSION-C 3"-2;Ductile iron;ANSI Flange;Standard;20;80 (3");false;false;>100;0;0.02;EqualPc;PushToClose;10;15731.2;15731.2;564065;-20/120;100 (4");139.975;1.28318
+Result number = 8;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Ductile iron;ANSI Flange;Standard;20;65 (2 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;10;38048.7;38048.7;1.48282e+06;-20/120;100 (4");139.975;1.28318
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 1
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_TBV-CM
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;TBV-CM20NFB_TV;TBV-CM 20NF;Ametal(tm);Thread;Standard;16;20 (3/4");false;false;-;0;0.004;EqualPc;PushToClose;8.21376;10000;6138.57;28529.9;-20/120;20 (3/4");101.627;0.379027
+Result number = 1;TBV-CM15NFB_TV;TBV-CM 15NF;Ametal(tm);Thread;Standard;16;15 (1/2");false;false;-;0;0.004;EqualPc;PushToClose;10;24522.9;24522.9;79917.4;-20/120;20 (3/4");101.627;0.379027
+Result number = 2;TBV-CM15LFB_TV;TBV-CM 15LF;Ametal(tm);Thread;Standard;16;15 (1/2");false;false;-;0;0.004;EqualPc;PushToClose;10;153192;153192;385414;-20/120;20 (3/4");101.627;0.379027
+Result number = 3;TBV-CM20NFC_TV;TBV-CM 3/4"(20NF);Ametal(tm);Thread NPT;Standard;16;20 (3/4");false;true;-;0;0.004;EqualPc;PushToClose;8.21376;10000;6138.57;28529.9;-20/120;20 (3/4");101.627;0.379027
+Result number = 4;TBV-CM20NFD_TV;TBV-CM 3/4"(20NF);Ametal(tm);Thread NPT;Standard;16;20 (3/4");false;false;-;0;0.004;EqualPc;PushToClose;8.21376;10000;6138.57;28529.9;-20/120;20 (3/4");101.627;0.379027
+Result number = 5;TBV-CM15NFC_TV;TBV-CM 1/2"(15NF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;true;-;0;0.004;EqualPc;PushToClose;10;24522.9;24522.9;79917.4;-20/120;20 (3/4");101.627;0.379027
+Result number = 6;TBV-CM15NFD_TV;TBV-CM 1/2"(15NF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;false;-;0;0.004;EqualPc;PushToClose;10;24522.9;24522.9;79917.4;-20/120;20 (3/4");101.627;0.379027
+Result number = 7;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;true;-;0;0.004;EqualPc;PushToClose;10;153192;153192;385414;-20/120;20 (3/4");101.627;0.379027
+Result number = 8;TBV-CM15LFD_TV;TBV-CM 1/2"(15LF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;false;-;0;0.004;EqualPc;PushToClose;10;153192;153192;385414;-20/120;20 (3/4");101.627;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 2
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_TBV-CM
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;TBV-CM20NFB_TV;TBV-CM 20NF;Ametal(tm);Thread;Standard;16;20 (3/4");false;false;-;0;0.004;EqualPc;PushToClose;8.21376;10000;6138.57;28529.9;-20/120;20 (3/4");101.627;0.379027
+Result number = 1;TBV-CM15NFB_TV;TBV-CM 15NF;Ametal(tm);Thread;Standard;16;15 (1/2");false;false;-;0;0.004;EqualPc;PushToClose;10;24522.9;24522.9;79917.4;-20/120;20 (3/4");101.627;0.379027
+Result number = 2;TBV-CM15LFB_TV;TBV-CM 15LF;Ametal(tm);Thread;Standard;16;15 (1/2");false;false;-;0;0.004;EqualPc;PushToClose;10;153192;153192;385414;-20/120;20 (3/4");101.627;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 3
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_TBV-CM
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADN
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;TBV-CM20NFC_TV;TBV-CM 3/4"(20NF);Ametal(tm);Thread NPT;Standard;16;20 (3/4");false;true;-;0;0.004;EqualPc;PushToClose;8.21376;10000;6138.57;28529.9;-20/120;20 (3/4");101.627;0.379027
+Result number = 1;TBV-CM20NFD_TV;TBV-CM 3/4"(20NF);Ametal(tm);Thread NPT;Standard;16;20 (3/4");false;false;-;0;0.004;EqualPc;PushToClose;8.21376;10000;6138.57;28529.9;-20/120;20 (3/4");101.627;0.379027
+Result number = 2;TBV-CM15NFC_TV;TBV-CM 1/2"(15NF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;true;-;0;0.004;EqualPc;PushToClose;10;24522.9;24522.9;79917.4;-20/120;20 (3/4");101.627;0.379027
+Result number = 3;TBV-CM15NFD_TV;TBV-CM 1/2"(15NF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;false;-;0;0.004;EqualPc;PushToClose;10;24522.9;24522.9;79917.4;-20/120;20 (3/4");101.627;0.379027
+Result number = 4;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;true;-;0;0.004;EqualPc;PushToClose;10;153192;153192;385414;-20/120;20 (3/4");101.627;0.379027
+Result number = 5;TBV-CM15LFD_TV;TBV-CM 1/2"(15LF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;false;-;0;0.004;EqualPc;PushToClose;10;153192;153192;385414;-20/120;20 (3/4");101.627;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 4
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_FUSION_C
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;FUSION_C125A;TA-FUSION-C 125;Ductile iron;Flange;Standard;16;125 (5");false;false;>100;0;0.02;EqualPc;PushToClose;8.80694;10000;3371.74;142035;-20/120;125 (5");72.8887;1.04638
+Result number = 1;FUSION_C125B;TA-FUSION-C 125;Ductile iron;Flange;Standard;25;125 (5");false;false;>100;0;0.02;EqualPc;PushToClose;8.80694;10000;3371.74;142035;-20/120;125 (5");72.8887;1.04638
+Result number = 2;FUSION_C100A;TA-FUSION-C 100;Ductile iron;Flange;Standard;16;100 (4");false;false;>100;0;0.02;EqualPc;PushToClose;9.95546;10000;9601.56;412859;-20/120;125 (5");72.8887;1.04638
+Result number = 3;FUSION_C100B;TA-FUSION-C 100;Ductile iron;Flange;Standard;25;100 (4");false;false;>100;0;0.02;EqualPc;PushToClose;9.95546;10000;9601.56;412859;-20/120;125 (5");72.8887;1.04638
+Result number = 4;FUSION_C80A_2;TA-FUSION-C 80-2;Ductile iron;Flange;Standard;16;80 (3");false;false;>100;0;0.02;EqualPc;PushToClose;10;24580;24580;881351;-20/120;125 (5");72.8887;1.04638
+Result number = 5;FUSION_C80B_2;TA-FUSION-C 80-2;Ductile iron;Flange;Standard;16/25;80 (3");false;false;>100;0;0.02;EqualPc;PushToClose;10;24580;24580;881351;-20/120;125 (5");72.8887;1.04638
+Result number = 6;FUSION_C125C;TA-FUSION-C 5";Ductile iron;ANSI Flange;Standard;20;125 (5");false;false;>100;0;0.02;EqualPc;PushToClose;8.80694;10000;3371.74;142035;-20/120;125 (5");72.8887;1.04638
+Result number = 7;FUSION_C100C;TA-FUSION-C 4";Ductile iron;ANSI Flange;Standard;20;100 (4");false;false;>100;0;0.02;EqualPc;PushToClose;9.95546;10000;9601.56;412859;-20/120;125 (5");72.8887;1.04638
+Result number = 8;FUSION_C80C_2;TA-FUSION-C 3"-2;Ductile iron;ANSI Flange;Standard;20;80 (3");false;false;>100;0;0.02;EqualPc;PushToClose;10;24580;24580;881351;-20/120;125 (5");72.8887;1.04638
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 5
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0011111111108
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_FUSION_C
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;FUSION_C40A;TA-FUSION-C 40;Ametal(tm);Thread;Standard;16;40 (1 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;7.77365;10000;4596.41;31471.9;-20/120;40 (1 1/2");181.785;0.809683
+Result number = 1;FUSION_C32A;TA-FUSION-C 32;Ametal(tm);Thread;Standard;16;32 (1 1/4");false;false;>100;0;0.02;EqualPc;PushToClose;9.81194;10000;9453.28;54552.3;-20/120;40 (1 1/2");181.785;0.809683
+Result number = 2;FUSION_C40B;TA-FUSION-C 1 1/2";Ametal(tm);Thread NPT;Standard;16;40 (1 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;7.77365;10000;4596.41;31471.9;-20/120;40 (1 1/2");181.785;0.809683
+Result number = 3;FUSION_C32B;TA-FUSION-C 1 1/4";Ametal(tm);Thread NPT;Standard;16;32 (1 1/4");false;false;>100;0;0.02;EqualPc;PushToClose;9.81194;10000;9453.28;54552.3;-20/120;40 (1 1/2");181.785;0.809683
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 6
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0011111111108
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_FUSION_C
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;FUSION_C40A;TA-FUSION-C 40;Ametal(tm);Thread;Standard;16;40 (1 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;7.77365;10000;4596.41;31471.9;-20/120;40 (1 1/2");181.785;0.809683
+Result number = 1;FUSION_C32A;TA-FUSION-C 32;Ametal(tm);Thread;Standard;16;32 (1 1/4");false;false;>100;0;0.02;EqualPc;PushToClose;9.81194;10000;9453.28;54552.3;-20/120;40 (1 1/2");181.785;0.809683
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 7
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0011111111108
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_FUSION_C
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADN
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;FUSION_C40B;TA-FUSION-C 1 1/2";Ametal(tm);Thread NPT;Standard;16;40 (1 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;7.77365;10000;4596.41;31471.9;-20/120;40 (1 1/2");181.785;0.809683
+Result number = 1;FUSION_C32B;TA-FUSION-C 1 1/4";Ametal(tm);Thread NPT;Standard;16;32 (1 1/4");false;false;>100;0;0.02;EqualPc;PushToClose;9.81194;10000;9453.28;54552.3;-20/120;40 (1 1/2");181.785;0.809683
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 8
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.011111111108
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_FUSION_C
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;FUSION_C100A;TA-FUSION-C 100;Ductile iron;Flange;Standard;16;100 (4");false;false;>100;0;0.02;EqualPc;PushToClose;9.47411;10000;6145;264230;-20/120;100 (4");139.975;1.28318
+Result number = 1;FUSION_C100B;TA-FUSION-C 100;Ductile iron;Flange;Standard;25;100 (4");false;false;>100;0;0.02;EqualPc;PushToClose;9.47411;10000;6145;264230;-20/120;100 (4");139.975;1.28318
+Result number = 2;FUSION_C80A_2;TA-FUSION-C 80-2;Ductile iron;Flange;Standard;16;80 (3");false;false;>100;0;0.02;EqualPc;PushToClose;10;15731.2;15731.2;564065;-20/120;100 (4");139.975;1.28318
+Result number = 3;FUSION_C80B_2;TA-FUSION-C 80-2;Ductile iron;Flange;Standard;16/25;80 (3");false;false;>100;0;0.02;EqualPc;PushToClose;10;15731.2;15731.2;564065;-20/120;100 (4");139.975;1.28318
+Result number = 4;FUSION_C65A_2;TA-FUSION-C 65-2;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;10;38048.7;38048.7;1.48282e+06;-20/120;100 (4");139.975;1.28318
+Result number = 5;FUSION_C65B_2;TA-FUSION-C 65-2;Ductile iron;Flange;Standard;16/25;65 (2 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;10;38048.7;38048.7;1.48282e+06;-20/120;100 (4");139.975;1.28318
+Result number = 6;FUSION_C100C;TA-FUSION-C 4";Ductile iron;ANSI Flange;Standard;20;100 (4");false;false;>100;0;0.02;EqualPc;PushToClose;9.47411;10000;6145;264230;-20/120;100 (4");139.975;1.28318
+Result number = 7;FUSION_C80C_2;TA-FUSION-C 3"-2;Ductile iron;ANSI Flange;Standard;20;80 (3");false;false;>100;0;0.02;EqualPc;PushToClose;10;15731.2;15731.2;564065;-20/120;100 (4");139.975;1.28318
+Result number = 8;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Ductile iron;ANSI Flange;Standard;20;65 (2 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;10;38048.7;38048.7;1.48282e+06;-20/120;100 (4");139.975;1.28318
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 9
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.011111111108
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_FUSION_C
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;FUSION_C100A;TA-FUSION-C 100;Ductile iron;Flange;Standard;16;100 (4");false;false;>100;0;0.02;EqualPc;PushToClose;9.47411;10000;6145;264230;-20/120;100 (4");139.975;1.28318
+Result number = 1;FUSION_C100B;TA-FUSION-C 100;Ductile iron;Flange;Standard;25;100 (4");false;false;>100;0;0.02;EqualPc;PushToClose;9.47411;10000;6145;264230;-20/120;100 (4");139.975;1.28318
+Result number = 2;FUSION_C80A_2;TA-FUSION-C 80-2;Ductile iron;Flange;Standard;16;80 (3");false;false;>100;0;0.02;EqualPc;PushToClose;10;15731.2;15731.2;564065;-20/120;100 (4");139.975;1.28318
+Result number = 3;FUSION_C80B_2;TA-FUSION-C 80-2;Ductile iron;Flange;Standard;16/25;80 (3");false;false;>100;0;0.02;EqualPc;PushToClose;10;15731.2;15731.2;564065;-20/120;100 (4");139.975;1.28318
+Result number = 4;FUSION_C65A_2;TA-FUSION-C 65-2;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;10;38048.7;38048.7;1.48282e+06;-20/120;100 (4");139.975;1.28318
+Result number = 5;FUSION_C65B_2;TA-FUSION-C 65-2;Ductile iron;Flange;Standard;16/25;65 (2 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;10;38048.7;38048.7;1.48282e+06;-20/120;100 (4");139.975;1.28318
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 10
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.011111111108
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_FUSION_C
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;FUSION_C100A;TA-FUSION-C 100;Ductile iron;Flange;Standard;16;100 (4");false;false;>100;0;0.02;EqualPc;PushToClose;9.47411;10000;6145;264230;-20/120;100 (4");139.975;1.28318
+Result number = 1;FUSION_C80A_2;TA-FUSION-C 80-2;Ductile iron;Flange;Standard;16;80 (3");false;false;>100;0;0.02;EqualPc;PushToClose;10;15731.2;15731.2;564065;-20/120;100 (4");139.975;1.28318
+Result number = 2;FUSION_C80B_2;TA-FUSION-C 80-2;Ductile iron;Flange;Standard;16/25;80 (3");false;false;>100;0;0.02;EqualPc;PushToClose;10;15731.2;15731.2;564065;-20/120;100 (4");139.975;1.28318
+Result number = 3;FUSION_C65A_2;TA-FUSION-C 65-2;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;10;38048.7;38048.7;1.48282e+06;-20/120;100 (4");139.975;1.28318
+Result number = 4;FUSION_C65B_2;TA-FUSION-C 65-2;Ductile iron;Flange;Standard;16/25;65 (2 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;10;38048.7;38048.7;1.48282e+06;-20/120;100 (4");139.975;1.28318
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 11
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.011111111108
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_FUSION_C
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;FUSION_C100B;TA-FUSION-C 100;Ductile iron;Flange;Standard;25;100 (4");false;false;>100;0;0.02;EqualPc;PushToClose;9.47411;10000;6145;264230;-20/120;100 (4");139.975;1.28318
+Result number = 1;FUSION_C80B_2;TA-FUSION-C 80-2;Ductile iron;Flange;Standard;16/25;80 (3");false;false;>100;0;0.02;EqualPc;PushToClose;10;15731.2;15731.2;564065;-20/120;100 (4");139.975;1.28318
+Result number = 2;FUSION_C65B_2;TA-FUSION-C 65-2;Ductile iron;Flange;Standard;16/25;65 (2 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;10;38048.7;38048.7;1.48282e+06;-20/120;100 (4");139.975;1.28318
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 12
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.011111111108
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_FUSION_C
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_ANSIFL
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;FUSION_C100C;TA-FUSION-C 4";Ductile iron;ANSI Flange;Standard;20;100 (4");false;false;>100;0;0.02;EqualPc;PushToClose;9.47411;10000;6145;264230;-20/120;100 (4");139.975;1.28318
+Result number = 1;FUSION_C80C_2;TA-FUSION-C 3"-2;Ductile iron;ANSI Flange;Standard;20;80 (3");false;false;>100;0;0.02;EqualPc;PushToClose;10;15731.2;15731.2;564065;-20/120;100 (4");139.975;1.28318
+Result number = 2;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Ductile iron;ANSI Flange;Standard;20;65 (2 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;10;38048.7;38048.7;1.48282e+06;-20/120;100 (4");139.975;1.28318
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 13
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.011111111108
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;FUSION_C100A;TA-FUSION-C 100;Ductile iron;Flange;Standard;16;100 (4");false;false;>100;0;0.02;EqualPc;PushToClose;9.47411;10000;6145;264230;-20/120;100 (4");139.975;1.28318
+Result number = 1;FUSION_C100B;TA-FUSION-C 100;Ductile iron;Flange;Standard;25;100 (4");false;false;>100;0;0.02;EqualPc;PushToClose;9.47411;10000;6145;264230;-20/120;100 (4");139.975;1.28318
+Result number = 2;FUSION_C80A_2;TA-FUSION-C 80-2;Ductile iron;Flange;Standard;16;80 (3");false;false;>100;0;0.02;EqualPc;PushToClose;10;15731.2;15731.2;564065;-20/120;100 (4");139.975;1.28318
+Result number = 3;FUSION_C80B_2;TA-FUSION-C 80-2;Ductile iron;Flange;Standard;16/25;80 (3");false;false;>100;0;0.02;EqualPc;PushToClose;10;15731.2;15731.2;564065;-20/120;100 (4");139.975;1.28318
+Result number = 4;FUSION_C65A_2;TA-FUSION-C 65-2;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;10;38048.7;38048.7;1.48282e+06;-20/120;100 (4");139.975;1.28318
+Result number = 5;FUSION_C65B_2;TA-FUSION-C 65-2;Ductile iron;Flange;Standard;16/25;65 (2 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;10;38048.7;38048.7;1.48282e+06;-20/120;100 (4");139.975;1.28318
+Result number = 6;FUSION_C100C;TA-FUSION-C 4";Ductile iron;ANSI Flange;Standard;20;100 (4");false;false;>100;0;0.02;EqualPc;PushToClose;9.47411;10000;6145;264230;-20/120;100 (4");139.975;1.28318
+Result number = 7;FUSION_C80C_2;TA-FUSION-C 3"-2;Ductile iron;ANSI Flange;Standard;20;80 (3");false;false;>100;0;0.02;EqualPc;PushToClose;10;15731.2;15731.2;564065;-20/120;100 (4");139.975;1.28318
+Result number = 8;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Ductile iron;ANSI Flange;Standard;20;65 (2 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;10;38048.7;38048.7;1.48282e+06;-20/120;100 (4");139.975;1.28318
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 14
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_TBV-CM
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;TBV-CM25NFB_TV;TBV-CM 25NF;Ametal(tm);Thread;Standard;16;25 (1");false;false;-;0;0.004;EqualPc;PushToClose;7.81339;10000;6145;21876.1;-20/120;25 (1");116.294;0.478046
+Result number = 1;TBV-CM20NFB_TV;TBV-CM 20NF;Ametal(tm);Thread;Standard;16;20 (3/4");false;false;-;0;0.004;EqualPc;PushToClose;10;24534.5;24534.5;114062;-20/120;25 (1");116.294;0.478046
+Result number = 2;TBV-CM15NFB_TV;TBV-CM 15NF;Ametal(tm);Thread;Standard;16;15 (1/2");false;false;-;0;0.004;EqualPc;PushToClose;10;98041.7;98041.7;319484;-20/120;25 (1");116.294;0.478046
+Result number = 3;TBV-CM15LFB_TV;TBV-CM 15LF;Ametal(tm);Thread;Standard;16;15 (1/2");false;false;-;0;0.004;EqualPc;PushToClose;10;612648;612648;1.54087e+06;-20/120;25 (1");116.294;0.478046
+Result number = 4;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Ametal(tm);Thread NPT;Standard;16;25 (1");false;true;-;0;0.004;EqualPc;PushToClose;7.81339;10000;6145;21876.1;-20/120;25 (1");116.294;0.478046
+Result number = 5;TBV-CM25NFD_TV;TBV-CM 1"(25NF);Ametal(tm);Thread NPT;Standard;16;25 (1");false;false;-;0;0.004;EqualPc;PushToClose;7.81339;10000;6145;21876.1;-20/120;25 (1");116.294;0.478046
+Result number = 6;TBV-CM20NFC_TV;TBV-CM 3/4"(20NF);Ametal(tm);Thread NPT;Standard;16;20 (3/4");false;true;-;0;0.004;EqualPc;PushToClose;10;24534.5;24534.5;114062;-20/120;25 (1");116.294;0.478046
+Result number = 7;TBV-CM20NFD_TV;TBV-CM 3/4"(20NF);Ametal(tm);Thread NPT;Standard;16;20 (3/4");false;false;-;0;0.004;EqualPc;PushToClose;10;24534.5;24534.5;114062;-20/120;25 (1");116.294;0.478046
+Result number = 8;TBV-CM15NFC_TV;TBV-CM 1/2"(15NF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;true;-;0;0.004;EqualPc;PushToClose;10;98041.7;98041.7;319484;-20/120;25 (1");116.294;0.478046
+Result number = 9;TBV-CM15NFD_TV;TBV-CM 1/2"(15NF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;false;-;0;0.004;EqualPc;PushToClose;10;98041.7;98041.7;319484;-20/120;25 (1");116.294;0.478046
+Result number = 10;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;true;-;0;0.004;EqualPc;PushToClose;10;612648;612648;1.54087e+06;-20/120;25 (1");116.294;0.478046
+Result number = 11;TBV-CM15LFD_TV;TBV-CM 1/2"(15LF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;false;-;0;0.004;EqualPc;PushToClose;10;612648;612648;1.54087e+06;-20/120;25 (1");116.294;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 15
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_TBV-CM
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;TBV-CM25NFB_TV;TBV-CM 25NF;Ametal(tm);Thread;Standard;16;25 (1");false;false;-;0;0.004;EqualPc;PushToClose;7.81339;10000;6145;21876.1;-20/120;25 (1");116.294;0.478046
+Result number = 1;TBV-CM20NFB_TV;TBV-CM 20NF;Ametal(tm);Thread;Standard;16;20 (3/4");false;false;-;0;0.004;EqualPc;PushToClose;10;24534.5;24534.5;114062;-20/120;25 (1");116.294;0.478046
+Result number = 2;TBV-CM15NFB_TV;TBV-CM 15NF;Ametal(tm);Thread;Standard;16;15 (1/2");false;false;-;0;0.004;EqualPc;PushToClose;10;98041.7;98041.7;319484;-20/120;25 (1");116.294;0.478046
+Result number = 3;TBV-CM15LFB_TV;TBV-CM 15LF;Ametal(tm);Thread;Standard;16;15 (1/2");false;false;-;0;0.004;EqualPc;PushToClose;10;612648;612648;1.54087e+06;-20/120;25 (1");116.294;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 16
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_TBV-CM
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADN
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;TBV-CM25NFC_TV;TBV-CM 1"(25NF);Ametal(tm);Thread NPT;Standard;16;25 (1");false;true;-;0;0.004;EqualPc;PushToClose;7.81339;10000;6145;21876.1;-20/120;25 (1");116.294;0.478046
+Result number = 1;TBV-CM25NFD_TV;TBV-CM 1"(25NF);Ametal(tm);Thread NPT;Standard;16;25 (1");false;false;-;0;0.004;EqualPc;PushToClose;7.81339;10000;6145;21876.1;-20/120;25 (1");116.294;0.478046
+Result number = 2;TBV-CM20NFC_TV;TBV-CM 3/4"(20NF);Ametal(tm);Thread NPT;Standard;16;20 (3/4");false;true;-;0;0.004;EqualPc;PushToClose;10;24534.5;24534.5;114062;-20/120;25 (1");116.294;0.478046
+Result number = 3;TBV-CM20NFD_TV;TBV-CM 3/4"(20NF);Ametal(tm);Thread NPT;Standard;16;20 (3/4");false;false;-;0;0.004;EqualPc;PushToClose;10;24534.5;24534.5;114062;-20/120;25 (1");116.294;0.478046
+Result number = 4;TBV-CM15NFC_TV;TBV-CM 1/2"(15NF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;true;-;0;0.004;EqualPc;PushToClose;10;98041.7;98041.7;319484;-20/120;25 (1");116.294;0.478046
+Result number = 5;TBV-CM15NFD_TV;TBV-CM 1/2"(15NF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;false;-;0;0.004;EqualPc;PushToClose;10;98041.7;98041.7;319484;-20/120;25 (1");116.294;0.478046
+Result number = 6;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;true;-;0;0.004;EqualPc;PushToClose;10;612648;612648;1.54087e+06;-20/120;25 (1");116.294;0.478046
+Result number = 7;TBV-CM15LFD_TV;TBV-CM 1/2"(15LF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;false;-;0;0.004;EqualPc;PushToClose;10;612648;612648;1.54087e+06;-20/120;25 (1");116.294;0.478046
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 17
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.011111111108
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_FUSION_C
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;FUSION_C100A;TA-FUSION-C 100;Ductile iron;Flange;Standard;16;100 (4");false;false;>100;0;0.02;EqualPc;PushToClose;9.47411;10000;6145;264230;-20/120;100 (4");139.975;1.28318
+Result number = 1;FUSION_C100B;TA-FUSION-C 100;Ductile iron;Flange;Standard;25;100 (4");false;false;>100;0;0.02;EqualPc;PushToClose;9.47411;10000;6145;264230;-20/120;100 (4");139.975;1.28318
+Result number = 2;FUSION_C80A_2;TA-FUSION-C 80-2;Ductile iron;Flange;Standard;16;80 (3");false;false;>100;0;0.02;EqualPc;PushToClose;10;15731.2;15731.2;564065;-20/120;100 (4");139.975;1.28318
+Result number = 3;FUSION_C80B_2;TA-FUSION-C 80-2;Ductile iron;Flange;Standard;16/25;80 (3");false;false;>100;0;0.02;EqualPc;PushToClose;10;15731.2;15731.2;564065;-20/120;100 (4");139.975;1.28318
+Result number = 4;FUSION_C65A_2;TA-FUSION-C 65-2;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;10;38048.7;38048.7;1.48282e+06;-20/120;100 (4");139.975;1.28318
+Result number = 5;FUSION_C65B_2;TA-FUSION-C 65-2;Ductile iron;Flange;Standard;16/25;65 (2 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;10;38048.7;38048.7;1.48282e+06;-20/120;100 (4");139.975;1.28318
+Result number = 6;FUSION_C100C;TA-FUSION-C 4";Ductile iron;ANSI Flange;Standard;20;100 (4");false;false;>100;0;0.02;EqualPc;PushToClose;9.47411;10000;6145;264230;-20/120;100 (4");139.975;1.28318
+Result number = 7;FUSION_C80C_2;TA-FUSION-C 3"-2;Ductile iron;ANSI Flange;Standard;20;80 (3");false;false;>100;0;0.02;EqualPc;PushToClose;10;15731.2;15731.2;564065;-20/120;100 (4");139.975;1.28318
+Result number = 8;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Ductile iron;ANSI Flange;Standard;20;65 (2 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;10;38048.7;38048.7;1.48282e+06;-20/120;100 (4");139.975;1.28318
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 18
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_FUSION_C
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;FUSION_C50A;TA-FUSION-C 50;Ametal(tm);Thread;Standard;16;50 (2");false;false;>100;0;0.02;EqualPc;PushToClose;4.50361;10000;2257.12;8505.19;-20/120;50 (2");84.0321;0.629544
+Result number = 1;FUSION_C40A;TA-FUSION-C 40;Ametal(tm);Thread;Standard;16;40 (1 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;9.09983;10000;7181.88;49174.9;-20/120;50 (2");84.0321;0.629544
+Result number = 2;FUSION_C32A;TA-FUSION-C 32;Ametal(tm);Thread;Standard;16;32 (1 1/4");false;false;>100;0;0.02;EqualPc;PushToClose;10;14770.7;14770.7;85238;-20/120;50 (2");84.0321;0.629544
+Result number = 3;FUSION_C50B;TA-FUSION-C 2";Ametal(tm);Thread NPT;Standard;16;50 (2");false;false;>100;0;0.02;EqualPc;PushToClose;4.50361;10000;2257.12;8505.19;-20/120;50 (2");84.0321;0.629544
+Result number = 4;FUSION_C40B;TA-FUSION-C 1 1/2";Ametal(tm);Thread NPT;Standard;16;40 (1 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;9.09983;10000;7181.88;49174.9;-20/120;50 (2");84.0321;0.629544
+Result number = 5;FUSION_C32B;TA-FUSION-C 1 1/4";Ametal(tm);Thread NPT;Standard;16;32 (1 1/4");false;false;>100;0;0.02;EqualPc;PushToClose;10;14770.7;14770.7;85238;-20/120;50 (2");84.0321;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 19
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_FUSION_C
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;FUSION_C50A;TA-FUSION-C 50;Ametal(tm);Thread;Standard;16;50 (2");false;false;>100;0;0.02;EqualPc;PushToClose;4.50361;10000;2257.12;8505.19;-20/120;50 (2");84.0321;0.629544
+Result number = 1;FUSION_C40A;TA-FUSION-C 40;Ametal(tm);Thread;Standard;16;40 (1 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;9.09983;10000;7181.88;49174.9;-20/120;50 (2");84.0321;0.629544
+Result number = 2;FUSION_C32A;TA-FUSION-C 32;Ametal(tm);Thread;Standard;16;32 (1 1/4");false;false;>100;0;0.02;EqualPc;PushToClose;10;14770.7;14770.7;85238;-20/120;50 (2");84.0321;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 20
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_FUSION_C
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADN
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;FUSION_C50B;TA-FUSION-C 2";Ametal(tm);Thread NPT;Standard;16;50 (2");false;false;>100;0;0.02;EqualPc;PushToClose;4.50361;10000;2257.12;8505.19;-20/120;50 (2");84.0321;0.629544
+Result number = 1;FUSION_C40B;TA-FUSION-C 1 1/2";Ametal(tm);Thread NPT;Standard;16;40 (1 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;9.09983;10000;7181.88;49174.9;-20/120;50 (2");84.0321;0.629544
+Result number = 2;FUSION_C32B;TA-FUSION-C 1 1/4";Ametal(tm);Thread NPT;Standard;16;32 (1 1/4");false;false;>100;0;0.02;EqualPc;PushToClose;10;14770.7;14770.7;85238;-20/120;50 (2");84.0321;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 21
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0138888
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_FUSION_C
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;FUSION_C125A;TA-FUSION-C 125;Ductile iron;Flange;Standard;16;125 (5");false;false;>100;0;0.02;EqualPc;PushToClose;8.80692;10000;3371.7;142033;-20/120;125 (5");72.8878;1.04638
+Result number = 1;FUSION_C125B;TA-FUSION-C 125;Ductile iron;Flange;Standard;25;125 (5");false;false;>100;0;0.02;EqualPc;PushToClose;8.80692;10000;3371.7;142033;-20/120;125 (5");72.8878;1.04638
+Result number = 2;FUSION_C100A;TA-FUSION-C 100;Ductile iron;Flange;Standard;16;100 (4");false;false;>100;0;0.02;EqualPc;PushToClose;9.95545;10000;9601.44;412854;-20/120;125 (5");72.8878;1.04638
+Result number = 3;FUSION_C100B;TA-FUSION-C 100;Ductile iron;Flange;Standard;25;100 (4");false;false;>100;0;0.02;EqualPc;PushToClose;9.95545;10000;9601.44;412854;-20/120;125 (5");72.8878;1.04638
+Result number = 4;FUSION_C80A_2;TA-FUSION-C 80-2;Ductile iron;Flange;Standard;16;80 (3");false;false;>100;0;0.02;EqualPc;PushToClose;10;24579.7;24579.7;881340;-20/120;125 (5");72.8878;1.04638
+Result number = 5;FUSION_C80B_2;TA-FUSION-C 80-2;Ductile iron;Flange;Standard;16/25;80 (3");false;false;>100;0;0.02;EqualPc;PushToClose;10;24579.7;24579.7;881340;-20/120;125 (5");72.8878;1.04638
+Result number = 6;FUSION_C125C;TA-FUSION-C 5";Ductile iron;ANSI Flange;Standard;20;125 (5");false;false;>100;0;0.02;EqualPc;PushToClose;8.80692;10000;3371.7;142033;-20/120;125 (5");72.8878;1.04638
+Result number = 7;FUSION_C100C;TA-FUSION-C 4";Ductile iron;ANSI Flange;Standard;20;100 (4");false;false;>100;0;0.02;EqualPc;PushToClose;9.95545;10000;9601.44;412854;-20/120;125 (5");72.8878;1.04638
+Result number = 8;FUSION_C80C_2;TA-FUSION-C 3"-2;Ductile iron;ANSI Flange;Standard;20;80 (3");false;false;>100;0;0.02;EqualPc;PushToClose;10;24579.7;24579.7;881340;-20/120;125 (5");72.8878;1.04638
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 22
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0138888
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_FUSION_C
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;FUSION_C125A;TA-FUSION-C 125;Ductile iron;Flange;Standard;16;125 (5");false;false;>100;0;0.02;EqualPc;PushToClose;8.80692;10000;3371.7;142033;-20/120;125 (5");72.8878;1.04638
+Result number = 1;FUSION_C125B;TA-FUSION-C 125;Ductile iron;Flange;Standard;25;125 (5");false;false;>100;0;0.02;EqualPc;PushToClose;8.80692;10000;3371.7;142033;-20/120;125 (5");72.8878;1.04638
+Result number = 2;FUSION_C100A;TA-FUSION-C 100;Ductile iron;Flange;Standard;16;100 (4");false;false;>100;0;0.02;EqualPc;PushToClose;9.95545;10000;9601.44;412854;-20/120;125 (5");72.8878;1.04638
+Result number = 3;FUSION_C100B;TA-FUSION-C 100;Ductile iron;Flange;Standard;25;100 (4");false;false;>100;0;0.02;EqualPc;PushToClose;9.95545;10000;9601.44;412854;-20/120;125 (5");72.8878;1.04638
+Result number = 4;FUSION_C80A_2;TA-FUSION-C 80-2;Ductile iron;Flange;Standard;16;80 (3");false;false;>100;0;0.02;EqualPc;PushToClose;10;24579.7;24579.7;881340;-20/120;125 (5");72.8878;1.04638
+Result number = 5;FUSION_C80B_2;TA-FUSION-C 80-2;Ductile iron;Flange;Standard;16/25;80 (3");false;false;>100;0;0.02;EqualPc;PushToClose;10;24579.7;24579.7;881340;-20/120;125 (5");72.8878;1.04638
+Result number = 6;FUSION_C125C;TA-FUSION-C 5";Ductile iron;ANSI Flange;Standard;20;125 (5");false;false;>100;0;0.02;EqualPc;PushToClose;8.80692;10000;3371.7;142033;-20/120;125 (5");72.8878;1.04638
+Result number = 7;FUSION_C100C;TA-FUSION-C 4";Ductile iron;ANSI Flange;Standard;20;100 (4");false;false;>100;0;0.02;EqualPc;PushToClose;9.95545;10000;9601.44;412854;-20/120;125 (5");72.8878;1.04638
+Result number = 8;FUSION_C80C_2;TA-FUSION-C 3"-2;Ductile iron;ANSI Flange;Standard;20;80 (3");false;false;>100;0;0.02;EqualPc;PushToClose;10;24579.7;24579.7;881340;-20/120;125 (5");72.8878;1.04638
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 23
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0138888
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_FUSION_C
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_3POINT
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+Result number = 0;FUSION_C125A;TA-FUSION-C 125;Ductile iron;Flange;Standard;16;125 (5");false;false;>100;0;0.02;EqualPc;PushToClose;8.80692;10000;3371.7;142033;-20/120;125 (5");72.8878;1.04638
+Result number = 1;FUSION_C125B;TA-FUSION-C 125;Ductile iron;Flange;Standard;25;125 (5");false;false;>100;0;0.02;EqualPc;PushToClose;8.80692;10000;3371.7;142033;-20/120;125 (5");72.8878;1.04638
+Result number = 2;FUSION_C100A;TA-FUSION-C 100;Ductile iron;Flange;Standard;16;100 (4");false;false;>100;0;0.02;EqualPc;PushToClose;9.95545;10000;9601.44;412854;-20/120;125 (5");72.8878;1.04638
+Result number = 3;FUSION_C100B;TA-FUSION-C 100;Ductile iron;Flange;Standard;25;100 (4");false;false;>100;0;0.02;EqualPc;PushToClose;9.95545;10000;9601.44;412854;-20/120;125 (5");72.8878;1.04638
+Result number = 4;FUSION_C80A_2;TA-FUSION-C 80-2;Ductile iron;Flange;Standard;16;80 (3");false;false;>100;0;0.02;EqualPc;PushToClose;10;24579.7;24579.7;881340;-20/120;125 (5");72.8878;1.04638
+Result number = 5;FUSION_C80B_2;TA-FUSION-C 80-2;Ductile iron;Flange;Standard;16/25;80 (3");false;false;>100;0;0.02;EqualPc;PushToClose;10;24579.7;24579.7;881340;-20/120;125 (5");72.8878;1.04638
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 24
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.0013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = 
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;FUSION_C50A;TA-FUSION-C 50;Ametal(tm);Thread;Standard;16;50 (2");false;false;>100;0;0.02;EqualPc;PushToClose;4.50361;10000;2257.12;8505.19;-20/120;50 (2");84.0321;0.629544
+Result number = 1;FUSION_C40A;TA-FUSION-C 40;Ametal(tm);Thread;Standard;16;40 (1 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;9.09983;10000;7181.88;49174.9;-20/120;50 (2");84.0321;0.629544
+Result number = 2;FUSION_C32A;TA-FUSION-C 32;Ametal(tm);Thread;Standard;16;32 (1 1/4");false;false;>100;0;0.02;EqualPc;PushToClose;10;14770.7;14770.7;85238;-20/120;50 (2");84.0321;0.629544
+Result number = 3;FUSION_C50B;TA-FUSION-C 2";Ametal(tm);Thread NPT;Standard;16;50 (2");false;false;>100;0;0.02;EqualPc;PushToClose;4.50361;10000;2257.12;8505.19;-20/120;50 (2");84.0321;0.629544
+Result number = 4;FUSION_C40B;TA-FUSION-C 1 1/2";Ametal(tm);Thread NPT;Standard;16;40 (1 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;9.09983;10000;7181.88;49174.9;-20/120;50 (2");84.0321;0.629544
+Result number = 5;FUSION_C32B;TA-FUSION-C 1 1/4";Ametal(tm);Thread NPT;Standard;16;32 (1 1/4");false;false;>100;0;0.02;EqualPc;PushToClose;10;14770.7;14770.7;85238;-20/120;50 (2");84.0321;0.629544
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 25
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_TBV-C
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;TBV-C20NFB_TV;TBV-C 20NF;Ametal(tm);Thread;Standard;16;20 (3/4");false;false;-;0;0.004;NotCharacterized;PushToClose;6.69912;10000;2126.43;23111.2;-20/120;20 (3/4");101.627;0.379027
+Result number = 1;TBV-C20NFA_TV;TBV-C 20NF;Ametal(tm);Thread male;Standard;16;20 (3/4");false;false;-;0;0.004;NotCharacterized;PushToClose;6.69912;10000;2126.43;23111.2;-20/120;20 (3/4");101.627;0.379027
+Result number = 2;TBV-C20NFG_TV;TBV-C 20NF;Ametal(tm);Thread/Smooth end;Standard;16;20 (3/4");false;false;-;0;0.004;NotCharacterized;PushToClose;6.69912;10000;2126.43;23111.2;-20/120;20 (3/4");101.627;0.379027
+Result number = 3;TBV-C15NFB_TV;TBV-C 15NF;Ametal(tm);Thread;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;9.38381;10000;7573.59;68011.9;-20/120;20 (3/4");101.627;0.379027
+Result number = 4;TBV-C15NFA_TV;TBV-C 15NF;Ametal(tm);Thread male;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;9.38381;10000;7573.59;68011.9;-20/120;20 (3/4");101.627;0.379027
+Result number = 5;TBV-C15NFD_TV;TBV-C 15NF;Ametal(tm);Eurocone;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;9.38381;10000;7573.59;68011.9;-20/120;20 (3/4");101.627;0.379027
+Result number = 6;TBV-C15NFC_TV;TBV-C 15NF;Ametal(tm);Eurocone/Thread;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;9.38381;10000;7573.59;68011.9;-20/120;20 (3/4");101.627;0.379027
+Result number = 7;TBV-C15NFH_TV;TBV-C 15NF;Ametal(tm);Eurocone/Smooth end;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;9.38381;10000;7573.59;68011.9;-20/120;20 (3/4");101.627;0.379027
+Result number = 8;TBV-C15NFG_TV;TBV-C 15NF;Ametal(tm);Thread/Smooth end;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;9.38381;10000;7573.59;68011.9;-20/120;20 (3/4");101.627;0.379027
+Result number = 9;TBV-C15LFB_TV;TBV-C 15LF;Ametal(tm);Thread;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;10;30294.5;30294.5;252279;-20/120;20 (3/4");101.627;0.379027
+Result number = 10;TBV-C15LFA_TV;TBV-C 15LF;Ametal(tm);Thread male;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;10;30294.5;30294.5;252279;-20/120;20 (3/4");101.627;0.379027
+Result number = 11;TBV-C15LFD_TV;TBV-C 15LF;Ametal(tm);Eurocone;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;10;30294.5;30294.5;252279;-20/120;20 (3/4");101.627;0.379027
+Result number = 12;TBV-C15LFC_TV;TBV-C 15LF;Ametal(tm);Eurocone/Thread;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;10;30294.5;30294.5;252279;-20/120;20 (3/4");101.627;0.379027
+Result number = 13;TBV-C15LFH_TV;TBV-C 15LF;Ametal(tm);Eurocone/Smooth end;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;10;30294.5;30294.5;252279;-20/120;20 (3/4");101.627;0.379027
+Result number = 14;TBV-C15LFG_TV;TBV-C 15LF;Ametal(tm);Thread/Smooth end;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;10;30294.5;30294.5;252279;-20/120;20 (3/4");101.627;0.379027
+Result number = 15;TBV-C20NFE_TV;TBV-C 3/4"(20NF);Ametal(tm);Thread NPT;Standard;16;20 (3/4");false;true;-;0;0.004;NotCharacterized;PushToClose;6.69912;10000;2126.43;23111.2;-20/120;20 (3/4");101.627;0.379027
+Result number = 16;TBV-C20NFH_TV;TBV-C 3/4"(20NF);Ametal(tm);Thread NPT;Standard;16;20 (3/4");false;false;-;0;0.004;NotCharacterized;PushToClose;6.69912;10000;2126.43;23111.2;-20/120;20 (3/4");101.627;0.379027
+Result number = 17;TBV-C20NFF_TV;TBV-C 20NF;Ametal(tm);Smooth ends;Standard;16;20 (3/4");false;false;-;0;0.004;NotCharacterized;PushToClose;6.69912;10000;2126.43;23111.2;-20/120;20 (3/4");101.627;0.379027
+Result number = 18;TBV-C15LFE_TV;TBV-C 1/2"(15NF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;true;-;0;0.004;NotCharacterized;PushToClose;9.38381;10000;7573.59;68011.9;-20/120;20 (3/4");101.627;0.379027
+Result number = 19;TBV-C15NFE_TV;TBV-C 1/2"(15NF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;9.38381;10000;7573.59;68011.9;-20/120;20 (3/4");101.627;0.379027
+Result number = 20;TBV-C15NFF_TV;TBV-C 15NF;Ametal(tm);Smooth ends;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;9.38381;10000;7573.59;68011.9;-20/120;20 (3/4");101.627;0.379027
+Result number = 21;TBV-C15LFI_TV;TBV-C 1/2"(15LF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;10;30294.5;30294.5;252279;-20/120;20 (3/4");101.627;0.379027
+Result number = 22;TBV-C15LLFE_TV;TBV-C 1/2"(15LF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;true;-;0;0.004;NotCharacterized;PushToClose;10;30294.5;30294.5;252279;-20/120;20 (3/4");101.627;0.379027
+Result number = 23;TBV-C15LFF_TV;TBV-C 15LF;Ametal(tm);Smooth ends;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;10;30294.5;30294.5;252279;-20/120;20 (3/4");101.627;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 26
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_TBV-C
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;TBV-C20NFB_TV;TBV-C 20NF;Ametal(tm);Thread;Standard;16;20 (3/4");false;false;-;0;0.004;NotCharacterized;PushToClose;6.69912;10000;2126.43;23111.2;-20/120;20 (3/4");101.627;0.379027
+Result number = 1;TBV-C15NFB_TV;TBV-C 15NF;Ametal(tm);Thread;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;9.38381;10000;7573.59;68011.9;-20/120;20 (3/4");101.627;0.379027
+Result number = 2;TBV-C15LFB_TV;TBV-C 15LF;Ametal(tm);Thread;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;10;30294.5;30294.5;252279;-20/120;20 (3/4");101.627;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 27
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_TBV-C
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;TBV-C20NFA_TV;TBV-C 20NF;Ametal(tm);Thread male;Standard;16;20 (3/4");false;false;-;0;0.004;NotCharacterized;PushToClose;6.69912;10000;2126.43;23111.2;-20/120;20 (3/4");101.627;0.379027
+Result number = 1;TBV-C15NFA_TV;TBV-C 15NF;Ametal(tm);Thread male;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;9.38381;10000;7573.59;68011.9;-20/120;20 (3/4");101.627;0.379027
+Result number = 2;TBV-C15LFA_TV;TBV-C 15LF;Ametal(tm);Thread male;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;10;30294.5;30294.5;252279;-20/120;20 (3/4");101.627;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 28
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_TBV-C
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADN
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;TBV-C20NFE_TV;TBV-C 3/4"(20NF);Ametal(tm);Thread NPT;Standard;16;20 (3/4");false;true;-;0;0.004;NotCharacterized;PushToClose;6.69912;10000;2126.43;23111.2;-20/120;20 (3/4");101.627;0.379027
+Result number = 1;TBV-C20NFH_TV;TBV-C 3/4"(20NF);Ametal(tm);Thread NPT;Standard;16;20 (3/4");false;false;-;0;0.004;NotCharacterized;PushToClose;6.69912;10000;2126.43;23111.2;-20/120;20 (3/4");101.627;0.379027
+Result number = 2;TBV-C15LFE_TV;TBV-C 1/2"(15NF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;true;-;0;0.004;NotCharacterized;PushToClose;9.38381;10000;7573.59;68011.9;-20/120;20 (3/4");101.627;0.379027
+Result number = 3;TBV-C15NFE_TV;TBV-C 1/2"(15NF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;9.38381;10000;7573.59;68011.9;-20/120;20 (3/4");101.627;0.379027
+Result number = 4;TBV-C15LFI_TV;TBV-C 1/2"(15LF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;10;30294.5;30294.5;252279;-20/120;20 (3/4");101.627;0.379027
+Result number = 5;TBV-C15LLFE_TV;TBV-C 1/2"(15LF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;true;-;0;0.004;NotCharacterized;PushToClose;10;30294.5;30294.5;252279;-20/120;20 (3/4");101.627;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 29
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_TBV-C
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_EUROCONE
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;TBV-C15NFD_TV;TBV-C 15NF;Ametal(tm);Eurocone;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;9.38381;10000;7573.59;68011.9;-20/120;20 (3/4");101.627;0.379027
+Result number = 1;TBV-C15LFD_TV;TBV-C 15LF;Ametal(tm);Eurocone;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;10;30294.5;30294.5;252279;-20/120;20 (3/4");101.627;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 30
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_TBV-C
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_SMTHEND
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;TBV-C20NFF_TV;TBV-C 20NF;Ametal(tm);Smooth ends;Standard;16;20 (3/4");false;false;-;0;0.004;NotCharacterized;PushToClose;6.69912;10000;2126.43;23111.2;-20/120;20 (3/4");101.627;0.379027
+Result number = 1;TBV-C15NFF_TV;TBV-C 15NF;Ametal(tm);Smooth ends;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;9.38381;10000;7573.59;68011.9;-20/120;20 (3/4");101.627;0.379027
+Result number = 2;TBV-C15LFF_TV;TBV-C 15LF;Ametal(tm);Smooth ends;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;10;30294.5;30294.5;252279;-20/120;20 (3/4");101.627;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 31
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_TBV-C
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_EUCONE_THR
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;TBV-C15NFC_TV;TBV-C 15NF;Ametal(tm);Eurocone/Thread;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;9.38381;10000;7573.59;68011.9;-20/120;20 (3/4");101.627;0.379027
+Result number = 1;TBV-C15LFC_TV;TBV-C 15LF;Ametal(tm);Eurocone/Thread;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;10;30294.5;30294.5;252279;-20/120;20 (3/4");101.627;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 32
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_TBV-C
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_EUCONE_SMTH
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;TBV-C15NFH_TV;TBV-C 15NF;Ametal(tm);Eurocone/Smooth end;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;9.38381;10000;7573.59;68011.9;-20/120;20 (3/4");101.627;0.379027
+Result number = 1;TBV-C15LFH_TV;TBV-C 15LF;Ametal(tm);Eurocone/Smooth end;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;10;30294.5;30294.5;252279;-20/120;20 (3/4");101.627;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 33
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_TBV-C
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THR_SMTH
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;TBV-C20NFG_TV;TBV-C 20NF;Ametal(tm);Thread/Smooth end;Standard;16;20 (3/4");false;false;-;0;0.004;NotCharacterized;PushToClose;6.69912;10000;2126.43;23111.2;-20/120;20 (3/4");101.627;0.379027
+Result number = 1;TBV-C15NFG_TV;TBV-C 15NF;Ametal(tm);Thread/Smooth end;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;9.38381;10000;7573.59;68011.9;-20/120;20 (3/4");101.627;0.379027
+Result number = 2;TBV-C15LFG_TV;TBV-C 15LF;Ametal(tm);Thread/Smooth end;Standard;16;15 (1/2");false;false;-;0;0.004;NotCharacterized;PushToClose;10;30294.5;30294.5;252279;-20/120;20 (3/4");101.627;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 34
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_TBV-CM
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;TBV-CM20NFB_TV;TBV-CM 20NF;Ametal(tm);Thread;Standard;16;20 (3/4");false;false;-;0;0.004;EqualPc;PushToClose;8.21376;10000;6138.57;28529.9;-20/120;20 (3/4");101.627;0.379027
+Result number = 1;TBV-CM15NFB_TV;TBV-CM 15NF;Ametal(tm);Thread;Standard;16;15 (1/2");false;false;-;0;0.004;EqualPc;PushToClose;10;24522.9;24522.9;79917.4;-20/120;20 (3/4");101.627;0.379027
+Result number = 2;TBV-CM15LFB_TV;TBV-CM 15LF;Ametal(tm);Thread;Standard;16;15 (1/2");false;false;-;0;0.004;EqualPc;PushToClose;10;153192;153192;385414;-20/120;20 (3/4");101.627;0.379027
+Result number = 3;TBV-CM20NFC_TV;TBV-CM 3/4"(20NF);Ametal(tm);Thread NPT;Standard;16;20 (3/4");false;true;-;0;0.004;EqualPc;PushToClose;8.21376;10000;6138.57;28529.9;-20/120;20 (3/4");101.627;0.379027
+Result number = 4;TBV-CM20NFD_TV;TBV-CM 3/4"(20NF);Ametal(tm);Thread NPT;Standard;16;20 (3/4");false;false;-;0;0.004;EqualPc;PushToClose;8.21376;10000;6138.57;28529.9;-20/120;20 (3/4");101.627;0.379027
+Result number = 5;TBV-CM15NFC_TV;TBV-CM 1/2"(15NF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;true;-;0;0.004;EqualPc;PushToClose;10;24522.9;24522.9;79917.4;-20/120;20 (3/4");101.627;0.379027
+Result number = 6;TBV-CM15NFD_TV;TBV-CM 1/2"(15NF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;false;-;0;0.004;EqualPc;PushToClose;10;24522.9;24522.9;79917.4;-20/120;20 (3/4");101.627;0.379027
+Result number = 7;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;true;-;0;0.004;EqualPc;PushToClose;10;153192;153192;385414;-20/120;20 (3/4");101.627;0.379027
+Result number = 8;TBV-CM15LFD_TV;TBV-CM 1/2"(15LF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;false;-;0;0.004;EqualPc;PushToClose;10;153192;153192;385414;-20/120;20 (3/4");101.627;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 35
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_TBV-CM
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;TBV-CM20NFB_TV;TBV-CM 20NF;Ametal(tm);Thread;Standard;16;20 (3/4");false;false;-;0;0.004;EqualPc;PushToClose;8.21376;10000;6138.57;28529.9;-20/120;20 (3/4");101.627;0.379027
+Result number = 1;TBV-CM15NFB_TV;TBV-CM 15NF;Ametal(tm);Thread;Standard;16;15 (1/2");false;false;-;0;0.004;EqualPc;PushToClose;10;24522.9;24522.9;79917.4;-20/120;20 (3/4");101.627;0.379027
+Result number = 2;TBV-CM15LFB_TV;TBV-CM 15LF;Ametal(tm);Thread;Standard;16;15 (1/2");false;false;-;0;0.004;EqualPc;PushToClose;10;153192;153192;385414;-20/120;20 (3/4");101.627;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 36
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_TBV-CM
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADN
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;TBV-CM20NFC_TV;TBV-CM 3/4"(20NF);Ametal(tm);Thread NPT;Standard;16;20 (3/4");false;true;-;0;0.004;EqualPc;PushToClose;8.21376;10000;6138.57;28529.9;-20/120;20 (3/4");101.627;0.379027
+Result number = 1;TBV-CM20NFD_TV;TBV-CM 3/4"(20NF);Ametal(tm);Thread NPT;Standard;16;20 (3/4");false;false;-;0;0.004;EqualPc;PushToClose;8.21376;10000;6138.57;28529.9;-20/120;20 (3/4");101.627;0.379027
+Result number = 2;TBV-CM15NFC_TV;TBV-CM 1/2"(15NF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;true;-;0;0.004;EqualPc;PushToClose;10;24522.9;24522.9;79917.4;-20/120;20 (3/4");101.627;0.379027
+Result number = 3;TBV-CM15NFD_TV;TBV-CM 1/2"(15NF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;false;-;0;0.004;EqualPc;PushToClose;10;24522.9;24522.9;79917.4;-20/120;20 (3/4");101.627;0.379027
+Result number = 4;TBV-CM15LFC_TV;TBV-CM 1/2"(15LF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;true;-;0;0.004;EqualPc;PushToClose;10;153192;153192;385414;-20/120;20 (3/4");101.627;0.379027
+Result number = 5;TBV-CM15LFD_TV;TBV-CM 1/2"(15LF);Ametal(tm);Thread NPT;Standard;16;15 (1/2");false;false;-;0;0.004;EqualPc;PushToClose;10;153192;153192;385414;-20/120;20 (3/4");101.627;0.379027
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 37
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_FUSION_C
+ComboMaterialID = 
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;FUSION_C65A_2;TA-FUSION-C 65-2;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;8.23788;10000;2378.04;92676;-20/120;65 (2 1/2");83.9454;0.747189
+Result number = 1;FUSION_C65B_2;TA-FUSION-C 65-2;Ductile iron;Flange;Standard;16/25;65 (2 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;8.23788;10000;2378.04;92676;-20/120;65 (2 1/2");83.9454;0.747189
+Result number = 2;FUSION_C50A;TA-FUSION-C 50;Ametal(tm);Thread;Standard;16;50 (2");false;false;>100;0;0.02;EqualPc;PushToClose;9.34594;10000;9028.47;34020.8;-20/120;65 (2 1/2");83.9454;0.747189
+Result number = 3;FUSION_C40A;TA-FUSION-C 40;Ametal(tm);Thread;Standard;16;40 (1 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;10;28727.5;28727.5;196699;-20/120;65 (2 1/2");83.9454;0.747189
+Result number = 4;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Ductile iron;ANSI Flange;Standard;20;65 (2 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;8.23788;10000;2378.04;92676;-20/120;65 (2 1/2");83.9454;0.747189
+Result number = 5;FUSION_C50B;TA-FUSION-C 2";Ametal(tm);Thread NPT;Standard;16;50 (2");false;false;>100;0;0.02;EqualPc;PushToClose;9.34594;10000;9028.47;34020.8;-20/120;65 (2 1/2");83.9454;0.747189
+Result number = 6;FUSION_C40B;TA-FUSION-C 1 1/2";Ametal(tm);Thread NPT;Standard;16;40 (1 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;10;28727.5;28727.5;196699;-20/120;65 (2 1/2");83.9454;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 38
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_FUSION_C
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;FUSION_C50A;TA-FUSION-C 50;Ametal(tm);Thread;Standard;16;50 (2");false;false;>100;0;0.02;EqualPc;PushToClose;9.34594;10000;9028.47;34020.8;-20/120;65 (2 1/2");83.9454;0.747189
+Result number = 1;FUSION_C40A;TA-FUSION-C 40;Ametal(tm);Thread;Standard;16;40 (1 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;10;28727.5;28727.5;196699;-20/120;65 (2 1/2");83.9454;0.747189
+Result number = 2;FUSION_C50B;TA-FUSION-C 2";Ametal(tm);Thread NPT;Standard;16;50 (2");false;false;>100;0;0.02;EqualPc;PushToClose;9.34594;10000;9028.47;34020.8;-20/120;65 (2 1/2");83.9454;0.747189
+Result number = 3;FUSION_C40B;TA-FUSION-C 1 1/2";Ametal(tm);Thread NPT;Standard;16;40 (1 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;10;28727.5;28727.5;196699;-20/120;65 (2 1/2");83.9454;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 39
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_FUSION_C
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREAD
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;FUSION_C50A;TA-FUSION-C 50;Ametal(tm);Thread;Standard;16;50 (2");false;false;>100;0;0.02;EqualPc;PushToClose;9.34594;10000;9028.47;34020.8;-20/120;65 (2 1/2");83.9454;0.747189
+Result number = 1;FUSION_C40A;TA-FUSION-C 40;Ametal(tm);Thread;Standard;16;40 (1 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;10;28727.5;28727.5;196699;-20/120;65 (2 1/2");83.9454;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 40
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_FUSION_C
+ComboMaterialID = BDY_AMETAL
+ComboConnectID = CONN_THREADN
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;FUSION_C50B;TA-FUSION-C 2";Ametal(tm);Thread NPT;Standard;16;50 (2");false;false;>100;0;0.02;EqualPc;PushToClose;9.34594;10000;9028.47;34020.8;-20/120;65 (2 1/2");83.9454;0.747189
+Result number = 1;FUSION_C40B;TA-FUSION-C 1 1/2";Ametal(tm);Thread NPT;Standard;16;40 (1 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;10;28727.5;28727.5;196699;-20/120;65 (2 1/2");83.9454;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 41
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_FUSION_C
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = 
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;FUSION_C65A_2;TA-FUSION-C 65-2;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;8.23788;10000;2378.04;92676;-20/120;65 (2 1/2");83.9454;0.747189
+Result number = 1;FUSION_C65B_2;TA-FUSION-C 65-2;Ductile iron;Flange;Standard;16/25;65 (2 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;8.23788;10000;2378.04;92676;-20/120;65 (2 1/2");83.9454;0.747189
+Result number = 2;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Ductile iron;ANSI Flange;Standard;20;65 (2 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;8.23788;10000;2378.04;92676;-20/120;65 (2 1/2");83.9454;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 42
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_FUSION_C
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = 
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;FUSION_C65A_2;TA-FUSION-C 65-2;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;8.23788;10000;2378.04;92676;-20/120;65 (2 1/2");83.9454;0.747189
+Result number = 1;FUSION_C65B_2;TA-FUSION-C 65-2;Ductile iron;Flange;Standard;16/25;65 (2 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;8.23788;10000;2378.04;92676;-20/120;65 (2 1/2");83.9454;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 43
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_FUSION_C
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_3
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;FUSION_C65A_2;TA-FUSION-C 65-2;Ductile iron;Flange;Standard;16;65 (2 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;8.23788;10000;2378.04;92676;-20/120;65 (2 1/2");83.9454;0.747189
+Result number = 1;FUSION_C65B_2;TA-FUSION-C 65-2;Ductile iron;Flange;Standard;16/25;65 (2 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;8.23788;10000;2378.04;92676;-20/120;65 (2 1/2");83.9454;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 44
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_FUSION_C
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_FLANGE
+ComboVersionID = VERS_STD
+ComboPNID = PN_5
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;FUSION_C65B_2;TA-FUSION-C 65-2;Ductile iron;Flange;Standard;16/25;65 (2 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;8.23788;10000;2378.04;92676;-20/120;65 (2 1/2");83.9454;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 45
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.002777777777
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_BVC
+ComboFamilyID = FAM_FUSION_C
+ComboMaterialID = BDY_DUCTIRON
+ComboConnectID = CONN_ANSIFL
+ComboVersionID = VERS_STD
+ComboPNID = PN_4
+OnlyForSet = false
+CV2w3w = CV2w
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = SIG_ON-OFF
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = No
+EndInputs
+
+StartOutputs
+Result number = 0;FUSION_C65C_2;TA-FUSION-C 2 1/2"-2;Ductile iron;ANSI Flange;Standard;20;65 (2 1/2");false;false;>100;0;0.02;EqualPc;PushToClose;8.23788;10000;2378.04;92676;-20/120;65 (2 1/2");83.9454;0.747189
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 46
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_TPVC
+ComboFamilyID = FAM_TPV-C
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = PN_2
+OnlyForSet = false
+CV2w3w = CV3w
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 47
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_TPVC
+ComboFamilyID = FAM_TPV-C
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = 
+ComboPNID = PN_2
+OnlyForSet = false
+CV2w3w = CV3w
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 48
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_TPVC
+ComboFamilyID = FAM_TPV-C
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_EUROCONE
+ComboVersionID = VERS_3W
+ComboPNID = PN_2
+OnlyForSet = false
+CV2w3w = CV3w
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 49
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_TPVC
+ComboFamilyID = FAM_TPV-C
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_3W
+ComboPNID = PN_2
+OnlyForSet = false
+CV2w3w = CV3w
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 50
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_TPVC
+ComboFamilyID = FAM_TPV-C
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_4W
+ComboPNID = PN_2
+OnlyForSet = false
+CV2w3w = CV3w
+CVCtrlType = Proportional
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 51
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_TPVC
+ComboFamilyID = FAM_TPV-C
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = PN_2
+OnlyForSet = false
+CV2w3w = CV3w
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 52
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_TPVC
+ComboFamilyID = FAM_TPV-C
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = 
+ComboPNID = PN_2
+OnlyForSet = false
+CV2w3w = CV3w
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 53
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_TPVC
+ComboFamilyID = FAM_TPV-C
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_3W
+ComboPNID = PN_2
+OnlyForSet = false
+CV2w3w = CV3w
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 54
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_TPVC
+ComboFamilyID = FAM_TPV-C
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_4W
+ComboPNID = PN_2
+OnlyForSet = false
+CV2w3w = CV3w
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 55
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_TPVC
+ComboFamilyID = FAM_TPV-C
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_EUROCONE
+ComboVersionID = VERS_3W
+ComboPNID = PN_2
+OnlyForSet = false
+CV2w3w = CV3w
+CVCtrlType = 3points
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 56
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_TPVC
+ComboFamilyID = FAM_TPV-C
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = 
+ComboVersionID = 
+ComboPNID = PN_2
+OnlyForSet = false
+CV2w3w = CV3w
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 57
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_TPVC
+ComboFamilyID = FAM_TPV-C
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = 
+ComboPNID = PN_2
+OnlyForSet = false
+CV2w3w = CV3w
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 58
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_TPVC
+ComboFamilyID = FAM_TPV-C
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_3W
+ComboPNID = PN_2
+OnlyForSet = false
+CV2w3w = CV3w
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 59
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_TPVC
+ComboFamilyID = FAM_TPV-C
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_THREADM
+ComboVersionID = VERS_4W
+ComboPNID = PN_2
+OnlyForSet = false
+CV2w3w = CV3w
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 60
+
+SelectionMode = Individual
+ProductCategory = BCV
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 60
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+FlowOrPowerDT = FlowMode
+Flow = 0.00013888888885
+Power = 0
+DT = 0
+DpEnabled = false
+Dp = 10000
+ComboTypeID = RVTYPE_TPVC
+ComboFamilyID = FAM_TPV-C
+ComboMaterialID = BDY_GUNMETAL
+ComboConnectID = CONN_EUROCONE
+ComboVersionID = VERS_3W
+ComboPNID = PN_2
+OnlyForSet = false
+CV2w3w = CV3w
+CVCtrlType = OnOff
+ComboActuatorPowerSupplyID = 
+ComboActuatorInputSignalID = 
+ActuatorFailSafeFunction = No
+ComboActuatorDefaultReturnPos = Unknown
+EndInputs
+
+StartOutputs
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+

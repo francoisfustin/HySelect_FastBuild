@@ -1,0 +1,177 @@
+#if defined(SS_SPREADOCX)
+#if defined(_UNICODE)
+#ifdef SS_V80
+#ifdef FP_UNICODE_TEST
+  #ifdef FP_ADB //GAB ADO Unicode fpSpread 8.0 - Unicode Test
+      IDS_SSOCX       "FarPoint Spread 8.0 (OLEDB) - Unicode Test"
+      IDS_PVOCX       "FarPoint Spread Preview 8.0 (OLEDB) - Unicode Test"
+  #else //GAB non-ADO Unicode fpSpread 8.0 - Unicode Test
+      IDS_SSOCX       "FarPoint Spread 8.0 - Unicode Test"
+      IDS_PVOCX       "FarPoint Spread Preview 8.0 - Unicode Test"
+  #endif // FP_ADB
+#else // !(FP_UNICODE_TEST)
+#ifdef SPREAD_JPN
+      IDS_SSOCX       "FarPoint Spread 8.0 (OLEDB) (UNICODE)"
+      IDS_PVOCX       "FarPoint Spread Preview 8.0 (OLEDB) (UNICODE)"
+#else
+  #ifdef FP_ADB // ADO unicode fpSpread 8.0 -scl
+      IDS_SSOCX       "FarPoint Spread 8.0 (OLEDB) (UNICODE)"
+      IDS_PVOCX       "FarPoint Spread Preview 8.0 (OLEDB) (UNICODE)"
+  #else // non-ADO unicode fpSpread 8.0 -scl
+      IDS_SSOCX       "FarPoint Spread 8.0 (UNICODE)"
+      IDS_PVOCX       "FarPoint Spread Preview 8.0 (UNICODE)"
+  #endif // FP_ADB
+#endif // SPREAD_JPN
+#endif //FP_UNICODE_TEST
+#elif SS_V70
+#ifdef FP_UNICODE_TEST
+  #ifdef FP_ADB //GAB ADO Unicode fpSpread 7.0 - Unicode Test
+      IDS_SSOCX       "FarPoint Spread 7.0 (OLEDB) - Unicode Test"
+      IDS_PVOCX       "FarPoint Spread Preview 7.0 (OLEDB) - Unicode Test"
+  #else //GAB non-ADO Unicode fpSpread 7.0 - Unicode Test
+      IDS_SSOCX       "FarPoint Spread 7.0 - Unicode Test"
+      IDS_PVOCX       "FarPoint Spread Preview 7.0 - Unicode Test"
+  #endif // FP_ADB
+#else // !(FP_UNICODE_TEST)
+#ifdef SPREAD_JPN
+      IDS_SSOCX       "FarPoint Spread 7.0 (OLEDB) (UNICODE)"
+      IDS_PVOCX       "FarPoint Spread Preview 7.0 (OLEDB) (UNICODE)"
+#else
+  #ifdef FP_ADB // ADO unicode fpSpread 7.0 -scl
+      IDS_SSOCX       "FarPoint Spread 7.0 (OLEDB) (UNICODE)"
+      IDS_PVOCX       "FarPoint Spread Preview 7.0 (OLEDB) (UNICODE)"
+  #else // non-ADO unicode fpSpread 7.0 -scl
+      IDS_SSOCX       "FarPoint Spread 7.0 (UNICODE)"
+      IDS_PVOCX       "FarPoint Spread Preview 7.0 (UNICODE)"
+  #endif // FP_ADB
+#endif // SPREAD_JPN
+#endif //FP_UNICODE_TEST
+#elif SS_V40
+#ifdef FP_UNICODE_TEST
+  #ifdef FP_ADB //GAB ADO Unicode fpSpread 6.0 - Unicode Test
+      IDS_SSOCX       "FarPoint Spread 6.0 (OLEDB) - Unicode Test"
+      IDS_PVOCX       "FarPoint Spread Preview 6.0 (OLEDB) - Unicode Test"
+  #else //GAB non-ADO Unicode fpSpread 6.0 - Unicode Test
+      IDS_SSOCX       "FarPoint Spread 6.0 - Unicode Test"
+      IDS_PVOCX       "FarPoint Spread Preview 6.0 - Unicode Test"
+  #endif // FP_ADB
+#else // !(FP_UNICODE_TEST)
+  #ifdef FP_ADB // ADO unicode fpSpread 6.0 -scl
+      IDS_SSOCX       "FarPoint Spread 6.0 (OLEDB) (UNICODE)"
+      IDS_PVOCX       "FarPoint Spread Preview 6.0 (OLEDB) (UNICODE)"
+  #else // non-ADO unicode fpSpread 6.0 -scl
+      IDS_SSOCX       "FarPoint Spread 6.0 (UNICODE)"
+      IDS_PVOCX       "FarPoint Spread Preview 6.0 (UNICODE)"
+  #endif // FP_ADB
+#endif //FP_UNICODE_TEST
+#else // non-ADO unicode vaSpread 2.5 -scl
+    IDS_SSOCX       "FarPoint USpread Control 2.5"
+#endif // SS_V40
+#else // not Unicode -scl
+#ifdef SS_V80
+#ifdef SPREAD_JPN
+#ifdef FP_ADB // ADO ANSI fpSpreadJ 8.0 -scl
+    IDS_SSOCX       "FarPoint SpreadJ 8.0 (OLEDB)"
+    IDS_PVOCX       "FarPoint SpreadJ Preview 8.0 (OLEDB)"
+#else // non-ADO ANSI fpSpreadJ 8.0 -scl
+    IDS_SSOCX       "FarPoint SpreadJ 8.0"
+    IDS_PVOCX       "FarPoint SpreadJ Preview 8.0"
+#endif // FP_ADB
+#else
+#ifdef FP_ADB // ADO ANSI fpSpread 8.0 -scl
+    IDS_SSOCX       "FarPoint Spread 8.0 (OLEDB)"
+    IDS_PVOCX       "FarPoint Spread Preview 8.0 (OLEDB)"
+#else // non-ADO ANSI fpSpread 8.0 -scl
+    IDS_SSOCX       "FarPoint Spread 8.0"
+    IDS_PVOCX       "FarPoint Spread Preview 8.0"
+#endif // FP_ADB
+#endif
+#elif SS_V70
+#ifdef SPREAD_JPN
+#ifdef FP_ADB // ADO ANSI fpSpreadJ 7.0 -scl
+    IDS_SSOCX       "FarPoint SpreadJ 7.0 (OLEDB)"
+    IDS_PVOCX       "FarPoint SpreadJ Preview 7.0 (OLEDB)"
+#else // non-ADO ANSI fpSpreadJ 7.0 -scl
+    IDS_SSOCX       "FarPoint SpreadJ 7.0"
+    IDS_PVOCX       "FarPoint SpreadJ Preview 7.0"
+#endif // FP_ADB
+#else
+#ifdef FP_ADB // ADO ANSI fpSpread 7.0 -scl
+    IDS_SSOCX       "FarPoint Spread 7.0 (OLEDB)"
+    IDS_PVOCX       "FarPoint Spread Preview 7.0 (OLEDB)"
+#else // non-ADO ANSI fpSpread 7.0 -scl
+    IDS_SSOCX       "FarPoint Spread 7.0"
+    IDS_PVOCX       "FarPoint Spread Preview 7.0"
+#endif // FP_ADB
+#endif
+#elif SS_V40
+#ifdef FP_ADB // ADO ANSI fpSpread 6.0 -scl
+    IDS_SSOCX       "FarPoint Spread 6.0 (OLEDB)"
+    IDS_PVOCX       "FarPoint Spread Preview 6.0 (OLEDB)"
+#else // non-ADO ANSI fpSpread 6.0 -scl
+    IDS_SSOCX       "FarPoint Spread 6.0"
+    IDS_PVOCX       "FarPoint Spread Preview 6.0"
+#endif // FP_ADB
+#elif SS_V35
+#ifdef SYNERGEX_TRIAL
+#ifdef FP_ADB // ADO ANSI fpSpread 3.5 Synergex trial -scl
+    IDS_SSOCX       "FarPoint Spread 3.5 (OLEDB) Synergex Trial"
+    IDS_PVOCX       "FarPoint Spread Preview 3.5 (OLEDB) Synergex Trial"
+#else // non-ADO ANSI fpSpread 3.5 Synergex trial -scl
+    IDS_SSOCX       "FarPoint Spread 3.5 Synergex Trial"
+    IDS_PVOCX       "FarPoint Spread Preview 3.5 Synergex Trial"
+#endif // FP_ADB
+#else
+#ifdef FP_ADB // ADO ANSI fpSpread 3.5 -scl
+    IDS_SSOCX       "FarPoint Spread 3.5 (OLEDB)"
+    IDS_PVOCX       "FarPoint Spread Preview 3.5 (OLEDB)"
+#else // non-ADO ANSI fpSpread 3.5 -scl
+    IDS_SSOCX       "FarPoint Spread 3.5"
+    IDS_PVOCX       "FarPoint Spread Preview 3.5"
+#endif // FP_ADB
+#endif
+#elif SS_V30
+#ifdef FP_ADB // ADO ANSI fpSpread 3.0 -scl
+    IDS_SSOCX       "FarPoint Spread 3.0 (OLEDB)"
+    IDS_PVOCX       "FarPoint Spread Preview 3.0 (OLEDB)"
+#else // non-ADO ANSI fpSpread 3.0 -scl
+    IDS_SSOCX       "FarPoint Spread 3.0"
+    IDS_PVOCX       "FarPoint Spread Preview 3.0"
+#endif // FP_ADB
+#else // non-ADO ANSI vaSpread 2.5 -scl
+    IDS_SSOCX       "FarPoint Spread Control 2.5"
+#endif // SS_V30
+#endif // _UNICODE
+#elif defined(SS_GRIDOCX)
+#ifdef SS_V30
+#ifdef FP_ADB // ADO ANSI fpGrid 3.0 -scl
+	IDS_SSOCX		"fpGrid Control 3.0 (OLEDB)"
+#else // non-ADO ANSI fpGrid 3.0 -scl
+	IDS_SSOCX		"fpGrid Control 3.0"
+#endif // FP_ADB
+#else // non-ADO vaGrid 2.5 -scl
+	IDS_SSOCX		"fpGrid Control 2.5"
+#endif
+#elif defined(SS_RSOCX)
+#ifdef SS_V30
+#ifdef FP_ADB // ADO ANSI RSSpread 3.0 -scl
+	ID_SSSOCX		"RSSpread Control 3.0 (OLEDB)"
+#else // non-ADO ANSI RSSpread 3.0 -scl
+	IDS_SSOCX		"RSSpread Control 3.0"
+#endif // FP_ADB
+#else // non-ADO ANSI RSSpread 2.5  -scl
+	IDS_SSOCX		"RSSpread Control 2.5"
+#endif // FP_ADB
+#endif // SS_SPREADOCX
+
+#ifdef SYNERGEX_TRIAL
+  IDS_SYNERGEX_EXPIRED "This trial version of FarPoint Spread 3.5 for Synergex has expired. Please contact Synergex at 1-916-635-7300."
+#endif
+
+#ifdef FP_UNICODE_TEST
+  IDS_UNICODE_TEST_EXPIRED "This TEST version of the FarPoint Unicode Spread 8.0 has expired. Please contact FarPoint at 1-919-460-4551."
+#endif
+
+#ifdef FP_BETA_V2
+  IDS_BETA_EXPIRED "This RC version of the FarPoint Spread 8.0 has expired. Please contact FarPoint at 1-919-460-4551."
+#endif

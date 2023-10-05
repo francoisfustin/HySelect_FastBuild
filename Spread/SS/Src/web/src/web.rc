@@ -1,0 +1,91 @@
+#define STRINGS_RESOURCE 1
+#include "web.h"
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+//
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+   #ifdef _WIN32
+       LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+       #pragma code_page(1252)
+   #endif
+
+   #ifdef APSTUDIO_INVOKED
+       1 TEXTINCLUDE DISCARDABLE 
+       BEGIN
+           "web.h\0"
+       END
+   #endif
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+STRINGTABLE DISCARDABLE 
+BEGIN
+	IDS_LOGS_BADINDEX			"%ld	%ld	Bad error index number:%d\n" 
+	IDS_LOGS_COL1INVALID		"%ld	%ld	Column number is invalid.  Must be -1 or greater.\n\t\tExport canceled.\n"
+	IDS_LOGS_COL2INVALID		"%ld	%ld	Second column number (%ld) for range method is invalid.\n\t\tMust be -1 or greater. Export canceled.\n" 
+	IDS_LOGS_ROW1INVALID		"%ld	%ld	Row number is invalid.  Must be -1 or greater.\n\t\tExport canceled.\n"
+	IDS_LOGS_ROW2INVALID		"%ld	%ld	Second row number (%ld) for range method is invalid.\n\t\tMust be -1 or greater. Export canceled.\n"
+	IDS_LOGS_DIRECTORYNOTFOUND	"n/a	n/a	The directory you specified (%s) does not exist or is invalid.\n"
+	IDS_LOGS_INVALIDFILE		"n/a	n/a	The file you specified (%s) is invalid. Provide the\n\t\tname of a valid file.\n"
+	IDS_LOGS_COLRANGEERROR 		"%ld	%ld	The column range you have specified is invalid. The first\n\t\tcolumn must be less than or equal to the second column (%ld).\n\t\tExport canceled.\n"
+	IDS_LOGS_ROWRANGEERROR 		"%ld	%ld	The row range you have specified is invalid. The first\n\t\trow must be less than or equal to the second row (%ld).\n\t\tExport canceled.\n"
+	IDS_LOGS_CANTOPENFILE		"n/a	n/a	Spread cannot open the file (%s) for writing.\n\t\tExport canceled.\n"
+	IDS_LOGS_FILESAVED			"n/a	n/a	Spread has successfully created the file (%s).\n"
+	IDS_LOGS_FILENOTFOUND		"n/a	n/a	You specified the file (%s) to append to, but that file\n\t\tdoes not exist. Provide the name of an existing file.\n"
+	IDS_LOGS_SUCCESSEXPORT		"n/a	n/a	Spread has successfully exported columns %ld through %ld,\n\t\trows %ld through %ld to HTML file (%s).\n"
+	IDS_LOGS_FAILEDEXPORT		"n/a	n/a	Spread export failed for (%s)\n\t\tNo data present for specified columns and rows.\n"
+	IDS_LOGS_EXCEEDEDMAXCOL		"%ld	%ld	The specified ending column (%ld) is greater than the\n\t\tmaximum number of columns (%ld).  Spread changed second\n\t\tcolumn specified (%ld) to the maximum number of columns (%ld).\n"
+	IDS_LOGS_EXCEEDEDMAXROW		"%ld	%ld	The specified ending row (%ld) is greater than the\n\t\tmaximum number of rows (%ld).  Spread changed second row\n\t\tspecified (%ld) to the maximum number of rows (%ld).\n"
+	IDS_LOGS_COLHIDDEN			"%ld	%ld	The specified column has not been exported because\n\t\tit is hidden.\n"
+	IDS_LOGS_ROWHIDDEN			"%ld	%ld	The specified row has not been exported because it\n\t\tis hidden.\n"
+	IDS_LOGS_CHECKBOX			"%ld	%ld	The specified cell has not been exported because it\n\t\tis a check box cell.\n"
+	IDS_LOGS_COMBOBOX			"%ld	%ld	The specified cell has not been exported because it\n\t\tis a combo box cell.\n"
+	IDS_LOGS_OWNERDRAWN			"%ld	%ld	The specified cell has not been exported because it\n\t\tis an owner drawn cell.\n"
+	IDS_LOGS_BMP_PICTURE		"%ld	%ld	The specified cell contains a bitmap.  It was converted to a JPEG (%s).\n"
+	IDS_LOGS_ICON_PICTURE		"%ld	%ld	The specified cell contains an icon.    It was converted to a JPEG (%s).\n"
+	IDS_LOGS_JPEG_FAILURE		"%ld	%ld	The specified cell's picture could not be converted to a JPEG.\n"
+	IDS_LOGS_BMP_FAILURE		"%ld	%ld	The specified cell contains a bitmap that could not be converted to a true color bitmap for JPEG conversion.\n"
+	IDS_LOGS_ICON_FAILURE		"%ld	%ld	The specified cell contains an icon that could not be converted to a true color bitmap for JPEG conversion.\n"
+	IDS_LOGS_INVALIDFILETYPE	"%ld	%ld	The picture for this cell must be either an icon or a bitmap.\n"
+	IDS_LOGS_BUTTON				"%ld	%ld	The specified cell has not been exported because it\n\t\tis a button cell.\n"
+	IDS_LOGS_UNKNOWN			"%ld	%ld	The specified cell has not been exported because it\n\t\tis unknown.\n"
+	IDS_LOGS_FORMULA			"%ld	%ld	The specified cell contains a formula. The current\n\t\tvalue of the formula has been exported.\n"
+	IDS_LOGS_HEAD1_HTML	   "\n===== FarPoint Technologies, Inc =====\n===== Start of HTML export of FarPoint Spread Cells to a HTML table on %s. =====\n\n"
+	IDS_LOGS_HEAD3		"Col	Row	Information\n"
+	IDS_LOGS_HEAD4		"---   	---	-------------------------------------------------------------\n"
+	IDS_LOGS_FOOTER_HTML	"\n===== End of HTML export         =====\n===== FarPoint Technologies, Inc =====\n\n"
+
+#ifdef SS_V35
+	IDS_LOGS_TEXT_NOCOLDELIMITER "You must provide a column delimiter.\n"
+	IDS_LOGS_TEXT_NOROWDELIMITER "No row delimiter specified.  Defaulting to CR/LF.\n"
+	IDS_LOGS_TEXT_UNFORMATCREATE "Saving Spread unformatted data to text file (%s).\n"
+	IDS_LOGS_TEXT_UNFORMATAPPEND "Saving Spread unformatted data and appending to\n\t\t existing text file (%s).\n"
+	IDS_LOGS_TEXT_CREATE	     "Saving Spread formatted data to text file (%s).\n"
+	IDS_LOGS_TEXT_APPEND         "Saving Spread formatted data and appending to\n\t\t existing text file (%s).\n"
+	IDS_LOGS_TEXT_UNKNOWNFLAG    "You must provide one of the defined values for the Flags parameter.\n"
+	IDS_LOGS_NODATA		     "Spread does not have data that can be exported.  Export canceled.\n"
+	IDS_LOGS_NOXMLTAGS		"The export could not generate XML tags. Export canceled.\n"
+	IDS_LOGS_CANTOPENFILE_R		"n/a	n/a	Spread cannot open the file (%s).\n\t\tLoading canceled.\n"
+	IDS_LOGS_SUCCESSEXPORT_TEXT	"n/a	n/a	Spread has successfully exported columns %ld through %ld,\n\t\trows %ld through %ld to TEXT file (%s).\n"
+	IDS_LOGS_SUCCESSEXPORT_XML	"n/a	n/a	Spread has successfully exported columns %ld through %ld,\n\t\trows %ld through %ld to XML file (%s).\n"
+	IDS_LOGS_SUCCESS_LOADTEXT   "n/a	n/a	Spread has successfully loaded text data into %ld cols and %ld rows\n\t\tfrom TEXT file (%s).\n"
+	IDS_LOGS_SUCCESSBUFF		"n/a	n/a	Spread has successfully converted columns %ld through %ld,\n\t\trows %ld through %ld to XML and stored it in a buffer.\n"
+	IDS_LOGS_FAILEDBUFF			"n/a	n/a	Spread conversion to XML to be stored in a buffer has failed.\n"
+	IDS_LOGS_FAILEDLOAD			"n/a	n/a	Spread load failed for text file (%s).\n"
+	IDS_LOGS_CANTALLOCBUFFER	"\t\tSpread cannot allocate a buffer for the data.  The export to buffer was canceled.\n"
+	IDS_LOGS_HEAD1_TEXT	    "\n===== FarPoint Technologies, Inc. %s =====\n===== Start of export of FarPoint Spread data to TEXT file %s. =====\n\n"
+	IDS_LOGS_HEAD1_XML	    "\n===== FarPoint Technologies, Inc. %s =====\n===== Start of export of FarPoint Spread data to XML file %s. =====\n\n"
+	IDS_LOGS_HEAD1_XMLBUFF  "\n===== FarPoint Technologies, Inc. %s =====\n===== Start of conversion of FarPoint Spread Cells into XML format and storing into a buffer. =====\n\n"
+	IDS_LOGS_HEAD1_LOAD	   "\n===== FarPoint Technologies, Inc. %s =====\n===== Start of Loading text file into FarPoint Spread Control. =====\n\n"
+	IDS_LOGS_FOOTER_TEXT	"\n===== End of text export         =====\n===== FarPoint Technologies, Inc. =====\n\n"
+	IDS_LOGS_FOOTER_XML	    "\n===== End of XML export          =====\n===== FarPoint Technologies, Inc. =====\n\n"
+	IDS_LOGS_FOOTER_LOAD	"\n===== End of loading text file  =====\n===== FarPoint Technologies, Inc. =====\n\n"
+	IDS_LOGS_FOOTER_XMLBUFF	"\n===== End of XML export to buffer  =====\n===== FarPoint Technologies, Inc. =====\n\n"
+	IDS_LOGS_PRECEEDEDVTOPROW		"n/a	n/a	The specified starting row (%ld) is less than the\n\t\tfirst virtual row (%ld).  Spread changed the starting row\n\t\tspecified (%ld) to the first virtual row (%ld).\n"
+	IDS_LOGS_EXCEEDEDVBOTTOMROW		"n/a	n/a	The specified ending row (%ld) is greater than the\n\t\tlast virtual row (%ld).  Spread changed second row\n\t\tspecified (%ld) to the last virtual row (%ld).\n"
+#endif
+END
+#endif    // English (U.S.) resources

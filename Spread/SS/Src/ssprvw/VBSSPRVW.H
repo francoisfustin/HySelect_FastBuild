@@ -1,0 +1,57 @@
+#ifndef VBSSPRVW_H
+#define VBSSPRVW_H
+
+// code control
+#define FPVBX                 "ssprvw"
+
+// class names
+#define VBDEFAULT_SSPREVIEW   "vaSpreadPreview"
+#define VBCLASS_SSPREVIEW     "vaSpreadPreview"
+
+// toolbar bitmaps
+
+#define IDBMP_FPSSPREVIEW     8021
+#define IDBMP_FPSSPREVIEWDOWN 8022
+#define IDBMP_FPSSPREVIEWMONO 8023
+#define IDBMP_FPSSPREVIEWEGA  8024
+
+enum 
+   {
+   IEVENT_FPSSPREVIEW_CLICK,
+   IEVENT_FPSSPREVIEW_DBLCLICK,
+   IEVENT_FPSSPREVIEW_DRAGDROP,
+   IEVENT_FPSSPREVIEW_DRAGOVER,
+   IEVENT_FPSSPREVIEW_GOTFOCUS,
+   IEVENT_FPSSPREVIEW_KEYDOWN,
+   IEVENT_FPSSPREVIEW_KEYPRESS,
+   IEVENT_FPSSPREVIEW_KEYUP,
+   IEVENT_FPSSPREVIEW_LOSTFOCUS,
+   IEVENT_FPSSPREVIEW_MOUSEDOWN,
+   IEVENT_FPSSPREVIEW_MOUSEMOVE,
+   IEVENT_FPSSPREVIEW_MOUSEUP,
+   IEVENT_FPSSPREVIEW_PAGECHANGE,
+   IEVENT_FPSSPREVIEW_ZOOM,
+
+   IEVENT_FPSSPREVIEW_CNT
+   };
+
+typedef struct vbfpsspreview
+   {
+   GLOBALHANDLE hClassData;
+   HSZ          hszAbout;
+   HWND         hWnd;
+   } VBFPSSPREVIEW, FAR *LPVBFPSSPREVIEW;
+
+typedef struct vbparams1
+   {
+   LPVOID lpParam1;
+   LPVOID Index;
+   } VBPARAMS1;
+
+extern MODEL PV_Model;
+extern MODEL PV_Model_VB1;
+
+extern BOOL VBSSPreviewRegister(HANDLE hinstance);
+extern void VBPV_InitModel(USHORT usVersion);
+
+#endif 

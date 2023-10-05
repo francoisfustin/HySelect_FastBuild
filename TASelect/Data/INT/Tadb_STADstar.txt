@@ -1,0 +1,2142 @@
+////////////////////////////////////////////////////////////////
+//
+//		Table VALVE_CHAR_TAB : Table of regulating valve characteristics
+//
+//	new:CDB_ValveCharacteristic(ID\1) -> VALVE_CHAR_TAB
+//	{
+//		{
+//			Discrete/Continuous: 				#eDISCRETE_True, #eDISCRETE_False or #eDISCRETE_Undefined
+//			Single/Multi/Electronic-turn: 		#eTURN_Single, #eTURN_Multi, #eTURN_Electronic or #eTURN_Undefined
+//			SettingRounding						Allows to know how to round the result of a computing setting.
+//		}
+//		Min measurable setting (for TA-Scope)
+//		Min recommended setting (for selection)
+//		Number of curves
+//		opening 1 \ Kv 1
+//		opening 2 \ Kv 2
+//		...
+//	}
+//
+
+////////////////////////////////////////////////////////////////
+// STAD*
+////////////////////////////////////////////////////////////////
+new:CDB_ValveCharacteristic(C_STAD*010\1) -> VALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Multi
+		0.01									// Allows to know how to round the result of a computing setting.
+	}
+	0.5										// Min measurable setting (For TA-Scope)
+	1.0                                     // Min recommended setting (for selection)
+	4
+	0.0 \ 0.0   \ 0.5   \ 1547 \ 0.0
+	0.5 \ 0.054 \ 0.496 \ 1547 \ 0.033
+	1.0 \ 0.091 \ 0.467 \ 1131 \ 0.077
+	1.5 \ 0.134 \ 0.480 \  914 \ 0.119
+	2.0 \ 0.264 \ 0.542 \  586 \ 0.239
+	2.5 \ 0.461 \ 0.568 \  300 \ 0.447
+	3.0 \ 0.799 \ 0.597 \  177 \ 0.790
+	3.5 \ 1.22  \ 0.608 \  184 \ 1.26
+	4.0 \ 1.36  \ 0.705 \  213 \ 1.57
+}
+
+new:CDB_ValveCharacteristic(C_STAD*015\1) -> VALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Multi
+		0.01									// Allows to know how to round the result of a computing setting.
+	}
+	0.5										// Min measurable setting (For TA-Scope)
+	1.0                                     // Min recommended setting (for selection)
+	4
+	0.0 \ 0.0   \ 0.512 \ 1250 \ 0.0
+	0.5 \ 0.136 \ 0.512 \ 1250 \ 0.127
+	1.0 \ 0.226 \ 0.441 \ 1205 \ 0.218
+	1.5 \ 0.347 \ 0.438 \  799 \ 0.314
+	2.0 \ 0.618 \ 0.421 \  486 \ 0.554
+	2.5 \ 0.931 \ 0.475 \  224 \ 0.820
+	3.0 \ 1.46  \ 0.510 \  160 \ 1.3
+	3.5 \ 2.07  \ 0.517 \  137 \ 1.91
+	4.0 \ 2.56  \ 0.505 \  141 \ 2.48
+}
+
+new:CDB_ValveCharacteristic(C_STAD*020\1) -> VALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Multi
+		0.01									// Allows to know how to round the result of a computing setting.
+	}
+	0.5										// Min measurable setting (For TA-Scope)
+	1.0										// Min recommended setting (for selection)
+	4
+	0.0 \ 0.0   \ 0.500 \ 1050 \ 0.0
+	0.5 \ 0.533 \ 0.498 \ 1049 \ 0.5
+	1.0 \ 0.781 \ 0.468 \  901 \ 0.734
+	1.5 \ 1.22  \ 0.579 \  469 \ 1.13
+	2.0 \ 1.95  \ 0.528 \  408 \ 1.88
+	2.5 \ 2.71  \ 0.614 \  245 \ 2.79
+	3.0 \ 3.71  \ 0.816 \  202 \ 3.92
+	3.5 \ 4.51  \ 0.626 \  217 \ 4.8
+	4.0 \ 5.39  \ 0.670 \  205 \ 5.62
+}
+
+new:CDB_ValveCharacteristic(C_STAD*025\1) -> VALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Multi
+		0.01									// Allows to know how to round the result of a computing setting.
+	}
+	0.5										// Min measurable setting (For TA-Scope)
+	1.0                                     // Min recommended setting (for selection)
+	4
+	0.0 \ 0.000 \ 0.511 \ 935 \ 0.000
+	0.5 \ 0.599 \ 0.511 \ 935 \ 0.560
+	1.0 \ 1.03  \ 0.516 \ 633 \ 0.895
+	1.5 \ 2.13  \ 0.459 \ 408 \ 1.90
+	2.0 \ 3.64  \ 0.449 \ 248 \ 3.30
+	2.5 \ 5.26  \ 0.440 \ 240 \ 5.00
+	3.0 \ 6.65  \ 0.440 \ 240 \ 6.38
+	3.5 \ 7.79  \ 0.440 \ 240 \ 8.00
+	4.0 \ 8.59  \ 0.440 \ 240 \ 8.70
+}
+
+new:CDB_ValveCharacteristic(C_STAD*032\1) -> VALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Multi
+		0.01									// Allows to know how to round the result of a computing setting.
+	}
+	0.5										// Min measurable setting (For TA-Scope)
+	1.0                                     // Min recommended setting (for selection)
+	4
+	0.0 \ 0.0   \ 0.487 \ 1823 \ 0.0
+	0.5 \ 1.19	\ 0.487 \ 1823 \ 1.3
+	1.0 \ 2.09	\ 0.467 \ 1421 \ 2.17
+	1.5 \ 3.36	\ 0.506 \  670 \ 3.14
+	2.0 \ 5.22	\ 0.447 \  452 \ 4.72
+	2.5 \ 7.77	\ 0.440 \  450 \ 7.26
+	3.0 \ 9.82	\ 0.440 \  450 \ 9.66
+	3.5 \ 11.9	\ 0.440 \  450 \ 11.8
+	4.0 \ 14.2	\ 0.440 \  450 \ 14.2
+}
+
+new:CDB_ValveCharacteristic(C_STAD*040\1) -> VALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Multi
+		0.01									// Allows to know how to round the result of a computing setting.
+	}
+	0.5										// Min measurable setting (For TA-Scope)
+	1.0                                     // Min recommended setting (for selection)
+	4
+	0.0 \ 0.00 \ 0.479 \ 1259 \ 0.00
+	0.5 \ 1.89 \ 0.479 \ 1259 \ 2.00
+	1.0 \ 3.4  \ 0.416 \  990 \ 3.65
+	1.5 \ 4.74 \ 0.418 \  654 \ 5.00
+	2.0 \ 6.25 \ 0.410 \  650 \ 6.10
+	2.5 \ 9.16 \ 0.410 \  650 \ 8.80
+	3.0 \ 12.8 \ 0.410 \  650 \ 12.6
+	3.5 \ 16.2 \ 0.410 \  650 \ 16.0
+	4.0 \ 19.3 \ 0.410 \  650 \ 19.2
+}
+
+new:CDB_ValveCharacteristic(C_STAD*050\1) -> VALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Multi
+		0.01									// Allows to know how to round the result of a computing setting.
+	}
+	0.5										// Min measurable setting (For TA-Scope)
+	1.0                                     // Min recommended setting (for selection)
+	4
+	0.0 \ 0.00 \ 0.441 \ 1804 \ 0.00
+	0.5 \ 2.62 \ 0.441 \ 1804 \ 2.74
+	1.0 \ 4.1  \ 0.422 \  871 \ 4.38
+	1.5 \ 6.76 \ 0.321 \  515 \ 7.50
+	2.0 \ 11.4 \ 0.320 \  500 \ 12.9
+	2.5 \ 15.8 \ 0.320 \  500 \ 16.2
+	3.0 \ 21.5 \ 0.320 \  500 \ 21.5
+	3.5 \ 27.0 \ 0.320 \  500 \ 26.5
+	4.0 \ 32.3 \ 0.320 \  500 \ 33.0
+}
+
+////////////////////////////////////////////////////////////////
+// STAD-R*
+////////////////////////////////////////////////////////////////
+
+new:CDB_ValveCharacteristic(C_STAD_R*15\1) -> VALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Multi
+		0.01									// Allows to know how to round the result of a computing setting.
+	}
+	0.5										// Min measurable setting (For TA-Scope)
+	1.0										// Min recommended setting (for selection)
+	1
+	0.0 \ 0.0
+	1.0 \ 0.099
+	1.5 \ 0.155
+	2.0 \ 0.277
+	2.5 \ 0.452
+	3.0 \ 0.678
+	3.5 \ 0.962
+	4.0 \ 1.27
+}
+
+new:CDB_ValveCharacteristic(C_STAD_R*20\1) -> VALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Multi
+		0.01									// Allows to know how to round the result of a computing setting.
+	}
+	0.5										// Min measurable setting (For TA-Scope)
+	1.0                                     // Min recommended setting (for selection)
+	1
+	0.0 \ 0.0
+	0.5 \ 0.118
+	1.0 \ 0.248
+	1.5 \ 0.447
+	2.0 \ 0.709
+	2.5 \ 1.03
+	3.0 \ 1.34
+	3.5 \ 1.93
+	4.0 \ 2.63
+}
+
+new:CDB_ValveCharacteristic(C_STAD_R*25\1) -> VALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Multi
+		0.01									// Allows to know how to round the result of a computing setting.
+	}
+	0.5										// Min measurable setting (For TA-Scope)
+	1.0                                     // Min recommended setting (for selection)
+	1
+	0.0 \ 0.0
+	0.5 \ 0.521
+	1.0 \ 0.728
+	1.5 \ 1.0
+	2.0 \ 1.26
+	2.5 \ 1.81
+	3.0 \ 2.65
+	3.5 \ 3.85
+	4.0 \ 4.91
+}
+
+////////////////////////////////////////////////////////////////
+// STAD-B*
+////////////////////////////////////////////////////////////////
+
+new:CDB_ValveCharacteristic(C_STAD_B*10\1) -> VALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Multi
+		0.01									// Allows to know how to round the result of a computing setting.
+	}
+	0.5										// Min measurable setting (For TA-Scope)
+	1.0                                     // Min recommended setting (for selection)
+	1
+	0.0 \ 0.0
+	1.0 \ 0.0408
+	1.5 \ 0.0805
+	2.0 \ 0.238
+	2.5 \ 0.443
+	3.0 \ 0.810
+	3.5 \ 1.17
+	4.0 \ 1.33
+}
+
+new:CDB_ValveCharacteristic(C_STAD_B*15\1) -> VALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Multi
+		0.01									// Allows to know how to round the result of a computing setting.
+	}
+	0.5										// Min measurable setting (For TA-Scope)
+	1.0                                     // Min recommended setting (for selection)
+	1
+	0.0 \ 0.0
+	0.5 \ 0.0479
+	1.0 \ 0.118
+	1.5 \ 0.251
+	2.0 \ 0.518
+	2.5 \ 0.870
+	3.0 \ 1.38
+	3.5 \ 1.93
+	4.0 \ 2.32
+}
+
+new:CDB_ValveCharacteristic(C_STAD_B*20\1) -> VALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Multi
+		0.01									// Allows to know how to round the result of a computing setting.
+	}
+	0.5										// Min measurable setting (For TA-Scope)
+	1.0                                     // Min recommended setting (for selection)
+	1
+	0.0 \ 0.0
+	0.5 \ 0.444
+	1.0 \ 0.658
+	1.5 \ 1.07
+	2.0 \ 1.80
+	2.5 \ 2.87
+	3.0 \ 3.84
+	3.5 \ 4.65
+	4.0 \ 5.35
+}
+
+new:CDB_ValveCharacteristic(C_STAD_B*25\1) -> VALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Multi
+		0.01									// Allows to know how to round the result of a computing setting.
+	}
+	0.5										// Min measurable setting (For TA-Scope)
+	1.0                                     // Min recommended setting (for selection)
+	1
+	0.0 \ 0.0
+	0.5 \ 0.495
+	1.0 \ 0.948
+	1.5 \ 2.09
+	2.0 \ 3.91
+	2.5 \ 5.60
+	3.0 \ 6.99
+	3.5 \ 7.93
+	4.0 \ 8.25
+}
+
+new:CDB_ValveCharacteristic(C_STAD_B*32\1) -> VALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Multi
+		0.01									// Allows to know how to round the result of a computing setting.
+	}
+	0.5										// Min measurable setting (For TA-Scope)
+	1.0                                     // Min recommended setting (for selection)
+	1
+	0.0 \ 0.0
+	0.5 \ 1.05
+	1.0 \ 1.93
+	1.5 \ 3.25
+	2.0 \ 5.49
+	2.5 \ 8.07
+	3.0 \ 10.1
+	3.5 \ 11.9
+	4.0 \ 13.7
+}
+
+new:CDB_ValveCharacteristic(C_STAD_B*40\1) -> VALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Multi
+		0.01									// Allows to know how to round the result of a computing setting.
+	}
+	0.5										// Min measurable setting (For TA-Scope)
+	1.0                                     // Min recommended setting (for selection)
+	1
+	0.0 \ 0.0
+	0.5 \ 1.71
+	1.0 \ 3.17
+	1.5 \ 4.78
+	2.0 \ 6.55
+	2.5 \ 9.63
+	3.0 \ 13.3
+	3.5 \ 16.9
+	4.0 \ 20.1
+}
+
+new:CDB_ValveCharacteristic(C_STAD_B*50\1) -> VALVE_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Multi
+		0.01									// Allows to know how to round the result of a computing setting.
+	}
+	0.5										// Min measurable setting (For TA-Scope)
+	1.0                                     // Min recommended setting (for selection)
+	1
+	0.0 \ 0.0
+	0.5 \ 2.25
+	1.0 \ 3.83
+	1.5 \ 6.74
+	2.0 \ 11.4
+	2.5 \ 15.7
+	3.0 \ 21.0
+	3.5 \ 26.6
+	4.0 \ 31.4
+}
+
+////////////////////////////////////////////////////////////////
+// new:CDB_RuledTable(ID) -> TABLEID_WHERETOINSERT
+// {
+//		{
+//			"Table description"
+//			TrueParent				0/1: 1 if this table is the true parent of the IDs in it.
+//			[ID1],
+//			[ID2],
+//			...
+//			[IDn]
+//		}
+//		[Operator]IDName1 [ \ [Operator]IDName2 \ [Operator]IDName3 ...
+//		[Operator]IDNameA [ \ [Operator]IDNameB \ [Operator]IDNameC ...
+//		[Operator]IDNameA1 [ \ [Operator]IDNameA2 \ [Operator]IDNameA3 ...
+// }
+//
+// Each ID can 'Implicated' or 'Excluded' other ID. Here are the list of all available operators:
+//	& -> Implicated
+//  ! -> Excluded
+//  > -> Builtin
+//  ^ -> Item excluded all other items
+//  * -> Item is sold by two!
+//	# -> Accessory distributed on each parent item (3 vessels (1 primary + 2 secondary) => 3 times the accessory)
+////////////////////////////////////////////////////////////////
+new:CDB_RuledTable(ACCGR_STAD*_1020) -> REGVACCGROUP_TAB
+{
+	{
+		"STAD* "
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	*ACRV1									// Extension for measuring point M14x1.
+	*ACRV2									// Self-sealing measuring point extension.
+	*ACC_MEASPT_44 \ !ACC_MEASPT_103		// Measuring point (44mm).
+	*ACC_MEASPT_103 \ !ACC_MEASPT_44		// Measuring point (103mm).
+	ACVALVE7								// Handwheel (Red/Gray).
+	ACVALVE1								// Identification tag.
+	ACVALVE5								// Allen key 3mm.
+	ACVALVE6								// Allen key 5mm.
+	ACC_STS_INS1520							// Thermal insulation.
+}
+
+// Nordic version (Just for the handwheel).
+new:CDB_RuledTable(ACCGR_STAD*_1020N) -> REGVACCGROUP_TAB
+{
+	{
+		"STAD* "
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	*ACRV1									// Extension for measuring point M14x1.
+	*ACRV2									// Self-sealing measuring point extension.
+	*ACC_MEASPT_44 \ !ACC_MEASPT_103		// Measuring point (44mm).
+	*ACC_MEASPT_103 \ !ACC_MEASPT_44		// Measuring point (103mm).
+	ACVALVE8								// Handwheel (Red/Gray).
+	ACVALVE1								// Identification tag.
+	ACVALVE5								// Allen key 3mm.
+	ACVALVE6								// Allen key 5mm.
+	ACC_STS_INS1520							// Thermal insulation.
+}
+
+new:CDB_RuledTable(ACCGR_STAD*_25) -> REGVACCGROUP_TAB
+{
+	{
+		"STAD* "
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	*ACRV1									// Extension for measuring point M14x1.
+	*ACRV2									// Self-sealing measuring point extension.
+	*ACC_MEASPT_44 \ !ACC_MEASPT_103		// Measuring point (44mm).
+	*ACC_MEASPT_103 \ !ACC_MEASPT_44		// Measuring point (103mm).
+	ACVALVE7								// Handwheel (Red/Gray).
+	ACVALVE1								// Identification tag.
+	ACVALVE5								// Allen key 3mm.
+	ACVALVE6								// Allen key 5mm.
+	ACC_STS_INS25							// Thermal insulation.
+}
+
+// Nordic version (Just for the handwheel).
+new:CDB_RuledTable(ACCGR_STAD*_25N) -> REGVACCGROUP_TAB
+{
+	{
+		"STAD* "
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	*ACRV1									// Extension for measuring point M14x1.
+	*ACRV2									// Self-sealing measuring point extension.
+	*ACC_MEASPT_44 \ !ACC_MEASPT_103		// Measuring point (44mm).
+	*ACC_MEASPT_103 \ !ACC_MEASPT_44		// Measuring point (103mm).
+	ACVALVE8								// Handwheel (Red/Gray).
+	ACVALVE1								// Identification tag.
+	ACVALVE5								// Allen key 3mm.
+	ACVALVE6								// Allen key 5mm.
+	ACC_STS_INS25							// Thermal insulation.
+}
+
+new:CDB_RuledTable(ACCGR_STAD*_32) -> REGVACCGROUP_TAB
+{
+	{
+		"STAD* "
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	*ACRV1									// Extension for measuring point M14x1.
+	*ACRV2									// Self-sealing measuring point extension.
+	*ACC_MEASPT_44 \ !ACC_MEASPT_103		// Measuring point (44mm).
+	*ACC_MEASPT_103 \ !ACC_MEASPT_44		// Measuring point (103mm).
+	ACVALVE7								// Handwheel (Red/Gray).
+	ACVALVE1								// Identification tag.
+	ACVALVE5								// Allen key 3mm.
+	ACVALVE6								// Allen key 5mm.
+	ACC_STS_INS32							// Thermal insulation.
+}
+
+// Nordic version (Just for the handwheel).
+new:CDB_RuledTable(ACCGR_STAD*_32N) -> REGVACCGROUP_TAB
+{
+	{
+		"STAD* "
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	*ACRV1									// Extension for measuring point M14x1.
+	*ACRV2									// Self-sealing measuring point extension.
+	*ACC_MEASPT_44 \ !ACC_MEASPT_103		// Measuring point (44mm).
+	*ACC_MEASPT_103 \ !ACC_MEASPT_44		// Measuring point (103mm).
+	ACVALVE8								// Handwheel (Red/Gray).
+	ACVALVE1								// Identification tag.
+	ACVALVE5								// Allen key 3mm.
+	ACVALVE6								// Allen key 5mm.
+	ACC_STS_INS32							// Thermal insulation.
+}
+
+new:CDB_RuledTable(ACCGR_STAD*_40) -> REGVACCGROUP_TAB
+{
+	{
+		"STAD* "
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	*ACRV1									// Extension for measuring point M14x1.
+	*ACRV2									// Self-sealing measuring point extension.
+	*ACC_MEASPT_44 \ !ACC_MEASPT_103		// Measuring point (44mm).
+	*ACC_MEASPT_103 \ !ACC_MEASPT_44		// Measuring point (103mm).
+	ACVALVE7								// Handwheel (Red/Gray).
+	ACVALVE1								// Identification tag.
+	ACVALVE5								// Allen key 3mm.
+	ACVALVE6								// Allen key 5mm.
+	ACC_STS_INS40							// Thermal insulation.
+}
+
+// Nordic version (Just for the handwheel).
+new:CDB_RuledTable(ACCGR_STAD*_40N) -> REGVACCGROUP_TAB
+{
+	{
+		"STAD* "
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	*ACRV1									// Extension for measuring point M14x1.
+	*ACRV2									// Self-sealing measuring point extension.
+	*ACC_MEASPT_44 \ !ACC_MEASPT_103		// Measuring point (44mm).
+	*ACC_MEASPT_103 \ !ACC_MEASPT_44		// Measuring point (103mm).
+	ACVALVE8								// Handwheel (Red/Gray).
+	ACVALVE1								// Identification tag.
+	ACVALVE5								// Allen key 3mm.
+	ACVALVE6								// Allen key 5mm.
+	ACC_STS_INS40							// Thermal insulation.
+}
+
+new:CDB_RuledTable(ACCGR_STAD*_50) -> REGVACCGROUP_TAB
+{
+	{
+		"STAD* "
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	*ACRV1									// Extension for measuring point M14x1.
+	*ACRV2									// Self-sealing measuring point extension.
+	*ACC_MEASPT_44 \ !ACC_MEASPT_103		// Measuring point (44mm).
+	*ACC_MEASPT_103 \ !ACC_MEASPT_44		// Measuring point (103mm).
+	ACVALVE7								// Handwheel (Red/Gray).
+	ACVALVE1								// Identification tag.
+	ACVALVE5								// Allen key 3mm.
+	ACVALVE6								// Allen key 5mm.
+	ACC_STS_INS50							// Thermal insulation.
+}
+
+// Nordic version (Just for the handwheel).
+new:CDB_RuledTable(ACCGR_STAD*_50N) -> REGVACCGROUP_TAB
+{
+	{
+		"STAD* "
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	*ACRV1									// Extension for measuring point M14x1.
+	*ACRV2									// Self-sealing measuring point extension.
+	*ACC_MEASPT_44 \ !ACC_MEASPT_103		// Measuring point (44mm).
+	*ACC_MEASPT_103 \ !ACC_MEASPT_44		// Measuring point (103mm).
+	ACVALVE8								// Handwheel (Red/Gray).
+	ACVALVE1								// Identification tag.
+	ACVALVE5								// Allen key 3mm.
+	ACVALVE6								// Allen key 5mm.
+	ACC_STS_INS50							// Thermal insulation.
+}
+
+////////////////////////////////////////////////////////////////
+// (A) *** STAD*  Standard ISO 228, No Drain, Global version****
+////////////////////////////////////////////////////////////////
+
+new:CDB_RegulatingValve(STAD*10A_BV\1) -> REGVALV_TAB
+{
+	{
+		{
+			{
+				{
+					0															// isDeleted
+					1                                                          	// isAvailable
+					0                                                          	// isHidden
+					1                                                          	// isFix
+					1                                                          	// Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+					0                                                          	// Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+					0               											// Sort integer (Allow to show a group of articles in the order defined with this variable).
+				}
+				0.6e+6 \ 2.5e+6                                				// Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+				NO_ID                                                      	// PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+				120.0                                                      	// Tmax in °C
+				-20.0                                                      	// Tmin in °C
+			}
+			"52851-010"                                        			// Reference to the TA Product
+			"STAD* 10"                                               	// Name of the product
+			RVTYPE_BV                                                  	// Identifier of the valve type
+			FAM_STAD*                                                   // Identifier of the family of the product
+			VERS_NODRAIN                                               	// Identifier of the version of the product
+			1                                                          	// Level of priority for selection [1,10]
+			""                                                         	// Product comment
+			"PX_STAD25A_BV"                                            	// Product image ID
+			ACCGR_STAD*_1020          		                        	// Identifier of the accessory group
+			#ePartOfaSetNo                                             	// Boolean indicating if product is part of a set. Can be #ePartOfaSetNo, #ePartOfaSetYes, #ePartOfaSetYesBreakOk or #ePartOfaSetYesBreakOnMsg.
+			NO_ID														// Table ID where are sets if exist for the current product.
+			0.0                                                        	// Price of the product
+			#eProduct                              	                	// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+			NO_ID                                                   	// Identifier of the series of the accessory (mainly used in DlgDirSel)
+			0                                                       	// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+			NO_ID                                      	            	// Identifier of the accessory type if #eBoth 
+			NO_ID										            	// Identifier of the accessory family if #eBoth				
+		}
+		BDY_AMETAL                                             		// Identifier of the body material
+		DN_10                                                      	// Identifier of the corresp. valve size
+		CONN_THREAD                                                	// Identifier of the (inlet/pipe side) connection
+		NO_ID                                                      	// Identifier of the connection table, can be NO_ID
+		NO_ID                                                      	// Identifier of the outlet/body side connection, can be NO_ID
+		"STAD"                                                     	// Type of the valve as used in the CBI II
+		"10/09"                                                    	// Size of the valve as used in the CBI II
+		"3/8N"                                                     	// Size of the valve in inch as used in the CBI II
+		1                                                          	// CBI compatibility Index
+		"5L"                                                       	// CBI Version (5L -> Doesn't exist to allow to get it in TA-Scope but not in CBI)
+		0.0                                                        	// Maximum Dp of the valve
+		#eMeasPointInlet | #eMeasPointOutlet                       	// Measuring points
+		#eMeasDataDp | #eMeasDataFlow | #eMeasDataDpAvail          	// Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+		NO_ID														// Identifier of the inlet size ID
+		NO_ID														// Identifier of the outlet size ID
+	}
+	C_STAD*010													// Identifier of the valve characteristic
+}
+
+new:CDB_RegulatingValve(STAD*15A_BV) -> REGVALV_TAB
+{ Inherited(STAD*10A_BV)
+	{
+		CDB_Product::Reference	=	"52851-015"
+		CDB_Product::Name			=	"STAD* 15"
+		CDB_TAProduct::SizeID		=	DN_15
+		CDB_TAProduct::CBISize		=	"15"
+		CDB_TAProduct::CBISizeInch	=	"1/2N"
+		CDB_RegulatingValve::CharactID	=	C_STAD*015
+	}
+}
+
+new:CDB_RegulatingValve(STAD*20A_BV) -> REGVALV_TAB
+{ Inherited(STAD*10A_BV)
+	{
+		CDB_Product::Reference	=	"52851-020"
+		CDB_Product::Name			=	"STAD* 20"
+		CDB_TAProduct::SizeID		=	DN_20
+		CDB_TAProduct::CBISize		=	"20"
+		CDB_TAProduct::CBISizeInch	=	"3/4"
+		CDB_RegulatingValve::CharactID	=	C_STAD*020
+	}
+}
+
+new:CDB_RegulatingValve(STAD*25A_BV) -> REGVALV_TAB
+{ Inherited(STAD*10A_BV)
+	{
+		CDB_Product::Reference	=	"52851-025"
+		CDB_Product::Name			=	"STAD* 25"
+		CDB_Product::AccessGroupID = ACCGR_STAD*_25
+		CDB_TAProduct::SizeID		=	DN_25
+		CDB_TAProduct::CBISize		=	"25"
+		CDB_TAProduct::CBISizeInch	=	"1"
+		CDB_RegulatingValve::CharactID	=	C_STAD*025
+	}
+}
+
+new:CDB_RegulatingValve(STAD*32A_BV) -> REGVALV_TAB
+{ Inherited(STAD*10A_BV)
+	{
+		CDB_Product::Reference	=	"52851-032"
+		CDB_Product::Name			=	"STAD* 32"
+		CDB_Product::AccessGroupID = ACCGR_STAD*_32
+		CDB_TAProduct::SizeID		=	DN_32
+		CDB_TAProduct::CBISize		=	"32"
+		CDB_TAProduct::CBISizeInch	=	"1_1/4"
+		CDB_RegulatingValve::CharactID	=	C_STAD*032
+	}
+}
+
+new:CDB_RegulatingValve(STAD*40A_BV) -> REGVALV_TAB
+{ Inherited(STAD*10A_BV)
+	{
+		CDB_Product::Reference	=	"52851-040"
+		CDB_Product::Name			=	"STAD* 40"
+		CDB_Product::AccessGroupID = ACCGR_STAD*_40
+		CDB_TAProduct::SizeID		=	DN_40
+		CDB_TAProduct::CBISize		=	"40"
+		CDB_TAProduct::CBISizeInch	=	"1_1/2"
+		CDB_RegulatingValve::CharactID	=	C_STAD*040
+	}
+}
+
+new:CDB_RegulatingValve(STAD*50A_BV) -> REGVALV_TAB
+{ Inherited(STAD*10A_BV)
+	{
+		CDB_Product::Reference	=	"52851-050"
+		CDB_Product::Name			=	"STAD* 50"
+		CDB_Product::AccessGroupID = ACCGR_STAD*_50
+		CDB_TAProduct::SizeID		=	DN_50
+		CDB_TAProduct::CBISize		=	"50"
+		CDB_TAProduct::CBISizeInch	=	"2"
+		CDB_RegulatingValve::CharactID	=	C_STAD*050
+	}
+}
+
+
+////////////////////////////////////////////////////////////////
+// (B) *** STAD*  Standard ISO 228, No Drain, Nordic version****
+////////////////////////////////////////////////////////////////
+new:CDB_RegulatingValve(STAD*10B_BV) -> REGVALV_TAB
+{ Inherited(STAD*10A_BV)
+	{
+		CDB_Product::Reference		=	"52851-110"
+		CDB_Product::AccessGroupID = ACCGR_STAD*_1020N
+	}
+}
+
+new:CDB_RegulatingValve(STAD*15B_BV) -> REGVALV_TAB
+{ Inherited(STAD*15A_BV)
+	{
+		CDB_Product::Reference		=	"52851-115"
+		CDB_Product::AccessGroupID = ACCGR_STAD*_1020N
+	}
+}
+
+new:CDB_RegulatingValve(STAD*20B_BV) -> REGVALV_TAB
+{ Inherited(STAD*20A_BV)
+	{
+		CDB_Product::Reference		=	"52851-120"
+		CDB_Product::AccessGroupID = ACCGR_STAD*_1020N
+	}
+}
+
+new:CDB_RegulatingValve(STAD*25B_BV) -> REGVALV_TAB
+{ Inherited(STAD*25A_BV)
+	{
+		CDB_Product::Reference		=	"52851-125"
+		CDB_Product::AccessGroupID = ACCGR_STAD*_25N
+	}
+}
+
+new:CDB_RegulatingValve(STAD*32B_BV) -> REGVALV_TAB
+{ Inherited(STAD*32A_BV)
+	{
+		CDB_Product::Reference		=	"52851-132"
+		CDB_Product::AccessGroupID = ACCGR_STAD*_32N
+	}
+}
+
+new:CDB_RegulatingValve(STAD*40B_BV) -> REGVALV_TAB
+{ Inherited(STAD*40A_BV)
+	{
+		CDB_Product::Reference		=	"52851-140"
+		CDB_Product::AccessGroupID = ACCGR_STAD*_40N
+	}
+}
+
+new:CDB_RegulatingValve(STAD*50B_BV) -> REGVALV_TAB
+{ Inherited(STAD*50A_BV)
+	{
+		CDB_Product::Reference		=	"52851-150"
+		CDB_Product::AccessGroupID = ACCGR_STAD*_50N
+	}
+}
+
+//////////////////////////////////////////////////////////////////////
+// (C) *** STAD*  Standard ISO 228, with Drain 1/2, Nordic version****
+//////////////////////////////////////////////////////////////////////
+new:CDB_RegulatingValve(STAD*10C_BV) -> REGVALV_TAB
+{ Inherited(STAD*10A_BV)
+	{
+		CDB_Product::Reference		=	"52851-210"
+		CDB_Product::VersionID		=	VERS_DRAIN12
+		CDB_Product::ProdImgID		=	"PX_STADA25B_BV"
+		CDB_Product::AccessGroupID =    ACCGR_STAD*_1020N
+	}
+}
+
+new:CDB_RegulatingValve(STAD*15C_BV) -> REGVALV_TAB
+{ Inherited(STAD*15A_BV)
+	{
+		CDB_Product::Reference		=	"52851-215"
+		CDB_Product::VersionID		=	VERS_DRAIN12
+		CDB_Product::ProdImgID		=	"PX_STADA25B_BV"
+		CDB_Product::AccessGroupID =    ACCGR_STAD*_1020N
+	}
+}
+
+new:CDB_RegulatingValve(STAD*20C_BV) -> REGVALV_TAB
+{ Inherited(STAD*20A_BV)
+	{
+		CDB_Product::Reference		=	"52851-220"
+		CDB_Product::VersionID		=	VERS_DRAIN12
+		CDB_Product::ProdImgID		=	"PX_STADA25B_BV"
+		CDB_Product::AccessGroupID =    ACCGR_STAD*_1020N
+	}
+}
+
+new:CDB_RegulatingValve(STAD*25C_BV) -> REGVALV_TAB
+{ Inherited(STAD*25A_BV)
+	{
+		CDB_Product::Reference		=	"52851-225"
+		CDB_Product::VersionID		=	VERS_DRAIN12
+		CDB_Product::ProdImgID		=	"PX_STADA25B_BV"
+		CDB_Product::AccessGroupID =    ACCGR_STAD*_25N
+	}
+}
+
+new:CDB_RegulatingValve(STAD*32C_BV) -> REGVALV_TAB
+{ Inherited(STAD*32A_BV)
+	{
+		CDB_Product::Reference		=	"52851-232"
+		CDB_Product::VersionID		=	VERS_DRAIN12
+		CDB_Product::ProdImgID		=	"PX_STADA25B_BV"
+		CDB_Product::AccessGroupID =    ACCGR_STAD*_32N
+	}
+}
+
+new:CDB_RegulatingValve(STAD*40C_BV) -> REGVALV_TAB
+{ Inherited(STAD*40A_BV)
+	{
+		CDB_Product::Reference		=	"52851-240"
+		CDB_Product::VersionID		=	VERS_DRAIN12
+		CDB_Product::ProdImgID		=	"PX_STADA25B_BV"
+		CDB_Product::AccessGroupID =    ACCGR_STAD*_40N
+	}
+}
+
+new:CDB_RegulatingValve(STAD*50C_BV) -> REGVALV_TAB
+{ Inherited(STAD*50A_BV)
+	{
+		CDB_Product::Reference		=	"52851-250"
+		CDB_Product::VersionID	=	VERS_DRAIN12
+		CDB_Product::ProdImgID	=	"PX_STADA25B_BV"
+		CDB_Product::AccessGroupID =    ACCGR_STAD*_50N
+	}
+}
+
+//////////////////////////////////////////////////////////////////////
+// (D) *** STAD*  Standard ISO 228, with Drain 3/4, Global version****
+//////////////////////////////////////////////////////////////////////
+
+new:CDB_RegulatingValve(STAD*10D_BV) -> REGVALV_TAB
+{ Inherited(STAD*10A_BV)
+	{
+		CDB_Product::Reference		=	"52851-610"
+		CDB_Product::VersionID		=	VERS_DRAIN34
+		CDB_Product::ProdImgID		=	"PX_STADA25B_BV"
+	}
+}
+
+new:CDB_RegulatingValve(STAD*15D_BV) -> REGVALV_TAB
+{ Inherited(STAD*15A_BV)
+	{
+		CDB_Product::Reference		=	"52851-615"
+		CDB_Product::VersionID		=	VERS_DRAIN34
+		CDB_Product::ProdImgID		=	"PX_STADA25B_BV"
+	}
+}
+
+new:CDB_RegulatingValve(STAD*20D_BV) -> REGVALV_TAB
+{ Inherited(STAD*20A_BV)
+	{
+		CDB_Product::Reference		=	"52851-620"
+		CDB_Product::VersionID		=	VERS_DRAIN34
+		CDB_Product::ProdImgID		=	"PX_STADA25B_BV"
+	}
+}
+
+new:CDB_RegulatingValve(STAD*25D_BV) -> REGVALV_TAB
+{ Inherited(STAD*25A_BV)
+	{
+		CDB_Product::Reference		=	"52851-625"
+		CDB_Product::VersionID		=	VERS_DRAIN34
+		CDB_Product::ProdImgID		=	"PX_STADA25B_BV"
+	}
+}
+
+new:CDB_RegulatingValve(STAD*32D_BV) -> REGVALV_TAB
+{ Inherited(STAD*32A_BV)
+	{
+		CDB_Product::Reference		=	"52851-632"
+		CDB_Product::VersionID		=	VERS_DRAIN34
+		CDB_Product::ProdImgID		=	"PX_STADA25B_BV"
+	}
+}
+
+new:CDB_RegulatingValve(STAD*40D_BV) -> REGVALV_TAB
+{ Inherited(STAD*40A_BV)
+	{
+		CDB_Product::Reference		=	"52851-640"
+		CDB_Product::VersionID		=	VERS_DRAIN34
+		CDB_Product::ProdImgID		=	"PX_STADA25B_BV"
+	}
+}
+
+new:CDB_RegulatingValve(STAD*50D_BV) -> REGVALV_TAB
+{ Inherited(STAD*50A_BV)
+	{
+		CDB_Product::Reference		=	"52851-650"
+		CDB_Product::VersionID	=	VERS_DRAIN34
+		CDB_Product::ProdImgID	=	"PX_STADA25B_BV"
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// (E) *** STAD*  Standard ISO 228, silicon free, with Drain 1/2, Nordic version****
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+// (F) *** STAD*  Standard ISO 228, silicon free, with Drain 3/4, Global version****
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+// (G) *** STAD*  NO drain version, NPT  global****
+////////////////////////////////////////////////////////////////////////////////
+
+new:CDB_RegulatingValve(STAD*15G_BV) -> REGVALV_TAB
+{ Inherited(STAD*15A_BV)
+	{
+		CDB_Product::Name			=   "STAD* 1/2""
+		CDB_Product::Reference		=	"52851-515"
+		CDB_TAProduct::ConnectID	=	CONN_THREADN
+	}
+}
+
+new:CDB_RegulatingValve(STAD*20G_BV) -> REGVALV_TAB
+{ Inherited(STAD*20A_BV)
+	{
+		CDB_Product::Name			=   "STAD* 3/4""
+		CDB_Product::Reference		=	"52851-520"
+		CDB_TAProduct::ConnectID	=	CONN_THREADN
+	}
+}
+
+new:CDB_RegulatingValve(STAD*25G_BV) -> REGVALV_TAB
+{ Inherited(STAD*25A_BV)
+	{
+		CDB_Product::Name			=   "STAD* 1""
+		CDB_Product::Reference		=	"52851-525"
+		CDB_TAProduct::ConnectID	=	CONN_THREADN
+	}
+}
+
+new:CDB_RegulatingValve(STAD*32G_BV) -> REGVALV_TAB
+{ Inherited(STAD*32A_BV)
+	{
+		CDB_Product::Name			=   "STAD* 1 1/4""
+		CDB_Product::Reference		=	"52851-532"
+		CDB_TAProduct::ConnectID	=	CONN_THREADN
+	}
+}
+
+new:CDB_RegulatingValve(STAD*40G_BV) -> REGVALV_TAB
+{ Inherited(STAD*40A_BV)
+	{
+		CDB_Product::Name			=   "STAD* 1 1/2""
+		CDB_Product::Reference		=	"52851-540"
+		CDB_TAProduct::ConnectID	=	CONN_THREADN
+	}
+}
+
+new:CDB_RegulatingValve(STAD*50G_BV) -> REGVALV_TAB
+{ Inherited(STAD*50A_BV)
+	{
+		CDB_Product::Name			=   "STAD* 2""
+		CDB_Product::Reference		=	"52851-550"
+		CDB_TAProduct::ConnectID	=	CONN_THREADN
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// (H) *** STAD*  drain UNS 1 1/6" x 11.5 version, NPT  global				****
+////////////////////////////////////////////////////////////////////////////////
+
+new:CDB_RegulatingValve(STAD*15H_BV) -> REGVALV_TAB
+{ Inherited(STAD*15G_BV)
+	{
+		CDB_Product::Reference		=	"52851-715"
+		CDB_Product::VersionID		=	VERS_DRAIN_UNS
+		CDB_Product::ProdImgID		=	"PX_STADA25B_BV"
+	}
+}
+
+new:CDB_RegulatingValve(STAD*20H_BV) -> REGVALV_TAB
+{ Inherited(STAD*20G_BV)
+	{
+		CDB_Product::Reference		=	"52851-720"
+		CDB_Product::VersionID		=	VERS_DRAIN_UNS
+		CDB_Product::ProdImgID		=	"PX_STADA25B_BV"
+	}
+}
+
+new:CDB_RegulatingValve(STAD*25H_BV) -> REGVALV_TAB
+{ Inherited(STAD*25G_BV)
+	{
+		CDB_Product::Reference		=	"52851-725"
+		CDB_Product::VersionID		=	VERS_DRAIN_UNS
+		CDB_Product::ProdImgID		=	"PX_STADA25B_BV"
+	}
+}
+
+new:CDB_RegulatingValve(STAD*32H_BV) -> REGVALV_TAB
+{ Inherited(STAD*32G_BV)
+	{
+		CDB_Product::Reference		=	"52851-732"
+		CDB_Product::VersionID		=	VERS_DRAIN_UNS
+		CDB_Product::ProdImgID		=	"PX_STADA25B_BV"
+	}
+}
+
+new:CDB_RegulatingValve(STAD*40H_BV) -> REGVALV_TAB
+{ Inherited(STAD*40G_BV)
+	{
+		CDB_Product::Reference		=	"52851-740"
+		CDB_Product::VersionID		=	VERS_DRAIN_UNS
+		CDB_Product::ProdImgID		=	"PX_STADA25B_BV"
+	}
+}
+
+new:CDB_RegulatingValve(STAD*50H_BV) -> REGVALV_TAB
+{ Inherited(STAD*50G_BV)
+	{
+		CDB_Product::Reference		=	"52851-750"
+		CDB_Product::VersionID		=	VERS_DRAIN_UNS
+		CDB_Product::ProdImgID		=	"PX_STADA25B_BV"
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// (I) *** STAD*  no drain , NPT victaulic 									****
+////////////////////////////////////////////////////////////////////////////////
+
+new:CDB_RegulatingValve(STAD*15I_BV) -> REGVALV_TAB
+{ Inherited(STAD*15G_BV)
+	{
+		CDB_Thing::Deleted			= 0
+		CDB_Thing::Available		= 0
+		CDB_Product::Reference		=	"52867-515"
+		CDB_TAProduct::ConnectID	=	CONN_THREADNVIC
+	}
+}
+
+new:CDB_RegulatingValve(STAD*20I_BV) -> REGVALV_TAB
+{ Inherited(STAD*20G_BV)
+	{
+		CDB_Thing::Deleted			= 0
+		CDB_Thing::Available		= 0
+		CDB_Product::Reference		=	"52867-520"
+		CDB_TAProduct::ConnectID	=	CONN_THREADNVIC
+	}
+}
+
+new:CDB_RegulatingValve(STAD*25I_BV) -> REGVALV_TAB
+{ Inherited(STAD*25G_BV)
+	{
+		CDB_Thing::Deleted			= 0
+		CDB_Thing::Available		= 0
+		CDB_Product::Reference		=	"52867-525"
+		CDB_TAProduct::ConnectID	=	CONN_THREADNVIC
+	}
+}
+
+new:CDB_RegulatingValve(STAD*32I_BV) -> REGVALV_TAB
+{ Inherited(STAD*32G_BV)
+	{
+		CDB_Thing::Deleted			= 0
+		CDB_Thing::Available		= 0
+		CDB_Product::Reference		=	"52867-532"
+		CDB_TAProduct::ConnectID	=	CONN_THREADNVIC
+	}
+}
+
+new:CDB_RegulatingValve(STAD*40I_BV) -> REGVALV_TAB
+{ Inherited(STAD*40G_BV)
+	{
+		CDB_Thing::Deleted			= 0
+		CDB_Thing::Available		= 0
+		CDB_Product::Reference		=	"52867-540"
+		CDB_TAProduct::ConnectID	=	CONN_THREADNVIC
+	}
+}
+
+new:CDB_RegulatingValve(STAD*50I_BV) -> REGVALV_TAB
+{ Inherited(STAD*50G_BV)
+	{
+		CDB_Thing::Deleted			= 0
+		CDB_Thing::Available		= 0
+		CDB_Product::Reference		=	"52867-550"
+		CDB_TAProduct::ConnectID	=	CONN_THREADNVIC
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// (J) *** STAD*  drain UNS 1 1/6" x 11.5 , NPT victaulic 									****
+////////////////////////////////////////////////////////////////////////////////
+
+new:CDB_RegulatingValve(STAD*15J_BV) -> REGVALV_TAB
+{ Inherited(STAD*15H_BV)
+	{
+		CDB_Thing::Deleted			= 0
+		CDB_Thing::Available		= 0
+		CDB_Product::Reference		=	"52867-715"
+		CDB_TAProduct::ConnectID	=	CONN_THREADNVIC
+		CDB_Product::ProdImgID		=	"PX_STADA25B_BV"
+	}
+}
+
+new:CDB_RegulatingValve(STAD*20J_BV) -> REGVALV_TAB
+{ Inherited(STAD*20H_BV)
+	{
+		CDB_Thing::Deleted			= 0
+		CDB_Thing::Available		= 0
+		CDB_Product::Reference		=	"52867-720"
+		CDB_TAProduct::ConnectID	=	CONN_THREADNVIC
+		CDB_Product::ProdImgID		=	"PX_STADA25B_BV"
+	}
+}
+
+new:CDB_RegulatingValve(STAD*25J_BV) -> REGVALV_TAB
+{ Inherited(STAD*25H_BV)
+	{
+		CDB_Thing::Deleted			= 0
+		CDB_Thing::Available		= 0
+		CDB_Product::Reference		=	"52867-725"
+		CDB_TAProduct::ConnectID	=	CONN_THREADNVIC
+		CDB_Product::ProdImgID		=	"PX_STADA25B_BV"
+	}
+}
+
+new:CDB_RegulatingValve(STAD*32J_BV) -> REGVALV_TAB
+{ Inherited(STAD*32H_BV)
+	{
+		CDB_Thing::Deleted			= 0
+		CDB_Thing::Available		= 0
+		CDB_Product::Reference		=	"52867-732"
+		CDB_TAProduct::ConnectID	=	CONN_THREADNVIC
+		CDB_Product::ProdImgID		=	"PX_STADA25B_BV"
+	}
+}
+
+new:CDB_RegulatingValve(STAD*40J_BV) -> REGVALV_TAB
+{ Inherited(STAD*40H_BV)
+	{
+		CDB_Thing::Deleted			= 0
+		CDB_Thing::Available		= 0
+		CDB_Product::Reference		=	"52867-740"
+		CDB_TAProduct::ConnectID	=	CONN_THREADNVIC
+		CDB_Product::ProdImgID		=	"PX_STADA25B_BV"
+	}
+}
+
+new:CDB_RegulatingValve(STAD*50J_BV) -> REGVALV_TAB
+{ Inherited(STAD*50H_BV)
+	{
+		CDB_Thing::Deleted			= 0
+		CDB_Thing::Available		= 0
+		CDB_Product::Reference		=	"52867-750"
+		CDB_TAProduct::ConnectID	=	CONN_THREADNVIC
+		CDB_Product::ProdImgID		=	"PX_STADA25B_BV"
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// (K) *** STAD*  drain UNS 1 1/6" x 11.5 , NPT victaulic silicon free		****
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+// (L) *** STAD*  drain UNS 1 1/6" x 11.5 , NPT victaulic silicon free		****
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+// (O) *** STAD* AU (WaterMark IAPMO R&T OCEANA) with drain 3/4				****
+// unavailable by default for all countries
+// Filter TAB AU mark them as available
+////////////////////////////////////////////////////////////////////////////////
+new:CDB_RegulatingValve(STAD*10O_BV) -> REGVALV_TAB
+{ Inherited(STAD*10D_BV)
+	{
+		CDB_Thing::Deleted			= 0
+		CDB_Thing::Available		= 0
+		CDB_Product::Reference		=	"52858-610"
+	}
+}
+
+new:CDB_RegulatingValve(STAD*15O_BV) -> REGVALV_TAB
+{ Inherited(STAD*15D_BV)
+	{
+		CDB_Thing::Deleted			= 0
+		CDB_Thing::Available		= 0
+		CDB_Product::Reference		=	"52858-615"
+	}
+}
+
+new:CDB_RegulatingValve(STAD*20O_BV) -> REGVALV_TAB
+{ Inherited(STAD*20D_BV)
+	{
+		CDB_Thing::Deleted			= 0
+		CDB_Thing::Available		= 0
+		CDB_Product::Reference		=	"52858-620"
+	}
+}
+
+new:CDB_RegulatingValve(STAD*25O_BV) -> REGVALV_TAB
+{ Inherited(STAD*25D_BV)
+	{
+		CDB_Thing::Deleted			= 0
+		CDB_Thing::Available		= 0
+		CDB_Product::Reference		=	"52858-625"
+	}
+}
+
+new:CDB_RegulatingValve(STAD*32O_BV) -> REGVALV_TAB
+{ Inherited(STAD*32D_BV)
+	{
+		CDB_Thing::Deleted			= 0
+		CDB_Thing::Available		= 0
+		CDB_Product::Reference		=	"52858-632"
+	}
+}
+
+new:CDB_RegulatingValve(STAD*40O_BV) -> REGVALV_TAB
+{ Inherited(STAD*40D_BV)
+	{
+		CDB_Thing::Deleted			= 0
+		CDB_Thing::Available		= 0
+		CDB_Product::Reference		=	"52858-640"
+	}
+}
+
+new:CDB_RegulatingValve(STAD*50O_BV) -> REGVALV_TAB
+{ Inherited(STAD*50D_BV)
+	{
+		CDB_Thing::Deleted			= 0
+		CDB_Thing::Available		= 0
+		CDB_Product::Reference		=	"52858-650"
+	}
+}
+
+// HYS-1828
+////////////////////////////////////////////////////////////////////////////////////
+// (P) *** STAD* With capillary pipe connection	DPC Set Global & Nordic version ****
+////////////////////////////////////////////////////////////////////////////////////
+
+new:CDB_RegulatingValve(STAD*10P_BV) -> REGVALV_TAB
+{ Inherited(STAD*10A_BV)
+	{
+		CDB_Product::Reference		=	"-"
+		CDB_Product::VersionID		=	VERS_CAP_PIPE
+		CDB_Product::ProdImgID		=	"PX_STADSTAR25_DPCSET"
+		CDB_Product::PartOfaSet		=   #ePartOfaSetYes
+		CDB_Product::TableSetID		=	DPCMVSET_TAB
+	}
+}
+
+new:CDB_RegulatingValve(STAD*15P_BV) -> REGVALV_TAB
+{ Inherited(STAD*15A_BV)
+	{
+		CDB_Product::Reference		=	"-"
+		CDB_Product::VersionID		=	VERS_CAP_PIPE
+		CDB_Product::ProdImgID		=	"PX_STADSTAR25_DPCSET"
+		CDB_Product::PartOfaSet		=   #ePartOfaSetYes
+		CDB_Product::TableSetID		=	DPCMVSET_TAB
+	}
+}
+
+new:CDB_RegulatingValve(STAD*20P_BV) -> REGVALV_TAB
+{ Inherited(STAD*20A_BV)
+	{
+		CDB_Product::Reference		=	"-"
+		CDB_Product::VersionID		=	VERS_CAP_PIPE
+		CDB_Product::ProdImgID		=	"PX_STADSTAR25_DPCSET"
+		CDB_Product::PartOfaSet		=   #ePartOfaSetYes
+		CDB_Product::TableSetID		=	DPCMVSET_TAB
+	}
+}
+
+new:CDB_RegulatingValve(STAD*25P_BV) -> REGVALV_TAB
+{ Inherited(STAD*25A_BV)
+	{
+		CDB_Product::Reference		=	"-"
+		CDB_Product::VersionID		=	VERS_CAP_PIPE
+		CDB_Product::ProdImgID		=	"PX_STADSTAR25_DPCSET"
+		CDB_Product::PartOfaSet		=   #ePartOfaSetYes
+		CDB_Product::TableSetID		=	DPCMVSET_TAB
+	}
+}
+
+new:CDB_RegulatingValve(STAD*32P_BV) -> REGVALV_TAB
+{ Inherited(STAD*32A_BV)
+	{
+		CDB_Product::Reference		=	"-"
+		CDB_Product::VersionID		=	VERS_CAP_PIPE
+		CDB_Product::ProdImgID		=	"PX_STADSTAR25_DPCSET"
+		CDB_Product::PartOfaSet		=   #ePartOfaSetYes
+		CDB_Product::TableSetID		=	DPCMVSET_TAB
+	}
+}
+
+new:CDB_RegulatingValve(STAD*40P_BV) -> REGVALV_TAB
+{ Inherited(STAD*40A_BV)
+	{
+		CDB_Product::Reference		=	"-"
+		CDB_Product::VersionID		=	VERS_CAP_PIPE
+		CDB_Product::ProdImgID		=	"PX_STADSTAR25_DPCSET"
+		CDB_Product::PartOfaSet		=   #ePartOfaSetYes
+		CDB_Product::TableSetID		=	DPCMVSET_TAB
+	}
+}
+
+new:CDB_RegulatingValve(STAD*50P_BV) -> REGVALV_TAB
+{ Inherited(STAD*50A_BV)
+	{
+		CDB_Product::Reference		=	"-"
+		CDB_Product::VersionID	=	VERS_CAP_PIPE
+		CDB_Product::ProdImgID	=	"PX_STADSTAR25_DPCSET"
+		CDB_Product::PartOfaSet		=   #ePartOfaSetYes
+		CDB_Product::TableSetID		=	DPCMVSET_TAB
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// (A) *** STA*  drain 1/2" Global version									****
+////////////////////////////////////////////////////////////////////////////////
+*new:CDB_RegulatingValve(STA*10A_BV) -> REGVALV_TAB
+{ Inherited(STAD*10C_BV)
+	{
+		CDB_Product::Name			=	"STA* 10"
+		CDB_Product::Reference		=	"52850-210"
+		CDB_Product::TypeID			=   RVTYPE_DRV
+		CDB_Product::FamilyID		=	FAM_STA*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+new:CDB_RegulatingValve(STA*15A_BV) -> REGVALV_TAB
+{ Inherited(STAD*15C_BV)
+	{
+		CDB_Product::Name			=	"STA* 15"
+		CDB_Product::Reference		=	"52850-215"
+		CDB_Product::TypeID			=   RVTYPE_DRV
+		CDB_Product::FamilyID		=	FAM_STA*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+new:CDB_RegulatingValve(STA*20A_BV) -> REGVALV_TAB
+{ Inherited(STAD*20C_BV)
+	{
+		CDB_Product::Name			=	"STA* 20"
+		CDB_Product::Reference		=	"52850-220"
+		CDB_Product::TypeID			=   RVTYPE_DRV
+		CDB_Product::FamilyID		=	FAM_STA*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+new:CDB_RegulatingValve(STA*25A_BV) -> REGVALV_TAB
+{ Inherited(STAD*25C_BV)
+	{
+		CDB_Product::Name			=	"STA* 25"
+		CDB_Product::Reference		=	"52850-225"
+		CDB_Product::TypeID			=   RVTYPE_DRV
+		CDB_Product::FamilyID		=	FAM_STA*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+new:CDB_RegulatingValve(STA*32A_BV) -> REGVALV_TAB
+{ Inherited(STAD*32C_BV)
+	{
+		CDB_Product::Name			=	"STA* 32"
+		CDB_Product::Reference		=	"52850-232"
+		CDB_Product::TypeID			=   RVTYPE_DRV
+		CDB_Product::FamilyID		=	FAM_STA*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+new:CDB_RegulatingValve(STA*40A_BV) -> REGVALV_TAB
+{ Inherited(STAD*40C_BV)
+	{
+		CDB_Product::Name			=	"STA* 40"
+		CDB_Product::Reference		=	"52850-240"
+		CDB_Product::TypeID			=   RVTYPE_DRV
+		CDB_Product::FamilyID		=	FAM_STA*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+new:CDB_RegulatingValve(STA*50A_BV) -> REGVALV_TAB
+{ Inherited(STAD*50C_BV)
+	{
+		CDB_Product::Name			=	"STA* 50"
+		CDB_Product::Reference		=	"52850-250"
+		CDB_Product::TypeID			=   RVTYPE_DRV
+		CDB_Product::FamilyID		=	FAM_STA*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+// (A) *** STAD-D*  drain 3/4" Global version	(For domestic water)		****
+////////////////////////////////////////////////////////////////////////////////
+new:CDB_RegulatingValve(STAD-D*10A_BV) -> REGVALV_TAB
+{ Inherited(STAD*10D_BV)
+	{
+		CDB_Product::Name			=	"STAD-D* 10"
+		CDB_Product::Reference		=	"52752-610"
+		CDB_Product::FamilyID		=	FAM_STAD-D*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+new:CDB_RegulatingValve(STAD-D*15A_BV) -> REGVALV_TAB
+{ Inherited(STAD*15D_BV)
+	{
+		CDB_Product::Name			=	"STAD-D* 15"
+		CDB_Product::Reference		=	"52752-615"
+		CDB_Product::FamilyID		=	FAM_STAD-D*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+new:CDB_RegulatingValve(STAD-D*20A_BV) -> REGVALV_TAB
+{ Inherited(STAD*20D_BV)
+	{
+		CDB_Product::Name			=	"STAD-D* 20"
+		CDB_Product::Reference		=	"52752-620"
+		CDB_Product::FamilyID		=	FAM_STAD-D*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+new:CDB_RegulatingValve(STAD-D*25A_BV) -> REGVALV_TAB
+{ Inherited(STAD*25D_BV)
+	{
+		CDB_Product::Name			=	"STAD-D* 25"
+		CDB_Product::Reference		=	"52752-625"
+		CDB_Product::FamilyID		=	FAM_STAD-D*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+new:CDB_RegulatingValve(STAD-D*32A_BV) -> REGVALV_TAB
+{ Inherited(STAD*32D_BV)
+	{
+		CDB_Product::Name			=	"STAD-D* 32"
+		CDB_Product::Reference		=	"52752-632"
+		CDB_Product::FamilyID		=	FAM_STAD-D*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+new:CDB_RegulatingValve(STAD-D*40A_BV) -> REGVALV_TAB
+{ Inherited(STAD*40D_BV)
+	{
+		CDB_Product::Name			=	"STAD-D* 40"
+		CDB_Product::Reference		=	"52752-640"
+		CDB_Product::FamilyID		=	FAM_STAD-D*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+new:CDB_RegulatingValve(STAD-D*50A_BV) -> REGVALV_TAB
+{ Inherited(STAD*50D_BV)
+	{
+		CDB_Product::Name			=	"STAD-D* 50"
+		CDB_Product::Reference		=	"52752-650"
+		CDB_Product::FamilyID		=	FAM_STAD-D*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// (B) *** STAD-D*  drain 1/2" Nordic version		(For domestic water)	****
+////////////////////////////////////////////////////////////////////////////////
+new:CDB_RegulatingValve(STAD-D*10B_BV) -> REGVALV_TAB
+{ Inherited(STAD*10C_BV)
+	{
+		CDB_Product::Name			=	"STAD-D* 10"
+		CDB_Product::Reference		=	"52752-210"
+		CDB_Product::FamilyID		=	FAM_STAD-D*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+new:CDB_RegulatingValve(STAD-D*15B_BV) -> REGVALV_TAB
+{ Inherited(STAD*15C_BV)
+	{
+		CDB_Product::Name			=	"STAD-D* 15"
+		CDB_Product::Reference		=	"52752-215"
+		CDB_Product::FamilyID		=	FAM_STAD-D*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+new:CDB_RegulatingValve(STAD-D*20B_BV) -> REGVALV_TAB
+{ Inherited(STAD*20C_BV)
+	{
+		CDB_Product::Name			=	"STAD-D* 20"
+		CDB_Product::Reference		=	"52752-220"
+		CDB_Product::FamilyID		=	FAM_STAD-D*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+new:CDB_RegulatingValve(STAD-D*25B_BV) -> REGVALV_TAB
+{ Inherited(STAD*25C_BV)
+	{
+		CDB_Product::Name			=	"STAD-D* 25"
+		CDB_Product::Reference		=	"52752-225"
+		CDB_Product::FamilyID		=	FAM_STAD-D*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+new:CDB_RegulatingValve(STAD-D*32B_BV) -> REGVALV_TAB
+{ Inherited(STAD*32C_BV)
+	{
+		CDB_Product::Name			=	"STAD-D* 32"
+		CDB_Product::Reference		=	"52752-232"
+		CDB_Product::FamilyID		=	FAM_STAD-D*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+new:CDB_RegulatingValve(STAD-D*40B_BV) -> REGVALV_TAB
+{ Inherited(STAD*40C_BV)
+	{
+		CDB_Product::Name			=	"STAD-D* 40"
+		CDB_Product::Reference		=	"52752-240"
+		CDB_Product::FamilyID		=	FAM_STAD-D*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+new:CDB_RegulatingValve(STAD-D*50B_BV) -> REGVALV_TAB
+{ Inherited(STAD*50C_BV)
+	{
+		CDB_Product::Name			=	"STAD-D* 50"
+		CDB_Product::Reference		=	"52752-250"
+		CDB_Product::FamilyID		=	FAM_STAD-D*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// (A) *** STAD-B*  drain 3/4" Global version	(Black edition)		****
+////////////////////////////////////////////////////////////////////////////////
+
+// TODO clarify characteristics
+
+new:CDB_RegulatingValve(STAD-B*10A_BV) -> REGVALV_TAB
+{ Inherited(STAD*10D_BV)
+	{
+		CDB_Product::Name			=	"STAD-B* 10"
+		CDB_Product::Reference		=	"52751-610"
+		CDB_Product::FamilyID		=	FAM_STAD-B*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+		CDB_RegulatingValve::CharactID = C_STAD_B*10
+	}
+}
+
+new:CDB_RegulatingValve(STAD-B*15A_BV) -> REGVALV_TAB
+{ Inherited(STAD*15D_BV)
+	{
+		CDB_Product::Name			=	"STAD-B* 15"
+		CDB_Product::Reference		=	"52751-615"
+		CDB_Product::FamilyID		=	FAM_STAD-B*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+		CDB_RegulatingValve::CharactID = C_STAD_B*15
+	}
+}
+
+new:CDB_RegulatingValve(STAD-B*20A_BV) -> REGVALV_TAB
+{ Inherited(STAD*20D_BV)
+	{
+		CDB_Product::Name			=	"STAD-B* 20"
+		CDB_Product::Reference		=	"52751-620"
+		CDB_Product::FamilyID		=	FAM_STAD-B*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+		CDB_RegulatingValve::CharactID = C_STAD_B*20
+	}
+}
+
+new:CDB_RegulatingValve(STAD-B*25A_BV) -> REGVALV_TAB
+{ Inherited(STAD*25D_BV)
+	{
+		CDB_Product::Name			=	"STAD-B* 25"
+		CDB_Product::Reference		=	"52751-625"
+		CDB_Product::FamilyID		=	FAM_STAD-B*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+		CDB_RegulatingValve::CharactID = C_STAD_B*25
+	}
+}
+
+new:CDB_RegulatingValve(STAD-B*32A_BV) -> REGVALV_TAB
+{ Inherited(STAD*32D_BV)
+	{
+		CDB_Product::Name			=	"STAD-B* 32"
+		CDB_Product::Reference		=	"52751-632"
+		CDB_Product::FamilyID		=	FAM_STAD-B*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+		CDB_RegulatingValve::CharactID = C_STAD_B*32
+	}
+}
+
+new:CDB_RegulatingValve(STAD-B*40A_BV) -> REGVALV_TAB
+{ Inherited(STAD*40D_BV)
+	{
+		CDB_Product::Name			=	"STAD-B* 40"
+		CDB_Product::Reference		=	"52751-640"
+		CDB_Product::FamilyID		=	FAM_STAD-B*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+		CDB_RegulatingValve::CharactID = C_STAD_B*40
+	}
+}
+
+new:CDB_RegulatingValve(STAD-B*50A_BV) -> REGVALV_TAB
+{ Inherited(STAD*50D_BV)
+	{
+		CDB_Product::Name			=	"STAD-B* 50"
+		CDB_Product::Reference		=	"52751-650"
+		CDB_Product::FamilyID		=	FAM_STAD-B*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+		CDB_RegulatingValve::CharactID = C_STAD_B*50
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// (A) *** STADA*  drain 3/4" Global version								****
+////////////////////////////////////////////////////////////////////////////////
+new:CDB_RegulatingValve(STADA*10A_BV) -> REGVALV_TAB
+{ Inherited(STAD*10D_BV)
+	{
+		CDB_Product::Name			=	"STADA* 10"
+		CDB_Product::Reference		=	"52852-610"
+		CDB_Product::FamilyID		=	FAM_STADA*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+new:CDB_RegulatingValve(STADA*15A_BV) -> REGVALV_TAB
+{ Inherited(STAD*15D_BV)
+	{
+		CDB_Product::Name			=	"STADA* 15"
+		CDB_Product::Reference		=	"52852-615"
+		CDB_Product::FamilyID		=	FAM_STADA*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+new:CDB_RegulatingValve(STADA*20A_BV) -> REGVALV_TAB
+{ Inherited(STAD*20D_BV)
+	{
+		CDB_Product::Name			=	"STADA* 20"
+		CDB_Product::Reference		=	"52852-620"
+		CDB_Product::FamilyID		=	FAM_STADA*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+new:CDB_RegulatingValve(STADA*25A_BV) -> REGVALV_TAB
+{ Inherited(STAD*25D_BV)
+	{
+		CDB_Product::Name			=	"STADA* 25"
+		CDB_Product::Reference		=	"52852-625"
+		CDB_Product::FamilyID		=	FAM_STADA*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+new:CDB_RegulatingValve(STADA*32A_BV) -> REGVALV_TAB
+{ Inherited(STAD*32D_BV)
+	{
+		CDB_Product::Name			=	"STADA* 32"
+		CDB_Product::Reference		=	"52852-632"
+		CDB_Product::FamilyID		=	FAM_STADA*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+new:CDB_RegulatingValve(STADA*40A_BV) -> REGVALV_TAB
+{ Inherited(STAD*40D_BV)
+	{
+		CDB_Product::Name			=	"STADA* 40"
+		CDB_Product::Reference		=	"52852-640"
+		CDB_Product::FamilyID		=	FAM_STADA*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+new:CDB_RegulatingValve(STADA*50A_BV) -> REGVALV_TAB
+{ Inherited(STAD*50D_BV)
+	{
+		CDB_Product::Name			=	"STADA* 50"
+		CDB_Product::Reference		=	"52852-650"
+		CDB_Product::FamilyID		=	FAM_STADA*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// (B) *** STADA*  drain 1/2" Nordic version								****
+////////////////////////////////////////////////////////////////////////////////
+new:CDB_RegulatingValve(STADA*10B_BV) -> REGVALV_TAB
+{ Inherited(STAD*10C_BV)
+	{
+		CDB_Product::Name			=	"STADA* 10"
+		CDB_Product::Reference		=	"52852-210"
+		CDB_Product::FamilyID		=	FAM_STADA*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+new:CDB_RegulatingValve(STADA*15B_BV) -> REGVALV_TAB
+{ Inherited(STAD*15C_BV)
+	{
+		CDB_Product::Name			=	"STADA* 15"
+		CDB_Product::Reference		=	"52852-215"
+		CDB_Product::FamilyID		=	FAM_STADA*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+new:CDB_RegulatingValve(STADA*20B_BV) -> REGVALV_TAB
+{ Inherited(STAD*20C_BV)
+	{
+		CDB_Product::Name			=	"STADA* 20"
+		CDB_Product::Reference		=	"52852-220"
+		CDB_Product::FamilyID		=	FAM_STADA*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+new:CDB_RegulatingValve(STADA*25B_BV) -> REGVALV_TAB
+{ Inherited(STAD*25C_BV)
+	{
+		CDB_Product::Name			=	"STADA* 25"
+		CDB_Product::Reference		=	"52852-225"
+		CDB_Product::FamilyID		=	FAM_STADA*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+new:CDB_RegulatingValve(STADA*32B_BV) -> REGVALV_TAB
+{ Inherited(STAD*32C_BV)
+	{
+		CDB_Product::Name			=	"STADA* 32"
+		CDB_Product::Reference		=	"52852-232"
+		CDB_Product::FamilyID		=	FAM_STADA*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+new:CDB_RegulatingValve(STADA*40B_BV) -> REGVALV_TAB
+{ Inherited(STAD*40C_BV)
+	{
+		CDB_Product::Name			=	"STADA* 40"
+		CDB_Product::Reference		=	"52852-240"
+		CDB_Product::FamilyID		=	FAM_STADA*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+new:CDB_RegulatingValve(STADA*50B_BV) -> REGVALV_TAB
+{ Inherited(STAD*50C_BV)
+	{
+		CDB_Product::Name			=	"STADA* 50"
+		CDB_Product::Reference		=	"52852-250"
+		CDB_Product::FamilyID		=	FAM_STADA*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// (A) *** STADR*  drain 3/4" Global version								****
+////////////////////////////////////////////////////////////////////////////////
+
+// TODO need characteristics
+
+//*new:CDB_RegulatingValve(STADR*10A_BV) -> REGVALV_TAB
+//{ Inherited(STAD*10D_BV)
+//	{
+//		CDB_Product::Name			=	"STADR* 10"
+//		CDB_Product::Reference		=	"52873-610"
+//		CDB_Product::FamilyID		=	FAM_STAD-R*
+//		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+//		CDB_Product::TableSetID		=	NO_ID
+//	}
+//}
+
+new:CDB_RegulatingValve(STADR*15A_BV) -> REGVALV_TAB
+{ Inherited(STAD*15D_BV)
+	{
+		CDB_Product::Name			=	"STADR* 15"
+		CDB_Product::Reference		=	"52873-615"
+		CDB_Product::FamilyID		=	FAM_STAD-R*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+		CDB_RegulatingValve::CharactID = C_STAD_R*15
+	}
+}
+
+new:CDB_RegulatingValve(STADR*20A_BV) -> REGVALV_TAB
+{ Inherited(STAD*20D_BV)
+	{
+		CDB_Product::Name			=	"STADR* 20"
+		CDB_Product::Reference		=	"52873-620"
+		CDB_Product::FamilyID		=	FAM_STAD-R*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+		CDB_RegulatingValve::CharactID = C_STAD_R*20
+	}
+}
+
+new:CDB_RegulatingValve(STADR*25A_BV) -> REGVALV_TAB
+{ Inherited(STAD*25D_BV)
+	{
+		CDB_Product::Name			=	"STADR* 25"
+		CDB_Product::Reference		=	"52873-625"
+		CDB_Product::FamilyID		=	FAM_STAD-R*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+		CDB_RegulatingValve::CharactID = C_STAD_R*25
+	}
+}
+
+//*new:CDB_RegulatingValve(STADR*32A_BV) -> REGVALV_TAB
+//{ Inherited(STAD*32D_BV)
+//	{
+//		CDB_Product::Name			=	"STADR* 32"
+//		CDB_Product::Reference		=	"52873-632"
+//		CDB_Product::FamilyID		=	FAM_STAD-R*
+//		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+//		CDB_Product::TableSetID		=	NO_ID
+//	}
+//}
+//
+//*new:CDB_RegulatingValve(STADR*40A_BV) -> REGVALV_TAB
+//{ Inherited(STAD*40D_BV)
+//	{
+//		CDB_Product::Name			=	"STADR* 40"
+//		CDB_Product::Reference		=	"52873-640"
+//		CDB_Product::FamilyID		=	FAM_STAD-R*
+//		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+//		CDB_Product::TableSetID		=	NO_ID
+//	}
+//}
+//
+//*new:CDB_RegulatingValve(STADR*50A_BV) -> REGVALV_TAB
+//{ Inherited(STAD*50D_BV)
+//	{
+//		CDB_Product::Name			=	"STADR* 50"
+//		CDB_Product::Reference		=	"52873-650"
+//		CDB_Product::FamilyID		=	FAM_STAD-R*
+//		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+//		CDB_Product::TableSetID		=	NO_ID
+//	}
+//}
+
+////////////////////////////////////////////////////////////////////////////////
+// (B) *** STADR*  drain 1/2" Nordic version								****
+////////////////////////////////////////////////////////////////////////////////
+//*new:CDB_RegulatingValve(STADR*10B_BV) -> REGVALV_TAB
+//{ Inherited(STAD*10C_BV)
+//	{
+//		CDB_Product::Name			=	"STADR* 10"
+//		CDB_Product::Reference		=	"52873-210"
+//		CDB_Product::FamilyID		=	FAM_STAD-R*
+//		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+//		CDB_Product::TableSetID		=	NO_ID
+//	}
+//}
+
+new:CDB_RegulatingValve(STADR*15B_BV) -> REGVALV_TAB
+{ Inherited(STAD*15C_BV)
+	{
+		CDB_Product::Name			=	"STADR* 15"
+		CDB_Product::Reference		=	"52873-215"
+		CDB_Product::FamilyID		=	FAM_STAD-R*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+		CDB_RegulatingValve::CharactID = C_STAD_R*15
+	}
+}
+
+new:CDB_RegulatingValve(STADR*20B_BV) -> REGVALV_TAB
+{ Inherited(STAD*20C_BV)
+	{
+		CDB_Product::Name			=	"STADR* 20"
+		CDB_Product::Reference		=	"52873-220"
+		CDB_Product::FamilyID		=	FAM_STAD-R*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+		CDB_RegulatingValve::CharactID = C_STAD_R*20
+	}
+}
+
+new:CDB_RegulatingValve(STADR*25B_BV) -> REGVALV_TAB
+{ Inherited(STAD*25C_BV)
+	{
+		CDB_Product::Name			=	"STADR* 25"
+		CDB_Product::Reference		=	"52873-225"
+		CDB_Product::FamilyID		=	FAM_STAD-R*
+		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+		CDB_Product::TableSetID		=	NO_ID
+		CDB_RegulatingValve::CharactID = C_STAD_R*25
+	}
+}
+
+//*new:CDB_RegulatingValve(STADR*32B_BV) -> REGVALV_TAB
+//{ Inherited(STAD*32C_BV)
+//	{
+//		CDB_Product::Name			=	"STADR* 32"
+//		CDB_Product::Reference		=	"52873-232"
+//		CDB_Product::FamilyID		=	FAM_STAD-R*
+//		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+//		CDB_Product::TableSetID		=	NO_ID
+//	}
+//}
+//
+//*new:CDB_RegulatingValve(STADR*40B_BV) -> REGVALV_TAB
+//{ Inherited(STAD*40C_BV)
+//	{
+//		CDB_Product::Name			=	"STADR* 40"
+//		CDB_Product::Reference		=	"52873-240"
+//		CDB_Product::FamilyID		=	FAM_STAD-R*
+//		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+//		CDB_Product::TableSetID		=	NO_ID
+//	}
+//}
+//
+//*new:CDB_RegulatingValve(STADR*50B_BV) -> REGVALV_TAB
+//{ Inherited(STAD*50C_BV)
+//	{
+//		CDB_Product::Name			=	"STADR* 50"
+//		CDB_Product::Reference		=	"52873-250"
+//		CDB_Product::FamilyID		=	FAM_STAD-R*
+//		CDB_Product::PartOfaSet		=   #ePartOfaSetNo
+//		CDB_Product::TableSetID		=	NO_ID
+//	}
+//}
+
+////////////////////////////////////////////////////////////////
+// *** STAD* ZERO ISO 228, With Drain****
+////////////////////////////////////////////////////////////////
+
+new:CDB_RegulatingValve(STAD*Z10A_BV\1) -> REGVALV_TAB
+{
+	{
+		{
+			{
+				{
+					0															// isDeleted
+					1                                                          	// isAvailable
+					0                                                          	// isHidden
+					1                                                          	// isFix
+					1                                                          	// Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+					0                                                          	// Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+					0               											// Sort integer (Allow to show a group of articles in the order defined with this variable).
+				}
+				0.6e+6 \ 2.5e+6                                				// Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+				NO_ID                                                      	// PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+				120.0                                                      	// Tmax in °C
+				-20.0                                                      	// Tmin in °C
+			}
+			"52853-210"                                        			// Reference to the TA Product
+			"STAD* ZERO 10"                                               	// Name of the product
+			RVTYPE_BV                                                  	// Identifier of the valve type
+			FAM_STAD*Z                                                  // Identifier of the family of the product
+			VERS_DRAIN12                                               	// Identifier of the version of the product
+			1                                                          	// Level of priority for selection [1,10]
+			""                                                         	// Product comment
+			"PX_STAD25B_BV"                                            	// Product image ID
+			NO_ID            		                        			// Identifier of the accessory group
+			#ePartOfaSetNo                                             	// Boolean indicating if product is part of a set. Can be #ePartOfaSetNo, #ePartOfaSetYes, #ePartOfaSetYesBreakOk or #ePartOfaSetYesBreakOnMsg.
+			NO_ID														// Table ID where are sets if exist for the current product.
+			0.0                                                        	// Price of the product
+			#eProduct                              	                	// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+			NO_ID                                                   	// Identifier of the series of the accessory (mainly used in DlgDirSel)
+			0                                                       	// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+			NO_ID                                      	            	// Identifier of the accessory type if #eBoth 
+			NO_ID										            	// Identifier of the accessory family if #eBoth				
+		}
+		BDY_BRASSLEADFREE                                             	// Identifier of the body material
+		DN_10                                                      	// Identifier of the corresp. valve size
+		CONN_THREAD                                                	// Identifier of the (inlet/pipe side) connection
+		NO_ID                                                      	// Identifier of the connection table, can be NO_ID
+		NO_ID                                                      	// Identifier of the outlet/body side connection, can be NO_ID
+		"STAD"                                                     	// Type of the valve as used in the CBI II
+		"10/09"                                                    	// Size of the valve as used in the CBI II
+		"3/8N"                                                     	// Size of the valve in inch as used in the CBI II
+		1                                                          	// CBI compatibility Index
+		"5L"                                                       	// CBI Version (5L -> Doesn't exist to allow to get it in TA-Scope but not in CBI)
+		0.0                                                        	// Maximum Dp of the valve
+		#eMeasPointInlet | #eMeasPointOutlet                       	// Measuring points
+		#eMeasDataDp | #eMeasDataFlow | #eMeasDataDpAvail          	// Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+		NO_ID														// Identifier of the inlet size ID
+		NO_ID														// Identifier of the outlet size ID
+	}
+	C_STAD*010													// Identifier of the valve characteristic
+}
+
+new:CDB_RegulatingValve(STAD*Z15A_BV) -> REGVALV_TAB
+{ Inherited(STAD*Z10A_BV)
+	{
+		CDB_Product::Reference	=	"52853-215"
+		CDB_Product::Name			=	"STAD* ZERO 15"
+		CDB_TAProduct::SizeID		=	DN_15
+		CDB_TAProduct::CBISize		=	"15"
+		CDB_TAProduct::CBISizeInch	=	"1/2N"
+		CDB_RegulatingValve::CharactID	=	C_STAD*015
+	}
+}
+
+new:CDB_RegulatingValve(STAD*Z20A_BV) -> REGVALV_TAB
+{ Inherited(STAD*Z10A_BV)
+	{
+		CDB_Product::Reference	=	"52853-220"
+		CDB_Product::Name			=	"STAD* ZERO 20"
+		CDB_TAProduct::SizeID		=	DN_20
+		CDB_TAProduct::CBISize		=	"20"
+		CDB_TAProduct::CBISizeInch	=	"3/4"
+		CDB_RegulatingValve::CharactID	=	C_STAD*020
+	}
+}
+
+new:CDB_RegulatingValve(STAD*Z25A_BV) -> REGVALV_TAB
+{ Inherited(STAD*Z10A_BV)
+	{
+		CDB_Product::Reference	=	"52853-225"
+		CDB_Product::Name			=	"STAD* ZERO 25"
+		CDB_TAProduct::SizeID		=	DN_25
+		CDB_TAProduct::CBISize		=	"25"
+		CDB_TAProduct::CBISizeInch	=	"1"
+		CDB_RegulatingValve::CharactID	=	C_STAD*025
+	}
+}
+
+new:CDB_RegulatingValve(STAD*Z32A_BV) -> REGVALV_TAB
+{ Inherited(STAD*Z10A_BV)
+	{
+		CDB_Product::Reference	=	"52853-232"
+		CDB_Product::Name			=	"STAD* ZERO 32"
+		CDB_TAProduct::SizeID		=	DN_32
+		CDB_TAProduct::CBISize		=	"32"
+		CDB_TAProduct::CBISizeInch	=	"1_1/4"
+		CDB_RegulatingValve::CharactID	=	C_STAD*032
+	}
+}
+
+new:CDB_RegulatingValve(STAD*Z40A_BV) -> REGVALV_TAB
+{ Inherited(STAD*Z10A_BV)
+	{
+		CDB_Product::Reference	=	"52853-240"
+		CDB_Product::Name			=	"STAD* ZERO 40"
+		CDB_TAProduct::SizeID		=	DN_40
+		CDB_TAProduct::CBISize		=	"40"
+		CDB_TAProduct::CBISizeInch	=	"1_1/2"
+		CDB_RegulatingValve::CharactID	=	C_STAD*040
+	}
+}
+
+new:CDB_RegulatingValve(STAD*Z50A_BV) -> REGVALV_TAB
+{ Inherited(STAD*Z10A_BV)
+	{
+		CDB_Product::Reference	=	"52853-250"
+		CDB_Product::Name			=	"STAD* ZERO 50"
+		CDB_TAProduct::SizeID		=	DN_50
+		CDB_TAProduct::CBISize		=	"50"
+		CDB_TAProduct::CBISizeInch	=	"2"
+		CDB_RegulatingValve::CharactID	=	C_STAD*050
+	}
+}
+
+////////////////////////////////////////////////////////////////
+//
+//		ROOT TABLE identification
+//
+////////////////////////////////////////////////////////////////
+
+ROOT_TABLE(ROOT_TABLE)

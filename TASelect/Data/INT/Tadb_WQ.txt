@@ -1,0 +1,3250 @@
+////////////////////////////////////////////////////////////////
+//
+//		Tadb_WQ.txt : Complement to Tadb.txt containing
+//					 	Water Quality product definitions
+//
+////////////////////////////////////////////////////////////////
+
+// For air vents.
+new:CTable(AIRVTYPE_TAB) -> LIST_TAB
+{
+	"Air vent types"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CTable(AIRVENT_TAB) -> ROOT_TABLE
+{
+	"Air vents"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CTable(AIRVACCGROUP_TAB) -> ROOT_TABLE
+{
+	"Air vent accessory groups"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CTable(AIRV_CHAR_TAB) -> MISC_TAB
+{
+	"Air vent characteristics"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+// For separators.
+new:CTable(SEPTYPE_TAB) -> LIST_TAB
+{
+	"Separator types"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CTable(SEPARATOR_TAB) -> ROOT_TABLE
+{
+	"Separators"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CTable(SEPACCGROUP_TAB) -> ROOT_TABLE
+{
+	"Separator accessory groups"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+new:CTable(SEP_CHAR_TAB) -> MISC_TAB
+{
+	"Separator characteristics"
+	1						// 0/1: 1 if this table is the true parent of the IDs in it.
+}
+
+///////////////////////////////////////////////////////////////////
+//
+//		Table AIRVTYPE_TAB : ordered enumeration of the types of
+//							 air vents.
+//
+///////////////////////////////////////////////////////////////////
+
+new:CDB_StringID(AIRVTYPE_AAV) ->AIRVTYPE_TAB
+{
+	{
+		"IDS_AIRVTYPE_AAV"
+	}
+	1
+	AIRVENT_TAB
+}
+
+
+///////////////////////////////////////////////////////////////////
+//
+//		Table SEPTYPE_TAB : ordered enumeration of the types of
+//							separators
+//
+///////////////////////////////////////////////////////////////////
+
+new:CDB_StringID(SEPTYPE_ZCD) ->SEPTYPE_TAB
+{
+	{
+		"IDS_SEPTYPE_ZCD"		// Cyclonic dirt seperator
+	}
+	1
+	SEPARATOR_TAB
+}
+
+new:CDB_StringID(SEPTYPE_MB) ->SEPTYPE_TAB
+{
+	{
+		"IDS_SEPTYPE_MB"		// Micro bubble separator
+	}
+	2
+	SEPARATOR_TAB
+}
+
+new:CDB_StringID(SEPTYPE_SP) ->SEPTYPE_TAB
+{
+	{
+		"IDS_SEPTYPE_SP"		// Dirt separator
+	}
+	3
+	SEPARATOR_TAB
+}
+
+new:CDB_StringID(SEPTYPE_MBSP) ->SEPTYPE_TAB
+{
+	{
+		"IDS_SEPTYPE_MBSP"		// Micro bubble and dirt separator
+	}
+	4
+	SEPARATOR_TAB
+}
+
+new:CDB_StringID(SEPTYPE_MBORSP) ->SEPTYPE_TAB
+{
+	{
+		"IDS_SEPTYPE_MBORSP"		// Micro bubble or dirt separator
+	}
+	5
+	SEPARATOR_TAB
+}
+
+new:CDB_StringID(SEPTYPE_MGSP) ->SEPTYPE_TAB
+{
+	{
+		"IDS_SEPTYPE_MGSP"		   // Magnetic separator
+	}
+	6
+	SEPARATOR_TAB
+}
+
+////////////////////////////////////////////////////////////////
+//
+//		Table SEP_CHAR_TAB : Table of separator characteristics
+//
+//	new:CDB_QDpCharacteristic(ID) -> SEP_CHAR_TAB
+//	{
+//		{
+//			Discrete/Continuous: 				#eDISCRETE_True, #eDISCRETE_False or #eDISCRETE_Undefined
+//			Single/Multi/Electronic-turn: 		#eTURN_Single, #eTURN_Multi, #eTURN_Electronic or #eTURN_Undefined
+//			SettingRounding						Allows to know how to round the result of a computing setting.
+//		}
+//		Min flow
+//		Nominal flow
+//		Max flow
+//		Curve type:	#eCurveType_Kv or #eCurveType_QDp
+//		Kv	or	q 1 \ Dp 1
+//				q 2 \ Dp 2
+//				...
+//	}
+//
+////////////////////////////////////////////////////////////////
+
+// Remark: Min flow = flow for 300 Pa/m or 1.25 m/s in one size lower pipe!
+// See example in the "Dropbox (eR-D)\eR-D\Tech Docs\Pressurisation & Water quality\Zeparo\Zeparo qmax qmin-2011-12-06.xlsx" file.
+
+new:CDB_QDpCharacteristic(C_ZG_65) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_Undefined
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	1.0957040000e-3
+	2.7777780000e-3
+	1.1111111000e-2
+	#eCurveType_Kv
+	43.6
+}
+
+new:CDB_QDpCharacteristic(C_ZG_80) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_Undefined
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	1.5112590000e-3
+	5.0000000000e-3
+	1.5555556000e-2
+	#eCurveType_Kv
+	63.0
+}
+
+new:CDB_QDpCharacteristic(C_ZG_100) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_Undefined
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	2.5520830000e-3
+	1.0277778000e-2
+	2.6388889000e-2
+	#eCurveType_Kv
+	103.0
+}
+
+new:CDB_QDpCharacteristic(C_ZG_125) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_Undefined
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	3.9120370000e-3
+	1.8888889000e-2
+	4.1111111000e-2
+	#eCurveType_Kv
+	163.0
+}
+
+new:CDB_QDpCharacteristic(C_ZG_150) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_Undefined
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	5.5613430000e-3
+	2.7777778000e-2
+	6.0000000000e-2
+	#eCurveType_Kv
+	214.0
+}
+
+new:CDB_QDpCharacteristic(C_ZG_200) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_Undefined
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	9.9187500000e-3
+	5.5555556000e-2
+	1.0416666700e-1
+	#eCurveType_Kv
+	373.0
+}
+
+new:CDB_QDpCharacteristic(C_ZG_250) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_Undefined
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	1.5648148000e-2
+	9.5833333000e-2
+	1.5972222200e-1
+	#eCurveType_Kv
+	527.0
+}
+
+new:CDB_QDpCharacteristic(C_ZG_300) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_Undefined
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	2.2245370000e-2
+	1.5000000000e-1
+	2.2638888900e-1
+	#eCurveType_Kv
+	885.0
+}
+
+new:CDB_QDpCharacteristic(C_ZU_2022L) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	8.3333333333e-6
+	3.6111111111e-4
+	6.3888888889e-4
+	#eCurveType_Kv
+	9.1
+}
+
+new:CDB_QDpCharacteristic(C_ZU_2022) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	8.3333333333e-6
+	3.6111111111e-4
+	6.3888888889e-4
+	#eCurveType_Kv
+	10.4
+}
+
+new:CDB_QDpCharacteristic(C_ZU_25L) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	2.3055555556e-04
+	5.8333333333e-4
+	1.0555555556e-3
+	#eCurveType_Kv
+	16.2
+}
+
+new:CDB_QDpCharacteristic(C_ZU_25) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	2.3055555556e-04
+	5.8333333333e-4
+	1.0555555556e-3
+	#eCurveType_Kv
+	18.9
+}
+
+new:CDB_QDpCharacteristic(C_ZU_32) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	4.2777777778e-04
+	1.0277777778e-3
+	2.0000000000e-3
+	#eCurveType_Kv
+	34.8
+}
+
+new:CDB_QDpCharacteristic(C_ZU_40) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	8.9722222222e-04
+	1.3888888889e-3
+	2.8333333333e-3
+	#eCurveType_Kv
+	46.1
+}
+
+// HYS-1980: characteris is the same for ZTVI, ZTMI and ZTKMI.
+new:CDB_QDpCharacteristic(C_ZT_20) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0								// Allows to know how to round the result of a computing setting.
+	}
+	8.3333333333e-6					// 0.03 m3/h Min flow
+	3.1944444445e-4					// 1.15 m3/h Nominal flow
+	6.3888888889e-4					// 2.3 m3/h Max flow
+	#eCurveType_QDp					// Curve type:	#eCurveType_Kv or #eCurveType_QDp
+	9.4136213999E-05 \ 176.9837		// Kv or q 1 \ Dp 1
+	1.5707247555E-04 \ 413.2675
+	3.1376097346E-04 \ 1473.2503
+	4.7074861001E-04 \ 3179.1102
+}
+
+new:CDB_QDpCharacteristic(C_ZT_25) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0								// Allows to know how to round the result of a computing setting.
+	}
+	2.3055555556e-04				// Min flow
+	5.0000000000e-4					// 0.83 m3/h Nominal flow
+	1.0555555556e-3					// 3.8 m3/h Max flow
+	#eCurveType_QDp					// Curve type:	#eCurveType_Kv or #eCurveType_QDp
+	1.4705423530E-04 \ 444.7943
+	2.4644680610E-04 \ 880.8645
+	4.9092514007E-04 \ 2805.0416
+	7.3539719786E-04 \ 6669.3078
+}
+
+new:CDB_QDpCharacteristic(C_ZT_32) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0								// Allows to know how to round the result of a computing setting.
+	}
+	4.2777777778e-04				// 1.54 m3/h Min flow
+	8.3333333334e-4					// 3.0 m3/h Nominal flow
+	2.0000000000e-3					// 7.2 m3/h Max flow
+	#eCurveType_QDp					// Curve type:	#eCurveType_Kv or #eCurveType_QDp
+	2.4988874050E-04 \ 626.6237
+	4.0246385750E-04 \ 1513.5341
+	8.0381157507E-04 \ 6531.9977
+	1.2073520142E-03 \ 13459.2363
+}
+
+
+new:CDB_QDpCharacteristic(C_ZIZE_50) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	1.3472222222e-03
+	3.0555555556e-3
+	6.9444444444e-3
+	#eCurveType_Kv
+	74.6
+}
+
+new:CDB_QDpCharacteristic(C_ZIZE_65) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	2.5444444444e-03
+	5.2777777778e-3
+	1.1666666667e-2
+	#eCurveType_Kv
+	121.3
+}
+
+new:CDB_QDpCharacteristic(C_ZIZE_80) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	4.5555555556e-03
+	7.2222222222e-3
+	1.8055555556e-2
+	#eCurveType_Kv
+	172.2
+}
+
+new:CDB_QDpCharacteristic(C_ZIZE_100) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	6.3055555556e-03
+	1.2222222222e-2
+	2.7777777778e-2
+	#eCurveType_Kv
+	338.4
+}
+
+new:CDB_QDpCharacteristic(C_ZIZE_125) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	1.0638888889e-02
+	1.8611111111e-2
+	4.3055555556e-2
+	#eCurveType_Kv
+	460.0
+}
+
+new:CDB_QDpCharacteristic(C_ZIZE_150) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	1.6305555556e-02
+	2.6388888889e-2
+	6.1666666667e-2
+	#eCurveType_Kv
+	627.1
+}
+
+new:CDB_QDpCharacteristic(C_ZIZE_200) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	2.3166666667e-02
+	4.7222222222e-2
+	1.0972222222e-1
+	#eCurveType_Kv
+	1270.0
+}
+
+new:CDB_QDpCharacteristic(C_ZIZE_250) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	4.1388888889e-02
+	8.5000000000e-2
+	1.7166666667e-1
+	#eCurveType_Kv
+	1682.0
+}
+
+new:CDB_QDpCharacteristic(C_ZIZE_300) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	6.5277777778e-02
+	1.2083333333e-1
+	2.4722222222e-1
+	#eCurveType_Kv
+	2010.0
+}
+
+new:CDB_QDpCharacteristic(C_ZIZE_350) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	9.2777777778e-02
+	1.5972222222e-01
+	2.8888888889e-01
+	#eCurveType_Kv
+	2420.0
+}
+
+new:CDB_QDpCharacteristic(C_ZIZE_400) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	1.1138888889e-01
+	2.0833333333e-01
+	3.7500000000e-01
+	#eCurveType_Kv
+	2899.0
+}
+
+new:CDB_QDpCharacteristic(C_ZIZE_450) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	1.4583333333e-01
+	2.6250000000e-01
+	4.6666666667e-01
+	#eCurveType_Kv
+	3385.0
+}
+
+new:CDB_QDpCharacteristic(C_ZIZE_500) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	1.8500000000e-01
+	3.2222222222e-01
+	6.1944444444e-01
+	#eCurveType_Kv
+	4290.0
+}
+
+new:CDB_QDpCharacteristic(C_ZIZE_600) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	2.3055555556e-01
+	4.6805555556e-01
+	9.5555555556e-01
+	#eCurveType_Kv
+	5874.0
+}
+
+new:CDB_QDpCharacteristic(C_ZCD_20) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	3.6111111111e-05
+	3.2777777778e-04
+	6.3888888889e-04
+	#eCurveType_Kv
+	5.9
+}
+
+new:CDB_QDpCharacteristic(C_ZCD_25) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	1.7222222222e-04
+	4.0833333333e-04
+	1.0555555556e-03
+	#eCurveType_Kv
+	6.0
+}
+
+new:CDB_QDpCharacteristic(C_ZCD_32) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	2.9722222222e-04
+	8.8333333333e-04
+	2.0000000000e-03
+	#eCurveType_Kv
+	13.0
+}
+
+new:CDB_QDpCharacteristic(C_ZCD_40) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	4.0555555556e-04
+	1.3194444444e-03
+	2.8333333333e-03
+	#eCurveType_Kv
+	19.4
+}
+
+new:CDB_QDpCharacteristic(C_ZCD_50) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	6.5000000000e-04
+	1.9111111111e-03
+	4.4444444444e-03
+	#eCurveType_Kv
+	28.1
+}
+
+// Ferro cleaner magnetic separator
+
+new:CDB_QDpCharacteristic(C_FCL_32) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	0
+	1.0277778000e-03			// 3700 l/h
+	1.5277778000e-03			// 5500 l/h
+	#eCurveType_None            // Kv is not known
+}
+
+new:CDB_QDpCharacteristic(C_FCL_65) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	0
+	3.8888888889E-03			// 14000 l/h
+	5.8333333333E-03			// 21000 l/h
+	#eCurveType_None
+}
+
+new:CDB_QDpCharacteristic(C_FCL_80) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	0
+	5.2777777778E-03			// 19000 l/h
+	7.7777777778E-03			// 28000 l/h
+	#eCurveType_None
+}
+
+new:CDB_QDpCharacteristic(C_FCL_100) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	0
+	8.8888888889E-03			// 32000 l/h
+	1.3333333334E-02			// 48000 l/h
+	#eCurveType_None
+}
+
+new:CDB_QDpCharacteristic(C_FCL_125) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	0
+	1.3333333334E-02			// 48000 l/h
+	2.0000000000E-02			// 72000 l/h
+	#eCurveType_None
+}
+
+new:CDB_QDpCharacteristic(C_FCL_150) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	0
+	1.8888888889E-02			// 68000 l/h
+	2.8333333333E-02			// 102000 l/h
+	#eCurveType_None
+}
+
+new:CDB_QDpCharacteristic(C_FCL_200) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	0
+	3.3333333333E-02			// 120000 l/h
+	5.0000000000E-02			// 180000 l/h
+	#eCurveType_None
+}
+
+new:CDB_QDpCharacteristic(C_FCL_250) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	0
+	5.4166666667E-02			// 195000 l/h
+	7.9722222222E-02			// 287000 l/h
+	#eCurveType_None
+}
+
+new:CDB_QDpCharacteristic(C_FCL_300) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	0
+	7.6388888889E-02			// 275000 l/h
+	1.1388888889E-01			// 410000 l/h
+	#eCurveType_None
+}
+
+new:CDB_QDpCharacteristic(C_FCL_400) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	0
+	1.1944444445E-01			// 430000 l/h
+	1.7916666667E-01			// 645000 l/h
+	#eCurveType_None
+}
+
+new:CDB_QDpCharacteristic(C_FCL_500) -> SEP_CHAR_TAB
+{
+	{
+		#eDISCRETE_False
+		#eTURN_Undefined
+		0.0						// Allows to know how to round the result of a computing setting.
+	}
+	0
+	1.9027777778E-01			// 685000 l/h
+	2.8055555556E-01			// 1010000 l/h
+	#eCurveType_None
+}
+
+////////////////////////////////////////////////////////////////
+//
+//		Table AIRVENT_TAB : Air vents
+//
+////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////
+//
+//	How to write a air vent information ?
+//	--------------------------------------
+//
+//	new:CDB_AirVent(ID)->tableID	Common CData syntax
+//	{
+//		{
+//			{
+//				{
+//					{
+//						0				isDeleted
+//						1				isAvailable
+//						0				isHidden
+//						1				isFix
+//						0				Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation )
+//						0				Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+//      				0               Sort integer (Allow to show a group of articles in the order defined with this variable).
+//					}
+//					Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+//					PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+//					Tmax in °C
+//					Tmin in °C
+//				}
+//				"Reference"				Reference to the TA Product
+//				"Name"					Name of the product
+//				TypeID					Identifier of the valve type
+//				FamilyID				Identifier of the family of the product
+//				VersionID				Identifier of the version of the product
+//				PriorityLevel			Level of priority for selection [1,10]
+//				Comment					Product comment
+//				ProdImgID				Product image ID
+//				AccessGroupID			Identifier of the accessory group
+//				PartOfaSet				Boolean indicating if the valve is part of a ActSet
+//				TableSetID				Table ID where are sets if exist for the current product.
+//				Price					Price of the product
+// 				ProductUseFlag			#eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+//				AccessorySeriesID		Identifier of the series of the accessory
+//				isAttached				0/1: 1 if accessory cannot be ordered separately		
+//   			AccTypeID				Identifier of Accessory type if #eBoth 
+//				AccFamilyID				Identifier of Accessory family if #eBoth
+//			}
+//			BodyMaterialID			Identifier of the body material
+//			SizeID					Identifier of the corresp. valve size
+//			ConnectID				Identifier of the (inlet/pipe side) connection
+//			ConnTabID				Identifier of the connection table, can be NO_ID
+//			Conn2ID					Identifier of the outlet/body side connection, can be NO_ID
+//			CBIType					Type of the valve as used in the CBI II
+//			CBISize					Size of the valve as used in the CBI II
+//			CBISizeInch				Size of the valve in inch as used in the CBI II
+//			CBICompatibilityIndex	CBI compatibility Index
+//			CBIVersion				CBI Version
+//			Dpmax					Maximum Dp of the valve
+//			MeasPt					Measuring points
+//			MeasurableData			Measurable data
+//			InletSizeID				Identifier of the inlet size ID
+//			OutletSizeID			Identifier of the outlet size ID
+//		}
+//		Dpp			Max static pressure difference with the atmosphere
+//	}
+// Inherited Fields
+//	CDB_Thing::Deleted
+//	CDB_Thing::Available
+//	CDB_Thing::Hidden
+//	CDB_Thing::Fixed
+//	CDB_Thing::FreeInt1
+//	CDB_Thing::FreeInt2
+//	CDB_Thing::SortInt
+//	CDB_HydroThing::Pmax
+//	CDB_HydroThing::PNRange
+//	CDB_HydroThing::Tmax
+//	CDB_HydroThing::Tmin
+//	CDB_Product::Reference
+//	CDB_Product::Name
+//  CDB_Product::TypeID
+//	CDB_Product::FamilyID
+//	CDB_Product::VersionID
+//	CDB_Product::PriorityLevel
+//	CDB_Product::Comment
+//	CDB_Product::ProdImgID
+//	CDB_Product::AccessGroupID
+//	CDB_Product::PartOfaSet
+//  CDB_Product::TableSetID
+//	CDB_Product::Price
+//	CDB_Product::ProductUseFlag
+//	CDB_Product::AccessorySeriesID
+//	CDB_Product::isAttached
+//	CDB_Product::AccTypeID
+//	CDB_Product::AccFamilyID
+//	CDB_TAProduct::BodyMaterialID
+//	CDB_TAProduct::SizeID
+//	CDB_TAProduct::ConnectID
+//	CDB_TAProduct::ConnTabID
+//	CDB_TAProduct::Conn2ID
+//	CDB_TAProduct::CBIType
+//	CDB_TAProduct::CBISize
+//	CDB_TAProduct::CBISizeInch
+//  CDB_TAProduct::CBICompatibilityIndex
+//	CDB_TAProduct::CBIVersion
+//	CDB_TAProduct::Dpmax
+//	CDB_TAProduct::MeasPt
+//	CDB_TAProduct::MeasurableData
+//	CDB_TAProduct::InletSizeID
+//	CDB_TAProduct::OutletSizeID
+//
+////////////////////////////////////////////////////////////////
+
+new:CDB_AirVent(ZUT_15) -> AIRVENT_TAB
+{
+	{
+		{
+			{
+				{
+					0								                // isDeleted
+					1                                               // isAvailable
+					0                                               // isHidden
+					1                                               // isFix
+					0                                               // Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+					0                                               // Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+					0               								// Sort integer (Allow to show a group of articles in the order defined with this variable).
+				}
+				0.6e+6 \ 1.0e+6                         		// Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+				NO_ID                                           // PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+				110.0                                           // Tmax in °C
+				-10.0                                           // Tmin in °C
+			}
+			"789 0515"                                  	// Reference to the TA Product
+			"ZUT 15"                                        // Name of the product
+			AIRVTYPE_AAV                                    // Identifier of the valve type
+			FAM_ZUT                                         // Identifier of the family of the product
+			VERS_STD                                        // Identifier of the version of the product
+			1                                               // Level of priority for selection [1,10]
+			""                                              // Product comment
+			"PX_ZUT"                                        // Product image ID
+			NO_ID                                           // Identifier of the accessory group
+			#ePartOfaSetNo                                  // Boolean indicating if product is part of a set. Can be #ePartOfaSetNo, #ePartOfaSetYes, #ePartOfaSetYesBreakOk or #ePartOfaSetYesBreakOnMsg.
+			NO_ID											// Table ID where are sets if exist for the current product.
+			0.0                                             // Price of the product
+			#eProduct                              		    // #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+			NO_ID                                       	// Identifier of the series of the accessory (mainly used in DlgDirSel)
+			0                                           	// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+			NO_ID                                      		// Identifier of the accessory type if #eBoth 
+			NO_ID											// Identifier of the accessory family if #eBoth	
+		}
+		BDY_BRASS                                       // Identifier of the body material
+		DN_15                                           // Identifier of the corresp. valve size
+		CONN_THREAD                                     // Identifier of the (inlet/pipe side) connection
+		NO_ID                                           // Identifier of the connection table, can be NO_ID
+		NO_ID                                           // Identifier of the outlet/body side connection, can be NO_ID
+		""                                              // Type of the valve as used in the CBI II
+		""                                              // Size of the valve as used in the CBI II
+		""                                              // Size of the valve in inch as used in the CBI II
+		0                                               // CBI compatibility Index
+		""                                              // CBI Version
+		0.0                                             // Maximum Dp of the valve
+		#eMeasPointNone                                 // Measuring points
+		#eMeasDataNone                                  // Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+		NO_ID											// Identifier of the inlet size ID
+		NO_ID											// Identifier of the outlet size ID
+	}
+	1.0e+6                                          // Max static pressure difference with the atmosphere
+}
+
+new:CDB_AirVent(ZUT_20) -> AIRVENT_TAB
+{ Inherited(ZUT_15)
+	{
+		CDB_Product::Reference	=	"789 0520"
+		CDB_Product::Name			=   "ZUT 20"
+		CDB_TAProduct::SizeID		=   DN_20
+	}
+}
+
+new:CDB_AirVent(ZUT_25) -> AIRVENT_TAB
+{ Inherited(ZUT_15)
+	{
+		CDB_Product::Reference	=	"789 0525"
+		CDB_Product::Name			=   "ZUT 25"
+		CDB_TAProduct::SizeID		=   DN_25
+	}
+}
+
+new:CDB_AirVent(ZUTS_15) -> AIRVENT_TAB
+{ Inherited(ZUT_15)
+	{
+		CDB_HydroThing::Tmax		=	160.0
+		CDB_Product::Reference	=	"789 1615"
+		CDB_Product::Name			=   "ZUTS 15"
+		CDB_Product::VersionID	=   VERS_SOLAR
+	}
+}
+
+new:CDB_AirVent(ZUTX_25) -> AIRVENT_TAB
+{ Inherited(ZUT_15)
+	{
+		CDB_Product::Reference	=	"789 1325"
+		CDB_Product::Name			=   "ZUTX 25"
+		CDB_Product::Comment		= "IDS_ACZGZUT_DESC"
+		CDB_Product::VersionID	=   VERS_EXTRALOCK
+		CDB_Product::ProdImgID	=   "PX_ZUTX"
+		CDB_Product::ProductUseFlag		=   #eBoth
+		CDB_Product::AccTypeID			=   ACCTYP_SEP
+		CDB_Product::AccFamilyID		=   ACCFAM_ZU
+		CDB_TAProduct::SizeID		=   DN_25
+		CDB_TAProduct::ConnectID	=   CONN_THREADM
+	}
+}
+
+new:CDB_AirVent(ZUP_10) -> AIRVENT_TAB
+{ Inherited(ZUT_15)
+	{
+		CDB_Product::Reference	=	"789 1510"
+		CDB_Product::Name			=   "ZUP 10"
+		CDB_Product::FamilyID		= 	FAM_ZUP
+		CDB_Product::VersionID	=   VERS_PURGE
+		CDB_Product::ProdImgID	=   "PX_ZUP"
+		CDB_TAProduct::SizeID		=   DN_10
+		CDB_TAProduct::ConnectID	=   CONN_THREADM
+		CDB_AirVent::Dpp			=   6.0e+5
+	}
+}
+
+// HYS-1738: IPI 31/03/2021
+new:CDB_AirVent(ZUPN_10) -> AIRVENT_TAB
+{ Inherited(ZUP_10)
+	{
+		CDB_Product::Reference	        =	"789 1511"
+		CDB_Product::Name			    =   "ZUPN 10"
+		CDB_TAProduct::BodyMaterialID	=   BDY_BRASSNIKPLT
+		CDB_TAProduct::ConnectID	    =   CONN_THREAD
+	}
+}
+
+new:CDB_AirVent(ZUPN_15) -> AIRVENT_TAB
+{ Inherited(ZUPN_10)
+	{
+		CDB_Product::Reference	        =	"789 1516"
+		CDB_Product::Name			    =   "ZUPN 15"
+		CDB_TAProduct::SizeID		    =   DN_15
+	}
+}
+
+////////////////////////////////////////////////////////////////
+//
+//		Table SEPARATOR_TAB : Separators
+//
+////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////
+//
+//	How to write a separator information ?
+//	--------------------------------------
+//
+//	new:CDB_Separator(ID)->tableID	Common CData syntax
+//	{
+//		{
+//			{
+//				{
+//					{
+//						0				isDeleted
+//						1				isAvailable
+//						0				isHidden
+//						1				isFix
+//						0				Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation )
+//						0				Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+//						0               Sort integer (Allow to show a group of articles in the order defined with this variable).
+//					}
+//					Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+//					PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+//					Tmax in °C
+//					Tmin in °C
+//				}
+//				"Reference"				Reference to the TA Product
+//				"Name"					Name of the product
+//				TypeID					Identifier of the valve type
+//				FamilyID				Identifier of the family of the product
+//				VersionID				Identifier of the version of the product
+//				PriorityLevel			Level of priority for selection [1,10]
+//				Comment					Product comment
+//				ProdImgID				Product image ID
+//				AccessGroupID			Identifier of the accessory group
+//				PartOfaSet				Boolean indicating if the valve is part of a ActSet
+//				TableSetID				Table ID where are sets if exist for the current product.
+//				Price					Price of the product
+// 				ProductUseFlag			#eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+//				AccessorySeriesID		Identifier of the series of the accessory
+//				isAttached				0/1: 1 if accessory cannot be ordered separately		
+//   			AccTypeID				Identifier of Accessory type if #eBoth 
+//				AccFamilyID				Identifier of Accessory family if #eBoth
+//			}
+//			BodyMaterialID			Identifier of the body material
+//			SizeID					Identifier of the corresp. valve size
+//			ConnectID				Identifier of the (inlet/pipe side) connection
+//			ConnTabID				Identifier of the connection table, can be NO_ID
+//			Conn2ID					Identifier of the outlet/body side connection, can be NO_ID
+//			CBIType					Type of the valve as used in the CBI II
+//			CBISize					Size of the valve as used in the CBI II
+//			CBISizeInch				Size of the valve in inch as used in the CBI II
+//			CBICompatibilityIndex	CBI compatibility Index
+//			CBIVersion				CBI Version
+//			Dpmax					Maximum Dp of the valve
+//			MeasPt					Measuring points
+//			MeasurableData			Measurable data
+//			InletSizeID				Identifier of the inlet size ID
+//			OutletSizeID			Identifier of the outlet size ID
+//		}
+//		CharactID		Identifier of the separator QDp characteristic
+//      NumberOfMagnet	The number of magnet. 0 for separator without magnet.
+//	}
+// Inherited Fields
+//	CDB_Thing::Deleted
+//	CDB_Thing::Available
+//	CDB_Thing::Hidden
+//	CDB_Thing::Fixed
+//	CDB_Thing::FreeInt1
+//	CDB_Thing::FreeInt2
+//	CDB_HydroThing::Pmax
+//	CDB_HydroThing::PNRange
+//	CDB_HydroThing::Tmax
+//	CDB_HydroThing::Tmin
+//	CDB_Product::Reference
+//	CDB_Product::Name
+//  CDB_Product::TypeID
+//	CDB_Product::FamilyID
+//	CDB_Product::VersionID
+//	CDB_Product::PriorityLevel
+//	CDB_Product::Comment
+//	CDB_Product::ProdImgID
+//	CDB_Product::AccessGroupID
+//	CDB_Product::PartOfaSet
+//  CDB_Product::TableSetID
+//	CDB_Product::Price
+//	CDB_Product::ProductUseFlag
+//	CDB_Product::AccessorySeriesID
+//	CDB_Product::isAttached
+//	CDB_Product::AccTypeID
+//	CDB_Product::AccFamilyID
+//	CDB_TAProduct::BodyMaterialID
+//	CDB_TAProduct::SizeID
+//	CDB_TAProduct::ConnectID
+//	CDB_TAProduct::ConnTabID
+//	CDB_TAProduct::Conn2ID
+//	CDB_TAProduct::CBIType
+//	CDB_TAProduct::CBISize
+//	CDB_TAProduct::CBISizeInch
+//  CDB_TAProduct::CBICompatibilityIndex
+//	CDB_TAProduct::CBIVersion
+//	CDB_TAProduct::Dpmax
+//	CDB_TAProduct::MeasPt
+//	CDB_TAProduct::MeasurableData
+//	CDB_TAProduct::InletSizeID
+//	CDB_TAProduct::OutletSizeID
+//  CDB_Separator::CharactID
+//  CDB_Separator::NumberOfMagnet
+//
+////////////////////////////////////////////////////////////////
+
+
+//****************************
+// ZU Micro-bubble separators
+//****************************
+
+///////////////
+// *** ZG ****
+///////////////
+
+new:CDB_Separator(ZG_65) -> SEPARATOR_TAB
+{
+	{
+		{
+			{
+				{
+					0								                // isDeleted
+					1                                               // isAvailable
+					0                                               // isHidden
+					1                                               // isFix
+					0                                               // Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+					0                                               // Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+					0               								// Sort integer (Allow to show a group of articles in the order defined with this variable).
+				}
+				1.6e+6 \ 1.6e+6                         		// Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+				NO_ID                                           // PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+				110.0                                           // Tmax in °C
+				-10.0                                           // Tmin in °C
+			}
+			"303041-11000"                              	// Reference to the TA Product
+			"ZG 65"                                         // Name of the product
+			SEPTYPE_ZCD                                     // Identifier of the valve type
+			FAM_ZG                                          // Identifier of the family of the product
+			VERS_STD                                        // Identifier of the version of the product
+			1                                               // Level of priority for selection [1,10]
+			""                                              // Product comment
+			"PX_ZG_65_F"                                    // Product image ID
+			ACCSEPGR_ZG_65                                  // Identifier of the accessory group
+			#ePartOfaSetNo                                  // Boolean indicating if product is part of a set. Can be #ePartOfaSetNo, #ePartOfaSetYes, #ePartOfaSetYesBreakOk or #ePartOfaSetYesBreakOnMsg.
+			NO_ID											// Table ID where are sets if exist for the current product.
+			0.0                                             // Price of the product
+			#eProduct                              		    // #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+			NO_ID                                       	// Identifier of the series of the accessory (mainly used in DlgDirSel)
+			0                                           	// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+			NO_ID                                      		// Identifier of the accessory type if #eBoth 
+			NO_ID											// Identifier of the accessory family if #eBoth
+		}
+		BDY_STEEL                                       // Identifier of the body material
+		DN_65                                           // Identifier of the corresp. valve size
+		CONN_FLANGE                                     // Identifier of the (inlet/pipe side) connection
+		NO_ID                                           // Identifier of the connection table, can be NO_ID
+		NO_ID                                           // Identifier of the outlet/body side connection, can be NO_ID
+		""                                              // Type of the valve as used in the CBI II
+		""                                              // Size of the valve as used in the CBI II
+		""                                              // Size of the valve in inch as used in the CBI II
+		0                                               // CBI compatibility Index
+		""                                              // CBI Version
+		0.0                                             // Maximum Dp of the valve
+		#eMeasPointNone                                 // Measuring points
+		#eMeasDataNone                                  // Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+		NO_ID											// Identifier of the inlet size ID
+		NO_ID											// Identifier of the outlet size ID
+	}
+	C_ZG_65                                         // Identifier of the separator QDp characteristic
+	0                                               // The number of magnet. 0 for separator without magnet.
+}
+
+new:CDB_Separator(ZG_80) -> SEPARATOR_TAB
+{ Inherited(ZG_65)
+	{
+		CDB_Product::Reference	=	"303041-11100"
+		CDB_Product::Name		=	"ZG 80"
+		CDB_Separator::CharactID	=	C_ZG_80
+		CDB_TAProduct::SizeID		=	DN_80
+		CDB_Product::AccessGroupID = ACCSEPGR_ZG_80
+	}
+}
+
+new:CDB_Separator(ZG_100) -> SEPARATOR_TAB
+{ Inherited(ZG_65)
+	{
+		CDB_Product::Reference	=	"303041-11200"
+		CDB_Product::Name		=	"ZG 100"
+		CDB_Separator::CharactID	=	C_ZG_100
+		CDB_TAProduct::SizeID		=	DN_100
+		CDB_Product::AccessGroupID = ACCSEPGR_ZG_100
+	}
+}
+
+new:CDB_Separator(ZG_125) -> SEPARATOR_TAB
+{ Inherited(ZG_65)
+	{
+		CDB_Product::Reference	=	"303041-11300"
+		CDB_Product::Name		=	"ZG 125"
+		CDB_Separator::CharactID	=	C_ZG_125
+		CDB_TAProduct::SizeID		=	DN_125
+		CDB_Product::AccessGroupID	=	ACCSEPGR_ZG_125
+	}
+}
+
+new:CDB_Separator(ZG_150) -> SEPARATOR_TAB
+{ Inherited(ZG_65)
+	{
+		CDB_Product::Reference	=	"303041-11400"
+		CDB_Product::Name		=	"ZG 150"
+		CDB_Separator::CharactID	=	C_ZG_150
+		CDB_TAProduct::SizeID		=	DN_150
+		CDB_Product::AccessGroupID	=	ACCSEPGR_ZG_150
+	}
+}
+
+new:CDB_Separator(ZG_200) -> SEPARATOR_TAB
+{ Inherited(ZG_65)
+	{
+		CDB_Product::Reference	=	"303041-11500"
+		CDB_Product::Name		=	"ZG 200"
+		CDB_Separator::CharactID	=	C_ZG_200
+		CDB_TAProduct::SizeID		=	DN_200
+		CDB_Product::AccessGroupID	=	ACCSEPGR_ZG_200
+	}
+}
+
+new:CDB_Separator(ZG_250) -> SEPARATOR_TAB
+{ Inherited(ZG_65)
+	{
+		CDB_Product::Reference	=	"303041-11600"
+		CDB_Product::Name		=	"ZG 250"
+		CDB_Separator::CharactID	=	C_ZG_250
+		CDB_TAProduct::SizeID		=	DN_250
+		CDB_Product::AccessGroupID	=	ACCSEPGR_ZG_250
+	}
+}
+
+new:CDB_Separator(ZG_300) -> SEPARATOR_TAB
+{ Inherited(ZG_65)
+	{
+		CDB_Product::Reference	=	"303041-11700"
+		CDB_Product::Name		=	"ZG 300"
+		CDB_Separator::CharactID	=	C_ZG_300
+		CDB_TAProduct::SizeID		=	DN_300
+		CDB_Product::AccessGroupID	=	ACCSEPGR_ZG_300
+	}
+}
+
+new:CDB_Separator(ZG_65W) -> SEPARATOR_TAB
+{ Inherited(ZG_65)
+	{
+		CDB_Product::Reference	=	"303041-21000"
+		CDB_Product::Name	=	"ZG 65 W"
+		CDB_TAProduct::ConnectID =	CONN_WELDINGGROOVE
+		CDB_Product::ProdImgID = "PX_ZG_65_S"
+	}
+}
+
+new:CDB_Separator(ZG_80W) -> SEPARATOR_TAB
+{ Inherited(ZG_80)
+	{
+		CDB_Product::Reference	=	"303041-21100"
+		CDB_Product::Name	=	"ZG 80 W"
+		CDB_TAProduct::ConnectID =	CONN_WELDINGGROOVE
+		CDB_Product::ProdImgID = "PX_ZG_65_S"
+	}
+}
+
+new:CDB_Separator(ZG_100W) -> SEPARATOR_TAB
+{ Inherited(ZG_100)
+	{
+		CDB_Product::Reference	=	"303041-21200"
+		CDB_Product::Name	=	"ZG 100 W"
+		CDB_TAProduct::ConnectID =	CONN_WELDINGGROOVE
+		CDB_Product::ProdImgID = "PX_ZG_65_S"
+	}
+}
+
+new:CDB_Separator(ZG_125W) -> SEPARATOR_TAB
+{ Inherited(ZG_125)
+	{
+		CDB_Product::Reference	=	"303041-21300"
+		CDB_Product::Name	=	"ZG 125 W"
+		CDB_TAProduct::ConnectID =	CONN_WELDINGGROOVE
+		CDB_Product::ProdImgID = "PX_ZG_65_S"
+	}
+}
+
+new:CDB_Separator(ZG_150W) -> SEPARATOR_TAB
+{ Inherited(ZG_150)
+	{
+		CDB_Product::Reference	=	"303041-21400"
+		CDB_Product::Name	=	"ZG 150 W"
+		CDB_TAProduct::ConnectID =	CONN_WELDINGGROOVE
+		CDB_Product::ProdImgID = "PX_ZG_65_S"
+	}
+}
+
+new:CDB_Separator(ZG_200W) -> SEPARATOR_TAB
+{ Inherited(ZG_200)
+	{
+		CDB_Product::Reference	=	"303041-21500"
+		CDB_Product::Name	=	"ZG 200 W"
+		CDB_TAProduct::ConnectID =	CONN_WELDINGGROOVE
+		CDB_Product::ProdImgID = "PX_ZG_65_S"
+	}
+}
+
+new:CDB_Separator(ZG_250W) -> SEPARATOR_TAB
+{ Inherited(ZG_250)
+	{
+		CDB_Product::Reference	=	"303041-21600"
+		CDB_Product::Name	=	"ZG 250 W"
+		CDB_TAProduct::ConnectID =	CONN_WELDINGGROOVE
+		CDB_Product::ProdImgID = "PX_ZG_65_S"
+	}
+}
+
+new:CDB_Separator(ZG_300W) -> SEPARATOR_TAB
+{ Inherited(ZG_300)
+	{
+		CDB_Product::Reference	=	"303041-21700"
+		CDB_Product::Name	=	"ZG 300 W"
+		CDB_TAProduct::ConnectID =	CONN_WELDINGGROOVE
+		CDB_Product::ProdImgID = "PX_ZG_65_S"
+	}
+}
+
+// PN25
+new:CDB_Separator(ZG_65_PN25) -> SEPARATOR_TAB
+{ Inherited(ZG_65)
+	{
+		CDB_HydroThing::Pmax = 2.5e+6 \ 2.5e+6
+		CDB_HydroThing::Tmax = 170.0
+		CDB_Product::Reference	=	"303041-31000"
+		CDB_Product::Name	=	"ZG 65"
+	}
+}
+
+new:CDB_Separator(ZG_80_PN25) -> SEPARATOR_TAB
+{ Inherited(ZG_80)
+	{
+		CDB_HydroThing::Pmax = 2.5e+6 \ 2.5e+6
+		CDB_HydroThing::Tmax = 170.0
+		CDB_Product::Reference	=	"303041-31100"
+		CDB_Product::Name	=	"ZG 80"
+	}
+}
+
+new:CDB_Separator(ZG_100_PN25) -> SEPARATOR_TAB
+{ Inherited(ZG_100)
+	{
+		CDB_HydroThing::Pmax = 2.5e+6 \ 2.5e+6
+		CDB_HydroThing::Tmax = 170.0
+		CDB_Product::Reference	=	"303041-31200"
+		CDB_Product::Name	=	"ZG 100"
+	}
+}
+
+new:CDB_Separator(ZG_125_PN25) -> SEPARATOR_TAB
+{ Inherited(ZG_125)
+	{
+		CDB_HydroThing::Pmax = 2.5e+6 \ 2.5e+6
+		CDB_HydroThing::Tmax = 170.0
+		CDB_Product::Reference	=	"303041-31300"
+		CDB_Product::Name	=	"ZG 125"
+	}
+}
+
+new:CDB_Separator(ZG_150_PN25) -> SEPARATOR_TAB
+{ Inherited(ZG_150)
+	{
+		CDB_HydroThing::Pmax = 2.5e+6 \ 2.5e+6
+		CDB_HydroThing::Tmax = 170.0
+		CDB_Product::Reference	=	"303041-31400"
+		CDB_Product::Name	=	"ZG 150"
+	}
+}
+
+new:CDB_Separator(ZG_200_PN25) -> SEPARATOR_TAB
+{ Inherited(ZG_200)
+	{
+		CDB_HydroThing::Pmax = 2.5e+6 \ 2.5e+6
+		CDB_HydroThing::Tmax = 170.0
+		CDB_Product::Reference	=	"303041-31500"
+		CDB_Product::Name	=	"ZG 200"
+	}
+}
+
+new:CDB_Separator(ZG_250_PN25) -> SEPARATOR_TAB
+{ Inherited(ZG_250)
+	{
+		CDB_HydroThing::Pmax = 2.5e+6 \ 2.5e+6
+		CDB_HydroThing::Tmax = 170.0
+		CDB_Product::Reference	=	"303041-31600"
+		CDB_Product::Name	=	"ZG 250"
+	}
+}
+
+new:CDB_Separator(ZG_300_PN25) -> SEPARATOR_TAB
+{ Inherited(ZG_300)
+	{
+		CDB_HydroThing::Pmax = 2.5e+6 \ 2.5e+6
+		CDB_HydroThing::Tmax = 170.0
+		CDB_Product::Reference	=	"303041-31700"
+		CDB_Product::Name	=	"ZG 300"
+	}
+}
+
+
+///////////////
+// *** ZUV ****
+///////////////
+
+new:CDB_Separator(ZUV_20) -> SEPARATOR_TAB
+{
+	{
+		{
+			{
+				{
+					0								                // isDeleted
+					1                                               // isAvailable
+					0                                               // isHidden
+					1                                               // isFix
+					0                                               // Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+					0                                               // Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+					0               								// Sort integer (Allow to show a group of articles in the order defined with this variable).
+				}
+				0.6e+6 \ 1.0e+6                         		// Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+				NO_ID                                           // PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+				110.0                                           // Tmax in °C
+				-10.0                                           // Tmin in °C
+			}
+			"789 1120"                                  	// Reference to the TA Product
+			"ZUV 20"                                        // Name of the product
+			SEPTYPE_MB                                      // Identifier of the valve type
+			FAM_ZUV                                         // Identifier of the family of the product
+			VERS_STD                                        // Identifier of the version of the product
+			1                                               // Level of priority for selection [1,10]
+			""                                              // Product comment
+			"PX_ZUV_25"                                     // Product image ID
+			ACCSEPGR_ZUV_2022                               // Identifier of the accessory group
+			#ePartOfaSetNo                                  // Boolean indicating if product is part of a set. Can be #ePartOfaSetNo, #ePartOfaSetYes, #ePartOfaSetYesBreakOk or #ePartOfaSetYesBreakOnMsg.
+			NO_ID											// Table ID where are sets if exist for the current product.
+			0.0                                             // Price of the product
+			#eProduct                              		    // #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+			NO_ID                                       	// Identifier of the series of the accessory (mainly used in DlgDirSel)
+			0                                           	// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+			NO_ID                                      		// Identifier of the accessory type if #eBoth 
+			NO_ID											// Identifier of the accessory family if #eBoth
+		}
+		BDY_BRASS                                       // Identifier of the body material
+		DN_20                                           // Identifier of the corresp. valve size
+		CONN_THREAD                                     // Identifier of the (inlet/pipe side) connection
+		NO_ID                                           // Identifier of the connection table, can be NO_ID
+		NO_ID                                           // Identifier of the outlet/body side connection, can be NO_ID
+		""                                              // Type of the valve as used in the CBI II
+		""                                              // Size of the valve as used in the CBI II
+		""                                              // Size of the valve in inch as used in the CBI II
+		0                                               // CBI compatibility Index
+		""                                              // CBI Version
+		0.0                                             // Maximum Dp of the valve
+		#eMeasPointNone                                 // Measuring points
+		#eMeasDataNone                                  // Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+		NO_ID											// Identifier of the inlet size ID
+		NO_ID											// Identifier of the outlet size ID
+	}
+	C_ZU_2022                                       // Identifier of the separator QDp characteristic
+	0                                               // The number of magnet. 0 for separator without magnet.
+}
+
+new:CDB_Separator(ZUV_25) -> SEPARATOR_TAB
+{ Inherited(ZUV_20)
+	{
+		CDB_Product::Reference	=	"789 1125"
+		CDB_Product::Name			=	"ZUV 25"
+		CDB_Product::AccessGroupID=	ACCSEPGR_ZUV_25
+		CDB_TAProduct::SizeID		=	DN_25
+		CDB_Separator::CharactID	=	C_ZU_25
+	}
+}
+
+new:CDB_Separator(ZUV_32) -> SEPARATOR_TAB
+{ Inherited(ZUV_20)
+	{
+		CDB_Product::Reference	=	"789 1132"
+		CDB_Product::Name			=	"ZUV 32"
+		CDB_Product::AccessGroupID=	ACCSEPGR_ZUV_32
+		CDB_TAProduct::SizeID		=	DN_32
+		CDB_Separator::CharactID	=	C_ZU_32
+	}
+}
+
+new:CDB_Separator(ZUV_40) -> SEPARATOR_TAB
+{ Inherited(ZUV_20)
+	{
+		CDB_Product::Reference	=	"789 1140"
+		CDB_Product::Name			=	"ZUV 40"
+		CDB_Product::AccessGroupID=	ACCSEPGR_ZUV_40
+		CDB_TAProduct::SizeID		=	DN_40
+		CDB_Separator::CharactID	=	C_ZU_40
+	}
+}
+
+
+///////////////
+// *** ZTVI ****
+// HYS-1980: it's a separator for micro bubbles, Vent version with insulation
+///////////////
+
+new:CDB_Separator(ZTVI_20) -> SEPARATOR_TAB
+{
+	{
+		{
+			{
+				{
+					0								                // isDeleted
+					1                                               // isAvailable
+					0                                               // isHidden
+					1                                               // isFix
+					0                                               // Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+					0                                               // Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+					0               								// Sort integer (Allow to show a group of articles in the order defined with this variable).
+				}
+				0.6e+6 \ 1.0e+6                         		// Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+				NO_ID                                           // PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+				110.0                                           // Tmax in °C
+				-10.0                                           // Tmin in °C
+			}
+			"303020-70501"                                 	// Reference to the TA Product
+			"ZTVI 20"                                       // Name of the product
+			SEPTYPE_MB                                      // Identifier of the valve type
+			FAM_ZTV                                         // Identifier of the family of the product
+			VERS_TURNABLE                                   // Identifier of the version of the product
+			1                                               // Level of priority for selection [1,10]
+			""                                              // Product comment
+			"PX_ZTV"                                     	// Product image ID
+			NO_ID                               			// Identifier of the accessory group
+			#ePartOfaSetNo                                  // Boolean indicating if product is part of a set. Can be #ePartOfaSetNo, #ePartOfaSetYes, #ePartOfaSetYesBreakOk or #ePartOfaSetYesBreakOnMsg.
+			NO_ID											// Table ID where are sets if exist for the current product.
+			0.0                                             // Price of the product
+			#eProduct                              		    // #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+			NO_ID                                       	// Identifier of the series of the accessory (mainly used in DlgDirSel)
+			0                                           	// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+			NO_ID                                      		// Identifier of the accessory type if #eBoth 
+			NO_ID											// Identifier of the accessory family if #eBoth
+		}
+		BDY_BRASS                                       // Identifier of the body material
+		DN_20                                           // Identifier of the corresp. valve size
+		CONN_THREAD                                     // Identifier of the (inlet/pipe side) connection
+		NO_ID                                           // Identifier of the connection table, can be NO_ID
+		NO_ID                                           // Identifier of the outlet/body side connection, can be NO_ID
+		""                                              // Type of the valve as used in the CBI II
+		""                                              // Size of the valve as used in the CBI II
+		""                                              // Size of the valve in inch as used in the CBI II
+		0                                               // CBI compatibility Index
+		""                                              // CBI Version
+		0.0                                             // Maximum Dp of the valve
+		#eMeasPointNone                                 // Measuring points
+		#eMeasDataNone                                  // Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+		NO_ID											// Identifier of the inlet size ID
+		NO_ID											// Identifier of the outlet size ID
+	}
+	C_ZT_20                                       	// Identifier of the separator QDp characteristic
+	0                                               // The number of magnet. 0 for separator without magnet.
+}
+
+new:CDB_Separator(ZTVI_25) -> SEPARATOR_TAB
+{ Inherited(ZTVI_20)
+	{
+		CDB_Product::Reference	=	"303020-70601"
+		CDB_Product::Name			=	"ZTVI 25"
+		CDB_TAProduct::SizeID		=	DN_25
+		CDB_Separator::CharactID	=	C_ZT_25
+	}
+}
+
+new:CDB_Separator(ZTVI_32) -> SEPARATOR_TAB
+{ Inherited(ZTVI_25)
+	{
+		CDB_Product::Reference	=	"303020-70701"
+		CDB_Product::Name			=	"ZTVI 32"
+		CDB_TAProduct::SizeID		=	DN_32
+		CDB_Separator::CharactID	=	C_ZT_32
+	}
+}
+
+///////////////
+// *** ZTM ****
+// HYS-1980: it's a separator for sludge particles, Dirt version with insulation
+///////////////
+
+new:CDB_Separator(ZTMI_20) -> SEPARATOR_TAB
+{
+	{
+		{
+			{
+				{
+					0								                // isDeleted
+					1                                               // isAvailable
+					0                                               // isHidden
+					1                                               // isFix
+					0                                               // Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+					0                                               // Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+					0               								// Sort integer (Allow to show a group of articles in the order defined with this variable).
+				}
+				0.6e+6 \ 1.0e+6                         		// Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+				NO_ID                                           // PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+				110.0                                           // Tmax in °C
+				-10.0                                           // Tmin in °C
+			}
+			"303041-70501"                                  // Reference to the TA Product
+			"ZTMI 20"                                       // Name of the product
+			SEPTYPE_SP                                      // Identifier of the valve type
+			FAM_ZTM                                      	// Identifier of the family of the product
+			VERS_TURNABLE                              		// Identifier of the version of the product
+			1                                               // Level of priority for selection [1,10]
+			""                                              // Product comment
+			"PX_ZTM"                                    	// Product image ID
+			NO_ID                               			// Identifier of the accessory group
+			#ePartOfaSetNo                                  // Boolean indicating if product is part of a set. Can be #ePartOfaSetNo, #ePartOfaSetYes, #ePartOfaSetYesBreakOk or #ePartOfaSetYesBreakOnMsg.
+			NO_ID											// Table ID where are sets if exist for the current product.
+			0.0                                             // Price of the product
+			#eProduct                              			// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+			NO_ID                                   		// Identifier of the series of the accessory (mainly used in DlgDirSel)
+			0                                       		// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+			NO_ID                                   		// Identifier of the accessory type if #eBoth 
+			NO_ID											// Identifier of the accessory family if #eBoth	
+		}
+		BDY_BRASS                                       // Identifier of the body material
+		DN_20                                           // Identifier of the corresp. valve size
+		CONN_THREAD                                     // Identifier of the (inlet/pipe side) connection
+		NO_ID                                           // Identifier of the connection table, can be NO_ID
+		NO_ID                                           // Identifier of the outlet/body side connection, can be NO_ID
+		""                                              // Type of the valve as used in the CBI II
+		""                                              // Size of the valve as used in the CBI II
+		""                                              // Size of the valve in inch as used in the CBI II
+		0                                               // CBI compatibility Index
+		""                                              // CBI Version
+		0.0                                             // Maximum Dp of the valve
+		#eMeasPointNone                                 // Measuring points
+		#eMeasDataNone                                  // Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+		NO_ID											// Identifier of the inlet size ID
+		NO_ID											// Identifier of the outlet size ID
+	}
+	C_ZT_20                                       	// Identifier of the separator QDp characteristic
+	1												// The number of magnet. 0 for separator without magnet.
+}
+
+new:CDB_Separator(ZTMI_25) -> SEPARATOR_TAB
+{ Inherited(ZTMI_20)
+	{
+		CDB_Product::Reference	=	"303041-70601"
+		CDB_Product::Name			=	"ZTMI 25"
+		CDB_TAProduct::SizeID		=	DN_25
+		CDB_Separator::CharactID	=	C_ZT_25
+	}
+}
+
+new:CDB_Separator(ZTMI_32) -> SEPARATOR_TAB
+{ Inherited(ZTMI_20)
+	{
+		CDB_Product::Reference	=	"303041-70701"
+		CDB_Product::Name			=	"ZTMI 32"
+		CDB_TAProduct::SizeID		=	DN_32
+		CDB_Separator::CharactID	=	C_ZT_32
+	}
+}
+
+///////////////
+// *** ZTKM ****
+// HYS-1980: it's a separator for microbubbles and sludges particles, Komni version with insulation
+///////////////
+
+new:CDB_Separator(ZTKMI_20) -> SEPARATOR_TAB
+{
+	{
+		{
+			{
+				{
+					0								                // isDeleted
+					1                                               // isAvailable
+					0                                               // isHidden
+					1                                               // isFix
+					0                                               // Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+					0                                               // Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+					0               								// Sort integer (Allow to show a group of articles in the order defined with this variable).
+				}
+				0.6e+6 \ 1.0e+6                         		// Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+				NO_ID                                           // PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+				110.0                                           // Tmax in °C
+				-10.0                                           // Tmin in °C
+			}
+			"303051-80501"                                  // Reference to the TA Product
+			"ZTKMI 20"                                      // Name of the product
+			SEPTYPE_MBSP                                    // Identifier of the valve type
+			FAM_ZTKM                                      	// Identifier of the family of the product
+			VERS_TURNABLE                              		// Identifier of the version of the product
+			1                                               // Level of priority for selection [1,10]
+			""                                              // Product comment
+			"PX_ZTKM"                                    	// Product image ID
+			NO_ID                               			// Identifier of the accessory group
+			#ePartOfaSetNo                                  // Boolean indicating if product is part of a set. Can be #ePartOfaSetNo, #ePartOfaSetYes, #ePartOfaSetYesBreakOk or #ePartOfaSetYesBreakOnMsg.
+			NO_ID											// Table ID where are sets if exist for the current product.
+			0.0                                             // Price of the product
+			#eProduct                              			// #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+			NO_ID                                   		// Identifier of the series of the accessory (mainly used in DlgDirSel)
+			0                                       		// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+			NO_ID                                   		// Identifier of the accessory type if #eBoth 
+			NO_ID											// Identifier of the accessory family if #eBoth	
+		}
+		BDY_BRASS                                       // Identifier of the body material
+		DN_20                                           // Identifier of the corresp. valve size
+		CONN_THREAD                                     // Identifier of the (inlet/pipe side) connection
+		NO_ID                                           // Identifier of the connection table, can be NO_ID
+		NO_ID                                           // Identifier of the outlet/body side connection, can be NO_ID
+		""                                              // Type of the valve as used in the CBI II
+		""                                              // Size of the valve as used in the CBI II
+		""                                              // Size of the valve in inch as used in the CBI II
+		0                                               // CBI compatibility Index
+		""                                              // CBI Version
+		0.0                                             // Maximum Dp of the valve
+		#eMeasPointNone                                 // Measuring points
+		#eMeasDataNone                                  // Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+		NO_ID											// Identifier of the inlet size ID
+		NO_ID											// Identifier of the outlet size ID
+	}
+	C_ZT_20                                       	// Identifier of the separator QDp characteristic
+	1												// The number of magnet. 0 for separator without magnet.
+}
+
+new:CDB_Separator(ZTKMI_25) -> SEPARATOR_TAB
+{ Inherited(ZTKMI_20)
+	{
+		CDB_Product::Reference	=	"303051-80601"
+		CDB_Product::Name			=	"ZTKMI 25"
+		CDB_TAProduct::SizeID		=	DN_25
+		CDB_Separator::CharactID	=	C_ZT_25
+	}
+}
+
+new:CDB_Separator(ZTKMI_32) -> SEPARATOR_TAB
+{ Inherited(ZTKMI_20)
+	{
+		CDB_Product::Reference	=	"303051-80701"
+		CDB_Product::Name			=	"ZTKMI 32"
+		CDB_TAProduct::SizeID		=	DN_32
+		CDB_Separator::CharactID	=	C_ZT_32
+	}
+}
+
+////////////////
+// *** ZUVS ****
+////////////////
+
+new:CDB_Separator(ZUVS_20) -> SEPARATOR_TAB
+{ Inherited(ZUV_20)
+	{
+		CDB_HydroThing::Tmax		=	160.0
+		CDB_Product::Reference	=	"789 1720"
+		CDB_Product::Name			=	"ZUVS 20"
+		CDB_Product::VersionID	=	VERS_SOLAR
+		CDB_Product::AccessGroupID=	NO_ID
+		CDB_Separator::CharactID	=	C_ZU_2022
+	}
+}
+
+new:CDB_Separator(ZUVS_22) -> SEPARATOR_TAB
+{ Inherited(ZUVS_20)
+	{
+		CDB_Product::Reference	=	"789 1722"
+		CDB_Product::Name			=	"ZUVS 22"
+		CDB_TAProduct::ConnectID	=	CONN_COMPRFIT
+	}
+}
+
+new:CDB_Separator(ZUVS_25) -> SEPARATOR_TAB
+{ Inherited(ZUVS_20)
+	{
+		CDB_Product::Reference	=	"789 1725"
+		CDB_Product::Name			=	"ZUVS 25"
+		CDB_TAProduct::SizeID		=	DN_25
+		CDB_Separator::CharactID	=	C_ZU_25
+	}
+}
+
+new:CDB_Separator(ZUVS_32) -> SEPARATOR_TAB
+{ Inherited(ZUVS_20)
+	{
+		CDB_Product::Reference	=	"789 1732"
+		CDB_Product::Name			=	"ZUVS 32"
+		CDB_TAProduct::SizeID		=	DN_32
+		CDB_Separator::CharactID	=	C_ZU_32
+	}
+}
+
+new:CDB_Separator(ZUVS_40) -> SEPARATOR_TAB
+{ Inherited(ZUVS_20)
+	{
+		CDB_Product::Reference	=	"789 1740"
+		CDB_Product::Name			=	"ZUVS 40"
+		CDB_TAProduct::SizeID		=	DN_40
+		CDB_Separator::CharactID	=	C_ZU_40
+	}
+}
+
+///////////////
+// *** ZUD ****
+///////////////
+
+new:CDB_Separator(ZUD_20) -> SEPARATOR_TAB
+{ Inherited(ZUV_20)
+	{
+		CDB_Product::Reference	=	"789 2120"
+		CDB_Product::Name			=	"ZUD 20"
+		CDB_Product::FamilyID		= 	FAM_ZUDZUM
+		CDB_Product::TypeID		=	SEPTYPE_SP
+		CDB_Product::ProdImgID	=	"PX_ZUD_25"
+		CDB_Product::AccessGroupID=	ACCSEPGR_ZUD_2022
+		CDB_Separator::CharactID	=	C_ZU_2022
+	}
+}
+
+new:CDB_Separator(ZUD_25) -> SEPARATOR_TAB
+{ Inherited(ZUD_20)
+	{
+		CDB_Product::Reference	=	"789 2125"
+		CDB_Product::Name			=	"ZUD 25"
+		CDB_Product::AccessGroupID=	ACCSEPGR_ZUD_25
+		CDB_TAProduct::SizeID		=	DN_25
+		CDB_Separator::CharactID	=	C_ZU_25
+	}
+}
+
+new:CDB_Separator(ZUD_32) -> SEPARATOR_TAB
+{ Inherited(ZUD_20)
+	{
+		CDB_Product::Reference	=	"789 2132"
+		CDB_Product::Name			=	"ZUD 32"
+		CDB_Product::AccessGroupID=	ACCSEPGR_ZUD_32
+		CDB_TAProduct::SizeID		=	DN_32
+		CDB_Separator::CharactID	=	C_ZU_32
+	}
+}
+
+new:CDB_Separator(ZUD_40) -> SEPARATOR_TAB
+{ Inherited(ZUD_20)
+	{
+		CDB_Product::Reference	=	"789 2140"
+		CDB_Product::Name			=	"ZUD 40"
+		CDB_Product::AccessGroupID=	ACCSEPGR_ZUD_40
+		CDB_TAProduct::SizeID		=	DN_40
+		CDB_Separator::CharactID	=	C_ZU_40
+	}
+}
+
+////////////////
+// *** ZUM ****
+////////////////
+
+new:CDB_Separator(ZUM_20) -> SEPARATOR_TAB
+{ Inherited(ZUD_20)
+	{
+		CDB_Product::Reference	=	"789 3120"
+		CDB_Product::Name			=	"ZUM 20"
+		CDB_Product::VersionID	=	VERS_MAGNET
+		CDB_Product::ProdImgID	=	"PX_ZUM_25"
+		CDB_Product::AccessGroupID =	ACCSEPGR_ZUM_2022
+		CDB_Separator::CharactID	=	C_ZU_2022
+	}
+}
+
+new:CDB_Separator(ZUM_25) -> SEPARATOR_TAB
+{ Inherited(ZUM_20)
+	{
+		CDB_Product::Reference	=	"789 3125"
+		CDB_Product::Name			=	"ZUM 25"
+		CDB_Product::AccessGroupID  =	ACCSEPGR_ZUM_25
+		CDB_TAProduct::SizeID		=	DN_25
+		CDB_Separator::CharactID	=	C_ZU_25
+	}
+}
+
+new:CDB_Separator(ZUM_32) -> SEPARATOR_TAB
+{ Inherited(ZUM_20)
+	{
+		CDB_Product::Reference	=	"789 3132"
+		CDB_Product::Name			=	"ZUM 32"
+		CDB_Product::AccessGroupID  =	ACCSEPGR_ZUM_32
+		CDB_TAProduct::SizeID		=	DN_32
+		CDB_Separator::CharactID	=	C_ZU_32
+	}
+}
+
+new:CDB_Separator(ZUM_40) -> SEPARATOR_TAB
+{ Inherited(ZUM_20)
+	{
+		CDB_Product::Reference	=	"789 3140"
+		CDB_Product::Name			=	"ZUM 40"
+		CDB_Product::AccessGroupID  =	ACCSEPGR_ZUM_40
+		CDB_TAProduct::SizeID		=	DN_40
+		CDB_Separator::CharactID	=	C_ZU_40
+	}
+}
+
+////////////////
+// *** ZUKM ****
+////////////////
+
+new:CDB_Separator(ZUKM_20) -> SEPARATOR_TAB
+{ Inherited(ZUD_20)
+	{
+		CDB_Product::Reference	=	"789 4220"
+		CDB_Product::Name			=	"ZUKM 20"
+		CDB_Product::AccessGroupID  =	ACCSEPGR_ZUK_2022
+		CDB_Product::FamilyID		= 	FAM_ZUK
+		CDB_Product::TypeID		=	SEPTYPE_MBSP
+		CDB_Product::VersionID	=	VERS_MAGNET
+		CDB_Product::ProdImgID	=	"PX_ZUKM_25"
+		CDB_Separator::CharactID	=	C_ZU_2022
+	}
+}
+
+new:CDB_Separator(ZUKM_22) -> SEPARATOR_TAB
+{ Inherited(ZUKM_20)
+	{
+		CDB_Product::Reference	=	"789 4222"
+		CDB_Product::Name			=	"ZUKM 22"
+		CDB_TAProduct::ConnectID	=	CONN_COMPRFIT
+	}
+}
+
+new:CDB_Separator(ZUKM_25) -> SEPARATOR_TAB
+{ Inherited(ZUKM_20)
+	{
+		CDB_Product::Reference	=	"789 4225"
+		CDB_Product::Name			=	"ZUKM 25"
+		CDB_Product::AccessGroupID  =	ACCSEPGR_ZUK_25
+		CDB_TAProduct::SizeID		=	DN_25
+		CDB_Separator::CharactID	=	C_ZU_25
+	}
+}
+
+new:CDB_Separator(ZUKM_32) -> SEPARATOR_TAB
+{ Inherited(ZUKM_20)
+	{
+		CDB_Product::Reference	=	"789 4232"
+		CDB_Product::Name			=	"ZUKM 32"
+		CDB_Product::AccessGroupID  =	ACCSEPGR_ZUK_32
+		CDB_TAProduct::SizeID		=	DN_32
+		CDB_Separator::CharactID	=	C_ZU_32
+	}
+}
+
+new:CDB_Separator(ZUKM_40) -> SEPARATOR_TAB
+{ Inherited(ZUKM_20)
+	{
+		CDB_Product::Reference	=	"789 4240"
+		CDB_Product::Name			=	"ZUKM 40"
+		CDB_Product::AccessGroupID  =	ACCSEPGR_ZUK_40
+		CDB_TAProduct::SizeID		=	DN_40
+		CDB_Separator::CharactID	=	C_ZU_40
+	}
+}
+
+///////////////
+// *** ZUC ****
+///////////////
+
+new:CDB_Separator(ZUC_20) -> SEPARATOR_TAB
+{ Inherited(ZUD_20)
+	{
+		CDB_Product::Reference	=	"789 5120"
+		CDB_Product::Name			=	"ZUC 20"
+		CDB_Product::TypeID		=	SEPTYPE_MBSP
+		CDB_Product::FamilyID		= 	FAM_ZUC
+		CDB_Product::VersionID	=	VERS_COLLECT
+		CDB_Product::ProdImgID	=	"PX_ZUC_25"
+		CDB_Product::AccessGroupID =	ACCSEPGR_ZUC_20					// Removed ACZHUZUC_2022 following IPI - 2017-10-18: Pressurisation, dirt separation and degassing. Range rationalisation
+		CDB_Separator::CharactID	=	C_ZU_2022
+	}
+}
+
+new:CDB_Separator(ZUC_25) -> SEPARATOR_TAB
+{ Inherited(ZUC_20)
+	{
+		CDB_Product::Reference	=	"789 5125"
+		CDB_Product::Name			=	"ZUC 25"
+		CDB_Product::AccessGroupID=	ACCSEPGR_ZUC_25
+		CDB_TAProduct::SizeID		=	DN_25
+		CDB_Separator::CharactID	=	C_ZU_25
+	}
+}
+
+new:CDB_Separator(ZUC_32) -> SEPARATOR_TAB
+{ Inherited(ZUC_20)
+	{
+		CDB_Product::Reference	=	"789 5132"
+		CDB_Product::Name			=	"ZUC 32"
+		CDB_Product::AccessGroupID=	ACCSEPGR_ZUC_32
+		CDB_TAProduct::SizeID		=	DN_32
+		CDB_Separator::CharactID	=	C_ZU_32
+	}
+}
+
+new:CDB_Separator(ZUC_40) -> SEPARATOR_TAB
+{ Inherited(ZUC_20)
+	{
+		CDB_Product::Reference	=	"789 5140"
+		CDB_Product::Name			=	"ZUC 40"
+		CDB_Product::AccessGroupID=	ACCSEPGR_ZUC_40
+		CDB_TAProduct::SizeID		=	DN_40
+		CDB_Separator::CharactID	=	C_ZU_40
+	}
+}
+
+////////////////
+// *** ZUCM ****
+////////////////
+
+new:CDB_Separator(ZUCM_20) -> SEPARATOR_TAB
+{ Inherited(ZUC_20)
+	{
+		CDB_Product::Reference	=	"789 5220"
+		CDB_Product::Name			=	"ZUCM 20"
+		CDB_Product::VersionID	=	VERS_COLLECTMAGNET
+		CDB_Product::ProdImgID	=	"PX_ZUCM_25"
+		CDB_Product::AccessGroupID=	ACCSEPGR_ZUC_20
+		CDB_Separator::CharactID	=	C_ZU_2022
+	}
+}
+
+new:CDB_Separator(ZUCM_25) -> SEPARATOR_TAB
+{ Inherited(ZUCM_20)
+	{
+		CDB_Product::Reference	=	"789 5225"
+		CDB_Product::Name			=	"ZUCM 25"
+		CDB_Product::AccessGroupID=	ACCSEPGR_ZUC_25
+		CDB_TAProduct::SizeID		=	DN_25
+		CDB_Separator::CharactID	=	C_ZU_25
+	}
+}
+
+new:CDB_Separator(ZUCM_32) -> SEPARATOR_TAB
+{ Inherited(ZUCM_20)
+	{
+		CDB_Product::Reference	=	"789 5232"
+		CDB_Product::Name			=	"ZUCM 32"
+		CDB_Product::AccessGroupID=	ACCSEPGR_ZUC_32
+		CDB_TAProduct::SizeID		=	DN_32
+		CDB_Separator::CharactID	=	C_ZU_32
+	}
+}
+
+new:CDB_Separator(ZUCM_40) -> SEPARATOR_TAB
+{ Inherited(ZUCM_20)
+	{
+		CDB_Product::Reference	=	"789 5240"
+		CDB_Product::Name			=	"ZUCM 40"
+		CDB_Product::AccessGroupID=	ACCSEPGR_ZUC_40
+		CDB_TAProduct::SizeID		=	DN_40
+		CDB_Separator::CharactID	=	C_ZU_40
+	}
+}
+
+////////////////////////
+// *** ZIO F - PN10 ****
+////////////////////////
+
+////////////////////////
+// *** ZIO F - PN10 ****
+////////////////////////
+
+new:CDB_Separator(ZIOF_50) -> SEPARATOR_TAB
+{
+	{
+		{
+			{
+				{
+					0							// isDeleted
+					1                           // isAvailable
+					0                           // isHidden
+					1                           // isFix
+					0                           // Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation )
+					0                           // Free integer (bit 0: NotForIndSel, bit 1: NotForDirSel, bit 2: NotForHMCalc)
+					0							// Sort integer (Allow to show a group of articles in the order defined with this variable).
+				}
+				0.6e+6 \ 1.0e+6
+				NO_ID
+				110.0
+				-10.0
+			}
+			"788 2050"
+			"ZIO 50F"
+			SEPTYPE_MBORSP
+			FAM_ZIO
+			VERS_INDUSTR
+			1
+			"IDS_COMM_FLANGE_PN16"
+			"PX_ZIO_80_F"
+			ACCSEPGR_ZIO_5065
+			#ePartOfaSetNo
+			NO_ID					// Table ID where are sets if exist for the current product.
+			0.0
+			#eProduct                              		    // #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+			NO_ID                                       	// Identifier of the series of the accessory (mainly used in DlgDirSel)
+			0                                          	    // 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+			NO_ID                                      		// Identifier of the accessory type if #eBoth 
+			NO_ID											// Identifier of the accessory family if #eBoth
+		}
+		BDY_STEEL
+		DN_50
+		CONN_FLANGE
+		NO_ID
+		NO_ID
+		""
+		""
+		""
+		0
+		""
+		0.0
+		#eMeasPointNone
+		#eMeasDataNone
+		NO_ID											// Identifier of the inlet size ID
+		NO_ID											// Identifier of the outlet size ID
+	}
+	C_ZIZE_50
+	0                                                   // The number of magnet. 0 for separator without magnet.
+}
+
+new:CDB_Separator(ZIOF_65) -> SEPARATOR_TAB
+{ Inherited(ZIOF_50)
+	{
+		CDB_Product::Reference	=	"788 2065"
+		CDB_Product::Name			=	"ZIO 65F"
+		CDB_TAProduct::SizeID		=   DN_65
+		CDB_Separator::CharactID	=	C_ZIZE_65
+	}
+}
+
+new:CDB_Separator(ZIOF_80) -> SEPARATOR_TAB
+{ Inherited(ZIOF_50)
+	{
+		CDB_Product::Reference	=	"788 2080"
+		CDB_Product::Name			=	"ZIO 80F"
+		CDB_Product::AccessGroupID=	ACCSEPGR_ZIO_80100
+		CDB_TAProduct::SizeID		=   DN_80
+		CDB_Separator::CharactID	=	C_ZIZE_80
+	}
+}
+
+new:CDB_Separator(ZIOF_100) -> SEPARATOR_TAB
+{ Inherited(ZIOF_50)
+	{
+		CDB_Product::Reference	=	"788 2100"
+		CDB_Product::Name			=	"ZIO 100F"
+		CDB_Product::AccessGroupID=	ACCSEPGR_ZIO_80100
+		CDB_TAProduct::SizeID		=   DN_100
+		CDB_Separator::CharactID	=	C_ZIZE_100
+	}
+}
+
+new:CDB_Separator(ZIOF_125) -> SEPARATOR_TAB
+{ Inherited(ZIOF_50)
+	{
+		CDB_Product::Reference	=	"788 2125"
+		CDB_Product::Name			=	"ZIO 125F"
+		CDB_Product::ProdImgID	=	"PX_ZIO_200_F"
+		CDB_Product::AccessGroupID=	ACCSEPGR_ZIO_125150
+		CDB_TAProduct::SizeID		=   DN_125
+		CDB_Separator::CharactID	=	C_ZIZE_125
+	}
+}
+
+new:CDB_Separator(ZIOF_150) -> SEPARATOR_TAB
+{ Inherited(ZIOF_50)
+	{
+		CDB_Product::Reference	=	"788 2150"
+		CDB_Product::Name			=	"ZIO 150F"
+		CDB_Product::ProdImgID	=	"PX_ZIO_200_F"
+		CDB_Product::AccessGroupID=	ACCSEPGR_ZIO_125150
+		CDB_TAProduct::SizeID		=   DN_150
+		CDB_Separator::CharactID	=	C_ZIZE_150
+	}
+}
+
+new:CDB_Separator(ZIOF_200) -> SEPARATOR_TAB
+{ Inherited(ZIOF_50)
+	{
+		CDB_Product::Reference	=	"303020-51500"
+		CDB_Product::Name			=	"ZIO 200F"
+		CDB_Product::ProdImgID	=	"PX_ZIO_200_F"
+		CDB_Product::AccessGroupID=	ACCSEPGR_ZIO_200
+		CDB_TAProduct::SizeID		=   DN_200
+		CDB_Separator::CharactID	=	C_ZIZE_200
+	}
+}
+
+new:CDB_Separator(ZIOF_250) -> SEPARATOR_TAB
+{ Inherited(ZIOF_50)
+	{
+		CDB_Product::Reference	=	"303020-51600"
+		CDB_Product::Name			=	"ZIO 250F"
+		CDB_Product::ProdImgID	=	"PX_ZIO_200_F"
+		CDB_Product::AccessGroupID=	ACCSEPGR_ZIO_250
+		CDB_TAProduct::SizeID		=   DN_250
+		CDB_Separator::CharactID	=	C_ZIZE_250
+	}
+}
+
+new:CDB_Separator(ZIOF_300) -> SEPARATOR_TAB
+{ Inherited(ZIOF_50)
+	{
+		CDB_Product::Reference	=	"303020-51700"
+		CDB_Product::Name			=	"ZIO 300F"
+		CDB_Product::ProdImgID	=	"PX_ZIO_200_F"
+		CDB_Product::AccessGroupID=	ACCSEPGR_ZIO_300
+		CDB_TAProduct::SizeID		=   DN_300
+		CDB_Separator::CharactID	=	C_ZIZE_300
+	}
+}
+
+new:CDB_Separator(ZIOF_350) -> SEPARATOR_TAB
+{ Inherited(ZIOF_50)
+	{
+		CDB_Product::Reference	=	"303020-51800"
+		CDB_Product::Name			=	"ZIO 350F"
+		CDB_Product::ProdImgID	=	"PX_ZIO_200_F"
+		CDB_Product::AccessGroupID=	ACCSEPGR_ZIO_350400
+		CDB_TAProduct::SizeID		=   DN_350
+		CDB_Separator::CharactID	=	C_ZIZE_350
+	}
+}
+
+new:CDB_Separator(ZIOF_400) -> SEPARATOR_TAB
+{ Inherited(ZIOF_50)
+	{
+		CDB_Product::Reference	=	"303020-51900"
+		CDB_Product::Name			=	"ZIO 400F"
+		CDB_TAProduct::SizeID		=   DN_400
+		CDB_Product::ProdImgID	=	"PX_ZIO_200_F"
+		CDB_Product::AccessGroupID=	ACCSEPGR_ZIO_350400
+		CDB_Separator::CharactID	=	C_ZIZE_400
+	}
+}
+
+new:CDB_Separator(ZIOF_450) -> SEPARATOR_TAB
+{ Inherited(ZIOF_50)
+	{
+		CDB_Product::Reference	=	"303020-52000"
+		CDB_Product::Name			=	"ZIO 450F"
+		CDB_TAProduct::SizeID		=   DN_450
+		CDB_Product::ProdImgID	=	"PX_ZIO_200_F"
+		CDB_Product::AccessGroupID=	NO_ID
+		CDB_Separator::CharactID	=	C_ZIZE_450
+	}
+}
+
+new:CDB_Separator(ZIOF_500) -> SEPARATOR_TAB
+{ Inherited(ZIOF_50)
+	{
+		CDB_Product::Reference	=	"303020-52100"
+		CDB_Product::Name			=	"ZIO 500F"
+		CDB_TAProduct::SizeID		=   DN_500
+		CDB_Product::ProdImgID	=	"PX_ZIO_200_F"
+		CDB_Product::AccessGroupID=	NO_ID
+		CDB_Separator::CharactID	=	C_ZIZE_500
+	}
+}
+
+new:CDB_Separator(ZIOF_600) -> SEPARATOR_TAB
+{ Inherited(ZIOF_50)
+	{
+		CDB_Product::Reference	=	"303020-52200"
+		CDB_Product::Name			=	"ZIO 600F"
+		CDB_TAProduct::SizeID		=   DN_600
+		CDB_Product::ProdImgID	=	"PX_ZIO_200_F"
+		CDB_Product::AccessGroupID=	NO_ID
+		CDB_Separator::CharactID	=	C_ZIZE_600
+	}
+}
+
+////////////////////////
+// *** ZIO F - PN16 ****
+////////////////////////
+
+new:CDB_Separator(ZIOF_350B) -> SEPARATOR_TAB
+{
+	{
+		{
+			{
+				{
+					0								                // isDeleted
+					1                                               // isAvailable
+					0                                               // isHidden
+					1                                               // isFix
+					0                                               // Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+					0                                               // Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+					0               								// Sort integer (Allow to show a group of articles in the order defined with this variable).
+				}
+				0.6e+6 \ 1.6e+6                         		// Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+				NO_ID                                           // PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+				160.0                                           // Tmax in °C
+				-10.0                                           // Tmin in °C
+			}
+			"793 6350"                                  	// Reference to the TA Product
+			"ZIO 350F"                                      // Name of the product
+			SEPTYPE_MBORSP                                  // Identifier of the valve type
+			FAM_ZIO                                         // Identifier of the family of the product
+			VERS_INDUSTR                                    // Identifier of the version of the product
+			1                                               // Level of priority for selection [1,10]
+			"IDS_COMM_FLANGE_PN16"                          // Product comment
+			"PX_ZIO_200_F"                                  // Product image ID
+			NO_ID                                           // Identifier of the accessory group
+			#ePartOfaSetNo                                  // Boolean indicating if product is part of a set. Can be #ePartOfaSetNo, #ePartOfaSetYes, #ePartOfaSetYesBreakOk or #ePartOfaSetYesBreakOnMsg.
+			NO_ID											// Table ID where are sets if exist for the current product.
+			0.0                                             // Price of the product
+			#eProduct                              		    // #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+			NO_ID                                       	// Identifier of the series of the accessory (mainly used in DlgDirSel)
+			0                                           	// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+			NO_ID                                      		// Identifier of the accessory type if #eBoth 
+			NO_ID											// Identifier of the accessory family if #eBoth
+		}
+		BDY_STEEL                                       // Identifier of the body material
+		DN_350                                          // Identifier of the corresp. valve size
+		CONN_FLANGE                                     // Identifier of the (inlet/pipe side) connection
+		NO_ID                                           // Identifier of the connection table, can be NO_ID
+		NO_ID                                           // Identifier of the outlet/body side connection, can be NO_ID
+		""                                              // Type of the valve as used in the CBI II
+		""                                              // Size of the valve as used in the CBI II
+		""                                              // Size of the valve in inch as used in the CBI II
+		0                                               // CBI compatibility Index
+		""                                              // CBI Version
+		0.0                                             // Maximum Dp of the valve
+		#eMeasPointNone                                 // Measuring points
+		#eMeasDataNone                                  // Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+		NO_ID											// Identifier of the inlet size ID
+		NO_ID											// Identifier of the outlet size ID
+	}
+	C_ZIZE_350                                      // Identifier of the separator QDp characteristic
+	0                                               // The number of magnet. 0 for separator without magnet.
+}
+
+new:CDB_Separator(ZIOF_400B) -> SEPARATOR_TAB
+{ Inherited(ZIOF_350B)
+	{
+		CDB_Product::Reference	=	"793 6400"
+		CDB_Product::Name			=	"ZIO 400F"
+		CDB_Product::ProdImgID	=	"PX_ZIO_200_F"
+		CDB_TAProduct::SizeID		=   DN_400
+		CDB_Separator::CharactID	=	C_ZIZE_400
+	}
+}
+
+new:CDB_Separator(ZIOF_450B) -> SEPARATOR_TAB
+{ Inherited(ZIOF_350B)
+	{
+		CDB_Product::Reference	=	"793 6450"
+		CDB_Product::Name			=	"ZIO 450F"
+		CDB_TAProduct::SizeID		=   DN_450
+		CDB_Separator::CharactID	=	C_ZIZE_450
+	}
+}
+
+new:CDB_Separator(ZIOF_500B) -> SEPARATOR_TAB
+{ Inherited(ZIOF_350B)
+	{
+		CDB_Product::Reference	=	"793 6500"
+		CDB_Product::Name			=	"ZIO 500F"
+		CDB_TAProduct::SizeID		=   DN_500
+		CDB_Separator::CharactID	=	C_ZIZE_500
+	}
+}
+
+new:CDB_Separator(ZIOF_600B) -> SEPARATOR_TAB
+{ Inherited(ZIOF_350B)
+	{
+		CDB_Product::Reference	=	"793 6600"
+		CDB_Product::Name			=	"ZIO 600F"
+		CDB_TAProduct::SizeID		=   DN_600
+		CDB_Separator::CharactID	=	C_ZIZE_600
+	}
+}
+
+/////////////////
+// *** ZCD ****
+/////////////////
+new:CDB_Separator(ZCD_20) -> SEPARATOR_TAB
+{
+	{
+		{
+			{
+				{
+					0								                // isDeleted
+					1                                               // isAvailable
+					0                                               // isHidden
+					1                                               // isFix
+					0                                               // Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+					0                                               // Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+					0               								// Sort integer (Allow to show a group of articles in the order defined with this variable).
+				}
+				0.0 \ 1.0e+6                            		// Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+				NO_ID                                           // PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+				120.0                                           // Tmax in °C
+				-10.0                                           // Tmin in °C
+			}
+			"789 7420"                                  	// Reference to the TA Product
+			"ZCD 20"                                        // Name of the product
+			SEPTYPE_ZCD                                     // Identifier of the valve type
+			FAM_ZCD                                         // Identifier of the family of the product
+			VERS_STD                                        // Identifier of the version of the product
+			1                                               // Level of priority for selection [1,10]
+			""                                              // Product comment
+			"NO_ID"						// Add image        // Product image ID
+			ACCSEPGR_ZCD_20_25                              // Identifier of the accessory group
+			#ePartOfaSetNo                                  // Boolean indicating if product is part of a set. Can be #ePartOfaSetNo, #ePartOfaSetYes, #ePartOfaSetYesBreakOk or #ePartOfaSetYesBreakOnMsg.
+			NO_ID											// Table ID where are sets if exist for the current product.
+			0.0                                             // Price of the product
+			#eProduct                              		    // #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+			NO_ID                                       	// Identifier of the series of the accessory (mainly used in DlgDirSel)
+			0                                           	// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+			NO_ID                                      		// Identifier of the accessory type if #eBoth 
+			NO_ID											// Identifier of the accessory family if #eBoth
+		}
+		BDY_BRASS                                       // Identifier of the body material
+		DN_20                                           // Identifier of the corresp. valve size
+		CONN_THREAD                                     // Identifier of the (inlet/pipe side) connection
+		NO_ID                                           // Identifier of the connection table, can be NO_ID
+		NO_ID                                           // Identifier of the outlet/body side connection, can be NO_ID
+		""                                              // Type of the valve as used in the CBI II
+		""                                              // Size of the valve as used in the CBI II
+		""                                              // Size of the valve in inch as used in the CBI II
+		0                                               // CBI compatibility Index
+		""                                              // CBI Version
+		0.0                                             // Maximum Dp of the valve
+		#eMeasPointNone                                 // Measuring points
+		#eMeasDataNone                                  // Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+		NO_ID											// Identifier of the inlet size ID
+		NO_ID											// Identifier of the outlet size ID
+	}
+	C_ZCD_20                                        // Identifier of the separator QDp characteristic
+	0                                               // Number of magnet. 0 for separator without magnet.
+}
+
+new:CDB_Separator(ZCD_25) -> SEPARATOR_TAB
+{ Inherited(ZCD_20)
+	{
+		CDB_Product::Reference	=	"789 7425"
+		CDB_Product::Name			=	"ZCD 25"
+		CDB_Product::AccessGroupID  =	ACCSEPGR_ZCD_20_25
+		CDB_TAProduct::SizeID		=	DN_25
+		CDB_Separator::CharactID	=	C_ZCD_25
+	}
+}
+
+new:CDB_Separator(ZCD_32) -> SEPARATOR_TAB
+{ Inherited(ZCD_25)
+	{
+		CDB_Product::Reference	=	"789 7432"
+		CDB_Product::Name			=	"ZCD 32"
+		CDB_TAProduct::SizeID		=	DN_32
+		CDB_Separator::CharactID	=	C_ZCD_32
+		CDB_Product::AccessGroupID  =	ACCSEPGR_ZCD_32
+	}
+}
+
+new:CDB_Separator(ZCD_40) -> SEPARATOR_TAB
+{ Inherited(ZCD_25)
+	{
+		CDB_Product::Reference	=	"789 7440"
+		CDB_Product::Name			=	"ZCD 40"
+		CDB_TAProduct::SizeID		=	DN_40
+		CDB_Product::AccessGroupID	=	ACCSEPGR_ZCD_40_50
+		CDB_Separator::CharactID	=	C_ZCD_40
+	}
+}
+
+new:CDB_Separator(ZCD_50) -> SEPARATOR_TAB
+{ Inherited(ZCD_25)
+	{
+		CDB_Product::Reference	=	"789 7450"
+		CDB_Product::Name			=	"ZCD 50"
+		CDB_TAProduct::SizeID		=	DN_50
+		CDB_Separator::CharactID	=	C_ZCD_50
+		CDB_Product::AccessGroupID	=	ACCSEPGR_ZCD_40_50
+	}
+}
+
+new:CDB_Separator(ZCD_50B) -> SEPARATOR_TAB
+{ Inherited(ZCD_50)
+	{
+		CDB_Product::Reference	=	"303040-80902"
+		CDB_Product::Name			=	"ZCDF 50"
+		CDB_TAProduct::ConnectID = CONN_FLANGE
+	}
+}
+
+//////////////////////////////////////////////
+// *** Ferro-Cleaner: Magnetic separator ****
+/////////////////////////////////////////////
+
+new:CDB_Separator(FC_TYPE80_32M) -> SEPARATOR_TAB
+{
+	{
+		{
+			{
+				{
+					0								                // isDeleted
+					1                                               // isAvailable
+					0                                               // isHidden
+					1                                               // isFix
+					0                                               // Integer for flagging b31...b0 (bit 0: InCbi, bit1: available for Hub, bit2: available for HubStation)
+					0                                              	// Integer to exclude product for selection: 1 (Individual/Batch), 2 (Direct) or 4 (HMCalc).
+					0               								// Sort integer (Allow to show a group of articles in the order defined with this variable).
+				}
+				0.6e+6 \ 1.6e+6                         		// Pmaxmin and Pmaxmax in Pa (if Pmaxmin = PN6, Pmaxmin is not used in PN string; a 'd' in front of Pmaxmin enforces it in PN string)
+				NO_ID                                           // PNRangeID			Identifier of CDB_RuledTable that contains available PN, could be NO_ID in this case Pmaxmin/max are used
+				120.0                                           // Tmax in °C
+				-10.0                                           // Tmin in °C
+			}
+			"792 1100"                              	    // Reference to the TA Product
+			"IDS_NAME_FC_80_32"                             // Name of the product
+			SEPTYPE_MGSP                                    // Identifier of the valve type
+			FAM_FERCL                                       // Identifier of the family of the product
+			VERS_MAGNET                                     // Identifier of the version of the product
+			1                                               // Level of priority for selection [1,10]
+			""                                              // Product comment
+			"PX_FC_SEP_80"                                  // Product image ID
+			ACCSEPFC_80                                     // Identifier of the accessory group
+			#ePartOfaSetNo                                  // Boolean indicating if product is part of a set. Can be #ePartOfaSetNo, #ePartOfaSetYes, #ePartOfaSetYesBreakOk or #ePartOfaSetYesBreakOnMsg.
+			NO_ID											// Table ID where are sets if exist for the current product.
+			0.0                                             // Price of the product
+			#eProduct                              		    // #eProduct, #eAccessory, #eBoth Integer to indicate if the Product is only Product, only Accessory or both
+			NO_ID                                       	// Identifier of the series of the accessory (mainly used in DlgDirSel)
+			0                                           	// 0/1: 1 if accessory cannot be ordered separately (for DlgDirSel)
+			NO_ID                                      		// Identifier of the accessory type if #eBoth 
+			NO_ID											// Identifier of the accessory family if #eBoth
+		}
+		BDY_BRASS                                       // Identifier of the body material
+		DN_32                                           // Identifier of the corresp. valve size
+		CONN_THREADM                                    // Identifier of the (inlet/pipe side) connection
+		NO_ID                                           // Identifier of the connection table, can be NO_ID
+		NO_ID                                           // Identifier of the outlet/body side connection, can be NO_ID
+		""                                              // Type of the valve as used in the CBI II
+		""                                              // Size of the valve as used in the CBI II
+		""                                              // Size of the valve in inch as used in the CBI II
+		0                                               // CBI compatibility Index
+		""                                              // CBI Version
+		0.0                                             // Maximum Dp of the valve
+		#eMeasPointNone                                 // Measuring points
+		#eMeasDataNone                                  // Measurable data. #eMeasDataNone or a combination of #eMeasDataDp, #eMeasDataFlow, #eMeasDataDpSignal, #eMeasDataDpAvail, #eMeasDataDpStab or #eMeasDataDpCAlwaysOn.
+		NO_ID											// Identifier of the inlet size ID
+		NO_ID											// Identifier of the outlet size ID
+	}
+	C_FCL_32                                        // Identifier of the separator QDp characteristic
+	1                                               // The number of magnet. 0 for separator without magnet.
+}
+
+new:CDB_Separator(FC_TYPE80_32A) -> SEPARATOR_TAB
+{ Inherited(FC_TYPE80_32M)
+	{
+		CDB_Product::Reference	=	"792 1101"
+		CDB_Product::VersionID		=	VERS_ANODE
+		CDB_Separator::NumberOfMagnet = 0
+	}
+}
+
+new:CDB_Separator(FC_TYPE150_65) -> SEPARATOR_TAB
+{ Inherited(FC_TYPE80_32M)
+	{
+		CDB_Product::Reference	=	"792 1102"
+		CDB_Product::Name			=	"IDS_NAME_FC_150_65"
+		CDB_Product::VersionID      =    VERS_MAGWITHANODE
+		CDB_Product::ProdImgID      =    "PX_FC_SEP_150"
+		CDB_Product::AccessGroupID	=	ACCSEPFC_150
+		CDB_TAProduct::BodyMaterialID		=	BDY_GUNMETAL
+		CDB_TAProduct::SizeID		=	DN_65
+		CDB_TAProduct::ConnectID	=	CONN_FLANGE
+		CDB_Separator::CharactID	=	C_FCL_65
+	}
+}
+
+new:CDB_Separator(FC_TYPE150_80) -> SEPARATOR_TAB
+{ Inherited(FC_TYPE150_65)
+	{
+		CDB_Product::Reference	=	"792 1103"
+		CDB_Product::Name			=	"IDS_NAME_FC_150_80"
+		CDB_TAProduct::SizeID		=	DN_80
+		CDB_Separator::CharactID	=	C_FCL_80
+	}
+}
+
+new:CDB_Separator(FC_TYPE150_100) -> SEPARATOR_TAB
+{ Inherited(FC_TYPE150_65)
+	{
+		CDB_Product::Reference	=	"792 1104"
+		CDB_Product::Name			=	"IDS_NAME_FC_150_100"
+		CDB_TAProduct::SizeID		=	DN_100
+		CDB_Separator::CharactID	=	C_FCL_100
+	}
+}
+
+new:CDB_Separator(FC_TYPE273_125) -> SEPARATOR_TAB
+{ Inherited(FC_TYPE150_65)
+	{
+		CDB_HydroThing::Pmax        =   0.6e+6 \ 1.0e+6
+		CDB_Product::Reference	=	"792 1125"
+		CDB_Product::Name			=	"IDS_NAME_FC_273_125"
+		CDB_Product::ProdImgID		=	"PX_FC_SEP_273"
+		CDB_Product::AccessGroupID	=	ACCSEPFC_273_606
+		CDB_TAProduct::BodyMaterialID		=	BDY_STSTEEL
+		CDB_TAProduct::SizeID		=	DN_125
+		CDB_Separator::CharactID	=	C_FCL_125
+	}
+}
+
+new:CDB_Separator(FC_TYPE273_150) -> SEPARATOR_TAB
+{ Inherited(FC_TYPE273_125)
+	{
+		CDB_Product::Reference	=	"792 1126"
+		CDB_Product::Name			=	"IDS_NAME_FC_273_150"
+		CDB_TAProduct::SizeID		=	DN_150
+		CDB_Separator::CharactID	=	C_FCL_150
+	}
+}
+
+new:CDB_Separator(FC_TYPE273_200) -> SEPARATOR_TAB
+{ Inherited(FC_TYPE273_125)
+	{
+		CDB_Product::Reference	=	"792 1127"
+		CDB_Product::Name			=	"IDS_NAME_FC_273_200"
+		CDB_TAProduct::SizeID		=	DN_200
+		CDB_Separator::CharactID	=	C_FCL_200
+	}
+}
+
+new:CDB_Separator(FC_TYPE323_250) -> SEPARATOR_TAB
+{ Inherited(FC_TYPE273_125)
+	{
+		CDB_HydroThing::Pmax        =   0.6e+6 \ 1.6e+6
+		CDB_Product::Reference	=	"792 1128"
+		CDB_Product::Name			=	"IDS_NAME_FC_323_250"
+		CDB_TAProduct::SizeID		=	DN_250
+		CDB_Separator::CharactID	=	C_FCL_250
+		CDB_Separator::NumberOfMagnet	=	2
+	}
+}
+
+new:CDB_Separator(FC_TYPE406_300) -> SEPARATOR_TAB
+{ Inherited(FC_TYPE323_250)
+	{
+		CDB_Product::Reference	=	"792 1112"
+		CDB_Product::Name			=	"IDS_NAME_FC_406_300"
+		CDB_TAProduct::SizeID		=	DN_300
+		CDB_Separator::CharactID	=	C_FCL_300
+	}
+}
+
+new:CDB_Separator(FC_TYPE606_400) -> SEPARATOR_TAB
+{ Inherited(FC_TYPE406_300)
+	{
+		CDB_Product::Reference	=	"792 1113"
+		CDB_Product::Name			=	"IDS_NAME_FC_606_400"
+		CDB_TAProduct::SizeID		=	DN_400
+		CDB_Separator::CharactID	=	C_FCL_400
+		CDB_Separator::NumberOfMagnet	=	3
+	}
+}
+
+new:CDB_Separator(FC_TYPE606_500) -> SEPARATOR_TAB
+{ Inherited(FC_TYPE606_400)
+	{
+		CDB_Product::Reference	=	"792 1114"
+		CDB_Product::Name			=	"IDS_NAME_FC_606_500"
+		CDB_TAProduct::SizeID		=	DN_500
+		CDB_Separator::CharactID	=	C_FCL_500
+	}
+}
+
+//******************************************************************************
+// ACCESSORIES BEGIN
+//******************************************************************************
+
+///////////////////////////////////////////////////////////////////
+//
+//		Table ACCTYPE_TAB : ordered enumeration of the types of
+//							accessories
+//
+///////////////////////////////////////////////////////////////////
+new:CDB_StringID(ACCTYP_SEP)->ACCTYPE_TAB
+{
+	{
+		"IDS_ACCTYP_SEP"
+	}
+	1							// TODO: check about this numbering
+	SEPACCESSOR_TAB
+}
+
+///////////////////////////////////////////////////////////////////
+//
+//		Table ACCFAM_TAB : ordered enumeration of the families of
+//							accessories
+//
+///////////////////////////////////////////////////////////////////
+
+new:CDB_StringID(ACCFAM_ZU)->ACCFAM_TAB
+{
+	{
+		"IDS_ACCFAM_ZU"
+	}
+	1							// TODO: check about this numbering
+	ACCTYP_SEP
+}
+
+new:CDB_StringID(ACCFAM_ZIZE)->ACCFAM_TAB
+{
+	{
+		"IDS_ACCFAM_ZIZE"
+	}
+	2							// TODO: check about this numbering
+	ACCTYP_SEP
+}
+
+new:CDB_StringID(ACCFAM_ZCHM)->ACCFAM_TAB
+{
+	{
+		"IDS_ACCFAM_ZCHM"
+	}
+	3							// TODO: check about this numbering
+	ACCTYP_SEP
+}
+
+new:CDB_StringID(ACCFAM_FCREP)->ACCFAM_TAB
+{
+	{
+		"IDS_ACCFAM_FCREPAN"
+	}
+	4							// TODO: check about this numbering
+	ACCTYP_SEP
+}
+
+////////////////////////////////////////////////////////////////
+//
+//		Table SEPACCGROUP_TAB : Separator accessory groups
+//
+//		Rules:
+//			ACXXXID \ &ACYYYID	// ACXXXID implies ACYYYID
+//			ACXXXID \ !ACYYYID	// ACXXXID excludes ACYYYID
+//			>ACXXXID			// ACXXXID is built-in
+//			^ACXXXID			// ACXXXID excludes all others
+//		  	*ACXXXID			// ACXXXID two pieces should be included
+//			#ACXXXID			// ACXXXID is distributed on each parent item (3 vessels (1 primary + 2 secondary) => 3 times the accessory).
+//			+ACXXXID 			// ACXXXID is an intersection between this group and an other. For this group accessory is NOT displayed
+//			++ACXXXID			// ACXXXID is an intersection between this group and an other. For this group accessory is displayed
+////////////////////////////////////////////////////////////////
+
+new:CDB_RuledTable(ACCSEPGR_ZG_65) -> SEPACCGROUP_TAB
+{
+	{
+		"ZG 65"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ZUTX_25 \ !ACZGM_65100
+	ACZGM_65100 \ !ZUTX_25
+	ACZGI_65
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZG_80) -> SEPACCGROUP_TAB
+{
+	{
+		"ZG 80"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ZUTX_25 \ !ACZGM_65100
+	ACZGM_65100 \ !ZUTX_25
+	ACZGI_80
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZG_100) -> SEPACCGROUP_TAB
+{
+	{
+		"ZG 100"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ZUTX_25 \ !ACZGM_65100
+	ACZGM_65100 \ !ZUTX_25
+	ACZGI_100
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZG_125) -> SEPACCGROUP_TAB
+{
+	{
+		"ZG 125"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ZUTX_25 \ !ACZGM_125150
+	ACZGM_125150 \ !ZUTX_25
+	ACZGI_125
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZG_150) -> SEPACCGROUP_TAB
+{
+	{
+		"ZG 150"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ZUTX_25 \ !ACZGM_125150
+	ACZGM_125150 \ !ZUTX_25
+	ACZGI_150
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZG_200) -> SEPACCGROUP_TAB
+{
+	{
+		"ZG 200"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ZUTX_25 \ !ACZGM_200300
+	ACZGM_200300 \ !ZUTX_25
+	ACZGI_200
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZG_250) -> SEPACCGROUP_TAB
+{
+	{
+		"ZG 250"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ZUTX_25 \ !ACZGM_200300
+	ACZGM_200300 \ !ZUTX_25
+	ACZGI_250
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZG_300) -> SEPACCGROUP_TAB
+{
+	{
+		"ZG 300"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ZUTX_25 \ !ACZGM_200300
+	ACZGM_200300 \ !ZUTX_25
+	ACZGI_300
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZUV_2022) -> SEPACCGROUP_TAB
+{
+	{
+		"ZUV 20-22"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACZHUZUV_2022
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZUV_25) -> SEPACCGROUP_TAB
+{
+	{
+		"ZUV 25"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACZHUZUV_25
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZUV_32) -> SEPACCGROUP_TAB
+{
+	{
+		"ZUV 32"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACZHUZUV_32
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZUV_40) -> SEPACCGROUP_TAB
+{
+	{
+		"ZUV 40"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACZHUZUV_40
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZUD_2022) -> SEPACCGROUP_TAB
+{
+	{
+		"ZUD 20-22"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACZHUZUD_2022
+	ACZU_UPGR_KIT
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZUD_25) -> SEPACCGROUP_TAB
+{
+	{
+		"ZUD 25"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACZHUZUD_25
+	ACZU_UPGR_KIT
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZUD_32) -> SEPACCGROUP_TAB
+{
+	{
+		"ZUD 32"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACZHUZUD_32
+	ACZU_UPGR_KIT
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZUD_40) -> SEPACCGROUP_TAB
+{
+	{
+		"ZUD 40"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACZHUZUD_40
+	ACZU_UPGR_KIT
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZUM_2022) -> SEPACCGROUP_TAB
+{
+	{
+		"ZUM 20-22"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACZHUZUD_2022
+	ACZU_UPGR_KIT
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZUM_25) -> SEPACCGROUP_TAB
+{
+	{
+		"ZUM 25"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACZHUZUD_25
+	ACZU_UPGR_KIT
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZUM_32) -> SEPACCGROUP_TAB
+{
+	{
+		"ZUM 32"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACZHUZUD_32
+	ACZU_UPGR_KIT
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZUM_40) -> SEPACCGROUP_TAB
+{
+	{
+		"ZUM 40"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACZHUZUD_40
+	ACZU_UPGR_KIT
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZUK_2022) -> SEPACCGROUP_TAB
+{
+	{
+		"ZUK 20-22"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACZHUZUK_2022
+	ACZU_UPGR_KIT
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZUK_25) -> SEPACCGROUP_TAB
+{
+	{
+		"ZUK 25"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACZHUZUK_25
+	ACZU_UPGR_KIT
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZUK_32) -> SEPACCGROUP_TAB
+{
+	{
+		"ZUK 32"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACZHUZUK_32
+	ACZU_UPGR_KIT
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZUK_40) -> SEPACCGROUP_TAB
+{
+	{
+		"ZUK 40"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACZHUZUK_40
+	ACZU_UPGR_KIT
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZUC_20) -> SEPACCGROUP_TAB
+{
+	{
+		"ZUC-ZUCM 20"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACZU_UPGR_KIT
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZUC_25) -> SEPACCGROUP_TAB
+{
+	{
+		"ZUC 25"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACZHUZUC_25
+	ACZU_UPGR_KIT
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZUC_32) -> SEPACCGROUP_TAB
+{
+	{
+		"ZUC 32"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACZHUZUC_32
+	ACZU_UPGR_KIT
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZUC_40) -> SEPACCGROUP_TAB
+{
+	{
+		"ZUC 40"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACZHUZUC_40
+	ACZU_UPGR_KIT
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZUT) -> SEPACCGROUP_TAB
+{
+	{
+		"ZUT 15-25"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACZHUZUT
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZIO_5065) -> SEPACCGROUP_TAB
+{
+	{
+		"ZIO 50-65"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACZHIZIO_5065
+	ACZIMA_50100A
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZIO_80100) -> SEPACCGROUP_TAB
+{
+	{
+		"ZIO 80-100"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACZHIZIO_80100
+	ACZIMA_50100A
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZIO_125150) -> SEPACCGROUP_TAB
+{
+	{
+		"ZIO 125-150"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACZHIZIO_125150
+	ACZIMA_125150
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZIO_200) -> SEPACCGROUP_TAB
+{
+	{
+		"ZIO 200"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACZIMA_200
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZIO_250) -> SEPACCGROUP_TAB
+{
+	{
+		"ZIO 250"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACZIMA_250300
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZIO_300) -> SEPACCGROUP_TAB
+{
+	{
+		"ZIO 300"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACZIMA_250300
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZCD_20_25) -> SEPACCGROUP_TAB
+{
+	{
+		"ZCHM 20-25"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACZCHM_20_25
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZCD_32) -> SEPACCGROUP_TAB
+{
+	{
+		"ZCHM 32"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACZCHM_32
+}
+
+new:CDB_RuledTable(ACCSEPGR_ZCD_40_50) -> SEPACCGROUP_TAB
+{
+	{
+		"ZCHM 40-50"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACZCHM_40_50
+}
+
+// For ferro-cleaner
+
+new:CDB_RuledTable(ACCSEPFC_80) -> SEPACCGROUP_TAB
+{
+	{
+		"Type 80"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACFC_80
+}
+
+new:CDB_RuledTable(ACCSEPFC_150) -> SEPACCGROUP_TAB
+{
+	{
+		"Type 150"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACFC_150
+}
+
+new:CDB_RuledTable(ACCSEPFC_273_606) -> SEPACCGROUP_TAB
+{
+	{
+		"Type 273-606"
+		0						// 0/1: 1 if this table is the true parent of the IDs in it.
+	}
+	ACFC_273_606
+}
+
+//******************************************************************************
+// ACCESSORIES END
+//******************************************************************************
+
+
+////////////////////////////////////////////////////////////////
+//
+//		ROOT TABLE identification
+//
+////////////////////////////////////////////////////////////////
+
+ROOT_TABLE(ROOT_TABLE)

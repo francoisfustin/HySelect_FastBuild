@@ -1,0 +1,525 @@
+<?xml version="1.0"?>
+<CDataSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Modified>true</Modified>
+  <Mnfr>
+    <ID>MNFR_392904030215</ID>
+    <Name>Griswold</Name>
+    <FamTab>
+      <ID>FAMTAB_212904030215</ID>
+      <Name>Alien family table</Name>
+      <List>
+        <CDataFamily>
+          <ID>FAM_341108090215</ID>
+          <Name>QuickSet 1/2"-2" Sw/NP</Name>
+          <Order>0</Order>
+        </CDataFamily>
+        <CDataFamily>
+          <ID>FAM_553408090215</ID>
+          <Name>SpeedSet 1/2"-2 " Sw/NP</Name>
+          <Order>1</Order>
+        </CDataFamily>
+        <CDataFamily>
+          <ID>FAM_523607090215</ID>
+          <Name>QuickSet2-1/2"-18" Fl/Gr</Name>
+          <Order>2</Order>
+        </CDataFamily>
+      </List>
+    </FamTab>
+    <CharTab>
+      <ID>CHARTAB_212904030215</ID>
+      <Name>Alien char table</Name>
+      <List>
+        <CDataChar>
+          <List>
+            <KVP>
+              <O>4</O>
+              <KV>0.19029474024</KV>
+            </KVP>
+            <KVP>
+              <O>5</O>
+              <KV>0.28544211036</KV>
+            </KVP>
+            <KVP>
+              <O>6</O>
+              <KV>0.41518852416</KV>
+            </KVP>
+            <KVP>
+              <O>7</O>
+              <KV>0.61413302532</KV>
+            </KVP>
+            <KVP>
+              <O>10</O>
+              <KV>1.3839617472</KV>
+            </KVP>
+          </List>
+          <ID>CHAR_273508090215</ID>
+          <Discrete>false</Discrete>
+          <MultiTurn>true</MultiTurn>
+          <NbrCurves>1</NbrCurves>
+        </CDataChar>
+        <CDataChar>
+          <List>
+            <KVP>
+              <O>3</O>
+              <KV>0.15569569656</KV>
+            </KVP>
+            <KVP>
+              <O>4</O>
+              <KV>0.35464019772</KV>
+            </KVP>
+            <KVP>
+              <O>5</O>
+              <KV>0.58818374256000006</KV>
+            </KVP>
+            <KVP>
+              <O>6</O>
+              <KV>0.81307752648</KV>
+            </KVP>
+            <KVP>
+              <O>7</O>
+              <KV>1.297464138</KV>
+            </KVP>
+            <KVP>
+              <O>10</O>
+              <KV>2.6814258852000004</KV>
+            </KVP>
+          </List>
+          <ID>CHAR_384508090215</ID>
+          <Discrete>false</Discrete>
+          <MultiTurn>true</MultiTurn>
+          <NbrCurves>1</NbrCurves>
+        </CDataChar>
+        <CDataChar>
+          <List>
+            <KVP>
+              <O>3</O>
+              <KV>0.23354354484000003</KV>
+            </KVP>
+            <KVP>
+              <O>4</O>
+              <KV>0.41518852416</KV>
+            </KVP>
+            <KVP>
+              <O>5</O>
+              <KV>1.1677177242</KV>
+            </KVP>
+            <KVP>
+              <O>6</O>
+              <KV>1.513708161</KV>
+            </KVP>
+            <KVP>
+              <O>7</O>
+              <KV>2.2489378392000003</KV>
+            </KVP>
+            <KVP>
+              <O>10</O>
+              <KV>7.0063063452</KV>
+            </KVP>
+          </List>
+          <ID>CHAR_234608090215</ID>
+          <Discrete>false</Discrete>
+          <MultiTurn>true</MultiTurn>
+          <NbrCurves>1</NbrCurves>
+        </CDataChar>
+        <CDataChar>
+          <List>
+            <KVP>
+              <O>2</O>
+              <KV>0.3459904368</KV>
+            </KVP>
+            <KVP>
+              <O>3</O>
+              <KV>0.9947225058</KV>
+            </KVP>
+            <KVP>
+              <O>4</O>
+              <KV>1.9029474024000002</KV>
+            </KVP>
+            <KVP>
+              <O>5</O>
+              <KV>3.027416322</KV>
+            </KVP>
+            <KVP>
+              <O>6</O>
+              <KV>4.4113780691999995</KV>
+            </KVP>
+            <KVP>
+              <O>7</O>
+              <KV>6.1845790578000006</KV>
+            </KVP>
+            <KVP>
+              <O>8</O>
+              <KV>9.947225058</KV>
+            </KVP>
+            <KVP>
+              <O>10</O>
+              <KV>14.704593564</KV>
+            </KVP>
+          </List>
+          <ID>CHAR_144908090215</ID>
+          <Discrete>false</Discrete>
+          <MultiTurn>true</MultiTurn>
+          <NbrCurves>1</NbrCurves>
+        </CDataChar>
+        <CDataChar>
+          <List>
+            <KVP>
+              <O>2</O>
+              <KV>0.5189856552</KV>
+            </KVP>
+            <KVP>
+              <O>3</O>
+              <KV>1.729952184</KV>
+            </KVP>
+            <KVP>
+              <O>4</O>
+              <KV>2.8544211036</KV>
+            </KVP>
+            <KVP>
+              <O>5</O>
+              <KV>4.5843732876</KV>
+            </KVP>
+            <KVP>
+              <O>6</O>
+              <KV>6.919808736</KV>
+            </KVP>
+            <KVP>
+              <O>7</O>
+              <KV>10.379713104</KV>
+            </KVP>
+            <KVP>
+              <O>8</O>
+              <KV>15.137081610000001</KV>
+            </KVP>
+            <KVP>
+              <O>10</O>
+              <KV>23.354354484</KV>
+            </KVP>
+          </List>
+          <ID>CHAR_305508090215</ID>
+          <Discrete>false</Discrete>
+          <MultiTurn>true</MultiTurn>
+          <NbrCurves>1</NbrCurves>
+        </CDataChar>
+        <CDataChar>
+          <List>
+            <KVP>
+              <O>2</O>
+              <KV>0.432488046</KV>
+            </KVP>
+            <KVP>
+              <O>3</O>
+              <KV>2.16244023</KV>
+            </KVP>
+            <KVP>
+              <O>4</O>
+              <KV>4.32488046</KV>
+            </KVP>
+            <KVP>
+              <O>5</O>
+              <KV>6.4873206900000007</KV>
+            </KVP>
+            <KVP>
+              <O>6</O>
+              <KV>11.244689196</KV>
+            </KVP>
+            <KVP>
+              <O>7</O>
+              <KV>15.569569656</KV>
+            </KVP>
+            <KVP>
+              <O>8</O>
+              <KV>22.489378392</KV>
+            </KVP>
+            <KVP>
+              <O>10</O>
+              <KV>34.59904368</KV>
+            </KVP>
+          </List>
+          <ID>CHAR_140009090215</ID>
+          <Discrete>false</Discrete>
+          <MultiTurn>true</MultiTurn>
+          <NbrCurves>1</NbrCurves>
+        </CDataChar>
+      </List>
+    </CharTab>
+    <ValveTab>
+      <ID>VALVTAB_212904030215</ID>
+      <Name>Alien valve table</Name>
+      <List>
+        <CValve>
+          <ID>VALV_353707090215</ID>
+          <Name>QuickSet 2-1/2"</Name>
+          <FamID>FAM_523607090215</FamID>
+          <DNID>DN_65</DNID>
+          <CharID />
+          <KvsSignal>147.91091173200002</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_193807090215</ID>
+          <Name>QuickSet 3"</Name>
+          <FamID>FAM_523607090215</FamID>
+          <DNID>DN_80</DNID>
+          <CharID />
+          <KvsSignal>232.678568748</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_323807090215</ID>
+          <Name>QuickSet 4"</Name>
+          <FamID>FAM_523607090215</FamID>
+          <DNID>DN_100</DNID>
+          <CharID />
+          <KvsSignal>501.68613336000004</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_453807090215</ID>
+          <Name>QuickSet 5"</Name>
+          <FamID>FAM_523607090215</FamID>
+          <DNID>DN_125</DNID>
+          <CharID />
+          <KvsSignal>691.9808736</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_593807090215</ID>
+          <Name>QuickSet 6"</Name>
+          <FamID>FAM_523607090215</FamID>
+          <DNID>DN_150</DNID>
+          <CharID />
+          <KvsSignal>1081.220115</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_173907090215</ID>
+          <Name>QuickSet 8"</Name>
+          <FamID>FAM_523607090215</FamID>
+          <DNID>DN_200</DNID>
+          <CharID />
+          <KvsSignal>1816.4497932000002</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_313907090215</ID>
+          <Name>QuickSet 10"</Name>
+          <FamID>FAM_523607090215</FamID>
+          <DNID>DN_250</DNID>
+          <CharID />
+          <KvsSignal>3459.904368</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_453907090215</ID>
+          <Name>QuickSet 12"</Name>
+          <FamID>FAM_523607090215</FamID>
+          <DNID>DN_300</DNID>
+          <CharID />
+          <KvsSignal>4930.3637244</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_004007090215</ID>
+          <Name>QuickSet 14"</Name>
+          <FamID>FAM_523607090215</FamID>
+          <DNID>DN_350</DNID>
+          <CharID />
+          <KvsSignal>6314.3254716</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_134007090215</ID>
+          <Name>QuickSet 16"</Name>
+          <FamID>FAM_523607090215</FamID>
+          <DNID>DN_400</DNID>
+          <CharID />
+          <KvsSignal>8303.7704832</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_304007090215</ID>
+          <Name>QuickSet 18"</Name>
+          <FamID>FAM_523607090215</FamID>
+          <DNID>DN_450</DNID>
+          <CharID />
+          <KvsSignal>12542.153334</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_162308090215</ID>
+          <Name>QuickSet 1/2"/3/4" 0.39</Name>
+          <FamID>FAM_341108090215</FamID>
+          <DNID>DN_15</DNID>
+          <CharID />
+          <KvsSignal>0.33734067588</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_242308090215</ID>
+          <Name>QuickSet 1/2"/3/4" 1.1</Name>
+          <FamID>FAM_341108090215</FamID>
+          <DNID>DN_15</DNID>
+          <CharID />
+          <KvsSignal>0.95147370120000008</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_382308090215</ID>
+          <Name>QuickSet 1/2"/3/4" 2.5</Name>
+          <FamID>FAM_341108090215</FamID>
+          <DNID>DN_15</DNID>
+          <CharID />
+          <KvsSignal>2.16244023</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_522308090215</ID>
+          <Name>QuickSet 1/2"/3/4" 4.2</Name>
+          <FamID>FAM_341108090215</FamID>
+          <DNID>DN_15</DNID>
+          <CharID />
+          <KvsSignal>3.6328995864</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_202408090215</ID>
+          <Name>QuickSet 3/4" L 0.9</Name>
+          <FamID>FAM_341108090215</FamID>
+          <DNID>DN_20</DNID>
+          <CharID />
+          <KvsSignal>0.77847848280000009</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_342408090215</ID>
+          <Name>QuickSet 3/4" L 1.9</Name>
+          <FamID>FAM_341108090215</FamID>
+          <DNID>DN_20</DNID>
+          <CharID />
+          <KvsSignal>1.6434545748</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_452408090215</ID>
+          <Name>QuickSet 3/4" L 3.9</Name>
+          <FamID>FAM_341108090215</FamID>
+          <DNID>DN_20</DNID>
+          <CharID />
+          <KvsSignal>3.3734067588</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_552408090215</ID>
+          <Name>QuickSet 3/4" L 7</Name>
+          <FamID>FAM_341108090215</FamID>
+          <DNID>DN_20</DNID>
+          <CharID />
+          <KvsSignal>6.054832644</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_422508090215</ID>
+          <Name>QuickSet 1" 1.8</Name>
+          <FamID>FAM_341108090215</FamID>
+          <DNID>DN_25</DNID>
+          <CharID />
+          <KvsSignal>1.5569569656000002</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_232608090215</ID>
+          <Name>QuickSet 1" 3.8</Name>
+          <FamID>FAM_341108090215</FamID>
+          <DNID>DN_25</DNID>
+          <CharID />
+          <KvsSignal>3.2869091496</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_332608090215</ID>
+          <Name>QuickSet 1" 7.6</Name>
+          <FamID>FAM_341108090215</FamID>
+          <DNID>DN_25</DNID>
+          <CharID />
+          <KvsSignal>6.5738182992</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_462608090215</ID>
+          <Name>QuickSet 1" 12.2</Name>
+          <FamID>FAM_341108090215</FamID>
+          <DNID>DN_25</DNID>
+          <CharID />
+          <KvsSignal>10.5527083224</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_092708090215</ID>
+          <Name>QuickSet 1-1/4" 10</Name>
+          <FamID>FAM_341108090215</FamID>
+          <DNID>DN_32</DNID>
+          <CharID />
+          <KvsSignal>8.64976092</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_272708090215</ID>
+          <Name>QuickSet 1-1/4" 21.8</Name>
+          <FamID>FAM_341108090215</FamID>
+          <DNID>DN_32</DNID>
+          <CharID />
+          <KvsSignal>18.856478805600002</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_452708090215</ID>
+          <Name>QuickSet 1-1/2" 22.1</Name>
+          <FamID>FAM_341108090215</FamID>
+          <DNID>DN_40</DNID>
+          <CharID />
+          <KvsSignal>19.1159716332</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_532808090215</ID>
+          <Name>QuickSet 1-1/2" 54.7</Name>
+          <FamID>FAM_341108090215</FamID>
+          <DNID>DN_40</DNID>
+          <CharID />
+          <KvsSignal>47.3141922324</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_162908090215</ID>
+          <Name>QuickSet 2" 105.2</Name>
+          <FamID>FAM_341108090215</FamID>
+          <DNID>DN_50</DNID>
+          <CharID />
+          <KvsSignal>90.9954848784</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_273508090215</ID>
+          <Name>SppedSet 1/2"</Name>
+          <FamID>FAM_553408090215</FamID>
+          <DNID>DN_15</DNID>
+          <CharID>CHAR_273508090215</CharID>
+          <KvsSignal>-1</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_384508090215</ID>
+          <Name>SppedSet 3/4"</Name>
+          <FamID>FAM_553408090215</FamID>
+          <DNID>DN_20</DNID>
+          <CharID>CHAR_384508090215</CharID>
+          <KvsSignal>-1</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_234608090215</ID>
+          <Name>SppedSet 1"</Name>
+          <FamID>FAM_553408090215</FamID>
+          <DNID>DN_25</DNID>
+          <CharID>CHAR_234608090215</CharID>
+          <KvsSignal>-1</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_144908090215</ID>
+          <Name>SppedSet 1-1/4"</Name>
+          <FamID>FAM_553408090215</FamID>
+          <DNID>DN_32</DNID>
+          <CharID>CHAR_144908090215</CharID>
+          <KvsSignal>-1</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_305508090215</ID>
+          <Name>SppedSet 1-1/2"</Name>
+          <FamID>FAM_553408090215</FamID>
+          <DNID>DN_40</DNID>
+          <CharID>CHAR_305508090215</CharID>
+          <KvsSignal>-1</KvsSignal>
+        </CValve>
+        <CValve>
+          <ID>VALV_140009090215</ID>
+          <Name>SppedSet 2"</Name>
+          <FamID>FAM_553408090215</FamID>
+          <DNID>DN_50</DNID>
+          <CharID>CHAR_140009090215</CharID>
+          <KvsSignal>-1</KvsSignal>
+        </CValve>
+      </List>
+    </ValveTab>
+  </Mnfr>
+</CDataSet>

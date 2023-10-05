@@ -1,0 +1,1248 @@
+#Start of test definition
+
+StartTechnicalParameters
+ApplicationType = 1
+AvailablePMPanels = 7
+BreakTankRequiredForWaterMakeUp = 1
+CVDefKvReynard = 1
+CVMaxDispDp = 200000
+CVMaxDpProp = 65000
+CVMinAuthCstFlow = 0.5
+CVMinAuthor = 0.25
+CVMinDpOnoff = 3000
+CVMinDpProp = 10000
+CVUseDpCPBand = 0
+CanChangePressureVolumeLimit = 0
+CurrencyID = CURRENCY_EUR
+DefaultCalculationNorm = PM_NORM_EN12828
+DefaultCoolingTps = 7
+DefaultFillTemperature = 15
+DefaultHeatingTps = 50
+DefaultISChangeOverCoolingSideAdditFamilyID = WATER_ADDIT
+DefaultISChangeOverCoolingSideAdditID = WATER
+DefaultISChangeOverCoolingSideDT = 6
+DefaultISChangeOverCoolingSidePcWeight = 0
+DefaultISChangeOverCoolingSideTps = 6
+DefaultISChangeOverHeatingSideAdditFamilyID = WATER_ADDIT
+DefaultISChangeOverHeatingSideAdditID = WATER
+DefaultISChangeOverHeatingSideDT = 20
+DefaultISChangeOverHeatingSidePcWeight = 0
+DefaultISChangeOverHeatingSideTps = 75
+DefaultISCoolingAdditFamilyID = WATER_ADDIT
+DefaultISCoolingAdditID = WATER
+DefaultISCoolingDT = 20
+DefaultISCoolingPcWeight = 0
+DefaultISCoolingTps = 60
+DefaultISHeatingAdditFamilyID = WATER_ADDIT
+DefaultISHeatingAdditID = WATER
+DefaultISHeatingDT = 5
+DefaultISHeatingPcWeight = 0
+DefaultISHeatingTps = 70
+DefaultISSolarAdditFamilyID = WATER_ADDIT
+DefaultISSolarAdditID = WATER
+DefaultISSolarDT = 20
+DefaultISSolarPcWeight = 0
+DefaultISSolarTps = 70
+DefaultMaxTempInCooling = 45
+DefaultMinTempInHeating = 5
+DefaultMinTempInSolar = 5
+DefaultPipeSerieID = STEEL_DIN2440
+DefaultPrjCoolingAdditID = WATER
+DefaultPrjCoolingDT = 5
+DefaultPrjCoolingPcWeight = 0
+DefaultPrjHeatingAdditID = WATER
+DefaultPrjHeatingDT = 5
+DefaultPrjHeatingPcWeight = 0
+DefaultSafetyPressureResponseValve = 300000
+DefaultSecondaryPumpHMin = 25000
+DefaultSmartCVLocation = 1
+DefaultStaticPressureOfWaterNetwork = 400000
+DefaultTAZ = 100
+DefaultWaterHardness = 1.78324958
+DefaultWaterMakeUpTemp = 15
+DegassingWaterReserveForVessel = 0.002
+DpCBCVDpcmin = 5000
+DpCBCVDplmin = 5000
+DpCHide = 0
+DpCHminFullyOpenMv = 0
+DpCMinDp = 5000
+DpCMvLocation = 0
+DpCMvWithSameSizeOnly = 0
+DpRefForBest6Way = 3000
+FixedOrificeMaxDp = 6000
+FixedOrificeMinDp = 2000
+FlowDeviationMinus = -0.1
+FlowDeviationPlus = 0.1
+FluidTempLimitEN12953 = 105
+InitialPressureMargin = 30000
+MaxNumberOfAdditionalVesselsInParallel = 2
+MaxNumberOfVentoInParallel = 2
+MaxSafetyValveInParallel = 3
+MaxSizeShift = 4
+MinPressureMargin = 20000
+PICvHide = 0
+PICvMinDp = 1000
+PSetupCompresso = 10000
+PSetupTransfero = 20000
+PipeMaxDp = 200
+PipeMaxVelocity = 2
+PipeMinDp = 10
+PipeMinVelocity = 0.3
+PipeTargetDp = 150
+PipeTargetVelocity = 1
+PipeTargetVelosityUsed = 0
+PressureVolumeLimit = 300000
+ProjectType = 1
+SafetyTempLimiterLimitEN12953 = 110
+SizeShiftAbove = 0
+SizeShiftBelow = -2
+SmartValveDpMaxForBestSuggestion = 20000
+TrvDefDpTotal = 10000
+TrvDefRoomTemperature = 20
+TrvDefSupplyTemperature = 80
+TrvMaxDp = 30000
+TrvMinDpRatio = 0.25
+UseDefaultFreezingPointAsMinTemperature = 1
+UseSimplyPst = 0
+UseVesselPressureVolumeLimit = 0
+ValveMaxDp = 200000
+ValveMin2Dp = 6000
+ValveMinDp = 3000
+VenturiMaxDp = 10000
+VenturiMinDp = 2000
+VesselSelectionRangePercentage = 0
+EndTechnicalParameters
+
+Test number = 0
+
+SelectionMode = Individual
+ProductCategory = PM
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 70
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+ApplicationType = Heating
+PMTypeID = PMT_ALL_TAB
+WaterMakeUpTypeID = WMUP_TYPE_NONE
+DegassingChecked = false
+NormID = PM_NORM_EN12828
+SystemVolume = 10
+SolarContent = 0
+InstalledPower = 100000
+StaticHeight = 20
+PzChecked = false
+Pz = 0
+PSVS = 500000
+SafetyTempLimiter = 100
+MaxTemperature = 0
+SupplyTemperature = 70
+ReturnTemperature = 65
+MinTemperature = 5
+MinTemperatureChecked = false
+FillTemperature = 15
+PressurisationOn = PumpSuction
+PumpHead = 0
+MaxWidth = 0
+MaxHeight = 0
+DegassingMaxTempConnectionPoint = 75
+DegassingPressureConnectionPoint = 100000
+WaterMakeUpNetworkPN = 400000
+WaterMakeUpWaterTemp = 15
+WaterMakeUpWaterHardness = 1.78324958
+GeneralCombinedInOneDevice = false
+GeneralRedundancyPumpComp = false
+GeneralRedundancyTecBox = false
+CompressoInternalCoating = false
+CompressoExternalAir = false
+PumpDegassingCoolingVersion = false
+WaterMakeUpBreakTank = false
+WaterMakeUpDutyStandBy = false
+EndInputs
+
+StartOutputs
+Result number = 0;Calculated data;0.0228086;0.228086;0.05;0.00913333;0;0;216200;316200;316200;336200;246200;256200;266200;450000;266200;286200;2.35244;1.1;0.654181;0.305895;1.38889e-05
+Result number = 1;Vessel;false;0;STAT_SU300_6;SU 300.6;3;0.3;600000;5/70;350000;0.56;1.488;43;343;Floor standing;Thread ISO228 Male R;246200;281728;0.154495
+Result number = 2;Vessel;false;0;STAT_SU400_6;SU 400.6;2;0.4;600000;5/70;350000;0.62;1.54;62;462;Floor standing;Thread ISO228 Male R;246200;267667;0.111986
+Result number = 3;Vessel;false;0;STAT_SU500_6;SU 500.6;2;0.5;600000;5/70;350000;0.68;1.629;73;573;Floor standing;Thread ISO228 Male R;246200;293776;0.197005
+Result number = 4;Vessel;false;0;STAT_SU600_6;SU 600.6;2;0.6;600000;5/70;350000;0.74;1.606;81;681;Floor standing;Thread ISO228 Male R;246200;313344;0.282023
+Result number = 5;Vessel;false;0;STAT_SU800_6;SU 800.6;1;0.8;600000;5/70;350000;0.74;2.1;105;905;Floor standing;Thread ISO228 Male R;246200;267667;0.111986
+Result number = 6;Vessel;false;0;STAT_SG1000_6;SG 1000.6;1;1;600000;5/70;350000;0.85;2.189;290;1290;Floor standing;Thread ISO228 Male R;246200;293776;0.197005
+Result number = 7;Vessel;false;0;STAT_SG1500_6;SG 1500.6;1;1.5;600000;5/70;350000;1.016;2.342;400;1900;Floor standing;Thread ISO228 Male R;246200;334958;0.40955
+Result number = 8;Vessel;false;0;STAT_SU300_10;SU 300.10;3;0.3;1e+06;5/70;400000;0.56;1.488;66;366;Floor standing;Thread ISO228 Male R;246200;281728;0.154495
+Result number = 9;Vessel;false;0;STAT_SU400_10;SU 400.10;2;0.4;1e+06;5/70;400000;0.62;1.54;75;475;Floor standing;Thread ISO228 Male R;246200;267667;0.111986
+Result number = 10;Vessel;false;0;STAT_SU500_10;SU 500.10;2;0.5;1e+06;5/70;400000;0.68;1.629;103;603;Floor standing;Thread ISO228 Male R;246200;293776;0.197005
+Result number = 11;Vessel;false;0;STAT_SG1000_10;SG 1000.10;1;1;1e+06;5/70;400000;0.85;2.192;340;1340;Floor standing;Thread ISO228 Male R;246200;293776;0.197005
+Result number = 12;Vessel;false;0;STAT_SG1500_10;SG 1500.10;1;1.5;1e+06;5/70;400000;1.016;2.377;460;1960;Floor standing;Thread ISO228 Male R;246200;334958;0.40955
+Result number = 13;Compresso;false;0;COMP_C10_1_5F_CON;C 10.1-5.0 F Connect;false;500000;5/70;false;-1;0.37;0.315;0.37;14;Vessel top;600;230 VAC;59;NO_ID
+Result number = 14;Compresso;false;0;COMP_C10_1_5.0_CON;C 10.1-5.0 Connect;false;500000;5/70;false;-1;0.52;1.056;0.35;25;Floor standing;600;230 VAC;59;NO_ID
+Result number = 15;Compresso;false;0;COMP_C10_1_6F_CON;C 10.1-6.0 F Connect;false;600000;5/70;false;-1;0.37;0.315;0.37;14;Vessel top;600;230 VAC;59;NO_ID
+Result number = 16;Compresso;false;0;COMP_C10_1_6.0_CON;C 10.1-6.0 Connect;false;600000;5/70;false;-1;0.52;1.056;0.35;25;Floor standing;600;230 VAC;59;NO_ID
+Result number = 17;Compresso;false;0;COMP_C15_1_6_CON;C 15.1-6.0 Connect;false;600000;5/70;false;-1;0.52;1.056;0.35;50;Floor standing;1300;230 VAC;59;NO_ID
+Result number = 18;Compresso;false;0;COMP_C15_1_10_CON;C 15.1-10.0 Connect;false;1e+06;5/70;false;-1;0.52;1.056;0.35;50;Floor standing;1300;230 VAC;59;NO_ID
+Result number = 19;Compresso;false;0;COMP_C10_2_5.0_CON;C 10.2-5.0 Connect;false;500000;5/70;false;-1;0.52;1.056;0.35;38;Floor standing;1200;230 VAC;59;NO_ID
+Result number = 20;Compresso;false;0;COMP_C10_2_6.0_CON;C 10.2-6.0 Connect;false;600000;5/70;false;-1;0.52;1.056;0.35;38;Floor standing;1200;230 VAC;59;NO_ID
+Result number = 21;Compresso;false;0;COMP_C15_2_6_CON;C 15.2-6.0 Connect;false;600000;5/70;false;-1;0.52;1.056;0.35;88;Floor standing;2600;230 VAC;59;NO_ID
+Result number = 22;Compresso;false;0;COMP_C15_2_10_CON;C 15.2-10.0 Connect;false;1e+06;5/70;false;-1;0.52;1.056;0.35;88;Floor standing;2600;230 VAC;59;NO_ID
+Result number = 23;Compresso;false;0;COMP_CX_80_6_CONN;CX 80-6 Connect;false;600000;5/70;false;70;0.275;0.392;0.19;6;Wall hanged;100;230 VAC;0;NO_ID
+Result number = 24;Compresso;false;0;COMP_CX_80_10_CONN;CX 80-10 Connect;false;1e+06;5/70;false;70;0.275;0.392;0.19;6;Wall hanged;100;230 VAC;0;NO_ID
+Result number = 25;Compresso;false;0;COMP_CX_80_16_CONNECT;CX 80-16 Connect;false;1.6e+06;5/70;false;70;0.275;0.392;0.19;6;Wall hanged;100;230 VAC;0;NO_ID
+Result number = 26;Transfero;false;0;TRANS_TVC_6_1E;TV 6.1 E;false;1e+06;0/70;false;-1;0.5;0.92;0.53;42;Floor standing;1100;230 VAC;60;PMBUFVSL_TV_4_6_8
+Result number = 27;Transfero;false;0;TRANS_TVC_8_1E;TV 8.1 E;false;1e+06;0/70;false;-1;0.5;0.92;0.53;43;Floor standing;1400;230 VAC;60;PMBUFVSL_TV_4_6_8
+Result number = 28;Transfero;false;0;TRANS_TIC_61_2;TI 61.2 Connect;false;1e+06;0/90;false;-1;1.1;1.2;1.1;135;Floor standing;3000;3x400 VAC;70;NO_ID
+Result number = 29;Transfero;false;0;TRANS_TIC_62_2;TI 62.2 Connect;false;1e+06;0/90;false;-1;1.1;1.2;1.1;185;Floor standing;5400;3x400 VAC;70;NO_ID
+Result number = 30;Transfero;false;0;TRANS_TIC_91_2;TI 91.2 Connect;false;1e+06;0/90;false;-1;1.1;1.2;1.1;150;Floor standing;4200;3x400 VAC;70;NO_ID
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 1
+
+SelectionMode = Individual
+ProductCategory = PM
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 70
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+ApplicationType = Heating
+PMTypeID = PMT_EXPVSSL_TAB
+WaterMakeUpTypeID = WMUP_TYPE_NONE
+DegassingChecked = false
+NormID = PM_NORM_EN12828
+SystemVolume = 10
+SolarContent = 0
+InstalledPower = 100000
+StaticHeight = 20
+PzChecked = false
+Pz = 0
+PSVS = 500000
+SafetyTempLimiter = 100
+MaxTemperature = 0
+SupplyTemperature = 70
+ReturnTemperature = 65
+MinTemperature = 5
+MinTemperatureChecked = false
+FillTemperature = 15
+PressurisationOn = PumpSuction
+PumpHead = 0
+MaxWidth = 0
+MaxHeight = 0
+DegassingMaxTempConnectionPoint = 75
+DegassingPressureConnectionPoint = 100000
+WaterMakeUpNetworkPN = 400000
+WaterMakeUpWaterTemp = 15
+WaterMakeUpWaterHardness = 1.78324958
+GeneralCombinedInOneDevice = false
+GeneralRedundancyPumpComp = false
+GeneralRedundancyTecBox = false
+CompressoInternalCoating = false
+CompressoExternalAir = false
+PumpDegassingCoolingVersion = false
+WaterMakeUpBreakTank = false
+WaterMakeUpDutyStandBy = false
+EndInputs
+
+StartOutputs
+Result number = 0;Calculated data;0.0228086;0.228086;0.05;0.00913333;0;0;216200;316200;316200;336200;246200;256200;266200;450000;266200;286200;2.35244;1.1;0.654181;0.305895;1.38889e-05
+Result number = 1;Vessel;false;0;STAT_SU300_6;SU 300.6;3;0.3;600000;5/70;350000;0.56;1.488;43;343;Floor standing;Thread ISO228 Male R;246200;281728;0.154495
+Result number = 2;Vessel;false;0;STAT_SU400_6;SU 400.6;2;0.4;600000;5/70;350000;0.62;1.54;62;462;Floor standing;Thread ISO228 Male R;246200;267667;0.111986
+Result number = 3;Vessel;false;0;STAT_SU500_6;SU 500.6;2;0.5;600000;5/70;350000;0.68;1.629;73;573;Floor standing;Thread ISO228 Male R;246200;293776;0.197005
+Result number = 4;Vessel;false;0;STAT_SU600_6;SU 600.6;2;0.6;600000;5/70;350000;0.74;1.606;81;681;Floor standing;Thread ISO228 Male R;246200;313344;0.282023
+Result number = 5;Vessel;false;0;STAT_SU800_6;SU 800.6;1;0.8;600000;5/70;350000;0.74;2.1;105;905;Floor standing;Thread ISO228 Male R;246200;267667;0.111986
+Result number = 6;Vessel;false;0;STAT_SG1000_6;SG 1000.6;1;1;600000;5/70;350000;0.85;2.189;290;1290;Floor standing;Thread ISO228 Male R;246200;293776;0.197005
+Result number = 7;Vessel;false;0;STAT_SG1500_6;SG 1500.6;1;1.5;600000;5/70;350000;1.016;2.342;400;1900;Floor standing;Thread ISO228 Male R;246200;334958;0.40955
+Result number = 8;Vessel;false;0;STAT_SU300_10;SU 300.10;3;0.3;1e+06;5/70;400000;0.56;1.488;66;366;Floor standing;Thread ISO228 Male R;246200;281728;0.154495
+Result number = 9;Vessel;false;0;STAT_SU400_10;SU 400.10;2;0.4;1e+06;5/70;400000;0.62;1.54;75;475;Floor standing;Thread ISO228 Male R;246200;267667;0.111986
+Result number = 10;Vessel;false;0;STAT_SU500_10;SU 500.10;2;0.5;1e+06;5/70;400000;0.68;1.629;103;603;Floor standing;Thread ISO228 Male R;246200;293776;0.197005
+Result number = 11;Vessel;false;0;STAT_SG1000_10;SG 1000.10;1;1;1e+06;5/70;400000;0.85;2.192;340;1340;Floor standing;Thread ISO228 Male R;246200;293776;0.197005
+Result number = 12;Vessel;false;0;STAT_SG1500_10;SG 1500.10;1;1.5;1e+06;5/70;400000;1.016;2.377;460;1960;Floor standing;Thread ISO228 Male R;246200;334958;0.40955
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 2
+
+SelectionMode = Individual
+ProductCategory = PM
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 70
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+ApplicationType = Heating
+PMTypeID = PMT_EXPVSSLMBR_TAB
+WaterMakeUpTypeID = WMUP_TYPE_NONE
+DegassingChecked = false
+NormID = PM_NORM_EN12828
+SystemVolume = 10
+SolarContent = 0
+InstalledPower = 100000
+StaticHeight = 20
+PzChecked = false
+Pz = 0
+PSVS = 500000
+SafetyTempLimiter = 100
+MaxTemperature = 0
+SupplyTemperature = 70
+ReturnTemperature = 65
+MinTemperature = 5
+MinTemperatureChecked = false
+FillTemperature = 15
+PressurisationOn = PumpSuction
+PumpHead = 0
+MaxWidth = 0
+MaxHeight = 0
+DegassingMaxTempConnectionPoint = 75
+DegassingPressureConnectionPoint = 100000
+WaterMakeUpNetworkPN = 400000
+WaterMakeUpWaterTemp = 15
+WaterMakeUpWaterHardness = 1.78324958
+GeneralCombinedInOneDevice = false
+GeneralRedundancyPumpComp = false
+GeneralRedundancyTecBox = false
+CompressoInternalCoating = false
+CompressoExternalAir = false
+PumpDegassingCoolingVersion = false
+WaterMakeUpBreakTank = false
+WaterMakeUpDutyStandBy = false
+EndInputs
+
+StartOutputs
+Result number = 0;Calculated data;0.0228086;0.228086;0.05;0.00913333;0;0;216200;316200;316200;336200;246200;256200;266200;450000;266200;286200;2.35244;1.1;0.654181;0.305895;1.38889e-05
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 3
+
+SelectionMode = Individual
+ProductCategory = PM
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 70
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+ApplicationType = Heating
+PMTypeID = PMT_WITHCOMPRESS_TAB
+WaterMakeUpTypeID = WMUP_TYPE_NONE
+DegassingChecked = false
+NormID = PM_NORM_EN12828
+SystemVolume = 10
+SolarContent = 0
+InstalledPower = 100000
+StaticHeight = 20
+PzChecked = false
+Pz = 0
+PSVS = 500000
+SafetyTempLimiter = 100
+MaxTemperature = 0
+SupplyTemperature = 70
+ReturnTemperature = 65
+MinTemperature = 5
+MinTemperatureChecked = false
+FillTemperature = 15
+PressurisationOn = PumpSuction
+PumpHead = 0
+MaxWidth = 0
+MaxHeight = 0
+DegassingMaxTempConnectionPoint = 75
+DegassingPressureConnectionPoint = 100000
+WaterMakeUpNetworkPN = 400000
+WaterMakeUpWaterTemp = 15
+WaterMakeUpWaterHardness = 1.78324958
+GeneralCombinedInOneDevice = false
+GeneralRedundancyPumpComp = false
+GeneralRedundancyTecBox = false
+CompressoInternalCoating = false
+CompressoExternalAir = false
+PumpDegassingCoolingVersion = false
+WaterMakeUpBreakTank = false
+WaterMakeUpDutyStandBy = false
+EndInputs
+
+StartOutputs
+Result number = 0;Calculated data;0.0228086;0.228086;0.05;0.00913333;0;0;216200;316200;316200;336200;246200;256200;266200;450000;266200;286200;2.35244;1.1;0.654181;0.305895;1.38889e-05
+Result number = 1;Compresso;false;0;COMP_C10_1_5F_CON;C 10.1-5.0 F Connect;false;500000;5/70;false;-1;0.37;0.315;0.37;14;Vessel top;600;230 VAC;59;NO_ID
+Result number = 2;Compresso;false;0;COMP_C10_1_5.0_CON;C 10.1-5.0 Connect;false;500000;5/70;false;-1;0.52;1.056;0.35;25;Floor standing;600;230 VAC;59;NO_ID
+Result number = 3;Compresso;false;0;COMP_C10_1_6F_CON;C 10.1-6.0 F Connect;false;600000;5/70;false;-1;0.37;0.315;0.37;14;Vessel top;600;230 VAC;59;NO_ID
+Result number = 4;Compresso;false;0;COMP_C10_1_6.0_CON;C 10.1-6.0 Connect;false;600000;5/70;false;-1;0.52;1.056;0.35;25;Floor standing;600;230 VAC;59;NO_ID
+Result number = 5;Compresso;false;0;COMP_C15_1_6_CON;C 15.1-6.0 Connect;false;600000;5/70;false;-1;0.52;1.056;0.35;50;Floor standing;1300;230 VAC;59;NO_ID
+Result number = 6;Compresso;false;0;COMP_C15_1_10_CON;C 15.1-10.0 Connect;false;1e+06;5/70;false;-1;0.52;1.056;0.35;50;Floor standing;1300;230 VAC;59;NO_ID
+Result number = 7;Compresso;false;0;COMP_C10_2_5.0_CON;C 10.2-5.0 Connect;false;500000;5/70;false;-1;0.52;1.056;0.35;38;Floor standing;1200;230 VAC;59;NO_ID
+Result number = 8;Compresso;false;0;COMP_C10_2_6.0_CON;C 10.2-6.0 Connect;false;600000;5/70;false;-1;0.52;1.056;0.35;38;Floor standing;1200;230 VAC;59;NO_ID
+Result number = 9;Compresso;false;0;COMP_C15_2_6_CON;C 15.2-6.0 Connect;false;600000;5/70;false;-1;0.52;1.056;0.35;88;Floor standing;2600;230 VAC;59;NO_ID
+Result number = 10;Compresso;false;0;COMP_C15_2_10_CON;C 15.2-10.0 Connect;false;1e+06;5/70;false;-1;0.52;1.056;0.35;88;Floor standing;2600;230 VAC;59;NO_ID
+Result number = 11;Compresso;false;0;COMP_CX_80_6_CONN;CX 80-6 Connect;false;600000;5/70;false;70;0.275;0.392;0.19;6;Wall hanged;100;230 VAC;0;NO_ID
+Result number = 12;Compresso;false;0;COMP_CX_80_10_CONN;CX 80-10 Connect;false;1e+06;5/70;false;70;0.275;0.392;0.19;6;Wall hanged;100;230 VAC;0;NO_ID
+Result number = 13;Compresso;false;0;COMP_CX_80_16_CONNECT;CX 80-16 Connect;false;1.6e+06;5/70;false;70;0.275;0.392;0.19;6;Wall hanged;100;230 VAC;0;NO_ID
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 4
+
+SelectionMode = Individual
+ProductCategory = PM
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 70
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+ApplicationType = Heating
+PMTypeID = PMT_WITHPUMP_TAB
+WaterMakeUpTypeID = WMUP_TYPE_NONE
+DegassingChecked = false
+NormID = PM_NORM_EN12828
+SystemVolume = 10
+SolarContent = 0
+InstalledPower = 100000
+StaticHeight = 20
+PzChecked = false
+Pz = 0
+PSVS = 500000
+SafetyTempLimiter = 100
+MaxTemperature = 0
+SupplyTemperature = 70
+ReturnTemperature = 65
+MinTemperature = 5
+MinTemperatureChecked = false
+FillTemperature = 15
+PressurisationOn = PumpSuction
+PumpHead = 0
+MaxWidth = 0
+MaxHeight = 0
+DegassingMaxTempConnectionPoint = 75
+DegassingPressureConnectionPoint = 100000
+WaterMakeUpNetworkPN = 400000
+WaterMakeUpWaterTemp = 15
+WaterMakeUpWaterHardness = 1.78324958
+GeneralCombinedInOneDevice = false
+GeneralRedundancyPumpComp = false
+GeneralRedundancyTecBox = false
+CompressoInternalCoating = false
+CompressoExternalAir = false
+PumpDegassingCoolingVersion = false
+WaterMakeUpBreakTank = false
+WaterMakeUpDutyStandBy = false
+EndInputs
+
+StartOutputs
+Result number = 0;Calculated data;0.0228086;0.228086;0.05;0.00913333;0;0;216200;316200;316200;336200;246200;256200;266200;450000;266200;286200;2.35244;1.1;0.654181;0.305895;1.38889e-05
+Result number = 1;Transfero;false;0;TRANS_TVC_6_1E;TV 6.1 E;false;1e+06;0/70;false;-1;0.5;0.92;0.53;42;Floor standing;1100;230 VAC;60;PMBUFVSL_TV_4_6_8
+Result number = 2;Transfero;false;0;TRANS_TVC_8_1E;TV 8.1 E;false;1e+06;0/70;false;-1;0.5;0.92;0.53;43;Floor standing;1400;230 VAC;60;PMBUFVSL_TV_4_6_8
+Result number = 3;Transfero;false;0;TRANS_TIC_61_2;TI 61.2 Connect;false;1e+06;0/90;false;-1;1.1;1.2;1.1;135;Floor standing;3000;3x400 VAC;70;NO_ID
+Result number = 4;Transfero;false;0;TRANS_TIC_62_2;TI 62.2 Connect;false;1e+06;0/90;false;-1;1.1;1.2;1.1;185;Floor standing;5400;3x400 VAC;70;NO_ID
+Result number = 5;Transfero;false;0;TRANS_TIC_91_2;TI 91.2 Connect;false;1e+06;0/90;false;-1;1.1;1.2;1.1;150;Floor standing;4200;3x400 VAC;70;NO_ID
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 5
+
+SelectionMode = Individual
+ProductCategory = PM
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 70
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+ApplicationType = Heating
+PMTypeID = PMT_WITHPUMP_TAB
+WaterMakeUpTypeID = WMUP_TYPE_NONE
+DegassingChecked = false
+NormID = PM_NORM_EN12953
+SystemVolume = 10
+SolarContent = 0
+InstalledPower = 100000
+StaticHeight = 20
+PzChecked = false
+Pz = 0
+PSVS = 500000
+SafetyTempLimiter = 100
+MaxTemperature = 0
+SupplyTemperature = 70
+ReturnTemperature = 65
+MinTemperature = 5
+MinTemperatureChecked = false
+FillTemperature = 15
+PressurisationOn = PumpSuction
+PumpHead = 0
+MaxWidth = 0
+MaxHeight = 0
+DegassingMaxTempConnectionPoint = 75
+DegassingPressureConnectionPoint = 100000
+WaterMakeUpNetworkPN = 400000
+WaterMakeUpWaterTemp = 15
+WaterMakeUpWaterHardness = 1.78324958
+GeneralCombinedInOneDevice = false
+GeneralRedundancyPumpComp = false
+GeneralRedundancyTecBox = false
+CompressoInternalCoating = false
+CompressoExternalAir = false
+PumpDegassingCoolingVersion = false
+WaterMakeUpBreakTank = false
+WaterMakeUpDutyStandBy = false
+EndInputs
+
+StartOutputs
+Result number = 0;Calculated data;0.0228086;0.228086;0.05;0.00913333;0;0;216200;316200;316200;336200;246200;256200;266200;450000;266200;286200;2.35244;1.1;0.654181;0.305895;1.38889e-05
+Result number = 1;Transfero;false;0;TRANS_TVC_6_1E;TV 6.1 E;false;1e+06;0/70;false;-1;0.5;0.92;0.53;42;Floor standing;1100;230 VAC;60;PMBUFVSL_TV_4_6_8
+Result number = 2;Transfero;false;0;TRANS_TVC_8_1E;TV 8.1 E;false;1e+06;0/70;false;-1;0.5;0.92;0.53;43;Floor standing;1400;230 VAC;60;PMBUFVSL_TV_4_6_8
+Result number = 3;Transfero;false;0;TRANS_TIC_61_2;TI 61.2 Connect;false;1e+06;0/90;false;-1;1.1;1.2;1.1;135;Floor standing;3000;3x400 VAC;70;NO_ID
+Result number = 4;Transfero;false;0;TRANS_TIC_62_2;TI 62.2 Connect;false;1e+06;0/90;false;-1;1.1;1.2;1.1;185;Floor standing;5400;3x400 VAC;70;NO_ID
+Result number = 5;Transfero;false;0;TRANS_TIC_91_2;TI 91.2 Connect;false;1e+06;0/90;false;-1;1.1;1.2;1.1;150;Floor standing;4200;3x400 VAC;70;NO_ID
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 6
+
+SelectionMode = Individual
+ProductCategory = PM
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 70
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+ApplicationType = Heating
+PMTypeID = PMT_WITHPUMP_TAB
+WaterMakeUpTypeID = WMUP_TYPE_NONE
+DegassingChecked = false
+NormID = PM_NORM_SWKI_HE301_01
+SystemVolume = 10
+SolarContent = 0
+InstalledPower = 100000
+StaticHeight = 20
+PzChecked = false
+Pz = 0
+PSVS = 500000
+SafetyTempLimiter = 100
+MaxTemperature = 0
+SupplyTemperature = 70
+ReturnTemperature = 65
+MinTemperature = 5
+MinTemperatureChecked = false
+FillTemperature = 15
+PressurisationOn = PumpSuction
+PumpHead = 0
+MaxWidth = 0
+MaxHeight = 0
+DegassingMaxTempConnectionPoint = 75
+DegassingPressureConnectionPoint = 100000
+WaterMakeUpNetworkPN = 400000
+WaterMakeUpWaterTemp = 15
+WaterMakeUpWaterHardness = 1.78324958
+GeneralCombinedInOneDevice = false
+GeneralRedundancyPumpComp = false
+GeneralRedundancyTecBox = false
+CompressoInternalCoating = false
+CompressoExternalAir = false
+PumpDegassingCoolingVersion = false
+WaterMakeUpBreakTank = false
+WaterMakeUpDutyStandBy = false
+EndInputs
+
+StartOutputs
+Result number = 0;Calculated data;0.0213258;0.434132;0.220874;0.00913333;0;0;226200;359060;326200;346200;256200;266200;276200;434783;276200;296200;2.56389;1.1;1.11307;0.477545;1.38889e-05
+Result number = 1;Transfero;false;0;TRANS_TVC_6_1E;TV 6.1 E;false;1e+06;0/70;false;-1;0.5;0.92;0.53;42;Floor standing;1100;230 VAC;60;PMBUFVSL_TV_4_6_8
+Result number = 2;Transfero;false;0;TRANS_TVC_8_1E;TV 8.1 E;false;1e+06;0/70;false;-1;0.5;0.92;0.53;43;Floor standing;1400;230 VAC;60;PMBUFVSL_TV_4_6_8
+Result number = 3;Transfero;false;0;TRANS_TIC_61_2;TI 61.2 Connect;false;1e+06;0/90;false;-1;1.1;1.2;1.1;135;Floor standing;3000;3x400 VAC;70;NO_ID
+Result number = 4;Transfero;false;0;TRANS_TIC_62_2;TI 62.2 Connect;false;1e+06;0/90;false;-1;1.1;1.2;1.1;185;Floor standing;5400;3x400 VAC;70;NO_ID
+Result number = 5;Transfero;false;0;TRANS_TIC_91_2;TI 91.2 Connect;false;1e+06;0/90;false;-1;1.1;1.2;1.1;150;Floor standing;4200;3x400 VAC;70;NO_ID
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 7
+
+SelectionMode = Individual
+ProductCategory = PM
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 70
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+ApplicationType = Heating
+PMTypeID = PMT_WITHPUMP_TAB
+WaterMakeUpTypeID = WMUP_TYPE_NONE
+DegassingChecked = false
+NormID = PM_NORM_DM11275
+SystemVolume = 10
+SolarContent = 0
+InstalledPower = 100000
+StaticHeight = 20
+PzChecked = false
+Pz = 0
+PSVS = 500000
+SafetyTempLimiter = 100
+MaxTemperature = 0
+SupplyTemperature = 70
+ReturnTemperature = 65
+MinTemperature = 5
+MinTemperatureChecked = false
+FillTemperature = 15
+PressurisationOn = PumpSuction
+PumpHead = 0
+MaxWidth = 0
+MaxHeight = 0
+DegassingMaxTempConnectionPoint = 75
+DegassingPressureConnectionPoint = 100000
+WaterMakeUpNetworkPN = 400000
+WaterMakeUpWaterTemp = 15
+WaterMakeUpWaterHardness = 1.78324958
+GeneralCombinedInOneDevice = false
+GeneralRedundancyPumpComp = false
+GeneralRedundancyTecBox = false
+CompressoInternalCoating = false
+CompressoExternalAir = false
+PumpDegassingCoolingVersion = false
+WaterMakeUpBreakTank = false
+WaterMakeUpDutyStandBy = false
+EndInputs
+
+StartOutputs
+Result number = 0;Calculated data;0.0421;0.421;0.05;0.00913333;0;0;216200;316200;316200;336200;246200;256200;266200;500000;266200;286200;2.36407;1.1;1.11348;0.5181;1.38889e-05
+Result number = 1;Transfero;false;0;TRANS_TVC_6_1E;TV 6.1 E;false;1e+06;0/70;false;-1;0.5;0.92;0.53;42;Floor standing;1100;230 VAC;60;PMBUFVSL_TV_4_6_8
+Result number = 2;Transfero;false;0;TRANS_TVC_8_1E;TV 8.1 E;false;1e+06;0/70;false;-1;0.5;0.92;0.53;43;Floor standing;1400;230 VAC;60;PMBUFVSL_TV_4_6_8
+Result number = 3;Transfero;false;0;TRANS_TIC_61_2;TI 61.2 Connect;false;1e+06;0/90;false;-1;1.1;1.2;1.1;135;Floor standing;3000;3x400 VAC;70;NO_ID
+Result number = 4;Transfero;false;0;TRANS_TIC_62_2;TI 62.2 Connect;false;1e+06;0/90;false;-1;1.1;1.2;1.1;185;Floor standing;5400;3x400 VAC;70;NO_ID
+Result number = 5;Transfero;false;0;TRANS_TIC_91_2;TI 91.2 Connect;false;1e+06;0/90;false;-1;1.1;1.2;1.1;150;Floor standing;4200;3x400 VAC;70;NO_ID
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 8
+
+SelectionMode = Individual
+ProductCategory = PM
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+ApplicationType = Heating
+PMTypeID = PMT_EXPVSSL_TAB
+WaterMakeUpTypeID = WMUP_TYPE_NONE
+DegassingChecked = false
+NormID = PM_NORM_EN12828
+SystemVolume = 10
+SolarContent = 0
+InstalledPower = 100000
+StaticHeight = 20
+PzChecked = false
+Pz = 0
+PSVS = 1000000
+SafetyTempLimiter = 100
+MaxTemperature = 0
+SupplyTemperature = 80
+ReturnTemperature = 65
+MinTemperature = 5
+MinTemperatureChecked = false
+FillTemperature = 15
+PressurisationOn = PumpSuction
+PumpHead = 0
+MaxWidth = 0
+MaxHeight = 0
+DegassingMaxTempConnectionPoint = 75
+DegassingPressureConnectionPoint = 100000
+WaterMakeUpNetworkPN = 400000
+WaterMakeUpWaterTemp = 15
+WaterMakeUpWaterHardness = 1.78324958
+GeneralCombinedInOneDevice = false
+GeneralRedundancyPumpComp = false
+GeneralRedundancyTecBox = false
+CompressoInternalCoating = false
+CompressoExternalAir = false
+PumpDegassingCoolingVersion = false
+WaterMakeUpBreakTank = false
+WaterMakeUpDutyStandBy = false
+EndInputs
+
+StartOutputs
+Result number = 0;Calculated data;0.0290183;0.290183;0.05;0.00913333;0;0;216200;316200;316200;336200;246200;256200;266200;900000;266200;286200;1.46242;1.1;0.497489;0.374201;1.55e-05
+Result number = 1;Vessel;false;0;STAT_SU200_10;SU 200.10;3;0.2;1e+06;5/70;400000;0.5;1.38;42;242;Floor standing;Thread ISO228 Male R;246200;295330;0.120097
+Result number = 2;Vessel;false;0;STAT_SU300_10;SU 300.10;2;0.3;1e+06;5/70;400000;0.56;1.488;66;366;Floor standing;Thread ISO228 Male R;246200;295330;0.120097
+Result number = 3;Vessel;false;0;STAT_SU400_10;SU 400.10;2;0.4;1e+06;5/70;400000;0.62;1.54;75;475;Floor standing;Thread ISO228 Male R;246200;365734;0.256857
+Result number = 4;Vessel;false;0;STAT_SU500_10;SU 500.10;1;0.5;1e+06;5/70;400000;0.68;1.629;103;603;Floor standing;Thread ISO228 Male R;251333;252679;0.0517168
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 9
+
+SelectionMode = Individual
+ProductCategory = PM
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+ApplicationType = Heating
+PMTypeID = PMT_WITHCOMPRESS_TAB
+WaterMakeUpTypeID = WMUP_TYPE_NONE
+DegassingChecked = false
+NormID = PM_NORM_EN12828
+SystemVolume = 10
+SolarContent = 0
+InstalledPower = 100000
+StaticHeight = 20
+PzChecked = false
+Pz = 0
+PSVS = 1000000
+SafetyTempLimiter = 100
+MaxTemperature = 0
+SupplyTemperature = 80
+ReturnTemperature = 65
+MinTemperature = 5
+MinTemperatureChecked = false
+FillTemperature = 15
+PressurisationOn = PumpSuction
+PumpHead = 0
+MaxWidth = 0
+MaxHeight = 0
+DegassingMaxTempConnectionPoint = 75
+DegassingPressureConnectionPoint = 100000
+WaterMakeUpNetworkPN = 400000
+WaterMakeUpWaterTemp = 15
+WaterMakeUpWaterHardness = 1.78324958
+GeneralCombinedInOneDevice = false
+GeneralRedundancyPumpComp = false
+GeneralRedundancyTecBox = false
+CompressoInternalCoating = false
+CompressoExternalAir = false
+PumpDegassingCoolingVersion = false
+WaterMakeUpBreakTank = false
+WaterMakeUpDutyStandBy = false
+EndInputs
+
+StartOutputs
+Result number = 0;Calculated data;0.0290183;0.290183;0.05;0.00913333;0;0;216200;316200;316200;336200;246200;256200;266200;900000;266200;286200;1.46242;1.1;0.497489;0.374201;1.55e-05
+Result number = 1;Compresso;false;0;COMP_C15_1_10_CON;C 15.1-10.0 Connect;false;1e+06;5/70;false;-1;0.52;1.056;0.35;50;Floor standing;1300;230 VAC;59;NO_ID
+Result number = 2;Compresso;false;0;COMP_C15_2_10_CON;C 15.2-10.0 Connect;false;1e+06;5/70;false;-1;0.52;1.056;0.35;88;Floor standing;2600;230 VAC;59;NO_ID
+Result number = 3;Compresso;false;0;COMP_CX_80_10_CONN;CX 80-10 Connect;false;1e+06;5/70;false;70;0.275;0.392;0.19;6;Wall hanged;100;230 VAC;0;NO_ID
+Result number = 4;Compresso;false;0;COMP_CX_80_16_CONNECT;CX 80-16 Connect;false;1.6e+06;5/70;false;70;0.275;0.392;0.19;6;Wall hanged;100;230 VAC;0;NO_ID
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 10
+
+SelectionMode = Individual
+ProductCategory = PM
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+ApplicationType = Heating
+PMTypeID = PMT_WITHCOMPRESS_TAB
+WaterMakeUpTypeID = WMUP_TYPE_NONE
+DegassingChecked = false
+NormID = PM_NORM_EN12828
+SystemVolume = 10
+SolarContent = 0
+InstalledPower = 100000
+StaticHeight = 20
+PzChecked = false
+Pz = 0
+PSVS = 1000000
+SafetyTempLimiter = 100
+MaxTemperature = 0
+SupplyTemperature = 80
+ReturnTemperature = 65
+MinTemperature = 5
+MinTemperatureChecked = false
+FillTemperature = 15
+PressurisationOn = PumpSuction
+PumpHead = 0
+MaxWidth = 0
+MaxHeight = 0
+DegassingMaxTempConnectionPoint = 75
+DegassingPressureConnectionPoint = 100000
+WaterMakeUpNetworkPN = 400000
+WaterMakeUpWaterTemp = 15
+WaterMakeUpWaterHardness = 1.78324958
+GeneralCombinedInOneDevice = false
+GeneralRedundancyPumpComp = false
+GeneralRedundancyTecBox = false
+CompressoInternalCoating = false
+CompressoExternalAir = false
+PumpDegassingCoolingVersion = false
+WaterMakeUpBreakTank = false
+WaterMakeUpDutyStandBy = false
+EndInputs
+
+StartOutputs
+Result number = 0;Calculated data;0.0290183;0.290183;0.05;0.00913333;0;0;216200;316200;316200;336200;246200;256200;266200;900000;266200;286200;1.46242;1.1;0.497489;0.374201;1.55e-05
+Result number = 1;Compresso;false;0;COMP_C15_1_10_CON;C 15.1-10.0 Connect;false;1e+06;5/70;false;-1;0.52;1.056;0.35;50;Floor standing;1300;230 VAC;59;NO_ID
+Result number = 2;Compresso;false;0;COMP_C15_2_10_CON;C 15.2-10.0 Connect;false;1e+06;5/70;false;-1;0.52;1.056;0.35;88;Floor standing;2600;230 VAC;59;NO_ID
+Result number = 3;Compresso;false;0;COMP_CX_80_10_CONN;CX 80-10 Connect;false;1e+06;5/70;false;70;0.275;0.392;0.19;6;Wall hanged;100;230 VAC;0;NO_ID
+Result number = 4;Compresso;false;0;COMP_CX_80_16_CONNECT;CX 80-16 Connect;false;1.6e+06;5/70;false;70;0.275;0.392;0.19;6;Wall hanged;100;230 VAC;0;NO_ID
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 11
+
+SelectionMode = Individual
+ProductCategory = PM
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 80
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+ApplicationType = Heating
+PMTypeID = PMT_WITHPUMP_TAB
+WaterMakeUpTypeID = WMUP_TYPE_NONE
+DegassingChecked = false
+NormID = PM_NORM_EN12828
+SystemVolume = 10
+SolarContent = 0
+InstalledPower = 100000
+StaticHeight = 20
+PzChecked = false
+Pz = 0
+PSVS = 1000000
+SafetyTempLimiter = 100
+MaxTemperature = 0
+SupplyTemperature = 80
+ReturnTemperature = 65
+MinTemperature = 5
+MinTemperatureChecked = false
+FillTemperature = 15
+PressurisationOn = PumpSuction
+PumpHead = 0
+MaxWidth = 0
+MaxHeight = 0
+DegassingMaxTempConnectionPoint = 75
+DegassingPressureConnectionPoint = 100000
+WaterMakeUpNetworkPN = 400000
+WaterMakeUpWaterTemp = 15
+WaterMakeUpWaterHardness = 1.78324958
+GeneralCombinedInOneDevice = false
+GeneralRedundancyPumpComp = false
+GeneralRedundancyTecBox = false
+CompressoInternalCoating = false
+CompressoExternalAir = false
+PumpDegassingCoolingVersion = false
+WaterMakeUpBreakTank = false
+WaterMakeUpDutyStandBy = false
+EndInputs
+
+StartOutputs
+Result number = 0;Calculated data;0.0290183;0.290183;0.05;0.00913333;0;0;216200;316200;316200;336200;246200;256200;266200;900000;266200;286200;1.46242;1.1;0.497489;0.374201;1.55e-05
+Result number = 1;Transfero;false;0;TRANS_TVC_6_1E;TV 6.1 E;false;1e+06;0/70;false;-1;0.5;0.92;0.53;42;Floor standing;1100;230 VAC;60;PMBUFVSL_TV_4_6_8
+Result number = 2;Transfero;false;0;TRANS_TVC_8_1E;TV 8.1 E;false;1e+06;0/70;false;-1;0.5;0.92;0.53;43;Floor standing;1400;230 VAC;60;PMBUFVSL_TV_4_6_8
+Result number = 3;Transfero;false;0;TRANS_TIC_61_2;TI 61.2 Connect;false;1e+06;0/90;false;-1;1.1;1.2;1.1;135;Floor standing;3000;3x400 VAC;70;NO_ID
+Result number = 4;Transfero;false;0;TRANS_TIC_62_2;TI 62.2 Connect;false;1e+06;0/90;false;-1;1.1;1.2;1.1;185;Floor standing;5400;3x400 VAC;70;NO_ID
+Result number = 5;Transfero;false;0;TRANS_TIC_91_2;TI 91.2 Connect;false;1e+06;0/90;false;-1;1.1;1.2;1.1;150;Floor standing;4200;3x400 VAC;70;NO_ID
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 12
+
+SelectionMode = Individual
+ProductCategory = PM
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 95
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+ApplicationType = Heating
+PMTypeID = PMT_EXPVSSL_TAB
+WaterMakeUpTypeID = WMUP_TYPE_NONE
+DegassingChecked = false
+NormID = PM_NORM_EN12828
+SystemVolume = 10
+SolarContent = 0
+InstalledPower = 100000
+StaticHeight = 20
+PzChecked = false
+Pz = 0
+PSVS = 1000000
+SafetyTempLimiter = 100
+MaxTemperature = 0
+SupplyTemperature = 95
+ReturnTemperature = 90
+MinTemperature = 5
+MinTemperatureChecked = false
+FillTemperature = 15
+PressurisationOn = PumpSuction
+PumpHead = 0
+MaxWidth = 0
+MaxHeight = 0
+DegassingMaxTempConnectionPoint = 75
+DegassingPressureConnectionPoint = 100000
+WaterMakeUpNetworkPN = 400000
+WaterMakeUpWaterTemp = 15
+WaterMakeUpWaterHardness = 1.78324958
+GeneralCombinedInOneDevice = false
+GeneralRedundancyPumpComp = false
+GeneralRedundancyTecBox = false
+CompressoInternalCoating = false
+CompressoExternalAir = false
+PumpDegassingCoolingVersion = false
+WaterMakeUpBreakTank = false
+WaterMakeUpDutyStandBy = false
+EndInputs
+
+StartOutputs
+Result number = 0;Calculated data;0.0396631;0.396631;0.05;0.00913333;0;0;216200;316200;316200;336200;246200;256200;266200;900000;266200;286200;1.46242;1.1;0.653161;0.491295;1.79167e-05
+Result number = 1;Vessel;false;0;STAT_SU300_10;SU 300.10;3;0.3;1e+06;5/70;400000;0.56;1.488;66;366;Floor standing;Thread ISO228 Male R;246200;317756;0.218789
+Result number = 2;Vessel;false;0;STAT_SU400_10;SU 400.10;2;0.4;1e+06;5/70;400000;0.62;1.54;75;475;Floor standing;Thread ISO228 Male R;246200;289414;0.150409
+Result number = 3;Vessel;false;0;STAT_SU500_10;SU 500.10;2;0.5;1e+06;5/70;400000;0.68;1.629;103;603;Floor standing;Thread ISO228 Male R;246200;343583;0.287169
+Result number = 4;Vessel;false;0;STAT_SG1000_10;SG 1000.10;1;1;1e+06;5/70;400000;0.85;2.192;340;1340;Floor standing;Thread ISO228 Male R;246200;343583;0.287169
+Result number = 5;Vessel;false;0;STAT_SG1500_10;SG 1500.10;1;1.5;1e+06;5/70;400000;1.016;2.377;460;1960;Floor standing;Thread ISO228 Male R;246200;444589;0.629069
+Result number = 6;Vessel;false;0;STAT_SG2000_10;SG 2000.10;1;2;1e+06;5/70;400000;1.016;2.874;760;2760;Floor standing;Thread ISO228 Male R;246200;514558;0.970969
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 13
+
+SelectionMode = Individual
+ProductCategory = PM
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 95
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+ApplicationType = Heating
+PMTypeID = PMT_EXPVSSL_TAB
+WaterMakeUpTypeID = WMUP_TYPE_NONE
+DegassingChecked = false
+NormID = PM_NORM_EN12828
+SystemVolume = 10
+SolarContent = 0
+InstalledPower = 100000
+StaticHeight = 20
+PzChecked = false
+Pz = 0
+PSVS = 1000000
+SafetyTempLimiter = 100
+MaxTemperature = 0
+SupplyTemperature = 95
+ReturnTemperature = 90
+MinTemperature = 5
+MinTemperatureChecked = false
+FillTemperature = 15
+PressurisationOn = PumpSuction
+PumpHead = 0
+MaxWidth = 0
+MaxHeight = 0
+DegassingMaxTempConnectionPoint = 75
+DegassingPressureConnectionPoint = 100000
+WaterMakeUpNetworkPN = 400000
+WaterMakeUpWaterTemp = 15
+WaterMakeUpWaterHardness = 1.78324958
+GeneralCombinedInOneDevice = false
+GeneralRedundancyPumpComp = false
+GeneralRedundancyTecBox = false
+CompressoInternalCoating = false
+CompressoExternalAir = false
+PumpDegassingCoolingVersion = false
+WaterMakeUpBreakTank = false
+WaterMakeUpDutyStandBy = false
+EndInputs
+
+StartOutputs
+Result number = 0;Calculated data;0.0396631;0.396631;0.05;0.00913333;0;0;216200;316200;316200;336200;246200;256200;266200;900000;266200;286200;1.46242;1.1;0.653161;0.491295;1.79167e-05
+Result number = 1;Vessel;false;0;STAT_SU300_10;SU 300.10;3;0.3;1e+06;5/70;400000;0.56;1.488;66;366;Floor standing;Thread ISO228 Male R;246200;317756;0.218789
+Result number = 2;Vessel;false;0;STAT_SU400_10;SU 400.10;2;0.4;1e+06;5/70;400000;0.62;1.54;75;475;Floor standing;Thread ISO228 Male R;246200;289414;0.150409
+Result number = 3;Vessel;false;0;STAT_SU500_10;SU 500.10;2;0.5;1e+06;5/70;400000;0.68;1.629;103;603;Floor standing;Thread ISO228 Male R;246200;343583;0.287169
+Result number = 4;Vessel;false;0;STAT_SG1000_10;SG 1000.10;1;1;1e+06;5/70;400000;0.85;2.192;340;1340;Floor standing;Thread ISO228 Male R;246200;343583;0.287169
+Result number = 5;Vessel;false;0;STAT_SG1500_10;SG 1500.10;1;1.5;1e+06;5/70;400000;1.016;2.377;460;1960;Floor standing;Thread ISO228 Male R;246200;444589;0.629069
+Result number = 6;Vessel;false;0;STAT_SG2000_10;SG 2000.10;1;2;1e+06;5/70;400000;1.016;2.874;760;2760;Floor standing;Thread ISO228 Male R;246200;514558;0.970969
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 14
+
+SelectionMode = Individual
+ProductCategory = PM
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 95
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+ApplicationType = Heating
+PMTypeID = PMT_WITHCOMPRESS_TAB
+WaterMakeUpTypeID = WMUP_TYPE_NONE
+DegassingChecked = false
+NormID = PM_NORM_EN12828
+SystemVolume = 10
+SolarContent = 0
+InstalledPower = 100000
+StaticHeight = 20
+PzChecked = false
+Pz = 0
+PSVS = 1000000
+SafetyTempLimiter = 100
+MaxTemperature = 0
+SupplyTemperature = 95
+ReturnTemperature = 90
+MinTemperature = 5
+MinTemperatureChecked = false
+FillTemperature = 15
+PressurisationOn = PumpSuction
+PumpHead = 0
+MaxWidth = 0
+MaxHeight = 0
+DegassingMaxTempConnectionPoint = 75
+DegassingPressureConnectionPoint = 100000
+WaterMakeUpNetworkPN = 400000
+WaterMakeUpWaterTemp = 15
+WaterMakeUpWaterHardness = 1.78324958
+GeneralCombinedInOneDevice = false
+GeneralRedundancyPumpComp = false
+GeneralRedundancyTecBox = false
+CompressoInternalCoating = false
+CompressoExternalAir = false
+PumpDegassingCoolingVersion = false
+WaterMakeUpBreakTank = false
+WaterMakeUpDutyStandBy = false
+EndInputs
+
+StartOutputs
+Result number = 0;Calculated data;0.0396631;0.396631;0.05;0.00913333;0;0;216200;316200;316200;336200;246200;256200;266200;900000;266200;286200;1.46242;1.1;0.653161;0.491295;1.79167e-05
+Result number = 1;Compresso;false;0;COMP_C15_1_10_CON;C 15.1-10.0 Connect;false;1e+06;5/70;false;-1;0.52;1.056;0.35;50;Floor standing;1300;230 VAC;59;NO_ID
+Result number = 2;Compresso;false;0;COMP_C15_2_10_CON;C 15.2-10.0 Connect;false;1e+06;5/70;false;-1;0.52;1.056;0.35;88;Floor standing;2600;230 VAC;59;NO_ID
+Result number = 3;Compresso;false;0;COMP_CX_80_10_CONN;CX 80-10 Connect;false;1e+06;5/70;false;70;0.275;0.392;0.19;6;Wall hanged;100;230 VAC;0;NO_ID
+Result number = 4;Compresso;false;0;COMP_CX_80_16_CONNECT;CX 80-16 Connect;false;1.6e+06;5/70;false;70;0.275;0.392;0.19;6;Wall hanged;100;230 VAC;0;NO_ID
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 15
+
+SelectionMode = Individual
+ProductCategory = PM
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 95
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+ApplicationType = Heating
+PMTypeID = PMT_WITHPUMP_TAB
+WaterMakeUpTypeID = WMUP_TYPE_NONE
+DegassingChecked = false
+NormID = PM_NORM_EN12828
+SystemVolume = 10
+SolarContent = 0
+InstalledPower = 100000
+StaticHeight = 20
+PzChecked = false
+Pz = 0
+PSVS = 1000000
+SafetyTempLimiter = 100
+MaxTemperature = 0
+SupplyTemperature = 95
+ReturnTemperature = 90
+MinTemperature = 5
+MinTemperatureChecked = false
+FillTemperature = 15
+PressurisationOn = PumpSuction
+PumpHead = 0
+MaxWidth = 0
+MaxHeight = 0
+DegassingMaxTempConnectionPoint = 75
+DegassingPressureConnectionPoint = 100000
+WaterMakeUpNetworkPN = 400000
+WaterMakeUpWaterTemp = 15
+WaterMakeUpWaterHardness = 1.78324958
+GeneralCombinedInOneDevice = false
+GeneralRedundancyPumpComp = false
+GeneralRedundancyTecBox = false
+CompressoInternalCoating = false
+CompressoExternalAir = false
+PumpDegassingCoolingVersion = false
+WaterMakeUpBreakTank = false
+WaterMakeUpDutyStandBy = false
+EndInputs
+
+StartOutputs
+Result number = 0;Calculated data;0.0396631;0.396631;0.05;0.00913333;0;0;216200;316200;316200;336200;246200;256200;266200;900000;266200;286200;1.46242;1.1;0.653161;0.491295;1.79167e-05
+Result number = 1;Transfero;false;0;TRANS_TVC_6_1EH;TV 6.1 EH;false;1e+06;0/90;false;-1;0.5;0.92;0.53;44;Floor standing;1100;230 VAC;60;PMBUFVSL_TV_4_6_8
+Result number = 2;Transfero;false;0;TRANS_TVC_8_1EH;TV 8.1 EH;false;1e+06;0/90;false;-1;0.5;0.92;0.53;45;Floor standing;1400;230 VAC;60;PMBUFVSL_TV_4_6_8
+Result number = 3;Transfero;false;0;TRANS_TVC_6_2EH;TV 6.2 EH;false;1e+06;0/90;false;-1;0.68;0.92;0.53;53;Floor standing;2200;230 VAC;60;PMBUFVSL_TV_4_6_8
+Result number = 4;Transfero;false;0;TRANS_TVC_8_2EH;TV 8.2 EH;false;1e+06;0/90;false;-1;0.68;0.92;0.53;56;Floor standing;2800;230 VAC;60;PMBUFVSL_TV_4_6_8
+Result number = 5;Transfero;false;0;TRANS_TIC_61_2;TI 61.2 Connect;false;1e+06;0/90;false;-1;1.1;1.2;1.1;135;Floor standing;3000;3x400 VAC;70;NO_ID
+Result number = 6;Transfero;false;0;TRANS_TIC_62_2;TI 62.2 Connect;false;1e+06;0/90;false;-1;1.1;1.2;1.1;185;Floor standing;5400;3x400 VAC;70;NO_ID
+Result number = 7;Transfero;false;0;TRANS_TIC_91_2;TI 91.2 Connect;false;1e+06;0/90;false;-1;1.1;1.2;1.1;150;Floor standing;4200;3x400 VAC;70;NO_ID
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 16
+
+SelectionMode = Individual
+ProductCategory = PM
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 12
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+ApplicationType = Cooling
+PMTypeID = PMT_EXPVSSL_TAB
+WaterMakeUpTypeID = WMUP_TYPE_NONE
+DegassingChecked = false
+NormID = 
+SystemVolume = 5
+SolarContent = 0
+InstalledPower = 100000
+StaticHeight = 20
+PzChecked = false
+Pz = 0
+PSVS = 835000
+SafetyTempLimiter = 0
+MaxTemperature = 45
+SupplyTemperature = 12
+ReturnTemperature = 18
+MinTemperature = 0
+MinTemperatureChecked = false
+FillTemperature = 15
+PressurisationOn = PumpSuction
+PumpHead = 0
+MaxWidth = 0
+MaxHeight = 0
+DegassingMaxTempConnectionPoint = 26
+DegassingPressureConnectionPoint = 100000
+WaterMakeUpNetworkPN = 400000
+WaterMakeUpWaterTemp = 15
+WaterMakeUpWaterHardness = 1.78324958
+GeneralCombinedInOneDevice = false
+GeneralRedundancyPumpComp = false
+GeneralRedundancyTecBox = false
+CompressoInternalCoating = false
+CompressoExternalAir = false
+PumpDegassingCoolingVersion = false
+WaterMakeUpBreakTank = false
+WaterMakeUpDutyStandBy = false
+EndInputs
+
+StartOutputs
+Result number = 0;Calculated data;0.00971413;0.0485707;0.025;0.00356575;0;0;216161;316161;316161;336161;246161;256161;266161;751500;266161;286161;1.59058;1.1;0.11702;0.0809277;1.06667e-05
+Result number = 1;Vessel;false;0;STAT_SD50_10;SD 50.10;3;0.05;1e+06;5/70;400000;0.536;0.316;12;61.99;Wall hanged;Thread ISO228 Male R;279393;354840;0.0457346
+Result number = 2;Vessel;false;0;STAT_SD80_10;SD 80.10;2;0.08;1e+06;5/70;400000;0.636;0.346;16;95.984;Wall hanged;Thread ISO228 Male R;274709;368480;0.0520216
+Result number = 3;Vessel;false;0;STAT_SU140_10;SU 140.10;1;0.14;1e+06;5/70;400000;0.42;1.278;34;173.972;Floor standing;Thread ISO228 Male R;284891;340193;0.0394475
+Result number = 4;Vessel;false;0;STAT_SU200_10;SU 200.10;1;0.2;1e+06;5/70;400000;0.5;1.38;42;241.96;Floor standing;Thread ISO228 Male R;261327;414792;0.0771696
+Result number = 5;Vessel;false;0;STAT_SU300_10;SU 300.10;1;0.3;1e+06;5/70;400000;0.56;1.488;66;365.94;Floor standing;Thread ISO228 Male R;244903;492949;0.14004
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Test number = 17
+
+SelectionMode = Individual
+ProductCategory = PM
+
+StartInputs
+WCAdditFamilyID = WATER_ADDIT
+WCAdditID = WATER
+WCTemp = 12
+WCPCWeight = 0
+PipeSeriesID = STEEL_GEN
+PipeID = 
+ApplicationType = Cooling
+PMTypeID = PMT_EXPVSSL_TAB
+WaterMakeUpTypeID = WMUP_TYPE_NONE
+DegassingChecked = false
+NormID = 
+SystemVolume = 5
+SolarContent = 0
+InstalledPower = 100000
+StaticHeight = 20
+PzChecked = false
+Pz = 0
+PSVS = 835000
+SafetyTempLimiter = 0
+MaxTemperature = 45
+SupplyTemperature = 12
+ReturnTemperature = 18
+MinTemperature = 0
+MinTemperatureChecked = false
+FillTemperature = 15
+PressurisationOn = PumpSuction
+PumpHead = 0
+MaxWidth = 0
+MaxHeight = 0
+DegassingMaxTempConnectionPoint = 26
+DegassingPressureConnectionPoint = 100000
+WaterMakeUpNetworkPN = 400000
+WaterMakeUpWaterTemp = 15
+WaterMakeUpWaterHardness = 1.78324958
+GeneralCombinedInOneDevice = false
+GeneralRedundancyPumpComp = false
+GeneralRedundancyTecBox = false
+CompressoInternalCoating = false
+CompressoExternalAir = false
+PumpDegassingCoolingVersion = false
+WaterMakeUpBreakTank = false
+WaterMakeUpDutyStandBy = false
+EndInputs
+
+StartOutputs
+Result number = 0;Calculated data;0.00971413;0.0485707;0.025;0.00356575;0;0;216161;316161;316161;336161;246161;256161;266161;751500;266161;286161;1.59058;1.1;0.11702;0.0809277;1.06667e-05
+Result number = 1;Vessel;false;0;STAT_SD50_10;SD 50.10;3;0.05;1e+06;5/70;400000;0.536;0.316;12;61.99;Wall hanged;Thread ISO228 Male R;279393;354840;0.0457346
+Result number = 2;Vessel;false;0;STAT_SD80_10;SD 80.10;2;0.08;1e+06;5/70;400000;0.636;0.346;16;95.984;Wall hanged;Thread ISO228 Male R;274709;368480;0.0520216
+Result number = 3;Vessel;false;0;STAT_SU140_10;SU 140.10;1;0.14;1e+06;5/70;400000;0.42;1.278;34;173.972;Floor standing;Thread ISO228 Male R;284891;340193;0.0394475
+Result number = 4;Vessel;false;0;STAT_SU200_10;SU 200.10;1;0.2;1e+06;5/70;400000;0.5;1.38;42;241.96;Floor standing;Thread ISO228 Male R;261327;414792;0.0771696
+Result number = 5;Vessel;false;0;STAT_SU300_10;SU 300.10;1;0.3;1e+06;5/70;400000;0.56;1.488;66;365.94;Floor standing;Thread ISO228 Male R;244903;492949;0.14004
+EndOutputs
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
