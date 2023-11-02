@@ -1,0 +1,239 @@
+
+.ProjectName         = "HydronicPics"
+.ProjectNames        + .ProjectName             
+
+.ProjectSourcesPath  = "../$ProjectName$"
+
+.ProjectOutputPath  = "$ProjectSourcesPath$/Debug"
+.ProjectOutputPaths + .ProjectOutputPath
+
+.ProjectLibraryName  = '$ProjectName$.lib'
+
+.ProjectDLLName  = '$ProjectName$.dll'
+.ProjectLibraryNames + .ProjectLibraryName
+
+
+
+Using( .VisualStudio_Executable_Tools )
+Using( .VisualStudio_Include_Directories )
+Using( .VisualStudio_Library_Directories )
+Using( .WindowsSDK_Include_Directories )
+Using( .WindowsSDK_Library_Directories )
+
+Exec( "$ProjectName$_ResourcesCompiler" )
+{        
+    .ExecExecutable           = '$WindowsSDK_ResourceCompiler$'
+    .ExecOutput               = '$SolutionPath$/$ProjectOutputPath$/$ProjectName$.res'
+    .ExecArguments            = '/D "_DEBUG"'
+                              + ' /D "_VC80_UPGRADE=0x0600"'
+                              + ' /D "_UNICODE"'
+                              + ' /D "UNICODE"'
+                              + ' /nologo'
+                              + ' /i "$VisualStudio_IncludeATLMFCPath$"'
+                              + ' $WindowsSDK_Includes_Path_rc$'
+                              + ' /fo "$SolutionPath$/$ProjectOutputPath$/$ProjectName$.res"'
+                              + ' "$SolutionPath$/$ProjectSourcesPath$/$ProjectName$.rc"'
+}
+    
+;ObjectList( '$ProjectName$_Debug_obj' )
+;{
+;    ;.PreBuildDependencies = { "$ProjectName$_ResourcesCompiler" }
+;    
+;    ; options for compilation
+;    .Compiler = 'Compiler-x86'
+;    .CompilerOptions = 'c-'
+;                     + ' /analyze-'
+;                     + ' /D HYDRONICPICS_EXPORTS'
+;                     + ' /D UNICODE'
+;                     + ' /D WIN32'
+;                     + ' /D _DEBUG'
+;                     + ' /D _UNICODE'
+;                     + ' /D _USERDLL'
+;                     + ' /D _WINDLL'
+;                     + ' /D _WINDOWS'
+;                     + ' /diagnostics:column'
+;                     + ' /EHsc'
+;                     + ' /FC'
+;                     + ' /Fd"$SolutionPath$/$ProjectOutputPath$/$ProjectName$.PDB"'
+;                     + ' /Fo%2'
+;                     + ' /fp:precise'
+;                     + ' /FS'
+;                     + ' /Gd'
+;                     + ' /GS'
+;                     + ' /MDd'
+;                     + ' /nologo'
+;                     + ' /Od'
+;                     + ' /Oy-'
+;                     + ' /RTC1'
+;                     + ' /TP'
+;                     + ' /W3'
+;                     + ' /WX-'
+;                     + ' /Zc:forScope'
+;                     + ' /Zc:inline'
+;                     + ' /Zc:wchar_t'
+;                     + ' /Zi'                     
+;                     + ' %1'
+;                     + '$VisualStudio_Includes_Path$'
+;                     + '$WindowsSDK_Includes_Path_link_cl$'
+;
+;    .CompilerInputPath = '$ProjectSourcesPath$/'    
+;    .CompilerOutputPath = '$SolutionPath$/$ProjectOutputPath$'
+;    .CompilerInputExcludePath = '$SolutionPath$/$ProjectSourcesPath$/LPP_AT'
+;}
+
+Library( '$ProjectName$_Debug_lib' )
+{
+    .PreBuildDependencies = { "$ProjectName$_ResourcesCompiler" }
+    
+    ; options for compilation
+    .Compiler = 'Compiler-x86'
+    .CompilerOptions = '/c '
+                     + ' /analyze-'
+                     + ' /D HYDRONICPICS_EXPORTS'
+                     + ' /D UNICODE'
+                     + ' /D WIN32'
+                     + ' /D _DEBUG'
+                     + ' /D _UNICODE'
+                     + ' /D _USERDLL'
+                     + ' /D _WINDLL'
+                     + ' /D _WINDOWS'
+                     + ' /diagnostics:column'
+                     + ' /EHsc'
+                     + ' /FC'
+                     + ' /Fd"$SolutionPath$/$ProjectOutputPath$/$ProjectName$.PDB"'
+                     + ' /Fo%2'
+                     + ' /Fp"$SolutionPath$/$ProjectOutputPath$/stdafx.pch"'
+                     + ' /fp:precise'
+                     + ' /FS'
+                     + ' /Gd'
+                     + ' /GS'
+                     + ' /I"$SolutionPath$/../TASelect"'                  ; For 'EnBimaptAnchorPt.cpp' and 'HydronicPic.cpp' files.
+                     + ' /MDd'
+                     + ' /nologo'
+                     + ' /Od'
+                     + ' /Oy-'
+                     + ' /RTC1'
+                     + ' /TP'
+                     + ' /W3'
+                     + ' /WX-'
+                     + ' /Yu"$SolutionPath$/../$ProjectName$/stdafx.h"'   ; It's mandatory here to create precompiled headers to not take the 'StdAfx' from 'EnBimaptAnchorPt.cpp' and 'HydronicPic.cpp' files.
+                     + ' /Zc:forScope'
+                     + ' /Zc:inline'
+                     + ' /Zc:wchar_t'
+                     + ' /Zi'                     
+                     + ' $VisualStudio_Includes_Path$'
+                     + ' $WindowsSDK_Includes_Path_link_cl$'
+                     + ' %1'
+    
+    .CompilerInputFiles = { '$SolutionPath$/../TASelect/EnBitmapAnchorPt.cpp', '$SolutionPath$/../TASelect/HydronicPic.cpp' }
+    .CompilerInputPath  = '$ProjectSourcesPath$/'
+    .CompilerInputExcludedFiles = { '$SolutionPath$/../$ProjectName$/stdafx.cpp' }
+                                               
+    .CompilerOutputPath = '$SolutionPath$/$ProjectOutputPath$'
+    .CompilerInputExcludePath = '$SolutionPath$/$ProjectSourcesPath$/LPP_AT'
+    
+    ; Options for librarian
+    .Librarian                 = '$VisualStudio_LibraryGenerator$'
+    .LibrarianOptions          = ' /OUT:%2'
+                               + ' /NOLOGO'
+                               + ' /MACHINE:X86'
+                               ;+ ' /INCREMENTAL:NO' -> For a static library, lib.exe doesn't recognize this option.
+                               + ' $VisualStudio_Librairies_Path$'
+                               + ' $WindowsSDK_Librairies_Path_link_cl$'
+                               + ' %1'
+                               + ' $SolutionPath$/$ProjectOutputPath$/$ProjectName$.res'
+    .LibrarianOutput           = '$SolutionPath$/$ProjectOutputPath$/$ProjectLibraryName$'
+    .LibrarianType             = 'msvc'
+    
+    ; (optional) Properties to control precompiled header use
+    .PCHInputFile              = '$SolutionPath$/../$ProjectName$/stdafx.cpp'
+    .PCHOutputFile             = '$SolutionPath$/$ProjectOutputPath$/stdafx.obj'
+    .PCHOptions                = ' /analyze-'
+                               + ' /D HYDRONICPICS_EXPORTS'
+                               + ' /D UNICODE'
+                               + ' /D WIN32'
+                               + ' /D _DEBUG'
+                               + ' /D _UNICODE'
+                               + ' /D _USERDLL'
+                               + ' /D _WINDLL'
+                               + ' /D _WINDOWS'
+                               + ' /diagnostics:column'
+                               + ' /EHsc'
+                               + ' /FC'
+                               + ' /Fd"$SolutionPath$/$ProjectOutputPath$/$ProjectName$.PDB"'
+                               + ' /Fp"$SolutionPath$/$ProjectOutputPath$/stdafx.pch"'
+                               + ' /Fo%2'
+                               + ' /fp:precise'
+                               + ' /FS'
+                               + ' /Gd'
+                               + ' /GS'
+                               + ' /MDd'
+                               + ' /nologo'
+                               + ' /Od'
+                               + ' /Oy-'
+                               + ' /RTC1'
+                               + ' /TP'
+                               + ' /W3'
+                               + ' /WX-'
+                               + ' /Yc"$SolutionPath$/../$ProjectName$/stdafx.h"'
+                               + ' /Zc:forScope'
+                               + ' /Zc:inline'
+                               + ' /Zc:wchar_t'
+                               + ' /Zi'
+                               + ' $VisualStudio_Includes_Path$'
+                               + ' $WindowsSDK_Includes_Path_link_cl$'
+                               + ' %1'
+    
+    ; Specify inputs for compilation
+    .CompilerInputPath = '$ProjectSourcesPath$'
+}
+
+DLL( '$ProjectName$_Debug_dll' )
+{
+    ; Options for linker
+    .Linker                    = '$VisualStudio_IncrementalLinker$'
+    .LinkerOptions             = ' /DEBUG'
+                               + ' /DLL'
+                               + ' /DYNAMICBASE'
+                               ;+ ' /IMPLIB:"$SolutionPath$/$ProjectOutputPath$/$ProjectName$.lib"'
+                               + ' /IMPLIB:"c:/DocTA/Software/HySelect/HySelect_FastBuild/HydronicPics/Debug/HydronicPics.lib"'
+                               + ' /MACHINE:X86'
+                               + ' /MANIFEST'
+                               + ' /MANIFESTUAC:"level=asInvoker"'
+                               + ' /MANIFESTUAC:"uiAccess=false"'
+                               + ' /manifest:embed'
+                               + ' /NOLOGO'
+                               + ' /NXCOMPAT'
+                               + ' /OUT:%2'
+                               ;+ ' /PDB:"$SolutionPath$/$ProjectOutputPath$/HydronicPics.pdb"'
+                               + ' /PDB:"c:/DocTA/Software/HySelect/HySelect_FastBuild/HydronicPics/Debug/HydronicPics.pdb"'
+                               + ' /SAFESEH'
+                               + ' /SUBSYSTEM:WINDOWS'
+                               + ' /TLBID:1'
+                               ;+ ' $VisualStudio_Librairies_Path$'
+                               ;+ ' $WindowsSDK_Librairies_Path_link_cl$'
+                               + ' %1'
+                               ;+ ' $SolutionPath$/$ProjectOutputPath$/$ProjectName$.res'
+    .Libraries                 = 'c:/DocTA/Software/HySelect/HySelect_FastBuild/HydronicPics/Debug/HydronicPics.lib'
+                               ;+ ' $WindowsSDK_LibraryUmPath$/advapi32.lib'
+                               ;+ ' $WindowsSDK_LibraryUmPath$/comdlg32.lib'
+                               ;+ ' $WindowsSDK_LibraryUmPath$/gdi32.lib'
+                               ;+ ' $WindowsSDK_LibraryUmPath$/kernel32.lib'
+                               ;+ ' $WindowsSDK_LibraryUmPath$/odbc32.lib'
+                               ;+ ' $WindowsSDK_LibraryUmPath$/odbccp32.lib'
+                               ;+ ' $WindowsSDK_LibraryUmPath$/ole32.lib'
+                               ;+ ' $WindowsSDK_LibraryUmPath$/oleaut32.lib'
+                               ;+ ' $WindowsSDK_LibraryUmPath$/shell32.lib'
+                               ;+ ' $WindowsSDK_LibraryUmPath$/user32.lib'
+                               ;+ ' $WindowsSDK_LibraryUmPath$/uuid.lib'
+                               ;+ ' $WindowsSDK_LibraryUmPath$/winspool.lib'
+    .LinkerOutput              = 'c:/DocTA/Software/HySelect/HySelect_FastBuild/HydronicPics/Debug/HydronicPics.dll'
+    .LinkerType                = 'msvc'
+}
+
+Alias("$ProjectName$")
+{
+    ;.Targets = { "$ProjectName$_Debug_obj" }
+    .Targets = { "$ProjectName$_Debug_lib" }
+    ;.Targets = { "$ProjectName$_Debug_dll" }
+}

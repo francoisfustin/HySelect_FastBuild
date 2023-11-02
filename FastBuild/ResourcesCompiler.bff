@@ -1,0 +1,48 @@
+Using( .VisualStudio_Include_Directories )
+Using( .WindowsSDK_Executable_Tools )
+Using( .ResourcesInformation )
+
+function TestDeMerde( .Arguments )
+{
+    .aliasName = "TestDeMerde"
+	Exec( "ResourcesCompiler" )
+	{                                                  
+	    .ExecExecutable           = 'C:/Program Files (x86)/Windows Kits/10/bin/10.0.22621.0/x86/rc.exe'
+	    ;.ExecInput                = 'C:\DocTA\Software\HySelect\HySelect_FastBuild\DFU\DFUSe\STDFUFiles\STDFUFiles.rc'
+	    ;.ExecInputPath            = '$VisualStudio_IncludeATLMFCPath$'
+	    .ExecOutput               = 'C:\DocTA\Software\HySelect\HySelect_FastBuild\DFU\DFUSe\STDFUFiles\Debug\STDFUFiles.res'
+	    .ExecArguments            = '/D "_DEBUG"'
+	                              + ' /D "_VC80_UPGRADE=0x0600"'
+	                              + ' /D "_UNICODE"'
+	                              + ' /D "UNICODE"'
+	                              + ' /nologo'
+	                              ;+ ' /i "$VisualStudio_IncludeATLMFCPath$"'
+	                              + ' /fo "C:\DocTA\Software\HySelect\HySelect_FastBuild\DFU\DFUSe\STDFUFiles\Debug\STDFUFiles.res"'
+	                              ;+ ' /fo "$ResourcesInputFilePath$\$ResourcesInputFileName$"'
+	                              + ' "C:\DocTA\Software\HySelect\HySelect_FastBuild\DFU\DFUSe\STDFUFiles\STDFUFiles.rc"'
+	    ;.ExecWorkingDir           = 'C:\DocTA\Software\HySelect\HySelect_FastBuild\DFU\DFUSe\STDFUFiles\Debug'
+	}
+	
+	Alias("TestDeMerde")
+	{
+	     .Target = "TestDeMerde"
+	}
+}
+
+;Exec( "ResourcesCompiler" )
+;{                                                  
+;    .ExecExecutable           = '$WindowsSDK_ResourceCompiler$'
+;    ;.ExecInput                = 'C:\DocTA\Software\HySelect\HySelect_FastBuild\DFU\DFUSe\STDFUFiles\STDFUFiles.rc'
+;    ;.ExecInputPath            = '$VisualStudio_IncludeATLMFCPath$'
+;    .ExecOutput               = 'C:\DocTA\Software\HySelect\HySelect_FastBuild\DFU\DFUSe\STDFUFiles\Debug\STDFUFiles.res'
+;    .ExecArguments            = '/D "_DEBUG"'
+;                              + ' /D "_VC80_UPGRADE=0x0600"'
+;                              + ' /D "_UNICODE"'
+;                              + ' /D "UNICODE"'
+;                              + ' /nologo'
+;                              + ' /i "$VisualStudio_IncludeATLMFCPath$"'
+;                              ;+ ' /fo "C:\DocTA\Software\HySelect\HySelect_FastBuild\DFU\DFUSe\STDFUFiles\Debug\STDFUFiles.res"'
+;                              + ' /fo "$ResourcesInputFilePath$\$ResourcesInputFileName$"'
+;                              + ' "C:\DocTA\Software\HySelect\HySelect_FastBuild\DFU\DFUSe\STDFUFiles\STDFUFiles.rc"'
+;    ;.ExecWorkingDir           = 'C:\DocTA\Software\HySelect\HySelect_FastBuild\DFU\DFUSe\STDFUFiles\Debug'
+;}

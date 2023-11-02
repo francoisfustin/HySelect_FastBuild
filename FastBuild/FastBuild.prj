@@ -1,0 +1,53 @@
+[Project ID]
+Signature=UE Proj: v.1
+Unicode=2
+[Project Information]
+Use Relative Directory=1
+Relative to Project File=1
+Include Sub Directories=0
+Project TagfileU=
+Project WordfileU=
+Project TpFileU=
+FilterU=
+Create Tagfile=0
+[FilesU]
+0=fbuild.bff
+1=ResourcesCompiler.bff
+2=WindowsCompiler+AF8-VS2022.bff
+[Group FilterU]
+..+AFw-DFU+AFw-DFUSe+AFw-=+ACo-.bff
+[GroupU]
+0=DFU
+1=DFU - DFUSe
+2=DFU - DFUSe - STDFU
+3=DFU - DFUSe - STDFUFiles
+4=DFU - DFUSe - STDFUPRT
+5=DFU - DFUSe - STTubeDevice
+6=DFU - NewDFUSe
+7=DFU - NewDFUSe - dfu+AF8-util
+8=DFU - NewDFUSe - getopt
+9=DFU - NewDFUSe - libusb+AF8-1.0 (static)
+10=DFU - NewDFUSe - getopt - src
+11=DFU - NewDFUSe - libusb+AF8-1.0 (static) - src
+12=DFU - NewDFUSe - dfu+AF8-util - src
+13=HydronicPics
+[FilesU - DFU - DFUSe]
+0=..+AFw-DFU+AFw-DFUSe+AFw-DFUSe.bff
+[FilesU - DFU - DFUSe - STDFU]
+0=..+AFw-DFU+AFw-DFUSe+AFw-STDFU+AFw-STDFU.bff
+[FilesU - DFU - DFUSe - STDFUFiles]
+0=..+AFw-DFU+AFw-DFUSe+AFw-STDFUFiles+AFw-STDFUFiles.bff
+[FilesU - DFU - DFUSe - STDFUPRT]
+0=..+AFw-DFU+AFw-DFUSe+AFw-STDFUPRT+AFw-STDFUPRT.bff
+[FilesU - DFU - DFUSe - STTubeDevice]
+0=..+AFw-DFU+AFw-DFUSe+AFw-STTubeDevice+AFw-STTubeDevice.bff
+[FilesU - DFU - NewDFUSe]
+0=..+AFw-DFU+AFw-NewDFUSe+AFw-NewDFUSe.bff
+[FilesU - DFU - NewDFUSe - getopt - src]
+0=..+AFw-DFU+AFw-NewDFUSe+AFw-getopt+AFw-src+AFw-getopt.bff
+[FilesU - DFU - NewDFUSe - libusb+AF8-1.0 (static) - src]
+0=..+AFw-DFU+AFw-NewDFUSe+AFw-libusb+AFw-src+AFw-libusb.bff
+[FilesU - DFU - NewDFUSe - dfu+AF8-util - src]
+0=..+AFw-DFU+AFw-NewDFUSe+AFw-dfu-util+AFw-src+AFw-dfu-util.bff
+[FilesU - HydronicPics]
+0=..+AFw-HydronicPics+AFw-HydronicPics.bff

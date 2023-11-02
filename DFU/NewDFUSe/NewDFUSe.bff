@@ -1,0 +1,4 @@
+
+;#include "getopt/src/getopt.bff"
+;#include "libusb/src/libusb.bff"
+#include "dfu-util/src/dfu-util.bff"

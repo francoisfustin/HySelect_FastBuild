@@ -2,27 +2,33 @@
 .ProjectName  = "STDFU"
 .ProjectNames + .ProjectName
 
-.ProjectSourcesPath  = "..\DFU\DFUSe\STDFU"
+.ProjectSourcesPath  = "../DFU/DFUSe/$ProjectName$"
 
-.LibrairiesPaths = ""
-
-ForEach( .ProjectLibraryPath in .ProjectLibraryPaths )
-{
-    ^LibrairiesPaths + ' /LIBPATH:"$ProjectLibraryPath$"'
-}
-
-.LibrairiesToInclude = ""
-
-ForEach( .ProjectLibraryName in .ProjectLibraryNames )
-{
-    ^LibrairiesToInclude + " $ProjectLibraryName$"
-}
-
-Print( 'LibrairiesToInclude = $LibrairiesToInclude$' )
+.ProjectOutputPath  = "$ProjectSourcesPath$/Debug"
+.ProjectOutputPaths + .ProjectOutputPath
 
 .ProjectLibraryName  = '$ProjectName$.lib'
-   
-Library( 'STDFU_Debug' )
+.ProjectLibraryNames + .ProjectLibraryName
+
+Using( .WindowsSDK_Executable_Tools )
+Using( .WindowsSDK_Include_Directories )
+
+Exec( "$ProjectName$_ResourcesCompiler" )
+{        
+    .ExecExecutable           = '$WindowsSDK_ResourceCompiler$'
+    .ExecOutput               = '$SolutionPath$/$ProjectOutputPath$/$ProjectName$.res'
+    .ExecArguments            = '/D "_DEBUG"'
+                              + ' /D "_VC80_UPGRADE=0x0600"'
+                              + ' /D "_UNICODE"'
+                              + ' /D "UNICODE"'
+                              + ' /nologo'
+                              + ' /i "$VisualStudio_IncludeATLMFCPath$"'
+                              + ' $WindowsSDK_Includes_Path_rc$'
+                              + ' /fo "$SolutionPath$/$ProjectOutputPath$/$ProjectName$.res"'
+                              + ' "$SolutionPath$/$ProjectSourcesPath$/$ProjectName$.rc"'
+}
+    
+Library( '$ProjectName$_Debug' )
 {
     Using( .VisualStudio_Include_Directories )
     Using( .WindowsSDK_Include_Directories )
@@ -30,7 +36,7 @@ Library( 'STDFU_Debug' )
     Using( .WindowsSDK_Library_Directories )
     Using( .VisualStudio_Executable_Tools )
     
-    .PreBuildDependencies = { "STDFUFiles", "STDFUPRT", "STTubeDevice" }
+    .PreBuildDependencies = { "$ProjectName$_ResourcesCompiler", "STDFUPRT", "STDFUPRT", "STTubeDevice" }
     
     ; options for compilation
     .Compiler = 'Compiler-x86'
@@ -47,15 +53,15 @@ Library( 'STDFU_Debug' )
                      + ' /EHsc'
                      + ' /external:W3'
                      + ' /FC'
-                     + ' /Fd"$ProjectSourcesPath$/DEBUG/$ProjectName$.PDB"'
+                     + ' /Fd"$SolutionPath$/$ProjectOutputPath$/$ProjectName$.PDB"'
                      + ' /Fo%2'
                      + ' /fp:precise'
                      + ' /FS'
                      + ' /Gd'
                      + ' /GS'
-                     + ' /I"$ProjectSourcesPath$/../INCLUDES"'
-                     + ' /I"$ProjectSourcesPath$/../STDFUFIles"'
-                     + ' /I"$ProjectSourcesPath$/../STDFUPrt"'
+                     + ' /I"$SolutionPath$/$ProjectSourcesPath$/../INCLUDES"'
+                     + ' /I"$SolutionPath$/$ProjectSourcesPath$/../STDFUFiles"'
+                     + ' /I"$SolutionPath$/$ProjectSourcesPath$/../STDFUPrt"'
                      + ' /MTd'
                      + ' /nologo'
                      + ' /Od'
@@ -70,8 +76,8 @@ Library( 'STDFU_Debug' )
                      + ' /Zi'                     
                      + ' %1'
     .CompilerOptions + '$VisualStudio_Includes_Path$'
-    .CompilerOptions + '$WindowsSDK_Includes_Path$'
-    .CompilerOutputPath = '$ProjectSourcesPath$/Debug/'
+    .CompilerOptions + '$WindowsSDK_Includes_Path_link_cl$'
+    .CompilerOutputPath = '$SolutionPath$/$ProjectOutputPath$'
     
     ; Options for librarian
     .Librarian                 = '$VisualStudio_LibraryGenerator$'
@@ -79,20 +85,19 @@ Library( 'STDFU_Debug' )
                                + ' /NOLOGO'
                                + ' /MACHINE:X86'
                                ;+ ' /INCREMENTAL:NO' -> For a static library, lib.exe doesn't recognize this option.
-                               + ' $LibrairiesPaths$'
                                + ' $VisualStudio_Librairies_Path$'
-                               + ' $WindowsSDK_Librairies_Path$'
+                               + ' $WindowsSDK_Librairies_Path_link_cl$'
                                + ' %1'
-                               + ' $LibrairiesToInclude$'
-    ;.LibrarianAdditionalInputs = '$LibrairiesToInclude$'
-    .LibrarianOutput           = '$ProjectSourcesPath$/Debug/$ProjectLibraryName$'
+                               + ' $SolutionPath$/$ProjectOutputPath$/$ProjectName$.res'
+    .LibrarianOutput           = '$SolutionPath$/$ProjectOutputPath$/$ProjectLibraryName$'
     .LibrarianType             = 'msvc'
-
+    
+    
     ; Specify inputs for compilation
     .CompilerInputPath = '$ProjectSourcesPath$'
 }
 
-Alias( "$ProjectName$" )
+Alias("$ProjectName$")
 {
     .Targets = { "$ProjectName$_Debug" }
 }

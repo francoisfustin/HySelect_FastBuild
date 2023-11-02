@@ -1,8 +1,8 @@
 
-.ProjectName         = "STDFUFiles"
+.ProjectName         = "getopt"
 .ProjectNames        + .ProjectName             
 
-.ProjectSourcesPath  = "../DFU/DFUSe/$ProjectName$"
+.ProjectSourcesPath  = "../DFU/NewDFUSe/$ProjectName$/src"
 
 .ProjectOutputPath  = "$ProjectSourcesPath$/Debug"
 .ProjectOutputPaths + .ProjectOutputPath
@@ -10,60 +10,42 @@
 .ProjectLibraryName  = '$ProjectName$.lib'
 .ProjectLibraryNames + .ProjectLibraryName
 
-Using( .VisualStudio_Executable_Tools )
-Using( .VisualStudio_Library_Directories )
-
 Using( .WindowsSDK_Executable_Tools )
 Using( .WindowsSDK_Include_Directories )
-Using( .WindowsSDK_Library_Directories )
-    
-Exec( "$ProjectName$_ResourcesCompiler" )
-{        
-    .ExecExecutable           = '$WindowsSDK_ResourceCompiler$'
-    .ExecOutput               = '$SolutionPath$/$ProjectOutputPath$/$ProjectName$.res'
-    .ExecArguments            = '/D "_DEBUG"'
-                              + ' /D "_VC80_UPGRADE=0x0600"'
-                              + ' /D "_UNICODE"'
-                              + ' /D "UNICODE"'
-                              + ' /nologo'
-                              + ' /i "$VisualStudio_IncludeATLMFCPath$"'
-                              + ' $WindowsSDK_Includes_Path_rc$'
-                              + ' /fo "$SolutionPath$/$ProjectOutputPath$/$ProjectName$.res"'
-                              + ' "$SolutionPath$/$ProjectSourcesPath$/$ProjectName$.rc"'
-}
     
 Library( '$ProjectName$_Debug' )
 {
-    .PreBuildDependencies = { "$ProjectName$_ResourcesCompiler" }
+    Using( .VisualStudio_Include_Directories )
+    Using( .WindowsSDK_Include_Directories )
+    Using( .VisualStudio_Library_Directories )
+    Using( .WindowsSDK_Library_Directories )
+    Using( .VisualStudio_Executable_Tools )
     
     ; options for compilation
     .Compiler = 'Compiler-x86'
     .CompilerOptions = '/c '
                      + ' /analyze-'
-                     + ' /D WIN32'
+                     + ' /D HAVE_STRING_H'
                      + ' /D UNICODE'
+                     + ' /D WIN32'
                      + ' /D _CRT_SECURE_NO_WARNINGS'
                      + ' /D _DEBUG'
                      + ' /D _LIB'
                      + ' /D _UNICODE'
-                     + ' /D _VC80_UPGRADE=0x0600'
                      + ' /diagnostics:column'
                      + ' /EHsc'
-                     + ' /external:W3'
                      + ' /FC'
                      + ' /Fd"$SolutionPath$/$ProjectOutputPath$/$ProjectName$.PDB"'
                      + ' /Fo%2'
                      + ' /fp:precise'
                      + ' /FS'
-                     + ' /Gd'
                      + ' /GS'
-                     + ' /I"$SolutionPath$/$ProjectSourcesPath$/../INCLUDES"'
+                     + ' /Gd'
+                     + ' /I"."'
                      + ' /MTd'
                      + ' /nologo'
                      + ' /Od'
                      + ' /Oy-'
-                     + ' /RTC1'
-                     + ' /TP'
                      + ' /W3'
                      + ' /WX-'
                      + ' /Zc:forScope'
@@ -84,7 +66,6 @@ Library( '$ProjectName$_Debug' )
                                + ' $VisualStudio_Librairies_Path$'
                                + ' $WindowsSDK_Librairies_Path_link_cl$'
                                + ' %1'
-                               + ' $SolutionPath$/$ProjectOutputPath$/$ProjectName$.res'
     .LibrarianOutput           = '$SolutionPath$/$ProjectOutputPath$/$ProjectLibraryName$'
     .LibrarianType             = 'msvc'
     
@@ -97,4 +78,3 @@ Alias("$ProjectName$")
 {
     .Targets = { "$ProjectName$_Debug" }
 }
-

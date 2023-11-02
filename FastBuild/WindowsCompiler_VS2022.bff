@@ -1,3 +1,5 @@
+#once
+
 .Host_Description =
 [
     .Host_Processor = 'x86'
@@ -48,7 +50,7 @@
     .VisualStudio_AuxliliaryUnitTestLibraryPath   = '$VisualStudio_BasePath$/VC/Auxiliary/VS/lib/UnitTest/$Host_Processor$'
     
     ; This one is for the linker, compiler ...
-    .VisualStudio_Librairies_Path                 = ' /LIBPATH:"$VisualStudio_LibraryPath$"'
+    .VisualStudio_Librairies_Path                 = '/LIBPATH:"$VisualStudio_LibraryPath$"'
                                                   + ' /LIBPATH:"$VisualStudio_LibraryATLMFCPath$"'
                                                   + ' /LIBPATH:"$VisualStudio_AuxliliaryLibraryPath$"'
                                                   + ' /LIBPATH:"$VisualStudio_AuxliliaryUnitTestLibraryPath$"'
@@ -104,11 +106,17 @@
     .WindowsSDK_IncludeUcrtPath           = '$WindowsSDK_BasePath$/$WindowsSDK_Version_Main$/Include/$WindowsSDK_Version_Build$/ucrt'
     .WindowsSDK_IncludeUmPath             = '$WindowsSDK_BasePath$/$WindowsSDK_Version_Main$/Include/$WindowsSDK_Version_Build$/um'
     
-    ; This one is for the linker, compiler ...
-    .WindowsSDK_Includes_Path             = ' /I"$WindowsSDK_IncludeCppWinRTPath$"'
+    ; This one is for the linker & compiler.
+    .WindowsSDK_Includes_Path_link_cl     = '/I"$WindowsSDK_IncludeCppWinRTPath$"'
                                           + ' /I"$WindowsSDK_IncludeSharedPath$"'
                                           + ' /I"$WindowsSDK_IncludeUcrtPath$"'
                                           + ' /I"$WindowsSDK_IncludeUmPath$"'
+                                          
+    ; This one is for the resource compiler.
+    .WindowsSDK_Includes_Path_rc          = '/i "$WindowsSDK_IncludeCppWinRTPath$"'
+                                          + ' /i "$WindowsSDK_IncludeSharedPath$"'
+                                          + ' /i "$WindowsSDK_IncludeUcrtPath$"'
+                                          + ' /i "$WindowsSDK_IncludeUmPath$"'
                                     
     ; This one is for the environement variables.
     .WindowsSDK_Includes_Environment_Path = '$WindowsSDK_IncludeCppWinRTPath$'
@@ -126,8 +134,8 @@
     .WindowsSDK_LibraryUcrtPath             = '$WindowsSDK_BasePath$/$WindowsSDK_Version_Main$/lib/$WindowsSDK_Version_Build$/ucrt/$Host_Processor$'
     .WindowsSDK_LibraryUmPath               = '$WindowsSDK_BasePath$/$WindowsSDK_Version_Main$/lib/$WindowsSDK_Version_Build$/um/$Host_Processor$'
     
-     ; This one is for the linker, compiler ...
-    .WindowsSDK_Librairies_Path             = ' /LIBPATH:"$WindowsSDK_LibraryUcrtPath$"'
+    ; This one is for the linker & compiler.
+    .WindowsSDK_Librairies_Path_link_cl     = '/LIBPATH:"$WindowsSDK_LibraryUcrtPath$"'
                                             + ' /LIBPATH:"$WindowsSDK_LibraryUmPath$"'
     
     ; This one is for the environement variables.
@@ -149,6 +157,15 @@
     Using( .WindowsSDK_Executable_Directories )
     
     .WindowsSDK_ResourceCompiler = '$WindowsSDK_ExecutableFilePath$/rc.exe'
+]
+
+.ResourcesInformation =
+[
+    .ResourcesInputFilePath  = ''
+    .ResourcesInputFileName  = ''
+    .ResourcesOutputFilePath = ''
+    .ResourcesOutputFileName = ''
+    .ResourcesCompileOptions = ''
 ]
 
 Settings

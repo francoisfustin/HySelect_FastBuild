@@ -2,21 +2,41 @@
 .ProjectName  = "STDFUPRT"
 .ProjectNames + .ProjectName
 
-.ProjectSourcesPath  = "..\DFU\DFUSe\STDFUPRT"
+.ProjectSourcesPath  = "../DFU/DFUSe/$ProjectName$"
 
-.ProjectLibraryPath  = "$ProjectSourcesPath$\Debug"
-.ProjectLibraryPaths + .ProjectLibraryPath
+.ProjectOutputPath  = "$ProjectSourcesPath$/Debug"
+.ProjectOutputPaths + .ProjectOutputPath
 
 .ProjectLibraryName  = '$ProjectName$.lib'
 .ProjectLibraryNames + .ProjectLibraryName
 
-Library( 'STDFUPRT_Debug' )
+Using( .WindowsSDK_Executable_Tools )
+Using( .WindowsSDK_Include_Directories )
+
+Exec( "$ProjectName$_ResourcesCompiler" )
+{        
+    .ExecExecutable           = '$WindowsSDK_ResourceCompiler$'
+    .ExecOutput               = '$SolutionPath$/$ProjectOutputPath$/$ProjectName$.res'
+    .ExecArguments            = '/D "_DEBUG"'
+                              + ' /D "_VC80_UPGRADE=0x0600"'
+                              + ' /D "_UNICODE"'
+                              + ' /D "UNICODE"'
+                              + ' /nologo'
+                              + ' /i "$VisualStudio_IncludeATLMFCPath$"'
+                              + ' $WindowsSDK_Includes_Path_rc$'
+                              + ' /fo "$SolutionPath$/$ProjectOutputPath$/$ProjectName$.res"'
+                              + ' "$SolutionPath$/$ProjectSourcesPath$/$ProjectName$.rc"'
+}
+    
+Library( '$ProjectName$_Debug' )
 {
     Using( .VisualStudio_Include_Directories )
     Using( .WindowsSDK_Include_Directories )
     Using( .VisualStudio_Library_Directories )
     Using( .WindowsSDK_Library_Directories )
     Using( .VisualStudio_Executable_Tools )
+    
+    .PreBuildDependencies = { "$ProjectName$_ResourcesCompiler" }
     
     ; options for compilation
     .Compiler = 'Compiler-x86'
@@ -33,13 +53,13 @@ Library( 'STDFUPRT_Debug' )
                      + ' /EHsc'
                      + ' /external:W3'
                      + ' /FC'
-                     + ' /Fd"$ProjectSourcesPath$/DEBUG/$ProjectName$.PDB"'
+                     + ' /Fd"$SolutionPath$/$ProjectOutputPath$/$ProjectName$.PDB"'
                      + ' /Fo%2'
                      + ' /fp:precise'
                      + ' /FS'
                      + ' /Gd'
                      + ' /GS'
-                     + ' /I"$ProjectSourcesPath$/../INCLUDES"'
+                     + ' /I"$SolutionPath$/$ProjectSourcesPath$/../INCLUDES"'
                      + ' /MTd'
                      + ' /nologo'
                      + ' /Od'
@@ -54,20 +74,21 @@ Library( 'STDFUPRT_Debug' )
                      + ' /Zi'                     
                      + ' %1'
     .CompilerOptions + '$VisualStudio_Includes_Path$'
-    .CompilerOptions + '$WindowsSDK_Includes_Path$'
-    .CompilerOutputPath = '$ProjectSourcesPath$/Debug/'
+    .CompilerOptions + '$WindowsSDK_Includes_Path_link_cl$'
+    .CompilerOutputPath = '$SolutionPath$/$ProjectOutputPath$'
     
     ; Options for librarian
-    .Librarian                = '$VisualStudio_LibraryGenerator$'
-    .LibrarianOptions         = ' /OUT:%2'
-                              + ' /NOLOGO'
-                              + ' /MACHINE:X86'
-                              ;+ ' /INCREMENTAL:NO' -> For a static library, lib.exe doesn't recognize this option.
-                              + ' $VisualStudio_Librairies_Path$'
-                              + ' $WindowsSDK_Librairies_Path$'
-                              + ' %1'
-    .LibrarianOutput          = '$ProjectSourcesPath$/Debug/$ProjectLibraryName$'
-    .LibrarianType            = 'msvc'
+    .Librarian                 = '$VisualStudio_LibraryGenerator$'
+    .LibrarianOptions          = ' /OUT:%2'
+                               + ' /NOLOGO'
+                               + ' /MACHINE:X86'
+                               ;+ ' /INCREMENTAL:NO' -> For a static library, lib.exe doesn't recognize this option.
+                               + ' $VisualStudio_Librairies_Path$'
+                               + ' $WindowsSDK_Librairies_Path_link_cl$'
+                               + ' %1'
+                               + ' $SolutionPath$/$ProjectOutputPath$/$ProjectName$.res'
+    .LibrarianOutput           = '$SolutionPath$/$ProjectOutputPath$/$ProjectLibraryName$'
+    .LibrarianType             = 'msvc'
     
     
     ; Specify inputs for compilation

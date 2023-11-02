@@ -1,0 +1,37 @@
+[Folders]
+..+AFw-DFU+AFw-DFUSe+AFw-=1
+..+AFw-DFU+AFw-DFUSe+AFw- - STDFUFiles=1
+DFU - NewDFUSe - getopt=1
+DFU - NewDFUSe - libusb+AF8-1.0 (static)=1
+DFU - NewDFUSe - libusb+AF8-1.0 (static) - src=1
+DFU - NewDFUSe - dfu+AF8-util=1
+HydronicPics=1
+DFU=1
+DFU - NewDFUSe - getopt - src=1
+DFU - NewDFUSe=1
+DFU - NewDFUSe - dfu+AF8-util - src=1
+
+[Open Files]
+Active File Display Mode=1
+Active File Index=1
+Open File Line0="0"
+Open File Line1="6132"
+Open File Line2="1821"
+Open File Line3="6116"
+Open File Pos0="75"
+Open File Pos1="6937"
+Open File Pos2="2812"
+Open File Pos3="6778"
+Open File Window Pos0="0,1,-1,-1,-1,-1,5,27,1677,868"
+Open File Window Pos1="0,1,-1,-1,-1,-1,5,27,1677,868"
+Open File Window Pos2="0,1,-1,-1,-1,-1,5,27,1677,868"
+Open File Window Pos3="0,1,-1,-1,-1,-1,5,27,1677,651"
+Open File0=".\fbuild.bff"
+Open File1="..\HydronicPics\HydronicPics.bff"
+Open File2="..\DFU\DFUSe\STDFUFiles\STDFUFiles.bff"
+Open File3=".\WindowsCompiler_VS2022.bff"
+Remember Files=1
+
+[Project Information]
+Project Start=E7070A0005000600100006000A00000023
+Working Time=21972
